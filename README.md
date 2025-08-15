@@ -3,7 +3,7 @@
 一个高效的 Python 脚本，用于处理域名黑名单和白名单，生成 AdBlock、Clash YAML 和 Mihomo MRS 格式的规则文件。
 
 ## 功能
-- 从 URL 或本地文件下载规则，支持缓存以提升性能。
+- 从 URL 或本地文件下载规则。
 - 提取 AdBlock（`||domain^`）、Clash（`DOMAIN-SUFFIX`）等格式的域名。
 - 去重：允许父域名和子域名共存，优先保留父域名（如 `example.com` 覆盖 `sub.sub.example.com`）。
 - 精确过滤白名单（完全匹配），如 `example.com` 在白名单中被移除。
