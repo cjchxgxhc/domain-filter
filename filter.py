@@ -4,6 +4,7 @@ import sys
 import time
 import multiprocessing as mp
 from pathlib import Path
+from urllib.parse import urlparse
 from typing import Set, List, Optional, Tuple, Dict
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -51,9 +52,9 @@ WHITELIST_CONFIG = {
     ]
 }
 
-# 正则表达式（不含KEYWORD规则）
+# 正则表达式（优化域名匹配规则）
 DOMAIN_PATTERN = re.compile(
-    r"^(?:(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*)?[a-z]{2,}$",
+    r"^(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+)[a-zA-Z]{2,}$",
     re.IGNORECASE
 )
 ADBLOCK_BLACK_PATTERN = re.compile(r"^(?:\|{1,2})([a-z0-9\-\.]+)\^$", re.IGNORECASE)
@@ -68,8 +69,8 @@ UNWANTED_SUFFIX = re.compile(r"[\^#].*$")
 
 
 def log(msg: str, critical: bool = False) -> None:
-    """记录日志"""
-    timestamp = time.strftime("%Y-%m-%d %H:%M")
+    """记录日志（增加秒级精度）"""
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
     level = "CRITICAL" if critical else "INFO"
     print(f"[{timestamp}] [{level}] {msg}", flush=True)
 
@@ -86,10 +87,16 @@ def get_parent_domains(domain: str) -> Set[str]:
 
 
 def download_url(url: str) -> Tuple[str, List[str]]:
-    """下载单个URL内容，过滤空行"""
+    """下载单个URL内容（修复本地文件路径解析）"""
     try:
         if url.startswith("file://"):
-            file_path = Path(url[7:])
+            # 解析本地文件路径（兼容Windows和Unix）
+            parsed = urlparse(url)
+            file_path = Path(parsed.path)
+            # Windows路径特殊处理（urlparse可能返回类似'/C:/path'）
+            if sys.platform.startswith('win32') and parsed.path.startswith('/'):
+                file_path = Path(parsed.path[1:])
+            
             if not file_path.exists():
                 log(f"本地文件不存在: {file_path}", critical=True)
                 return url, []
@@ -100,9 +107,14 @@ def download_url(url: str) -> Tuple[str, List[str]]:
         for attempt in range(1, RETRY_COUNT + 1):
             try:
                 response = requests.get(
-                    url, headers=headers, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT), verify=True, allow_redirects=True
+                    url, headers=headers, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT), 
+                    verify=True, allow_redirects=True
                 )
                 response.raise_for_status()
+                # 处理空响应内容
+                if not response.text.strip():
+                    log(f"下载内容为空: {url}", critical=True)
+                    return url, []
                 return url, [line.strip() for line in response.text.splitlines() if line.strip()]
             except requests.RequestException as e:
                 error_type = type(e).__name__
@@ -138,13 +150,13 @@ def download_all_urls(url_list: List[str]) -> Dict[str, List[str]]:
 
 
 def is_valid_domain(domain: str) -> bool:
-    """验证域名有效性"""
+    """验证域名有效性（确保至少包含一个点）"""
     domain = domain.strip().lower()
     if not domain or len(domain) > MAX_DOMAIN_LENGTH:
         return False
-    if '.' not in domain:
-        return len(domain) >= 2 and DOMAIN_PATTERN.match(domain)
-    return DOMAIN_PATTERN.match(domain) and domain.count('.') >= 1
+    if '.' not in domain:  # 排除单级域名（非有效域名）
+        return False
+    return bool(DOMAIN_PATTERN.match(domain))
 
 
 def clean_domain_string(domain: str) -> str:
@@ -157,30 +169,32 @@ def clean_domain_string(domain: str) -> str:
 def extract_domain(line: str, is_whitelist: bool) -> Optional[str]:
     """从规则行提取域名"""
     line = line.strip()
-    if not line or line[0] in ('#', '!', '/'):
+    if not line or line[0] in ('#', '!', '/'):  # 跳过注释行
         return None
+    # 匹配AdBlock格式规则
     match = ADBLOCK_WHITE_PATTERN.match(line) if is_whitelist else ADBLOCK_BLACK_PATTERN.match(line)
     if match:
         domain = match.group(1).strip()
         return domain if is_valid_domain(domain) else None
+    # 匹配DOMAIN/HOST类规则
     match = RULE_PATTERN.match(line)
     if match:
         domain = match.group(1).strip()
         return domain if is_valid_domain(domain) else None
+    # 匹配通配符前缀规则（*.example.com 或 +.example.com）
     if line.startswith(('*.', '+.')):
         domain = line[2:].strip()
         return domain if is_valid_domain(domain) else None
+    # 清理并验证剩余字符串
     domain = clean_domain_string(line)
     return domain if is_valid_domain(domain) else None
 
 
-def extract_blacklist_domain(line: str) -> Optional[str]:
-    """提取黑名单域名"""
+# 定义命名提取函数（解决多进程序列化问题）
+def extract_black_domain(line: str) -> Optional[str]:
     return extract_domain(line, False)
 
-
-def extract_whitelist_domain(line: str) -> Optional[str]:
-    """提取白名单域名"""
+def extract_white_domain(line: str) -> Optional[str]:
     return extract_domain(line, True)
 
 
@@ -203,19 +217,20 @@ def parallel_extract_domains(lines: List[str], extractor: callable) -> Set[str]:
 
 
 def process_blacklist_rules(lines: List[str]) -> Set[str]:
-    """提取黑名单域名"""
-    return parallel_extract_domains(lines, extract_blacklist_domain)
+    """提取黑名单域名（使用命名函数）"""
+    return parallel_extract_domains(lines, extract_black_domain)
 
 
 def process_whitelist_rules(lines: List[str]) -> Set[str]:
-    """提取白名单域名"""
-    return parallel_extract_domains(lines, extract_whitelist_domain)
+    """提取白名单域名（使用命名函数）"""
+    return parallel_extract_domains(lines, extract_white_domain)
 
 
 def remove_subdomains(domains: Set[str]) -> Set[str]:
     """移除子域名，保留父域名（AdBlock规则语义）"""
     if not domains:
         return set()
+    # 按域名级别（点的数量）降序排序，确保父域名优先处理
     sorted_domains = sorted(domains, key=lambda x: (-x.count('.'), x))
     keep = set()
     for domain in sorted_domains:
@@ -235,7 +250,7 @@ def mixed_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
 
 
 def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str) -> None:
-    """保存域名到AdBlock和Clash YAML格式文件"""
+    """保存域名到文件"""
     if not domains:
         log(f"无域名保存: {output_path}")
         return
@@ -282,6 +297,7 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     log(f"输出目录: {output_dir.absolute()}")
 
+    # 处理白名单
     all_white_urls = [u for urls in WHITELIST_CONFIG.values() for u in urls]
     downloaded_white = download_all_urls(all_white_urls) if all_white_urls else {}
     whitelist = {}
@@ -294,14 +310,18 @@ def main():
                 whitelist[sanitized] = domains
                 log(f"白名单{name}: {len(domains)}域名")
 
+    # 处理黑名单
     all_black_urls = [u for urls in BLACKLIST_CONFIG.values() for u in urls]
     downloaded_black = download_all_urls(all_black_urls) if all_black_urls else {}
 
+    # 并行处理规则组
     with ThreadPoolExecutor(max_workers=RULEGROUP_WORKERS) as executor:
         futures = []
         for name, urls in BLACKLIST_CONFIG.items():
             white = whitelist.get(sanitize(name), set())
-            futures.append(executor.submit(process_rule_group, name, urls, white, downloaded_black, output_dir))
+            futures.append(executor.submit(
+                process_rule_group, name, urls, white, downloaded_black, output_dir
+            ))
         for future in as_completed(futures):
             try:
                 future.result()
@@ -312,6 +332,9 @@ def main():
 
 
 if __name__ == "__main__":
+    # 多进程在Windows下的启动保护
+    if sys.platform.startswith('win32'):
+        mp.set_start_method('spawn')
     try:
         main()
     except KeyboardInterrupt:
