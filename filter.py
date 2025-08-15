@@ -27,6 +27,9 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
         "https://adrules.top/dns.txt",
         "https://anti-ad.net/adguard.txt",
+        "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
+        "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+        "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt",
         "https://big.oisd.nl",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt"
     ],
@@ -42,6 +45,7 @@ WHITELIST_CONFIG = {
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
         "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt",
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/share/dead.list-aa",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt"
     ],
     "proxy": [
