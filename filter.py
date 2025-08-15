@@ -9,7 +9,7 @@ from typing import Set, List, Optional, Tuple, Dict
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 配置常量（同前）
+# 配置常量
 CHUNK_SIZE = 200_000
 MAX_DOMAIN_LENGTH = 253
 WORKER_COUNT = min(mp.cpu_count() * 4, 16)
@@ -21,7 +21,7 @@ RETRY_COUNT = 3
 RETRY_DELAY = 3
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/114.0.0.0 Safari/537.36"
 
-# 内嵌黑白名单配置（同前）
+# 内嵌黑白名单配置
 BLACKLIST_CONFIG = {
     "ads": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
@@ -52,7 +52,7 @@ WHITELIST_CONFIG = {
     ]
 }
 
-# 正则表达式（同前）
+# 正则表达式
 DOMAIN_PATTERN = re.compile(
     r"^(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+)[a-zA-Z]{2,}$",
     re.IGNORECASE
@@ -209,28 +209,33 @@ def remove_subdomains(domains: Set[str]) -> Set[str]:
     """移除子域名，保留父域名（AdBlock规则语义）"""
     if not domains:
         return set()
-    
-    # 修复排序逻辑：按点数量升序（父域名先处理）
-    # 例如：bing.com（1个点）排在www.bing.com（2个点）前面
-    sorted_domains = sorted(domains, key=lambda x: (x.count('.'), x))
+    sorted_domains = sorted(domains, key=lambda x: (x.count('.'), x))  # 父域名先处理
     keep = set()
-    
     for domain in sorted_domains:
-        # 若当前域名的任何父域名已在集合中，则跳过（子域名）
-        # 否则保留当前域名（父域名）
         if not any(parent in keep for parent in get_parent_domains(domain)):
             keep.add(domain)
-    
     log(f"去重: 输入{len(domains)} → 输出{len(keep)}")
     return keep
 
 
-def mixed_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
-    mixed = black | white
-    deduped = remove_subdomains(mixed)
-    filtered = deduped - white
-    log(f"混合{len(mixed)} → 去重{len(deduped)} → 过滤{len(filtered)}")
+def filter_exact_whitelist(black_domains: Set[str], white_domains: Set[str]) -> Set[str]:
+    """仅过滤与白名单完全匹配的域名"""
+    if not white_domains:
+        return black_domains
+    # 仅排除黑名单中与白名单完全一致的域名
+    filtered = black_domains - white_domains
+    log(f"白名单完全匹配过滤: 输入{len(black_domains)} → 输出{len(filtered)}")
     return filtered
+
+
+def blacklist_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
+    """流程：先过滤完全匹配的白名单，再对黑名单去重"""
+    # 步骤1：过滤与白名单完全匹配的域名
+    filtered_black = filter_exact_whitelist(black, white)
+    # 步骤2：对剩余黑名单去重（保留父域名）
+    deduped_black = remove_subdomains(filtered_black)
+    log(f"黑名单处理: 过滤后{len(filtered_black)} → 去重后{len(deduped_black)}")
+    return deduped_black
 
 
 def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str) -> None:
@@ -267,7 +272,7 @@ def process_rule_group(name: str, urls: List[str], white_domains: Set[str],
         log(f"组{name}无内容，跳过")
         return
     black_domains = process_blacklist_rules(list(lines))
-    final_domains = mixed_dedup_and_filter(black_domains, white_domains)
+    final_domains = blacklist_dedup_and_filter(black_domains, white_domains)
     save_domains_to_files(final_domains, output_dir, sanitized)
 
 
@@ -287,7 +292,7 @@ def main():
             domains = process_whitelist_rules(lines)
             if domains:
                 whitelist[sanitized] = domains
-                log(f"白名单{name}: {len(domains)}域名")
+                log(f"白名单{name}: 提取{len(domains)}个域名")
 
     all_black_urls = [u for urls in BLACKLIST_CONFIG.values() for u in urls]
     downloaded_black = download_all_urls(all_black_urls) if all_black_urls else {}
