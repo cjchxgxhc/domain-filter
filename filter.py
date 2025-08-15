@@ -39,13 +39,13 @@ BLACKLIST_CONFIG = {
 }
 WHITELIST_CONFIG = {
     "ads": [
-        "file://./rules/ads_white.txt",
+        "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
         "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt"
     ],
     "proxy": [
-        "file://./rules/proxy_white.txt",
+        "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy_white.txt",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP.list",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt"
