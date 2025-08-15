@@ -1,0 +1,74 @@
+name: Domain Filter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # 每天UTC 00:00运行
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 授予仓库内容读写权限
+      pull-requests: write  # 允许创建/更新PR（如果需要）
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史以便提交
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run filter script
+        run: |
+          python filter.py
+        continue-on-error: false  # 脚本失败时停止工作流
+
+      - name: Verify output files
+        run: |
+          echo "检查输出文件："
+          ls -l domain/
+          if [ -f domain/ads_adblock.txt ]; then
+            echo "找到ads_adblock.txt："
+            head -n 5 domain/ads_adblock.txt
+          else
+            echo "错误：未找到domain/ads_adblock.txt" >&2
+            exit 1
+          fi
+          if [ -f domain/ads_clash.yaml ]; then
+            echo "找到ads_clash.yaml："
+            head -n 5 domain/ads_clash.yaml
+          else
+            echo "错误：未找到domain/ads_clash.yaml" >&2
+            exit 1
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add domain/*
+          if git diff --staged --quiet; then
+            echo "没有文件变更，无需提交"
+          else
+            git commit -m "更新过滤后的域名文件 [自动生成]"
+            git push origin main
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用默认token进行推送
+
+      - name: Log completion
+        run: echo "工作流完成，输出文件已提交"
