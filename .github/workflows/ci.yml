@@ -49,7 +49,7 @@ jobs:
 
       - name: Convert Clash YAML to MRS
         run: |
-          for yaml_file in domain/*_clash.yaml; do
+          for yaml_file in OUTPUT/*/clash.yaml; do
             if [ -f "$yaml_file" ]; then
               mrs_file="${yaml_file%.yaml}.mrs"
               ./mihomo convert-ruleset domain yaml "$yaml_file" "$mrs_file"
@@ -69,32 +69,32 @@ jobs:
       - name: Verify output files
         run: |
           echo "检查输出文件："
-          ls -l domain/
-          for file in domain/*_adblock.txt; do
-            if [ -f "$file" ]; then
-              echo "找到AdBlock文件：$file"
-              head -n 5 "$file"
-            else
-              echo "错误：未找到AdBlock文件" >&2
-              exit 1
-            fi
-          done
-          for file in domain/*_clash.yaml; do
-            if [ -f "$file" ]; then
-              echo "找到Clash YAML文件：$file"
-              head -n 5 "$file"
-            else
-              echo "错误：未找到Clash YAML文件" >&2
-              exit 1
-            fi
-          done
-          for file in domain/*_clash.mrs; do
-            if [ -f "$file" ]; then
-              echo "找到MRS文件：$file"
-              head -n 5 "$file"
-            else
-              echo "错误：未找到MRS文件" >&2
-              exit 1
+          ls -lR OUTPUT/
+          for group_dir in OUTPUT/*; do
+            if [ -d "$group_dir" ]; then
+              group=$(basename "$group_dir")
+              echo "检查组：$group"
+              if [ -f "$group_dir/adblock.txt" ]; then
+                echo "找到AdBlock文件：$group_dir/adblock.txt"
+                head -n 5 "$group_dir/adblock.txt"
+              else
+                echo "错误：未找到 $group_dir/adblock.txt" >&2
+                exit 1
+              fi
+              if [ -f "$group_dir/clash.yaml" ]; then
+                echo "找到Clash YAML文件：$group_dir/clash.yaml"
+                head -n 5 "$group_dir/clash.yaml"
+              else
+                echo "错误：未找到 $group_dir/clash.yaml" >&2
+                exit 1
+              fi
+              if [ -f "$group_dir/clash.mrs" ]; then
+                echo "找到MRS文件：$group_dir/clash.mrs"
+                head -n 5 "$group_dir/clash.mrs"
+              else
+                echo "错误：未找到 $group_dir/clash.mrs" >&2
+                exit 1
+              fi
             fi
           done
 
@@ -102,7 +102,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add domain/*
+          git add OUTPUT/*/*
           if git diff --staged --quiet; then
             echo "没有文件变更，无需提交"
           else
