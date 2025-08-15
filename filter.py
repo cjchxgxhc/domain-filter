@@ -38,13 +38,13 @@ BLACKLIST_CONFIG = {
 }
 WHITELIST_CONFIG = {
     "ads": [
-        #"file://./rules/ads_white.txt",
+        "file://./rules/ads_white.txt",
         "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt"
     ],
     "proxy": [
-        #"file://./rules/proxy_white.txt",
+        "file://./rules/proxy_white.txt",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP.list",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt"
@@ -174,6 +174,16 @@ def extract_domain(line: str, is_whitelist: bool) -> Optional[str]:
     return domain if is_valid_domain(domain) else None
 
 
+def extract_blacklist_domain(line: str) -> Optional[str]:
+    """提取黑名单域名"""
+    return extract_domain(line, False)
+
+
+def extract_whitelist_domain(line: str) -> Optional[str]:
+    """提取白名单域名"""
+    return extract_domain(line, True)
+
+
 def process_chunk(args: Tuple[List[str], callable]) -> Set[str]:
     """处理数据块提取域名"""
     chunk, extractor = args
@@ -194,12 +204,12 @@ def parallel_extract_domains(lines: List[str], extractor: callable) -> Set[str]:
 
 def process_blacklist_rules(lines: List[str]) -> Set[str]:
     """提取黑名单域名"""
-    return parallel_extract_domains(lines, lambda l: extract_domain(l, False))
+    return parallel_extract_domains(lines, extract_blacklist_domain)
 
 
 def process_whitelist_rules(lines: List[str]) -> Set[str]:
     """提取白名单域名"""
-    return parallel_extract_domains(lines, lambda l: extract_domain(l, True))
+    return parallel_extract_domains(lines, extract_whitelist_domain)
 
 
 def remove_subdomains(domains: Set[str]) -> Set[str]:
@@ -225,7 +235,7 @@ def mixed_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
 
 
 def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str) -> None:
-    """保存域名到AdBlock、Clash YAML和MRS格式文件"""
+    """保存域名到AdBlock和Clash YAML格式文件"""
     if not domains:
         log(f"无域名保存: {output_path}")
         return
