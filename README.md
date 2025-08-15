@@ -72,12 +72,3 @@
 ## GitHub Actions
 - 工作流（`.github/workflows/ci.yml`）在 push、pull request、每天定时（UTC 00:00）或手动触发时运行。
 - 生成并提交 `OUTPUT/组名/` 下的 `.txt`、`.yaml`、`.mrs` 文件。
-- 保留最近三次提交记录，自动删除旧历史以节省空间。
-
-## FAQ
-- **Q：本地文件缺失怎么办？**
-  - A：创建 `rules/*.txt` 文件，或从 `filter.py` 配置中移除 `file://` 条目。
-- **Q：如何调试规则？**
-  - A：检查日志（包含前 5 个域名样本），或临时减小 `CHUNK_SIZE` 测试小数据集。
-- **Q：输出文件为空？**
-  - A：确认规则源 URL 有效，检查网络连接，或查看 `.cache/` 是否有失效缓存。
