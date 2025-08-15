@@ -39,13 +39,13 @@ BLACKLIST_CONFIG = {
 }
 WHITELIST_CONFIG = {
     "ads": [
-        "file://./rules/ads_white.txt",
+        #"file://./rules/ads_white.txt",
         "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt"
     ],
     "proxy": [
-        "file://./rules/proxy_white.txt",
+        #"file://./rules/proxy_white.txt",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion.list",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP.list",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt"
@@ -198,9 +198,8 @@ def extract_white_domain(line: str) -> Optional[str]:
     return extract_domain(line, True)
 
 
-def process_chunk(args: Tuple[List[str], callable]) -> Set[str]:
-    """处理数据块提取域名"""
-    chunk, extractor = args
+def process_chunk(chunk: List[str], extractor: callable) -> Set[str]:
+    """处理数据块提取域名（修正参数接收方式）"""
     return {d for line in chunk if (d := extractor(line))}
 
 
@@ -209,9 +208,11 @@ def parallel_extract_domains(lines: List[str], extractor: callable) -> Set[str]:
     if not lines:
         return set()
     if len(lines) < CHUNK_SIZE:
-        return process_chunk((lines, extractor))
+        # 修正参数传递方式（与process_chunk保持一致）
+        return process_chunk(lines, extractor)
     chunks = [lines[i:i + CHUNK_SIZE] for i in range(0, len(lines), CHUNK_SIZE)]
     with mp.Pool(WORKER_COUNT) as pool:
+        # starmap会将元组拆分为两个参数，与process_chunk的参数匹配
         results = pool.starmap(process_chunk, [(c, extractor) for c in chunks])
         return set.union(*results) if results else set()
 
