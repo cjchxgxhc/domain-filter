@@ -24,14 +24,14 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/114.0.0.0 Safari/
 # 内嵌黑白名单配置（同前）
 BLACKLIST_CONFIG = {
     "ads": [
-        "file://./rules/ads.txt",
+        "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
         "https://adrules.top/dns.txt",
         "https://anti-ad.net/adguard.txt",
         "https://big.oisd.nl",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt"
     ],
     "proxy": [
-        "file://./rules/proxy.txt",
+        "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy.txt",
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list",
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
