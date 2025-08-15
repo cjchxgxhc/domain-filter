@@ -9,6 +9,9 @@ on:
     - cron: '0 0 * * *'  # 每天UTC 00:00运行
   workflow_dispatch:  # 支持手动触发
 
+env:
+  MIHOMO_VERSION: 1.19.12  # Mihomo版本
+
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
@@ -37,24 +40,63 @@ jobs:
           python filter.py
         continue-on-error: false  # 脚本失败时停止工作流
 
+      - name: Download and setup Mihomo
+        run: |
+          wget https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          gzip -d mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          chmod +x mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}
+          mv mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }} mihomo
+
+      - name: Convert Clash YAML to MRS
+        run: |
+          for yaml_file in domain/*_clash.yaml; do
+            if [ -f "$yaml_file" ]; then
+              mrs_file="${yaml_file%.yaml}.mrs"
+              ./mihomo convert-ruleset domain yaml "$yaml_file" "$mrs_file"
+              if [ -f "$mrs_file" ]; then
+                echo "成功转换：$mrs_file"
+              else
+                echo "错误：无法生成 $mrs_file" >&2
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Clean up Mihomo
+        run: |
+          rm -rf mihomo*
+
       - name: Verify output files
         run: |
           echo "检查输出文件："
           ls -l domain/
-          if [ -f domain/ads_adblock.txt ]; then
-            echo "找到ads_adblock.txt："
-            head -n 5 domain/ads_adblock.txt
-          else
-            echo "错误：未找到domain/ads_adblock.txt" >&2
-            exit 1
-          fi
-          if [ -f domain/ads_clash.yaml ]; then
-            echo "找到ads_clash.yaml："
-            head -n 5 domain/ads_clash.yaml
-          else
-            echo "错误：未找到domain/ads_clash.yaml" >&2
-            exit 1
-          fi
+          for file in domain/*_adblock.txt; do
+            if [ -f "$file" ]; then
+              echo "找到AdBlock文件：$file"
+              head -n 5 "$file"
+            else
+              echo "错误：未找到AdBlock文件" >&2
+              exit 1
+            fi
+          done
+          for file in domain/*_clash.yaml; do
+            if [ -f "$file" ]; then
+              echo "找到Clash YAML文件：$file"
+              head -n 5 "$file"
+            else
+              echo "错误：未找到Clash YAML文件" >&2
+              exit 1
+            fi
+          done
+          for file in domain/*_clash.mrs; do
+            if [ -f "$file" ]; then
+              echo "找到MRS文件：$file"
+              head -n 5 "$file"
+            else
+              echo "错误：未找到MRS文件" >&2
+              exit 1
+            fi
+          done
 
       - name: Commit and push changes
         run: |
@@ -64,7 +106,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有文件变更，无需提交"
           else
-            git commit -m "更新过滤后的域名文件 [自动生成]"
+            git commit -m "更新过滤后的域名文件和MRS文件 [自动生成]"
             git push origin main
           fi
         env:
