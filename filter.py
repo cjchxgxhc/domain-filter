@@ -20,21 +20,25 @@ RETRY_COUNT = 3  # 重试次数
 RETRY_DELAY = 3  # 重试间隔（秒）
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/114.0.0.0 Safari/537.36"
 
-# 内嵌黑白名单配置（请自行修改URL）
+# 内嵌黑白名单配置
 BLACKLIST_CONFIG = {
     "ads": [
-        "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
-        "file://./rules/ads.txt"
+        "https://adrules.top/dns.txt",
+        "https://anti-ad.net/adguard.txt",
+        "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/domains/native.oppo-realme.txt"
     ],
-    "trackers": [
-        "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_4_Tracking/filter.txt"
+    "proxy": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Speedtest/Speedtest.list",
+        "https://raw.githubusercontent.com/v2fly/domain-list-community/refs/heads/master/data/category-speedtest",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list",
+        "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt"
     ]
 }
 WHITELIST_CONFIG = {
     "ads": [
-        "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/whitelist.txt",
-        "file://./rules/whitelist.txt"
-    ]
+        "https://gcore.jsdelivr.net/gh/qq5460168/666@master/allow.txt"
+    ],
+    "proxy": []  # PROXY 组无白名单
 }
 
 # 正则表达式（不含KEYWORD规则）
@@ -73,33 +77,33 @@ def get_parent_domains(domain: str) -> Set[str]:
 
 def download_url(url: str) -> Tuple[str, List[str]]:
     """下载单个URL内容，过滤空行"""
-    if url.startswith("file://"):
-        file_path = Path(url[7:])
-        try:
+    try:
+        if url.startswith("file://"):
+            file_path = Path(url[7:])
             if not file_path.exists():
                 log(f"本地文件不存在: {file_path}", critical=True)
                 return url, []
             with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 return url, [line.strip() for line in f.readlines() if line.strip()]
-        except Exception as e:
-            log(f"读取本地文件失败 {file_path}: {str(e)[:80]}", critical=True)
-            return url, []
-    
-    headers = {"User-Agent": USER_AGENT, "Accept": "text/plain,text/html", "Connection": "keep-alive"}
-    for attempt in range(1, RETRY_COUNT + 1):
-        try:
-            response = requests.get(
-                url, headers=headers, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT), verify=True, allow_redirects=True
-            )
-            response.raise_for_status()
-            return url, [line.strip() for line in response.text.splitlines() if line.strip()]
-        except requests.RequestException as e:
-            error_type = type(e).__name__
-            is_final = attempt == RETRY_COUNT
-            log(f"下载失败({error_type}) {url} ({attempt}/{RETRY_COUNT}){' | 最大重试' if is_final else ''}", critical=is_final)
-            if not is_final:
-                time.sleep(RETRY_DELAY)
-    return url, []
+        
+        headers = {"User-Agent": USER_AGENT, "Accept": "text/plain,text/html", "Connection": "keep-alive"}
+        for attempt in range(1, RETRY_COUNT + 1):
+            try:
+                response = requests.get(
+                    url, headers=headers, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT), verify=True, allow_redirects=True
+                )
+                response.raise_for_status()
+                return url, [line.strip() for line in response.text.splitlines() if line.strip()]
+            except requests.RequestException as e:
+                error_type = type(e).__name__
+                is_final = attempt == RETRY_COUNT
+                log(f"下载失败({error_type}) {url} ({attempt}/{RETRY_COUNT}){' | 最大重试' if is_final else ''}", critical=is_final)
+                if not is_final:
+                    time.sleep(RETRY_DELAY)
+        return url, []
+    except Exception as e:
+        log(f"下载异常 {url}: {str(e)[:80]}", critical=True)
+        return url, []
 
 
 def download_all_urls(url_list: List[str]) -> Dict[str, List[str]]:
@@ -228,7 +232,7 @@ def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str)
     clash_path = output_path / f"{group_name}_clash.yaml"
     with open(clash_path, "w", encoding="utf-8") as f:
         f.write("payload:\n")
-        f.write('\n'.join(f"  - {d}" for d in sorted_domains))
+        f.write('\n'.join(f"  - +.{d}" for d in sorted_domains))
     log(f"保存Clash: {clash_path} ({len(sorted_domains)}域名)")
 
 
