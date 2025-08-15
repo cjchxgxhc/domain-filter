@@ -17,13 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # 授予仓库内容读写权限
-      pull-requests: write  # 允许创建/更新PR（如果需要）
+      pull-requests: write  # 允许创建/更新PR
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取完整历史以便提交
+          fetch-depth: 0  # 获取完整历史以便提交和清理
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -110,7 +110,37 @@ jobs:
             git push origin main
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用默认token进行推送
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Clean up old commits (keep last 3)
+        run: |
+          # 获取当前提交哈希
+          CURRENT_COMMIT=$(git rev-parse HEAD)
+          # 获取最近三次提交（包括当前提交）
+          KEEP_COMMITS=$(git log --pretty=%H -n 3)
+          # 获取所有提交
+          ALL_COMMITS=$(git log --pretty=%H)
+          # 计算需要删除的旧提交
+          DELETE_COMMITS=$(comm -23 <(echo "$ALL_COMMITS" | sort) <(echo "$KEEP_COMMITS" | sort))
+          if [ -z "$DELETE_COMMITS" ]; then
+            echo "无需清理旧提交"
+          else
+            # 创建临时分支
+            git checkout -b temp-cleanup
+            # 重置到最早保留的提交
+            git reset --hard $(echo "$KEEP_COMMITS" | tail -n 1)
+            # 强制推送，覆盖旧历史
+            git push origin temp-cleanup --force
+            # 切换回 main 并更新
+            git checkout main
+            git reset --hard origin/temp-cleanup
+            git push origin main --force
+            # 删除临时分支
+            git push origin --delete temp-cleanup
+            echo "已清理旧提交，保留最近三次"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log completion
-        run: echo "工作流完成，输出文件已提交"
+        run: echo "工作流完成，输出文件已提交，提交历史已清理"
