@@ -228,24 +228,6 @@ def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str)
     clash_path = output_path / f"{group_name}_clash.yaml"
     with open(clash_path, "w", encoding="utf-8") as f:
         f.write("payload:\n")
-        f.write('\n'.join(f"  - {d}"-save_domains_to_files(domains: Set[str], output_path: Path, group_name: str) -> None:
-    """保存域名到AdBlock和Clash格式文件"""
-    if not domains:
-        log(f"无域名保存: {output_path}")
-        return
-    sorted_domains = sorted(domains)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    # AdBlock格式
-    adblock_path = output_path / f"{group_name}_adblock.txt"
-    with open(adblock_path, "w", encoding="utf-8") as f:
-        f.write('\n'.join(f"||{d}^" for d in sorted_domains))
-    log(f"保存AdBlock: {adblock_path} ({len(sorted_domains)}域名)")
-    
-    # Clash YAML格式
-    clash_path = output_path / f"{group_name}_clash.yaml"
-    with open(clash_path, "w", encoding="utf-8") as f:
-        f.write("payload:\n")
         f.write('\n'.join(f"  - {d}" for d in sorted_domains))
     log(f"保存Clash: {clash_path} ({len(sorted_domains)}域名)")
 
