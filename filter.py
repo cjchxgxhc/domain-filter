@@ -2,26 +2,27 @@
 import re
 import sys
 import time
+import asyncio
+import aiohttp
 import multiprocessing as mp
 from pathlib import Path
 from urllib.parse import urlparse
 from typing import Set, List, Optional, Tuple, Dict
-import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 配置常量（调整优化参数）
-CHUNK_SIZE = 500_000  # 增大分块大小，减少线程切换开销
+# 配置常量（进一步优化参数）
+CHUNK_SIZE = 1_000_000  # 进一步增大分块大小，减少线程切换
 MAX_DOMAIN_LENGTH = 253
-WORKER_COUNT = min(mp.cpu_count() * 2, 8)  # 使用线程池，减少进程开销
-RULEGROUP_WORKERS = min(mp.cpu_count(), 4)  # 动态调整规则组处理线程
-DOWNLOAD_WORKERS = min(mp.cpu_count(), 8)  # 动态调整下载线程
+WORKER_COUNT = min(mp.cpu_count(), 6)  # 减少线程数，优化 I/O 密集型任务
+RULEGROUP_WORKERS = min(mp.cpu_count(), 4)  # 动态调整规则组线程
+DOWNLOAD_WORKERS = min(mp.cpu_count(), 6)  # 动态调整下载并发
 CONNECT_TIMEOUT = 3
 READ_TIMEOUT = 10
 RETRY_COUNT = 3
 RETRY_DELAY = 3
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/114.0.0.0 Safari/537.36"
 
-# 内嵌黑白名单配置（与原脚本一致，保持不变）
+# 内嵌黑白名单配置（保持原样，略）
 BLACKLIST_CONFIG = {
     "ads": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
@@ -82,23 +83,21 @@ WHITELIST_CONFIG = {
     ]
 }
 
-# 正则表达式（优化：合并匹配逻辑，移除不必要捕获组）
+# 正则表达式（优化：合并模式，减少捕获组）
 DOMAIN_PATTERN = re.compile(
     r"^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$",
     re.IGNORECASE
 )
-ADBLOCK_BLACK_PATTERN = re.compile(r"^\|{1,2}([a-z0-9\-\.]+)\^$", re.IGNORECASE)
-ADBLOCK_WHITE_PATTERN = re.compile(r"^@@\|{1,2}([a-z0-9\-\.]+)\^$", re.IGNORECASE)
-RULE_PATTERN = re.compile(
-    r"^(?:DOMAIN-SUFFIX|HOST-SUFFIX|host-suffix|DOMAIN|HOST|host)[,\s]+(.+)$",
+COMBINED_PATTERN = re.compile(
+    r"^(?:\|{1,2}|@@\|{1,2}|(?:DOMAIN-SUFFIX|HOST-SUFFIX|host-suffix|DOMAIN|HOST|host)[,\s]+|\*\.|+\.)([a-z0-9\-\.]+)(?:\^|$)",
     re.IGNORECASE
 )
 INVALID_CHARS = re.compile(r'[\\/*?:"<>|]')
-UNWANTED_PREFIX = re.compile(r"^(?:0\.0\.0\.0\s+|127\.0\.0\.1\s+|local=|\|{1,2}|\*\.|\+\.|@@\|\|)")
+UNWANTED_PREFIX = re.compile(r"^(?:0\.0\.0\.0\s+|127\.0\.0\.1\s+|local=)")
 UNWANTED_SUFFIX = re.compile(r"[\^#].*$")
 
 def log(msg: str, critical: bool = False) -> None:
-    # 优化：减少非关键日志输出
+    # 优化：减少非关键日志
     if critical or not msg.startswith("下载成功"):
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
         level = "CRITICAL" if critical else "INFO"
@@ -108,11 +107,12 @@ def sanitize(name: str) -> str:
     return INVALID_CHARS.sub('_', name).strip()
 
 def get_parent_domains(domain: str) -> Set[str]:
-    """获取域名的所有父域名（不含自身），保持原逻辑"""
+    """保留原逻辑：获取所有父域名（不含自身）"""
     parts = domain.split('.')
     return {'.'.join(parts[i:]) for i in range(1, len(parts))}
 
-def download_url(url: str) -> Tuple[str, List[str]]:
+async def download_url_async(url: str, session: aiohttp.ClientSession) -> Tuple[str, List[str]]:
+    """优化：使用异步 I/O 下载"""
     try:
         if url.startswith("file://"):
             parsed = urlparse(url)
@@ -120,114 +120,112 @@ def download_url(url: str) -> Tuple[str, List[str]]:
             if not file_path.exists():
                 log(f"本地文件不存在: {file_path}", critical=True)
                 return url, []
-            # 优化：流式读取本地文件
             with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 return url, [line.strip() for line in f if line.strip()]
         
-        headers = {"User-Agent": USER_AGENT, "Accept": "text/plain", "Connection": "keep-alive"}
-        with requests.Session() as session:
-            for attempt in range(1, RETRY_COUNT + 1):
-                try:
-                    response = session.get(
-                        url, headers=headers, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
-                        verify=True, allow_redirects=True, stream=True
-                    )
+        for attempt in range(1, RETRY_COUNT + 1):
+            try:
+                async with session.get(
+                    url, headers={"User-Agent": USER_AGENT, "Accept": "text/plain"},
+                    timeout=aiohttp.ClientTimeout(total=CONNECT_TIMEOUT + READ_TIMEOUT)
+                ) as response:
                     response.raise_for_status()
-                    # 优化：流式处理响应
-                    lines = [line.strip() for line in response.iter_lines(decode_unicode=True, chunk_size=8192) if line.strip()]
+                    lines = []
+                    async for line in response.content:
+                        line = line.decode('utf-8', errors='replace').strip()
+                        if line:
+                            lines.append(line)
                     if not lines:
                         log(f"下载内容为空: {url}", critical=True)
                     return url, lines
-                except requests.RequestException as e:
-                    error_type = type(e).__name__
-                    is_final = attempt == RETRY_COUNT
-                    log(f"下载失败({error_type}) {url} ({attempt}/{RETRY_COUNT}){' | 最大重试' if is_final else ''}", critical=is_final)
-                    if not is_final:
-                        time.sleep(RETRY_DELAY)
+            except aiohttp.ClientError as e:
+                error_type = type(e).__name__
+                is_final = attempt == RETRY_COUNT
+                log(f"下载失败({error_type}) {url} ({attempt}/{RETRY_COUNT}){' | 最大重试' if is_final else ''}", critical=is_final)
+                if not is_final:
+                    await asyncio.sleep(RETRY_DELAY)
         return url, []
     except Exception as e:
         log(f"下载异常 {url}: {str(e)[:80]}", critical=True)
         return url, []
 
-def download_all_urls(url_list: List[str]) -> Dict[str, List[str]]:
-    unique_urls = list(dict.fromkeys(u.strip() for u in url_list if u.strip()))  # 优化：高效去重
+async def download_all_urls(url_list: List[str]) -> Dict[str, List[str]]:
+    """优化：异步下载所有 URL"""
+    unique_urls = list(dict.fromkeys(u.strip() for u in url_list if u.strip()))
     log(f"开始下载{len(unique_urls)}个唯一资源...")
     results = {}
-    with ThreadPoolExecutor(max_workers=DOWNLOAD_WORKERS) as executor:
-        futures = {executor.submit(download_url, url): url for url in unique_urls}
-        for future in as_completed(futures):
-            url = futures[future]
-            try:
-                _, content = future.result()
-                results[url] = content
+    async with aiohttp.ClientSession() as session:
+        tasks = [download_url_async(url, session) for url in unique_urls]
+        for future in asyncio.as_completed(tasks):
+            url, content = await future
+            results[url] = content
+            if content:
                 log(f"下载成功: {url} (有效行: {len(content)})")
-            except Exception as e:
-                log(f"下载异常 {url}: {str(e)[:80]}", critical=True)
-                results[url] = []
+            else:
+                log(f"下载失败: {url}", critical=True)
     success_count = sum(bool(v) for v in results.values())
     log(f"下载完成: 成功{success_count}/{len(unique_urls)}")
     return results
 
 def is_valid_domain(domain: str) -> bool:
-    domain = domain.strip().lower()  # 确保小写
+    domain = domain.strip().lower()
     if not domain or len(domain) > MAX_DOMAIN_LENGTH or '.' not in domain:
         return False
     return bool(DOMAIN_PATTERN.match(domain))
 
 def clean_domain_string(domain: str) -> str:
-    domain = UNWANTED_PREFIX.sub('', domain.strip()).lower()  # 确保小写
+    domain = UNWANTED_PREFIX.sub('', domain.strip()).lower()
     domain = UNWANTED_SUFFIX.sub('', domain)
     return domain.strip('.')
 
 def extract_domain(line: str, is_whitelist: bool) -> Optional[str]:
-    # 优化：合并正则匹配逻辑，确保小写
+    """优化：使用合并正则模式，减少匹配次数"""
     line = line.strip()
     if not line or line[0] in ('#', '!', '/'):
         return None
-    pattern = ADBLOCK_WHITE_PATTERN if is_whitelist else ADBLOCK_BLACK_PATTERN
-    if match := pattern.match(line):
-        domain = match.group(1).strip().lower()
-        return domain if is_valid_domain(domain) else None
-    if match := RULE_PATTERN.match(line):
-        domain = match.group(1).strip().lower()
-        return domain if is_valid_domain(domain) else None
-    if line.startswith(('*.', '+.')):
-        domain = line[2:].strip().lower()
-        return domain if is_valid_domain(domain) else None
+    if is_whitelist:
+        if not line.startswith('@@'):
+            return None
+        match = COMBINED_PATTERN.match(line)
+        if match:
+            domain = match.group(1).strip().lower()
+            return domain if is_valid_domain(domain) else None
+    else:
+        if line.startswith('@@'):
+            return None
+        match = COMBINED_PATTERN.match(line)
+        if match:
+            domain = match.group(1).strip().lower()
+            return domain if is_valid_domain(domain) else None
     domain = clean_domain_string(line)
     return domain if is_valid_domain(domain) else None
 
-def extract_black_domain(line: str) -> Optional[str]:
-    return extract_domain(line, False)
+def process_chunk(chunk: List[str], is_whitelist: bool) -> Set[str]:
+    """优化：批量处理域名提取"""
+    return {d for line in chunk if (d := extract_domain(line, is_whitelist))}
 
-def extract_white_domain(line: str) -> Optional[str]:
-    return extract_domain(line, True)
-
-def process_chunk(chunk: List[str], extractor: callable) -> Set[str]:
-    return {d for line in chunk if (d := extractor(line))}
-
-def parallel_extract_domains(lines: List[str], extractor: callable) -> Set[str]:
-    # 优化：使用线程池替代多进程，适合 I/O 密集型任务
+def parallel_extract_domains(lines: List[str], is_whitelist: bool) -> Set[str]:
+    """优化：使用线程池，动态分块"""
     if not lines:
         return set()
     if len(lines) < CHUNK_SIZE:
-        return process_chunk(lines, extractor)
+        return process_chunk(lines, is_whitelist)
     chunks = [lines[i:i + CHUNK_SIZE] for i in range(0, len(lines), CHUNK_SIZE)]
     with ThreadPoolExecutor(max_workers=WORKER_COUNT) as executor:
-        results = executor.map(lambda c: process_chunk(c, extractor), chunks)
+        results = executor.map(lambda c: process_chunk(c, is_whitelist), chunks)
         return set.union(*results) if results else set()
 
 def process_blacklist_rules(lines: List[str]) -> Set[str]:
-    return parallel_extract_domains(lines, extract_black_domain)
+    return parallel_extract_domains(lines, is_whitelist=False)
 
 def process_whitelist_rules(lines: List[str]) -> Set[str]:
-    return parallel_extract_domains(lines, extract_white_domain)
+    return parallel_extract_domains(lines, is_whitelist=True)
 
 def remove_subdomains(domains: Set[str]) -> Set[str]:
-    """保持原去重逻辑：移除子域名，保留父域名（AdBlock规则语义）"""
+    """保留原去重逻辑：移除子域名，保留父域名"""
     if not domains:
         return set()
-    sorted_domains = sorted(domains, key=lambda x: (x.count('.'), x))  # 父域名先处理
+    sorted_domains = sorted(domains, key=lambda x: (x.count('.'), x))
     keep = set()
     for domain in sorted_domains:
         if not any(parent in keep for parent in get_parent_domains(domain)):
@@ -236,7 +234,7 @@ def remove_subdomains(domains: Set[str]) -> Set[str]:
     return keep
 
 def filter_exact_whitelist(black_domains: Set[str], white_domains: Set[str]) -> Set[str]:
-    """保持原逻辑：仅过滤与白名单完全匹配的域名"""
+    """保留原逻辑：仅过滤完全匹配的域名"""
     if not white_domains:
         return black_domains
     filtered = black_domains - white_domains
@@ -244,7 +242,7 @@ def filter_exact_whitelist(black_domains: Set[str], white_domains: Set[str]) -> 
     return filtered
 
 def blacklist_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
-    """保持原逻辑：先过滤完全匹配的白名单，再对黑名单去重"""
+    """保留原逻辑：先过滤白名单，再去重"""
     filtered_black = filter_exact_whitelist(black, white)
     deduped_black = remove_subdomains(filtered_black)
     log(f"黑名单处理: 过滤后{len(filtered_black)} → 去重后{len(deduped_black)}")
@@ -254,7 +252,7 @@ def save_domains_to_files(domains: Set[str], output_path: Path, group_name: str)
     if not domains:
         log(f"无域名保存: {output_path}")
         return
-    sorted_domains = sorted(domains)  # 确保输出有序
+    sorted_domains = sorted(domains)
     group_dir = output_path / group_name
     group_dir.mkdir(parents=True, exist_ok=True)
     
@@ -291,8 +289,10 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     log(f"输出目录: {output_dir.absolute()}")
 
-    all_white_urls = list(dict.fromkeys(u for urls in WHITELIST_CONFIG.values() for u in urls))  # 优化：高效去重
-    downloaded_white = download_all_urls(all_white_urls) if all_white_urls else {}
+    all_white_urls = list(dict.fromkeys(u for urls in WHITELIST_CONFIG.values() for u in urls))
+    # 优化：运行异步下载
+    loop = asyncio.get_event_loop()
+    downloaded_white = loop.run_until_complete(download_all_urls(all_white_urls)) if all_white_urls else {}
     whitelist = {}
     for name, urls in WHITELIST_CONFIG.items():
         sanitized = sanitize(name)
@@ -303,8 +303,8 @@ def main():
                 whitelist[sanitized] = domains
                 log(f"白名单{name}: 提取{len(domains)}个域名")
 
-    all_black_urls = list(dict.fromkeys(u for urls in BLACKLIST_CONFIG.values() for u in urls))  # 优化：高效去重
-    downloaded_black = download_all_urls(all_black_urls) if all_black_urls else {}
+    all_black_urls = list(dict.fromkeys(u for urls in BLACKLIST_CONFIG.values() for u in urls))
+    downloaded_black = loop.run_until_complete(download_all_urls(all_black_urls)) if all_black_urls else {}
 
     with ThreadPoolExecutor(max_workers=RULEGROUP_WORKERS) as executor:
         futures = [
