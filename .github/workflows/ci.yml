@@ -6,18 +6,19 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC 00:00运行
+    - cron: '0 0 * * *'  # 每天 UTC 00:00 运行
   workflow_dispatch:
 
 env:
-  MIHOMO_VERSION: 1.19.12  # Mihomo版本
+  MIHOMO_VERSION: 1.19.12  # Mihomo 版本
 
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
+      contents: write      # 允许推送文件到仓库
+      pull-requests: write # 允许操作 Pull Request
+      actions: write       # 允许删除 workflow 运行记录
 
     steps:
       - name: Checkout repository
@@ -33,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install requests aiohttp  # 添加 aiohttp 依赖以支持异步下载
 
       - name: Run filter script
         run: |
@@ -75,21 +76,21 @@ jobs:
               group=$(basename "$group_dir")
               echo "检查组：$group"
               if [ -f "$group_dir/adblock.txt" ]; then
-                echo "找到AdBlock文件：$group_dir/adblock.txt"
+                echo "找到 AdBlock 文件：$group_dir/adblock.txt"
                 head -n 5 "$group_dir/adblock.txt"
               else
                 echo "错误：未找到 $group_dir/adblock.txt" >&2
                 exit 1
               fi
               if [ -f "$group_dir/clash.yaml" ]; then
-                echo "找到Clash YAML文件：$group_dir/clash.yaml"
+                echo "找到 Clash YAML 文件：$group_dir/clash.yaml"
                 head -n 5 "$group_dir/clash.yaml"
               else
                 echo "错误：未找到 $group_dir/clash.yaml" >&2
                 exit 1
               fi
               if [ -f "$group_dir/clash.mrs" ]; then
-                echo "找到MRS文件：$group_dir/clash.mrs"
+                echo "找到 MRS 文件：$group_dir/clash.mrs"
                 head -n 5 "$group_dir/clash.mrs"
               else
                 echo "错误：未找到 $group_dir/clash.mrs" >&2
@@ -106,16 +107,16 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有文件变更，无需提交"
           else
-            git commit -m "更新过滤后的域名文件和MRS文件 [自动生成]"
+            git commit -m "更新过滤后的域名文件和 MRS 文件 [自动生成]"
             git push origin main
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用默认token进行推送
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
           retain_days: 1
           keep_minimum_runs: 1
