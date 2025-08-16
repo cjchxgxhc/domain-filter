@@ -36,7 +36,6 @@ BLACKLIST_CONFIG = {
     ],
     "ads_lite": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
-        "https://adrules.top/dns.txt",
         "https://anti-ad.net/adguard.txt",
         "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
         "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt"
