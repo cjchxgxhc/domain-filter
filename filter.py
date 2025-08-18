@@ -42,6 +42,9 @@ BLACKLIST_CONFIG = {
     "gfw": [
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
     ],
+    "ads_hagezi_no_cn": [
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt"
+    ],
     "direct": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/direct.txt",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion.list"
@@ -70,6 +73,9 @@ WHITELIST_CONFIG = {
     ],
     "ads_lite": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt"
+    ],
+    "ads_hagezi_no_cn": [
+        "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
     ],
     "proxy": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy_white.txt",
