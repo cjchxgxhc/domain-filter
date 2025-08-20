@@ -28,7 +28,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt",
         "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
         "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt",
-        "https://big.oisd.nl",
+        "https://raw.githubusercontent.com/cjchxgxhc/ad_no_cn/refs/heads/main/filtered_ad_domains.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt"
     ],
     "ads_lite": [
