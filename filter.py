@@ -31,8 +31,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
         "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt",
         "https://big.oisd.nl",
-        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
-        "https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Adblock/Adblock.list"
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt"
     ],
     "ads_lite": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
@@ -41,9 +40,6 @@ BLACKLIST_CONFIG = {
     ],
     "gfw": [
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
-    ],
-    "ads_hagezi_no_cn": [
-        "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt"
     ],
     "direct": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/direct.txt",
@@ -66,16 +62,12 @@ BLACKLIST_CONFIG = {
 WHITELIST_CONFIG = {
     "ads": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
-        "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/share/dead.list-aa",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt"
     ],
     "ads_lite": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt"
-    ],
-    "ads_hagezi_no_cn": [
-        "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
     ],
     "proxy": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy_white.txt",
