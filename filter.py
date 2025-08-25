@@ -29,8 +29,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
         "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt",
         "https://raw.githubusercontent.com/cjchxgxhc/ad_no_cn/refs/heads/main/filtered_ad_domains.txt",
-        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
-        "https://raw.githubusercontent.com/qq5460168/666/master/dns.txt"
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt"
     ],
     "ads_lite": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt",
