@@ -32,6 +32,9 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
     ],
+    "HaGeZi's Pro++ mini Blocklist": [
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt"
+    ],
     "gfw": [
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt"
     ],
@@ -57,6 +60,10 @@ WHITELIST_CONFIG = {
     "ads": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/nsfw-onlydomains.txt",
+        "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
+    ],
+    "HaGeZi's Pro++ mini Blocklist": [
+        "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
         "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
     ],
     "proxy": [
