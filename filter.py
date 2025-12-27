@@ -30,6 +30,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt",
         "https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/dns.txt",
         "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt",
+        "https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
     ],
