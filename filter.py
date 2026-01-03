@@ -32,6 +32,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
         "https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt",
         "https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/jiekouAD.txt",
+        "https://raw.githubusercontent.com/qq5460168/666/master/dns.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
     ],
