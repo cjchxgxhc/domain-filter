@@ -63,6 +63,7 @@ WHITELIST_CONFIG = {
     "ads": [
         "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
         "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt",
+        "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
         "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
     ],
     "HaGeZi's Pro++ mini Blocklist": [
