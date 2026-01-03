@@ -29,7 +29,7 @@ BLACKLIST_CONFIG = {
         "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt",
         "https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop",
         "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt",
-        "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+       # "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
         "https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt",
         "https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/jiekouAD.txt",
         "https://raw.githubusercontent.com/qq5460168/666/master/dns.txt",
