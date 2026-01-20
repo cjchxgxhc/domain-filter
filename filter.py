@@ -41,7 +41,7 @@ CONFIG = {
           #  "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
             "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
         ],
-        "formats": ["clash", "domain", "adblock"]  # 默认只输出 domains，可以修改为 ["adblock"], ["clash"], ["adblock", "clash", "domains"] 等
+        "formats": ["clash", "domains", "adblock"]  # 默认只输出 domains，可以修改为 ["adblock"], ["clash"], ["adblock", "clash", "domains"] 等
     },
     "HaGeZi's Pro++ mini Blocklist": {
         "blocklist": [
@@ -78,6 +78,34 @@ UNWANTED_PREFIX = re.compile(r"^(0\.0\.0\.0\s+|127\.0\.0\.1\s+|local=|\|\||\*\.|
 UNWANTED_SUFFIX = re.compile(r"[\^#].*$")
 
 _thread_local = threading.local()
+
+class TrieNode:
+    def __init__(self):
+        self.children: Dict[str, TrieNode] = {}
+        self.is_end: bool = False
+
+def build_trie(domains: Set[str]) -> TrieNode:
+    root = TrieNode()
+    for domain in domains:
+        parts = domain.split('.')[::-1]  # Reverse the domain parts
+        node = root
+        for part in parts:
+            if part not in node.children:
+                node.children[part] = TrieNode()
+            node = node.children[part]
+        node.is_end = True
+    return root
+
+def is_excluded(domain: str, trie_root: TrieNode) -> bool:
+    parts = domain.split('.')[::-1]  # Reverse the domain parts
+    node = trie_root
+    for part in parts:
+        if part not in node.children:
+            return False
+        node = node.children[part]
+        if node.is_end:
+            return True
+    return False  # No need to check full domain separately as it's covered in the loop
 
 def log(msg: str, critical: bool = False) -> None:
     ts = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -225,15 +253,16 @@ def remove_subdomains(domains: Set[str]) -> Set[str]:
     log(f"去重: {len(domains)} -> {len(keep)}")
     return keep
 
-def filter_exact_whitelist(black_domains: Set[str], white_domains: Set[str]) -> Set[str]:
+def filter_whitelist(black_domains: Set[str], white_domains: Set[str]) -> Set[str]:
     if not white_domains:
         return black_domains
-    filtered = black_domains - white_domains
-    log(f"白名单精确过滤: {len(black_domains)} -> {len(filtered)}")
+    trie_root = build_trie(white_domains)
+    filtered = {d for d in black_domains if not is_excluded(d, trie_root)}
+    log(f"白名单过滤 (精确及父域名): {len(black_domains)} -> {len(filtered)}")
     return filtered
 
 def blacklist_dedup_and_filter(black: Set[str], white: Set[str]) -> Set[str]:
-    filtered = filter_exact_whitelist(black, white)
+    filtered = filter_whitelist(black, white)
     deduped = remove_subdomains(filtered)
     log(f"黑名单处理完成: {len(filtered)} -> {len(deduped)}")
     return deduped
