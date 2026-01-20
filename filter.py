@@ -30,7 +30,6 @@ CONFIG = {
             "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt",
             "https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop",
             "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt",
-           # "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
             "https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt",
             "https://raw.githubusercontent.com/qq5460168/666/master/dns.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
@@ -39,7 +38,7 @@ CONFIG = {
         "whitelist": [
             "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
             "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt",
-            "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
+          #  "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
             "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
         ],
         "formats": ["clash", "domain", "adblock"]  # 默认只输出 domains，可以修改为 ["adblock"], ["clash"], ["adblock", "clash", "domains"] 等
@@ -51,6 +50,16 @@ CONFIG = {
         "whitelist": [
             "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
             "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
+        ],
+        "formats": ["clash"]
+    },
+    "direct": {
+        "blocklist": [
+            "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/direct.txt",
+            "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list"
+        ],
+        "whitelist": [
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list"
         ],
         "formats": ["clash"]
     }
