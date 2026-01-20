@@ -26,6 +26,13 @@ jobs:
         with:
           fetch-depth: 0  # 获取完整历史以便提交
 
+      - name: Clean previous files
+        run: |
+          # 清理之前的 OUTPUT 目录和 README.md 文件
+          rm -rf OUTPUT
+          rm -f README.md
+          echo "已清理之前的 OUTPUT 目录和 README.md 文件"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -67,53 +74,51 @@ jobs:
         run: |
           rm -rf mihomo*
 
-      - name: Verify output files
+      - name: Verify generated files
         run: |
-          echo "检查输出文件："
-          ls -lR OUTPUT/
-          for group_dir in OUTPUT/*; do
-            if [ -d "$group_dir" ]; then
-              group=$(basename "$group_dir")
-              echo "检查组：$group"
-              if [ -f "$group_dir/adblock.txt" ]; then
-                echo "找到 AdBlock 文件：$group_dir/adblock.txt"
-                head -n 5 "$group_dir/adblock.txt"
-              else
-                echo "错误：未找到 $group_dir/adblock.txt" >&2
-                exit 1
-              fi
-              if [ -f "$group_dir/clash.yaml" ]; then
-                echo "找到 Clash YAML 文件：$group_dir/clash.yaml"
-                head -n 5 "$group_dir/clash.yaml"
-              else
-                echo "错误：未找到 $group_dir/clash.yaml" >&2
-                exit 1
-              fi
-              if [ -f "$group_dir/clash.mrs" ]; then
-                echo "找到 MRS 文件：$group_dir/clash.mrs"
-                head -n 5 "$group_dir/clash.mrs"
-              else
-                echo "错误：未找到 $group_dir/clash.mrs" >&2
-                exit 1
-              fi
-            fi
-          done
+          # 检查 OUTPUT 目录是否存在且包含文件
+          if [ ! -d "OUTPUT" ]; then
+            echo "错误：OUTPUT 目录未生成" >&2
+            exit 1
+          fi
+          # 检查 README.md 是否生成
+          if [ ! -f "README.md" ]; then
+            echo "错误：README.md 未生成" >&2
+            exit 1
+          fi
+          # 列出生成的文件
+          echo "生成的文件列表："
+          find OUTPUT -type f -name "*.txt" -o -name "*.yaml" -o -name "*.mrs" | sort
+          echo "README.md 已生成"
 
-      - name: Commit and push changes
+      - name: Commit and push all changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add OUTPUT/*/*
+          # 添加所有 OUTPUT 目录下的文件（包括子目录）
+          git add OUTPUT/ || echo "OUTPUT 目录为空或不存在"
+          # 添加根目录的 README.md
+          git add README.md || echo "README.md 未生成"
+          
+          # 检查是否有变更
           if git diff --staged --quiet; then
-            echo "没有文件变更，无需提交"
+            echo "没有文件变更，跳过提交"
+            exit 0
           else
-            git commit -m "更新过滤后的域名文件和 MRS 文件 [自动生成]"
+            # 显示将要提交的文件
+            echo "将要提交的文件："
+            git diff --staged --name-only
+            echo ""
+            # 提交变更
+            git commit -m "更新域名过滤规则和 MRS 文件 [自动生成 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')]"
             git push origin main
+            echo "成功推送变更到 main 分支"
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Delete Workflow Runs
+      - name: Delete old Workflow Runs
+        if: always()  # 无论成功或失败都执行
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
