@@ -2,12 +2,12 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-20 15:56:39 CST
+**最后更新时间 (北京时间):** 2026-01-20 19:38:24 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 23392
+- **域名数量:** 23538
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
@@ -22,12 +22,11 @@
 - **白名单来源:**
   - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
   - [white.txt](https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt)
-  - [allow](https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow)
   - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
 - **输出目录:** [OUTPUT/ads/](OUTPUT/ads/)
 
 ### HaGeZi's Pro++ mini Blocklist
-- **域名数量:** 65443
+- **域名数量:** 67477
 - **黑名单来源:**
   - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
 - **白名单来源:**
@@ -35,9 +34,18 @@
   - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
 - **输出目录:** [OUTPUT/HaGeZi_s_Pro_mini_Blocklist/](OUTPUT/HaGeZi_s_Pro_mini_Blocklist/)
 
+### direct
+- **域名数量:** 114502
+- **黑名单来源:**
+  - [direct.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/direct.txt)
+  - [cn.list](https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list)
+- **白名单来源:**
+  - [Microsoft.list](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list)
+- **输出目录:** [OUTPUT/direct/](OUTPUT/direct/)
+
 ## 统计
-- **总规则组数:** 2
-- **总域名数量:** 88835
+- **总规则组数:** 3
+- **总域名数量:** 205517
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
