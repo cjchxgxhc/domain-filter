@@ -1,74 +1,48 @@
-# 域名过滤器
+# Domain Filter Rules
 
-一个高效的 Python 脚本，用于处理域名黑名单和白名单，生成 AdBlock、Clash YAML 和 Mihomo MRS 格式的规则文件。
+这是一个由 domain-filter 工具生成的规则集仓库。
 
-## 功能
-- 从 URL 或本地文件下载规则。
-- 提取 AdBlock（`||domain^`）、Clash（`DOMAIN-SUFFIX`）等格式的域名。
-- 去重：允许父域名和子域名共存，优先保留父域名（如 `example.com` 覆盖 `sub.sub.example.com`）。
-- 精确过滤白名单（完全匹配），如 `example.com` 在白名单中被移除。
-- 输出：
-  - `OUTPUT/ads/adblock.txt`：AdBlock 格式（`||domain^`）
-  - `OUTPUT/ads/clash.yaml`：Clash YAML 格式（`payload: - +.domain`）
-  - `OUTPUT/ads/clash.mrs`：Mihomo MRS 格式
-  - 类似文件在 `OUTPUT/proxy/`
+**最后更新时间 (北京时间):** 2026-01-20 15:56:39 CST
 
-## 安装
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/yourusername/domain-filter.git
-   cd domain-filter
-   ```
-2. 安装依赖：
-   ```bash
-   pip install requests
-   ```
+## 规则组概览
 
-## 使用
-1. **准备本地规则文件**：
-   - 创建 `rules/ads.txt`、`rules/proxy.txt`、`rules/ads_white.txt`、`rules/proxy_white.txt`。
-   - 示例 `rules/ads.txt`：
-     ```
-     ||example.com^
-     DOMAIN-SUFFIX,tracker.com
-     *.test.com
-     ```
-   - 示例 `rules/ads_white.txt`：
-     ```
-     @@||example.com^
-     ```
-   - 如果不需要本地文件，从 `filter.py` 的 `BLACKLIST_CONFIG` 和 `WHITELIST_CONFIG` 中移除 `file://` 条目。
+### ads
+- **域名数量:** 23392
+- **黑名单来源:**
+  - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
+  - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
+  - [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
+  - [adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt)
+  - [%E8%87%AA%E5%AE%9A%E4%B9%89.prop](https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop)
+  - [anti-ad-origin-block.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt)
+  - [dns-rules.txt](https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt)
+  - [dns.txt](https://raw.githubusercontent.com/qq5460168/666/master/dns.txt)
+  - [native.oppo-realme.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt)
+  - [native.xiaomi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt)
+- **白名单来源:**
+  - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
+  - [white.txt](https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt)
+  - [allow](https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow)
+  - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
+- **输出目录:** [OUTPUT/ads/](OUTPUT/ads/)
 
-2. **运行脚本**：
-   ```bash
-   python filter.py
-   ```
-   输出文件生成在：
-   - `OUTPUT/ads/adblock.txt`, `OUTPUT/ads/clash.yaml`, `OUTPUT/ads/clash.mrs`
-   - `OUTPUT/proxy/adblock.txt`, `OUTPUT/proxy/clash.yaml`, `OUTPUT/proxy/clash.mrs`
+### HaGeZi's Pro++ mini Blocklist
+- **域名数量:** 65443
+- **黑名单来源:**
+  - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
+- **白名单来源:**
+  - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
+  - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
+- **输出目录:** [OUTPUT/HaGeZi_s_Pro_mini_Blocklist/](OUTPUT/HaGeZi_s_Pro_mini_Blocklist/)
 
-3. **验证输出**：
-   - 检查 `adblock.txt`：每行格式为 `||domain^`。
-   - 检查 `clash.yaml`：格式为 `payload:\n  - +.domain`。
-   - MRS 文件由 GitHub Actions 生成。
+## 统计
+- **总规则组数:** 2
+- **总域名数量:** 88835
 
-## 配置
-编辑 `filter.py` 中的 `BLACKLIST_CONFIG` 和 `WHITELIST_CONFIG`：
-- `ads` 组：广告过滤规则。
-- `proxy` 组：代理相关规则。
-- 确保本地文件存在，或移除 `file://` 配置。
-- 示例：
-  ```python
-  BLACKLIST_CONFIG = {
-      "ads": [
-          "file://./rules/ads.txt",
-          "https://adrules.top/dns.txt",
-          ...
-      ],
-      ...
-  }
-  ```
+## 使用说明
+1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
+2. 支持的格式包括 AdBlock、Clash YAML 和纯域名列表。
+3. 规则由多个源自动聚合、去重和过滤生成。
 
-## GitHub Actions
-- 工作流（`.github/workflows/ci.yml`）在 push、pull request、每天定时（UTC 00:00）或手动触发时运行。
-- 生成并提交 `OUTPUT/组名/` 下的 `.txt`、`.yaml`、`.mrs` 文件。
+## 生成工具
+此仓库由 [domain-filter](https://github.com/cjchxgxhc/domain-filter) 工具自动生成和更新。
