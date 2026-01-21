@@ -53,13 +53,18 @@ CONFIG = {
         ],
         "formats": ["clash"]
     },
-    "direct": {
+    "proxy": {
         "blocklist": [
-            "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/direct.txt",
-            "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list"
+            "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list",
+            "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list",
+            "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list",
+            "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy.txt"
         ],
         "whitelist": [
-            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list"
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list",
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list",
+            "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list",
+            "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/wildcard/doh-vpn-proxy-bypass-onlydomains.txt"
         ],
         "formats": ["clash"]
     }
