@@ -2,12 +2,12 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-22 01:00:31 CST
+**最后更新时间 (北京时间):** 2026-01-22 08:53:32 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 22814
+- **域名数量:** 22809
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
@@ -26,7 +26,7 @@
 - **输出目录:** [OUTPUT/ads/](OUTPUT/ads/)
 
 ### HaGeZi's Pro++ mini Blocklist
-- **域名数量:** 67231
+- **域名数量:** 67692
 - **黑名单来源:**
   - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
 - **白名单来源:**
@@ -35,7 +35,7 @@
 - **输出目录:** [OUTPUT/HaGeZi_s_Pro_mini_Blocklist/](OUTPUT/HaGeZi_s_Pro_mini_Blocklist/)
 
 ### proxy
-- **域名数量:** 25353
+- **域名数量:** 25313
 - **黑名单来源:**
   - [proxy.list](https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list)
   - [tld-proxy.list](https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list)
@@ -50,7 +50,7 @@
 
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 115398
+- **总域名数量:** 115814
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
