@@ -2,22 +2,27 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-25 21:25:25 CST
+**最后更新时间 (北京时间):** 2026-01-25 22:10:18 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 5641
+- **域名数量:** 13515
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
+  - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
   - [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
   - [adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt)
   - [%E8%87%AA%E5%AE%9A%E4%B9%89.prop](https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop)
+  - [anti-ad-origin-block.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt)
+  - [abp.txt](https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt)
+  - [adhosts.txt](https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt)
   - [native.oppo-realme.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt)
   - [native.xiaomi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt)
 - **白名单来源:**
   - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
   - [white.txt](https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt)
+  - [anti-ad-white-for-clash.yaml](https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-for-clash.yaml)
   - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
 - **输出目录:** [OUTPUT/ads/](OUTPUT/ads/)
 
@@ -46,7 +51,7 @@
 
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 119655
+- **总域名数量:** 127529
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
