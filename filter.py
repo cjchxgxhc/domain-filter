@@ -31,7 +31,7 @@ CONFIG = {
             "https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop",
             "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt",
             "https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt",
-            "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt",
+           # "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
         ],
