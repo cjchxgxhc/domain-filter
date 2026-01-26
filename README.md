@@ -2,12 +2,12 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-25 22:10:18 CST
+**最后更新时间 (北京时间):** 2026-01-26 08:58:43 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 13515
+- **域名数量:** 13516
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
@@ -41,7 +41,7 @@
 - **输出目录:** [OUTPUT/proxy/](OUTPUT/proxy/)
 
 ### HaGeZi's Pro++ mini Blocklist
-- **域名数量:** 88696
+- **域名数量:** 89587
 - **黑名单来源:**
   - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
 - **白名单来源:**
@@ -51,7 +51,7 @@
 
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 127529
+- **总域名数量:** 128421
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
