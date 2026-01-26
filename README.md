@@ -2,12 +2,12 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-26 08:58:43 CST
+**最后更新时间 (北京时间):** 2026-01-26 19:21:08 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 13516
+- **域名数量:** 11758
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [adblockdnslite.txt](https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/rules/adblockdnslite.txt)
@@ -16,7 +16,6 @@
   - [%E8%87%AA%E5%AE%9A%E4%B9%89.prop](https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop)
   - [anti-ad-origin-block.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt)
   - [abp.txt](https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt)
-  - [adhosts.txt](https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt)
   - [native.oppo-realme.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt)
   - [native.xiaomi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt)
 - **白名单来源:**
@@ -41,7 +40,7 @@
 - **输出目录:** [OUTPUT/proxy/](OUTPUT/proxy/)
 
 ### HaGeZi's Pro++ mini Blocklist
-- **域名数量:** 89587
+- **域名数量:** 87265
 - **黑名单来源:**
   - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
 - **白名单来源:**
@@ -51,7 +50,7 @@
 
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 128421
+- **总域名数量:** 124341
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
