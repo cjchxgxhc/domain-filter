@@ -29,17 +29,17 @@ CONFIG = {
             "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
             "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt",
             "https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop",
-            "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/adlist-maker/scripts/origin-files/anti-ad-origin-block.txt",
             "https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt",
+            "https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt",
            # "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
         ],
         "whitelist": [
             "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
-            "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt",
+           # "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt",
             "https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-for-clash.yaml",
-          #  "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
+           # "https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow",
             "https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt"
         ],
         "formats": ["clash", "domains", "adblock"]  # 默认只输出 domains，可以修改为 ["adblock"], ["clash"], ["adblock", "clash", "domains"] 等
