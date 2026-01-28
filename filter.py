@@ -34,7 +34,9 @@ CONFIG = {
             "https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward",
            # "https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/adhosts.txt",
             "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt",
-            "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt"
+            "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt",
+            "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt",
+            "https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt"
         ],
         "whitelist": [
             "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt",
