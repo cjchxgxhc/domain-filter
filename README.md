@@ -2,12 +2,12 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-28 17:58:02 CST
+**最后更新时间 (北京时间):** 2026-01-28 18:18:03 CST
 
 ## 规则组概览
 
 ### ads
-- **域名数量:** 17101
+- **域名数量:** 17206
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
@@ -17,6 +17,8 @@
   - [reward](https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward)
   - [native.oppo-realme.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt)
   - [native.xiaomi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt)
+  - [native.huawei.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt)
+  - [native.vivo.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt)
 - **白名单来源:**
   - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
   - [anti-ad-white-for-clash.yaml](https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-for-clash.yaml)
@@ -48,7 +50,7 @@
 
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 137494
+- **总域名数量:** 137599
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
