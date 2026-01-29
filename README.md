@@ -2,12 +2,21 @@
 
 这是一个由 domain-filter 工具生成的规则集仓库。
 
-**最后更新时间 (北京时间):** 2026-01-28 18:18:03 CST
+**最后更新时间 (北京时间):** 2026-01-29 09:01:57 CST
 
 ## 规则组概览
 
+### HaGeZi's Pro++ mini Blocklist
+- **域名数量:** 94443
+- **黑名单来源:**
+  - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
+- **白名单来源:**
+  - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
+  - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
+- **输出目录:** [OUTPUT/HaGeZi_s_Pro_mini_Blocklist/](OUTPUT/HaGeZi_s_Pro_mini_Blocklist/)
+
 ### ads
-- **域名数量:** 17206
+- **域名数量:** 17183
 - **黑名单来源:**
   - [ads.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads.txt)
   - [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
@@ -26,7 +35,7 @@
 - **输出目录:** [OUTPUT/ads/](OUTPUT/ads/)
 
 ### proxy
-- **域名数量:** 25322
+- **域名数量:** 25332
 - **黑名单来源:**
   - [proxy.list](https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list)
   - [tld-proxy.list](https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list)
@@ -39,18 +48,9 @@
   - [doh-vpn-proxy-bypass-onlydomains.txt](https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/wildcard/doh-vpn-proxy-bypass-onlydomains.txt)
 - **输出目录:** [OUTPUT/proxy/](OUTPUT/proxy/)
 
-### HaGeZi's Pro++ mini Blocklist
-- **域名数量:** 95071
-- **黑名单来源:**
-  - [pro.plus.mini.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt)
-- **白名单来源:**
-  - [ads_white.txt](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/ads_white.txt)
-  - [white.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt)
-- **输出目录:** [OUTPUT/HaGeZi_s_Pro_mini_Blocklist/](OUTPUT/HaGeZi_s_Pro_mini_Blocklist/)
-
 ## 统计
 - **总规则组数:** 3
-- **总域名数量:** 137599
+- **总域名数量:** 136958
 
 ## 使用说明
 1. 每个规则组目录下包含相应的格式文件（如 adblock.txt、clash.yaml、domains.txt）。
