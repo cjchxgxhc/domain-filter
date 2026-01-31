@@ -1,4 +1,4 @@
-name: Domain Filter CI
+name: Update Domain Filter Rules
 
 on:
   push:
@@ -6,122 +6,87 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 00:00 运行
+    - cron: '0 4 * * *'   # 北京 12:00
   workflow_dispatch:
 
 env:
-  MIHOMO_VERSION: 1.19.12  # Mihomo 版本
+  MIHOMO_VERSION: 1.19.3
+  SINGBOX_VERSION: 1.11.0
 
 jobs:
-  build-and-commit:
+  build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # 允许推送文件到仓库
-      pull-requests: write # 允许操作 Pull Request
-      actions: write       # 允许删除 workflow 运行记录
+      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取完整历史以便提交
+          fetch-depth: 0
 
-      - name: Clean previous files
+      - name: Clean old files
         run: |
-          # 清理之前的 OUTPUT 目录和 README.md 文件
-          rm -rf OUTPUT
-          rm -f README.md
-          echo "已清理之前的 OUTPUT 目录和 README.md 文件"
+          rm -rf OUTPUT README.md
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install Python deps
         run: |
           python -m pip install --upgrade pip
-          pip install requests aiohttp  # 添加 aiohttp 依赖以支持异步下载
+          pip install requests pyyaml
 
-      - name: Run filter script
-        run: |
-          python filter.py
-        continue-on-error: false  # 脚本失败时停止工作流
+      - name: Run generator
+        run: python filter.py
 
-      - name: Download and setup Mihomo
+      - name: Download Mihomo
         run: |
-          wget https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          wget -q https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
           gzip -d mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
           chmod +x mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}
           mv mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }} mihomo
 
-      - name: Convert Clash YAML to MRS
+      - name: Convert to .mrs (Mihomo)
         run: |
-          for yaml_file in OUTPUT/*/clash.yaml; do
-            if [ -f "$yaml_file" ]; then
-              mrs_file="${yaml_file%.yaml}.mrs"
-              ./mihomo convert-ruleset domain yaml "$yaml_file" "$mrs_file"
-              if [ -f "$mrs_file" ]; then
-                echo "成功转换：$mrs_file"
-              else
-                echo "错误：无法生成 $mrs_file" >&2
-                exit 1
-              fi
-            fi
+          for f in OUTPUT/*/clash.yaml; do
+            [ -f "$f" ] || continue
+            ./mihomo convert-ruleset domain yaml "$f" "${f%.yaml}.mrs"
           done
 
-      - name: Clean up Mihomo
+      - name: Download sing-box
         run: |
-          rm -rf mihomo*
+          wget -q https://github.com/SagerNet/sing-box/releases/download/v${{ env.SINGBOX_VERSION }}/sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          tar xzf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          mv sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/sing-box .
+          chmod +x sing-box
 
-      - name: Verify generated files
+      - name: Compile to .srs (sing-box)
         run: |
-          # 检查 OUTPUT 目录是否存在且包含文件
-          if [ ! -d "OUTPUT" ]; then
-            echo "错误：OUTPUT 目录未生成" >&2
-            exit 1
-          fi
-          # 检查 README.md 是否生成
-          if [ ! -f "README.md" ]; then
-            echo "错误：README.md 未生成" >&2
-            exit 1
-          fi
-          # 列出生成的文件
-          echo "生成的文件列表："
-          find OUTPUT -type f -name "*.txt" -o -name "*.yaml" -o -name "*.mrs" | sort
-          echo "README.md 已生成"
+          for f in OUTPUT/*/singbox.json; do
+            [ -f "$f" ] || continue
+            ./sing-box rule-set compile -o "${f%.json}.srs" "$f"
+          done
 
-      - name: Commit and push all changes
+      - name: Cleanup binaries
+        run: rm -f mihomo sing-box *.gz *.tar.gz
+
+      - name: Commit changes
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          # 添加所有 OUTPUT 目录下的文件（包括子目录）
-          git add OUTPUT/ || echo "OUTPUT 目录为空或不存在"
-          # 添加根目录的 README.md
-          git add README.md || echo "README.md 未生成"
-          
-          # 检查是否有变更
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add OUTPUT/ README.md || true
           if git diff --staged --quiet; then
-            echo "没有文件变更，跳过提交"
-            exit 0
+            echo "No changes to commit"
           else
-            # 显示将要提交的文件
-            echo "将要提交的文件："
-            git diff --staged --name-only
-            echo ""
-            # 提交变更
-            git commit -m "更新域名过滤规则和 MRS 文件 [自动生成 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')]"
-            git push origin main
-            echo "成功推送变更到 main 分支"
+            git commit -m "chore: update rules & rule-sets $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Delete old Workflow Runs
-        if: always()  # 无论成功或失败都执行
+      - name: Cleanup old runs
+        if: always()
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ github.repository }}
-          retain_days: 1
-          keep_minimum_runs: 1
+          retain_days: 3
+          keep_minimum_runs: 2
