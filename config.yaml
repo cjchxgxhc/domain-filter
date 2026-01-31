@@ -1,0 +1,91 @@
+groups:
+
+  ads:
+    title: Ads Blocklist China
+    description: 仅针对移动端的中文广告规则。
+    blocklist:
+      - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+      - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+      - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
+      - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+    whitelist:
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+    custom_blacklist:
+      - dc-dragate-cn.heytapmobi.com
+      - update.9mod.com
+    custom_whitelist:
+      - game.eve.mdt.qq.com
+    formats:
+      - adblock
+      - clash
+      - singbox
+
+  ads_big:
+    title: Ads Blocklist
+    description: 面向代理工具的去广告规则，移除大部分的广告，存在误杀。
+    blocklist:
+      - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+      - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+      - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
+      - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
+    whitelist:
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+    formats:
+      - adblock
+      - clash
+      - singbox
+
+  proxy:
+    title: Proxy
+    blocklist:
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy.txt
+    whitelist:
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
+      - https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+    custom_blacklist:
+      - icanhazip.com
+      - ident.me
+      - ifconfig.me
+      - api.ipify.org
+      - checkip.amazonaws.com
+      - ipinfo.io
+      - ip.sb
+      - ip-api.com
+      - api.myip.com
+      - myip.la
+      - ipapi.co
+      - geoip.seektor.com
+      - geojs.io
+      - ipgeolocation.io
+      - cip.cc
+      - ip.cn
+      - freeapi.ipip.net
+      - whoer.net
+      - ipqualityscore.com
+      - getipintel.net
+      - ipip.net
+      - upaiyun.com
+      - klayer.com
+      - qqwry.api.skk.moe
+      - qwry.mirror.noc.one
+      - qqwry-mirror.cdn.skk.moe
+      - whois.pconline.com.cn
+    formats:
+      - clash
+      - singbox
