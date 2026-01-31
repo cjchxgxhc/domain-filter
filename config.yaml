@@ -2,24 +2,30 @@ groups:
 
   ads:
     title: Ads Blocklist China
-    description: 仅针对移动端的中文广告规则。
+    description: 仅针对移动端中文广告。
     blocklist:
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
       - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
       - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
       - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
+     # - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+     # - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+      - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+      - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/script/allowlist.txt
     custom_blacklist:
-      - dc-dragate-cn.heytapmobi.com
+      - sentry.io
       - update.9mod.com
+      - vip-ipspace-cn.heytapmobi.com
     custom_whitelist:
       - game.eve.mdt.qq.com
+      - odin-inference-cn.allawntech.com
     formats:
       - adblock
       - clash
@@ -29,18 +35,11 @@ groups:
     title: Ads Blocklist
     description: 面向代理工具的去广告规则，移除大部分的广告，存在误杀。
     blocklist:
-      - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
-      - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-      - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
-      - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/OUTPUT/ads/adblock.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+      - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
     formats:
       - adblock
       - clash
