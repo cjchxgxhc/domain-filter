@@ -1,7 +1,7 @@
 # proxy - Clash payload
 # Merged rules
-# 更新: 2026-02-01 01:33:03 CST
-# 数量: 25,347
+# 更新: 2026-02-01 12:06:37 CST
+# 数量: 25,348
 #
 # 黑名单:
 #   https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
@@ -13501,6 +13501,7 @@ payload:
   - '+.lotsawahouse.org'
   - '+.lotuslight.org.hk'
   - '+.lotuslight.org.tw'
+  - '+.louisvuitton.com'
   - '+.lovart.ai'
   - '+.love-sextoys.co.uk'
   - '+.love4porn.com'
