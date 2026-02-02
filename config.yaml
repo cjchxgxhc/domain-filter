@@ -17,11 +17,14 @@ groups:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
      # - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
       - https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/black.txt
+      - https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
+      - https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
       - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
       - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/script/allowlist.txt
       - https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt
+      - https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingAllowList.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/urlshortener-onlydomains.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif-onlydomains.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw-onlydomains.txt
