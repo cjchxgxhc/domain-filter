@@ -60,7 +60,6 @@ groups:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
-      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/rules/proxy.txt
     whitelist:
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
