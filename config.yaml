@@ -22,6 +22,10 @@ groups:
       - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
       - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/script/allowlist.txt
       - https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/white.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/urlshortener-onlydomains.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif-onlydomains.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw-onlydomains.txt
+      - https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt
     custom_blacklist:
       - sentry.io
       - update.9mod.com
@@ -44,6 +48,7 @@ groups:
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
       - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw-onlydomains.txt
     formats:
       - adblock
       - clash
