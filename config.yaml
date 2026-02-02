@@ -16,9 +16,11 @@ groups:
      # - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
      # - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
-      - https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/black.txt
+     # - https://raw.githubusercontent.com/qq5460168/Who520/refs/heads/main/black.txt
       - https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
       - https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
+      - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
+      - https://raw.githubusercontent.com/afwfv/DD-AD/main/rule/DD-AD.txt
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
       - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
