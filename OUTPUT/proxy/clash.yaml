@@ -1,7 +1,7 @@
 # proxy - Clash payload
 # Merged rules
-# 更新: 2026-02-01 13:22:14 CST
-# 数量: 25,348
+# 更新: 2026-02-02 13:24:34 CST
+# 数量: 25,351
 #
 # 黑名单:
 #   https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
@@ -3906,6 +3906,7 @@ payload:
   - '+.brutaltgp.com'
   - '+.bs-adreview.com'
   - '+.bs-awh.ne.jp'
+  - '+.bsappapi.com'
   - '+.bsersd.xyz'
   - '+.bsi.ir'
   - '+.bsky.app'
@@ -17270,6 +17271,7 @@ payload:
   - '+.pjbyj.top'
   - '+.pjful-app.lol'
   - '+.pjgirls.com'
+  - '+.pjsekai.sega.jp'
   - '+.pk.com'
   - '+.pki-post.ch'
   - '+.pki-posta.ch'
@@ -20809,6 +20811,7 @@ payload:
   - '+.taiav.com'
   - '+.tail-f.com'
   - '+.tailf.com'
+  - '+.tails.net'
   - '+.tailscale.io'
   - '+.taiolongdh.sbs'
   - '+.taipeisociety.org'
