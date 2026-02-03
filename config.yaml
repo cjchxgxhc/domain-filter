@@ -26,6 +26,7 @@ groups:
       - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
      # - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/script/allowlist.txt
       - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+      - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
     custom_blacklist:
       - sentry.io
       - update.9mod.com
