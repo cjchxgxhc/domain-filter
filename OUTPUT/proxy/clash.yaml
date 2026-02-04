@@ -1,7 +1,7 @@
 # proxy - Clash payload
 # Merged rules
-# 更新: 2026-02-03 13:15:25 CST
-# 数量: 25,351
+# 更新: 2026-02-04 13:10:15 CST
+# 数量: 25,352
 #
 # 黑名单:
 #   https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
@@ -18917,6 +18917,7 @@ payload:
   - '+.sakuralive.com'
   - '+.sakya.org'
   - '+.sale-nikeshoes.com'
+  - '+.salesforce-setup.com'
   - '+.salesforce.com'
   - '+.salesforce.org'
   - '+.salesforceiq.com'
