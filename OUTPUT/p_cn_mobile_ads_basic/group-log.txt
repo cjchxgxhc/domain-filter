@@ -1,0 +1,27 @@
+规则组: p_cn_mobile_ads_basic (p_cn_mobile_ads_basic)
+生成时间: 2026-02-04 23:32:30 CST
+最终数量: 12,931
+
+============================================================
+黑名单源:
+  • https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+    提取: 904 条
+  • https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+    提取: 4,881 条
+  • https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+    提取: 809 条
+  • https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+    提取: 12,718 条
+  • https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+    提取: 30 条
+
+============================================================
+白名单源:
+  • https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+    提取: 148 条
+
+============================================================
+处理流程:
+  1. 黑名单提取后: 17,309 条
+  2. 白名单过滤后: 17,110 条
+  3. 去除子域后: 12,931 条

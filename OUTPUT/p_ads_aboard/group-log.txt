@@ -1,0 +1,19 @@
+规则组: p_ads_aboard (p_ads_aboard)
+生成时间: 2026-02-04 23:32:31 CST
+最终数量: 89,418
+
+============================================================
+黑名单源:
+  • https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+    提取: 93,702 条
+
+============================================================
+白名单源:
+  • https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+    提取: 115,015 条
+
+============================================================
+处理流程:
+  1. 黑名单提取后: 93,702 条
+  2. 白名单过滤后: 89,418 条
+  3. 去除子域后: 89,418 条

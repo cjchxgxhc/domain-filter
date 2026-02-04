@@ -1,0 +1,19 @@
+规则组: microsoft (microsoft)
+生成时间: 2026-02-04 23:32:32 CST
+最终数量: 538
+
+============================================================
+黑名单源:
+  • https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
+    提取: 657 条
+
+============================================================
+白名单源:
+  • https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
+    提取: 168 条
+
+============================================================
+处理流程:
+  1. 黑名单提取后: 657 条
+  2. 白名单过滤后: 538 条
+  3. 去除子域后: 538 条
