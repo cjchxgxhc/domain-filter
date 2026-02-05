@@ -1,6 +1,6 @@
 规则组: p_cn_mobile_ads_dangerous (p_cn_mobile_ads_dangerous)
-生成时间: 2026-02-04 23:51:22 CST
-最终数量: 21,396
+生成时间: 2026-02-05 13:17:15 CST
+最终数量: 21,311
 
 ============================================================
 黑名单源:
@@ -15,7 +15,7 @@
   • https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
     提取: 4,467 条
   • https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
-    提取: 16,503 条
+    提取: 16,202 条
   • https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
     提取: 578 条
   • https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
@@ -34,6 +34,6 @@
 
 ============================================================
 处理流程:
-  1. 黑名单提取后: 25,291 条
-  2. 白名单过滤后: 23,171 条
-  3. 去除子域后: 21,396 条
+  1. 黑名单提取后: 25,141 条
+  2. 白名单过滤后: 23,056 条
+  3. 去除子域后: 21,311 条
