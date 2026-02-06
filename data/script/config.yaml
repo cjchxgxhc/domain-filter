@@ -11,6 +11,7 @@ presets:
     blocklist:
       - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
 
   p_cn_mobile_ads_basic:
     blocklist:
@@ -92,11 +93,13 @@ groups:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
-      # 速度测试
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
+      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
     whitelist:
       # 时间校准
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
+      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
+      # 速度测试
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
     custom_blacklist:
       # DNS 测试
       - browserleaks.net
@@ -131,6 +134,13 @@ groups:
       - whois.pconline.com.cn
       # 国家后缀
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+    custom_whitelist:
+      # GitHub 加速
+      - jsdelivr.com
+      - jsdelivr.net
+      - ghproxy.net
+      # 时间校准
+      - time.windows.com
     formats:
       - clash
       - singbox
