@@ -1,8 +1,8 @@
 # Title: Ads Blocklist China
 # Description: 针对中文移动端广告。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 27,890
-# Updated: 2026-02-06 18:23:14 CST
+# Total: 27,951
+# Updated: 2026-02-06 19:21:46 CST
 #
 payload:
 - +.0001-metrics1-data-hicloud-com.geac.dbankedge.cn
@@ -3737,6 +3737,7 @@ payload:
 - +.adbehavior.ximalaya.com
 - +.adbehaviorhera.ximalaya.com
 - +.adbeuch.cn
+- +.adblock.mydns.network
 - +.adblock.sina.cn
 - +.adbox.sina.com.cn
 - +.adbpfnh.cn
@@ -7561,6 +7562,7 @@ payload:
 - +.applebusiness.cn
 - +.applesport.fit
 - +.applestoresbd.com
+- +.applied-privacy.net
 - +.applk.cn
 - +.applog-perf.uc.cn
 - +.applog.camera360.com
@@ -9299,6 +9301,7 @@ payload:
 - +.cdn-api.admost.com
 - +.cdn-api.appadhoc.com
 - +.cdn-cbd-advert-prod.shuxinyc.com
+- +.cdn-doh.ssnm.xyz
 - +.cdn-exp-sg-recommend.pt.xiaomi.com
 - +.cdn-gcs.outfit7.com
 - +.cdn-haokanapk.baidu.com
@@ -9847,6 +9850,7 @@ payload:
 - +.cloudasbook.com
 - +.cloudcollect.meitudata.com
 - +.cloudconf.fengkongcloud.com
+- +.cloudflare-dns.com
 - +.cloudflareip.com
 - +.cloudi-in.browser.heytapmobile.com
 - +.cloudi-sg.browser.heytapmobile.com
@@ -11282,16 +11286,32 @@ payload:
 - +.dnlog.cmpassport.com
 - +.dnrf0215.com
 - +.dns-analytics.com
+- +.dns-family.adguard.com
 - +.dns-info.dyndns.pro
+- +.dns-nyc.aaflalo.me
+- +.dns-unfiltered.adguard.com
 - +.dns-upload.com
 - +.dns.0pengl.com
+- +.dns.aaflalo.me
+- +.dns.adguard.com
 - +.dns.alidns.com
+- +.dns.cfiec.net
+- +.dns.cloudflare.com
+- +.dns.containerpi.com
+- +.dns.dns-over-https.com
+- +.dns.dnsoverhttps.net
+- +.dns.google.com
+- +.dns.hostux.net
+- +.dns.ipv6dns.com
 - +.dns.iqiyi.com
 - +.dns.jd.com
 - +.dns.jd.com.gslb.qianxun.com
+- +.dns.keweon.center
 - +.dns.m.sm.cn
 - +.dns.qiyipic.iqiyi.com
 - +.dns.qq.com
+- +.dns.quad9.net
+- +.dns.surfshark.com
 - +.dns.titannetwork.cn
 - +.dns.weibo.cn
 - +.dns.weixin.qq.cn
@@ -11299,7 +11319,10 @@ payload:
 - +.dns.weixin.qq.com.cn
 - +.dns.ximalaya.com
 - +.dns1.titannetwork.cn
+- +.dns10.quad9.net
+- +.dns11.quad9.net
 - +.dns2.titannetwork.cn
+- +.dns9.quad9.net
 - +.dnslog.cn
 - +.dnyzbp.cn
 - +.dnzmhr.xyz
@@ -11319,9 +11342,31 @@ payload:
 - +.dogcollarsandleads.com
 - +.doglobal.net
 - +.dogo.intel.cn
+- +.doh-de.blahdns.com
+- +.doh-fi.blahdns.com
+- +.doh-jp.blahdns.com
+- +.doh-pure.onedns.net
+- +.doh.armadillodns.net
+- +.doh.centraleu.pi-dns.com
+- +.doh.cleanbrowsing.org
 - +.doh.dns.apple.com
+- +.doh.dnslify.com
+- +.doh.eastus.pi-dns.com
+- +.doh.familyshield.opendns.com
+- +.doh.ffmuc.net
 - +.doh.iqiyi.com
+- +.doh.mullvad.net
+- +.doh.northeu.pi-dns.com
+- +.doh.onedns.net
+- +.doh.opendns.com
+- +.doh.powerdns.com
+- +.doh.powerdns.org
 - +.doh.ptqy.gitv.tv
+- +.doh.pub
+- +.doh.tiarap.org
+- +.doh.westus.pi-dns.com
+- +.doh.xfinity.com
+- +.dohdot.coxlab.net
 - +.dohihf.com
 - +.doiney.pandasone.com
 - +.doit.kccqgj.cn
@@ -11351,6 +11396,8 @@ payload:
 - +.dorangesource.alicdn.com
 - +.dortostram.pro
 - +.dosre12.xyz
+- +.dot-pure.onedns.net
+- +.dot.onedns.net
 - +.dota11.cn
 - +.dotcounter.douyucdn.cn
 - +.dotcounter.douyutv.com
@@ -11913,6 +11960,7 @@ payload:
 - +.edianweb.cn
 - +.edith-seb.xiaohongshu.com
 - +.ediuschina.com
+- +.edns.233py.com
 - +.edong.link
 - +.edoshbw.top
 - +.edssnet.changchunets.com
@@ -12324,6 +12372,7 @@ payload:
 - +.ex.mobmore.com
 - +.ex.puata.info
 - +.exactadvertising.com
+- +.example.doh.blockerdns.com
 - +.exceptionlog.kugou.com
 - +.exchange.nativeads.com
 - +.excoino.com
@@ -14680,6 +14729,7 @@ payload:
 - +.i-thi.com
 - +.i-vn.browser.heytapmobile.com
 - +.i-whatsapp.cn
+- +.i.233py.com
 - +.i.cat-happy.cn
 - +.i.cidianwang.com
 - +.i.flow.browser.oppomobile.com
@@ -14747,10 +14797,12 @@ payload:
 - +.ib.adnxs.com
 - +.ib.sin1.adnxs.com
 - +.ibafnw.cn
+- +.ibksturm.synology.me
 - +.iboyoo.com
 - +.ibozys.cn
 - +.ibqkjbw.com
 - +.ibrowser.feeds.heytapmobi.com
+- +.ibuki.cgnat.net
 - +.ibwqfpo.xyz
 - +.ic-google.com.cn
 - +.ic.de.inmobi.com
@@ -15474,6 +15526,7 @@ payload:
 - +.jccsmazri.qpon
 - +.jcde.site
 - +.jcdn.jsoid.com
+- +.jcdns.fun
 - +.jcen.avdog-t0065.vip
 - +.jched3.com
 - +.jcheys.com
@@ -15779,6 +15832,7 @@ payload:
 - +.joyloveapparel.com
 - +.jp-datareceiver.aki-game.net
 - +.jp.as.pptv.com
+- +.jp.tiarap.org
 - +.jp.youtui.gameley.com
 - +.jp3adv-cdn.goldspotmedia.com
 - +.jpaasne.e.shifen.com
@@ -19386,6 +19440,7 @@ payload:
 - +.one.cam4ads.com
 - +.one.fsylr.com
 - +.one.gongshu168.cn
+- +.one.one.one.one
 - +.one6u.xyz
 - +.one88.pro
 - +.oneapm.com
@@ -19514,6 +19569,7 @@ payload:
 - +.orcaslicer.cn
 - +.orchewilde.pro
 - +.ordexia-pro.com
+- +.ordns.he.net
 - +.orencia.pflexads.com
 - +.orethys-ascension.net
 - +.org-qm.xin
@@ -21131,6 +21187,7 @@ payload:
 - +.rdhts.com
 - +.rdlbkvo.cn
 - +.rdm.91yunma.cn
+- +.rdns.faelix.net
 - +.rdpcom.com
 - +.rdufuxr.icu
 - +.rduzs.com
@@ -21529,6 +21586,7 @@ payload:
 - +.ruanjiancms.com
 - +.ruansky.com
 - +.rubiconfc.com
+- +.rubyfish.cn
 - +.rugncn.ifeng.com
 - +.rui61.cn
 - +.ruinuofei.top
@@ -21956,6 +22014,7 @@ payload:
 - +.sdn.kugou.com
 - +.sdn.penggua.com.cn
 - +.sdn.scset.com.cn
+- +.sdns.233py.com
 - +.sdqoi2d.com
 - +.sdr5b.com
 - +.sdrongxing.cn
@@ -22003,6 +22062,7 @@ payload:
 - +.securegb.com
 - +.securemetrics.apple.com
 - +.securemetrics.apple.com.cn
+- +.security-filter-dns.cleanbrowsing.org
 - +.security-platform.kltb.com.cn
 - +.security-update.ddns.info
 - +.security-update.ocry.com
@@ -24386,6 +24446,7 @@ payload:
 - +.unblockedgames.cn
 - +.unet.ucweb.com
 - +.unetall.com
+- +.unfiltered.adguard-dns.com
 - +.ung73.top
 - +.unicredit-it.cyou
 - +.unidesk.alicdn.com
