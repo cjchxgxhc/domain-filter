@@ -1,0 +1,153 @@
+presets:
+
+  p_my_ads_rule:
+    custom_blacklist:
+      - sentry.io
+      - update.9mod.com
+      - vip-ipspace-cn.heytapmobi.com
+      - collector.github.com
+
+  p_dns_bypass:
+    blocklist:
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+
+  p_cn_mobile_ads_basic:
+    blocklist:
+      - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+      - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+      - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+    whitelist:
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+
+  p_cn_mobile_ads_dangerous: # 存在误杀
+    blocklist:
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+      - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
+      - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
+      - https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
+      - https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
+      - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
+    whitelist:
+      - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
+      - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+      - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+
+  p_ads_aboard:
+    blocklist:
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+    #  - https://small.oisd.nl
+    whitelist:
+      # 去除部分中文域名，防止误杀
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+    custom_whitelist:
+      - cn
+
+
+groups:
+
+  ads:
+    title: Ads Blocklist China
+    description: 针对中文移动端广告。
+    use_presets:
+      - p_my_ads_rule
+      - p_cn_mobile_ads_basic
+      - p_cn_mobile_ads_dangerous
+      - p_dns_bypass
+    custom_whitelist:
+      - yandex.net
+      # 国家后缀
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+    formats:
+      - adblock
+      - clash
+      - singbox
+
+  ads_big:
+    title: Ads Blocklist Large
+    description: 适用于代理程序。
+    use_presets:
+      - p_my_ads_rule
+      - p_cn_mobile_ads_basic
+      - p_cn_mobile_ads_dangerous
+      - p_ads_aboard
+      - p_dns_bypass
+    formats:
+      - adblock
+      - clash
+      - singbox
+
+  proxy:
+    title: Proxy
+    description: 需要被代理的域名。
+    blocklist:
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+      # 速度测试
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
+    whitelist:
+      # 时间校准
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
+    custom_blacklist:
+      # DNS 测试
+      - browserleaks.net
+      - browserleaks.org
+      # IP 测试
+      - icanhazip.com
+      - ident.me
+      - ifconfig.me
+      - api.ipify.org
+      - checkip.amazonaws.com
+      - ipinfo.io
+      - ip.sb
+      - ip-api.com
+      - api.myip.com
+      - myip.la
+      - ipapi.co
+      - geoip.seektor.com
+      - geojs.io
+      - ipgeolocation.io
+      - cip.cc
+      - ip.cn
+      - freeapi.ipip.net
+      - whoer.net
+      - ipqualityscore.com
+      - getipintel.net
+      - ipip.net
+      - upaiyun.com
+      - klayer.com
+      - qqwry.api.skk.moe
+      - qwry.mirror.noc.one
+      - qqwry-mirror.cdn.skk.moe
+      - whois.pconline.com.cn
+      # 国家后缀
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+    formats:
+      - clash
+      - singbox
+
+  microsoft_cn:
+    title: Microsoft China
+    description: 微软直连域名。
+    blocklist:
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
+    whitelist:
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
+    custom_blacklist:
+      - outlook.com
+      - live.com
+      - live.net
+      - microsofttranslator.com
+    formats:
+      - clash
+      - singbox
