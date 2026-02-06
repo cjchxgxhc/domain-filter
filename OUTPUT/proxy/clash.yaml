@@ -1,9 +1,9 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Version: 260205
-# Last modified: 2026-02-05 13:17:17 CST
-# Blocked domains: 27,479
+# Version: 260206
+# Last modified: 2026-02-06 13:15:28 CST
+# Blocked domains: 27,482
 #
 
 payload:
@@ -10949,6 +10949,7 @@ payload:
   - '+.gridaware.app'
   - '+.grindr.com'
   - '+.grok.com'
+  - '+.grokipedia.com'
   - '+.grooby.com'
   - '+.groq.com'
   - '+.grotty-monday.com'
@@ -20104,6 +20105,7 @@ payload:
   - '+.radgametools.com'
   - '+.radian6.com'
   - '+.radicalparty.org'
+  - '+.radiko-cf.com'
   - '+.radiko.jp'
   - '+.radio-canada.ca'
   - '+.radio-en-ligne.fr'
@@ -21737,6 +21739,7 @@ payload:
   - '+.smartonerobotics.com'
   - '+.smartonesolutions.com.hk'
   - '+.smartonesolutions.hk'
+  - '+.smartstream.ne.jp'
   - '+.smashed.xxx'
   - '+.smbc.co.jp'
   - '+.smbctb.co.jp'

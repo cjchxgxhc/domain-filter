@@ -1,6 +1,6 @@
 规则组: p_cn_mobile_ads_dangerous (p_cn_mobile_ads_dangerous)
-生成时间: 2026-02-05 13:17:15 CST
-最终数量: 21,311
+生成时间: 2026-02-06 13:15:26 CST
+最终数量: 21,297
 
 ============================================================
 黑名单源:
@@ -30,10 +30,10 @@
   • https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
     提取: 461 条
   • https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-    提取: 2,541 条
+    提取: 2,587 条
 
 ============================================================
 处理流程:
   1. 黑名单提取后: 25,141 条
-  2. 白名单过滤后: 23,056 条
-  3. 去除子域后: 21,311 条
+  2. 白名单过滤后: 23,042 条
+  3. 去除子域后: 21,297 条

@@ -1,11 +1,11 @@
 规则组: Proxy (proxy)
-生成时间: 2026-02-05 13:17:17 CST
-最终数量: 27,479
+生成时间: 2026-02-06 13:15:28 CST
+最终数量: 27,482
 
 ============================================================
 黑名单源:
   • https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-    提取: 27,410 条
+    提取: 27,413 条
   • https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list
     提取: 128 条
   • https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
@@ -20,6 +20,6 @@
 
 ============================================================
 处理流程:
-  1. 黑名单提取后: 27,533 条
-  2. 白名单过滤后: 27,533 条
-  3. 去除子域后: 27,479 条
+  1. 黑名单提取后: 27,536 条
+  2. 白名单过滤后: 27,536 条
+  3. 去除子域后: 27,482 条
