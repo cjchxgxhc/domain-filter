@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,038
-# Updated: 2026-02-06 19:21:50 CST
+# Total: 23,042
+# Updated: 2026-02-07 13:01:13 CST
 #
 payload:
 - +.000webhost.com
@@ -3343,6 +3343,7 @@ payload:
 - +.bitstamp.net
 - +.bitstream.com
 - +.bitterwinter.org
+- +.bittorrent.com
 - +.bittrex.com
 - +.bitvise.com
 - +.bitwarden.com
@@ -9554,6 +9555,7 @@ payload:
 - +.helpuyghursnow.org
 - +.helpzhuling.org
 - +.helsinki
+- +.hembed.com
 - +.hentai-ani.me
 - +.hentai-archive.com
 - +.hentai-books.com
@@ -12880,6 +12882,7 @@ payload:
 - +.manta.com
 - +.mantochichi.com
 - +.manurefetish.com
+- +.manuscdn.com
 - +.manytoon.com
 - +.manyvids.com
 - +.manyvoices.news
@@ -20777,6 +20780,7 @@ payload:
 - +.v-has.com
 - +.v.roucdn
 - +.v2.help
+- +.v2.hysteria.network
 - +.v2ex.co
 - +.v2ex.com
 - +.v2fly.org
