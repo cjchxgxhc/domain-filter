@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,042
-# Updated: 2026-02-07 13:01:13 CST
+# Total: 23,047
+# Updated: 2026-02-08 13:20:49 CST
 #
 payload:
 - +.000webhost.com
@@ -5000,6 +5000,8 @@ payload:
 - +.codecademy.com
 - +.codeforces.com
 - +.codeish.co
+- +.codeium.com
+- +.codeiumdata.com
 - +.codeplex.com
 - +.codeskulptor.org
 - +.codespot.com
@@ -21753,6 +21755,8 @@ payload:
 - +.windowsuem.com
 - +.windowsupdate.com
 - +.windscribe.com
+- +.windsurf.build
+- +.windsurf.com
 - +.windy.com
 - +.wine
 - +.wingamestore.com
@@ -22541,6 +22545,7 @@ payload:
 - +.yandex
 - +.yandex-bank.net
 - +.yandex-images.clstorage.net
+- +.yandex-pogoda.static-storage.net
 - +.yandex.aero
 - +.yandex.cloud
 - +.yandex.com
