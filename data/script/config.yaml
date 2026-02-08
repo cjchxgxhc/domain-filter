@@ -13,13 +13,19 @@ presets:
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
       - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
 
+  p_pcdn_list:
+    blocklist:
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+      - https://raw.githubusercontent.com/lovebai/lovebai/refs/heads/main/rule/adhome-pcdn.txt
+      - https://raw.githubusercontent.com/uselibrary/PCDN/refs/heads/main/pcdn.list
+      - https://raw.githubusercontent.com/4fuu/AdGuard-Home-PCDN/refs/heads/main/ban.txt
+      
   p_cn_mobile_ads_basic:
     blocklist:
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
       - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
       - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
-      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
@@ -60,6 +66,7 @@ groups:
     description: 针对中文移动端广告。
     use_presets:
       - p_my_ads_rule
+      - p_pcdn_list
       - p_cn_mobile_ads_basic
       - p_cn_mobile_ads_dangerous
       - p_dns_bypass
@@ -77,6 +84,7 @@ groups:
     description: 适用于代理程序。
     use_presets:
       - p_my_ads_rule
+      - p_pcdn_list
       - p_cn_mobile_ads_basic
       - p_cn_mobile_ads_dangerous
       - p_ads_aboard
