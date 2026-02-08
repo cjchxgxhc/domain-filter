@@ -37,14 +37,14 @@
 处理 预设组: p_cn_mobile_ads_basic (p_cn_mobile_ads_basic)
 ════════════════════════════════════════════════════════════
   ├─ 黑名单源: 904 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-  ├─ 黑名单源: 4,810 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+  ├─ 黑名单源: 4,786 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
   ├─ 黑名单源: 809 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
   ├─ 黑名单源: 12,733 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
   ├─ 白名单源: 148 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   ├─ 白名单源: 8 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  ├─ 黑名单合并后: 17,275 条
-  ├─ 白名单过滤后: 17,077 条
-  └─ 去除子域后: 12,893 条 (最终)
+  ├─ 黑名单合并后: 17,253 条
+  ├─ 白名单过滤后: 17,056 条
+  └─ 去除子域后: 12,872 条 (最终)
 
 ════════════════════════════════════════════════════════════
 处理 预设组: p_cn_mobile_ads_dangerous (p_cn_mobile_ads_dangerous)
@@ -86,28 +86,28 @@
 ════════════════════════════════════════════════════════════
   ├─ 预设 p_my_ads_rule: 4 条
   ├─ 预设 p_pcdn_list: 46 条
-  ├─ 预设 p_cn_mobile_ads_basic: 12,893 条
+  ├─ 预设 p_cn_mobile_ads_basic: 12,872 条
   ├─ 预设 p_cn_mobile_ads_dangerous: 20,767 条
   ├─ 预设 p_dns_bypass: 145 条
-  ├─ 黑名单合并后: 29,551 条
+  ├─ 黑名单合并后: 29,544 条
   ├─ 自定义白名单包含 1 个外部规则源
     ├─ 外部规则源: 740 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
   ├─ 自定义白名单: 741 条
-  ├─ 白名单过滤后: 28,151 条
-  └─ 去除子域后: 27,697 条 (最终)
+  ├─ 白名单过滤后: 28,144 条
+  └─ 去除子域后: 27,693 条 (最终)
 
 ════════════════════════════════════════════════════════════
 处理 规则组: Ads Blocklist Large (ads_big)
 ════════════════════════════════════════════════════════════
   ├─ 预设 p_my_ads_rule: 4 条
   ├─ 预设 p_pcdn_list: 46 条
-  ├─ 预设 p_cn_mobile_ads_basic: 12,893 条
+  ├─ 预设 p_cn_mobile_ads_basic: 12,872 条
   ├─ 预设 p_cn_mobile_ads_dangerous: 20,767 条
   ├─ 预设 p_ads_aboard: 93,788 条
   ├─ 预设 p_dns_bypass: 145 条
-  ├─ 黑名单合并后: 121,833 条
-  ├─ 白名单过滤后: 121,833 条
-  └─ 去除子域后: 119,468 条 (最终)
+  ├─ 黑名单合并后: 121,828 条
+  ├─ 白名单过滤后: 121,828 条
+  └─ 去除子域后: 119,466 条 (最终)
 
 ════════════════════════════════════════════════════════════
 处理 规则组: Proxy (proxy)
@@ -119,13 +119,16 @@
   ├─ 白名单源: 82 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
   ├─ 白名单源: 86 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
   ├─ 白名单源: 70 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
+  ├─ 白名单源: 98,058 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+  ├─ 白名单源: 6 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
+  ├─ 白名单源: 1,551 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Domain.yaml
   ├─ 自定义黑名单包含 1 个外部规则源
     ├─ 外部规则源: 740 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
   ├─ 自定义黑名单: 769 条
   ├─ 黑名单合并后: 29,722 条
   ├─ 自定义白名单: 4 条
-  ├─ 白名单过滤后: 29,693 条
-  └─ 去除子域后: 23,047 条 (最终)
+  ├─ 白名单过滤后: 27,803 条
+  └─ 去除子域后: 21,492 条 (最终)
 
 ════════════════════════════════════════════════════════════
 处理 规则组: Microsoft China (microsoft_cn)
@@ -139,6 +142,6 @@
   └─ 去除子域后: 180 条 (最终)
 
 ================================================================================
-✓ 处理完成! 总计 170,392 条规则
-✓ 用时: 9.31 秒
+✓ 处理完成! 总计 168,831 条规则
+✓ 用时: 10.48 秒
 ================================================================================
