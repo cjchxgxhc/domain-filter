@@ -1081,9 +1081,9 @@ def generate_readme(output_root: Path, stats: Dict, groups_cfg: Dict) -> None:
         if (group_dir / "hosts.txt").exists():
             links.append(f"[`Hosts`]({RAW_BASE}/{key}/hosts.txt)")
         if (group_dir / "clash.yaml").exists():
-            links.append(f"[`Clash`]({RAW_BASE}/{key}/clash.mrs) · [`Mrs`]({RAW_BASE}/{key}/clash.mrs)")
+            links.append(f"[`Clash`]({RAW_BASE}/{key}/clash.yaml) · [`Mrs`]({RAW_BASE}/{key}/clash.mrs)")
         if (group_dir / "singbox.json").exists():
-            links.append(f"[`Sing-box`]({RAW_BASE}/{key}/singbox.srs) · [`Srs`]({RAW_BASE}/{key}/singbox.srs)")
+            links.append(f"[`Sing-box`]({RAW_BASE}/{key}/singbox.json) · [`Srs`]({RAW_BASE}/{key}/singbox.srs)")
         
         # 合并链接
         link_text = " · ".join(links) if links else "—"
