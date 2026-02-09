@@ -1,10 +1,6 @@
 name: Update Domain Filter Rules
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   schedule:
     - cron: '0 4 * * *'  # 每天北京时间 12:00 (UTC+8)
   workflow_dispatch:
@@ -12,11 +8,13 @@ on:
 env:
   MIHOMO_VERSION: 1.19.3
   SINGBOX_VERSION: 1.11.0
+  TOOLS_DIR: data/tools
 
 jobs:
   build:
     name: Build and Deploy Rules
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: write
       actions: write
@@ -26,78 +24,109 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+        timeout-minutes: 1
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
           cache: 'pip'
+        timeout-minutes: 2
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pyyaml
+          pip install requests pyyaml -q
+        timeout-minutes: 2
+
+      - name: Create tools directory
+        run: |
+          mkdir -p ${{ env.TOOLS_DIR }}
+          echo "✓ Tools directory created"
+        timeout-minutes: 1
+
+      - name: Check if tools exist
+        id: check_tools
+        run: |
+          if [ -f "${{ env.TOOLS_DIR }}/mihomo" ] && [ -f "${{ env.TOOLS_DIR }}/sing-box" ]; then
+            echo "tools_exist=true" >> $GITHUB_OUTPUT
+            echo "✓ Tools already exist locally"
+          else
+            echo "tools_exist=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ Tools not found, will download"
+          fi
+        timeout-minutes: 1
+
+      - name: Download Mihomo binary
+        if: steps.check_tools.outputs.tools_exist == 'false'
+        run: |
+          echo "Downloading Mihomo v${{ env.MIHOMO_VERSION }}..."
+          cd ${{ env.TOOLS_DIR }}
+          wget -q --timeout=30 https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          gzip -d mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          mv mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }} mihomo
+          chmod +x mihomo
+          cd -
+          echo "✓ Mihomo v${{ env.MIHOMO_VERSION }} ready"
+        timeout-minutes: 2
+
+      - name: Download sing-box binary
+        if: steps.check_tools.outputs.tools_exist == 'false'
+        run: |
+          echo "Downloading sing-box v${{ env.SINGBOX_VERSION }}..."
+          cd ${{ env.TOOLS_DIR }}
+          wget -q --timeout=30 https://github.com/SagerNet/sing-box/releases/download/v${{ env.SINGBOX_VERSION }}/sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          tar xzf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          mv sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/sing-box .
+          chmod +x sing-box
+          rm -f sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          rm -rf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/
+          cd -
+          echo "✓ sing-box v${{ env.SINGBOX_VERSION }} ready"
+        timeout-minutes: 2
 
       - name: Clean old output
         run: |
           rm -rf data/rules README.md
           echo "✓ Cleaned old output files"
+        timeout-minutes: 1
 
       - name: Run filter script
         run: |
           python data/script/filter.py
           echo "✓ Filter script completed"
-
-      - name: Download Mihomo binary
-        run: |
-          wget -q https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
-          gzip -d mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
-          chmod +x mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}
-          mv mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }} mihomo
-          echo "✓ Mihomo downloaded"
+        timeout-minutes: 2
 
       - name: Convert to MRS format (Mihomo)
         run: |
           count=0
           for file in data/rules/*/clash.yaml; do
             if [ -f "$file" ]; then
-              ./mihomo convert-ruleset domain yaml "$file" "${file%.yaml}.mrs"
+              ${{ env.TOOLS_DIR }}/mihomo convert-ruleset domain yaml "$file" "${file%.yaml}.mrs"
               count=$((count + 1))
-              echo "  ✓ Converted: $file"
+              echo "  ✓ Converted: ${file##*/}"
             fi
           done
           echo "✓ Converted $count files to MRS format"
-
-      - name: Download sing-box binary
-        run: |
-          wget -q https://github.com/SagerNet/sing-box/releases/download/v${{ env.SINGBOX_VERSION }}/sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
-          tar xzf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
-          mv sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/sing-box .
-          chmod +x sing-box
-          echo "✓ sing-box downloaded"
+        timeout-minutes: 2
 
       - name: Compile to SRS format (sing-box)
         run: |
           count=0
           for file in data/rules/*/singbox.json; do
             if [ -f "$file" ]; then
-              ./sing-box rule-set compile -o "${file%.json}.srs" "$file"
+              ${{ env.TOOLS_DIR }}/sing-box rule-set compile -o "${file%.json}.srs" "$file"
               count=$((count + 1))
-              echo "  ✓ Compiled: $file"
+              echo "  ✓ Compiled: ${file##*/}"
             fi
           done
           echo "✓ Compiled $count files to SRS format"
-
-      - name: Cleanup temporary files
-        run: |
-          rm -f mihomo sing-box *.gz *.tar.gz
-          rm -rf sing-box-*/
-          echo "✓ Cleaned up temporary files"
+        timeout-minutes: 2
 
       - name: Check for changes
         id: check_changes
         run: |
-          git add data/rules/ README.md 2>/dev/null || true
+          git add data/rules/ data/tools/ README.md 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "ℹ️ No changes detected"
@@ -105,19 +134,22 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "✓ Changes detected"
           fi
+        timeout-minutes: 1
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update rules & rule-sets $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "chore: update rules, rule-sets & tools $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
           echo "✓ Changes committed and pushed"
+        timeout-minutes: 2
 
       - name: Cleanup old workflow runs
         if: always()
         uses: actions/github-script@v7
+        timeout-minutes: 2
         with:
           script: |
             const daysToKeep = 3;
@@ -143,12 +175,10 @@ jobs:
                   per_page: 100
                 });
                 
-                // Sort by creation date (newest first)
                 const sortedRuns = runs.workflow_runs.sort((a, b) => 
                   new Date(b.created_at) - new Date(a.created_at)
                 );
                 
-                // Keep the newest runsToKeep, delete older runs beyond cutoff date
                 for (let i = runsToKeep; i < sortedRuns.length; i++) {
                   const run = sortedRuns[i];
                   const runDate = new Date(run.created_at);
@@ -172,5 +202,4 @@ jobs:
               console.log(`✓ Cleanup completed. Deleted ${totalDeleted} workflow run(s)`);
             } catch (error) {
               console.error(`❌ Cleanup failed: ${error.message}`);
-              // Don't fail the workflow if cleanup fails
             }
