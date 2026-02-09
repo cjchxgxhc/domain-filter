@@ -1,7 +1,7 @@
 # 🛡️ Domain Filter
 
 ![Total Rules](https://img.shields.io/badge/Total_Rules-170,051-blue?style=flat-square)
-![Last Update](https://img.shields.io/badge/Last_Update-2026--02--09_22:43:34-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--02--10_01:26:55-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -67,4 +67,4 @@ curl https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/d
 ```
 
 ---
-*更新时间：2026-02-09 22:43:34（北京时间）*
+*更新时间：2026-02-10 01:26:55（北京时间）*
