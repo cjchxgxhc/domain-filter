@@ -19,6 +19,7 @@ presets:
       - https://raw.githubusercontent.com/lovebai/lovebai/refs/heads/main/rule/adhome-pcdn.txt
       - https://raw.githubusercontent.com/uselibrary/PCDN/refs/heads/main/pcdn.list
       - https://raw.githubusercontent.com/4fuu/AdGuard-Home-PCDN/refs/heads/main/ban.txt
+      - https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/refs/heads/main/rules/PCDNDomain.list
       
   p_cn_mobile_ads_basic:
     blocklist:
@@ -58,6 +59,27 @@ presets:
     custom_whitelist:
       - cn
 
+  p_microsoft_cn:
+    blocklist:
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
+    whitelist:
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
+    custom_blacklist:
+      - outlook.com
+      # 登录
+      - login.microsoftonline.com
+      - live.com
+      - live.net
+      - logincdn.msftauth.net
+      - acctcdn.msftauth.net
+      # 翻译
+      - microsofttranslator.com
+      - translate.microsoft.com
+      - api.cognitive.microsoft.com
+      - translatoruser.intl.microsoft.com
+      # Edge
+      - edge.microsoft.com
 
 groups:
 
@@ -149,6 +171,10 @@ groups:
       - whois.pconline.com.cn
       # 国家后缀
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+      # Firefox 扩展商店
+      - addons.mozilla.org
+      # 规则下载
+      - adtidy.org
     custom_whitelist:
       # GitHub 加速
       - jsdelivr.com
@@ -163,16 +189,44 @@ groups:
   microsoft_cn:
     title: Microsoft China
     description: 微软直连域名。
+    use_presets:
+      - p_microsoft_cn
+    formats:
+      - clash
+      - singbox
+
+  direct_fix:
+    title: Direct Fix
+    description: 直连域名片段。
+    use_presets:
+      - p_microsoft_cn
     blocklist:
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
-    whitelist:
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
+      # 谷歌 FCM
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
+      # Apple China
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
+      # 游戏
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
     custom_blacklist:
-      - outlook.com
-      - live.com
-      - live.net
-      - microsofttranslator.com
+      # 局域网
+      - lan
+      - local
+      - localdomain
+      - localhost
+      # Firefox
+      - firefox.com
+      - firefoxcn.net
+      - firefox.com.cn
+      
+      - ipv4only.arpa
+      - example.org
+      - allawntech.com
+      - baidu.com
+      - ntp.org
+      - heytapmobi.com
+      - heytapdownload.com
     formats:
       - clash
       - singbox
