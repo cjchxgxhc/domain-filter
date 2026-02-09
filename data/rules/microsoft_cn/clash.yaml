@@ -1,15 +1,17 @@
 # Title: Microsoft China
 # Description: 微软直连域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 180
-# Updated: 2026-02-09 13:24:38 CST
+# Total: 187
+# Updated: 2026-02-09 22:43:34 CST
 #
 payload:
   - +.21vbc.com
   - +.21vbluecloud.com
   - +.21vbluecloud.net
   - +.aadrm.cn
+  - +.acctcdn.msftauth.net
   - +.aggresmart.com
+  - +.api.cognitive.microsoft.com
   - +.apihub-internal.cn
   - +.appserviceenvironment.cn
   - +.azchcdna.com
@@ -93,6 +95,7 @@ payload:
   - +.download.visualstudio.microsoft.com
   - +.download.windowsupdate.com
   - +.dynamics.cn
+  - +.edge.microsoft.com
   - +.engkoo.com
   - +.f.c2r.ts.cdn.office.net
   - +.fs.microsoft.com
@@ -100,6 +103,8 @@ payload:
   - +.learn.microsoft.com
   - +.live.com
   - +.live.net
+  - +.login.microsoftonline.com
+  - +.logincdn.msftauth.net
   - +.lync.cn
   - +.management-azure-devices-provisioning.cn
   - +.management-azure-devices.cn
@@ -173,6 +178,8 @@ payload:
   - +.storeedgefd.dsx.mp.microsoft.com
   - +.surface.downloads.prss.microsoft.com
   - +.trafficmanager.cn
+  - +.translate.microsoft.com
+  - +.translatoruser.intl.microsoft.com
   - +.trustcenter.cn
   - +.unity3dcloud.cn
   - +.vscode.download.prss.microsoft.com
