@@ -12,6 +12,7 @@ presets:
       - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
       - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
+      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
 
   p_pcdn_list:
     blocklist:
@@ -33,6 +34,7 @@ presets:
 
   p_cn_mobile_ads_dangerous: # 存在误杀
     blocklist:
+      - https://raw.githubusercontent.com/qq5460168/666/master/dns.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
@@ -63,6 +65,7 @@ presets:
     blocklist:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
+      - https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf
     whitelist:
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
     custom_blacklist:
