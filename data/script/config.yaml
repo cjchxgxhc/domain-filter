@@ -17,28 +17,6 @@ presets:
   p_pcdn_list:
     blocklist:
       - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
-      - https://raw.githubusercontent.com/lovebai/lovebai/refs/heads/main/rule/adhome-pcdn.txt
-      - https://raw.githubusercontent.com/uselibrary/PCDN/refs/heads/main/pcdn.list
-      - https://raw.githubusercontent.com/4fuu/AdGuard-Home-PCDN/refs/heads/main/ban.txt
-      - https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/refs/heads/main/rules/PCDNDomain.list
-    custom_blacklist:
-      - ahdohpiechei.com
-      - 0kkkkkt.com
-      - free-lbv3.idouyinvod.com
-      - free-lbv26.idouyinvod.com
-      - free-lbv6.idouyinvod.com
-      - ksyungslb.com
-      - mobgslb.tbcache.com
-      - ldhy.click
-      - qtaeixd.com
-      - sealaly.net
-      - ctydoh.cn
-      - cjjd14.com
-      - zhenidc.cn
-      - ydycdn.com
-      - edge.mountaintoys.cn
-      - smtcdns.com
-      - vegslb.com
 
   p_cn_mobile_ads_basic:
     blocklist:
