@@ -1,55 +1,51 @@
 开始执行域名过滤工具
-开始下载 49 个规则源...
-  ✓ https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
-  ✓ https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-  ✓ https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
-  ✓ https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
-  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
-  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-  ✓ https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
-  ✓ https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
-  ✓ https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf
-  ✓ https://raw.githubusercontent.com/4fuu/AdGuard-Home-PCDN/refs/heads/main/ban.txt
-  ✓ https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
-  ✓ https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
-  ✓ https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
-  ✓ https://raw.githubusercontent.com/qq5460168/666/master/dns.txt
-  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
-  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
-  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list
-  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
-  ✓ https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
-  ✓ https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
-  ✓ https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/refs/heads/main/rules/PCDNDomain.list
-  ✓ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
-  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
-  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
+开始下载 45 个规则源...
   ✓ https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-  ✓ https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bing/Bing_No_Resolve.yaml
+  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+  ✓ https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
+  ✓ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml
+  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
+  ✓ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+  ✓ https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+  ✓ https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
+  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
+  ✓ https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
   ✓ https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
-  ✓ https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
-  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
-  ✓ https://raw.githubusercontent.com/uselibrary/PCDN/refs/heads/main/pcdn.list
-  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Domain.yaml
-  ✓ https://raw.githubusercontent.com/lovebai/lovebai/refs/heads/main/rule/adhome-pcdn.txt
-  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
-  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
+  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
+  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
   ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
-  ✓ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
+  ✓ https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
   ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
+  ✓ https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
+  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
+  ✓ https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+  ✓ https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
+  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
+  ✓ https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+  ✓ https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
+  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
+  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
+  ✓ https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+  ✓ https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+  ✓ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Domain.yaml
+  ✓ https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
+  ✓ https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
+  ✓ https://raw.githubusercontent.com/qq5460168/666/master/dns.txt
+  ✓ https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
+  ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+  ✓ https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf
   ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
   ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
   ✓ https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-下载完成：49/49 成功
+下载完成：45/45 成功
 
 
 ================================================================================
@@ -71,39 +67,34 @@
   │  黑名单源：72 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
   │  黑名单源：22 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
   │  黑名单源：93 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
-  │  黑名单源：1,105 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
-  │  黑名单合计：1,172 条
+  │  黑名单源：1,111 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
+  │  黑名单合计：1,178 条
   │  白名单过滤：移除 0 条
   │  子域去重：移除 33 条
-  └─ 最终结果：1,139 条（已保存到缓存）
+  └─ 最终结果：1,145 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 预设组：p_pcdn_list (p_pcdn_list)
 ══════════════════════════════════════════════════════════════════════
   │  黑名单源：30 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
-  │  黑名单源：44 条 <- https://raw.githubusercontent.com/lovebai/lovebai/refs/heads/main/rule/adhome-pcdn.txt
-  │  黑名单源：33 条 <- https://raw.githubusercontent.com/uselibrary/PCDN/refs/heads/main/pcdn.list
-  │  黑名单源：36 条 <- https://raw.githubusercontent.com/4fuu/AdGuard-Home-PCDN/refs/heads/main/ban.txt
-  │  黑名单源：46 条 <- https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/refs/heads/main/rules/PCDNDomain.list
-  │  自定义黑名单：17 条
-  │  黑名单合计：83 条
+  │  黑名单合计：30 条
   │  白名单过滤：移除 0 条
-  │  子域去重：移除 11 条
-  └─ 最终结果：72 条（已保存到缓存）
+  │  子域去重：移除 0 条
+  └─ 最终结果：30 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 预设组：p_cn_mobile_ads_basic (p_cn_mobile_ads_basic)
 ══════════════════════════════════════════════════════════════════════
   │  黑名单源：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-  │  黑名单源：4,799 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+  │  黑名单源：4,771 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
   │  黑名单源：809 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-  │  黑名单源：12,733 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
+  │  黑名单源：12,470 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
   │  白名单源：149 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   │  白名单源：8 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  │  黑名单合计：17,264 条
-  │  白名单过滤：移除 199 条
-  │  子域去重：移除 4,177 条
-  └─ 最终结果：12,888 条（已保存到缓存）
+  │  黑名单合计：16,975 条
+  │  白名单过滤：移除 198 条
+  │  子域去重：移除 4,044 条
+  └─ 最终结果：12,733 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 预设组：p_cn_mobile_ads_dangerous (p_cn_mobile_ads_dangerous)
@@ -114,7 +105,7 @@
   │  黑名单源：121 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
   │  黑名单源：226 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
   │  黑名单源：4,468 条 <- https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
-  │  黑名单源：15,807 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
+  │  黑名单源：15,341 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
   │  黑名单源：578 条 <- https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
   │  黑名单源：480 条 <- https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
   │  黑名单源：4,916 条 <- https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
@@ -122,22 +113,22 @@
   │  白名单源：461 条 <- https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
   │  白名单源：2,621 条 <- https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
   │  白名单源：8 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  │  黑名单合计：32,947 条
-  │  白名单过滤：移除 2,591 条
-  │  子域去重：移除 3,494 条
-  └─ 最终结果：26,862 条（已保存到缓存）
+  │  黑名单合计：32,576 条
+  │  白名单过滤：移除 2,593 条
+  │  子域去重：移除 3,502 条
+  └─ 最终结果：26,481 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 预设组：p_ads_aboard (p_ads_aboard)
 ══════════════════════════════════════════════════════════════════════
-  │  黑名单源：103,399 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+  │  黑名单源：104,356 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
   │  白名单源：116,366 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
   │  白名单源：8 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  │  黑名单合计：103,399 条
+  │  黑名单合计：104,356 条
   │  自定义白名单：1 条
-  │  白名单过滤：移除 4,282 条
+  │  白名单过滤：移除 4,238 条
   │  子域去重：移除 0 条
-  └─ 最终结果：99,117 条（已保存到缓存）
+  └─ 最终结果：100,118 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 预设组：p_microsoft_cn (p_microsoft_cn)
@@ -160,31 +151,31 @@
 处理 规则组：Ads Blocklist China (ads)
 ══════════════════════════════════════════════════════════════════════
   │  预设规则：4 条 <- p_my_ads_rule
-  │  预设规则：72 条 <- p_pcdn_list
-  │  预设规则：12,888 条 <- p_cn_mobile_ads_basic
-  │  预设规则：26,862 条 <- p_cn_mobile_ads_dangerous
-  │  预设规则：1,139 条 <- p_dns_bypass
-  │  黑名单合计：36,073 条
+  │  预设规则：30 条 <- p_pcdn_list
+  │  预设规则：12,733 条 <- p_cn_mobile_ads_basic
+  │  预设规则：26,481 条 <- p_cn_mobile_ads_dangerous
+  │  预设规则：1,145 条 <- p_dns_bypass
+  │  黑名单合计：35,556 条
 自定义白名单包含 1 个外部规则源
   └─ 外部规则源：740 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt
   │  自定义白名单：741 条
-  │  白名单过滤：移除 1,964 条
-  │  子域去重：移除 754 条
-  └─ 最终结果：33,355 条（已保存到缓存）
+  │  白名单过滤：移除 1,970 条
+  │  子域去重：移除 748 条
+  └─ 最终结果：32,838 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 规则组：Ads Blocklist Large (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  预设规则：4 条 <- p_my_ads_rule
-  │  预设规则：72 条 <- p_pcdn_list
-  │  预设规则：12,888 条 <- p_cn_mobile_ads_basic
-  │  预设规则：26,862 条 <- p_cn_mobile_ads_dangerous
-  │  预设规则：99,117 条 <- p_ads_aboard
-  │  预设规则：1,139 条 <- p_dns_bypass
-  │  黑名单合计：133,410 条
+  │  预设规则：30 条 <- p_pcdn_list
+  │  预设规则：12,733 条 <- p_cn_mobile_ads_basic
+  │  预设规则：26,481 条 <- p_cn_mobile_ads_dangerous
+  │  预设规则：100,118 条 <- p_ads_aboard
+  │  预设规则：1,145 条 <- p_dns_bypass
+  │  黑名单合计：133,805 条
   │  白名单过滤：移除 0 条
-  │  子域去重：移除 4,014 条
-  └─ 最终结果：129,396 条（已保存到缓存）
+  │  子域去重：移除 4,062 条
+  └─ 最终结果：129,743 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 规则组：Proxy (proxy)
@@ -196,7 +187,7 @@
   │  白名单源：82 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
   │  白名单源：86 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
   │  白名单源：70 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list
-  │  白名单源：103,399 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
+  │  白名单源：104,356 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
   │  白名单源：6 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
   │  白名单源：1,551 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Domain.yaml
 自定义黑名单包含 1 个外部规则源
@@ -204,9 +195,9 @@
   │  自定义黑名单：771 条
   │  黑名单合计：29,752 条
   │  自定义白名单：4 条
-  │  白名单过滤：移除 1,921 条
+  │  白名单过滤：移除 1,920 条
   │  子域去重：移除 6,321 条
-  └─ 最终结果：21,510 条（已保存到缓存）
+  └─ 最终结果：21,511 条（已保存到缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理 规则组：Microsoft China (microsoft_cn)
@@ -233,6 +224,6 @@
   └─ 最终结果：946 条（已保存到缓存）
 
 ================================================================================
-✓ 处理完成！总计 185,427 条规则
-✓ 耗时：8.14 秒
+✓ 处理完成！总计 185,258 条规则
+✓ 耗时：7.86 秒
 ================================================================================
