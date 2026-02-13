@@ -1,0 +1,38 @@
+
+#### 支持格式
+example.com #注释
+.example1.com
+*.example2.com
+ExAmple3.com
+||example4.com^
+||example5.com^$important
+@@||whitelist.com^
+@@||whitelist2.com^$important
+DOMAIN-SUFFIX,example6.com
+DOMAIN,example7.com
+  - DOMAIN-SUFFIX,example8.com
+  - DOMAIN,example9.com
+HOST-SUFFIX,example10.com,AFP
+  - 'example11.com'
+  - '.example12.com'
+  - '*.example13.com'
+  - '+.example14.com'
+# adguard home配置文件
+  - '||example15.com^$important'
+0.0.0.0 example16.com
+0.0.0.0 example17.com
+
+#### 不支持格式
+errorlist
+# 注释
+! 注释
+DOMAIN-KEYWORD,error3.com
+# 正则表达式
+\*\.error4\.com
+^[a-zA-Z0-9-]*\.*error5\.com$
+# 不规范的adblock格式
+|error6.com^
+||error7.com
+||*.error8.com^$important
+# 加速hosts
+127.8.8.8 error9.com
