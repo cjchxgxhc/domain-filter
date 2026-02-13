@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Domain Filter - 域名过滤工具
-
-一个自动化的域名过滤和去重工具，支持多种格式的规则源、并行处理和智能过滤。
-
-项目地址：https://github.com/cjchxgxhc/domain-filter
+Domain Filter
+https://github.com/cjchxgxhc/domain-filter
 
 主要功能：
-  • 支持多种规则格式（AdBlock、Clash、Hosts、纯域名等）
-  • 并行下载和处理规则源
-  • 使用Trie树进行高效的子域检测和去重
-  • 灵活的黑/白名单过滤机制
+  • 多种规则格式提取（AdBlock、Clash、Hosts、纯域名等）
+  • 子域去重
+  • 黑/白名单过滤
   • 多格式输出（Domains、AdBlock、Hosts、Clash、Sing-box）
 """
 
@@ -113,19 +109,19 @@ DOMAIN_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-# AdBlock 格式：||example.com^
+# AdBlock 黑名单格式：||domain^
 REGEX_ADBLOCK = re.compile(
-    r"^\|{1,2}([a-z0-9][a-z0-9\.-]*[a-z0-9])(?:\^)?(?:\$important)?(?:\$?)?$",
+    r"^\|\|([a-z0-9][a-z0-9\.-]*[a-z0-9])\^$",
     re.IGNORECASE
 )
 
-# 白名单格式：@@||example.com^
+# AdBlock 白名单格式：@@||domain^
 REGEX_WHITELIST = re.compile(
-    r"^@@\|{0,2}([a-z0-9][a-z0-9\.-]*[a-z0-9])(?:\^)?(?:\$important)?(?:\$?)?$",
+    r"^@@\|\|([a-z0-9][a-z0-9\.-]*[a-z0-9])\^$",
     re.IGNORECASE
 )
 
-# Clash/Surge 格式：DOMAIN,example.com 或 DOMAIN-SUFFIX,example.com
+# 代理工具格式：DOMAIN,example.com DOMAIN-SUFFIX,example.com 等
 REGEX_CLASH = re.compile(
     r"^(DOMAIN|DOMAIN-SUFFIX|HOST|HOST-SUFFIX)\s*,\s*([a-z0-9][a-z0-9\.-]*[a-z0-9])(?:\s*,.*)?$",
     re.IGNORECASE
@@ -261,47 +257,13 @@ def is_valid_domain(domain: str) -> bool:
     return bool(DOMAIN_PATTERN.fullmatch(domain))
 
 
-def clean_domain(raw: str) -> str:
-    """
-    清理原始域名字符串
-    
-    移除常见的前缀（IP地址、协议、通配符等）、注释和特殊字符。
-    
-    参数：
-        raw: 原始的域名字符串
-    
-    返回：
-        清理后的域名（小写）
-    """
-    raw = raw.strip().lower()
-    
-    # 跳过注释行（包含##）
-    if "##" in raw:
-        return ""
-    
-    # 移除常见的前缀
-    # 包括：IP地址、HTTP(S)协议、通配符、AdBlock语法等
-    raw = re.sub(
-        r"^(?:0\.0\.0\.0|127\.0\.0\.1|::1|local=|https?://|\|\||\*\.|\+\.|@@\|\|)\s*",
-        "",
-        raw,
-        flags=re.IGNORECASE
-    )
-    
-    # 移除特殊字符和行内注释（^、$、#等）
-    raw = re.sub(r"[\^$#].*$", "", raw)
-    
-    # 移除两端的点
-    return raw.strip(".")
-
-
 # ═══════════════════════════════════════════════════════════════════════════════
 # 规则行预处理
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def strip_comments(line: str) -> str:
     """
-    从规则行中移除注释
+    移除注释
     
     识别并移除以下注释格式：
     - 行开头的 # 或 !（整行注释）
@@ -327,106 +289,97 @@ def strip_comments(line: str) -> str:
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# 域名提取器（支持多种格式）
+# 域名提取
 # ═══════════════════════════════════════════════════════════════════════════════
 
 class DomainExtractor:
     """
     多格式域名提取器
     
-    从各种格式的规则行中智能提取域名，包括：
-    - AdBlock 格式：||example.com^
-    - 白名单格式：@@||example.com^
-    - Clash/Surge：DOMAIN,example.com 或 +.example.com
-    - Hosts：0.0.0.0 example.com
-    - 纯域名：example.com
-    
-    使用级联的格式检测，按优先级尝试各种格式。
+    流程：
+    1. 格式清理
+    2. 提取 AdBlock 格式
+    3. 提取其他格式
     """
     
     @staticmethod
-    def _extract_adblock(cleaned: str) -> Optional[str]:
+    def _extract_adblock(cleaned: str, is_whitelist: bool = False) -> Optional[str]:
         """
-        提取 AdBlock 格式的域名
+        提取 AdBlock 格式
         
-        格式：||example.com^ 或 |example.com^
+        格式：||example.com^（黑名单）或 @@||example.com^（白名单）
         """
-        match = REGEX_ADBLOCK.match(cleaned)
+        if is_whitelist:
+            match = REGEX_WHITELIST.match(cleaned)
+        else:
+            match = REGEX_ADBLOCK.match(cleaned)
+        
         return match.group(1).lower().strip() if match else None
     
     @staticmethod
-    def _extract_whitelist(cleaned: str) -> Optional[str]:
+    def _extract_other_formats(cleaned: str) -> Optional[str]:
         """
-        提取白名单格式的域名
-        
-        格式：@@||example.com^ 或 @@|example.com^
-        """
-        match = REGEX_WHITELIST.match(cleaned)
-        return match.group(1).lower().strip() if match else None
-    
-    @staticmethod
-    def _extract_clash(cleaned: str) -> Optional[str]:
-        """
-        提取 Clash/Surge 格式的域名
+        提取其他格式的域名
         
         支持格式：
-        - DOMAIN,example.com
-        - DOMAIN-SUFFIX,example.com
-        - +.example.com（通配符）
-        - *.example.com（通配符）
+        - DOMAIN：DOMAIN,example.com
+        - DOMAIN-SUFFIX：DOMAIN-SUFFIX,example.com
+        - Clash 通配符：+.example.com 或 *.example.com
+        - 点格式：.example.com
+        - Hosts：0.0.0.0 example.com 或 127.0.0.1 example.com
+        - 纯域名：example.com
         """
-        no_quote = cleaned.strip("'\"").strip()
-        
-        # 尝试匹配标准的 Clash 格式
-        match = REGEX_CLASH.match(no_quote)
+        # 尝试匹配 DOMAIN,DOMAIN-SUFFIX 等代理格式
+        match = REGEX_CLASH.match(cleaned)
         if match:
-            return match.group(2).strip().lower()
+            domain = match.group(2).strip().lower()
+            if is_valid_domain(domain):
+                return domain
         
-        # 尝试匹配通配符格式（+. 或 *.）
-        if no_quote.startswith(("+.", "*.")):
-            return no_quote[2:].strip().lower()
+        # 尝试匹配 Clash 通配符（+. 或 *.）
+        if cleaned.startswith(("+.", "*.")):
+            domain = cleaned[2:].strip().lower()
+            if is_valid_domain(domain):
+                return domain
         
-        # 尝试作为纯域名处理
-        if is_valid_domain(no_quote):
-            return no_quote
+        # 尝试匹配 .domain 
+        if cleaned.startswith(".") and len(cleaned) > 1:
+            domain = cleaned[1:].lower()
+            if is_valid_domain(domain):
+                return domain
         
-        return None
-    
-    @staticmethod
-    def _extract_hosts(cleaned: str) -> Optional[str]:
-        """
-        提取 Hosts 文件格式的域名
-        
-        格式：0.0.0.0 example.com 或 127.0.0.1 example.com
-        """
+        # 尝试匹配 Hosts
         if REGEX_HOSTS.match(cleaned):
-            # 按空格分割，取第二部分
             parts = re.split(r"\s+", cleaned.strip(), maxsplit=1)
             if len(parts) >= 2:
-                return clean_domain(parts[1])
-        return None
-    
-    @staticmethod
-    def _extract_fallback(cleaned: str) -> Optional[str]:
-        """
-        备用方案：移除特殊字符后验证
+                domain = parts[1].strip().lower()
+                if is_valid_domain(domain):
+                    return domain
         
-        用于处理非标准格式的输入。
-        """
-        cleaned_no_mark = re.sub(r"[\^\$\*\+@\|'\"]", "", cleaned).strip()
-        return cleaned_no_mark if is_valid_domain(cleaned_no_mark) else None
+        # 尝试作为纯域名处理
+        if is_valid_domain(cleaned):
+            return cleaned.lower()
+        
+        return None
     
     @classmethod
     def extract(cls, line: str, is_whitelist: bool = False) -> Optional[str]:
         """
-        主提取方法 - 按优先级尝试各种格式
+        主提取逻辑
         
         提取流程：
-        1. 移除注释和 YAML 前缀
-        2. 如果是白名单规则，先尝试白名单格式
-        3. 如果是黑名单规则，跳过白名单标记
-        4. 按优先级尝试：AdBlock、Clash、Hosts、备用方案
-        5. 对提取的结果进行域名验证
+        1. 格式清理
+           - 移除注释（#、!）
+           - 移除 YAML 列表前缀（-）
+           - 移除 YAML 引号（'、"）
+           - 移除 $important 后缀
+        
+        2. 提取 AdBlock 格式
+           - 白名单：@@||domain^
+           - 黑名单：||domain^
+        
+        3. 提取其他格式
+           - Clash、Hosts、纯域名等
         
         参数：
             line: 输入的规则行
@@ -435,42 +388,42 @@ class DomainExtractor:
         返回：
             提取的域名（小写），或 None 如果无法提取
         """
-        # 移除注释和空白
+        # ─────────────────────────────────────────────────────────────────
+        # 步骤 1：格式清理
+        # ─────────────────────────────────────────────────────────────────
+        
+        # 1.1 移除注释和空白
         cleaned = strip_comments(line)
         if not cleaned:
             return None
         
-        # 移除 YAML 列表前缀（- 符号）
+        # 1.2 移除 YAML 列表前缀（- 符号）
         cleaned = re.sub(r"^\s*-\s*", "", cleaned).strip()
         
-        # 白名单规则特殊处理
-        if is_whitelist:
-            result = cls._extract_whitelist(cleaned)
-            if result and is_valid_domain(result):
-                return result
-        else:
-            # 黑名单：跳过白名单标记
-            if cleaned.startswith("@@"):
-                return None
-            
-            # 尝试提取 AdBlock 格式
-            result = cls._extract_adblock(cleaned)
-            if result and is_valid_domain(result):
-                return result
+        # 1.3 移除 YAML 格式的引号
+        cleaned = cleaned.strip("'\"")
         
-        # 尝试提取 Clash 格式
-        result = cls._extract_clash(cleaned)
+        # 1.4 移除 AdBlock 格式的 $important 后缀
+        cleaned = re.sub(r"\$important(?=\^|$)", "", cleaned)
+        
+        # ─────────────────────────────────────────────────────────────────
+        # 步骤 2：尝试提取 AdBlock 格式
+        # ─────────────────────────────────────────────────────────────────
+        
+        # 对于黑名单：如果以 @@ 开头则跳过（属于白名单）
+        if not is_whitelist and cleaned.startswith("@@"):
+            return None
+        
+        result = cls._extract_adblock(cleaned, is_whitelist)
         if result and is_valid_domain(result):
             return result
         
-        # 尝试提取 Hosts 格式
-        result = cls._extract_hosts(cleaned)
-        if result and is_valid_domain(result):
-            return result
+        # ─────────────────────────────────────────────────────────────────
+        # 步骤 3：尝试提取其他格式
+        # ─────────────────────────────────────────────────────────────────
         
-        # 备用方案
-        result = cls._extract_fallback(cleaned)
-        if result and is_valid_domain(result):
+        result = cls._extract_other_formats(cleaned)
+        if result:
             return result
         
         return None
@@ -500,8 +453,7 @@ def parallel_extract(lines: List[str], is_whitelist: bool = False) -> Set[str]:
     """
     并行提取域名
     
-    将输入行分割成多个数据块，使用线程池并行处理，
-    提高处理速度。每个线程独立处理一个块，避免线程安全问题。
+    将输入行分割成多个数据块，使用线程池并行处理。
     
     参数：
         lines: 规则行列表
@@ -542,7 +494,7 @@ def parallel_extract(lines: List[str], is_whitelist: bool = False) -> Set[str]:
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# 白名单过滤（使用 Trie 树）
+# 白名单过滤
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def build_trie(domains: Set[str]) -> TrieNode:
@@ -685,7 +637,7 @@ def remove_subdomains(domains: Set[str]) -> Set[str]:
         domains: 域名集合
     
     返回：
-        去重后的域名集合（仅包含顶级域名）
+        去重后的域名集合
     """
     if not domains:
         return set()
