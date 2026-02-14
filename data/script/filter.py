@@ -951,7 +951,7 @@ def save_domains(
     if "singbox" in formats:
         singbox_file = output_dir / "singbox.json"
         singbox_data = {
-            "version": 2,
+            "version": 3,
             "rules": [
                 {
                     "domain_suffix": sorted_domains
