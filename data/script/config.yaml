@@ -1,5 +1,15 @@
 presets:
 
+  p_ads_liuzq2002:
+    blocklist:
+      - https://raw.githubusercontent.com/liuzq2002/Adguard-Home-For-Magisk-Mod/refs/heads/main/Adguardhome/bin/AdGuardHome.yaml
+    whitelist:
+      - https://raw.githubusercontent.com/liuzq2002/Adguard-Home-For-Magisk-Mod/refs/heads/main/Adguardhome/bin/AdGuardHome.yaml
+    custom_whitelist:
+      - version.bind
+      - id.server
+      - hostname.bind
+
   p_my_ads_rule:
     custom_blacklist:
       - sentry.io
@@ -23,6 +33,7 @@ presets:
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
       - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+      - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
       - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
     whitelist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
@@ -35,10 +46,7 @@ presets:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.xiaomi.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.vivo.txt
-      - https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/dnslist.txt
       - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdnslite.txt
-      - https://raw.githubusercontent.com/790953214/qy-Ads-Rule/refs/heads/main/black.txt
-      - https://raw.githubusercontent.com/Kuroba-Sayuki/FuLing-AdRules/Master/FuLingRules/FuLingBlockList.txt
       - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
     whitelist:
       - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
@@ -87,6 +95,7 @@ groups:
     description: 针对中文移动端广告。
     use_presets:
       - p_my_ads_rule
+      - p_ads_liuzq2002
       - p_pcdn_list
       - p_cn_mobile_ads_basic
       - p_cn_mobile_ads_dangerous
@@ -105,6 +114,7 @@ groups:
     description: 适用于代理程序。
     use_presets:
       - p_my_ads_rule
+      - p_ads_liuzq2002
       - p_pcdn_list
       - p_cn_mobile_ads_basic
       - p_cn_mobile_ads_dangerous
