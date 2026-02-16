@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,218
-# Updated: 2026-02-15 13:15:49 CST
+# Total: 22,237
+# Updated: 2026-02-16 13:23:05 CST
 #
 payload:
   - +.000webhost.com
@@ -223,6 +223,7 @@ payload:
   - +.2dgen.com
   - +.2du5.com
   - +.2gayboys.com
+  - +.2gis.com
   - +.2k.com
   - +.2kcoretech.online
   - +.2kct.onl
@@ -635,6 +636,7 @@ payload:
   - +.aave.com
   - +.aavs.xyz
   - +.abb
+  - +.abb.travel
   - +.abbott
   - +.abbvie
   - +.abbywintersfree.com
@@ -684,6 +686,7 @@ payload:
   - +.acces-vod.com
   - +.accessfacebookfromschool.com
   - +.accim.org
+  - +.accomable.com
   - +.account-paypal.info
   - +.account-paypal.net
   - +.account-paypal.org
@@ -1026,6 +1029,18 @@ payload:
   - +.airasia.com
   - +.airav.cc
   - +.airav.wiki
+  - +.airbnb.cn
+  - +.airbnb.com
+  - +.airbnb.com.au
+  - +.airbnb.com.co
+  - +.airbnb.com.hk
+  - +.airbnb.com.my
+  - +.airbnb.me
+  - +.airbnb.nl
+  - +.airbnb.org
+  - +.airbnb.pl
+  - +.airbnb.tools
+  - +.airbnb.travel
   - +.airbus
   - +.airconsole.com
   - +.aircrack-ng.org
@@ -13209,6 +13224,7 @@ payload:
   - +.muncloud.dog
   - +.muramura.tv
   - +.muryouav.net
+  - +.muscache.com
   - +.muscdn.com
   - +.musclegirlflix.com
   - +.mushroomtrack.com
@@ -19973,6 +19989,7 @@ payload:
   - +.valoryirene.com
   - +.valuegb.com
   - +.valvesoftware.com
+  - +.vamo.com
   - +.van001.com
   - +.van698.com
   - +.vana
@@ -20563,6 +20580,7 @@ payload:
   - +.wales
   - +.wallet.com
   - +.walletconnect.com
+  - +.walletconnect.org
   - +.wallhaven.cc
   - +.wallmama.com
   - +.wallornot.org
@@ -20672,6 +20690,7 @@ payload:
   - +.web-instagram.net
   - +.web.nebula-emby.com
   - +.web2project.net
+  - +.web3modal.org
   - +.webappfieldguide.com
   - +.webbang.net
   - +.webcam-teen.net
