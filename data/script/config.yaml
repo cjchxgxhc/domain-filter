@@ -30,6 +30,7 @@ presets:
 
   p_cn_mobile_ads_basic:
     blocklist:
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-surge.txt
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
       - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
@@ -57,7 +58,7 @@ presets:
   p_ads_aboard:
     blocklist:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.mini.txt
-    #  - https://small.oisd.nl
+      - https://small.oisd.nl
     whitelist:
       # 去除部分中文域名，防止误杀
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
