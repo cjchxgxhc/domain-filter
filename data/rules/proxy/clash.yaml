@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,237
-# Updated: 2026-02-17 21:58:48 CST
+# Total: 22,259
+# Updated: 2026-02-18 13:19:41 CST
 #
 payload:
   - +.000webhost.com
@@ -2893,6 +2893,7 @@ payload:
   - +.bitchmomporn.com
   - +.bitchute.com
   - +.bitcoin.org
+  - +.bitcoincore.org
   - +.bitcointalk.org
   - +.bitcoinworld.com
   - +.bitdefender.com
@@ -17045,11 +17046,13 @@ payload:
   - +.secretubes.com
   - +.sectigo.com
   - +.secure-paypal.info
+  - +.securecloudtransformation.com
   - +.securepaypal.info
   - +.secureservercdn.net
   - +.securetunnel.com
   - +.securityinabox.org
   - +.securitykiss.com
+  - +.securitypreview.com
   - +.seed4.me
   - +.seedmov18.com
   - +.seehorsepenis.com
@@ -18108,6 +18111,7 @@ payload:
   - +.starfieldtech.com
   - +.starfishfx.com
   - +.starfox.com
+  - +.stargazer-games.com
   - +.starott.com
   - +.starp2p.com
   - +.starplus.com
@@ -18181,6 +18185,7 @@ payload:
   - +.steganos.com
   - +.steganos.net
   - +.stel.com
+  - +.stellasora.global
   - +.stepchina.com
   - +.stepdaughter.love
   - +.stepfamilyporn.com
@@ -18948,6 +18953,7 @@ payload:
   - +.threads.com
   - +.threads.net
   - +.threatchaos.com
+  - +.threatlabz.com
   - +.thrixxx.com
   - +.throughnightsfire.com
   - +.thtmod1.com
@@ -21820,6 +21826,7 @@ payload:
   - +.ymhsf.top
   - +.ymhsf1.top
   - +.ynoproject.net
+  - +.yo-star.com
   - +.yo1health.com
   - +.yobit.net
   - +.yobt.com
@@ -21835,6 +21842,8 @@ payload:
   - +.yomiuri-shimbun.pressreader.com
   - +.yopornshop.com
   - +.yoshisnewisland.com
+  - +.yostar.net
+  - +.yostarplat.com
   - +.you-get.org
   - +.you.com
   - +.youassporn.com
@@ -22057,6 +22066,8 @@ payload:
   - +.zdnet.com
   - +.zdnet.redvideo.io
   - +.zdusercontent.com
+  - +.zdxbeta.net
+  - +.zdxcloud.net
   - +.zee.com
   - +.zee5.com
   - +.zee5.tv
@@ -22203,7 +22214,18 @@ payload:
   - +.zorrovpn.com
   - +.zotero.org
   - +.zozotown.com
+  - +.zpagov.net
+  - +.zpath.com
   - +.zqqpwz.com
+  - +.zscaler.com
+  - +.zscaler.net
+  - +.zscalerbeta.net
+  - +.zscalergov.net
+  - +.zscalerone.net
+  - +.zscalershift.com
+  - +.zscalerthree.net
+  - +.zscalertwo.net
+  - +.zscloud.net
   - +.zsdxzk.com
   - +.zsh.org
   - +.zspeeder.me
