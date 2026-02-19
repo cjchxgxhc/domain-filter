@@ -1,261 +1,434 @@
-# ═══════════════════════════════════════════════════════════════════════════
-# Domain Filter 配置文件示例
-# ═══════════════════════════════════════════════════════════════════════════
+# ==============================================================================
+# Domain Filter 参考配置
+# 项目地址：https://github.com/cjchxgxhc/domain-filter
+# 配置文件路径：data/script/config.yaml
+# ==============================================================================
 #
-# 📖 使用说明：
-# 1. 复制此文件为 config.yaml：cp config_example.yaml config.yaml
-# 2. 根据需求修改配置
-# 3. 运行脚本：python data/script/filter.py
+# 整体结构说明：
 #
-# ⚠️ 重要提示：
-# - custom_blacklist custom_whitelist 中的域名不会进行格式验证，请确保填写正确
-# - 预设组(presets)不会生成输出文件，仅用于被规则组引用
-# - 只支持以下格式：domains, adblock, hosts, clash, singbox
+#   config.yaml
+#   ├── presets   预设规则组
+#   │     └── 预先处理并缓存结果，不输出文件，供规则组引用
+#   └── groups    规则组
+#         └── 处理并输出规则文件到 data/rules/<key>/
 #
-# ═══════════════════════════════════════════════════════════════════════════
+# 处理流程（每个规则组独立执行）：
+#   1. 收集黑名单：来自 use_presets_blocklist + blocklist + custom_blocklist
+#   2. 收集白名单：来自 use_presets_whitelist + whitelist + custom_whitelist
+#   3. 源级白名单过滤：从黑名单中移除 whitelist 匹配的域名（含子域）
+#   4. 自定义白名单过滤：从黑名单中移除 custom_whitelist 匹配的域名（含子域）
+#   5. 格式输出：
+#      - domains / hosts  → 直接输出（保留所有精确条目）
+#      - adblock / clash / singbox → 先子域去重（移除被父域覆盖的冗余子域），再输出
+#
+# ==============================================================================
 
-# ═══════════════════════════════════════════════════════════════════════════
-# 预设组 (presets)
-# ═══════════════════════════════════════════════════════════════════════════
-# 
-# 📌 预设组说明：
-# - 预设组是可复用的域名集合，可以被其他规则组引用
-# - 预设组不会生成输出文件和目录，仅在内存中缓存
-# - 适合将常用的规则源定义为预设，然后在多个规则组中复用
+
+# ==============================================================================
+# 预设规则组（presets）
+# ------------------------------------------------------------------------------
+# 预设组在"阶段 1"提前处理，结果缓存在内存中，不写出文件。
+# 规则组可通过 use_presets_blocklist / use_presets_whitelist 引用预设组。
 #
-# ═══════════════════════════════════════════════════════════════════════════
+# 适用场景：
+#   - 多个规则组共用同一批规则源时，用预设可避免重复下载和解析，显著提升效率
+#   - 例如：广告、隐私、恶意软件规则组都需要同一份白名单，可将白名单放入预设
+#
+# 字段说明：
+#
+#   enabled（bool，默认 true）
+#     是否启用此预设。false 时跳过，引用它的规则组将得到空集。
+#
+#   blocklist（list）
+#     黑名单规则源 URL 列表。
+#     脚本会自动识别常见格式（AdBlock / Hosts / Clash DOMAIN 等），
+#     也可在 URL 末尾加 #格式标记 强制指定解析方式（详见"URL 格式标记"说明）。
+#
+#   whitelist（list）
+#     白名单规则源 URL 列表。
+#     从 blocklist 提取的域名中，凡匹配 whitelist 任意条目（含子域）的，均会被移除。
+#
+#   custom_blocklist（list）
+#     自定义黑名单，支持两种写法混用：
+#       - 直接写域名字符串：原样加入黑名单，不做合法性验证
+#       - 以 http:// 或 https:// 开头的 URL：下载后解析，不做合法性验证
+#
+#   custom_whitelist（list）
+#     自定义白名单，写法同 custom_blocklist，用于在自定义层面移除特定域名。
+#
+# ==============================================================================
+#
+# URL 格式标记（适用于 blocklist / whitelist）：
+#
+#   在 URL 末尾追加 # + 标记名，可强制指定该 URL 的解析格式：
+#
+#   #domain   每行一个纯域名，直接使用，跳过格式解析
+#             示例：https://example.com/list.txt#domain
+#
+#   #adblock  AdBlock 格式，仅提取 ||domain^ 形式的规则
+#             白名单时提取 @@||domain^ 形式的规则
+#             示例：https://example.com/filter.txt#adblock
+#
+#   #hosts    Hosts 格式，提取 "0.0.0.0 domain" 或 "127.0.0.1 domain" 行中的域名
+#             示例：https://example.com/hosts#hosts
+#
+#   #proxy    Clash/Surge 格式，提取 DOMAIN,domain 或 DOMAIN-SUFFIX,domain 行中的域名
+#             示例：https://example.com/proxy.list#proxy
+#
+#   不加标记：脚本自动识别，支持上述所有格式及 +.domain / *.domain / .domain 写法
+#
+# ==============================================================================
 
 presets:
-  
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例预设组1: 广告域名
-  # ─────────────────────────────────────────────────────────────────────────
-  ad_domains:
-    # 显示名称 (必填)
-    title: "广告域名预设"
-    
-    # 描述信息 (可选)
-    description: "常见广告域名集合，可被其他规则组引用"
-    
-    # 黑名单规则源列表 (可选)
-    # 支持的格式：AdBlock、Hosts、Clash、纯域名列表
+
+  # ----------------------------------------------------------------------------
+  # 预设示例 1：广告域名基础库
+  # 被 groups.ads 通过 use_presets_blocklist 引用
+  # ----------------------------------------------------------------------------
+  ads_base:
+    enabled: true
+
     blocklist:
-      - "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt"
-    
-    # 白名单规则源列表 (可选)
-    # 用于排除误杀的域名
+      # 自动识别格式（纯域名列表）
+      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+      # 强制指定 adblock 格式（仅提取 ||domain^ 规则，忽略其他规则行）
+      - https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt#adblock
+      # 强制指定 hosts 格式
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts#hosts
+
     whitelist:
-      - "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_10_Useful/filter.txt"
-    
-    # 自定义黑名单 (可选)
-    # ⚠️ 注意：此处的域名不会进行格式验证，请确保填写正确
-    # 直接添加到黑名单，不经过提取和验证流程
-    custom_blacklist:
-      - "ad.example.com"
-      - "tracker.example.com"
-    
-    # 自定义白名单 (可选)
-    # ⚠️ 注意：此处的域名不会进行格式验证，请确保填写正确
+      # 强制指定 domain 格式（直接每行当作域名，效率最高）
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/whitelist/domains.txt#domain
+
+    # 额外追加到黑名单的自定义条目（直接写域名，不做合法性验证）
+    custom_blocklist:
+      - ads.example.com
+      - tracker.example.net
+      # 也可以写外部 URL，内容会被下载并解析
+      - https://example.com/my-extra-blocklist.txt
+
+    # 额外追加到白名单的自定义条目
     custom_whitelist:
-      - "safe-analytics.example.com"
+      - safe-ads.example.com
+      - https://example.com/my-whitelist.txt
 
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例预设组2: 追踪器域名
-  # ─────────────────────────────────────────────────────────────────────────
-  tracker_domains:
-    title: "追踪器域名预设"
-    description: "常见追踪器和隐私收集域名"
+  # ----------------------------------------------------------------------------
+  # 预设示例 2：隐私追踪基础库
+  # 被 groups.tracking 通过 use_presets_blocklist 引用
+  # ----------------------------------------------------------------------------
+  tracking_base:
+    enabled: true
+
     blocklist:
-      - "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt"
+      - https://raw.githubusercontent.com/nicehash/NoTrack/master/trackers.txt
+      - https://raw.githubusercontent.com/notracking/hosts-blocklists/master/dnscrypt-proxy/dnscrypt-proxy.blacklist.txt
 
-# ═══════════════════════════════════════════════════════════════════════════
-# 规则组 (groups)
-# ═══════════════════════════════════════════════════════════════════════════
+    # 暂无白名单，保留空列表（也可直接省略此字段）
+    whitelist: []
+
+    custom_blocklist: []
+    custom_whitelist: []
+
+  # ----------------------------------------------------------------------------
+  # 预设示例 3：公共白名单（用于跨多个规则组复用同一份白名单）
+  # 被 groups.ads / groups.tracking 通过 use_presets_whitelist 引用
+  # ----------------------------------------------------------------------------
+  common_whitelist:
+    enabled: true
+
+    # 预设也可以只有白名单，没有黑名单
+    blocklist: []
+    whitelist:
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/whitelist/domains.txt#domain
+
+    custom_blocklist: []
+    # 额外固定放行的域名
+    custom_whitelist:
+      - microsoft.com
+      - apple.com
+      - google.com
+
+  # ----------------------------------------------------------------------------
+  # 预设示例 4：已禁用的预设（引用它的规则组将得到空集）
+  # ----------------------------------------------------------------------------
+  disabled_preset:
+    enabled: false
+    blocklist:
+      - https://example.com/some-list.txt
+    whitelist: []
+    custom_blocklist: []
+    custom_whitelist: []
+
+
+# ==============================================================================
+# 规则组（groups）
+# ------------------------------------------------------------------------------
+# 规则组在"阶段 2"处理，每个规则组对应 data/rules/<key>/ 目录下的一组规则文件。
+# README.md 中的统计表格也由规则组数据生成。
 #
-# 📌 规则组说明：
-# - 规则组是实际对外提供的规则集，会生成多种格式的订阅文件
-# - 规则组可以引用预设组，也可以定义自己的规则源
-# - 会在 data/rules/<规则组名>/ 目录下生成对应格式的文件
+# 字段说明：
 #
-# ═══════════════════════════════════════════════════════════════════════════
+#   display_name / title（string，二选一，优先 display_name）
+#     规则组显示名称，出现在：
+#       - 输出文件的 # Title 注释头
+#       - README.md 统计表格第一列
+#     两者等价，display_name 优先级更高；若只写 title，脚本会自动复制为 display_name。
+#
+#   description（string，可选）
+#     规则组描述，出现在：
+#       - 输出文件的 # Description 注释头
+#       - README.md 统计表格第二列
+#     可为空字符串或省略。
+#
+#   enabled（bool，默认 true）
+#     是否启用此规则组。false 时跳过，不输出文件，不计入 README 统计。
+#
+#   use_presets_blocklist（list，默认 []）
+#     引用预设组作为黑名单来源，填写预设的 key 名称（字符串列表）。
+#     多个预设的结果会合并后再与本组 blocklist 合并。
+#     被禁用或不存在的预设 key 会被静默跳过。
+#
+#   use_presets_whitelist（list，默认 []）
+#     引用预设组作为白名单来源，用法同 use_presets_blocklist。
+#
+#   use_presets（list，兼容旧写法）
+#     等同于 use_presets_blocklist，若同时写了 use_presets_blocklist 则此字段被忽略。
+#
+#   blocklist（list，默认 []）
+#     本规则组专属的黑名单规则源 URL 列表，不与其他规则组共享。
+#     URL 格式标记用法同预设（见上方说明）。
+#
+#   whitelist（list，默认 []）
+#     本规则组专属的白名单规则源 URL 列表。
+#     处理顺序：先用 whitelist 对 blocklist 结果过滤，再用 custom_whitelist 二次过滤。
+#
+#   custom_blocklist（list，默认 []）
+#     自定义黑名单，写法同预设 custom_blocklist：
+#       - 直接写域名字符串：不做合法性验证，原样加入
+#       - http(s):// 开头的 URL：下载后提取内容，不做合法性验证
+#     custom_blocklist 在 blocklist 之后追加，不受 whitelist 过滤（受 custom_whitelist 过滤）。
+#
+#   custom_whitelist（list，默认 []）
+#     自定义白名单，写法同 custom_blocklist。
+#     在所有来源（预设 + blocklist + custom_blocklist）合并后，最后执行过滤。
+#
+#   formats（list，默认 ["domains"]）
+#     输出文件格式列表，支持以下值（可组合使用）：
+#
+#     domains   → data/rules/<key>/domains.txt
+#                 每行一个域名，无前缀。
+#                 使用"全量"结果（所有精确条目，包含子域名和父域名）。
+#
+#     hosts     → data/rules/<key>/hosts.txt
+#                 标准 Hosts 格式，每行 "0.0.0.0 domain"。
+#                 使用"全量"结果，同 domains。
+#
+#     adblock   → data/rules/<key>/adblock.txt
+#                 AdBlock Plus 格式，每行 "||domain^"，文件头含 [Adblock Plus 2.0]。
+#                 使用"子域去重"结果（移除被父域覆盖的冗余子域，条目更精简）。
+#                 可直接订阅到 AdGuard / uBlock Origin 等扩展。
+#
+#     clash     → data/rules/<key>/clash.yaml  +  clash.mrs（二进制格式）
+#                 Clash/Mihomo 规则集格式，yaml 中每行 "  - +.domain"。
+#                 使用"子域去重"结果，同 adblock。
+#                 clash.mrs 为 Mihomo Meta 的二进制规则集，体积更小、加载更快。
+#
+#     singbox   → data/rules/<key>/singbox.json  +  singbox.srs（二进制格式）
+#                 Sing-box 规则集格式，json 中 domain_suffix 数组。
+#                 使用"子域去重"结果，同 adblock。
+#                 singbox.srs 为 Sing-box 的二进制规则集。
+#
+# ==============================================================================
 
 groups:
-  
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例规则组1: 广告拦截（完整配置）
-  # ─────────────────────────────────────────────────────────────────────────
-  adblock:
-    # 显示名称 (必填)
-    # 将在 README 和规则文件头部显示
-    title: "广告拦截规则"
-    
-    # 描述信息 (可选)
-    # 用于说明此规则集的用途
-    description: "拦截广告、追踪器和恶意域名"
-    
-    # 黑名单规则源列表 (可选)
-    # 支持的格式：
-    # - AdBlock Plus: ||example.com^
-    # - Hosts: 0.0.0.0 example.com 或 127.0.0.1 example.com
-    # - Clash/Surge: DOMAIN-SUFFIX,example.com
-    # - 纯域名列表: example.com (每行一个)
-    # - 通配符: +.example.com 或 *.example.com
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 1 展示全部功能字段 + 全部输出格式
+  # ----------------------------------------------------------------------------
+  ads:
+    display_name: 广告过滤
+    description: 合并多源广告域名规则，去除冗余子域
+    enabled: true
+
+    # 引用预设组作为黑名单来源（推荐做法：相同规则源只下载解析一次）
+    use_presets_blocklist:
+      - ads_base       # 引用上方定义的 ads_base 预设
+      - tracking_base  # 同时引用追踪基础库，实现广告+追踪合并
+
+    # 引用预设组作为白名单来源
+    use_presets_whitelist:
+      - common_whitelist  # 引用公共白名单预设
+
+    # 本规则组专属的额外黑名单源（叠加在预设结果之上）
     blocklist:
-      - "https://easylist.to/easylist/easylist.txt"
-      - "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt"
-    
-    # 白名单规则源列表 (可选)
-    # 用于排除误杀的域名
-    # 支持的格式：
-    # - AdBlock 白名单: @@||example.com^
-    # - 纯域名列表: example.com
-    # - 其他格式同黑名单
+      - https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt#adblock
+      - https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt#adblock
+
+    # 本规则组专属的白名单源（在 blocklist 合并后过滤）
     whitelist:
-      - "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_10_Useful/filter.txt"
-    
-    # 自定义黑名单 (可选)
-    # ⚠️ 注意：此处的域名不会进行格式验证，请确保填写正确
-    # 会直接添加到黑名单中，不经过提取和验证流程
-    custom_blacklist:
-      - "custom-ad.example.com"
-      - "bad-tracker.example.com"
-    
-    # 自定义白名单 (可选)
-    # ⚠️ 注意：只能填写标准域名格式，例如：example.com
-    # 不支持的格式示例：
-    # ✗ ||example.com^      (AdBlock格式)
-    # ✗ @@||example.com^    (AdBlock白名单格式)
-    # ✗ +.example.com       (通配符格式)
-    # ✗ 0.0.0.0 example.com (Hosts格式)
-    # ✓ example.com         (正确格式)
+      - https://raw.githubusercontent.com/nicehash/NoTrack/master/whitelist.txt#domain
+
+    # 自定义黑名单：直接写域名（不做合法性验证，原样加入）
+    # 或写 http(s):// 开头的 URL（下载后提取内容）
+    custom_blocklist:
+      - adservice.google.com
+      - ads.youtube.com
+      - doubleclick.net
+      - https://example.com/my-private-ads-list.txt
+
+    # 自定义白名单：在所有来源合并后最终过滤（优先级最高）
+    # 写在这里的域名及其子域名会被无条件放行
     custom_whitelist:
-      - "important-service.example.com"
-      - "payment-gateway.example.com"
-    
-    # 引用预设组 (可选)
-    # 将预设组的域名合并到此规则组
-    # 注意：预设组必须在 presets 部分定义
-    use_presets:
-      - "ad_domains"
-      - "tracker_domains"
-    
-    # 输出格式 (可选，默认: ["domains"])
-    # 可选值：
-    # - domains:  纯域名列表，生成 domains.txt
-    # - adblock:  AdBlock Plus 格式，生成 adblock.txt
-    # - hosts:    Hosts 格式，生成 hosts.txt
-    # - clash:    Mihomo/Clash 格式，生成 clash.yaml 和 clash.mrs (由GitHub Actions编译)
-    # - singbox:  sing-box 格式，生成 singbox.json 和 singbox.srs (由GitHub Actions编译)
-    #
-    # ⚠️ 注意：不要添加不支持的格式！
-    formats:
-      - "domains"
-      - "adblock"
-      - "hosts"
-      - "clash"
-      - "singbox"
+      - ads.example-legitimate-site.com  # 某特殊站点的广告域名需要放行
 
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例规则组2: 隐私保护（简化配置）
-  # ─────────────────────────────────────────────────────────────────────────
-  privacy:
-    title: "隐私保护规则"
-    description: "拦截追踪器和数据收集域名"
-    
-    # 最简配置：只指定黑名单源
+    # 输出全部五种格式
+    formats:
+      - domains   # → ads/domains.txt（全量，可用于 AdGuard Home 的 Blacklists）
+      - hosts     # → ads/hosts.txt（全量，可合并到系统 hosts 文件）
+      - adblock   # → ads/adblock.txt（子域去重，可订阅到 AdGuard/uBlock）
+      - clash     # → ads/clash.yaml + clash.mrs（子域去重，供 Clash/Mihomo 使用）
+      - singbox   # → ads/singbox.json + singbox.srs（子域去重，供 Sing-box 使用）
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 2：仅输出 adblock + clash + singbox
+  # ----------------------------------------------------------------------------
+  tracking:
+    display_name: 隐私追踪
+    description: 第三方追踪器、数据收集域名规则
+    enabled: true
+
+    # 只引用 tracking_base，不叠加广告规则
+    use_presets_blocklist:
+      - tracking_base
+
+    # 复用公共白名单
+    use_presets_whitelist:
+      - common_whitelist
+
     blocklist:
-      - "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt"
-    
-    # 只输出 clash 和 singbox 格式
-    formats:
-      - "clash"
-      - "singbox"
+      # 额外追加 EasyPrivacy（强制指定 adblock 格式解析）
+      - https://easylist.to/easylist/easyprivacy.txt#adblock
 
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例规则组3: 恶意软件拦截
-  # ─────────────────────────────────────────────────────────────────────────
+    whitelist: []
+
+    custom_blocklist:
+      - analytics.example.com
+
+    custom_whitelist: []
+
+    # 仅输出路由器/代理工具常用格式，不输出 hosts/domains
+    formats:
+      - adblock
+      - clash
+      - singbox
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 仅输出 hosts + domains
+  # ----------------------------------------------------------------------------
   malware:
-    title: "恶意软件拦截"
-    description: "拦截已知恶意软件和钓鱼网站"
-    
-    blocklist:
-      - "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-domains.txt"
-      - "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts"
-    
-    # 默认格式（只生成 domains.txt）
-    formats:
-      - "domains"
+    display_name: 恶意软件
+    description: 恶意域名、钓鱼、挖矿域名规则
+    enabled: true
 
-  # ─────────────────────────────────────────────────────────────────────────
-  # 示例规则组4: 中国特色规则
-  # ─────────────────────────────────────────────────────────────────────────
-  china:
-    title: "中国广告拦截"
-    description: "针对中国地区的广告和追踪器拦截规则"
-    
+    # 不引用预设，直接指定规则源
+    use_presets_blocklist: []
+    use_presets_whitelist: []
+
     blocklist:
-      - "https://anti-ad.net/easylist.txt"
-      - "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt"
-    
-    # 使用预设组
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts#hosts
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts#hosts
+      - https://raw.githubusercontent.com/mitchellkrogza/Phishing.Database/master/phishing-domains-ACTIVE.txt#domain
+
+    whitelist: []
+
+    custom_blocklist:
+      - phishing.example.com
+
+    custom_whitelist: []
+
+    # hosts 和 domains 均使用全量结果（不做子域去重），保留所有精确条目
+    formats:
+      - hosts
+      - domains
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 4：使用 use_presets 旧写法（等同于 use_presets_blocklist）
+  # 新配置推荐使用 use_presets_blocklist，语义更清晰
+  # ----------------------------------------------------------------------------
+  combined_legacy:
+    display_name: 综合规则（旧写法示例）
+    description: 使用 use_presets 旧字段引用预设黑名单（兼容写法）
+    enabled: true
+
+    # use_presets 等同于 use_presets_blocklist
+    # 若两者同时存在，use_presets 被忽略，以 use_presets_blocklist 为准
     use_presets:
-      - "ad_domains"
-    
-    # 自定义白名单避免误杀国内常用服务
-    custom_whitelist:
-      - "analytics.qq.com"
-      - "analytics.baidu.com"
-    
-    formats:
-      - "domains"
-      - "clash"
-      - "singbox"
+      - ads_base
+      - tracking_base
 
-# ═══════════════════════════════════════════════════════════════════════════
-# 配置说明
-# ═══════════════════════════════════════════════════════════════════════════
-#
-# 📊 规则处理流程：
-# 1. 下载所有 blocklist 和 whitelist 源
-# 2. 从规则源中提取域名
-# 3. 合并黑名单（blocklist + custom_blacklist + 引用的预设组）
-# 4. 合并白名单（whitelist + custom_whitelist）
-# 5. 应用白名单过滤（子域名匹配）
-# 6. 去除子域名重复（例如：www.example.com 和 example.com，只保留 example.com）
-# 7. 生成指定格式的文件
-#
-# 🔍 域名匹配规则：
-# - 黑名单：自动识别并提取各种格式的域名
-# - 白名单：采用子域名匹配（白名单中的 example.com 会放行 www.example.com）
-# - 去重：最终输出会去除子域名重复
-#
-# 📁 输出目录结构：
-# data/rules/
-# ├── log.txt                     # 主日志文件（记录所有处理过程）
-# ├── <规则组名>/
-# │   ├── domains.txt             # 纯域名列表
-# │   ├── adblock.txt             # AdBlock Plus 格式
-# │   ├── hosts.txt               # Hosts 格式
-# │   ├── clash.yaml              # Mihomo/Clash YAML 格式
-# │   ├── clash.mrs               # Mihomo/Clash 二进制格式（GitHub Actions生成）
-# │   ├── singbox.json            # sing-box JSON 格式
-# │   └── singbox.srs             # sing-box 二进制格式（GitHub Actions生成）
-# └── ...
-#
-# README.md                       # 自动生成的订阅说明（项目根目录）
-#
-# 💡 最佳实践：
-# 1. 使用预设组复用常见的规则源，避免重复下载
-# 2. 合理使用白名单避免误杀重要服务
-# 3. 根据实际需求选择输出格式（减少不必要的格式可加快处理速度）
-# 4. custom_blacklist 不会验证，适合添加一些特殊格式或需要强制拦截的域名
-# 5. custom_whitelist 必须是标准域名格式，系统会验证格式
-# 6. 定期检查 data/rules/log.txt 了解处理详情和错误信息
-#
-# ⚠️ 常见错误：
-# ✗ custom_whitelist 中使用 ||example.com^ 格式（不支持）
-# ✗ formats 中添加不存在的格式如 "dnsmasq"（不支持）
-# ✗ 预设组期望生成文件（预设组不会生成输出）
-# ✗ use_presets 引用了不存在的预设组（会导致错误）
-#
-# ═══════════════════════════════════════════════════════════════════════════
+    blocklist: []
+    whitelist: []
+    custom_blocklist: []
+    custom_whitelist: []
+
+    formats:
+      - domains
+      - adblock
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 5：仅含自定义条目（不依赖任何外部规则源）
+  # 适合维护一份私人的手动黑/白名单
+  # ----------------------------------------------------------------------------
+  custom_only:
+    display_name: 自定义规则
+    description: 完全手动维护的私人黑白名单，不依赖外部规则源
+    enabled: true
+
+    use_presets_blocklist: []
+    use_presets_whitelist: []
+    blocklist: []
+    whitelist: []
+
+    # 直接在配置中枚举需要屏蔽的域名
+    custom_blocklist:
+      - ads.example.com
+      - tracker.another-example.org
+      - annoying-popup.net
+      # 也可以引用一个外部 URL（内容可以是任意支持的格式）
+      - https://example.com/personal-blocklist.txt
+
+    # 直接在配置中枚举需要放行的域名
+    custom_whitelist:
+      - cdn.example.com   # 放行 cdn.example.com *.cdn.example.com
+      - api.example.com
+
+    formats:
+      - domains
+      - adblock
+      - clash
+      - singbox
+
+  # ----------------------------------------------------------------------------
+  # 规则组示例 6：已禁用（enabled: false），不会被处理，不输出文件
+  # 适合临时下线某个规则组而不删除配置
+  # ----------------------------------------------------------------------------
+  disabled_example:
+    display_name: 临时禁用示例
+    description: 此规则组已禁用，不会被处理
+    enabled: false
+
+    use_presets_blocklist:
+      - ads_base
+    use_presets_whitelist: []
+
+    blocklist:
+      - https://example.com/some-list.txt
+    whitelist: []
+    custom_blocklist: []
+    custom_whitelist: []
+
+    formats:
+      - domains
+      - adblock
+      - clash
+      - singbox
