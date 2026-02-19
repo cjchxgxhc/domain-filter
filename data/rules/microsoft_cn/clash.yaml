@@ -1,8 +1,8 @@
 # Title: Microsoft China
 # Description: 微软直连域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 220
-# Updated: 2026-02-19 13:18:10 CST
+# Total: 228
+# Updated: 2026-02-20 00:58:16 CST
 #
 payload:
   - +.21vbc.com
@@ -74,6 +74,8 @@ payload:
   - +.b3itech.cn
   - +.bg.v4.a.dl.ws.microsoft.com
   - +.bg4.v4.a.dl.ws.microsoft.com
+  - +.bing.com.cn
+  - +.bj1.api.bing.com
   - +.blueaggrestore.com
   - +.bluecloudprod.com
   - +.build.microsoft.com
@@ -85,6 +87,9 @@ payload:
   - +.chinacloudapp.cn
   - +.chinacloudsites.cn
   - +.cm.steampowered.com
+  - +.cn.bing.com
+  - +.cn.bing.net
+  - +.cn.mm.bing.net
   - +.cn.windowssearch.com
   - +.collaborate.download.prss.microsoft.com
   - +.collaborateppe.download.prss.microsoft.com
@@ -105,6 +110,7 @@ payload:
   - +.dreamsparkuat.download.prss.microsoft.com
   - +.dynamics.cn
   - +.edge.microsoft.com
+  - +.emoi-cncdn.bing.com
   - +.engkoo.com
   - +.f.c2r.ts.cdn.office.net
   - +.fs.microsoft.com
@@ -181,6 +187,7 @@ payload:
   - +.powerappsportals.cn
   - +.powerautomate.cn
   - +.powerbi.cn
+  - +.r.bing.com
   - +.reactorms.com.cn
   - +.res-1.cdn.office.net
   - +.res-2.cdn.office.net
@@ -207,6 +214,7 @@ payload:
   - +.storeedgefd.dsx.mp.microsoft.com
   - +.surface.download.prss.microsoft.com
   - +.surface.downloads.prss.microsoft.com
+  - +.th.bing.com
   - +.trafficmanager.cn
   - +.translate.microsoft.com
   - +.translatoruser.intl.microsoft.com

@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,260
-# Updated: 2026-02-19 13:18:10 CST
+# Total: 23,259
+# Updated: 2026-02-20 00:58:15 CST
 #
 payload:
   - +.000webhost.com
@@ -15,6 +15,7 @@ payload:
   - +.0emm.com
   - +.0plkijj.vip
   - +.1000giri.net
+  - +.100beatscheap.com
   - +.100bucksbabes.com
   - +.100classicbooks.com
   - +.100ke.org
@@ -62,6 +63,11 @@ payload:
   - +.126728.net
   - +.128100.xyz
   - +.12bet.com
+  - +.12diasdepresentesdeitunes.com
+  - +.12diasderegalosdeitunes.co
+  - +.12diasderegalosdeitunes.com
+  - +.12diasderegalosdeitunes.com.co
+  - +.12joursdecadeauxdeitunes.com
   - +.12vpn.com
   - +.12vpn.net
   - +.132288.cc
@@ -161,6 +167,7 @@ payload:
   - +.1lib.limited
   - +.1lib.pl
   - +.1mobile.com
+  - +.1monsterbeatsbydreus.com
   - +.1password.co
   - +.1password.com
   - +.1password.community
@@ -172,12 +179,22 @@ payload:
   - +.1pondo.tv
   - +.1pornlist.com
   - +.1thek.com
+  - +.1to1computing.com.au
+  - +.1to1conference.com.au
   - +.1ucrs.com
   - +.1vwapi4d.xyz
   - +.1watchmygf.com
   - +.2-hand.info
   - +.2000fun.com
   - +.2008xianzhang.info
+  - +.2013beatsbydrdreonline.com
+  - +.2013beatsbydrdreshop.com
+  - +.2013beatsbydreshop.com
+  - +.2013beatshdcybermonday.com
+  - +.2013cheapestbeats.com
+  - +.2013newbeatsworld.com
+  - +.2013pascherbeatsbydre.com
+  - +.2014cheapbeatsbydre.com
   - +.2017.hk
   - +.2019baidu.xyz
   - +.2021hkcharter.com
@@ -195,9 +212,6 @@ payload:
   - +.21naturals.com
   - +.21pron.com
   - +.21sextury.com
-  - +.21vbc.com
-  - +.21vbluecloud.com
-  - +.21vbluecloud.net
   - +.21vv.cc
   - +.22112211.xyz
   - +.233abc.com
@@ -215,12 +229,15 @@ payload:
   - +.2789av.com
   - +.27mmwmmw.top
   - +.2adultflashgames.com
+  - +.2beatsdre.com
   - +.2beeg.me
   - +.2bit8.com
+  - +.2buybeatsbydre.com
   - +.2ch.hk
   - +.2ch.net
   - +.2chav.com
   - +.2dgen.com
+  - +.2drdrebeats.com
   - +.2du5.com
   - +.2gayboys.com
   - +.2gis.com
@@ -300,6 +317,7 @@ payload:
   - +.4008-517-517.cn
   - +.404museum.com
   - +.40momporntube.com
+  - +.40shopping.com
   - +.40somethingmag.com
   - +.41maonn.com
   - +.444.coffee
@@ -310,6 +328,7 @@ payload:
   - +.4550.fun
   - +.45porn.com
   - +.466453.com
+  - +.4beatsbydre.com
   - +.4bluestones.biz
   - +.4cdn.org
   - +.4chan.com
@@ -387,11 +406,13 @@ payload:
   - +.59mvmv.com
   - +.5aimiku.com
   - +.5axis-machining.com
+  - +.5beatsbydre.com
   - +.5ch.net
   - +.5fang.cc
   - +.5i01.com
   - +.5isotoi5.org
   - +.5itv.tv
+  - +.5lml.com
   - +.5maodang.com
   - +.5mb48g.com
   - +.5mo.fun
@@ -616,6 +637,7 @@ payload:
   - +.a-msedge.net
   - +.a-normal-day.com
   - +.a-teenz.com
+  - +.a0pple.net
   - +.a1av.xyz
   - +.a2z.com
   - +.a7sex.com
@@ -623,15 +645,17 @@ payload:
   - +.aa1142.com
   - +.aa77kk.com
   - +.aaa
+  - +.aaagradeheadphones.com
   - +.aaapp.cyou
   - +.aabb1802.com
   - +.aabb1803.com
   - +.aacrjournals.org
   - +.aadmv.com
-  - +.aadrm.cn
   - +.aadrm.com
   - +.aalah.me
   - +.aamacau.com
+  - +.aanaan.com
+  - +.aaplimg.com
   - +.aarp
   - +.aave.com
   - +.aavs.xyz
@@ -645,9 +669,11 @@ payload:
   - +.abc.com
   - +.abc.net.au
   - +.abc.xyz
+  - +.abcheadphones.com
   - +.abchinese.com
   - +.abclider.com
   - +.abclite.net
+  - +.abeatsbydrdre.com
   - +.abebooks.com
   - +.abellalist.com
   - +.abema-tv.com
@@ -732,8 +758,6 @@ payload:
   - +.acmvalidationsaws.com
   - +.acnw.com.au
   - +.aco
-  - +.acompli.com
-  - +.acompli.net
   - +.acousticbrainz.org
   - +.acpica.com
   - +.acrobat.com
@@ -937,6 +961,7 @@ payload:
   - +.ae-ad-1.myhuaweicloud.com
   - +.ae.hao123.com
   - +.ae.org
+  - +.aeasyshop.com
   - +.aebn.com
   - +.aecexcellence.com
   - +.aeg
@@ -982,7 +1007,6 @@ payload:
   - +.agefans.com
   - +.agemys.org
   - +.agendaweek.com
-  - +.aggresmart.com
   - +.agilebits.com
   - +.agoogleaday.com
   - +.agrd.io
@@ -1015,7 +1039,6 @@ payload:
   - +.aiaa.org
   - +.aibaobei.me
   - +.aicoin.com
-  - +.aicscience.com
   - +.aig
   - +.aimei133.com
   - +.aimoon.com
@@ -1051,10 +1074,16 @@ payload:
   - +.airiti.com
   - +.airitilibrary.com
   - +.airmax360.com
+  - +.airmay.com
   - +.airport-gov-cn.com
+  - +.airport.com
   - +.airsextube.com
+  - +.airsupportapp.com
   - +.airtable.com
   - +.airtel
+  - +.airtunes.com
+  - +.airtunes.info
+  - +.airtunes.net
   - +.airvpn.org
   - +.airwatchexpress.com
   - +.airwatchqa.com
@@ -1079,6 +1108,7 @@ payload:
   - +.ajplus.net
   - +.ajsands.com
   - +.ajsjx.com
+  - +.ajtalk.com
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -1088,6 +1118,7 @@ payload:
   - +.akadeem.net
   - +.akademiye.org
   - +.akadns.com
+  - +.akadns.net
   - +.akadns6.net
   - +.akaeai.com
   - +.akafms.net
@@ -1162,6 +1193,8 @@ payload:
   - +.alasbarricadas.org
   - +.albagals.com
   - +.albastudio.co
+  - +.albeats.com
+  - +.alchemysynth.com
   - +.alexa.com
   - +.alexafund.cn
   - +.alexafund.com.cn
@@ -1552,6 +1585,7 @@ payload:
   - +.annamilk.com
   - +.annas-archive.org
   - +.annatam.com
+  - +.annstores.net
   - +.annualpelvicexam.com
   - +.annualreviews.org
   - +.anobii.com
@@ -1604,6 +1638,7 @@ payload:
   - +.aofriend.com
   - +.aofriend.com.au
   - +.aojiao.org
+  - +.aokwholesale.net
   - +.aol
   - +.aol.com
   - +.aolcdn.com
@@ -1630,6 +1665,7 @@ payload:
   - +.ap-tokyo.myqcloud.com
   - +.ap-tokyo.tencentcos.com
   - +.ap.org
+  - +.ap0le.com
   - +.apa.org
   - +.apache.org
   - +.apartmentratings.com
@@ -1642,12 +1678,10 @@ payload:
   - +.api.myip.com
   - +.api.nebula-emby.com
   - +.api.news
-  - +.api.together.xyz
   - +.api.waqi.info
   - +.apiary.io
   - +.apibay.org
   - +.apigee.com
-  - +.apihub-internal.cn
   - +.apina.biz
   - +.apisof.net
   - +.apk-dl.com
@@ -1661,8 +1695,12 @@ payload:
   - +.apkpure.com
   - +.apkpure.net
   - +.apkpures.xyz
+  - +.aple.com
+  - +.aplestore.com
+  - +.aplleipods.com
   - +.aplusvpn.com
   - +.apnews.com
+  - +.apole.com
   - +.apornotube.net
   - +.aporntv.com
   - +.apornvideo.com
@@ -1674,6 +1712,8 @@ payload:
   - +.app-measurement-cn.com
   - +.app-measurement.com
   - +.app-measurement.net
+  - +.app-store.wang
+  - +.app0le.com
   - +.app756.com
   - +.appadvice.com
   - +.appannie.com
@@ -1685,31 +1725,200 @@ payload:
   - +.appdynamics.com
   - +.appdynamics.info
   - +.appdynamics.org
+  - +.appe-store.com
   - +.appexchange.com
   - +.appget.com
+  - +.appl-e.com
+  - +.appl.com
+  - +.appl4e.com
+  - +.appla.com
   - +.apple
+  - +.apple-cloudkit.com
+  - +.apple-darwin.com
+  - +.apple-darwin.net
+  - +.apple-darwin.org
+  - +.apple-dns.com
+  - +.apple-dns.net
+  - +.apple-enews.com
+  - +.apple-expo.com
+  - +.apple-hk.com
+  - +.apple-imac.com
+  - +.apple-inc.net
+  - +.apple-livephotoskit.com
+  - +.apple-mapkit.com
+  - +.apple-online.com
+  - +.apple-pay.com
+  - +.apple-pay.wang
+  - +.apple-store.net
+  - +.apple-store.wang
+  - +.apple-usa.net
+  - +.apple.co
+  - +.apple.com
+  - +.apple.com.au
+  - +.apple.com.co
+  - +.apple.com.my
+  - +.apple.com.pl
+  - +.apple.comscoreresearch.com
+  - +.apple.me
+  - +.apple.my
+  - +.apple.net
+  - +.apple.news
+  - +.apple.nl
+  - +.apple.pl
+  - +.apple.xyz
+  - +.appleaccount.net
+  - +.appleafrica.com
+  - +.appleantilles.com
+  - +.appleappstore.net
+  - +.appleappstore.tv
+  - +.appleaustralia.com
+  - +.appleaustralia.com.au
+  - +.appleaustralia.net.au
+  - +.applebk.net
+  - +.applecarbon.com
+  - +.applecard.tv
+  - +.applecare.cc
+  - +.applecare.wang
   - +.applecensorship.com
+  - +.applecentre.com.au
+  - +.applecentre.info
+  - +.appleclassicipod.com
+  - +.appleclub.com.hk
+  - +.applecom.com
+  - +.applecomputer-imac.com
+  - +.applecomputer.com
+  - +.applecomputer.com.hk
+  - +.applecomputerimac.com
+  - +.applecomputerinc.info
+  - +.applecoronavirus.com
   - +.appledaily.com
   - +.appledaily.com.hk
   - +.appledaily.hk
+  - +.appledarwin.com
+  - +.appledarwin.net
+  - +.appleenews.com
+  - +.appleexpo.info
+  - +.applefilmaker.com
+  - +.applefilmmaker.com
+  - +.applefinalcutproworld.com
+  - +.applefinalcutproworld.net
+  - +.applefinalcutproworld.org
   - +.applefruity.com
   - +.applehealth.com.hk
+  - +.applehongkong.com
+  - +.applehongkong.com.hk
+  - +.appleid-applemx.com
+  - +.appleid-iclou.com
+  - +.appleid.com
+  - +.appleid.hk
+  - +.appleimac.com
+  - +.appleinclegal.com
   - +.appleinsider.com
+  - +.appleiphone.net
+  - +.appleiphonecell.com
+  - +.appleipodsettlement.com
+  - +.appleiservices.com
+  - +.applelink.com
+  - +.applemagickeyboard.com
+  - +.applemalaysia.com.my
+  - +.applemasters.info
+  - +.applemusic.co
+  - +.applemusic.com
+  - +.applemusic.com.au
+  - +.applemusic.wang
+  - +.applemusicconnect.com
+  - +.applemusicfestival.com
+  - +.applemx-icloud.com
+  - +.applenews.tv
+  - +.applenewsformat.com
+  - +.appleone.audio
+  - +.appleone.blog
+  - +.appleone.chat
+  - +.appleone.cloud
+  - +.appleone.club
+  - +.appleone.community
+  - +.appleone.film
+  - +.appleone.guide
+  - +.appleone.host
+  - +.appleone.space
+  - +.appleone.tech
+  - +.appleone.website
+  - +.appleonline.com
+  - +.appleonline.net
+  - +.appleoriginalproductions.com
+  - +.appleos.tv
+  - +.applepay.hk
+  - +.applepay.info
+  - +.applepay.tv
+  - +.applepaycash.net
+  - +.applepaycash.tv
+  - +.applepaymerchantsupplies.info
+  - +.applepaysupplies.com
+  - +.applepaysupplies.info
+  - +.applepaysupplies.net
+  - +.applepaysupplies.tv
+  - +.applepencil.net
+  - +.applepodcasts.com
+  - +.applepremiumreseller.com.au
+  - +.applepremiumresellers.com.au
+  - +.applereach.com
+  - +.applereach.net
+  - +.applescreensavers.com
+  - +.applescript.info
+  - +.appleshare.info
+  - +.applestor.com
+  - +.applestore.cc
+  - +.applestore.com
+  - +.applestore.com.au
+  - +.applestore.com.hk
+  - +.applestore.com.my
+  - +.applestore.com.pl
+  - +.applestore.hk
+  - +.applestore.me
+  - +.applestore.net
+  - +.applestore.wang
+  - +.applestoreonline.com
+  - +.applesurveys.com
+  - +.appleswift.com
+  - +.appletaiwan.com
+  - +.appletips.net
+  - +.appletv.com
+  - +.appletv.wang
+  - +.applewallet.com
+  - +.applewallet.tv
+  - +.applewatch.hk
+  - +.applewatch.tv
+  - +.applewatch.wang
+  - +.applewatchedition.com
+  - +.applewatchseries3.net
+  - +.applewatchsport.com
+  - +.appleweb.net
+  - +.applexpo.net
+  - +.applezh.com
+  - +.applf.com
+  - +.applfe.com
   - +.applicationinsights.io
   - +.applicationinsights.net
+  - +.applle.com
+  - +.applw.com
+  - +.appmediagroup.com
   - +.approvedusedbmw.com
-  - +.appserviceenvironment.cn
   - +.appsflayer.com
   - +.appshopper.com
   - +.appsocks.net
   - +.appsonebay.net
   - +.appspot-preview.com
   - +.appspot.com
+  - +.appstore.hk
+  - +.appstore.my
+  - +.appule.com
+  - +.appye.com
   - +.appyq.com
   - +.apress.com
   - +.aps.org
   - +.aptoide.com
   - +.apture.com
+  - +.apyle.com
   - +.aq
   - +.aqdlt.net
   - +.aqi.aqicn.org
@@ -1859,7 +2068,6 @@ payload:
   - +.assembla.com
   - +.assemblesystems.com
   - +.assesphoto.com
-  - +.assets-yammer.com
   - +.assetsadobe.com
   - +.assimp.org
   - +.assistirhentai.com
@@ -1942,15 +2150,23 @@ payload:
   - +.attwirelesssolutions.com
   - +.atubex.com
   - +.atypi.org
+  - +.aucheapbeats.com
   - +.audacy.com
   - +.audi
   - +.audible.com
   - +.audiencenetwork.com
   - +.audiencenetwork.tv
+  - +.audiobeatsau.com
+  - +.audiobeatsbydre.com
+  - +.audiomonsterbeatsonline.com
   - +.audionow.com
   - +.audioscrobbler.com
   - +.auntymaza.com
+  - +.auricularemonsterbeats.com
+  - +.auricularesbeatsbaratosshop.com
+  - +.auricularesbeatsmarkt.com
   - +.auroraoss.com
+  - +.ausbeatsbydrdre.com
   - +.auspost
   - +.auth0.com
   - +.authorizeddns.net
@@ -2252,29 +2468,15 @@ payload:
   - +.azatliq.org
   - +.azattyk.org
   - +.azattyq.org
-  - +.azcrmc-test.cn
-  - +.azcrmc.cn
   - +.azerbaycan.tv
   - +.azerimix.com
   - +.aziani.com
   - +.azirevpn.com
-  - +.azk8s.cn
-  - +.aznbcontent.cn
   - +.aznude.com
-  - +.aztask.cn
   - +.azubu.tv
   - +.azure
-  - +.azure-api.cn
-  - +.azure-apihub.cn
-  - +.azure-apim.net
-  - +.azure-automation.cn
-  - +.azure-connectedvehicles-stage.cn
-  - +.azure-connectedvehicles.cn
   - +.azure-devices-int.net
-  - +.azure-devices-provisioning.cn
-  - +.azure-devices.cn
   - +.azure-devices.net
-  - +.azure-dns.cn
   - +.azure-dns.com
   - +.azure-dns.info
   - +.azure-dns.net
@@ -2282,7 +2484,6 @@ payload:
   - +.azure-mobile.net
   - +.azure-sphere.com
   - +.azure-test.net
-  - +.azure.cn
   - +.azure.com
   - +.azure.net
   - +.azurecomcdn.net
@@ -2292,8 +2493,6 @@ payload:
   - +.azurecosmosdb.com
   - +.azurecosmosdb.info
   - +.azurecosmosdb.net
-  - +.azurecr-test.cn
-  - +.azurecr.cn
   - +.azurecr.io
   - +.azuredatabricks.net
   - +.azuredevopslaunch.com
@@ -2305,18 +2504,11 @@ payload:
   - +.azureedge-test.net
   - +.azureedge.net
   - +.azurefd.net
-  - +.azurehdinsight.cn
   - +.azureiotcentral.com
   - +.azureiotsolutions.com
-  - +.azureiotsuite.cn
   - +.azureiotsuite.com
-  - +.azuremresolver.cn
   - +.azureplanetscale.info
   - +.azureplanetscale.net
-  - +.azureprivatedns.cn
-  - +.azurerms.cn
-  - +.azurerms.com
-  - +.azuresandbox.cn
   - +.azureserviceprofiler.com
   - +.azuresmartspaces.net
   - +.azurestackvalidation.com
@@ -2328,10 +2520,8 @@ payload:
   - +.b-ok.global
   - +.b-ok.org
   - +.b0ne.com
-  - +.b2clogin.cn
   - +.b3boos.com
   - +.b3bos.com
-  - +.b3itech.cn
   - +.b4a.run
   - +.b6b33.com
   - +.ba
@@ -2379,6 +2569,7 @@ payload:
   - +.badteenspunished.com
   - +.badvirtue.com
   - +.baeb.com
+  - +.bag-glasses1.com
   - +.bai29.xyz
   - +.baicaonetwork.com
   - +.baijie.org
@@ -2397,6 +2588,7 @@ payload:
   - +.bandag.cc
   - +.bandag.com
   - +.bandcamp.com
+  - +.bandgirlz.com
   - +.bandisoft.com
   - +.bandpage.com
   - +.bandwagonhost.com
@@ -2463,6 +2655,7 @@ payload:
   - +.battlenet.com
   - +.battleye.com
   - +.bauhaus
+  - +.baxsound.com
   - +.bayareabmw.com
   - +.bayern
   - +.bayvoice.net
@@ -2483,10 +2676,10 @@ payload:
   - +.bbcpersian.com
   - +.bbcpornonly.com
   - +.bbcverticals.com
+  - +.bbestmall.com
   - +.bbgevent.com
   - +.bbgwatch.com
   - +.bbhub.io
-  - +.bbing.com
   - +.bbkz.com
   - +.bbnradio.org
   - +.bbqm1.xyz
@@ -2546,12 +2739,266 @@ payload:
   - +.beastiegals.com
   - +.beastysexlinks.com
   - +.beastythumbs.com
+  - +.beatbd.com
+  - +.beatbydre2013.com
+  - +.beatbydreheadphonesonsale.com
+  - +.beatbydrekopen.com
+  - +.beatbydremonster.com
+  - +.beatbydreuk2014.com
+  - +.beatdrdres.com
+  - +.beatfactoryoutlets.com
+  - +.beatmonstersaustralia.net
   - +.beats
+  - +.beats-by-dre-australia.com
+  - +.beats-bydrdre.net
+  - +.beats-bydre-mall.com
+  - +.beats-bydrecheapsale.com
+  - +.beats-bydreoutletonline.com
+  - +.beats-bydreoutletsale.com
+  - +.beats-bydreoutletsale.net
+  - +.beats-bydreoutletssale.net
+  - +.beats-bydrestore.com
+  - +.beats-bydreuk.com
+  - +.beats-deal.com
+  - +.beats-dre-us.com
+  - +.beats-headphones-buy-cheap.com
+  - +.beats-sale.com
+  - +.beats-seller.com
+  - +.beats-soaho.com
+  - +.beats1.cc
+  - +.beats1.tv
+  - +.beats123.com
+  - +.beats4.net
+  - +.beats4outlets.com
+  - +.beats4salecheap.com
+  - +.beatsallsale.com
+  - +.beatsaudifonos.com
+  - +.beatsaudiobydre.com
+  - +.beatsaudiobydre.net
+  - +.beatsaudios.net
+  - +.beatsbeatsmonster.com
+  - +.beatsbestdeals.com
+  - +.beatsblackfridaydeals.net
+  - +.beatsblackfridayretails.com
+  - +.beatsboxingdayuksale.com
+  - +.beatsbydrdre-headphones.com
+  - +.beatsbydrdre-officials5.com
+  - +.beatsbydrdre-online.com
+  - +.beatsbydrdre-onsale.com
+  - +.beatsbydrdre-store.com
+  - +.beatsbydrdre4sale.com
+  - +.beatsbydrdrebiz.com
+  - +.beatsbydrdrecustom.com
+  - +.beatsbydrdredanmark.com
+  - +.beatsbydrdremall.com
+  - +.beatsbydrdreoutlet.com
+  - +.beatsbydrdres.com
+  - +.beatsbydrdresale.net
+  - +.beatsbydrdrestore.com
+  - +.beatsbydrdreus.com
+  - +.beatsbydre-beatsheadphone.com
+  - +.beatsbydre-chen.com
+  - +.beatsbydre-club.com
+  - +.beatsbydre-headphones.com
+  - +.beatsbydre-headphonesshop.com
+  - +.beatsbydre-mall.com
+  - +.beatsbydre-outlet.com
+  - +.beatsbydre-outletsale.net
+  - +.beatsbydre-outletstore.com
+  - +.beatsbydre-sell.com
+  - +.beatsbydre-store.com
+  - +.beatsbydre-studio.com
+  - +.beatsbydre-us.com
+  - +.beatsbydre2081.com
+  - +.beatsbydre411.com
+  - +.beatsbydre4usales.com
+  - +.beatsbydreauofficial.com
+  - +.beatsbydreausale.net
+  - +.beatsbydreaustralia-sale.com
+  - +.beatsbydreaustraliaonline.com
+  - +.beatsbydreaustraliaonlines.com
+  - +.beatsbydreaustraliasales.com
+  - +.beatsbydrebeatsby.com
+  - +.beatsbydreblackfriday2013.com
+  - +.beatsbydreblackfridaypro.com
+  - +.beatsbydreboxingdayca.com
+  - +.beatsbydrecasquesfr.com
+  - +.beatsbydrecheap-outletstore.com
+  - +.beatsbydrecheaper.com
+  - +.beatsbydrecheaponlinesales.com
+  - +.beatsbydrecolors.com
+  - +.beatsbydrecustomwireless.com
+  - +.beatsbydrecybermondaydeals2013.com
+  - +.beatsbydrecybermondaydeals2013.net
+  - +.beatsbydredanmarks.com
+  - +.beatsbydredealsblackfriday.com
+  - +.beatsbydredealscybermonday.com
+  - +.beatsbydrediscount.com
+  - +.beatsbydrediscountonline.net
+  - +.beatsbydredr.com
+  - +.beatsbydreexecutivesale.com
+  - +.beatsbydreformall2013-nl.com
+  - +.beatsbydreforsalesonline.com
+  - +.beatsbydreforshop2013-nl.com
+  - +.beatsbydreforstore.com
+  - +.beatsbydreforyououtlet.com
+  - +.beatsbydrefr.com
+  - +.beatsbydrefrcasquepascher.com
+  - +.beatsbydrefriday.com
+  - +.beatsbydregot.com
+  - +.beatsbydrehd.com
+  - +.beatsbydrehd.net
+  - +.beatsbydreheadphones-nz.com
+  - +.beatsbydreheadphonesolo.com
+  - +.beatsbydrehut.com
+  - +.beatsbydreinexpensive.com
+  - +.beatsbydreireland-sales.com
+  - +.beatsbydreirelandonlines.com
+  - +.beatsbydreirelandsale.com
+  - +.beatsbydreirelandsonline.com
+  - +.beatsbydremall2013.com
+  - +.beatsbydremonsteraustralia.com
+  - +.beatsbydrenls.com
+  - +.beatsbydrenorge1.net
+  - +.beatsbydreofficialdanmark.com
+  - +.beatsbydreoksale.com
+  - +.beatsbydreol.com
+  - +.beatsbydreonlie2013-nl.com
+  - +.beatsbydreonlines-ireland.com
+  - +.beatsbydreonlines-uk.com
+  - +.beatsbydreonlinesale-nz.com
+  - +.beatsbydreoordopjes.com
+  - +.beatsbydreoslo.com
+  - +.beatsbydreoutletsale.com
+  - +.beatsbydreoutletscheap.com
+  - +.beatsbydrerealstore.com
+  - +.beatsbydres-shop.com
+  - +.beatsbydresale-uk.com
+  - +.beatsbydresalemall2013.com
+  - +.beatsbydresaleonlines-nz.com
+  - +.beatsbydresalesonline-australia.com
+  - +.beatsbydresdanmark.net
+  - +.beatsbydreshop-uk.com
+  - +.beatsbydreshops.net
+  - +.beatsbydresingapores.com
+  - +.beatsbydresingaporesale.com
+  - +.beatsbydresold.com
+  - +.beatsbydresolohdonline-canada.com
+  - +.beatsbydresonline-nz.com
+  - +.beatsbydrespeakers.com
+  - +.beatsbydressale.com
+  - +.beatsbydressolo.com
+  - +.beatsbydresstudio.com
+  - +.beatsbydrestorevip.com
+  - +.beatsbydrestudio-australia.com
+  - +.beatsbydrestudio.com
+  - +.beatsbydretoutlet.com
+  - +.beatsbydreuk.com
+  - +.beatsbydreuk.net
+  - +.beatsbydreus.com
+  - +.beatsbydrevipde.com
+  - +.beatsbydrew.com
+  - +.beatsbydrsmonsterinusa.com
+  - +.beatsbymusic.net
+  - +.beatsbysdrbre.com
+  - +.beatsbysdrdres.com
+  - +.beatscasque-france.com
+  - +.beatscheap-nz.com
+  - +.beatscheap-uk.com
+  - +.beatscheapforsale.com
+  - +.beatscollection2014.com
+  - +.beatscustomblackfriday.com
+  - +.beatsdanmark2013.com
+  - +.beatsdrdre-headphones.com
+  - +.beatsdrdre-it.com
+  - +.beatsdrdre-solo.com
+  - +.beatsdrdre2014.com
+  - +.beatsdrdrecuffie.net
+  - +.beatsdrdrekaufenschweiz.net
+  - +.beatsdrdreneon.com
+  - +.beatsdre-monster.com
+  - +.beatsdre.net
+  - +.beatsdre4cheap.com
+  - +.beatsdrecheap.com
+  - +.beatsdredreheadphones.com
+  - +.beatsdreforsale.com
+  - +.beatsdreinau.com
+  - +.beatsdremonster-uk.com
+  - +.beatsdrenewcolorful4usale.com
+  - +.beatsdreoutletsale.com
+  - +.beatsdresale2013.com
+  - +.beatsdresalestore.com
+  - +.beatsdresolo2013.com
+  - +.beatsdreus.com
+  - +.beatsearbudsheadphoness.com
+  - +.beatselectronic.net
+  - +.beatselectronics.com
+  - +.beatsep.com
+  - +.beatsep.net
+  - +.beatsfacstore.com
+  - +.beatsfactoroutlets.com
+  - +.beatsfactorycollection.com
+  - +.beatsfactoryoutles.com
+  - +.beatsforcheap-usa.com
+  - +.beatsforme.com
+  - +.beatsfranceofficiel.com
+  - +.beatsheadphones-discount.com
+  - +.beatsheadphones1.com
+  - +.beatsheadphones2u.com
+  - +.beatsheadphonesale.com
+  - +.beatsheadphonesdealer.com
+  - +.beatsheadphonesforcheap.net
+  - +.beatsheadphonesonline.com
+  - +.beatsheadphoness.com
+  - +.beatsheadphonestudio.com
+  - +.beatsheadphonesusamall.com
+  - +.beatshopuk.com
+  - +.beatsincanada.com
+  - +.beatsinsingapore.com
+  - +.beatsireland.net
+  - +.beatsjoy.com
+  - +.beatsmonstersales.com
+  - +.beatsmusic.com
+  - +.beatsmusic.wang
+  - +.beatsneon.com
+  - +.beatsnzsale.com
+  - +.beatsodre.com
+  - +.beatsofdre-usa.com
+  - +.beatsonblackfriday2013.com
+  - +.beatsone.net
+  - +.beatsoutlet.net
+  - +.beatsoutletanytime.com
+  - +.beatsoutletonlines.com
+  - +.beatspascher-bydre.com
+  - +.beatspascher-fr.net
+  - +.beatspascher.net
+  - +.beatspaschers.net
+  - +.beatspillnewcolor.com
+  - +.beatspills.com
+  - +.beatspromonsterjp.com
+  - +.beatspromotions.com
+  - +.beatssales.com
+  - +.beatssaleus.com
+  - +.beatssaustraliabuy.com
+  - +.beatssbyaustralia.com
+  - +.beatssbydredanmark.com
+  - +.beatsshop-uk.com
+  - +.beatsshop-usa.com
+  - +.beatsshopstore.com
+  - +.beatssingapores.com
+  - +.beatssingaporeshop.com
+  - +.beatsstudiohodetelefoner.com
+  - +.beatsstudiosite.com
+  - +.beatstoreusa.com
+  - +.beatsua.com
+  - +.beatswirelesscheap.com
+  - +.beatswirelesscuffie.com
   - +.beatthatquote.com
   - +.beautifulandbusty.com
   - +.beautyescortsamsterdam.com
   - +.bebo.com
   - +.becomeindex.com
+  - +.beddit.tv
   - +.bedstegratisporno.com
   - +.beeg.com
   - +.beeg.rest
@@ -2563,6 +3010,7 @@ payload:
   - +.beforeigners.com
   - +.befuck.com
   - +.befuck.net
+  - +.begin-trade.com
   - +.behance.net
   - +.behindkink.com
   - +.behindthescreenz.com
@@ -2600,6 +3048,7 @@ payload:
   - +.best3dhere.com
   - +.best4bim.com
   - +.bestamateurcumshots.com
+  - +.bestbeats4u.com
   - +.bestbhy.com
   - +.bestbim.com
   - +.bestbuy
@@ -2644,6 +3093,7 @@ payload:
   - +.bestiality.guru
   - +.bestialitysextaboo.com
   - +.bestialitytaboo.tv
+  - +.bestiphonestuff.com
   - +.bestjapanesepornsites.com
   - +.bestjavporn.com
   - +.bestjavporn.net
@@ -2659,6 +3109,7 @@ payload:
   - +.bestpremiumpornsite.com
   - +.bestrecipes.com.au
   - +.bestsexcam.com
+  - +.bestshoesale2014.net
   - +.besttitstube.com
   - +.besttube4you.com
   - +.bestvpn.com
@@ -2717,7 +3168,6 @@ payload:
   - +.biaoqs.xyz
   - +.biaoqs1.xyz
   - +.biaoqs2.xyz
-  - +.bibg.com
   - +.bible
   - +.biblesforamerica.org
   - +.bibliocommons.com
@@ -2772,7 +3222,7 @@ payload:
   - +.bigtitvenera.com
   - +.bigtopsites.com
   - +.biguz.net
-  - +.biing.com
+  - +.biitii.com
   - +.bijukujo.club
   - +.bikaa.xyz
   - +.bikac.xyz
@@ -2836,31 +3286,17 @@ payload:
   - +.binancezh.net
   - +.binancezh.pro
   - +.binancezh.top
-  - +.binb.com
-  - +.binf.com
   - +.bing.com
-  - +.bing.com.cn
   - +.bing.net
   - +.bing123.com
-  - +.bing135.com
-  - +.bing4.com
   - +.bingads.com
   - +.bingagencyawards.com
   - +.bingapis.com
   - +.bingapistatistics.com
-  - +.binginternal.com
-  - +.bingit.net
-  - +.bingiton.com
-  - +.bingj.com
   - +.bingo
   - +.bingoporno.com
   - +.bingparachute.com
-  - +.bingpix.com
-  - +.bingpk.com
-  - +.bings.com
   - +.bingsandbox.com
-  - +.bingtoolbar.com
-  - +.bingtranslator.com
   - +.bingvisualsearch.com
   - +.bingworld.com
   - +.bingx.com
@@ -2919,9 +3355,6 @@ payload:
   - +.bitvise.com
   - +.bitwarden.com
   - +.bitwarden.net
-  - +.biying.cn
-  - +.biying.com
-  - +.biying.com.cn
   - +.bizarresexuality.com
   - +.bizhat.com
   - +.bizographics.com
@@ -2939,6 +3372,8 @@ payload:
   - +.blackandstacked.com
   - +.blackboxgames.com
   - +.blacked.com
+  - +.blackfridaydrebeatsnew.com
+  - +.blackfridaydrebeatsshop.com
   - +.blackhomeporn.com
   - +.blacklogic.com
   - +.blackmagicdesign.com
@@ -3032,6 +3467,7 @@ payload:
   - +.bloombergvault.com
   - +.bloombergview.com
   - +.bloomfortune.com
+  - +.bloommicroventures.com
   - +.bloomsburycollections.com
   - +.bloomsburydesignlibrary.com
   - +.blowjobit.com
@@ -3043,9 +3479,7 @@ payload:
   - +.blubank.com
   - +.blubrry.com
   - +.blue-city.com
-  - +.blueaggrestore.com
   - +.blueangellive.com
-  - +.bluecloudprod.com
   - +.blued.cn
   - +.blued.com
   - +.bluedgames.cn
@@ -3301,6 +3735,7 @@ payload:
   - +.bookfi.net
   - +.booking.com
   - +.bookmybridgestonetyre.com
+  - +.bookonsky.net
   - +.booksc.me
   - +.booksc.org
   - +.booksc.xyz
@@ -3334,6 +3769,7 @@ payload:
   - +.bosharso.net
   - +.boslife.biz
   - +.boslife.net
+  - +.bossae.com
   - +.bostik
   - +.boston
   - +.boswp.com
@@ -3375,6 +3811,7 @@ payload:
   - +.br
   - +.br.hao123.com
   - +.bradesco
+  - +.braeburncapital.com
   - +.braintreegateway.com
   - +.braintreegateway.tv
   - +.braintreepayments.com
@@ -3386,8 +3823,12 @@ payload:
   - +.brainyquote.com
   - +.branchportal.com
   - +.brand-protection-team.com
+  - +.brandeasygo.com
+  - +.brandelectronic.com
   - +.brandonhutchinson.com
   - +.brandporno.com
+  - +.brandproducts1688.com
+  - +.brands098.com
   - +.brasilincesto.com
   - +.brasiltudoliberado.com
   - +.braumeister.org
@@ -3558,6 +3999,8 @@ payload:
   - +.bunnycdn.com
   - +.bunnylust.com
   - +.burningcamel.com
+  - +.burstly.net
+  - +.burstlyrewards.com
   - +.busayari.com
   - +.bushi-navi.com
   - +.bushiroad-creative.com
@@ -3577,6 +4020,7 @@ payload:
   - +.businessinsider.com.pl
   - +.businessinsider.my
   - +.businessinsider.nl
+  - +.businesswebwise.com
   - +.businessweek.com
   - +.businessweekmag.com
   - +.bustyangelique.com
@@ -3596,7 +4040,18 @@ payload:
   - +.busu.org
   - +.busytrade.com
   - +.buugaa.com
+  - +.buy-from-shanghai.com
+  - +.buyaapl.com
+  - +.buyaapl.net
   - +.buyaltera.com
+  - +.buyaple.com
+  - +.buybeatsbydre-uk.com
+  - +.buybeatsheadphonesbydre.com
+  - +.buycheapbeatsbus.com
+  - +.buycheapbeatsbydre.com
+  - +.buycheapbeatsbydreshop.com
+  - +.buycheapbeatsdreuk.com
+  - +.buydrdrebeatbox.com
   - +.buyfast-paysmart.net
   - +.buyingfacebooklikes.com
   - +.buyitnow.com
@@ -3605,10 +4060,14 @@ payload:
   - +.buyitnow.tv
   - +.buyitnowshop.net
   - +.buymeacoffee.com
+  - +.buyminibeatbox.com
   - +.buynikechina.com
   - +.buyoculus.com
+  - +.buyonlineheadphones.com
   - +.buypass-ssl.com
   - +.buypass.com
+  - +.buyshoponly.com
+  - +.buzzardflapper.com
   - +.buzzav.com
   - +.buzzhand.com
   - +.buzzhand.net
@@ -3634,6 +4093,7 @@ payload:
   - +.byapis.com
   - +.byapps.net
   - +.bybdc6.com
+  - +.bybeatsdre.com
   - +.bybit-global.com
   - +.bybit.ada.support
   - +.bybit.biz
@@ -3643,6 +4103,7 @@ payload:
   - +.bycbe.com
   - +.bycsi.com
   - +.byd3c3.com
+  - +.bydrebeats.com
   - +.bygpp1207.world
   - +.byjav.me
   - +.byjhd.com
@@ -3698,6 +4159,7 @@ payload:
   - +.cairnspost.com.au
   - +.calameo.com
   - +.calebelston.com
+  - +.calendarserver.org
   - +.calendarz.com
   - +.calgarychinese.com
   - +.calgarychinese.net
@@ -3729,6 +4191,8 @@ payload:
   - +.camelot-europe.com
   - +.camelotherald.com
   - +.camelotherald.net
+  - +.camelphat.com
+  - +.camelspaceeffect.com
   - +.cameraboys.com
   - +.camerfirma.com
   - +.camfinder.com
@@ -3761,6 +4225,7 @@ payload:
   - +.camwhoresbay.com
   - +.camwhoreshd.com
   - +.camwhoria.com
+  - +.canada-beatsbydre.com
   - +.canadameet.com
   - +.canalporno.com
   - +.candidforum-videos.com
@@ -3803,12 +4268,14 @@ payload:
   - +.capturingreality.com
   - +.carabinasypistolas.com
   - +.caravan
+  - +.carbon.com
   - +.card.io
   - +.cardinalkungfoundation.org
   - +.carebay.com
   - +.careerfundas.com
   - +.careerjournal.com
   - +.careersatfb.com
+  - +.carekit.org
   - +.carfax.com
   - +.cargigileads.com
   - +.cari.com.my
@@ -3850,10 +4317,25 @@ payload:
   - +.casinoking.com
   - +.casinoriva.com
   - +.casoneexchange.com
+  - +.casque-fr.com
+  - +.casquebeatsbydrdresolohd.com
+  - +.casquebeatsdocteurdre.com
+  - +.casquebeatsdre2013.com
+  - +.casquebeatsenligne.com
+  - +.casquebeatsfracheter.com
+  - +.casquebeatsmer.net
+  - +.casquebeatsofficiel-fr.com
+  - +.casquebeatspascher2013.com
+  - +.casquebeatssolo.net
+  - +.casquedrdrebeatssfr.com
+  - +.casquemonsterbeats.com
+  - +.casquemonsterbeatsbydre2013.com
+  - +.casquesbeatsaudio.com
   - +.castingcouch-x.com
   - +.casualhomemadesex.com
   - +.cat
   - +.cataboom.com
+  - +.catalina.hk
   - +.catalinacruz.com
   - +.catch22.net
   - +.catchgod.com
@@ -3927,6 +4409,7 @@ payload:
   - +.cdjp.org
   - +.cdkworkshop.com
   - +.cdmatech.com
+  - +.cdn-apple.com
   - +.cdn-spotify-experiments.conductrics.com
   - +.cdn-telegram.org
   - +.cdn-terapeak.com
@@ -3940,6 +4423,7 @@ payload:
   - +.cdnmhws.cc
   - +.cdnmhwscc.vip
   - +.cdnpure.com
+  - +.cdnst.net
   - +.cdnuc.vip
   - +.cdnxxx-proxy.co
   - +.cdnxxx-proxy.xyz
@@ -3952,7 +4436,6 @@ payload:
   - +.cdpwu.org
   - +.cdw.com
   - +.cebay.com
-  - +.cegid-cloud.cn
   - +.ceicdata.com
   - +.celebforum.co
   - +.celebgramme.com
@@ -4044,9 +4527,58 @@ payload:
   - +.chatwhores.net
   - +.chatwhores.org
   - +.chatwhores.tv
+  - +.cheap-beats-by-dre.net
+  - +.cheap-beatsbydre.com
   - +.cheap-nike.com
+  - +.cheapbagshoes.com
+  - +.cheapbeats365.com
+  - +.cheapbeats4sale.net
+  - +.cheapbeatsaustraliasale.com
+  - +.cheapbeatsbus.com
+  - +.cheapbeatsbydr.com
+  - +.cheapbeatsbydrdrepro.com
+  - +.cheapbeatsbydre-au.com
+  - +.cheapbeatsbydre99.com
+  - +.cheapbeatsbydrefau.com
+  - +.cheapbeatsbydremall.com
+  - +.cheapbeatsbydremonster.com
+  - +.cheapbeatsbydrenz.net
+  - +.cheapbeatsbydreonsale.com
+  - +.cheapbeatsbydreoutlet-nz.com
+  - +.cheapbeatsbydreoutlet.com
+  - +.cheapbeatsbydreoutlets2013.com
+  - +.cheapbeatsbydresale.com
+  - +.cheapbeatsbydreshop.com
+  - +.cheapbeatsbydrestudioedition.com
+  - +.cheapbeatsbydrestudioutlet.com
+  - +.cheapbeatsdrdresolo.com
+  - +.cheapbeatsdrestudios.com
+  - +.cheapbeatsheadphone2014.com
+  - +.cheapbeatsie.com
+  - +.cheapbeatsla.com
+  - +.cheapbeatssale4u.com
+  - +.cheapbeatsshopbydre.com
+  - +.cheapcustombeatsbydre.com
+  - +.cheapdrdrebeats8.com
+  - +.cheapdrdrebeatsca.com
+  - +.cheapdrebeats8.net
+  - +.cheaperbeatsbydresale.com
+  - +.cheapestbeatsdrdre.com
+  - +.cheapheadphonesland.com
+  - +.cheapheadphonessale.com
+  - +.cheapheadsetmall.com
+  - +.cheapheadsetshop.com
+  - +.cheapmonsterbeatsbydrdre.com
+  - +.cheapmonsterbeatsheadsets.com
+  - +.cheapmonsterbeatssale.com
+  - +.cheapmonstersbeatsonsale.com
+  - +.cheapnewbeatsbydre.com
   - +.cheapnikedunks.com
   - +.cheapnikeoutlet.com
+  - +.cheapsalemonster.com
+  - +.cheapshoesvip.com
+  - +.cheapwireless04.com
+  - +.cheapwirelessbeats.com
   - +.checkgfw.com
   - +.chegg.com
   - +.cheggcdn.com
@@ -4076,6 +4608,7 @@ payload:
   - +.chicksonblackdicks.com
   - +.chickstagram.com
   - +.chickteases.com
+  - +.chihair-straightener.com
   - +.chikiporn.com
   - +.chillingo.com
   - +.chimeforchange.org
@@ -4093,10 +4626,7 @@ payload:
   - +.chinaaid.org
   - +.chinachange.org
   - +.chinachannel.hk
-  - +.chinacloud-mobile.cn
-  - +.chinacloudapi.cn
-  - +.chinacloudapp.cn
-  - +.chinacloudsites.cn
+  - +.chinaclothesstore.com
   - +.chinacomments.org
   - +.chinadecoding.com
   - +.chinademocrats.org
@@ -4167,6 +4697,7 @@ payload:
   - +.chocam.com
   - +.chocolatey.org
   - +.choicereviews.org
+  - +.chomp.com
   - +.chosun.com
   - +.chrdnet.com
   - +.christianfreedom.org
@@ -4200,6 +4731,7 @@ payload:
   - +.chwr7s8u.com
   - +.chyoa.com
   - +.ci-en.net
+  - +.ciattackers.com
   - +.cici.com
   - +.ciciai.com
   - +.ciciaicdn.com
@@ -4424,6 +4956,7 @@ payload:
   - +.cmail19.com
   - +.cmcn.org
   - +.cmegroup.com
+  - +.cmhalq.com
   - +.cmoinc.org
   - +.cmpaas.com
   - +.cms-twdigitalassets.com
@@ -4458,6 +4991,7 @@ payload:
   - +.cnpmjs.org
   - +.cnpolitics.org
   - +.cnproxy.com
+  - +.cnshopin.com
   - +.cnyes.com
   - +.cnzjp.xyz
   - +.co.tv
@@ -4615,6 +5149,8 @@ payload:
   - +.coolaler.com
   - +.coolder.com
   - +.coolinet.net
+  - +.cooliphonecasesstore.com
+  - +.coolmonster.net
   - +.coolncute.com
   - +.coolsexnew.com
   - +.coolstuffinc.com
@@ -4638,6 +5174,7 @@ payload:
   - +.corel.net
   - +.coreldraw.com
   - +.corelstore.com
+  - +.coreml.net
   - +.coreoptics.net
   - +.corepublishingsolutions.com
   - +.coronavirusnow.com
@@ -4680,17 +5217,20 @@ payload:
   - +.covid19rx.org
   - +.cowboom.com
   - +.coze.com
+  - +.cozydrdrebeats.com
   - +.cp44.net
   - +.cpan.org
   - +.cpedge.com
   - +.cpj.org
   - +.cpu-monkey.com
+  - +.cqcorea.com
   - +.cqvip.com
   - +.cr
   - +.crabporn.com
   - +.crackle.com
   - +.craigslist.org
   - +.crankplayer.com
+  - +.crashlytics.com
   - +.crates.io
   - +.crazy-amateurs.com
   - +.crazyav.xyz
@@ -4768,9 +5308,7 @@ payload:
   - +.crystalgunnsworld.com
   - +.crystalmiss.com
   - +.cs.co
-  - +.cs11.wpc.v0cdn.net
   - +.cs4hs.com
-  - +.cs9.wac.phicdn.net
   - +.csdparty.com
   - +.csgfnmdb.com
   - +.cshive.com
@@ -4811,6 +5349,7 @@ payload:
   - +.cuckwatchingwife.com
   - +.cuckwimp.com
   - +.cuebic.biz
+  - +.cuffiesaldi.com
   - +.cuhk.edu.hk
   - +.cuhkacs.org
   - +.cuihua.org
@@ -4831,6 +5370,7 @@ payload:
   - +.cuntempire.com
   - +.cuntwars.com
   - +.cup.com.hk
+  - +.cups.org
   - +.curbed.com
   - +.currently.com
   - +.currently.net
@@ -4844,7 +5384,17 @@ payload:
   - +.curvybbwwives.com
   - +.curvyerotic.com
   - +.cusp.hk
+  - +.custom-iphonecase.com
+  - +.custombeatsbydrebuy.com
+  - +.custombeatsdeals.com
+  - +.custombeatsforcheap.com
+  - +.custombeatsny.com
+  - +.custombeatssbydreus.com
+  - +.customdrdrebeats.com
   - +.customeriomail.com
+  - +.customizedbeatbydre.com
+  - +.customizedbeatsbydre.com
+  - +.customizedbeatsdre.com
   - +.customnikeshoes.com
   - +.cusu.hk
   - +.cutout.pro
@@ -4861,6 +5411,7 @@ payload:
   - +.cyber-bay.org
   - +.cyberctm.com
   - +.cyberghostvpn.com
+  - +.cybermondaybeats4sale.com
   - +.cyberx.com
   - +.cygwin.com
   - +.cylink.pro
@@ -4949,12 +5500,14 @@ payload:
   - +.damplips.com
   - +.dandalinvoa.com
   - +.dandanzan.cc
+  - +.danemarket.com
   - +.danke4china.net
   - +.danlan.org
   - +.danlancare.cn
   - +.danlancare.com
   - +.danlanlove.cn
   - +.danlanlove.com
+  - +.danmarkbeatsbydrdre.com
   - +.danmarner.com
   - +.danskpornofilm.com
   - +.dansmovies.com
@@ -4979,8 +5532,12 @@ payload:
   - +.dartsearch-cn.net
   - +.dartsearch.net
   - +.darwindimensions.com
+  - +.darwinsource.com
+  - +.darwinsource.org
+  - +.darwinsourcecode.com
   - +.dasaob.online
   - +.dashlane.com
+  - +.dashwood360.com
   - +.dastanhisexy.cc
   - +.dastrassi.org
   - +.dat.foundation
@@ -5029,6 +5586,7 @@ payload:
   - +.dclk
   - +.dcmilitary.com
   - +.dcocsp.cn
+  - +.dctbeatsbydre.com
   - +.ddd-smart.net
   - +.ddex.io
   - +.ddff66.com
@@ -5050,6 +5608,7 @@ payload:
   - +.deaftone.com
   - +.dealbay.com
   - +.dealerspeed.net
+  - +.dealsbeatsblackfriday.com
   - +.dealtime.com
   - +.dealtree.org
   - +.deasians.com
@@ -5086,6 +5645,7 @@ payload:
   - +.deepl.com
   - +.deepmind.com
   - +.deezer.com
+  - +.default.exp-tas.com
   - +.definebabe.com
   - +.definefetish.com
   - +.degruyter.com
@@ -5166,6 +5726,7 @@ payload:
   - +.design-ledrev.com
   - +.design-ledrevolution.com
   - +.design-seeds.com
+  - +.designeriphonescases.com
   - +.designers-artists.com
   - +.designledrevolution.com
   - +.designsformovement.com
@@ -5179,8 +5740,14 @@ payload:
   - +.desiresecrets.com
   - +.desk.com
   - +.deskconnect.com
+  - +.desktopmovie.com
+  - +.desktopmovie.net
+  - +.desktopmovie.org
+  - +.desktopmovies.net
+  - +.desktopmovies.org
   - +.dessci.com
   - +.destinationbim.com
+  - +.detaliczny.com
   - +.detentiongirls.com
   - +.dettol-prize.com
   - +.dettol.com
@@ -5201,6 +5768,7 @@ payload:
   - +.dev-guardianapis.com
   - +.dev-theguardian.com
   - +.devcon.org
+  - +.developer-advisor.com
   - +.developer.allizom.org
   - +.developria.com
   - +.deviantart.com
@@ -5250,6 +5818,7 @@ payload:
   - +.digicert-cn.com
   - +.digicert-validation.com
   - +.digicert.cn
+  - +.digicert.com
   - +.digisfera.com
   - +.digital-anime.com
   - +.digital-rb.com
@@ -5257,6 +5826,7 @@ payload:
   - +.digitalattackmap.com
   - +.digitalcertvalidation.com
   - +.digitaldesire.com
+  - +.digitalhub.com
   - +.digitalnomadsproject.org
   - +.digitalocean.com
   - +.digitaloceanspaces.com
@@ -5357,14 +5927,16 @@ payload:
   - +.discordpartygames.com
   - +.discordsays.com
   - +.discordstatus.com
+  - +.discountbeatsbydre-us.com
+  - +.discountbeatsstore.com
   - +.discountedporn.com
   - +.discountporn.club
   - +.discover
-  - +.discoverbing.com
   - +.discoveryplus.com
   - +.discreet.com
   - +.discuss.com.hk
   - +.discuss4u.com
+  - +.discussionsapple.com
   - +.dish
   - +.dish.com
   - +.dishworld.com
@@ -5438,10 +6010,12 @@ payload:
   - +.djorz.com
   - +.djreprints.com
   - +.dk
+  - +.dkbeatsbydre.com
   - +.dkcloud.cc
   - +.dkk37.com
   - +.dkr.com
   - +.dkrecttv.com
+  - +.dl-iphone.com
   - +.dl.begellhouse.com
   - +.dlap001.xyz
   - +.dlap301.com
@@ -5639,6 +6213,7 @@ payload:
   - +.download.qcpp1.net
   - +.download.qpdp1.net
   - +.downloadpass.com
+  - +.downloadsforipod.com
   - +.dphk.org
   - +.dpool.top
   - +.dpr.info
@@ -5653,7 +6228,27 @@ payload:
   - +.drainage.com
   - +.draw.io
   - +.drbdsmporn.com
+  - +.drbeatsukmart.com
   - +.drbizzaro.com
+  - +.drdre-beats.com
+  - +.drdrebeats-chen.com
+  - +.drdrebeats-headphone.com
+  - +.drdrebeats-usa.com
+  - +.drdrebeatsale.com
+  - +.drdrebeatsbillig.com
+  - +.drdrebeatsdesale.com
+  - +.drdrebeatsdiscount.com
+  - +.drdrebeatsforu.com
+  - +.drdrebeatsretail2013.com
+  - +.drdrebeatssale7.com
+  - +.drdrebeatsuk.com
+  - +.drdrefnac.com
+  - +.drdreheadphonebeats.com
+  - +.drdreheadphonekey.com
+  - +.drdreheadphonesusstore.com
+  - +.drdremonster-beats.com
+  - +.drdremonsterdre.com
+  - +.drdreprobeatssale.com
   - +.dreamamateurs.com
   - +.dreamforce.com
   - +.dreammovies.com
@@ -5661,6 +6256,37 @@ payload:
   - +.dreamteamfc.com
   - +.dreamtoplay.com
   - +.dreamworks.com
+  - +.drebeats-australia.com
+  - +.drebeats-france.com
+  - +.drebeats-monster.com
+  - +.drebeats-monsteraustralia.com
+  - +.drebeats-monsterusa.com
+  - +.drebeats-singapore.com
+  - +.drebeats-singapore.net
+  - +.drebeats-singaporecheap.com
+  - +.drebeats-singaporecheap.net
+  - +.drebeats-solo.com
+  - +.drebeats-studio.com
+  - +.drebeatsaustralia-cheap.com
+  - +.drebeatsaustralia-cheap.net
+  - +.drebeatsbuy.com
+  - +.drebeatsbydreoutlet.com
+  - +.drebeatscanada.com
+  - +.drebeatsdeutschland.net
+  - +.drebeatsforsaleus.com
+  - +.drebeatsheadphones-nz.com
+  - +.drebeatshome.com
+  - +.drebeatsoldes.com
+  - +.drebeatsoutletstore.com
+  - +.drebeatspill.com
+  - +.drebeatssite.com
+  - +.drebeatssolocybermondaysale.com
+  - +.drebeatsstudio2013.com
+  - +.drebeatstudio.com
+  - +.drebyby.com
+  - +.dremonsterbeatsoutlets.com
+  - +.dreprobeats.com
+  - +.dreprofy.com
   - +.drepung.org
   - +.drgan.net
   - +.dribbble.com
@@ -5715,6 +6341,7 @@ payload:
   - +.dtdns.com
   - +.dtdns.net
   - +.dtiblog.com
+  - +.dtsell.com
   - +.dtv
   - +.dtv2009offers.com
   - +.dtvce.com
@@ -5787,6 +6414,11 @@ payload:
   - +.duyaossr.com
   - +.dvag
   - +.dvdpac.com
+  - +.dvdstudiopro.biz
+  - +.dvdstudiopro.com
+  - +.dvdstudiopro.info
+  - +.dvdstudiopro.net
+  - +.dvdstudiopro.org
   - +.dvdtrailertube.com
   - +.dvh30n.vip
   - +.dvorak.org
@@ -5796,7 +6428,6 @@ payload:
   - +.dwg.com
   - +.dwgtrueconvert.com
   - +.dwgtrueview.com
-  - +.dwh5.com
   - +.dwheeler.com
   - +.dwnews.com
   - +.dwnews.net
@@ -5814,7 +6445,6 @@ payload:
   - +.dynafleetonline.com
   - +.dynamic-dns.net
   - +.dynamicdns.biz
-  - +.dynamics.cn
   - +.dynamics.com
   - +.dynamobuilds.com
   - +.dynamopackages.com
@@ -5840,7 +6470,6 @@ payload:
   - +.e-gold.com
   - +.e-hentai.org
   - +.e-hentaidb.com
-  - +.e-msedge.net
   - +.e-pup.5d6d.com
   - +.e-traderland.net
   - +.e-tugra.com
@@ -5868,6 +6497,8 @@ payload:
   - +.earlyob.com
   - +.earlytibet.com
   - +.earngeek.com
+  - +.earphonescheapest.com
+  - +.earpod.net
   - +.earthcam.com
   - +.earthdell.com
   - +.earthvpn.com
@@ -6051,12 +6682,15 @@ payload:
   - +.eboobstore.com
   - +.ebookbrowse.com
   - +.ebookee.com
+  - +.ebookforipad.com
   - +.ebsco.com
   - +.ebscohost.com
   - +.ebtcbank.com
   - +.ebuyer.com
+  - +.ebuyheadphones.com
   - +.ec
   - +.ecert.gov.hk
+  - +.ecgapp.net
   - +.echainhost.com
   - +.echichimato.com
   - +.echocdn.com
@@ -6094,6 +6728,7 @@ payload:
   - +.edns.biz
   - +.edoors.com
   - +.edu
+  - +.edu-research.org
   - +.edubridge.com
   - +.education-cadcam.com
   - +.eduplus.hk
@@ -6242,7 +6877,6 @@ payload:
   - +.engadget.com
   - +.engagedaily.org
   - +.engineeringvillage.com
-  - +.engkoo.com
   - +.englishforeveryone.org
   - +.englishpen.org
   - +.enjoyasianporn.com
@@ -6387,6 +7021,7 @@ payload:
   - +.ertk.net
   - +.es
   - +.es-visiontimes.com
+  - +.esbeatsbydrebuy.com
   - +.escandinavia-arg.com
   - +.escape.com.au
   - +.escapefromtarkov.com
@@ -6425,6 +7060,7 @@ payload:
   - +.etadult.com
   - +.etaiwannews.com
   - +.etbc.com.hk
+  - +.etheadphones.com
   - +.etherdelta.com
   - +.ethereum.foundation
   - +.ethereum.org
@@ -6461,6 +7097,7 @@ payload:
   - +.eurobabeindex.com
   - +.eurocodesoftware.com
   - +.eurogirlsescort.com
+  - +.euroipad.com
   - +.euronews.com
   - +.europalibera.org
   - +.europeansustainabledesign.com
@@ -6489,13 +7126,13 @@ payload:
   - +.evhead.com
   - +.evilangel.com
   - +.evise.com
-  - +.evoke-windowsservices-tas.msedge
   - +.evolver.com
   - +.evolver3d.com
   - +.evolverpro.com
   - +.evozi.com
   - +.evropaelire.org
   - +.evschool.net
+  - +.eworld.com
   - +.exacttarget.com
   - +.examroom.info
   - +.exascale-tech.com
@@ -6513,7 +7150,6 @@ payload:
   - +.exoav.com
   - +.exotic-ghana.com
   - +.exoticuganda.com
-  - +.exp-tas.com
   - +.expatshield.com
   - +.expecthim.com
   - +.expekt.com
@@ -6525,7 +7161,6 @@ payload:
   - +.exploader.net
   - +.exploitedcollegegirls.com
   - +.exploitedteensasia.com
-  - +.explorebing.com
   - +.exploreintel.com
   - +.explorespanking.com
   - +.expofutures.com
@@ -6779,6 +7414,9 @@ payload:
   - +.faceebot.com
   - +.facegbok.com
   - +.facegbook.com
+  - +.faceid99.com
+  - +.faceid99.net
+  - +.faceidglobal.com
   - +.faceit-cdn.net
   - +.faceit.com
   - +.faceless.me
@@ -6792,6 +7430,7 @@ payload:
   - +.facesofnyfw.com
   - +.facesoftibetanselfimmolators.info
   - +.facesounds.com
+  - +.facetime.net
   - +.facetook.com
   - +.facevbook.com
   - +.facewbook.co
@@ -6871,6 +7510,7 @@ payload:
   - +.familysimulator.io
   - +.familystrokes.com
   - +.famitsu.com
+  - +.famosascalvas.com
   - +.famous-nudes.com
   - +.famousinternetgirls.com
   - +.famousinternetgirlsgalleries.com
@@ -6966,6 +7606,7 @@ payload:
   - +.faseboox.com
   - +.fashionbykakao.com
   - +.fashionnike.com
+  - +.fast.com
   - +.fastestvpn.com
   - +.fastindianporn.com
   - +.fastlane.ci
@@ -7171,11 +7812,13 @@ payload:
   - +.filtercams.com
   - +.filthdump.com
   - +.fimfiction.net
+  - +.finalcutpro.com
   - +.financeleadsonline.com
   - +.financetwitter.com
   - +.financialadvisoriq.com
   - +.financialexpress.com
   - +.finchvpn.com
+  - +.find-apple.com
   - +.findacard.com
   - +.findasians.live
   - +.findbare.com
@@ -7183,6 +7826,8 @@ payload:
   - +.findercdn.me
   - +.findhername.net
   - +.findmespot.com
+  - +.findmybeats.com
+  - +.findmyipad.com
   - +.findsav.com
   - +.findtubes.com
   - +.findvrporn.com
@@ -7392,6 +8037,7 @@ payload:
   - +.fotolia.tv
   - +.fotolja.com
   - +.fotoscaserasx.com
+  - +.foundationdb.org
   - +.foundationdns.com
   - +.foundationdns.net
   - +.foundationdns.org
@@ -7566,6 +8212,7 @@ payload:
   - +.fqok.org
   - +.fqrouter.com
   - +.fr
+  - +.fr-beatsbydrestore.com
   - +.fracebook.com
   - +.fragment.com
   - +.fragrancebay.com
@@ -7574,15 +8221,19 @@ payload:
   - +.framercanvas.com
   - +.framerstatic.com
   - +.framerusercontent.com
+  - +.francecasquebeatssolde.com
   - +.francemail.com
   - +.frank2019.me
   - +.franklc.com
+  - +.frcasquesbeats.com
   - +.freakshare.com
   - +.free-3d-porn.com
+  - +.free-aa.com
   - +.free-abbywinters.com
   - +.free-erobooks.com
   - +.free-gate.org
   - +.free-hada-now.org
+  - +.free-sns.com
   - +.free-ss.site
   - +.free-ssh.com
   - +.free-strip-games.com
@@ -7739,6 +8390,7 @@ payload:
   - +.fringenetwork.com
   - +.fringespoilers.com
   - +.fringetelevision.com
+  - +.frishoes.com
   - +.fritchy.com
   - +.frl
   - +.frogans
@@ -7834,6 +8486,7 @@ payload:
   - +.fullxxxmovies.net
   - +.fulue.com
   - +.funami.tech
+  - +.fundaiphone5s.com
   - +.fundfire.com
   - +.fundinginstitutional.com
   - +.fundingrates.xyz
@@ -7934,6 +8587,7 @@ payload:
   - +.game-repack.site
   - +.game735.com
   - +.gameapps.hk
+  - +.gamebeforethegame.com
   - +.gamejolt.com
   - +.gameloft.com
   - +.gamemeca.com
@@ -8121,6 +8775,7 @@ payload:
   - +.geoip.seektor.com
   - +.geojs.io
   - +.geolytics.com
+  - +.geoport.com
   - +.george
   - +.geoscienceworld.org
   - +.geospatialimaging.com
@@ -8144,6 +8799,7 @@ payload:
   - +.getcloudapp.com
   - +.getcomposer.org
   - +.getdirect.tv
+  - +.getdrebeatssale.com
   - +.getdropbox.com
   - +.getfappy.com
   - +.getfedora.org
@@ -8158,7 +8814,6 @@ payload:
   - +.getlantern.org
   - +.getmalus.com
   - +.getmdl.io
-  - +.getmicrosoftkey.com
   - +.getoutline.org
   - +.getpocket.com
   - +.getporn.tv
@@ -8358,6 +9013,7 @@ payload:
   - +.gmiddle.com
   - +.gmiddle.net
   - +.gmll.org
+  - +.gmnetworks.net
   - +.gmo
   - +.gmocloud.com
   - +.gmodules.com
@@ -8386,11 +9042,13 @@ payload:
   - +.go2web20.net
   - +.goagent.biz
   - +.goagentplus.com
+  - +.gobeatsye.com
   - +.gobet.cc
   - +.gobianywhere.com
   - +.goblocks.com
   - +.goblox.com
   - +.gobuildx.net
+  - +.gobuyonlinestore.net
   - +.gockhuatviet.com
   - +.godaddy
   - +.godaddy.com
@@ -8460,6 +9118,7 @@ payload:
   - +.goodporno.cc
   - +.goodreaders.com
   - +.goodreads.com
+  - +.goodsdunk.net
   - +.goodsexporn.org
   - +.goodtv.tv
   - +.goodyear
@@ -8671,7 +9330,6 @@ payload:
   - +.grotty-monday.com
   - +.ground.news
   - +.groupfun.com
-  - +.groupme.com
   - +.groups.com
   - +.growlforwindows.com
   - +.grss-ieee.org
@@ -8920,7 +9578,6 @@ payload:
   - +.hdfcbank
   - +.hdfreeporn.net
   - +.hdhole.com
-  - +.hdinsightservices.cn
   - +.hdjavonline.com
   - +.hdlt.me
   - +.hdouban.com
@@ -8945,6 +9602,20 @@ payload:
   - +.he.net
   - +.headius.com
   - +.headlinejobs.hk
+  - +.headphonepubs.com
+  - +.headphones-cool.com
+  - +.headphones-dre.com
+  - +.headphones-outlet-online.com
+  - +.headphonesbeatsaudio.com
+  - +.headphonesbeatsbydre.com
+  - +.headphoneses.com
+  - +.headphoneshome.com
+  - +.headphoneshotsales.com
+  - +.headphonesol.com
+  - +.headphonesretailer.com
+  - +.headphonessupply.com
+  - +.headphonezip.com
+  - +.headset987.com
   - +.health026.click
   - +.healthcarecareeronline.com
   - +.healthreach.hk
@@ -8955,6 +9626,7 @@ payload:
   - +.heavenlyhentai.com
   - +.heavy-r.com
   - +.heavyfetish.com
+  - +.hebiphone.com
   - +.hecaitou.net
   - +.hechaji.com
   - +.hegre-art.com
@@ -8967,6 +9639,7 @@ payload:
   - +.helixstudios.net
   - +.helloandroid.com
   - +.helloavgirls.com
+  - +.hellokittybeats.com
   - +.helloqueer.com
   - +.hellosmartbook.com
   - +.helloss.pw
@@ -9122,9 +9795,7 @@ payload:
   - +.heqinglian.net
   - +.heraldsun.com.au
   - +.here.com
-  - +.here.net
   - +.hereistheporn.com
-  - +.heremaps.cn
   - +.herexxx.com
   - +.heritage.org
   - +.hermes
@@ -9163,6 +9834,7 @@ payload:
   - +.heyuedi.com
   - +.heywire.com
   - +.heyzo.com
+  - +.hf-iphone.com
   - +.hf.co
   - +.hf.space
   - +.hg.cool
@@ -9197,7 +9869,9 @@ payload:
   - +.hifixxx.fun
   - +.hifuli.com
   - +.higfw.com
+  - +.highbolt.net
   - +.highcolonic.info
+  - +.highdefinitionbeatsbydre.com
   - +.highpeakspureearth.com
   - +.highporn.net
   - +.highrockmedia.com
@@ -9220,8 +9894,10 @@ payload:
   - +.hindiweb.com
   - +.hindustantimes.com
   - +.hinet.net
+  - +.hipaa6020.com
   - +.hiporn.net
   - +.hippyhillscomix.com
+  - +.hipzoom.net
   - +.hisamitsu
   - +.historyofdota.com
   - +.historyofdota.net
@@ -9379,6 +10055,7 @@ payload:
   - +.homestylernews.com
   - +.hometrack.com.au
   - +.hominis.media
+  - +.honawalaan.com
   - +.honda
   - +.honestpornreviews.com
   - +.honeynet.org
@@ -9402,6 +10079,7 @@ payload:
   - +.hoover.org
   - +.hoovers.com
   - +.hopedialogue.org
+  - +.hopstop.tv
   - +.hopto.org
   - +.horizontal-llc.com
   - +.horizontal-systems.com
@@ -9445,6 +10123,7 @@ payload:
   - +.hotasianbabes.com
   - +.hotav.tv
   - +.hotbak.net
+  - +.hotbeatsonsale.com
   - +.hotcandyland.com
   - +.hotcoin.com
   - +.hotcrp.com
@@ -9469,6 +10148,7 @@ payload:
   - +.hotmail.com
   - +.hotmail.net
   - +.hotmail.org
+  - +.hotmonsterbeats.com
   - +.hotmovies.com
   - +.hotmovs.com
   - +.hotntubes.com
@@ -9492,6 +10172,7 @@ payload:
   - +.hotstunners.com
   - +.hotteenfreecam.com
   - +.hottestfilms.com
+  - +.hottestheadphonesonline.com
   - +.hottg.com
   - +.hottystop.com
   - +.hotvpn.com
@@ -9656,6 +10337,7 @@ payload:
   - +.hrea.org
   - +.hrichina.org
   - +.hrntt.org
+  - +.hrsaz.com
   - +.hrtsea.com
   - +.hrw.org
   - +.hrweb.org
@@ -9835,6 +10517,8 @@ payload:
   - +.hyundai
   - +.hzmn.net
   - +.i-123-hp.com
+  - +.i-book.com
+  - +.i-book.net
   - +.i-cable.com
   - +.i-cablecomm.com
   - +.i-o-u.info
@@ -9859,6 +10543,9 @@ payload:
   - +.iavnight.com
   - +.ib.metapix.net
   - +.ibb.co
+  - +.ibeats-uk.com
+  - +.ibeatsbydre.cc
+  - +.ibeatsbydre.com
   - +.ibiblio.org
   - +.ibkr.com
   - +.ibkr.com.au
@@ -9871,6 +10558,10 @@ payload:
   - +.ibm.com
   - +.ibm.net
   - +.ibonedyourmom.com
+  - +.ibook.com
+  - +.ibook.net
+  - +.ibookpartner.com
+  - +.ibooksauthor.com
   - +.ibradome.com
   - +.ibros.org
   - +.ibtimes.com
@@ -9892,6 +10583,25 @@ payload:
   - +.ichineseporn.com
   - +.icij.org
   - +.icl-fi.org
+  - +.icloud-content.com
+  - +.icloud-isupport.com
+  - +.icloud-sandbox.com
+  - +.icloud.com
+  - +.icloud.org
+  - +.icloudads.net
+  - +.icloudbox.net
+  - +.icloudbrowser.net
+  - +.icloude.com
+  - +.icloudhome.com
+  - +.icloudmail.net
+  - +.icloudmusic.net
+  - +.icloudnet.net
+  - +.icloudo.com
+  - +.icloudo.net
+  - +.icloudos.net
+  - +.icloudpay.net
+  - +.icloudsecure.net
+  - +.icloudsetup.com
   - +.icntv.xyz
   - +.icoco.com
   - +.iconfactory.com
@@ -9920,6 +10630,7 @@ payload:
   - +.idol-sagasukun.com
   - +.idouga.com
   - +.idreamx.com
+  - +.ids-apple.com
   - +.idsam.com
   - +.idservice.inc
   - +.ie
@@ -10011,6 +10722,7 @@ payload:
   - +.igniteseurope.com
   - +.igoogle.com
   - +.igorware.com
+  - +.igoshopping.net
   - +.igotpornpics.com
   - +.igpublish.com
   - +.igsonar.com
@@ -10044,13 +10756,16 @@ payload:
   - +.ikea.net
   - +.ikea.nl
   - +.ikea.pl
+  - +.ikids.com
   - +.iknowthatgirl.com
   - +.ikstar.com
   - +.ikwb.com
   - +.il
   - +.ilbe.com
   - +.ilhamtohtiinstitute.org
+  - +.ilife.wang
   - +.illawarramercury.com.au
+  - +.illianacomputerrecycling.com
   - +.illusion111.com
   - +.illusionas.com
   - +.illusionchn.com
@@ -10077,6 +10792,14 @@ payload:
   - +.im
   - +.im-apps.net
   - +.im.tv
+  - +.imac-apple.com
+  - +.imac-applecomputer.com
+  - +.imac.co
+  - +.imac.com
+  - +.imac.one
+  - +.imacapple.com
+  - +.imacapplecomputer.com
+  - +.imacsources.com
   - +.imageab.com
   - +.imagebam.com
   - +.imagecurl.com
@@ -10103,6 +10826,7 @@ payload:
   - +.imb.org
   - +.imdb
   - +.imdb.com
+  - +.imessage.tv
   - +.imf.org
   - +.imgasd.com
   - +.imgbb.com
@@ -10123,7 +10847,10 @@ payload:
   - +.immidio.com
   - +.immxd.com
   - +.imod.com
+  - +.imonsterbeats.com
   - +.imore.com
+  - +.imoviegallery.com
+  - +.imoviestage.com
   - +.impact.org.au
   - +.impactdesignhub.com
   - +.imperial.insendi.com
@@ -10143,6 +10870,7 @@ payload:
   - +.inaporn.com
   - +.inasian.club
   - +.incapdns.net
+  - +.incentivetravelgifts.com
   - +.incestflix.com
   - +.incestvidz.com
   - +.incezt.net
@@ -10156,6 +10884,7 @@ payload:
   - +.indexxx.com
   - +.india.com
   - +.indiablooms.com
+  - +.indiaipad.com
   - +.indian-free-xnxx.com
   - +.indian-pornstars.com
   - +.indianarrative.com
@@ -10226,6 +10955,7 @@ payload:
   - +.inshot.com
   - +.inshotapp.com
   - +.insidefilms.com
+  - +.insidemacintosh.com
   - +.insider-intelligence.com
   - +.insider.com
   - +.insiderdevtour.com
@@ -10404,16 +11134,26 @@ payload:
   - +.inxporn.com
   - +.io.io
   - +.ioe.com
+  - +.ioffergift.com
   - +.ioinformatics.org
   - +.iole.tv
   - +.iop.org
+  - +.ios-icloud.com
+  - +.iosinthecar.com
   - +.iotinactionevents.com
   - +.iownyour.biz
   - +.iownyour.org
   - +.ip-api.com
   - +.ip.cn
   - +.ip73.com
+  - +.ipa-iphone.net
+  - +.ipad.host
+  - +.ipad.wang
+  - +.ipad3.com
+  - +.ipadair.hk
+  - +.ipadaustralia.com
   - +.ipaddress.com
+  - +.ipadpro.buzz
   - +.ipalter.com
   - +.ipapi.co
   - +.ipdefenseforum.com
@@ -10427,9 +11167,45 @@ payload:
   - +.ipfs.runfission.com
   - +.ipfs.tech
   - +.ipgeolocation.io
+  - +.iphine.com
+  - +.iphone-cd.com
+  - +.iphone-cn.com
+  - +.iphone-sh.com
+  - +.iphone-vip1.com
+  - +.iphone-vip2.com
+  - +.iphone-vip3.com
+  - +.iphone-vip4.com
+  - +.iphone-vip5.com
+  - +.iphone-x.tv
+  - +.iphone-yh.com
+  - +.iphone-zh.com
+  - +.iphone.com
+  - +.iphone.com.au
+  - +.iphone.host
+  - +.iphone.wang
+  - +.iphone4.com
   - +.iphone4hongkong.com
+  - +.iphone4s.com
+  - +.iphone5.com
+  - +.iphone5casescovers.com
+  - +.iphone5s5case.com
+  - +.iphonecase2013.com
+  - +.iphonecase5.com
+  - +.iphonecases100.com
+  - +.iphonecases5.com
+  - +.iphonecollcase.com
+  - +.iphonefc.com
+  - +.iphonegermany.com
   - +.iphonehacks.com
+  - +.iphonehangzhou.com
+  - +.iphoneimessage.com
+  - +.iphoneplus.wang
+  - +.iphonerip.net
+  - +.iphonese.tv
   - +.iphonetaiwan.org
+  - +.iphoneunlockimei.com
+  - +.iphonexs.tv
+  - +.iphoto.wang
   - +.ipify.org
   - +.ipinfo.io
   - +.ipip.net
@@ -10438,11 +11214,29 @@ payload:
   - +.ipleadership.org
   - +.ipns.co
   - +.ipobar.com
+  - +.ipod.co
+  - +.ipod.com
+  - +.ipod.com.au
+  - +.ipod.com.hk
+  - +.ipod.hk
+  - +.ipod.net
+  - +.ipodcentre.nl
+  - +.ipodcleaner.com
+  - +.ipoditouch.com
+  - +.ipodnano.com
+  - +.ipodnano.net
+  - +.ipodprices.com
+  - +.ipodrocks.com.au
+  - +.ipods.com
+  - +.ipodshop.com.au
+  - +.ipodtouch.co
+  - +.ipodtouch.com
   - +.ipoock.com
   - +.iporntoo.com
   - +.iporntv.net
   - +.iportal.me
   - +.ipostnaked.com
+  - +.ipple.com
   - +.ippog.org
   - +.ippotv.com
   - +.ippstatic.com
@@ -10482,6 +11276,7 @@ payload:
   - +.isasecret.com
   - +.isbgpsafeyet.com
   - +.isca-speech.org
+  - +.ischool.com
   - +.isfocus.net
   - +.isgame365.cc
   - +.isgreat.org
@@ -10493,6 +11288,7 @@ payload:
   - +.islam.org.hk
   - +.islamawareness.net
   - +.islamhouse.com
+  - +.islamiccenterofnewlondon.com
   - +.islamicity.com
   - +.islamicpluralism.org
   - +.islamtoday.net
@@ -10522,6 +11318,7 @@ payload:
   - +.ita-do.com
   - +.itaboo.info
   - +.itaeromanga.com
+  - +.italiabeatsbydrdre.com
   - +.italiatibet.org
   - +.itasoftware.com
   - +.itau
@@ -10539,6 +11336,7 @@ payload:
   - +.itigergrowtha.com
   - +.itigerup.com
   - +.itnel.com
+  - +.itools.info
   - +.itripto.com
   - +.itsaol.com
   - +.itsbetterwhenyouwinit.com
@@ -10546,6 +11344,26 @@ payload:
   - +.itshidden.com
   - +.itsoc.org
   - +.itu.int
+  - +.itunbes.com
+  - +.ituneas.com
+  - +.itunes-radio.net
+  - +.itunes.co
+  - +.itunes.com
+  - +.itunes.hk
+  - +.itunes.org
+  - +.itunes12days.com
+  - +.itunesessentials.com
+  - +.itunesfestivals.com
+  - +.itunesiradio.com
+  - +.ituneslatino.com
+  - +.ituneslogin.net
+  - +.itunesmatch.com
+  - +.itunesparty.com
+  - +.itunesradio.com
+  - +.itunesradio.tv
+  - +.itunesstore.co
+  - +.itunesu.com
+  - +.itunesu.net
   - +.itv
   - +.itv.com
   - +.itvstatic.com
@@ -10554,6 +11372,7 @@ payload:
   - +.iuhrdf.org
   - +.iuksky.com
   - +.ius.io
+  - +.iutunes.com
   - +.ivacy.com
   - +.iverycd.com
   - +.ivintageporn.com
@@ -10568,6 +11387,8 @@ payload:
   - +.iwaponline.com
   - +.iwara.tv
   - +.iwfwcf.com
+  - +.iwork.com
+  - +.iwork.wang
   - +.iwyn138.com
   - +.ixnxx.tv
   - +.ixquick.com
@@ -10821,6 +11642,8 @@ payload:
   - +.jetbrains.org
   - +.jetbrains.space
   - +.jetbrains.team
+  - +.jetfuelapp.com
+  - +.jetfuelapps.com
   - +.jetos.com
   - +.jex.com
   - +.jfengtime.com
@@ -10891,6 +11714,7 @@ payload:
   - +.jjdong7.com
   - +.jjgirls.com
   - +.jkb.cc
+  - +.jkbeats.com
   - +.jkf.net
   - +.jkface.net
   - +.jkforum.net
@@ -10959,9 +11783,6 @@ payload:
   - +.joinclubhouse.com
   - +.joinmaidez.com
   - +.joinmastodon.org
-  - +.joinms.com
-  - +.joinms.com.cn
-  - +.joinmva.com
   - +.joins.com
   - +.joinside.org
   - +.joinsquad.com
@@ -11005,6 +11826,8 @@ payload:
   - +.jsati.com
   - +.jsatmobile.com
   - +.jsbridgestone.com
+  - +.jsdelivr.com
+  - +.jsdelivr.net
   - +.jshell.net
   - +.jshint.com
   - +.jsquaredjavascript.com
@@ -11214,6 +12037,7 @@ payload:
   - +.kichiku-doujinko.com
   - +.kichikuou.com
   - +.kickporn.com
+  - +.kickshatchannel.com
   - +.kicksnike1.com
   - +.kicu.tv
   - +.kidc.net
@@ -11299,6 +12123,7 @@ payload:
   - +.knowyourmeme.com
   - +.knoxemm.com
   - +.koalaporn.com
+  - +.kobbeatssbydredk.com
   - +.kobe-pastel.com
   - +.kobo.com
   - +.kobobooks.com
@@ -11316,6 +12141,7 @@ payload:
   - +.kone.com
   - +.koolsolutions.com
   - +.koornk.com
+  - +.kopfhorergunstigshop.com
   - +.koranmandarin.com
   - +.korea.net
   - +.koreanpornmovie.com
@@ -11472,7 +12298,9 @@ payload:
   - +.latinmommas.com
   - +.latintubeporn.com
   - +.latrobe
+  - +.latticedata.com
   - +.launchpad.net
+  - +.launchpad.wang
   - +.launchpadcontent.net
   - +.launchpadlibrarian.com
   - +.launchpadlibrarian.net
@@ -11522,6 +12350,7 @@ payload:
   - +.ledger.com
   - +.leeao.com.cn
   - +.leecheukyan.org
+  - +.leecountytimes.com
   - +.leetcode.com
   - +.lefora.com
   - +.lefrak
@@ -11573,6 +12402,7 @@ payload:
   - +.lewdweb.net
   - +.lexica.art
   - +.lexisnexis.com
+  - +.lexuemei.com
   - +.lexus
   - +.lezpoo.com
   - +.lfai.foundation
@@ -11736,7 +12566,6 @@ payload:
   - +.liuxiaotong.com
   - +.live-patreon-marketing.pantheonsite.io
   - +.live-video.net
-  - +.live.cn
   - +.live.com
   - +.live.com.au
   - +.live.net
@@ -11752,6 +12581,7 @@ payload:
   - +.livemodels.co
   - +.liveperson.com
   - +.liveperson.net
+  - +.livephotos.tv
   - +.liveporngirls.com
   - +.liveprivates.com
   - +.liverail.com
@@ -11802,7 +12632,6 @@ payload:
   - +.localnetwork.uop
   - +.localpresshk.com
   - +.localxlist.org
-  - +.localytics.com
   - +.locker
   - +.lockergnome.com
   - +.lockestek.com
@@ -11889,6 +12718,7 @@ payload:
   - +.loveavdh15.cc
   - +.loveavdh21.cc
   - +.loveavvip.com
+  - +.lovebeatsdr.com
   - +.loved.hk
   - +.lovedolltorso.com
   - +.lovegirls.cam
@@ -11896,6 +12726,7 @@ payload:
   - +.lovehtbooks.com
   - +.lovejav.net
   - +.loveloveskill.com
+  - +.lovemarca.com
   - +.lovemstudios.com
   - +.loveparents.org
   - +.lovepartners.life
@@ -11951,6 +12782,7 @@ payload:
   - +.lucahmelayu.club
   - +.lucasentertainment.com
   - +.luckydesigner.space
+  - +.luckyissue.com
   - +.ludepress.com
   - +.luke54.com
   - +.luke54.org
@@ -11988,10 +12820,9 @@ payload:
   - +.lxxlxx.com
   - +.ly
   - +.lyfhk.net
-  - +.lync.cn
-  - +.lync.com
   - +.lysol.com
   - +.lysol.net
+  - +.lyzsxx.com
   - +.lzjscript.com
   - +.lzmtnews.org
   - +.m-power.com
@@ -12005,16 +12836,50 @@ payload:
   - +.maa.plus
   - +.mabbank.com
   - +.maboxlinux.org
+  - +.mac-mini.com
+  - +.mac.com
+  - +.mac.com.au
+  - +.mac.wang
   - +.macaodaily.com
+  - +.macbook.co
+  - +.macbook.hk
+  - +.macbook.wang
+  - +.macbookair.com
+  - +.macbookair.com.au
+  - +.macbookair.hk
+  - +.macbookair.net
+  - +.macbookpro.co
+  - +.macbookpro.com
+  - +.macbookpro.com.au
+  - +.macbookpro.net
+  - +.macbookpros.com
+  - +.macbooksale.com
+  - +.macboxset.com
   - +.macgamestore.com
+  - +.mach-os.com
+  - +.mach-os.net
   - +.machigle-sp.com
   - +.machine-dna.com
   - +.machogaytube.com
+  - +.machos.net
   - +.machotube.tv
   - +.macid.co
+  - +.macintoshsoftware.com
+  - +.macmini.com
+  - +.macos.com.au
+  - +.macosforge.org
+  - +.macossierra.com
+  - +.macosx.info
+  - +.macosxlion.com
+  - +.macpazar.com
   - +.macports.org
+  - +.macreach.com
+  - +.macreach.net
   - +.macromedia.com
   - +.macrovpn.com
+  - +.macruby.com
+  - +.macruby.net
+  - +.macruby.org
   - +.macrumors.com
   - +.madamlive.tv
   - +.madchensex.com
@@ -12075,12 +12940,14 @@ payload:
   - +.mainichibooks.com
   - +.maintracker.org
   - +.maiplus.com
+  - +.mairbeats.com
   - +.maizhong.org
   - +.makaan.com
   - +.makeanything.com
   - +.makearmanotwar.com
   - +.makebettercode.com
   - +.makecode.org
+  - +.makeeu.com
   - +.makeitopen.com
   - +.makeitrealcontest.com
   - +.makemymood.com
@@ -12094,6 +12961,7 @@ payload:
   - +.malaypornhub.com
   - +.malaysiakini.com
   - +.mallandrinhas.net
+  - +.mallheadphone.com
   - +.malvastudios.com
   - +.mamacitaz.com
   - +.mamingzhe.com
@@ -12101,8 +12969,6 @@ payload:
   - +.managedmeetingrooms.com
   - +.managedpki.com
   - +.management-azure-devices-int.net
-  - +.management-azure-devices-provisioning.cn
-  - +.management-azure-devices.cn
   - +.management-azure-devices.net
   - +.manchukuo.net
   - +.mandatewire.com
@@ -12154,13 +13020,11 @@ payload:
   - +.maomiav.one
   - +.maomiav.top
   - +.map-software.com
-  - +.mapblast.com
   - +.mapbox.com
   - +.mapguide.com
   - +.maple.finance
   - +.maplew.com
   - +.mappingonline.com
-  - +.mappoint.com
   - +.marc.info
   - +.mariadb.org
   - +.marinecadcam.com
@@ -12315,10 +13179,11 @@ payload:
   - +.mayijiejie.com
   - +.mayimayi.com
   - +.maying.co
+  - +.mbeats-tech.com
+  - +.mbheadphone.com
   - +.mc
   - +.mcadforums.com
   - +.mcafee.com
-  - +.mcchcdn.com
   - +.mcd.com
   - +.mcdelivery.com.au
   - +.mcdelivery.com.my
@@ -12357,6 +13222,7 @@ payload:
   - +.mdpjoin.buzz
   - +.me-east-1.myhuaweicloud.com
   - +.me-gay.com
+  - +.me.com
   - +.me.me
   - +.meadjohnson.com
   - +.meadjohnson.com.hk
@@ -12446,7 +13312,6 @@ payload:
   - +.meripet.biz
   - +.meripet.com
   - +.merlinblog.xyz
-  - +.mesh.com
   - +.meshmixer.com
   - +.meshmixerforum.com
   - +.meshrep.com
@@ -12488,7 +13353,6 @@ payload:
   - +.mfmf.club
   - +.mfxmedia.com
   - +.mg
-  - +.mgmt-azure-api.cn
   - +.mgo-images.com
   - +.mgo.com
   - +.mgoon.com
@@ -12518,15 +13382,10 @@ payload:
   - +.microsoft-falcon.io
   - +.microsoft-give.com
   - +.microsoft-int.com
-  - +.microsoft-online.cn
-  - +.microsoft-online.com.cn
   - +.microsoft-ppe.com
   - +.microsoft-sap-events.com
   - +.microsoft-sbs-domains.com
-  - +.microsoft-smb.cn
-  - +.microsoft-tst.com
   - +.microsoft.com
-  - +.microsoft.com.nsatc.net
   - +.microsoft.io
   - +.microsoft.net
   - +.microsoft.pl
@@ -12542,7 +13401,6 @@ payload:
   - +.microsoftapp.net
   - +.microsoftazuread-sso.com
   - +.microsoftazuresponsorships.com
-  - +.microsoftazurestatus.cn
   - +.microsoftcloud.com
   - +.microsoftcloudsummit.com
   - +.microsoftcloudworkshop.com
@@ -12551,8 +13409,6 @@ payload:
   - +.microsofteca.com
   - +.microsoftedge.com
   - +.microsoftedgeinsider.com
-  - +.microsoftemail.com
-  - +.microsoftestore.com.hk
   - +.microsoftgamestack.com
   - +.microsofthouse.com
   - +.microsofthouse.net
@@ -12562,10 +13418,8 @@ payload:
   - +.microsoftlatamaitour.com
   - +.microsoftlatamholiday.com
   - +.microsoftlinc.com
-  - +.microsoftmetrics.cn
   - +.microsoftmxfilantropia.com
   - +.microsoftnews.cc
-  - +.microsoftnews.cn
   - +.microsoftnews.com
   - +.microsoftnews.net
   - +.microsoftnews.org
@@ -12575,24 +13429,11 @@ payload:
   - +.microsoftnewskids.com
   - +.microsoftnewskids.net
   - +.microsoftnewskids.org
-  - +.microsoftol.com
-  - +.microsoftol.com.cn
-  - +.microsoftonline-i.cn
-  - +.microsoftonline-m-i.cn
-  - +.microsoftonline-m.cn
-  - +.microsoftonline-p-i.cn
-  - +.microsoftonline-p-i.net.cn
-  - +.microsoftonline-p.cn
   - +.microsoftonline-p.com
-  - +.microsoftonline-p.net
-  - +.microsoftonline-p.net.cn
-  - +.microsoftonline.cn
   - +.microsoftonline.com
   - +.microsoftpartnercommunity.com
   - +.microsoftpartnersolutions.com
   - +.microsoftpersonalcontent.com
-  - +.microsoftreactor.cn
-  - +.microsoftreactor.com.cn
   - +.microsoftreactor.info
   - +.microsoftreactor.net
   - +.microsoftreactor.org
@@ -12604,16 +13445,14 @@ payload:
   - +.microsoftsqlserver.com
   - +.microsoftstart.com
   - +.microsoftstore.com
-  - +.microsoftstore.com.cn
   - +.microsoftstore.com.hk
   - +.microsoftstream.com
   - +.microsoftteams.com
   - +.microsofttradein.com
-  - +.microsofttranslator-int.cn
   - +.microsofttranslator.com
-  - +.microsoftusercontent.com
   - +.microsoftuwp.com
   - +.microvpn.com
+  - +.micstl.com
   - +.midatlanticbmwmotorcycles.com
   - +.middle-way.net
   - +.midentsolutions.com
@@ -12883,19 +13722,18 @@ payload:
   - +.mm9c63ae.xyz
   - +.mma
   - +.mmaaxx.com
-  - +.mmais.com.cn
   - +.mmdays.com
   - +.mmdnn.com
   - +.mmgy.cc
   - +.mmmanual.com
   - +.mmmca.com
+  - +.mmonsterheadphones.net
   - +.mmscdh.one
   - +.mmtongdao.xyz
   - +.mmtourismbank.com
   - +.mmtv.life
   - +.mmwxl27.top
   - +.mn
-  - +.mncmsidlab1.cn
   - +.mnewstv.com
   - +.mo
   - +.mo.co
@@ -12985,6 +13823,7 @@ payload:
   - +.momtube.club
   - +.monaitv.me
   - +.monash
+  - +.monbeats2013.com
   - +.mondex.org
   - +.moneydj.com
   - +.moneyhome.biz
@@ -13004,9 +13843,69 @@ payload:
   - +.monocloud.me
   - +.monotype.com
   - +.monotypeimaging.com
+  - +.monster-beats-by-dr-dre.com
+  - +.monster-beats-headphones.com
   - +.monster.com
+  - +.monsterbeats-cheap.com
+  - +.monsterbeats-headphone.com
+  - +.monsterbeats-onsale.com
+  - +.monsterbeats-solo.com
+  - +.monsterbeats-solo.net
+  - +.monsterbeats365buy.com
+  - +.monsterbeats8beatsbydre.com
+  - +.monsterbeatsale.com
+  - +.monsterbeatsalestore.com
+  - +.monsterbeatsau.com
+  - +.monsterbeatsbydrdre-nz.com
+  - +.monsterbeatsbydrdre-usa.com
+  - +.monsterbeatsbydrdrecanada.com
+  - +.monsterbeatsbydrdrestudio.com
+  - +.monsterbeatsbydre-nz.com
+  - +.monsterbeatsbydre-usa.com
+  - +.monsterbeatsbydre2015.com
+  - +.monsterbeatsbydreaustraliacheap.com
+  - +.monsterbeatsbydrebilligde.com
+  - +.monsterbeatsbydrefactory.com
+  - +.monsterbeatsbydrenew.com
+  - +.monsterbeatsbydres.com
+  - +.monsterbeatsbydreshop.com
+  - +.monsterbeatscasques.com
+  - +.monsterbeatscommunity.com
+  - +.monsterbeatsdrdrecheap.com
+  - +.monsterbeatsfactory.net
+  - +.monsterbeatsfinland.com
+  - +.monsterbeatsforsale.com
+  - +.monsterbeatsheadphone.com
+  - +.monsterbeatsheadphones.net
+  - +.monsterbeatshere.com
+  - +.monsterbeatsitaly.com
+  - +.monsterbeatsmall.com
+  - +.monsterbeatsnegozi.net
+  - +.monsterbeatsok.com
+  - +.monsterbeatsonlinestoreuk.com
+  - +.monsterbeatspascher.net
+  - +.monsterbeatsru.com
+  - +.monsterbeatssales.com
+  - +.monsterbeatssalg.com
+  - +.monsterbeatsshops.net
+  - +.monsterbeatsstore.com
+  - +.monsterbeatssydneyaustralia.com
+  - +.monsterbeatstang.com
+  - +.monsterbeatstienda.com
+  - +.monsterbeatstudio.com
+  - +.monsterbydrebeat.com
+  - +.monstercasquebeatspascher.net
+  - +.monstercheapbeatss.com
   - +.monstercockland.com
+  - +.monsterdrebeats-canada.net
+  - +.monsterdrebeats-usa.com
+  - +.monsterdrebeats-usa.net
+  - +.monsterheadphone.net
+  - +.monsterproduct.net
+  - +.monstersbeatbydres.com
+  - +.monstersdebea.com
   - +.monstersexporn.net
+  - +.monstershopcheapbeats.net
   - +.monthlyav.com
   - +.moodstocks.com
   - +.moodyz.com
@@ -13021,6 +13920,7 @@ payload:
   - +.moozporn.com
   - +.morazzia.com
   - +.morbell.com
+  - +.moreheadphones.com
   - +.moresci.sale
   - +.morewithautodesk.com
   - +.morganclaypool.com
@@ -13110,16 +14010,10 @@ payload:
   - +.ms
   - +.ms-studiosmedia.com
   - +.ms365surfaceoffer.com
+  - +.ms4dre.com
   - +.msa-it.org
-  - +.msads.net
-  - +.msappproxy.cn
-  - +.msappproxy.net
-  - +.msauth.cn
   - +.msauth.net
-  - +.msauthimages.cn
-  - +.msauthimages.net
   - +.mschallenge2018.com
-  - +.mschcdn.com
   - +.msd
   - +.msdn.com
   - +.msecnd.net
@@ -13127,14 +14021,9 @@ payload:
   - +.msflj.vip
   - +.msft.info
   - +.msft.net
-  - +.msftauth.cn
   - +.msftauth.net
-  - +.msftauthimages.cn
   - +.msftauthimages.net
-  - +.msftcenterone.cn
-  - +.msftcloudes.cn
   - +.msftconnecttest.com
-  - +.msftidentity.com
   - +.msftncsi.com
   - +.msftnet.org
   - +.msgamesresearch.com
@@ -13143,44 +14032,28 @@ payload:
   - +.mshome.net
   - +.msi.cn
   - +.msi.com
-  - +.msidentity.cn
   - +.msidentity.com
-  - +.msidlabpbmc.cn
-  - +.msignitechina.com
   - +.msinnovationchallenge.com
   - +.msk.ilnk.info
   - +.msk.kitazawa.me
-  - +.msminico.cn
-  - +.msminico.com.cn
-  - +.msn.cn
   - +.msn.com
-  - +.msn.com.cn
-  - +.msn.com.nsatc.net
   - +.msn.net
   - +.msnbc.com
   - +.msnewskids.com
   - +.msnewskids.net
   - +.msnewskids.org
   - +.msnkids.com
-  - +.msnmaps.com
   - +.msocdn.com
   - +.msocsp.com
   - +.msoopent.com
-  - +.msopentech.cn
   - +.mspairlift.com
-  - +.mspil.cn
-  - +.msra.cn
   - +.msropendata.com
   - +.mstage.io
   - +.mstdn.social
   - +.msturing.org
   - +.msudalosti.com
   - +.msunlimitedcloudsummit.com
-  - +.msvevent.com
   - +.mswe1.org
-  - +.msxiaobing.com
-  - +.msxiaoice.com
-  - +.msxiaona.cn
   - +.mt
   - +.mt-ssul1.com
   - +.mt0011.site
@@ -13234,6 +14107,7 @@ payload:
   - +.musicade.net
   - +.musicbay.net
   - +.musicbrainz.org
+  - +.musickit.net
   - +.musixmatch.com
   - +.muslimvideo.com
   - +.muthead.com
@@ -13283,6 +14157,7 @@ payload:
   - +.myamateurtv.com
   - +.myanmar-porn.com
   - +.myanniu.com
+  - +.myappleid.com
   - +.myatos.net
   - +.myaudiocast.com
   - +.myautocad.com
@@ -13293,6 +14168,9 @@ payload:
   - +.myavsuper.com
   - +.myavxx.xyz
   - +.mybabehotz.com
+  - +.mybeatsbydrestudio.com
+  - +.mybeatsbydreuk.com
+  - +.mybeatscheapbydre.com
   - +.mybestbuy.com
   - +.mybestbuyclaims.com
   - +.mybet.com
@@ -13330,6 +14208,7 @@ payload:
   - +.myfappening.org
   - +.myfavoritearcade.com
   - +.myfbfans.com
+  - +.myferrariheadphones.com
   - +.myfirstflame.com
   - +.myfistingporn.com
   - +.myfontastic.com
@@ -13373,17 +14252,19 @@ payload:
   - +.myhentaicomics.com
   - +.myhentaigallery.com
   - +.myhomemadesex.com
-  - +.myhomemsn.com
   - +.myhpsupport.com
   - +.myhtebook.com
   - +.myhtebooks.com
   - +.myhtlmebook.com
   - +.myhulu.com
+  - +.myicloud.net
   - +.myilibrary.com
   - +.myiphide.com
   - +.myiphider.com
+  - +.myipod.net
   - +.myjkwd.com
   - +.mykomica.org
+  - +.mylcloud.net
   - +.mylf.com
   - +.mylftv.com
   - +.mylittlenieces.com
@@ -13475,6 +14356,7 @@ payload:
   - +.myz.info
   - +.mz
   - +.mzed.com
+  - +.mzstatic.com
   - +.n0vadesktop.com
   - +.n15zev3w.shop
   - +.n26.com
@@ -13517,6 +14399,7 @@ payload:
   - +.nalandabodhi.org
   - +.nalandawest.org
   - +.name.com
+  - +.namemybeats.com
   - +.namethatporn.com
   - +.namethatpornad.com
   - +.namgyal.org
@@ -13600,6 +14483,7 @@ payload:
   - +.ndi.org
   - +.ne
   - +.nebay.net
+  - +.neborder.com
   - +.nec
   - +.ned.org
   - +.nee4you.com
@@ -13618,6 +14502,8 @@ payload:
   - +.needforspeedtimeattack.com
   - +.needforspeedundergroundeast.com
   - +.needgayporn.com
+  - +.negozimonsterbeats.com
+  - +.negoziomonsterbeats.com
   - +.neicad.com
   - +.neiexplicit.com
   - +.neifea.com
@@ -13716,14 +14602,18 @@ payload:
   - +.new-redtube.com
   - +.new2fea.com
   - +.new3dcomics.com
+  - +.newbeatsblackfriday.com
+  - +.newbemany.com
   - +.newbienudes.com
   - +.newbrazz.com
   - +.newcastlenewslocal.com.au
   - +.newcenturymc.com
   - +.newcenturynews.com
   - +.newchen.com
+  - +.newdrediscount.com
   - +.neweconomyforum.com
   - +.newenergyfinance.com
+  - +.newestbeatsbydre.com
   - +.newgrounds.com
   - +.newhampshirebmw.com
   - +.newhentai.org
@@ -13734,7 +14624,10 @@ payload:
   - +.newisiknowledge.com
   - +.newlandmagazine.com.au
   - +.newlineporn.com
+  - +.newlysprung.net
   - +.newmitbbs.com
+  - +.newmonst1erbeatsto1re.com
+  - +.newmonsterbeatsheadphones.com
   - +.newpipe.net
   - +.newpppp.com
   - +.news.com.au
@@ -13747,6 +14640,7 @@ payload:
   - +.newsblur.com
   - +.newscdn.com.au
   - +.newschinacomment.org
+  - +.newschristmasshopping.com
   - +.newscn.org
   - +.newsconcierge.com.au
   - +.newscorp.com
@@ -13775,6 +14669,7 @@ payload:
   - +.newsxtend.com.au
   - +.newthuhole.com
   - +.newtofea.com
+  - +.newton.com
   - +.newxxx24.cc
   - +.newyorker.com
   - +.newyorktimes.com
@@ -13789,6 +14684,7 @@ payload:
   - +.nexpart.com
   - +.nexpart.tv
   - +.next
+  - +.next.com
   - +.next.hk
   - +.nextapple.com
   - +.nextdigital.com.hk
@@ -13811,6 +14707,7 @@ payload:
   - +.nf.id.au
   - +.nfjtyd.com
   - +.nfl
+  - +.nflhotsalejerseys.com
   - +.nflxext.com
   - +.nflximg.com
   - +.nflximg.net
@@ -13849,6 +14746,7 @@ payload:
   - +.nianticlabs.com
   - +.niceanimegames.com
   - +.niceporn.tv
+  - +.nicesshop.net
   - +.nichepornsite.com
   - +.nichepornsites.com
   - +.nickscipio.com
@@ -14106,6 +15004,9 @@ payload:
   - +.notdot.net
   - +.notepad-plus-plus.org
   - +.notify.io
+  - +.notion-static.com
+  - +.notion.com
+  - +.notion.site
   - +.notionusercontent.com
   - +.nottinghampost.com
   - +.novafile.com
@@ -14303,8 +15204,6 @@ payload:
   - +.nz
   - +.nzchinese.com
   - +.o0-2.com
-  - +.o365cn.com
-  - +.o365files.cn
   - +.o365weve-dev.com
   - +.o365weve-ppe.com
   - +.o365weve.com
@@ -14314,7 +15213,6 @@ payload:
   - +.oanencore.com
   - +.oann.com
   - +.oasisfeng.com
-  - +.oaspapps.com
   - +.oath.cloud
   - +.oath.com
   - +.oauth.net
@@ -14358,23 +15256,24 @@ payload:
   - +.oekakiskey.com
   - +.oex.com
   - +.offbeatchina.com
+  - +.offerairjordanlebron.com
   - +.office
   - +.office.com
   - +.office.net
-  - +.office365-net.cn
-  - +.office365.cn
   - +.office365.com
   - +.office365love.com
   - +.office365tw.com
-  - +.officedev.cn
   - +.officeoftibet.com
-  - +.officeplus.cn
-  - +.officeppe.net
-  - +.officewebapps.cn
+  - +.officialbeatsbydreshop.com
+  - +.officialbeatsbydrestore.com
+  - +.officialdrdre.com
+  - +.officialheadphone.com
+  - +.offrezdesipods.com
   - +.offworldindustries.com
   - +.offworldindustries.net
   - +.ofiii.com
   - +.ofile.org
+  - +.ogameblog.com
   - +.ogaoga.org
   - +.ogate.org
   - +.ogp.me
@@ -14452,11 +15351,11 @@ payload:
   - +.onahodouga.com
   - +.onani-daisuki.com
   - +.onapp.com
+  - +.onbeatsbydresale.com
   - +.one.one
   - +.oneapi.com
   - +.oneapi.io
   - +.onebigfluke.com
-  - +.onecollector.cloudapp.aria
   - +.onedinesfree.com
   - +.onedrive.co
   - +.onedrive.com
@@ -14484,10 +15383,12 @@ payload:
   - +.onkakao.net
   - +.online-deals.net
   - +.online-instagram.com
+  - +.onlineapplestore.com
   - +.onlinecha.com
   - +.onlinefucktube.com
   - +.onlinegeeksquad.com
   - +.onlineinstagram.com
+  - +.onlinemonsterbeatsonsale.com
   - +.onlineporn-vids.com
   - +.onlineteenhub.com
   - +.onlinexxxgames.com
@@ -14507,20 +15408,21 @@ payload:
   - +.onlyincestporn.com
   - +.onlyindianporn.tv
   - +.onlyindianporn2.com
+  - +.onlyiphone5case.com
   - +.onlyleaks.me
   - +.onlynudes.org
   - +.onlysiterip.com
   - +.onlytweets.com
   - +.onmanorama.com
-  - +.onmicrosoft.com
   - +.onmoon.com
   - +.onmoon.net
-  - +.onmschina.cn
   - +.onmypc.biz
   - +.onmypc.info
   - +.onmypc.net
   - +.onmypc.org
   - +.onrender.com
+  - +.onsalekey.com
+  - +.onsaletrend.com
   - +.onstream.cc
   - +.onthehunt.com
   - +.ontrac.com
@@ -14598,7 +15500,6 @@ payload:
   - +.optica.org
   - +.opticore.com
   - +.opticsforthecloud.net
-  - +.optimizely.com
   - +.optimumssl.com
   - +.opus-gaming.com
   - +.oracle
@@ -14645,7 +15546,6 @@ payload:
   - +.osakamotion.net
   - +.osano.com
   - +.osapublishing.org
-  - +.osdinfra.net
   - +.osdn.net
   - +.osfoora.com
   - +.osiri-suki-club.com
@@ -14703,12 +15603,12 @@ payload:
   - +.outbound.io
   - +.outdoorpublicsex.com
   - +.outingsapp.com
+  - +.outletbeatsshop.com
   - +.outletnike.com
-  - +.outlook.cn
   - +.outlook.com
-  - +.outlookmobile.com
   - +.over-blog.com
   - +.over18arcade.com
+  - +.overapple.com
   - +.overdaily.org
   - +.overleaf.com
   - +.overplay.net
@@ -14717,7 +15617,6 @@ payload:
   - +.overthumbs.com
   - +.ovh
   - +.ovi.com
-  - +.ovi.com.cn
   - +.ovid.com
   - +.ovpn.com
   - +.owind.com
@@ -14857,6 +15756,7 @@ payload:
   - +.partycasino.com
   - +.partylikeits1986.org
   - +.partypoker.com
+  - +.pascherbeatsmonster.com
   - +.pashtovoa.com
   - +.pasionmujeres.com
   - +.paskoocheh.com
@@ -14874,6 +15774,7 @@ payload:
   - +.patreon.com
   - +.patreoncommunity.com
   - +.patreonusercontent.com
+  - +.paulsimon-music.com
   - +.pavpal.com
   - +.pawoo.net
   - +.paxful.com
@@ -15033,7 +15934,6 @@ payload:
   - +.paywb.com
   - +.payypal.com
   - +.pbabes.com
-  - +.pbiwebcontent.cn
   - +.pbjar1205.pro
   - +.pbs.org
   - +.pbwiki.com
@@ -15122,6 +16022,7 @@ payload:
   - +.perfectgirls.net
   - +.perfectgonzo.com
   - +.perfectjizz.com
+  - +.perfectkickz.net
   - +.perfectnaked.com
   - +.perfectsexnow.com
   - +.perfectshemales.com
@@ -15138,6 +16039,7 @@ payload:
   - +.persistent.info
   - +.person.com
   - +.personaltrainermath.com
+  - +.personeelsland.com
   - +.pervclips.com
   - +.perverttube.com
   - +.petardas.com
@@ -15166,7 +16068,6 @@ payload:
   - +.phimsexnhanh.club
   - +.phmsociety.org
   - +.phncdn.com
-  - +.phonefactor.net
   - +.phonegap.com
   - +.photo-image.monster
   - +.photodharma.net
@@ -15204,7 +16105,9 @@ payload:
   - +.picidae.net
   - +.picjs.xyz
   - +.pickinguppussy.com
+  - +.picknicekicks.net
   - +.pickpackapp.com
+  - +.pickshoesclothes.com
   - +.picnik.com
   - +.picpost.com
   - +.picsart.com
@@ -15223,6 +16126,7 @@ payload:
   - +.pikpak.io
   - +.pikpak.me
   - +.pikpakdrive.com
+  - +.pillbeatsblackfridaysale.com
   - +.pin-cong.com
   - +.pin6.com
   - +.pincong.rocks
@@ -15319,9 +16223,7 @@ payload:
   - +.playcover.io
   - +.playerjs.io
   - +.playfab.com
-  - +.playfabapi.cn
   - +.playfabapi.com
-  - +.playfabcn.com
   - +.playforceone.com
   - +.playhearthstone.com
   - +.playmation.com
@@ -15379,6 +16281,7 @@ payload:
   - +.pobieramy.top
   - +.pobl-content.com
   - +.pocket-image-cache.com
+  - +.pocketbiketrader.com
   - +.pocketcasts.com
   - +.pocoo.org
   - +.podbean.com
@@ -15436,6 +16339,7 @@ payload:
   - +.polymerproject.org
   - +.ponyanimalsex.com
   - +.poofetish.com
+  - +.pool.ntp.org
   - +.poolbinance.com
   - +.poolin.com
   - +.poop-pee.online
@@ -15809,12 +16713,11 @@ payload:
   - +.power.com
   - +.poweranimator.com
   - +.powerapple.com
-  - +.powerapps.cn
   - +.powerappscdn.net
-  - +.powerappsportals.cn
-  - +.powerautomate.cn
   - +.powerautomate.com
-  - +.powerbi.cn
+  - +.powerbeats2wireless.com
+  - +.powerbeatsbydrdre.com
+  - +.powerbeatsbydre.com
   - +.powerbi.com
   - +.powercx.com
   - +.poweredbyintel.com
@@ -15946,6 +16849,7 @@ payload:
   - +.projectshoreline.com
   - +.projectvasari.com
   - +.projectvoyeur.com
+  - +.promonsterbeatsbydre.com
   - +.prompthero.com
   - +.pron.guru
   - +.pronstore.com
@@ -15959,6 +16863,7 @@ payload:
   - +.prostate-exam-info.com
   - +.prostoporno.net
   - +.prostores.com
+  - +.prostudiobeatscybersale.com
   - +.prothots.com
   - +.proton.me
   - +.protondb.com
@@ -16029,6 +16934,7 @@ payload:
   - +.pugpig.com
   - +.pullfolio.co
   - +.pullfolio.com
+  - +.pullstring.net
   - +.punishbang.com
   - +.punishworld.com
   - +.punyu.com
@@ -16189,6 +17095,7 @@ payload:
   - +.quannengshen.org
   - +.quantil.com
   - +.quantumbooter.net
+  - +.quatrowireless.com
   - +.quay.io
   - +.quebec
   - +.questvisual.com
@@ -16200,6 +17107,11 @@ payload:
   - +.quickiepage.com
   - +.quickoffice.com
   - +.quicktake.video
+  - +.quicktime.cc
+  - +.quicktime.com
+  - +.quicktime.com.au
+  - +.quicktime.net
+  - +.quicktime.tv
   - +.quiksee.com
   - +.quiltmc.org
   - +.quip-cdn.com
@@ -16220,6 +17132,7 @@ payload:
   - +.qutebrowser.org
   - +.qvodzy.org
   - +.qwant.com
+  - +.qwapi.com
   - +.qwry.mirror.noc.one
   - +.qx.net
   - +.qxbbs.org
@@ -16343,6 +17256,7 @@ payload:
   - +.rbnainternational.com
   - +.rbplc.com
   - +.rbrandlibrary.com
+  - +.rbsgr.com
   - +.rbspeakup.com
   - +.rbx.com
   - +.rbxcdn.com
@@ -16370,7 +17284,6 @@ payload:
   - +.react.com
   - +.reactjs.com
   - +.reactjs.org
-  - +.reactorms.com.cn
   - +.reactos.org
   - +.read01.com
   - +.read100.com
@@ -16504,6 +17417,7 @@ payload:
   - +.redzonechannel.com
   - +.ree007.xyz
   - +.reflectivecode.com
+  - +.reform-apple.com
   - +.regex101.com
   - +.regiongold.com
   - +.registerhulu.com
@@ -16523,7 +17437,6 @@ payload:
   - +.renderingtoolkit.org
   - +.renderos.com
   - +.reneerossvideos.com
-  - +.renlifang.com
   - +.renminbao.com
   - +.renovacionoffice.com
   - +.renovacionxboxlive.com
@@ -16533,10 +17446,17 @@ payload:
   - +.renzhe.cloud
   - +.repe21.com
   - +.repotama.com
+  - +.repsneakermall.com
+  - +.repswing.com
   - +.rerouted.org
   - +.resao.com
+  - +.researchandcare.org
   - +.researchgate.net
   - +.researchintel.com
+  - +.researchkit.hk
+  - +.researchkit.net
+  - +.researchkit.org
+  - +.researchkit.tv
   - +.resilio.com
   - +.resistchina.org
   - +.resoubanana.buzz
@@ -16840,6 +17760,9 @@ payload:
   - +.sakuralive.com
   - +.sakya.org
   - +.sale-nikeshoes.com
+  - +.salebeatslasteststyle4you.com
+  - +.saleblackfridaydrebeats.com
+  - +.salecheaphandbags.com
   - +.salesforce-setup.com
   - +.salesforce.com
   - +.salesforce.org
@@ -16850,6 +17773,7 @@ payload:
   - +.salvation.org.hk
   - +.sambaporno.com
   - +.sambhota.org
+  - +.samebags.com
   - +.samsal.com
   - +.samsclub
   - +.samsung
@@ -16885,6 +17809,7 @@ payload:
   - +.sankie.net
   - +.sanofi
   - +.sanspo.com
+  - +.sanvaras.com
   - +.sanwapub.com
   - +.saobjpg.com
   - +.saoni91.xyz
@@ -16993,9 +17918,9 @@ payload:
   - +.scifisex.net
   - +.scitation.org
   - +.scival.com
-  - +.sclive.net
   - +.scmp.com
   - +.scmpchinese.com
+  - +.scnshop.cc
   - +.scnsrc.me
   - +.scolle.net
   - +.scopus.com
@@ -17119,8 +18044,10 @@ payload:
   - +.serverlesslibrary.net
   - +.serveuser.com
   - +.serveusers.com
+  - +.services-apple.net
   - +.services-exchange.com
   - +.serviceshp.com
+  - +.servicetalk.io
   - +.serviporno.com
   - +.sesawe.net
   - +.sesawe.org
@@ -17366,7 +18293,6 @@ payload:
   - +.shapeservices.com
   - +.sharebee.com
   - +.sharecool.org
-  - +.sharepoint.cn
   - +.sharepoint.com
   - +.sharepointonline.com
   - +.sharethis.com
@@ -17380,6 +18306,7 @@ payload:
   - +.shat-tibet.com
   - +.shattered.io
   - +.shaw
+  - +.shazam.com
   - +.shdd.ink
   - +.sheflix.com
   - +.shegg.com
@@ -17440,12 +18367,19 @@ payload:
   - +.shkspr.mobi
   - +.shockingmovies.com
   - +.shodanhq.com
+  - +.shoers.com
+  - +.shoestop2.com
   - +.shooshtime.com
+  - +.shop-headphones.net
   - +.shopadidas.com
   - +.shopalienware.com
+  - +.shopbeatsdre.com
   - +.shopbmwmotorcycles.com
   - +.shopbmwusa.com
+  - +.shopbydre.com
+  - +.shopcustomizedbeats.com
   - +.shopdisney.com
+  - +.shopdrebeats.com
   - +.shopdurex.com
   - +.shopee.cn
   - +.shopee.com
@@ -17463,8 +18397,11 @@ payload:
   - +.shopifysvc.com
   - +.shoping.com
   - +.shopminiusa.com
+  - +.shopmonsterbeats.com
   - +.shoppercentre.com
+  - +.shopping-days.net
   - +.shopping.com
+  - +.shoppinguheadphones.com
   - +.shops-disney.com
   - +.shopspeedtv.com
   - +.shoptraivip.com
@@ -17550,6 +18487,7 @@ payload:
   - +.simplify.com
   - +.simplifycommerce.com
   - +.simply-hentai.com
+  - +.simplyipod.com
   - +.simsquad.com
   - +.simulationsquad.com
   - +.sina.com.hk
@@ -17578,6 +18516,7 @@ payload:
   - +.siport.com
   - +.sipriyearbook.org
   - +.sirenxxxstudios.com
+  - +.siri.com
   - +.sis001.com
   - +.siscache.com
   - +.sisisl.com
@@ -17633,7 +18572,6 @@ payload:
   - +.skype.net
   - +.skypeassets.com
   - +.skypeassets.net
-  - +.skypeforbusiness.com
   - +.skyperfectjsat.space
   - +.skyporn.online
   - +.skysports.com
@@ -17751,6 +18689,9 @@ payload:
   - +.snapwebcams.com
   - +.sncf
   - +.sndcdn.com
+  - +.sneaker666.com
+  - +.sneakerpage.net
+  - +.sneakerskick.com
   - +.sneakme.net
   - +.snippetsapp.com
   - +.snjulebu.com
@@ -17820,6 +18761,7 @@ payload:
   - +.solarcity.com
   - +.solidaritetibet.org
   - +.solidfiles.com
+  - +.solostudioksale.com
   - +.solscan.io
   - +.solutionstation.com
   - +.solv.finance
@@ -17881,6 +18823,7 @@ payload:
   - +.sos.org
   - +.sos44.com
   - +.sosad.fun
+  - +.soso7778.com
   - +.sosreader.com
   - +.sostibet.org
   - +.sou-tong.org
@@ -17937,6 +18880,7 @@ payload:
   - +.spb.com
   - +.spcc-sp.com
   - +.speakerdeck.com
+  - +.specialtyheadphones.com
   - +.spectraltube.com
   - +.speedcat.me
   - +.speeddreamride.com
@@ -17951,6 +18895,7 @@ payload:
   - +.speedtest.hk.chinamobile.com
   - +.speedtestbb.hk.chinamobile.com
   - +.speedxtra.com
+  - +.spektral.cc
   - +.spencertipping.com
   - +.spendee.com
   - +.spermyporn.com
@@ -17964,6 +18909,7 @@ payload:
   - +.spiderpool.com
   - +.spiedigitallibrary.org
   - +.spike.com
+  - +.spiritclubs.com
   - +.spiritjb.org
   - +.spiritofecstasy.com
   - +.spizoo.com
@@ -18227,6 +19173,7 @@ payload:
   - +.storry.tv
   - +.storyful.com
   - +.stoweboyd.com
+  - +.straightouttasomewhere.com
   - +.straightpornstuds.com
   - +.straitstimes.com
   - +.straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
@@ -18270,6 +19217,7 @@ payload:
   - +.strongvpn.com
   - +.strongwindpress.com
   - +.studentsforafreetibet.org
+  - +.studiobeatsbydrdre.com
   - +.studiodell.com
   - +.studiofow.com
   - +.studiolico.com
@@ -18313,6 +19261,7 @@ payload:
   - +.suissl.com
   - +.sukebelinks.com
   - +.sulian.me
+  - +.sulwerphoto.com
   - +.summify.com
   - +.sumomo-ch.com
   - +.sumrando.com
@@ -18321,6 +19270,7 @@ payload:
   - +.sundanceignite2016.com
   - +.sundayguardianlive.com
   - +.sundayready.com
+  - +.sunglassessale2014.com
   - +.sunjidong.net
   - +.suno.com
   - +.sunporno.com
@@ -18337,6 +19287,7 @@ payload:
   - +.supercellid.com
   - +.supercellstore.com
   - +.supercoach.com.au
+  - +.superearsenjoy.com
   - +.superfreevpn.com
   - +.supergratisporno.com
   - +.superhqporn.com
@@ -18355,6 +19306,7 @@ payload:
   - +.superzooi.com
   - +.supjav.com
   - +.suppig.net
+  - +.supplybestjerseys.com
   - +.supportfacebook.com
   - +.supremacy.com
   - +.supremacy.net
@@ -18380,6 +19332,7 @@ payload:
   - +.sustainablebuildingstudio.com
   - +.sustainabledesigncouncil.com
   - +.sustainabledesigncouncil.net
+  - +.sustainthesound.com
   - +.suxib.com
   - +.suxiebu.com
   - +.suyangg.com
@@ -18387,6 +19340,7 @@ payload:
   - +.sv
   - +.svaboda.org
   - +.svensksexfilm.com
+  - +.sverigebeatsbydrdre.com
   - +.svipshipin.store
   - +.svoboda.org
   - +.svp-team.com
@@ -18402,13 +19356,13 @@ payload:
   - +.swapspace.co
   - +.swatch
   - +.sway-cdn.com
-  - +.sway-extensions.com
   - +.sway.com
   - +.sweetadult-tube.com
   - +.sweetmlif.net
   - +.sweetsext.com
   - +.sweetsinner.com
   - +.swegold.com
+  - +.swift.org
   - +.swiftbank.info
   - +.swiftcapital.com
   - +.swiftfinancial.com
@@ -18461,7 +19415,6 @@ payload:
   - +.synapse.org
   - +.synaptic.net
   - +.syncback.com
-  - +.syncshop.cn
   - +.synergyse.com
   - +.syniumsoftware.com
   - +.synology.com
@@ -18478,8 +19431,10 @@ payload:
   - +.syzbj36.xyz
   - +.sz
   - +.szbbs.net
+  - +.szcheapmonsterheadphones.com
   - +.szetowah.org.hk
   - +.szexvideo.top
+  - +.szwinnertechnology.com
   - +.t-g.com
   - +.t-msedge.net
   - +.t-splines.com
@@ -18531,6 +19486,7 @@ payload:
   - +.taiwanus.net
   - +.taiwanyes.com
   - +.take2games.com
+  - +.takegoto.com
   - +.taknai.com
   - +.takporn.com
   - +.talentlens.com
@@ -18728,6 +19684,16 @@ payload:
   - +.teslamotors.com
   - +.teslamotors.com.cn
   - +.teslazta.net
+  - +.test-ipv6.belwue.net
+  - +.test-ipv6.com
+  - +.test-ipv6.epic.network
+  - +.test-ipv6.fratec.net
+  - +.test-ipv6.freerangecloud.com
+  - +.test-ipv6.iu13.net
+  - +.test-ipv6.ke.liquidtelecom.net
+  - +.test-ipv6.noroutetohost.net
+  - +.test-ipv6.roedu.net
+  - +.test-ipv6.sin.vr.org
   - +.testonfox.com
   - +.teva
   - +.tew.org
@@ -18735,6 +19701,7 @@ payload:
   - +.textnow.com
   - +.textnow.me
   - +.texttobuy.org
+  - +.texture.com
   - +.tf
   - +.tferwq.com
   - +.tfiflve.com
@@ -18766,6 +19733,7 @@ payload:
   - +.the-area.com
   - +.the-japan-news.com
   - +.the-m-festival.com
+  - +.the-monster-beats.com
   - +.the123d.com
   - +.the8pen.com
   - +.theaffairs.com
@@ -18779,6 +19747,9 @@ payload:
   - +.thebankerdatabase.com
   - +.thebayuk.com
   - +.thebcomplex.com
+  - +.thebeatsbydre.com
+  - +.thebeatsbydre.net
+  - +.thebeatsheadphonesale.com
   - +.thebestfetishsites.com
   - +.theblaze.com
   - +.theblemish.com
@@ -18913,6 +19884,7 @@ payload:
   - +.thetrotskymovie.com
   - +.thetvdb.com
   - +.thetype.com
+  - +.theuab.net
   - +.theultralinx.com
   - +.theverge.com
   - +.thevirtualsexreview.com
@@ -19180,6 +20152,9 @@ payload:
   - +.topanime.biz
   - +.topartporn.com
   - +.topbabesblog.org
+  - +.topbeatsbydrdreoutlet.com
+  - +.topbeatsdealer.com
+  - +.topbeatsforsale.com
   - +.topbtc.com
   - +.topcartoonsites.com
   - +.topcelebnudes.com
@@ -19240,6 +20215,8 @@ payload:
   - +.totalvpn.com
   - +.totoleak.com
   - +.tou.tv
+  - +.touchid.tv
+  - +.touchid.wang
   - +.touchsmartpc.com
   - +.touchsmartpc.net
   - +.touchsmartpc.org
@@ -19266,9 +20243,10 @@ payload:
   - +.tr.com
   - +.tracfone.com
   - +.tracker.network
+  - +.tracking-location.com
+  - +.tradevip1.com
   - +.tradingview.com
   - +.traffichaus.com
-  - +.trafficmanager.cn
   - +.trafficmanager.net
   - +.trailblazer.me
   - +.trailhead.com
@@ -19330,6 +20308,7 @@ payload:
   - +.truebeachporn.com
   - +.truebim.com
   - +.truebuddha-md.org
+  - +.truedepth3d.com
   - +.truedwg.com
   - +.truefi.io
   - +.truenas.com
@@ -19338,7 +20317,6 @@ payload:
   - +.trunest.com
   - +.trust-provider.com
   - +.trustasiassl.com
-  - +.trustcenter.cn
   - +.trustcor.com
   - +.trusted-dwg.com
   - +.trustedanalytics.com
@@ -19371,6 +20349,7 @@ payload:
   - +.tryfuckmenow.com
   - +.tryfunctions.com
   - +.tryquinn.com
+  - +.tryrating.com
   - +.tryst.link
   - +.ts.net
   - +.tsctv.net
@@ -19391,6 +20370,7 @@ payload:
   - +.tt
   - +.tt-rss.org
   - +.tt1069.com
+  - +.tteshop.com
   - +.ttlivecdn.com
   - +.ttoverseaus.net
   - +.tttan.com
@@ -19503,6 +20483,7 @@ payload:
   - +.tuzaijidi.com
   - +.tv.com
   - +.tvants.com
+  - +.tvappstore.net
   - +.tvb.com
   - +.tvb.com.au
   - +.tvbanywhere.com
@@ -19706,6 +20687,7 @@ payload:
   - +.ublock.org
   - +.ubncloud.com
   - +.ubnt.com
+  - +.ubnw.net
   - +.ubs
   - +.ubucentrum.net
   - +.ubuntu-br.org
@@ -19777,6 +20759,7 @@ payload:
   - +.ujizzcn.com
   - +.uk
   - +.uk-exhibitionist.com
+  - +.ukipad.com
   - +.ukwhoswho.com
   - +.ulifestyle.com.hk
   - +.ulike.net
@@ -19820,7 +20803,6 @@ payload:
   - +.unity.cn
   - +.unity.com
   - +.unity3d.com
-  - +.unity3dcloud.cn
   - +.unity3dusercontent.com
   - +.unitychina.cn
   - +.unityedu.cn
@@ -19895,6 +20877,7 @@ payload:
   - +.urukawa.com
   - +.us
   - +.us.weibo.com
+  - +.usa-beatsbydreheadphonesonsale.net
   - +.usacn.com
   - +.usaco.org
   - +.usatoday.com
@@ -19909,7 +20892,6 @@ payload:
   - +.userpxt.io
   - +.userstyles.org
   - +.usertrust.com
-  - +.uservoice.com
   - +.usocctn.com
   - +.ustibetcommittee.org
   - +.ustream.tv
@@ -19969,6 +20951,7 @@ payload:
   - +.uymaarip.com
   - +.uz
   - +.v-av.com
+  - +.v-has.com
   - +.v.roucdn
   - +.v2.help
   - +.v2.hysteria.network
@@ -20229,10 +21212,13 @@ payload:
   - +.vintagehomemadesex.com
   - +.vintagemedicalpictures.com
   - +.vintagexxxfilms.com
+  - +.vip-beats.com
   - +.vip-enterprise.com
-  - +.vip5.afdorigin-prod-am02.afdogw.com
+  - +.vipbeatsbydre.com
+  - +.vipheadphones.com
   - +.vipissy.com
   - +.vipmatureporn.com
+  - +.vipshoes2.com
   - +.vipstudiocali.com
   - +.viralcum.com
   - +.viralporn.com
@@ -20545,7 +21531,6 @@ payload:
   - +.vsco.co
   - +.vscode-cdn.net
   - +.vscode-unpkg.net
-  - +.vscode-webview.net
   - +.vsezoo.com
   - +.vsmarketplacebadge.apphb.com
   - +.vsphere.com
@@ -20641,6 +21626,7 @@ payload:
   - +.warp.plus
   - +.warroom.org
   - +.warthunder.com
+  - +.wasdj.com
   - +.waselpro.com
   - +.washa.tv
   - +.washeng.net
@@ -20719,11 +21705,15 @@ payload:
   - +.webgirlsonline.net
   - +.webhosting.com
   - +.webjb.org
+  - +.webkit.org
+  - +.webkitgtk.org
   - +.weblagu.com
   - +.weblate.org
   - +.webmoneyinfo.com
   - +.webmproject.org
   - +.webnovel.com
+  - +.webobjects.com
+  - +.webobjects.net
   - +.webofknowledge.com
   - +.webofscience.com
   - +.webpass.net
@@ -20842,6 +21832,10 @@ payload:
   - +.wholefoodsmarket.com
   - +.wholekidsfoundation.org
   - +.wholeplanetfoundation.org
+  - +.wholesale-exporter1.com
+  - +.wholesalediscountpurses.com
+  - +.wholesalefine.com
+  - +.wholesaleonlinemart.com
   - +.wholevideos.com
   - +.whonix.org
   - +.whoreasianporn.com
@@ -20933,16 +21927,12 @@ payload:
   - +.wimpmusic.com
   - +.windows
   - +.windows-int.net
-  - +.windows-ppe.net
   - +.windows.com
   - +.windows.net
   - +.windows.nl
   - +.windows8.hk
-  - +.windowsazure.cn
   - +.windowsazure.com
-  - +.windowsazurestatus.cn
   - +.windowscommunity.net
-  - +.windowslive.cn
   - +.windowsmarketplace.com
   - +.windowsphone-int.com
   - +.windowsphone.com
@@ -20959,7 +21949,6 @@ payload:
   - +.wingy.site
   - +.winhec.com
   - +.winhec.net
-  - +.winmp.cn
   - +.winning11.com
   - +.wintermute.com
   - +.winudf.com
@@ -21003,7 +21992,6 @@ payload:
   - +.wjbk.org
   - +.wkap.nl
   - +.wldfnjh.com
-  - +.wlxrs.com
   - +.wm18s.buzz
   - +.wmcloud.org
   - +.wme
@@ -21047,7 +22035,6 @@ payload:
   - +.workerempowerment.org
   - +.workersthebig.net
   - +.workflowy.com
-  - +.working-bing-int.com
   - +.workplace.com
   - +.workplaceusecases.com
   - +.worksmobile.com
@@ -21057,6 +22044,7 @@ payload:
   - +.world3d.biz
   - +.worldbank.org
   - +.worldcat.org
+  - +.worldcoinpay.com
   - +.worldemojiawards.com
   - +.worldemojiday.com
   - +.worldescortindex.com
@@ -21087,6 +22075,7 @@ payload:
   - +.woyaolian.org
   - +.wp-themes.com
   - +.wp.com
+  - +.wpewebkit.org
   - +.wpoforum.com
   - +.wpvip.com
   - +.wqyd.org
@@ -21121,14 +22110,15 @@ payload:
   - +.wumashe.com
   - +.wundercounter.com
   - +.wunderground.com
-  - +.wunderlist.com
   - +.wunvb.com
   - +.wuso.me
   - +.wuw.red
+  - +.wuxiapple.com
   - +.wuyanblog.com
   - +.wuyefuli.org
   - +.wvm0agb4.me
   - +.ww9094.com
+  - +.wwapple.net
   - +.wwe.com
   - +.wwe9.com
   - +.wwitv.com
@@ -21137,10 +22127,14 @@ payload:
   - +.www-bestbuystores.com
   - +.www-facebook.com
   - +.www-paypal.info
+  - +.www-sms-apple.com
   - +.www.destinationurl.com
   - +.www.pxcc.com
   - +.www1.biz
   - +.www8-hp.com
+  - +.wwwapple.com
+  - +.wwwapple.net
+  - +.wwwapplemusic.com
   - +.wwwdecide.com
   - +.wwwebay.com
   - +.wwwebay.net
@@ -21148,7 +22142,12 @@ payload:
   - +.wwwfacebook.com
   - +.wwwhost.biz
   - +.wwwhuluplus.com
+  - +.wwwicloud.com
   - +.wwwinstagram.com
+  - +.wwwipodlounge.com
+  - +.wwwitunes.com
+  - +.wwwlapple.com
+  - +.wwwmacbookair.com
   - +.wwwmfacebook.com
   - +.wwwpaypass.com
   - +.wwwpornhub.pro
@@ -21216,7 +22215,6 @@ payload:
   - +.xboxab.com
   - +.xboxgamepass.com
   - +.xboxgamestudios.com
-  - +.xboxlive.cn
   - +.xboxlive.com
   - +.xboxone.co
   - +.xboxone.com
@@ -21387,6 +22385,7 @@ payload:
   - +.xn--gmq92kd2rm1kx34a.com
   - +.xn--gogl-0nd52e.com
   - +.xn--gogl-1nd42e.com
+  - +.xn--gtvz22d.wang
   - +.xn--hb4aw0g.com
   - +.xn--hckl3e1e8a8ajin0czf.net
   - +.xn--hhr917d3fecva.xyz
@@ -21728,7 +22727,6 @@ payload:
   - +.yamaxun.cn
   - +.yamaxun.com
   - +.yammer.com
-  - +.yammerusercontent.com
   - +.yamoon.club
   - +.yandex
   - +.yandex-bank.net
@@ -21900,6 +22898,7 @@ payload:
   - +.yourlust.com
   - +.yourmomlovesanal.com
   - +.yourmomsgotbigtits.com
+  - +.yourmonsterbeats.com
   - +.yourpelvicexam.com
   - +.yourpelvicultrasound.com
   - +.yourphysicalexam.com
