@@ -89,7 +89,7 @@ presets:
       # 谷歌 FCM
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list#proxy
       # Apple China
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list#proxy
+     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list#proxy
       # 游戏
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list#proxy
       # Notion
