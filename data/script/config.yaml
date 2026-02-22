@@ -35,8 +35,6 @@ presets:
      # - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts#hosts
       # DNS
      # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-     # - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
-     # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
       # PCDN
      # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
@@ -56,12 +54,44 @@ presets:
       - cn
       - cn.com
 
-  p_microsoft_cn:
+  p_direct_fix:
     blocklist:
+      # 微软中国
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list#proxy
-     # - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml#proxy
-     # - https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf#proxy
+      # 时间校准
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list#proxy
+     # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list#proxy
+     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list#proxy
+      # fakeip
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list#proxy
+      # 谷歌 FCM
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list#proxy
+      # Apple China
+     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list#proxy
+      # 游戏
+      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list#proxy
+      # Notion 代理环境同步不稳定
+      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml#proxy
     custom_blocklist:
+      # 局域网
+      - lan
+      - local
+      - localdomain
+      - localhost
+      # Firefox
+      - firefoxcn.net
+      - firefox.com.cn
+      # 常见
+      - ipv4only.arpa
+      - example.org
+      - baidu.com
+      - ntp.org
+      # GitHub 加速
+      - jsdelivr.com
+      - jsdelivr.net
+      - ghproxy.net
+      # 时间校准
+      - time.windows.com
       # 邮箱
       - outlook.com
       # 登录
@@ -77,89 +107,11 @@ presets:
       - translatoruser.intl.microsoft.com
       # Edge
       - edge.microsoft.com
+    custom_whitelist:
+      - bing.com
+      - bing.net
 
-  p_direct:
-    blocklist:
-      # 时间校准
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list#proxy
-     # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list#proxy
-     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list#proxy
-      # fakeip
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list#proxy
-      # 谷歌 FCM
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list#proxy
-      # Apple China
-     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list#proxy
-      # 游戏
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list#proxy
-      # Notion
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml#proxy
-    custom_blocklist:
-      # 局域网
-      - lan
-      - local
-      - localdomain
-      - localhost
-      # Firefox
-      - firefox.com
-      - firefoxcn.net
-      - firefox.com.cn
-      # 常见浏览
-      - ipv4only.arpa
-      - example.org
-      - allawntech.com
-      - baidu.com
-      - ntp.org
-      - heytapmobi.com
-      - heytapdownload.com
-      # GitHub 加速
-      - jsdelivr.com
-      - jsdelivr.net
-      - ghproxy.net
-      # 时间校准
-      - time.windows.com
-
-
-groups:
-
-  ads:
-    title: Ads Blocklist China
-    description: 针对中文移动端广告。
-    use_presets_blocklist:
-      - p_ads_liuzq2002
-      - p_ads_basic
-      - p_ads_dangerous
-    use_presets_whitelist:
-      - p_ads_white
-    whitelist:
-      # 国家后缀
-      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt#domain
-    formats:
-      - adblock
-      - clash
-      - singbox
-      - hosts
-      - domains
-
-  ads_big:
-    title: Ads Blocklist Large
-    description: 适用于代理程序。
-    use_presets_blocklist:
-      - p_ads_liuzq2002
-      - p_ads_basic
-      - p_ads_dangerous
-      # 国外规则
-      - p_ads_aboard
-    use_presets_whitelist:
-      - p_ads_white
-    formats:
-      - adblock
-      - clash
-      - singbox
-
-  proxy:
-    title: Proxy
-    description: 需要被代理的域名。
+  p_proxy:
     blocklist:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list#proxy
       - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list#proxy
@@ -197,31 +149,69 @@ groups:
       - qwry.mirror.noc.one
       - qqwry-mirror.cdn.skk.moe
       - whois.pconline.com.cn
-      # Firefox 扩展商店
+      # Firefox 扩展商店 国内IP限制扩展安装
       - addons.mozilla.org
       # 规则下载
       - adtidy.org
-      # Poweramp
+      # Poweramp 国内IP禁止访问
       - powerampapp.com
+
+  p_proxy_tld:
+    blocklist:
+      # 国家后缀
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt#domain
+
+
+groups:
+
+  ads:
+    title: Ads Blocklist China
+    description: 针对中文移动端广告。
+    use_presets_blocklist:
+      - p_ads_liuzq2002
+      - p_ads_basic
+      - p_ads_dangerous
+    use_presets_whitelist:
+      - p_ads_white
+      - p_proxy_tld
     formats:
+      - adblock
+      - clash
+      - singbox
+      - hosts
+      - domains
+
+  ads_big:
+    title: Ads Blocklist Large
+    description: 适用于代理程序。
+    use_presets_blocklist:
+      - p_ads_liuzq2002
+      - p_ads_basic
+      - p_ads_dangerous
+      # 国外规则
+      - p_ads_aboard
+    use_presets_whitelist:
+      - p_ads_white
+    formats:
+      - adblock
       - clash
       - singbox
 
-  microsoft_cn:
-    title: Microsoft China
-    description: 微软直连域名。
+  proxy:
+    title: Proxy
+    description: 需要被代理的域名。
     use_presets_blocklist:
-      - p_microsoft_cn
+      - p_proxy
+      - p_proxy_tld
     formats:
       - clash
       - singbox
 
   direct_fix:
     title: Direct Fix
-    description: 直连域名片段。
+    description: 不应被代理的域名。
     use_presets_blocklist:
-      - p_microsoft_cn
-      - p_direct
+      - p_direct_fix
     formats:
       - clash
       - singbox
