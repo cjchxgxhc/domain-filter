@@ -1,8 +1,8 @@
 # Title: Direct Fix
-# Description: 直连域名片段。
+# Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 623
-# Updated: 2026-02-22 15:54:24 CST
+# Total: 612
+# Updated: 2026-02-22 16:19:50 CST
 #
 payload:
   - +.126.net
@@ -59,7 +59,6 @@ payload:
   - +.aggresmart.com
   - +.aki-game.com
   - +.akspeedy.com
-  - +.allawntech.com
   - +.alt1-mtalk.google.com
   - +.alt2-mtalk.google.com
   - +.alt3-mtalk.google.com
@@ -153,7 +152,6 @@ payload:
   - +.biligame.net
   - +.bing.com.cn
   - +.biubiu001.com
-  - +.bj1.api.bing.com
   - +.blueaggrestore.com
   - +.bluecloudprod.com
   - +.blzdist-d3.necdn.leihuo.netease.com
@@ -179,9 +177,6 @@ payload:
   - +.cm.steampowered.com
   - +.cmbchina.com
   - +.cmbimg.com
-  - +.cn.bing.com
-  - +.cn.bing.net
-  - +.cn.mm.bing.net
   - +.cn.windowssearch.com
   - +.codm.com
   - +.cowlevel.net
@@ -203,7 +198,6 @@ payload:
   - +.dynv6.net
   - +.edge.microsoft.com
   - +.edu4399.com
-  - +.emoi-cncdn.bing.com
   - +.engkoo.com
   - +.epicgames-download1-1251447533.file.myqcloud.com
   - +.et-api.com
@@ -217,7 +211,6 @@ payload:
   - +.fhyx.com
   - +.finalfantasyxiv.com
   - +.firebaseinstallations.googleapis.com
-  - +.firefox.com
   - +.firefox.com.cn
   - +.firefoxcn.net
   - +.fnjiasu.com
@@ -263,8 +256,6 @@ payload:
   - +.hero.com
   - +.heroesports.com
   - +.herogame.com
-  - +.heytapdownload.com
-  - +.heytapmobi.com
   - +.hkgcloudcs.com
   - +.home.arpa
   - +.htjsq.com
@@ -455,7 +446,6 @@ payload:
   - +.qq163.com
   - +.qq163.net
   - +.qqgameapp.com
-  - +.r.bing.com
   - +.reactorms.com.cn
   - +.realcybertron.com
   - +.res-1.cdn.office.net
@@ -519,7 +509,6 @@ payload:
   - +.texasholdemcup.net
   - +.tgpro.top
   - +.tgprocs.net
-  - +.th.bing.com
   - +.themisweeps.com
   - +.tiancity.com
   - +.tiancitycdn.com

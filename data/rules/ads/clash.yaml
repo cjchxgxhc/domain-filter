@@ -1,8 +1,8 @@
 # Title: Ads Blocklist China
 # Description: 针对中文移动端广告。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 37,510
-# Updated: 2026-02-22 15:54:23 CST
+# Total: 37,479
+# Updated: 2026-02-22 16:19:49 CST
 #
 payload:
   - +.0001-metrics1-data-hicloud-com.geac.dbankedge.cn
@@ -455,7 +455,6 @@ payload:
   - +.124124fgh56u34.e2y4h7.com
   - +.12414e5c4f5c2b54.com
   - +.125.1254770.cc
-  - +.12551-1311572332.cos.ap-shanghai.myqcloud.com
   - +.125jia.cn
   - +.126.cn
   - +.126.com
@@ -4045,7 +4044,6 @@ payload:
   - +.ad.dedicatedmedia.com
   - +.ad.deepthought.industries
   - +.ad.depositfiles.com
-  - +.ad.dhgate.com
   - +.ad.digitallook.com
   - +.ad.directmirror.com
   - +.ad.docer.wps.cn
@@ -6949,6 +6947,7 @@ payload:
   - +.adsmetadata.mobileadexchange.net
   - +.adsmg.fanfox.net
   - +.adsmind.apdcdn.tc.qq.com
+  - +.adsmind.gdtimg.com
   - +.adsmind.gdtimg.com.svideolego-dk.sched.dcloudstc.com
   - +.adsmind.gdtimg.com.tcdn.qq.com
   - +.adsmind.tc.qq.com
@@ -10874,6 +10873,7 @@ payload:
   - +.bjdenon.com
   - +.bjedpt.com
   - +.bjenc.cn
+  - +.bjfesdk.douyucdn.cn
   - +.bjfsk.xyz
   - +.bjhjw.com.cn
   - +.bjhuaya.cn
@@ -11962,6 +11962,7 @@ payload:
   - +.cdn.xiaoduoai.com
   - +.cdn.xinstall.com
   - +.cdn.yyb.gtimg.com
+  - +.cdn.zmaticoo.com
   - +.cdn0.mobmore.com
   - +.cdn0.sxhjty.cn
   - +.cdn1.ad-center.com
@@ -12029,6 +12030,7 @@ payload:
   - +.cebuditw.top
   - +.ceckafoads.net
   - +.ced.sascdn.com
+  - +.cee1.iteye.com
   - +.ceh.cehbh.com
   - +.cehu9.com
   - +.ceimon.shop
@@ -14208,7 +14210,6 @@ payload:
   - +.dianru.com
   - +.dianxiami.asia
   - +.dianxin.com
-  - +.dianying-1304791696.cos.ap-shanghai.myqcloud.com
   - +.dianyingmi1.cn
   - +.diao.jingxiaoliandong.com
   - +.diaojiaoji168.com
@@ -14226,7 +14227,6 @@ payload:
   - +.diffpkg.browser.qq.com
   - +.difnxm.cn
   - +.dig-google.com.cn
-  - +.dig.lianjia.com
   - +.dig.qbao.com
   - +.dig.zjurl.cn
   - +.digadser.com
@@ -14243,7 +14243,6 @@ payload:
   - +.dimcxt191r.cn
   - +.dimg1.sz.net.cn
   - +.ding.cxzudwk.com
-  - +.dingbu.bj.bcebos.com
   - +.dingdangnao.com
   - +.dingjiwangluo.com
   - +.dingon.com.cn
@@ -16670,7 +16669,6 @@ payload:
   - +.feedads.feedblitz.com
   - +.feedback-c.zijieapi.com
   - +.feedback.cn.ronghub.com
-  - +.feedback.miui.com
   - +.feedback.uc.cn
   - +.feedbackstorage.blob.core.chinacloudapi.cn
   - +.feedbackws.fe.apple-dns.cn
@@ -17479,7 +17477,6 @@ payload:
   - +.gaymt.com
   - +.gb-lon-w-p-1.nashkan.net
   - +.gb-lon-w-p-2.nashkan.net
-  - +.gb.corp.163.com
   - +.gbads.net
   - +.gbcnvip15.com
   - +.gbdelivery.top
@@ -17532,7 +17529,6 @@ payload:
   - +.gdsoq.com
   - +.gdsqwy.org
   - +.gdt.qq.com
-  - +.gdtimg.com
   - +.gdtqq.cn
   - +.gduel.cn
   - +.gduell.cn
@@ -17589,7 +17585,6 @@ payload:
   - +.geobanner.friendfinder.com
   - +.geobanner.passion.com
   - +.geobanner.socialflirt.com
-  - +.geofence.sys.miui.com
   - +.geoparker.net
   - +.geotmt.com
   - +.geowps-office.com.cn
@@ -17865,7 +17860,6 @@ payload:
   - +.glwxw.net
   - +.glzniuy.cn
   - +.gm682.com
-  - +.gma.alicdn.com
   - +.gma1.com
   - +.gmad1.xyz
   - +.gmads.net
@@ -18110,6 +18104,7 @@ payload:
   - +.gqtbt.cn
   - +.gradswell.com
   - +.granblue-fantasy-download.com
+  - +.grand.ele.me
   - +.grandcomms.cn
   - +.granitepeakadvisory.info
   - +.granitepointpartners.mobi
@@ -19964,7 +19959,6 @@ payload:
   - +.imminentadvisedlylucius.com
   - +.immob.cn
   - +.imneinei.com
-  - +.imop.com
   - +.imp-toutiao-data.37.com.cn
   - +.imp.xgo.com.cn
   - +.imp.xn--cjs03lxs1ayxrljd.com
@@ -20080,15 +20074,19 @@ payload:
   - +.info.adventinternational.com
   - +.info.alticoadvisors.com
   - +.info.americanadvisorsgroup.com
+  - +.info.bgi.com
   - +.info.brownadvisory.com
   - +.info.downsave.com
   - +.info.gomlab.com
+  - +.info.kollmorgen.cn
   - +.info.laseradvanced.com
   - +.info.meihua.docer.com
   - +.info.mina.xiaoaisound.com
   - +.info.nepsisadvisors.com
   - +.info.pinyin.sogou.com
+  - +.info.protiviti.com.cn
   - +.info.relphbenefitadvisors.aleragroup.com
+  - +.info.revvity.cn
   - +.info.stockstar.com
   - +.info.wps.cn
   - +.info.wsplanadvisor.com
@@ -20138,7 +20136,6 @@ payload:
   - +.inside.baidu.com
   - +.inside.bitcomet.com
   - +.insight.leads360.com
-  - +.insight.ucweb.com
   - +.insightspendadvancement.com
   - +.insightvision.cn
   - +.inslow.com
@@ -20166,7 +20163,6 @@ payload:
   - +.insulevel24.pro
   - +.insurads.com
   - +.insurance.leads360.com
-  - +.int.dpool.sina.com.cn
   - +.inte.net
   - +.inte.sogou.com
   - +.inte.sogoucdn.com
@@ -20198,7 +20194,6 @@ payload:
   - +.intesa-365-erix.com
   - +.intimidatepropel.com
   - +.intl.up.w.xk.miui.com
-  - +.intlsucus.ucweb.com
   - +.intranet.c3.bigdata-l7-trackservice.eup4xvxeqr.elb.xiaomi.com
   - +.intrinsic.asia
   - +.inudpbi.com
@@ -23446,7 +23441,6 @@ payload:
   - +.m.qcw.com
   - +.m.qh70wg.cn
   - +.m.qhuik.com
-  - +.m.qhxcdmfj.cn
   - +.m.qianka.com
   - +.m.qilungroup.cn
   - +.m.qingzhencai.net
@@ -24433,7 +24427,6 @@ payload:
   - +.minor-api-os.hoyoverse.com
   - +.minor-api.mihoyo.com
   - +.minorshort.weixin.qq.com
-  - +.mintegral.com
   - +.minwear.com.cn
   - +.minzhouxinxi.cn
   - +.mip.yuelvxing.com
@@ -27590,6 +27583,7 @@ payload:
   - +.public-test.yangqianguan.com
   - +.public.app.autohome.com.cn
   - +.public.clevguard.com
+  - +.public.gdtimg.com
   - +.public.wlbaike.com
   - +.public.yangqianguan.com
   - +.public6.com
@@ -28186,7 +28180,6 @@ payload:
   - +.qwcghh.kxlddy.com
   - +.qwcwnjk.com
   - +.qwdbsjnql.com
-  - +.qwe0231141.bj.bcebos.com
   - +.qwe25hh.com
   - +.qweasd.vip
   - +.qweewq2021.online
@@ -28254,6 +28247,7 @@ payload:
   - +.qzpmx.cn
   - +.qzqd2.com
   - +.qzqyw.cn
+  - +.qzs.gdtimg.com
   - +.qzs.qq.com
   - +.qzxss.com
   - +.r.0.0.0.0.cn
@@ -28263,14 +28257,12 @@ payload:
   - +.r.cnews.qq.com
   - +.r.comparisonadviser.com
   - +.r.l.youku.com
-  - +.r.mail.163.com
   - +.r.msn.com
   - +.r.myadx.net
   - +.r.ow.0.0.0.0.cn
   - +.r.pixgold.com
   - +.r.ppdai.com
   - +.r.release.qq.com
-  - +.r.sg.sec.miui.com
   - +.r.wallstrads.com
   - +.r.xcycm.com
   - +.r0.ttx.boosoo.cn
@@ -28281,7 +28273,6 @@ payload:
   - +.r1044.com
   - +.r1bnc.com
   - +.r36ku.site
-  - +.r39-g003-h8ig0w-u8f0we8-fgw0rgf-0we880e-rhgth.obs.ap-southeast-2.myhuaweicloud.com
   - +.r3ev1r.top
   - +.r3nvrr4uzh.com
   - +.r3sgtlt.cn
@@ -28307,7 +28298,6 @@ payload:
   - +.raadsomrmitvd.online
   - +.rabbit.mtadvert.com
   - +.rabbit.tg.meitu.com
-  - +.rabc1.iteye.com
   - +.rabuagc.cn
   - +.rad-technology.com
   - +.rad-trv.com
@@ -28323,7 +28313,6 @@ payload:
   - +.raepower.com
   - +.raeqqe.cn
   - +.raffle-entry.info.smart.com
-  - +.rainbow-prod-jdlog.ldoverseas.com
   - +.rainingapple.cn
   - +.rajing.com
   - +.rakinshahriar.com
@@ -28653,6 +28642,7 @@ payload:
   - +.revdepo.com
   - +.revealads.appspot.com
   - +.revelio.top
+  - +.review.gdtimg.com
   - +.revive-adserver.net
   - +.revive.outin.cn
   - +.revsci.net
@@ -30422,7 +30412,6 @@ payload:
   - +.sofa777.org
   - +.sofire-dr.baidu.com
   - +.sofire.baidu.com
-  - +.sofire.bdstatic.com
   - +.sofseo.cn
   - +.soft.110route.com
   - +.soft.antutu.com
@@ -31028,7 +31017,6 @@ payload:
   - +.store.tv.api.3g.youku.com
   - +.store.xiaohongshu.com
   - +.store.xl.api.3g.youku.com
-  - +.storedl1.nearme.com.cn
   - +.storedl3f.nearme.com.cn
   - +.storedl4f.nearme.com.cn
   - +.storedl5f.nearme.com.cn
@@ -31094,7 +31082,6 @@ payload:
   - +.sub.powerapple.com
   - +.sub.topber.com
   - +.subscribe.vivo.com.cn
-  - +.subscription.iqiyi.com
   - +.subswin.com
   - +.successfulselfwateringcontainers.com
   - +.suco777.org
@@ -31102,8 +31089,6 @@ payload:
   - +.sucodb.com
   - +.suer-es.cc
   - +.sugar.zhihu.com
-  - +.suggestion.baidu.com
-  - +.sugs.m.sm.cn
   - +.suiji.red
   - +.suilingxian.cn
   - +.suiux.qpon
@@ -31160,7 +31145,6 @@ payload:
   - +.surinam.com.cn
   - +.surperverse.com
   - +.surv.xbizmedia.com
-  - +.survey.china.alibaba.com
   - +.survey.dolphin.com
   - +.survey.news.ifeng.com
   - +.susansthreads.com
@@ -31599,7 +31583,6 @@ payload:
   - +.tbm.snssdk.com
   - +.tbqpdef.cn
   - +.tbs.tradedoubler.com
-  - +.tbsone.imtt.qq.com
   - +.tbtpezs.cn
   - +.tbwysx.cn
   - +.tbxqbvt.cn
@@ -31609,12 +31592,9 @@ payload:
   - +.tc9.ltd
   - +.tcads.net
   - +.tcahto.cn
-  - +.tcbox.baidu.com
   - +.tcdvvv.top
-  - +.tce.alicdn.com
   - +.tchkcc.cn
   - +.tchpniy.cn
-  - +.tci.oss-ap-southeast-1.aliyuncs.com
   - +.tcjy66.cc
   - +.tcmsp.cn
   - +.tcnzy.cn
@@ -31699,18 +31679,11 @@ payload:
   - +.telemetry.appex.bing.net
   - +.telemetry.canva.cn
   - +.telemetry.microsoft.com
-  - +.telemetry.pod1.prod.avatar.ext.hp.com
-  - +.telemetry.pod3.prod.avatar.ext.hp.com
-  - +.telemetry.pod4.prod.avatar.ext.hp.com
-  - +.telemetry.pod5.prod.avatar.ext.hp.com
-  - +.telemetry.pod6.prod.avatar.ext.hp.com
-  - +.telemetry.pod7.prod.avatar.ext.hp.com
   - +.telemetry.remoteapp.windowsazure.com
   - +.telemetry.urs.microsoft.com
   - +.temai.m.taobao.com
   - +.temai.snssdk.com
   - +.temai.taobao.com
-  - +.temp.163.com
   - +.tencentapigw.cn
   - +.tencentapigw.com
   - +.tencentapigw.com.cn
@@ -31735,7 +31708,6 @@ payload:
   - +.terms.alicdn.com
   - +.termvb.xyz
   - +.terravalueadvisors.com
-  - +.teslaamg.obs.cn-east-3.myhuaweicloud.com
   - +.test-cb-log.ziniao.com
   - +.test-log.aiseewhaley.aisee.tv
   - +.test-perfops.ldgslb.com
@@ -33628,7 +33600,6 @@ payload:
   - +.vcode-or.vivo.com.cn
   - +.vcpa.beer
   - +.vcs.snssdk.com
-  - +.vcs.zijieapi.com
   - +.vcsoat.cn
   - +.vcvbnmto.xyz
   - +.vcydyzd.icu
@@ -33659,7 +33630,6 @@ payload:
   - +.velnorainfrtructure.pro
   - +.vemarsdev.com
   - +.venator.link
-  - +.vendeer.vdhnmu.cn
   - +.vendhelpuous.pgvjmp.cn
   - +.vendor1.fitschigogerl.com
   - +.venetrigni.com
@@ -34734,7 +34704,6 @@ payload:
   - +.wixlabs-adsense-v3.uc.r.appspot.com
   - +.wixstatic.com
   - +.wiyun.com
-  - +.wj.jiancai365.cn
   - +.wj2s.com
   - +.wjguc.com
   - +.wjlzs.cn
