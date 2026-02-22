@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,283
-# Updated: 2026-02-21 13:01:26 CST
+# Total: 23,285
+# Updated: 2026-02-22 13:12:38 CST
 #
 payload:
   - +.000webhost.com
@@ -1183,6 +1183,7 @@ payload:
   - +.akiba-online.com
   - +.akiba-souken.com
   - +.akiba-web.com
+  - +.akile.io
   - +.akinator.com
   - +.akow.org
   - +.akstat.io
@@ -2070,6 +2071,7 @@ payload:
   - +.assembla.com
   - +.assemblesystems.com
   - +.assesphoto.com
+  - +.assets.nxtrace.org
   - +.assetsadobe.com
   - +.assimp.org
   - +.assistirhentai.com
@@ -14735,7 +14737,6 @@ payload:
   - +.nftstatic.com
   - +.nftstorage.link
   - +.ng
-  - +.ngenix.net
   - +.ngensis.com
   - +.ngeo.com
   - +.ngfiles.com
@@ -15459,6 +15460,7 @@ payload:
   - +.opencas.io
   - +.opencollective.com
   - +.opencreate.org
+  - +.opencritic.com
   - +.opendemocracy.net
   - +.opendesktop.org
   - +.opendn.xyz
