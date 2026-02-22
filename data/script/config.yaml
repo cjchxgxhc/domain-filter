@@ -32,14 +32,14 @@ presets:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt#domain
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt#domain
       - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt#domain
-      - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts#hosts
+     # - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts#hosts
       # DNS
-      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
-      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
+     # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+     # - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+     # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/DNS.list
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
       # PCDN
-      - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+     # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
     whitelist:
       # 严格白名单
       - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow#domain
@@ -59,8 +59,8 @@ presets:
   p_microsoft_cn:
     blocklist:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list#proxy
-      - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml#proxy
-      - https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf#proxy
+     # - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml#proxy
+     # - https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf#proxy
     custom_blocklist:
       # 邮箱
       - outlook.com
@@ -82,8 +82,8 @@ presets:
     blocklist:
       # 时间校准
       - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list#proxy
-      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list#proxy
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list#proxy
+     # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list#proxy
+     # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list#proxy
       # fakeip
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list#proxy
       # 谷歌 FCM
