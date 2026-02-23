@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 612
-# Updated: 2026-02-23 13:21:57 CST
+# Total: 618
+# Updated: 2026-02-24 00:17:33 CST
 #
 payload:
   - +.126.net
@@ -185,6 +185,7 @@ payload:
   - +.devblogs.microsoft.com
   - +.developer.microsoft.com
   - +.device-provisioning.googleapis.com
+  - +.direct
   - +.dl.delivery.mp.microsoft.com
   - +.dl.steam.clngaa.com
   - +.dl.steam.ksyna.com
@@ -202,6 +203,7 @@ payload:
   - +.epicgames-download1-1251447533.file.myqcloud.com
   - +.et-api.com
   - +.et001.com
+  - +.exampe
   - +.example.org
   - +.f.c2r.ts.cdn.office.net
   - +.ff.dorado.sdo.com
@@ -281,6 +283,7 @@ payload:
   - +.labycore.cn
   - +.lan
   - +.langrenclub.com
+  - +.ldmnq.com
   - +.learn.microsoft.com
   - +.ledu.com
   - +.leigod.cn
@@ -301,6 +304,7 @@ payload:
   - +.logincdn.msftauth.net
   - +.longtugame.com
   - +.lorhf.com
+  - +.lsplayer.com
   - +.ludosuperstar.cn
   - +.ludoworld.net
   - +.lv.queniujq.cn
@@ -457,6 +461,7 @@ payload:
   - +.robloxdev.cn
   - +.roco.qq.com
   - +.router.asus.com
+  - +.rpglogs.cn
   - +.sandai.net
   - +.sanguosha.com
   - +.sccreator.cn
@@ -602,6 +607,7 @@ payload:
   - +.y.qq.com
   - +.ycgame.com
   - +.yebaojiasu.com
+  - +.yeshen.com
   - +.yingxiong.com
   - +.yokaverse.com
   - +.youba.com

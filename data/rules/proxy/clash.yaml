@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,286
-# Updated: 2026-02-23 13:21:57 CST
+# Total: 23,274
+# Updated: 2026-02-24 00:17:33 CST
 #
 payload:
   - +.000webhost.com
@@ -4748,7 +4748,6 @@ payload:
   - +.cinepornogratis.com
   - +.cinnamon.org
   - +.cios.org
-  - +.cip.cc
   - +.cipfg.org
   - +.cipriani
   - +.circlethebayfortibet.org
@@ -4884,6 +4883,7 @@ payload:
   - +.cloakpoint.com
   - +.clock.isc.org
   - +.clojure.org
+  - +.cloud.9mod.space
   - +.cloudapp.net
   - +.cloudappsecurity.com
   - +.cloudburstresearch.com
@@ -8778,8 +8778,6 @@ payload:
   - +.geocities.com
   - +.geodesummit.com
   - +.geogebra.org
-  - +.geoip.seektor.com
-  - +.geojs.io
   - +.geolytics.com
   - +.geoport.com
   - +.george
@@ -8814,7 +8812,6 @@ payload:
   - +.getfreedur.com
   - +.getgom.com
   - +.geti2p.net
-  - +.getipintel.net
   - +.getiton.com
   - +.getjetso.com
   - +.getlantern.org
@@ -10577,7 +10574,6 @@ payload:
   - +.ibytedtos.com
   - +.ibyteimg.com
   - +.icams.com
-  - +.icanhazip.com
   - +.ice
   - +.icedrive.net
   - +.icegay.tv
@@ -10701,7 +10697,6 @@ payload:
   - +.ifastgp.com.hk
   - +.ifastnetwork.com
   - +.ifasttv.com
-  - +.ifconfig.me
   - +.ifcss.org
   - +.ifixit.com
   - +.ifjc.org
@@ -11152,7 +11147,6 @@ payload:
   - +.iownyour.biz
   - +.iownyour.org
   - +.ip-api.com
-  - +.ip.cn
   - +.ip73.com
   - +.ipa-iphone.net
   - +.ipad.host
@@ -11174,7 +11168,6 @@ payload:
   - +.ipfs.io
   - +.ipfs.runfission.com
   - +.ipfs.tech
-  - +.ipgeolocation.io
   - +.iphine.com
   - +.iphone-cd.com
   - +.iphone-cn.com
@@ -11216,7 +11209,6 @@ payload:
   - +.iphoto.wang
   - +.ipify.org
   - +.ipinfo.io
-  - +.ipip.net
   - +.ipiranga
   - +.ipjetable.net
   - +.ipleadership.org
@@ -11248,7 +11240,6 @@ payload:
   - +.ippog.org
   - +.ippotv.com
   - +.ippstatic.com
-  - +.ipqualityscore.com
   - +.iproperty.com
   - +.iproperty.com.my
   - +.ipstatp.com
@@ -12120,7 +12111,6 @@ payload:
   - +.kknews.cc
   - +.kktix.com
   - +.kktv.me
-  - +.klayer.com
   - +.klik.me
   - +.klip.me
   - +.km
@@ -13779,6 +13769,7 @@ payload:
   - +.modmyi.com
   - +.modperl.pl
   - +.modrinth.com
+  - +.modyolo.com
   - +.moe
   - +.moedigi.com
   - +.moeero-library.com
@@ -17151,7 +17142,6 @@ payload:
   - +.qvodzy.org
   - +.qwant.com
   - +.qwapi.com
-  - +.qwry.mirror.noc.one
   - +.qx.net
   - +.qxbbs.org
   - +.qysg.cc
@@ -20864,7 +20854,6 @@ payload:
   - +.up.audio
   - +.up.gcp.googlers.com
   - +.up01.cc
-  - +.upaiyun.com
   - +.upbit.com
   - +.updatestar.com
   - +.updatetube.com
@@ -21851,7 +21840,6 @@ payload:
   - +.who.int
   - +.whodns.xyz
   - +.whoer.net
-  - +.whois.pconline.com.cn
   - +.wholecitiesfoundation.org
   - +.wholefoods.com
   - +.wholefoodsmarket.com
