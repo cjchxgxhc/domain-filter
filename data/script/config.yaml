@@ -128,6 +128,9 @@ presets:
       - adtidy.org
       # Poweramp 国内IP禁止访问
       - powerampapp.com
+      # 国内缓慢
+      - cloud.9mod.space
+      - modyolo.com
 
   p_proxy_tld:
     blocklist:
