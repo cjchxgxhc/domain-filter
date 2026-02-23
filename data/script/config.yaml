@@ -78,6 +78,8 @@ presets:
       - local
       - localdomain
       - localhost
+      - exampe
+      - direct
       # Firefox
       - firefoxcn.net
       - firefox.com.cn
@@ -114,41 +116,12 @@ presets:
   p_proxy:
     blocklist:
       - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list#proxy
-      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list#proxy
-      # 国家后缀
-      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/tld-proxy.txt#domain
+      - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list#proxy 
+      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt#domain
     custom_blocklist:
       # DNS 测试
       - browserleaks.net
       - browserleaks.org
-      # IP 测试
-      - icanhazip.com
-      - ident.me
-      - ifconfig.me
-      - api.ipify.org
-      - checkip.amazonaws.com
-      - ipinfo.io
-      - ip.sb
-      - ip-api.com
-      - api.myip.com
-      - myip.la
-      - ipapi.co
-      - geoip.seektor.com
-      - geojs.io
-      - ipgeolocation.io
-      - cip.cc
-      - ip.cn
-      - freeapi.ipip.net
-      - whoer.net
-      - ipqualityscore.com
-      - getipintel.net
-      - ipip.net
-      - upaiyun.com
-      - klayer.com
-      - qqwry.api.skk.moe
-      - qwry.mirror.noc.one
-      - qqwry-mirror.cdn.skk.moe
-      - whois.pconline.com.cn
       # Firefox 扩展商店 国内IP限制扩展安装
       - addons.mozilla.org
       # 规则下载
