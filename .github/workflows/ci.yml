@@ -1,8 +1,8 @@
-name: Update Domain Filter Rules
+name: Update
 
 on:
   schedule:
-    - cron: '0 4 * * *'  # 每天北京时间 12:00 (UTC+8)
+    - cron: '0 21 * * *'  # 每天 05:00 更新
   workflow_dispatch:
 
 env:
@@ -12,7 +12,7 @@ env:
 
 jobs:
   build:
-    name: Build and Deploy Rules
+    name: Build Rules
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -23,27 +23,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-        timeout-minutes: 1
+          fetch-depth: 1
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-          cache: 'pip'
-        timeout-minutes: 2
-
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests pyyaml -q
-        timeout-minutes: 2
 
       - name: Create tools directory
         run: |
           mkdir -p ${{ env.TOOLS_DIR }}
           echo "✓ Tools directory created"
-        timeout-minutes: 1
 
       - name: Check if tools exist
         id: check_tools
@@ -55,7 +45,6 @@ jobs:
             echo "tools_exist=false" >> $GITHUB_OUTPUT
             echo "ℹ️ Tools not found, will download"
           fi
-        timeout-minutes: 1
 
       - name: Download Mihomo binary
         if: steps.check_tools.outputs.tools_exist == 'false'
@@ -68,7 +57,6 @@ jobs:
           chmod +x mihomo
           cd -
           echo "✓ Mihomo v${{ env.MIHOMO_VERSION }} ready"
-        timeout-minutes: 2
 
       - name: Download sing-box binary
         if: steps.check_tools.outputs.tools_exist == 'false'
@@ -83,21 +71,17 @@ jobs:
           rm -rf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/
           cd -
           echo "✓ sing-box v${{ env.SINGBOX_VERSION }} ready"
-        timeout-minutes: 2
 
       - name: Clean old output
         run: |
           rm -rf data/rules README.md
-          echo "✓ Cleaned old output files"
-        timeout-minutes: 1
 
-      - name: Run filter script
+      - name: Run script
         run: |
           python data/script/filter.py
           echo "✓ Filter script completed"
-        timeout-minutes: 2
 
-      - name: Convert to MRS format (Mihomo)
+      - name: Convert MRS
         run: |
           count=0
           for file in data/rules/*/clash.yaml; do
@@ -108,9 +92,8 @@ jobs:
             fi
           done
           echo "✓ Converted $count files to MRS format"
-        timeout-minutes: 2
 
-      - name: Compile to SRS format (sing-box)
+      - name: Convert SRS
         run: |
           count=0
           for file in data/rules/*/singbox.json; do
@@ -121,7 +104,6 @@ jobs:
             fi
           done
           echo "✓ Compiled $count files to SRS format"
-        timeout-minutes: 2
 
       - name: Check for changes
         id: check_changes
@@ -134,7 +116,6 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "✓ Changes detected"
           fi
-        timeout-minutes: 1
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.has_changes == 'true'
@@ -144,12 +125,10 @@ jobs:
           git commit -m "chore: update rules, rule-sets & tools $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
           echo "✓ Changes committed and pushed"
-        timeout-minutes: 2
 
-      - name: Cleanup old workflow runs
+      - name: Cleanup old workflow
         if: always()
         uses: actions/github-script@v7
-        timeout-minutes: 2
         with:
           script: |
             const daysToKeep = 3;
