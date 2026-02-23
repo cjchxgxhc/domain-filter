@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 31 个规则源...
-下载完成：31/31 成功，耗时 1.47 秒
+下载完成：31/31 成功，耗时 1.98 秒
 
 
 ================================================================================
@@ -30,19 +30,19 @@
 处理预设组：p_ads_basic (p_ads_basic)
 ══════════════════════════════════════════════════════════════════════
   │  黑名单源：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt#adblock
-  │  黑名单源：4,711 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt#domain
+  │  黑名单源：4,694 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt#domain
   │  黑名单源：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt#adblock
   │  黑名单源：649 条 <- https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/mod/adblock.txt#adblock
   │  黑名单源：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop#hosts
   │  黑名单源：4 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt#domain
-  │  黑名单合计：6,305 条
-  └─ 预设结果：6,305 条（缓存）
+  │  黑名单合计：6,288 条
+  └─ 预设结果：6,288 条（缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理预设组：p_ads_dangerous (p_ads_dangerous)
 ══════════════════════════════════════════════════════════════════════
   │  黑名单源：16,811 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/reward#hosts
-  │  黑名单源：12,834 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward#hosts
+  │  黑名单源：12,840 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward#hosts
   │  黑名单源：16,727 条 <- https://raw.githubusercontent.com/qq5460168/666/master/dns.txt#adblock
   │  黑名单源：446 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt#domain
   │  黑名单源：461 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt#domain
@@ -52,20 +52,20 @@
   │  黑名单源：1,113 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
   │  白名单源：11,366 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow#domain
   │  白名单源：2,658 条 <- https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt#domain
-  │  源级白名单过滤：移除 2,836 条
-  │  黑名单合计：46,059 条
-  └─ 预设结果：46,059 条（缓存）
+  │  源级白名单过滤：移除 2,838 条
+  │  黑名单合计：46,067 条
+  └─ 预设结果：46,067 条（缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理预设组：p_ads_aboard (p_ads_aboard)
 ══════════════════════════════════════════════════════════════════════
-  │  黑名单源：82,624 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt#adblock
-  │  白名单源：116,360 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list#proxy
-  │  源级白名单过滤：移除 2,717 条
-  │  黑名单合计：79,907 条
+  │  黑名单源：75,527 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt#adblock
+  │  白名单源：116,422 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list#proxy
+  │  源级白名单过滤：移除 2,710 条
+  │  黑名单合计：72,817 条
   │  自定义白名单：2 条
-  │  自定义白名单过滤：移除 585 条
-  └─ 预设结果：79,322 条（缓存）
+  │  自定义白名单过滤：移除 594 条
+  └─ 预设结果：72,223 条（缓存）
 
 ══════════════════════════════════════════════════════════════════════
 处理预设组：p_direct_fix (p_direct_fix)
@@ -107,27 +107,27 @@
 处理规则组：Ads Blocklist China (ads)
 ══════════════════════════════════════════════════════════════════════
   │  预设黑名单：929 条 <- p_ads_liuzq2002
-  │  预设黑名单：6,305 条 <- p_ads_basic
-  │  预设黑名单：46,059 条 <- p_ads_dangerous
+  │  预设黑名单：6,288 条 <- p_ads_basic
+  │  预设黑名单：46,067 条 <- p_ads_dangerous
   │  预设白名单：153 条 <- p_ads_white
   │  预设白名单：737 条 <- p_proxy_tld
-  │  源级白名单过滤：移除 2,955 条
-  │  黑名单合计：44,720 条
-  │  子域去重：移除 7,241 条冗余子域
-  └─ 最终结果：37,479 条
+  │  源级白名单过滤：移除 2,940 条
+  │  黑名单合计：44,743 条
+  │  子域去重：移除 7,250 条冗余子域
+  └─ 最终结果：37,493 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Large (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  预设黑名单：929 条 <- p_ads_liuzq2002
-  │  预设黑名单：6,305 条 <- p_ads_basic
-  │  预设黑名单：46,059 条 <- p_ads_dangerous
-  │  预设黑名单：79,322 条 <- p_ads_aboard
+  │  预设黑名单：6,288 条 <- p_ads_basic
+  │  预设黑名单：46,067 条 <- p_ads_dangerous
+  │  预设黑名单：72,223 条 <- p_ads_aboard
   │  预设白名单：153 条 <- p_ads_white
   │  源级白名单过滤：移除 176 条
-  │  黑名单合计：124,443 条
-  │  子域去重：移除 11,050 条冗余子域
-  └─ 最终结果：113,393 条
+  │  黑名单合计：117,361 条
+  │  子域去重：移除 11,052 条冗余子域
+  └─ 最终结果：106,309 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
@@ -147,5 +147,5 @@
   └─ 最终结果：612 条
 
 ================================================================================
-✓ 处理完成！耗时：4.19 秒
+✓ 处理完成！耗时：4.85 秒
 ================================================================================
