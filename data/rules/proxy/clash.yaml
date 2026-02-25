@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,276
-# Updated: 2026-02-25 05:36:15 CST
+# Total: 23,279
+# Updated: 2026-02-26 05:36:19 CST
 #
 payload:
   - +.000webhost.com
@@ -1398,8 +1398,10 @@ payload:
   - +.amazon.co
   - +.amazon.com
   - +.amazon.com.au
+  - +.amazon.com.co
   - +.amazon.jobs
   - +.amazon.nl
+  - +.amazon.pl
   - +.amazon.red
   - +.amazonalexavoxcon.com
   - +.amazonauthorinsights.com
@@ -2454,6 +2456,7 @@ payload:
   - +.awsthinkbox.com
   - +.awstrack.me
   - +.awstrust.com
+  - +.awswaf.com
   - +.awwcn.buzz
   - +.awwcn.xyz
   - +.awxcdn.com
