@@ -1,11 +1,5 @@
 presets:
 
-  p_ads_liuzq2002:
-    blocklist:
-      - https://raw.githubusercontent.com/liuzq2002/Adguard-Home-For-Magisk-Mod/refs/heads/main/Adguardhome/bin/AdGuardHome.yaml
-    whitelist:
-      - https://raw.githubusercontent.com/liuzq2002/Adguard-Home-For-Magisk-Mod/refs/heads/main/Adguardhome/bin/AdGuardHome.yaml
-
   p_ads_white:
     blocklist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
@@ -144,7 +138,6 @@ groups:
     title: Ads Blocklist China
     description: 针对中文移动端广告。
     use_presets_blocklist:
-      - p_ads_liuzq2002
       - p_ads_basic
       - p_ads_dangerous
     use_presets_whitelist:
@@ -161,7 +154,6 @@ groups:
     title: Ads Blocklist Large
     description: 适用于代理程序。
     use_presets_blocklist:
-      - p_ads_liuzq2002
       - p_ads_basic
       - p_ads_dangerous
       # 国外规则
