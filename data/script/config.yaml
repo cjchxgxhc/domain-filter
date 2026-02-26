@@ -26,6 +26,7 @@ presets:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt#domain
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt#domain
       - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+      - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts#hosts
     whitelist:
       # 严格白名单
       - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt#domain
