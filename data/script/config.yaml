@@ -7,14 +7,11 @@ presets:
     whitelist:
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt#domain
       
-  p_ads_basic:
+  p_ads_basic: # 只包含极少有误杀的源
     blocklist:
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt#adblock
       - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt#domain
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt#adblock
-      - https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/mod/adblock.txt#adblock
-      - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop#hosts
-      - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt#domain
 
   p_ads_dangerous: # 存在误杀
     blocklist:
@@ -26,12 +23,6 @@ presets:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt#domain
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt#domain
       - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt#domain
-     # - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts#hosts
-      # DNS
-     # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/doh.top.txt
-      # PCDN
-     # - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
     whitelist:
       # 严格白名单
       - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow#domain
@@ -40,13 +31,6 @@ presets:
   p_ads_aboard:
     blocklist:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt#adblock
-     # - https://small.oisd.nl#adblock
-    whitelist:
-      # 去除部分中文域名，防止误杀
-      - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list#proxy
-    custom_whitelist:
-      - cn
-      - cn.com
 
   p_direct_fix:
     blocklist:
@@ -136,7 +120,7 @@ groups:
 
   ads:
     title: Ads Blocklist China
-    description: 针对中文移动端广告。
+    description: 针对中国地区，屏蔽广告联盟、应用广告、日志收集，包含限制应用功能的域名，建议有经验的用户使用。
     use_presets_blocklist:
       - p_ads_basic
       - p_ads_dangerous
@@ -151,8 +135,8 @@ groups:
       - domains
 
   ads_big:
-    title: Ads Blocklist Large
-    description: 适用于代理程序。
+    title: Ads Blocklist Big
+    description: 额外添加了国外维护的规则源，建议用于代理程序。
     use_presets_blocklist:
       - p_ads_basic
       - p_ads_dangerous
