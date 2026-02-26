@@ -13,7 +13,7 @@ presets:
   p_ads_basic: # 只包含极少有误杀的源
     blocklist:
       - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt#adblock
-      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt#domain
+      - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
       - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt#adblock
 
   p_ads_dangerous: # 存在误杀
@@ -25,7 +25,7 @@ presets:
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt#domain
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt#domain
       - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt#domain
-      - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt#domain
+      - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
     whitelist:
       # 严格白名单
       - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt#domain
