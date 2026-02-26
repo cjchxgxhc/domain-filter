@@ -4,7 +4,7 @@ presets:
     blocklist:
       - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
       - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-      - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+      - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
     whitelist:
       - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt#domain
