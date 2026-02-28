@@ -1,68 +1,169 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--02--28_05:30:54-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--02--28_14:42:35-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
-## 📊 规则组详情统计
+## 📊 规则组
 
-| 规则组名称 | 描述 | 规则数量 | 获取链接 |
-| :--- | :--- | :--- | :--- |
-| **Ads Blocklist Big** | 额外添加了国外维护的规则源，建议用于代理程序。 | `99,028` | [`AdBlock`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) · [`Clash`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.yaml) · [`Mrs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.mrs) · [`Sing-box`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.json) · [`Srs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.srs) |
-| **Ads Blocklist China** | 针对中国地区，屏蔽广告联盟、应用广告、日志收集，包含限制应用功能的域名，建议有经验的用户使用。 | Domains: 45,097 / Hosts: 45,097 / AdBlock: 36,632 / Clash: 36,632 / Sing-box: 36,632 | [`Domains`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/domains.txt) · [`AdBlock`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt) · [`Hosts`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/hosts.txt) · [`Clash`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml) · [`Mrs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.mrs) · [`Sing-box`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json) · [`Srs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.srs) |
-| **Proxy** | 需要被代理的域名。 | `23,142` | [`Clash`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.yaml) · [`Mrs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.mrs) · [`Sing-box`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.json) · [`Srs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.srs) |
-| **Direct Fix** | 不应被代理的域名。 | `618` | [`Clash`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.yaml) · [`Mrs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs) · [`Sing-box`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json) · [`Srs`](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs) |
+### Ads Blocklist Big
 
-## 📖 使用说明
+额外添加了国外维护的规则源，建议用于代理程序。
 
-### Clash/Mihomo
-```yaml
-rule-providers:
-  example:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/example/clash.mrs
-    interval: 86400
+**规则数量**：`103,708`
 
-rules:
-  - RULE-SET,example,REJECT
+<details><summary>AdBlock</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt
 ```
 
-### sing-box
-```json
-{
-  "route": {
-    "rule_set": [
-      {
-        "type": "remote",
-        "tag": "example",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/example/singbox.srs",
-        "download_detour": "direct"
-      }
-    ],
-    "rules": [
-      {
-        "rule_set": ["example"],
-        "outbound": "block"
-      }
-    ]
-  }
-}
+</details>
+
+<details><summary>Clash / Mrs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.yaml
 ```
 
-### AdBlock
-直接添加订阅链接到 AdGuard、uBlock Origin 等扩展:
 ```
-https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/example/adblock.txt
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.mrs
 ```
 
-### Hosts
-下载 hosts 文件并合并到系统 hosts 文件:
-```bash
-curl https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/example/hosts.txt >> /etc/hosts
+</details>
+
+<details><summary>Sing-box / Srs</summary>
+
 ```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.json
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.srs
+```
+
+</details>
 
 ---
-*更新时间：2026-02-28 05:30:54（北京时间）*
+
+### Ads Blocklist China
+
+针对中国地区，屏蔽广告联盟、应用广告、日志收集，包含限制应用功能的域名，建议有经验的用户使用。
+
+**规则数量**：Domains `46,608`　Hosts `46,608`　AdBlock `37,678`　Clash / Mrs `37,678`　Sing-box / Srs `37,678`
+
+<details><summary>Domains</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/domains.txt
+```
+
+</details>
+
+<details><summary>AdBlock</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt
+```
+
+</details>
+
+<details><summary>Hosts</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/hosts.txt
+```
+
+</details>
+
+<details><summary>Clash / Mrs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.mrs
+```
+
+</details>
+
+<details><summary>Sing-box / Srs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.srs
+```
+
+</details>
+
+---
+
+### Proxy
+
+需要被代理的域名。
+
+**规则数量**：`22,997`
+
+<details><summary>Clash / Mrs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.yaml
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.mrs
+```
+
+</details>
+
+<details><summary>Sing-box / Srs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.json
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.srs
+```
+
+</details>
+
+---
+
+### Direct Fix
+
+不应被代理的域名。
+
+**规则数量**：`744`
+
+<details><summary>Clash / Mrs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.yaml
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs
+```
+
+</details>
+
+<details><summary>Sing-box / Srs</summary>
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json
+```
+
+```
+https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs
+```
+
+</details>
+
+---
+
+*更新时间：2026-02-28 14:42:35（北京时间）*
