@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 34 个规则源...
-下载完成：34/34 成功，耗时 1.25 秒
+下载完成：34/34 成功，耗时 0.77 秒
 
 
 ================================================================================
@@ -14,11 +14,11 @@
   │    url：155 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   │    url：148 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
   │    url：516 条 <- https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-  │    url：12 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt#domain
-  │    rule[0] 共 752 条
-  │    → 加入黑名单，新增 752 条（合计 752）
-  │  处理完毕，共 752 条
-  └─ 最终输出：752 条
+  │    url：13 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt#domain
+  │    rule[0] 共 753 条
+  │    → 加入黑名单，新增 753 条（合计 753）
+  │  处理完毕，共 753 条
+  └─ 最终输出：753 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：p_ads_dangerous (p_ads_dangerous, id=1)
@@ -31,33 +31,33 @@
   │    url：461 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
   │    url：160 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
   │    url：231 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
-  │    url：17,023 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+  │    url：17,425 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    url：4,916 条 <- https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
-  │    rule[0] 共 49,724 条
-  │    → 加入黑名单，新增 49,724 条（合计 49,724）
+  │    rule[0] 共 50,141 条
+  │    → 加入黑名单，新增 50,141 条（合计 50,141）
   │  rule[1] type=whitelist
   │    url：2,657 条 <- https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
   │    url：330 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
   │    url：195 条 <- https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/refs/heads/master/ok.txt#adblock
   │    url：26 条 <- https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/mod/whitelist.txt
   │    rule[1] 共 2,881 条
-  │    → 精确白名单过滤，移除 477 条（剩余 49,247）
-  │  处理完毕，共 49,247 条
+  │    → 精确白名单过滤，移除 474 条（剩余 49,667）
+  │  处理完毕，共 49,667 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：p_ads_aboard (p_ads_aboard, id=2)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：76,351 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-  │    rule[0] 共 76,351 条
-  │    → 加入黑名单，新增 76,351 条（合计 76,351）
+  │    url：71,683 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
+  │    rule[0] 共 71,683 条
+  │    → 加入黑名单，新增 71,683 条（合计 71,683）
   │  rule[1] type=whitelist
   │    url：11,373 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
-  │    preset：752 条 <- p_ads_white
-  │    rule[1] 共 11,814 条
-  │    → 精确白名单过滤，移除 515 条（剩余 75,836）
-  │  处理完毕，共 75,836 条
+  │    preset：753 条 <- p_ads_white
+  │    rule[1] 共 11,815 条
+  │    → 精确白名单过滤，移除 515 条（剩余 71,168）
+  │  处理完毕，共 71,168 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -78,39 +78,39 @@
 处理规则组：Ads Blocklist China (ads, id=1000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：4,876 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：4,881 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-  │    preset：49,247 条 <- p_ads_dangerous
-  │    rule[0] 共 49,607 条
-  │    → 加入黑名单，新增 49,607 条（合计 49,607）
+  │    preset：49,667 条 <- p_ads_dangerous
+  │    rule[0] 共 49,987 条
+  │    → 加入黑名单，新增 49,987 条（合计 49,987）
   │  rule[1] type=whitelist
-  │    preset：752 条 <- p_ads_white
-  │    rule[1] 共 752 条
-  │    → 精确白名单过滤，移除 239 条（剩余 49,368）
+  │    preset：753 条 <- p_ads_white
+  │    rule[1] 共 753 条
+  │    → 精确白名单过滤，移除 241 条（剩余 49,746）
   │  rule[2] type=whitelist_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rule[2] 共 828 条
-  │    → 子域名白名单过滤，移除 2,503 条（剩余 46,865）
+  │    → 子域名白名单过滤，移除 2,526 条（剩余 47,220）
   │  rule[100] type=blocklist
   │    url：4 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rule[100] 共 907 条
-  │    → 加入黑名单，新增 62 条（合计 46,927）
-  │  处理完毕，共 46,927 条
-  │  子域去重：移除 9,089 条冗余子域
-  └─ 最终输出：37,838 条
+  │    → 加入黑名单，新增 62 条（合计 47,282）
+  │  处理完毕，共 47,282 条
+  │  子域去重：移除 9,078 条冗余子域
+  └─ 最终输出：38,204 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Big (ads_big, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    preset：46,927 条 <- ads
-  │    preset：75,836 条 <- p_ads_aboard
-  │    rule[0] 共 117,784 条
-  │    → 加入黑名单，新增 117,784 条（合计 117,784）
-  │  处理完毕，共 117,784 条
-  │  子域去重：移除 12,741 条冗余子域
-  └─ 最终输出：105,043 条
+  │    preset：47,282 条 <- ads
+  │    preset：71,168 条 <- p_ads_aboard
+  │    rule[0] 共 113,426 条
+  │    → 加入黑名单，新增 113,426 条（合计 113,426）
+  │  处理完毕，共 113,426 条
+  │  子域去重：移除 12,740 条冗余子域
+  └─ 最终输出：100,686 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -150,5 +150,5 @@
   └─ 最终输出：744 条
 
 ================================================================================
-✓ 处理完成！耗时：2.91 秒
+✓ 处理完成！耗时：2.42 秒
 ================================================================================
