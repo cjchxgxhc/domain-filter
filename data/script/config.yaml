@@ -2,80 +2,61 @@
 
 p_ads_white:
   id: 0
-  enabled: true
   rules:
     0:
       url:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt#domain
-      type:
-        - blocklist
-  output:
-    enabled: true
-    formats:
-      - domains
-
-p_ads_dangerous:
-  id: 1
-  enabled: true
-  rules:
-    0:
-      # 激进广告屏蔽源
-      url:
-        - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/reward
-        - https://raw.githubusercontent.com/qq5460168/666/master/dns.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/2Gardon/SM-Ad-FuckU-hosts/refs/heads/master/SMAdHosts
-      type:
-        - blocklist
-    1:
-      # 严格白名单
-      url:
         - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
-        - https://raw.githubusercontent.com/BlueSkyXN/AdGuardHomeRules/refs/heads/master/ok.txt#adblock
-        - https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/mod/whitelist.txt
-      type:
-        - whitelist
+      type: blocklist
+    1:
+      url:
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+      type: whitelist
   output:
-    enabled: false
+    enabled: true
 
 p_ads_aboard:
-  id: 2
-  enabled: true
+  id: 1
   rules:
     0:
       url:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-      type:
-        - blocklist
+      type: blocklist
     1:
       url:
         - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
       preset:
         - p_ads_white
-      type:
-        - whitelist
-  output:
-    enabled: false
+      type: whitelist
+
+p_ads_Aethersailor:
+  id: 2
+  rules:
+    0:
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+      type: blocklist
+    1:
+      url:
+      # 引用的危险源
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.apple.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.winoffice.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt
+      type: whitelist
 
 p_proxy_tld:
   id: 3
-  enabled: true
   rules:
     0:
       # 国家后缀
       pureurl:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-      type:
-        - blocklist
+      type: blocklist
     1:
       domain:
         - cn
@@ -85,43 +66,37 @@ p_proxy_tld:
         - co
         - io
         - xxx
-      type:
-        - whitelist
+      type: whitelist
   output:
     enabled: true
-    formats:
-      - domains
 
 ads:
   id: 1000
-  enabled: true
   rules:
     100:
       # 强制保留
       url:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-      type:
-        - blocklist
+      type: blocklist
     0:
       url:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
         - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
       preset:
-        - p_ads_dangerous
-      type:
-        - blocklist
+        - p_ads_Aethersailor
+      type: blocklist
     1:
       preset:
         - p_ads_white
-      type:
-        - whitelist
+      type: whitelist
     2:
       # 代理 TLD 域名不应出现在广告屏蔽列表中，子域名后缀过滤
       preset:
         - p_proxy_tld
-      type:
-        - whitelist_suffix
+      type: whitelist_suffix
   output:
     enabled: true
     title: Ads Blocklist China
@@ -131,18 +106,16 @@ ads:
       - clash
       - singbox
       - hosts
-      - domains
+      - domain
 
 ads_big:
   id: 1001
-  enabled: true
   rules:
     0:
       preset:
         - ads
         - p_ads_aboard
-      type:
-        - blocklist
+      type: blocklist
   output:
     enabled: true
     title: Ads Blocklist Big
@@ -154,7 +127,6 @@ ads_big:
 
 proxy:
   id: 2000
-  enabled: true
   rules:
     0:
       url:
@@ -176,8 +148,7 @@ proxy:
         - modyolo.com
       preset:
         - p_proxy_tld
-      type:
-        - blocklist
+      type: blocklist
   output:
     enabled: true
     title: Proxy
@@ -188,7 +159,6 @@ proxy:
 
 direct_fix:
   id: 2001
-  enabled: true
   rules:
     0:
       url:
@@ -238,15 +208,13 @@ direct_fix:
         - translatoruser.intl.microsoft.com
         # Edge
         - edge.microsoft.com
-      type:
-        - blocklist
+      type: blocklist
     1:
       # bing 不应进直连修复列表，子域名后缀过滤
       domain:
         - bing.com
         - bing.net
-      type:
-        - whitelist_suffix
+      type: whitelist_suffix
   output:
     enabled: true
     title: Direct Fix
