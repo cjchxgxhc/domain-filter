@@ -10,6 +10,7 @@ p_ads_white:
         - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
         - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
       type: blocklist
     1:
       url:
