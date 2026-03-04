@@ -29,6 +29,7 @@ p_ads_aboard:
     1:
       url:
         - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
       preset:
         - p_ads_white
       type: whitelist
