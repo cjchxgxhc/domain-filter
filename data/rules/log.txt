@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 2.29 秒
+下载完成：32/32 成功，耗时 1.17 秒
 
 
 ================================================================================
@@ -20,8 +20,8 @@
   │    rule[0] 共 3,193 条
   │    → 加入黑名单，新增 3,193 条（合计 3,193）
   │  rule[1] type=whitelist
-  │    url：114,965 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    rule[1] 共 114,965 条
+  │    url：111,765 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    rule[1] 共 111,765 条
   │    → 精确白名单过滤，移除 264 条（剩余 2,929）
   │  处理完毕，共 2,929 条
   └─ 最终输出：2,929 条
@@ -30,33 +30,34 @@
 处理规则组：p_ads_aboard (p_ads_aboard, id=1)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：74,723 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-  │    rule[0] 共 74,723 条
-  │    → 加入黑名单，新增 74,723 条（合计 74,723）
+  │    url：70,384 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
+  │    rule[0] 共 70,384 条
+  │    → 加入黑名单，新增 70,384 条（合计 70,384）
   │  rule[1] type=whitelist
   │    url：11,373 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
+  │    url：17,756 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    preset：2,929 条 <- p_ads_white
-  │    rule[1] 共 13,703 条
-  │    → 精确白名单过滤，移除 550 条（剩余 74,173）
-  │  处理完毕，共 74,173 条
+  │    rule[1] 共 31,134 条
+  │    → 精确白名单过滤，移除 3,199 条（剩余 67,185）
+  │  处理完毕，共 67,185 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：p_ads_Aethersailor (p_ads_Aethersailor, id=2)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：17,010 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-  │    rule[0] 共 17,010 条
-  │    → 加入黑名单，新增 17,010 条（合计 17,010）
+  │    url：17,756 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+  │    rule[0] 共 17,756 条
+  │    → 加入黑名单，新增 17,756 条（合计 17,756）
   │  rule[1] type=whitelist
   │    url：461 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
   │    url：105 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.apple.txt
   │    url：231 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
   │    url：8,375 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.winoffice.txt
-  │    url：370,509 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt
-  │    rule[1] 共 370,762 条
-  │    → 精确白名单过滤，移除 5,540 条（剩余 11,470）
-  │  处理完毕，共 11,470 条
+  │    url：366,876 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt
+  │    rule[1] 共 367,129 条
+  │    → 精确白名单过滤，移除 5,639 条（剩余 12,117）
+  │  处理完毕，共 12,117 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -77,56 +78,56 @@
 处理规则组：Ads Blocklist China (ads, id=1000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：4,728 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：4,900 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：160 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
-  │    preset：11,470 条 <- p_ads_Aethersailor
-  │    rule[0] 共 16,199 条
-  │    → 加入黑名单，新增 16,199 条（合计 16,199）
+  │    preset：12,117 条 <- p_ads_Aethersailor
+  │    rule[0] 共 16,964 条
+  │    → 加入黑名单，新增 16,964 条（合计 16,964）
   │  rule[1] type=whitelist
   │    preset：2,929 条 <- p_ads_white
   │    rule[1] 共 2,929 条
-  │    → 精确白名单过滤，移除 208 条（剩余 15,991）
+  │    → 精确白名单过滤，移除 214 条（剩余 16,750）
   │  rule[2] type=whitelist_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rule[2] 共 828 条
-  │    → 子域名白名单过滤，移除 198 条（剩余 15,793）
+  │    → 子域名白名单过滤，移除 197 条（剩余 16,553）
   │  rule[100] type=blocklist
   │    url：2,581 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rule[100] 共 3,365 条
-  │    → 加入黑名单，新增 2,687 条（合计 18,480）
-  │  处理完毕，共 18,480 条
-  │  子域去重：移除 1,763 条冗余子域
-  └─ 最终输出：16,717 条
+  │    → 加入黑名单，新增 2,680 条（合计 19,233）
+  │  处理完毕，共 19,233 条
+  │  子域去重：移除 1,788 条冗余子域
+  └─ 最终输出：17,445 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Big (ads_big, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    preset：18,480 条 <- ads
-  │    preset：74,173 条 <- p_ads_aboard
-  │    rule[0] 共 89,957 条
-  │    → 加入黑名单，新增 89,957 条（合计 89,957）
-  │  处理完毕，共 89,957 条
-  │  子域去重：移除 2,414 条冗余子域
-  └─ 最终输出：87,543 条
+  │    preset：19,233 条 <- ads
+  │    preset：67,185 条 <- p_ads_aboard
+  │    rule[0] 共 85,805 条
+  │    → 加入黑名单，新增 85,805 条（合计 85,805）
+  │  处理完毕，共 85,805 条
+  │  子域去重：移除 2,345 条冗余子域
+  └─ 最终输出：83,460 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：27,423 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：27,424 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
   │    preset：828 条 <- p_proxy_tld
-  │    rule[0] 共 29,641 条
-  │    → 加入黑名单，新增 29,641 条（合计 29,641）
-  │  处理完毕，共 29,641 条
+  │    rule[0] 共 29,642 条
+  │    → 加入黑名单，新增 29,642 条（合计 29,642）
+  │  处理完毕，共 29,642 条
   │  子域去重：移除 6,639 条冗余子域
-  └─ 最终输出：23,002 条
+  └─ 最终输出：23,003 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix, id=2001)
@@ -151,5 +152,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：5.06 秒
+✓ 处理完成！耗时：3.83 秒
 ================================================================================
