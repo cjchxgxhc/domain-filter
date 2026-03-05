@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,003
-# Updated: 2026-03-05 05:35:49 CST
+# Total: 23,009
+# Updated: 2026-03-06 05:36:57 CST
 #
 payload:
   - +.000webhost.com
@@ -1927,6 +1927,7 @@ payload:
   - +.artstorm.com
   - +.artsy.net
   - +.arukas.io
+  - +.arweave.org
   - +.arxiv.org
   - +.as
   - +.asacp.org
@@ -15982,6 +15983,10 @@ payload:
   - +.pleasurebabe.com
   - +.pleasuregirl.net
   - +.pleasuremore.com
+  - +.plex.com
+  - +.plex.services
+  - +.plex.tv
+  - +.plexapp.com
   - +.plexvpn.pro
   - +.plixi.com
   - +.plm.org.hk
@@ -21646,6 +21651,7 @@ payload:
   - +.wisemapping.org
   - +.wisevid.com
   - +.wish.com
+  - +.wispbyte.com
   - +.wistia.com
   - +.wistia.net
   - +.withgoogle.com
