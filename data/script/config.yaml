@@ -7,6 +7,7 @@ p_ads_white:
       url:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+        # anti-ad: https://github.com/privacy-protection-tools/anti-AD
         - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
         - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
@@ -19,40 +20,8 @@ p_ads_white:
   output:
     enabled: true
 
-p_ads_aboard:
-  id: 1
-  rules:
-    0:
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-      type: blocklist
-    1:
-      url:
-        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-      preset:
-        - p_ads_white
-      type: whitelist
-
-p_ads_Aethersailor:
-  id: 2
-  rules:
-    0:
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-      type: blocklist
-    1:
-      url:
-      # 引用的危险源
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.apple.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.winoffice.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt
-      type: whitelist
-
 p_proxy_tld:
-  id: 3
+  id: 1
   rules:
     0:
       # 国家后缀
@@ -78,17 +47,21 @@ ads:
     100:
       # 强制保留
       url:
+        # SM广告丟那吗(部分引用): https://github.com/2Gardon/SM-Ad-FuckU-hosts/blob/master/SMAdHosts
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        # 秋风广告规则: https://awavenue.top/
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
       type: blocklist
     0:
       url:
+        # AdBlock DNS Filters: https://github.com/217heidai/adblockfilters
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+        # DNS Blocklists: https://github.com/hagezi/dns-blocklists
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
-      preset:
-        - p_ads_Aethersailor
+        # 自动更新去广告的hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        # 一个强力去广告的规则: https://github.com/qq5460168/666
+        - https://raw.githubusercontent.com/qq5460168/dangchu/main/black.txt
       type: blocklist
     1:
       preset:
@@ -102,7 +75,7 @@ ads:
   output:
     enabled: true
     title: Ads Blocklist China
-    description: 针对中国地区，屏蔽广告联盟、应用广告、日志收集，包含限制应用功能的域名，建议有经验的用户使用。
+    description: 主要屏蔽手机端广告，包含限制应用功能的域名。
     formats:
       - adblock
       - clash
@@ -114,14 +87,22 @@ ads_big:
   id: 1001
   rules:
     0:
-      preset:
-        - ads
-        - p_ads_aboard
+      url:
+        # anti-Ad: https://github.com/privacy-protection-tools/anti-AD
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+        # AdRules: https://github.com/Cats-Team/AdRules
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+        # OISD: https://oisd.nl
+        - https://big.oisd.nl
       type: blocklist
+    1:
+      preset:
+        - p_ads_white
+      type: whitelist
   output:
     enabled: true
     title: Ads Blocklist Big
-    description: 额外添加了国外维护的规则源，建议用于代理程序。
+    description: 优秀规则源的合并，尽量避免误杀。
     formats:
       - adblock
       - clash
