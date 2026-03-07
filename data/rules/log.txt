@@ -1,6 +1,8 @@
 开始执行域名过滤工具
-开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 1.22 秒
+开始下载 27 个规则源...
+下载完成：26/27 成功，耗时 10.12 秒
+[WARNING] 下载失败（共 1 个）：
+[WARNING]   ✗ https://big.oisd.nl
 
 
 ================================================================================
@@ -20,48 +22,14 @@
   │    rule[0] 共 3,195 条
   │    → 加入黑名单，新增 3,195 条（合计 3,195）
   │  rule[1] type=whitelist
-  │    url：111,764 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    rule[1] 共 111,764 条
+  │    url：112,351 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    rule[1] 共 112,351 条
   │    → 精确白名单过滤，移除 265 条（剩余 2,930）
   │  处理完毕，共 2,930 条
   └─ 最终输出：2,930 条
 
 ══════════════════════════════════════════════════════════════════════
-处理规则组：p_ads_aboard (p_ads_aboard, id=1)
-══════════════════════════════════════════════════════════════════════
-  │  rule[0] type=blocklist
-  │    url：67,567 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-  │    rule[0] 共 67,567 条
-  │    → 加入黑名单，新增 67,567 条（合计 67,567）
-  │  rule[1] type=whitelist
-  │    url：11,375 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
-  │    url：16,746 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-  │    preset：2,930 条 <- p_ads_white
-  │    rule[1] 共 30,145 条
-  │    → 精确白名单过滤，移除 3,008 条（剩余 64,559）
-  │  处理完毕，共 64,559 条
-  └─ 不输出文件（output.enabled=false）
-
-══════════════════════════════════════════════════════════════════════
-处理规则组：p_ads_Aethersailor (p_ads_Aethersailor, id=2)
-══════════════════════════════════════════════════════════════════════
-  │  rule[0] type=blocklist
-  │    url：16,746 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-  │    rule[0] 共 16,746 条
-  │    → 加入黑名单，新增 16,746 条（合计 16,746）
-  │  rule[1] type=whitelist
-  │    url：470 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.xiaomi.txt
-  │    url：105 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.apple.txt
-  │    url：231 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.vivo.txt
-  │    url：8,881 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.winoffice.txt
-  │    url：363,086 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/pro.txt
-  │    rule[1] 共 363,339 条
-  │    → 精确白名单过滤，移除 5,258 条（剩余 11,488）
-  │  处理完毕，共 11,488 条
-  └─ 不输出文件（output.enabled=false）
-
-══════════════════════════════════════════════════════════════════════
-处理规则组：p_proxy_tld (p_proxy_tld, id=3)
+处理规则组：p_proxy_tld (p_proxy_tld, id=1)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
   │    pureurl：831 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
@@ -79,40 +47,44 @@
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
   │    url：4,603 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-  │    url：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-  │    url：160 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.huawei.txt
-  │    preset：11,488 条 <- p_ads_Aethersailor
-  │    rule[0] 共 16,084 条
-  │    → 加入黑名单，新增 16,084 条（合计 16,084）
+  │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+  │    url：3,361 条 <- https://raw.githubusercontent.com/qq5460168/dangchu/main/black.txt
+  │    rule[0] 共 8,322 条
+  │    → 加入黑名单，新增 8,322 条（合计 8,322）
   │  rule[1] type=whitelist
   │    preset：2,930 条 <- p_ads_white
   │    rule[1] 共 2,930 条
-  │    → 精确白名单过滤，移除 202 条（剩余 15,882）
+  │    → 精确白名单过滤，移除 207 条（剩余 8,115）
   │  rule[2] type=whitelist_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rule[2] 共 828 条
-  │    → 子域名白名单过滤，移除 210 条（剩余 15,672）
+  │    → 子域名白名单过滤，移除 125 条（剩余 7,990）
   │  rule[100] type=blocklist
   │    url：2,581 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rule[100] 共 3,365 条
-  │    → 加入黑名单，新增 2,688 条（合计 18,360）
-  │  处理完毕，共 18,360 条
-  │  子域去重：移除 1,796 条冗余子域
-  └─ 最终输出：16,564 条
+  │    → 加入黑名单，新增 2,526 条（合计 10,516）
+  │  处理完毕，共 10,516 条
+  │  子域去重：移除 2,172 条冗余子域
+  └─ 最终输出：8,344 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Big (ads_big, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    preset：18,360 条 <- ads
-  │    preset：64,559 条 <- p_ads_aboard
-  │    rule[0] 共 82,270 条
-  │    → 加入黑名单，新增 82,270 条（合计 82,270）
-  │  处理完毕，共 82,270 条
-  │  子域去重：移除 2,342 条冗余子域
-  └─ 最终输出：79,928 条
+  │    url：104,770 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+  │    url：174,423 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+[ERROR]   │    url：0 条（下载失败）<- https://big.oisd.nl
+  │    rule[0] 共 190,217 条
+  │    → 加入黑名单，新增 190,217 条（合计 190,217）
+  │  rule[1] type=whitelist
+  │    preset：2,930 条 <- p_ads_white
+  │    rule[1] 共 2,930 条
+  │    → 精确白名单过滤，移除 128 条（剩余 190,089）
+  │  处理完毕，共 190,089 条
+  │  子域去重：移除 2,951 条冗余子域
+  └─ 最终输出：187,138 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -152,5 +124,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：3.89 秒
+✓ 处理完成！耗时：12.90 秒
 ================================================================================
