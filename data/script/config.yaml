@@ -93,7 +93,7 @@ ads_big:
         # AdRules: https://github.com/Cats-Team/AdRules
         - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
         # OISD: https://oisd.nl
-        - https://big.oisd.nl
+        - https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
       type: blocklist
     1:
       preset:
