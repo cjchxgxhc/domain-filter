@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--07_15:36:15-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--08_05:22:40-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 主要屏蔽手机端广告，包含限制应用功能的域名。
 
-**规则数量**：Domain `10,516`　Hosts `10,516`　AdBlock `8,344`　Clash / Mrs `8,344`　Sing-box / Srs `8,344`
+**规则数量**：Domain `10,736`　Hosts `10,736`　AdBlock `8,583`　Clash / Mrs `8,583`　Sing-box / Srs `8,583`
 
 <details><summary>Domain</summary>
 
@@ -67,6 +67,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+- https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
@@ -85,7 +86,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`567,502`
+**规则数量**：`606,534`
 
 <details><summary>AdBlock</summary>
 
@@ -140,7 +141,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 需要被代理的域名。
 
-**规则数量**：`23,014`
+**规则数量**：`23,016`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -221,4 +222,4 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 ---
 
-*更新时间：2026-03-07 15:36:15（北京时间）*
+*更新时间：2026-03-08 05:22:40（北京时间）*

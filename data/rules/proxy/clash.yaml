@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,014
-# Updated: 2026-03-07 15:36:15 CST
+# Total: 23,016
+# Updated: 2026-03-08 05:22:40 CST
 #
 payload:
   - +.000webhost.com
@@ -17516,6 +17516,7 @@ payload:
   - +.samsunggalaxyfriends.com
   - +.samsunghealth.com
   - +.samsungiotcloud.com
+  - +.samsungiots.com
   - +.samsungknox.com
   - +.samsungosp.com
   - +.samsungqbe.com
@@ -18383,6 +18384,7 @@ payload:
   - +.smartonerobotics.com
   - +.smartonesolutions.com.hk
   - +.smartonesolutions.hk
+  - +.smartthings.com
   - +.smashed.xxx
   - +.smchbooks.com
   - +.smhric.org
