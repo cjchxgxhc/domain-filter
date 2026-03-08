@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--08_05:22:40-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--09_05:25:05-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 主要屏蔽手机端广告，包含限制应用功能的域名。
 
-**规则数量**：Domain `10,736`　Hosts `10,736`　AdBlock `8,583`　Clash / Mrs `8,583`　Sing-box / Srs `8,583`
+**规则数量**：Domain `10,788`　Hosts `10,788`　AdBlock `8,622`　Clash / Mrs `8,622`　Sing-box / Srs `8,622`
 
 <details><summary>Domain</summary>
 
@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`606,534`
+**规则数量**：`550,941`
 
 <details><summary>AdBlock</summary>
 
@@ -141,7 +141,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 需要被代理的域名。
 
-**规则数量**：`23,016`
+**规则数量**：`23,022`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -222,4 +222,4 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 ---
 
-*更新时间：2026-03-08 05:22:40（北京时间）*
+*更新时间：2026-03-09 05:25:05（北京时间）*
