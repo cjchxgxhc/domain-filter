@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 28 个规则源...
-下载完成：28/28 成功，耗时 1.40 秒
+下载完成：28/28 成功，耗时 1.61 秒
 
 
 ================================================================================
@@ -44,61 +44,61 @@
 处理规则组：Ads Blocklist China (ads, id=1000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：4,899 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：4,827 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：3,361 条 <- https://raw.githubusercontent.com/qq5460168/dangchu/main/black.txt
   │    url：301 条 <- https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
-  │    rule[0] 共 8,633 条
-  │    → 加入黑名单，新增 8,633 条（合计 8,633）
+  │    rule[0] 共 8,563 条
+  │    → 加入黑名单，新增 8,563 条（合计 8,563）
   │  rule[1] type=whitelist
   │    preset：2,930 条 <- p_ads_white
   │    rule[1] 共 2,930 条
-  │    → 精确白名单过滤，移除 222 条（剩余 8,411）
+  │    → 精确白名单过滤，移除 221 条（剩余 8,342）
   │  rule[2] type=whitelist_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rule[2] 共 828 条
-  │    → 子域名白名单过滤，移除 132 条（剩余 8,279）
+  │    → 子域名白名单过滤，移除 131 条（剩余 8,211）
   │  rule[100] type=blocklist
   │    url：2,581 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rule[100] 共 3,365 条
-  │    → 加入黑名单，新增 2,509 条（合计 10,788）
-  │  处理完毕，共 10,788 条
-  │  子域去重：移除 2,166 条冗余子域
-  └─ 最终输出：8,622 条
+  │    → 加入黑名单，新增 2,509 条（合计 10,720）
+  │  处理完毕，共 10,720 条
+  │  子域去重：移除 2,178 条冗余子域
+  └─ 最终输出：8,542 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Big (ads_big, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
   │    url：104,957 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-  │    url：174,984 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    url：424,293 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
-  │    rule[0] 共 559,158 条
-  │    → 加入黑名单，新增 559,158 条（合计 559,158）
+  │    url：177,124 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    url：427,196 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
+  │    rule[0] 共 564,174 条
+  │    → 加入黑名单，新增 564,174 条（合计 564,174）
   │  rule[1] type=whitelist
   │    preset：2,930 条 <- p_ads_white
   │    rule[1] 共 2,930 条
-  │    → 精确白名单过滤，移除 279 条（剩余 558,879）
-  │  处理完毕，共 558,879 条
+  │    → 精确白名单过滤，移除 279 条（剩余 563,895）
+  │  处理完毕，共 563,895 条
   │  子域去重：移除 7,938 条冗余子域
-  └─ 最终输出：550,941 条
+  └─ 最终输出：555,957 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：27,449 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：27,451 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
   │    preset：828 条 <- p_proxy_tld
-  │    rule[0] 共 29,665 条
-  │    → 加入黑名单，新增 29,665 条（合计 29,665）
-  │  处理完毕，共 29,665 条
+  │    rule[0] 共 29,667 条
+  │    → 加入黑名单，新增 29,667 条（合计 29,667）
+  │  处理完毕，共 29,667 条
   │  子域去重：移除 6,643 条冗余子域
-  └─ 最终输出：23,022 条
+  └─ 最终输出：23,024 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix, id=2001)
@@ -123,5 +123,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：8.31 秒
+✓ 处理完成！耗时：8.68 秒
 ================================================================================

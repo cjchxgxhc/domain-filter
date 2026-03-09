@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,022
-# Updated: 2026-03-09 05:25:05 CST
+# Total: 23,024
+# Updated: 2026-03-10 05:34:11 CST
 #
 payload:
   - +.000webhost.com
@@ -5307,6 +5307,7 @@ payload:
   - +.cutout.pro
   - +.cutscenes.net
   - +.cv
+  - +.cve.org
   - +.cw
   - +.cwcams.com
   - +.cws.conviva.com
@@ -18101,6 +18102,7 @@ payload:
   - +.shitaotv.org
   - +.shithd.com
   - +.shitjav.com
+  - +.shitjournal.org
   - +.shittytube.com
   - +.shixiao.org
   - +.shizhao.org
