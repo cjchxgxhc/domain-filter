@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 28 个规则源...
-下载完成：28/28 成功，耗时 1.61 秒
+下载完成：28/28 成功，耗时 0.93 秒
 
 
 ================================================================================
@@ -20,8 +20,8 @@
   │    rule[0] 共 3,195 条
   │    → 加入黑名单，新增 3,195 条（合计 3,195）
   │  rule[1] type=whitelist
-  │    url：112,538 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    rule[1] 共 112,538 条
+  │    url：113,227 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    rule[1] 共 113,227 条
   │    → 精确白名单过滤，移除 265 条（剩余 2,930）
   │  处理完毕，共 2,930 条
   └─ 最终输出：2,930 条
@@ -44,46 +44,46 @@
 处理规则组：Ads Blocklist China (ads, id=1000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：4,827 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：4,916 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：3,361 条 <- https://raw.githubusercontent.com/qq5460168/dangchu/main/black.txt
   │    url：301 条 <- https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
-  │    rule[0] 共 8,563 条
-  │    → 加入黑名单，新增 8,563 条（合计 8,563）
+  │    rule[0] 共 8,651 条
+  │    → 加入黑名单，新增 8,651 条（合计 8,651）
   │  rule[1] type=whitelist
   │    preset：2,930 条 <- p_ads_white
   │    rule[1] 共 2,930 条
-  │    → 精确白名单过滤，移除 221 条（剩余 8,342）
+  │    → 精确白名单过滤，移除 228 条（剩余 8,423）
   │  rule[2] type=whitelist_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rule[2] 共 828 条
-  │    → 子域名白名单过滤，移除 131 条（剩余 8,211）
+  │    → 子域名白名单过滤，移除 131 条（剩余 8,292）
   │  rule[100] type=blocklist
   │    url：2,581 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rule[100] 共 3,365 条
-  │    → 加入黑名单，新增 2,509 条（合计 10,720）
-  │  处理完毕，共 10,720 条
-  │  子域去重：移除 2,178 条冗余子域
-  └─ 最终输出：8,542 条
+  │    → 加入黑名单，新增 2,509 条（合计 10,801）
+  │  处理完毕，共 10,801 条
+  │  子域去重：移除 2,137 条冗余子域
+  └─ 最终输出：8,664 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Big (ads_big, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：104,957 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-  │    url：177,124 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    url：427,196 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
-  │    rule[0] 共 564,174 条
-  │    → 加入黑名单，新增 564,174 条（合计 564,174）
+  │    url：105,645 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+  │    url：177,372 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    url：328,115 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
+  │    rule[0] 共 465,108 条
+  │    → 加入黑名单，新增 465,108 条（合计 465,108）
   │  rule[1] type=whitelist
   │    preset：2,930 条 <- p_ads_white
   │    rule[1] 共 2,930 条
-  │    → 精确白名单过滤，移除 279 条（剩余 563,895）
-  │  处理完毕，共 563,895 条
-  │  子域去重：移除 7,938 条冗余子域
-  └─ 最终输出：555,957 条
+  │    → 精确白名单过滤，移除 277 条（剩余 464,831）
+  │  处理完毕，共 464,831 条
+  │  子域去重：移除 7,930 条冗余子域
+  └─ 最终输出：456,901 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -109,19 +109,19 @@
   │    url：15 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
   │    url：288 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
   │    url：6 条 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
-  │    pureurl：136 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
+  │    pureurl：135 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
   │    pureurl：87 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
   │    domain：21 条自定义
-  │    rule[0] 共 784 条
-  │    → 加入黑名单，新增 784 条（合计 784）
+  │    rule[0] 共 783 条
+  │    → 加入黑名单，新增 783 条（合计 783）
   │  rule[1] type=whitelist_suffix
   │    domain：2 条自定义
   │    rule[1] 共 2 条
-  │    → 子域名白名单过滤，移除 7 条（剩余 777）
-  │  处理完毕，共 777 条
+  │    → 子域名白名单过滤，移除 7 条（剩余 776）
+  │  处理完毕，共 776 条
   │  子域去重：移除 35 条冗余子域
-  └─ 最终输出：742 条
+  └─ 最终输出：741 条
 
 ================================================================================
-✓ 处理完成！耗时：8.68 秒
+✓ 处理完成！耗时：6.75 秒
 ================================================================================

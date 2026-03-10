@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 742
-# Updated: 2026-03-10 05:34:11 CST
+# Total: 741
+# Updated: 2026-03-11 05:30:12 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -726,7 +726,6 @@ payload:
   - +.xunyou.mobi
   - +.xz.pphimalayanrt.com
   - +.y.qq.com
-  - +.yacd.haishan.me
   - +.yacd.metacubex.one
   - +.ycgame.com
   - +.yebaojiasu.com
