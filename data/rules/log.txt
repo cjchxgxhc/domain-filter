@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 25 个规则源...
-下载完成：25/25 成功，耗时 1.36 秒
+下载完成：25/25 成功，耗时 1.56 秒
 
 
 ================================================================================
@@ -46,32 +46,32 @@
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：105,645 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
   │    url：113,227 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：178,450 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    url：330,190 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
-  │    rule[0] 共 477,282 条
-  │    → 加入黑名单，新增 477,282 条（合计 477,282）
+  │    url：178,545 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    url：330,628 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
+  │    rule[0] 共 477,717 条
+  │    → 加入黑名单，新增 477,717 条（合计 477,717）
   │  rule[1] type=whitelist
   │    preset：3,195 条 <- p_ads_white
   │    rule[1] 共 3,195 条
-  │    → 精确白名单过滤，移除 586 条（剩余 476,696）
-  │  处理完毕，共 476,696 条
-  │  子域去重：移除 16,057 条冗余子域
-  └─ 最终输出：460,639 条
+  │    → 精确白名单过滤，移除 586 条（剩余 477,131）
+  │  处理完毕，共 477,131 条
+  │  子域去重：移除 16,055 条冗余子域
+  └─ 最终输出：461,076 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：27,451 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：27,452 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
   │    preset：828 条 <- p_proxy_tld
-  │    rule[0] 共 29,667 条
-  │    → 加入黑名单，新增 29,667 条（合计 29,667）
-  │  处理完毕，共 29,667 条
+  │    rule[0] 共 29,668 条
+  │    → 加入黑名单，新增 29,668 条（合计 29,668）
+  │  处理完毕，共 29,668 条
   │  子域去重：移除 6,643 条冗余子域
-  └─ 最终输出：23,024 条
+  └─ 最终输出：23,025 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix, id=2001)
@@ -96,5 +96,5 @@
   └─ 最终输出：741 条
 
 ================================================================================
-✓ 处理完成！耗时：7.54 秒
+✓ 处理完成！耗时：7.57 秒
 ================================================================================
