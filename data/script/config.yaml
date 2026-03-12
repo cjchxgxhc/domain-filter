@@ -175,7 +175,7 @@ ads_not_match_proxy:
     0:
       preset:
         - ads_big
-      type: Blocklist
+      type: blocklist
     1:
       preset:
         - proxy
@@ -187,7 +187,7 @@ ads_match_proxy:
     0:
       preset:
         - ads_big
-      type: Blocklist
+      type: blocklist
     1:
       preset:
         - ads_not_match_proxy
