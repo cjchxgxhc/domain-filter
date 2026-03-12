@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 24 个规则源...
-下载完成：24/24 成功，耗时 0.96 秒
+下载完成：24/24 成功，耗时 0.82 秒
 
 
 ================================================================================
@@ -33,31 +33,31 @@
   │    url：451 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：105,645 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
   │    url：113,227 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：178,782 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    url：353,206 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
-  │    rule[0] 共 500,185 条
-  │    → 加入黑名单，新增 500,185 条（合计 500,185）
+  │    url：178,900 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    url：329,620 条 <- https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
+  │    rule[0] 共 476,814 条
+  │    → 加入黑名单，新增 476,814 条（合计 476,814）
   │  rule[1] type=whitelist
   │    preset：3,195 条 <- p_ads_white
   │    rule[1] 共 3,195 条
-  │    → 精确白名单过滤，移除 583 条（剩余 499,602）
-  │  处理完毕，共 499,602 条
-  │  子域去重：移除 16,143 条冗余子域
-  └─ 最终输出：483,459 条
+  │    → 精确白名单过滤，移除 583 条（剩余 476,231）
+  │  处理完毕，共 476,231 条
+  │  子域去重：移除 16,132 条冗余子域
+  └─ 最终输出：460,099 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    url：27,452 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：27,456 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
-  │    rule[0] 共 28,840 条
-  │    → 加入黑名单，新增 28,840 条（合计 28,840）
-  │  处理完毕，共 28,840 条
+  │    rule[0] 共 28,844 条
+  │    → 加入黑名单，新增 28,844 条（合计 28,844）
+  │  处理完毕，共 28,844 条
   │  子域去重：移除 346 条冗余子域
-  └─ 最终输出：28,494 条
+  └─ 最终输出：28,498 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix, id=2001)
@@ -85,31 +85,31 @@
 处理规则组：ads_not_match_proxy (ads_not_match_proxy, id=3000)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    preset：499,602 条 <- ads_big
-  │    rule[0] 共 499,602 条
-  │    → 加入黑名单，新增 499,602 条（合计 499,602）
+  │    preset：476,231 条 <- ads_big
+  │    rule[0] 共 476,231 条
+  │    → 加入黑名单，新增 476,231 条（合计 476,231）
   │  rule[1] type=whitelist_suffix
-  │    preset：28,840 条 <- proxy
-  │    rule[1] 共 28,840 条
-  │    → 子域名白名单过滤，移除 67,463 条（剩余 432,139）
-  │  处理完毕，共 432,139 条
+  │    preset：28,844 条 <- proxy
+  │    rule[1] 共 28,844 条
+  │    → 子域名白名单过滤，移除 64,645 条（剩余 411,586）
+  │  处理完毕，共 411,586 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Proxy (ads_match_proxy, id=3001)
 ══════════════════════════════════════════════════════════════════════
   │  rule[0] type=blocklist
-  │    preset：499,602 条 <- ads_big
-  │    rule[0] 共 499,602 条
-  │    → 加入黑名单，新增 499,602 条（合计 499,602）
+  │    preset：476,231 条 <- ads_big
+  │    rule[0] 共 476,231 条
+  │    → 加入黑名单，新增 476,231 条（合计 476,231）
   │  rule[1] type=whitelist
-  │    preset：432,139 条 <- ads_not_match_proxy
-  │    rule[1] 共 432,139 条
-  │    → 精确白名单过滤，移除 432,139 条（剩余 67,463）
-  │  处理完毕，共 67,463 条
+  │    preset：411,586 条 <- ads_not_match_proxy
+  │    rule[1] 共 411,586 条
+  │    → 精确白名单过滤，移除 411,586 条（剩余 64,645）
+  │  处理完毕，共 64,645 条
   │  子域去重：移除 2,122 条冗余子域
-  └─ 最终输出：65,341 条
+  └─ 最终输出：62,523 条
 
 ================================================================================
-✓ 处理完成！耗时：8.47 秒
+✓ 处理完成！耗时：7.88 秒
 ================================================================================
