@@ -168,3 +168,34 @@ direct_fix:
     formats:
       - clash
       - singbox
+
+ads_not_match_proxy:
+  id: 3000
+  rules:
+    0:
+      preset:
+        - ads_big
+      type: Blocklist
+    1:
+      preset:
+        - proxy
+      type: whitelist_suffix
+
+ads_match_proxy:
+  id: 3001
+  rules:
+    0:
+      preset:
+        - ads_big
+      type: Blocklist
+    1:
+      preset:
+        - ads_not_match_proxy
+      type: whitelist
+  output:
+    enabled: true
+    title: Ads Blocklist Proxy
+    description: 命中Proxy规则的广告域名。
+    formats:
+      - clash
+      - singbox
