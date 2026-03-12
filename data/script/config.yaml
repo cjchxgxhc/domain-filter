@@ -18,6 +18,7 @@ p_ads_white:
 
 p_proxy_tld:
   id: 1
+  enabled: false
   rules:
     0:
       # 国家后缀
@@ -92,8 +93,6 @@ proxy:
         # 国内缓慢
         - cloud.9mod.space
         - modyolo.com
-      preset:
-        - p_proxy_tld
       type: blocklist
   output:
     enabled: true
