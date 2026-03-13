@@ -46,15 +46,19 @@ USER_AGENT = (
     "Chrome/128.0.0.0 Safari/537.36"
 )
 
-REPO_URL = "https://github.com/cjchxgxhc/domain-filter"
-RAW_BASE = (
-    "https://raw.githubusercontent.com/cjchxgxhc/domain-filter"
-    "/refs/heads/main/data/rules"
-)
+# 有效规则类型
+# add             → 并入域名集合（原 blocklist）
+# discard         → 精确匹配过滤（原 whitelist）
+# discard_suffix  → 子域名 Trie 过滤（原 whitelist_suffix）
+# match           → 仅保留与给定集合精确匹配的域名（discard 的反逻辑）
+# match_suffix    → 仅保留被给定集合父域覆盖的域名（discard_suffix 的反逻辑）
+VALID_RULE_TYPES = frozenset({"add", "discard", "discard_suffix", "match", "match_suffix"})
 
-VALID_RULE_TYPES = frozenset({"blocklist", "whitelist", "whitelist_suffix"})
 # url 字段支持的规则来源类型（配置中 key 名）
 URL_FIELDS = ("url", "pureurl", "adblockurl")
+
+# 配置文件路径
+CONFIG_PATH = Path("data/script/config.yaml")
 
 
 # ─────────────────────────── 枚举 ────────────────────────────────────────────
@@ -175,17 +179,17 @@ def strip_comments(line: str) -> str:
 
 # ─────────────────────────── 域名提取 ────────────────────────────────────────
 
-def _extract_adblock_line(line: str, is_whitelist: bool) -> Optional[str]:
+def _extract_adblock_line(line: str, is_discard: bool) -> Optional[str]:
     """从 adblockurl 专用：仅识别 ||domain^ 或 @@||domain^，去注释后匹配。"""
     cleaned = strip_comments(line)
     if not cleaned:
         return None
-    regex = REGEX_WHITELIST if is_whitelist else REGEX_ADBLOCK
+    regex = REGEX_WHITELIST if is_discard else REGEX_ADBLOCK
     m = regex.match(cleaned)
     return m.group(1).lower() if m else None
 
 
-def _clean_general_line(line: str, is_whitelist: bool) -> Optional[str]:
+def _clean_general_line(line: str, is_discard: bool) -> Optional[str]:
     """url/pureurl 通用预处理：去注释、去前导 '-'、去引号、去 $important。"""
     cleaned = strip_comments(line)
     if not cleaned:
@@ -193,14 +197,14 @@ def _clean_general_line(line: str, is_whitelist: bool) -> Optional[str]:
     cleaned = REGEX_LEAD_DASH.sub("", cleaned).strip()
     cleaned = cleaned.strip("'\"")
     cleaned = REGEX_IMPORTANT.sub("", cleaned).strip()
-    if not is_whitelist and cleaned.startswith("@@"):
+    if not is_discard and cleaned.startswith("@@"):
         return None
     return cleaned or None
 
 
-def _try_extract_domain(cleaned: str, is_whitelist: bool) -> Optional[str]:
+def _try_extract_domain(cleaned: str, is_discard: bool) -> Optional[str]:
     """按优先级尝试各格式提取，返回域名或 None（不含纯域名行兜底）。"""
-    regex = REGEX_WHITELIST if is_whitelist else REGEX_ADBLOCK
+    regex = REGEX_WHITELIST if is_discard else REGEX_ADBLOCK
     m = regex.match(cleaned)
     if m:
         return m.group(1).lower()
@@ -221,12 +225,12 @@ def _try_extract_domain(cleaned: str, is_whitelist: bool) -> Optional[str]:
     return None
 
 
-def _extract_url_line(line: str, is_whitelist: bool) -> Optional[str]:
+def _extract_url_line(line: str, is_discard: bool) -> Optional[str]:
     """url 字段：提取并验证域名合法性。"""
-    cleaned = _clean_general_line(line, is_whitelist)
+    cleaned = _clean_general_line(line, is_discard)
     if not cleaned:
         return None
-    domain = _try_extract_domain(cleaned, is_whitelist)
+    domain = _try_extract_domain(cleaned, is_discard)
     if domain is None:
         domain = cleaned.lower()
     return domain if is_valid_domain(domain) else None
@@ -243,22 +247,22 @@ def _is_pureurl_invalid(s: str) -> bool:
     )
 
 
-def _extract_pureurl_line(line: str, is_whitelist: bool) -> Optional[str]:
+def _extract_pureurl_line(line: str, is_discard: bool) -> Optional[str]:
     """pureurl 字段：提取但不验证域名合法性。"""
-    cleaned = _clean_general_line(line, is_whitelist)
+    cleaned = _clean_general_line(line, is_discard)
     if not cleaned:
         return None
-    domain = _try_extract_domain(cleaned, is_whitelist)
+    domain = _try_extract_domain(cleaned, is_discard)
     target = domain if domain is not None else cleaned.lower()
     return None if _is_pureurl_invalid(target) else target
 
 
 # ─────────────────────────── 域名提取（列表级）────────────────────────────────
 
-def _extract_chunk(chunk: List[str], extractor, is_whitelist: bool) -> Set[str]:
+def _extract_chunk(chunk: List[str], extractor, is_discard: bool) -> Set[str]:
     result: Set[str] = set()
     for line in chunk:
-        domain = extractor(line, is_whitelist)
+        domain = extractor(line, is_discard)
         if domain:
             result.add(domain)
     return result
@@ -267,7 +271,7 @@ def _extract_chunk(chunk: List[str], extractor, is_whitelist: bool) -> Set[str]:
 def _parallel_extract(
     lines: List[str],
     extractor,
-    is_whitelist: bool,
+    is_discard: bool,
     log_file: Optional[Path] = None,
 ) -> Set[str]:
     if not lines:
@@ -276,7 +280,7 @@ def _parallel_extract(
     result: Set[str] = set()
     with ThreadPoolExecutor(max_workers=EXTRACT_WORKERS) as executor:
         futures = [
-            executor.submit(_extract_chunk, c, extractor, is_whitelist)
+            executor.submit(_extract_chunk, c, extractor, is_discard)
             for c in chunks
         ]
         for future in as_completed(futures):
@@ -290,7 +294,7 @@ def _parallel_extract(
 def extract_from_lines(
     lines: List[str],
     field: str,
-    is_whitelist: bool,
+    is_discard: bool,
     log_file: Optional[Path] = None,
 ) -> Set[str]:
     """根据字段类型从规则行列表中提取域名。
@@ -300,11 +304,10 @@ def extract_from_lines(
     adblockurl → 仅提取 ||domain^ 或 @@||domain^
     """
     if field == "adblockurl":
-        return _parallel_extract(lines, _extract_adblock_line, is_whitelist, log_file)
+        return _parallel_extract(lines, _extract_adblock_line, is_discard, log_file)
     if field == "pureurl":
-        return _parallel_extract(lines, _extract_pureurl_line, is_whitelist, log_file)
-    # url
-    return _parallel_extract(lines, _extract_url_line, is_whitelist, log_file)
+        return _parallel_extract(lines, _extract_pureurl_line, is_discard, log_file)
+    return _parallel_extract(lines, _extract_url_line, is_discard, log_file)
 
 
 # ─────────────────────────── Trie 树 ─────────────────────────────────────────
@@ -338,17 +341,17 @@ def _is_subdomain_of_any(domain: str, trie: TrieNode) -> bool:
     return node.is_end
 
 
-# ─────────────────────────── 白名单过滤 ──────────────────────────────────────
+# ─────────────────────────── 过滤操作 ────────────────────────────────────────
 
-def filter_whitelist(black: Set[str], white: Set[str]) -> Set[str]:
-    """子域名 Trie 过滤：移除黑名单中被白名单父域覆盖的条目。"""
-    if not white or not black:
-        return black
-    trie = _build_trie(white)
-    black_list = list(black)
+def filter_discard_suffix(current: Set[str], ref: Set[str]) -> Set[str]:
+    """子域名 Trie 过滤：移除 current 中被 ref 父域覆盖的条目（原 whitelist_suffix）。"""
+    if not ref or not current:
+        return current
+    trie = _build_trie(ref)
+    current_list = list(current)
     chunks = [
-        black_list[i : i + FILTER_CHUNK_SIZE]
-        for i in range(0, len(black_list), FILTER_CHUNK_SIZE)
+        current_list[i : i + FILTER_CHUNK_SIZE]
+        for i in range(0, len(current_list), FILTER_CHUNK_SIZE)
     ]
     result: Set[str] = set()
     with ThreadPoolExecutor(max_workers=FILTER_WORKERS) as executor:
@@ -360,13 +363,42 @@ def filter_whitelist(black: Set[str], white: Set[str]) -> Set[str]:
             try:
                 result.update(future.result())
             except Exception as e:
-                log(f"白名单过滤失败: {e}", LogLevel.WARNING)
+                log(f"discard_suffix 过滤失败: {e}", LogLevel.WARNING)
     return result
 
 
-def filter_whitelist_exact(black: Set[str], white: Set[str]) -> Set[str]:
-    """精确匹配过滤：仅移除与白名单完全相同的条目。"""
-    return black - white if white and black else black
+def filter_discard_exact(current: Set[str], ref: Set[str]) -> Set[str]:
+    """精确匹配过滤：移除与 ref 完全相同的条目（原 whitelist）。"""
+    return current - ref if ref and current else current
+
+
+def filter_match_exact(current: Set[str], ref: Set[str]) -> Set[str]:
+    """精确保留过滤：仅保留 current 中与 ref 精确匹配的条目（discard 的反逻辑）。"""
+    return current & ref if ref and current else set()
+
+
+def filter_match_suffix(current: Set[str], ref: Set[str]) -> Set[str]:
+    """子域名 Trie 保留过滤：仅保留 current 中被 ref 父域覆盖的条目（discard_suffix 的反逻辑）。"""
+    if not ref or not current:
+        return set()
+    trie = _build_trie(ref)
+    current_list = list(current)
+    chunks = [
+        current_list[i : i + FILTER_CHUNK_SIZE]
+        for i in range(0, len(current_list), FILTER_CHUNK_SIZE)
+    ]
+    result: Set[str] = set()
+    with ThreadPoolExecutor(max_workers=FILTER_WORKERS) as executor:
+        futures = [
+            executor.submit(lambda c: {d for d in c if _is_subdomain_of_any(d, trie)}, chunk)
+            for chunk in chunks
+        ]
+        for future in as_completed(futures):
+            try:
+                result.update(future.result())
+            except Exception as e:
+                log(f"match_suffix 过滤失败: {e}", LogLevel.WARNING)
+    return result
 
 
 # ─────────────────────────── 子域去重 ────────────────────────────────────────
@@ -390,7 +422,7 @@ def remove_subdomains(domains: Set[str]) -> Set[str]:
 
 # ─────────────────────────── 下载 ────────────────────────────────────────────
 
-def create_session() -> requests.Session:
+def create_session(user_agent: str) -> requests.Session:
     session = requests.Session()
     retry = Retry(
         total=RETRY_COUNT,
@@ -401,7 +433,7 @@ def create_session() -> requests.Session:
     adapter = HTTPAdapter(max_retries=retry)
     session.mount("http://", adapter)
     session.mount("https://", adapter)
-    session.headers["User-Agent"] = USER_AGENT
+    session.headers["User-Agent"] = user_agent
     return session
 
 
@@ -416,6 +448,7 @@ def download_url(url: str, session: requests.Session) -> Tuple[bool, List[str]]:
 
 def download_all(
     urls: List[str],
+    user_agent: str,
     log_file: Optional[Path] = None,
 ) -> Dict[str, List[str]]:
     if not urls:
@@ -423,7 +456,7 @@ def download_all(
 
     log(f"开始下载 {len(urls)} 个规则源...", log_file=log_file)
     t0      = time.time()
-    session = create_session()
+    session = create_session(user_agent)
     result: Dict[str, List[str]] = {}
     failed: List[str] = []
 
@@ -453,6 +486,60 @@ def download_all(
     return result
 
 
+# ─────────────────────────── 文件头生成 ──────────────────────────────────────
+
+def build_header(
+    count: int,
+    title: str,
+    description: str,
+    now_str: str,
+    header_cfg: Dict,
+    comment_char: str,
+) -> str:
+    """根据配置生成文件头注释。
+
+    header_cfg 字段（均可在配置文件中自定义）：
+      enabled      → bool，是否写入文件头，默认 true
+      repo_url     → str，Homepage 行的 URL
+      show_title   → bool，是否输出 Title 行，默认 true
+      show_desc    → bool，是否输出 Description 行，默认 true
+      show_homepage→ bool，是否输出 Homepage 行，默认 true
+      show_total   → bool，是否输出 Total 行，默认 true
+      show_updated → bool，是否输出 Updated 行，默认 true
+      extra_lines  → list[str]，额外追加的注释行（不含前缀）
+    """
+    if not header_cfg.get("enabled", True):
+        return ""
+    if not title:
+        return ""
+
+    repo_url     = header_cfg.get("repo_url", "")
+    show_title   = header_cfg.get("show_title", True)
+    show_desc    = header_cfg.get("show_desc", True)
+    show_homepage= header_cfg.get("show_homepage", True)
+    show_total   = header_cfg.get("show_total", True)
+    show_updated = header_cfg.get("show_updated", True)
+    extra_lines  = header_cfg.get("extra_lines", []) or []
+
+    c = comment_char
+    parts = []
+    if show_title:
+        parts.append(f"{c} Title: {title}")
+    if show_desc and description:
+        parts.append(f"{c} Description: {description}")
+    if show_homepage and repo_url:
+        parts.append(f"{c} Homepage: {repo_url}")
+    if show_total:
+        parts.append(f"{c} Total: {count:,}")
+    if show_updated:
+        parts.append(f"{c} Updated: {now_str}")
+    for line in extra_lines:
+        parts.append(f"{c} {line}")
+    parts.append(c)
+
+    return "\n".join(parts) + "\n"
+
+
 # ─────────────────────────── 文件保存 ────────────────────────────────────────
 
 def save_domains(
@@ -462,47 +549,29 @@ def save_domains(
     title: str,
     description: str,
     formats: List[str],
+    header_cfg: Dict,
+    timezone: str,
 ) -> Dict[str, int]:
     """将域名保存到各格式文件，返回各格式实际条目数。
 
-    domain / hosts        → simple_domains（精确去重）
+    domain / hosts            → simple_domains（精确去重）
     adblock / clash / singbox → deduped_domains（子域去重）
     """
     if not simple_domains and not deduped_domains:
         log_error(f"警告：没有域名可保存（{output_dir.name}）")
         return {}
 
-    now     = datetime.datetime.now(ZoneInfo("Asia/Shanghai"))
+    now     = datetime.datetime.now(ZoneInfo(timezone))
     now_str = now.strftime("%Y-%m-%d %H:%M:%S %Z")
     counts: Dict[str, int] = {}
     sorted_simple  = sorted(simple_domains)
     sorted_deduped = sorted(deduped_domains)
 
     def _bang_header(count: int) -> str:
-        if not title:
-            return ""
-        parts = [
-            f"! Title: {title}",
-            f"! Description: {description}" if description else "",
-            f"! Homepage: {REPO_URL}",
-            f"! Total: {count:,}",
-            f"! Updated: {now_str}",
-            "!",
-        ]
-        return "\n".join(p for p in parts if p) + "\n"
+        return build_header(count, title, description, now_str, header_cfg, "!")
 
     def _hash_header(count: int) -> str:
-        if not title:
-            return ""
-        parts = [
-            f"# Title: {title}",
-            f"# Description: {description}" if description else "",
-            f"# Homepage: {REPO_URL}",
-            f"# Total: {count:,}",
-            f"# Updated: {now_str}",
-            "#",
-        ]
-        return "\n".join(p for p in parts if p) + "\n"
+        return build_header(count, title, description, now_str, header_cfg, "#")
 
     if "domain" in formats:
         count = len(sorted_simple)
@@ -563,7 +632,7 @@ def save_domains(
 
 # ─────────────────────────── README 生成 ─────────────────────────────────────
 
-def generate_readme(output_root: Path, stats: Dict) -> None:
+def generate_readme(output_root: Path, stats: Dict, repo_url: str, raw_base: str) -> None:
     now_cst    = datetime.datetime.now(ZoneInfo("Asia/Shanghai"))
     timestamp  = now_cst.strftime("%Y-%m-%d %H:%M:%S")
     date_badge = now_cst.strftime("%Y--%m--%d_%H:%M:%S")
@@ -576,11 +645,11 @@ def generate_readme(output_root: Path, stats: Dict) -> None:
         "singbox": "Sing-box / Srs",
     }
     fmt_files = {
-        "domain":  lambda k: [f"{RAW_BASE}/{k}/domain.txt"],
-        "adblock": lambda k: [f"{RAW_BASE}/{k}/adblock.txt"],
-        "hosts":   lambda k: [f"{RAW_BASE}/{k}/hosts.txt"],
-        "clash":   lambda k: [f"{RAW_BASE}/{k}/clash.yaml", f"{RAW_BASE}/{k}/clash.mrs"],
-        "singbox": lambda k: [f"{RAW_BASE}/{k}/singbox.json", f"{RAW_BASE}/{k}/singbox.srs"],
+        "domain":  lambda k: [f"{raw_base}/{k}/domain.txt"],
+        "adblock": lambda k: [f"{raw_base}/{k}/adblock.txt"],
+        "hosts":   lambda k: [f"{raw_base}/{k}/hosts.txt"],
+        "clash":   lambda k: [f"{raw_base}/{k}/clash.yaml", f"{raw_base}/{k}/clash.mrs"],
+        "singbox": lambda k: [f"{raw_base}/{k}/singbox.json", f"{raw_base}/{k}/singbox.srs"],
     }
 
     lines = [
@@ -663,22 +732,29 @@ def generate_readme(output_root: Path, stats: Dict) -> None:
 
 # ─────────────────────────── 配置加载 ────────────────────────────────────────
 
-def load_config() -> List[Dict]:
-    """加载配置文件，返回按 id 升序排列的规则组列表。
+def load_config() -> Tuple[Dict, List[Dict]]:
+    """加载配置文件，返回 (全局设置, 规则组列表)。
 
-    字段说明：
+    全局设置（global 键）：
+      repo_url     → str  仓库主页 URL
+      raw_base     → str  原始文件基础 URL（用于 README）
+      output_root  → str  输出根目录，默认 data/rules
+      timezone     → str  时区，默认 Asia/Shanghai
+      user_agent   → str  HTTP User-Agent
+      header       → dict 文件头配置（各格式通用）
+
+    规则组（其他键）：
       id:      int   处理顺序（小的先处理）
       enabled: bool  默认 true
-      rules:   dict  key 为数字字符串，value 为规则定义
-      output:  dict  enabled（默认 false）/ title / description / formats
+      rules:   list  规则列表（按顺序处理）
+      output:  dict  enabled / title / description / formats
     """
-    path = Path("data/script/config.yaml")
-    if not path.is_file():
-        log_error("错误：缺少 data/script/config.yaml 文件")
+    if not CONFIG_PATH.is_file():
+        log_error(f"错误：缺少 {CONFIG_PATH} 文件")
         sys.exit(1)
 
     try:
-        with path.open(encoding="utf-8") as f:
+        with CONFIG_PATH.open(encoding="utf-8") as f:
             data = yaml.safe_load(f) or {}
     except yaml.YAMLError as e:
         log_error(f"config.yaml 解析失败：{e}")
@@ -687,22 +763,35 @@ def load_config() -> List[Dict]:
         log_error(f"config.yaml 读取失败：{e}")
         sys.exit(1)
 
+    # 全局设置
+    global_cfg = data.pop("global", {}) or {}
+
     groups = []
     for cfg_key, cfg in data.items():
-        if not isinstance(cfg, dict) or "rules" not in cfg:
+        if not isinstance(cfg, dict):
             continue
+
+        # rules 支持 list（新格式）和 dict（旧格式，key 为数字字符串）
+        raw_rules = cfg.get("rules") or []
+        if isinstance(raw_rules, dict):
+            # 兼容旧格式：按数字 key 排序转换为 list
+            try:
+                raw_rules = [raw_rules[k] for k in sorted(raw_rules.keys(), key=lambda x: int(x))]
+            except (ValueError, TypeError):
+                raw_rules = list(raw_rules.values())
+
         groups.append({
             "cfg_key": cfg_key,
             "id":      int(cfg.get("id", 0)),
             "enabled": bool(cfg.get("enabled", True)),
-            "rules":   cfg.get("rules") or {},
+            "rules":   raw_rules,
             "output":  cfg.get("output") or {},
         })
 
     groups.sort(key=lambda g: g["id"])
     enabled_count = sum(1 for g in groups if g["enabled"])
     log(f"✓ 配置已加载：共 {len(groups)} 个规则组，{enabled_count} 个已启用")
-    return groups
+    return global_cfg, groups
 
 
 # ─────────────────────────── 配置校验 ────────────────────────────────────────
@@ -720,20 +809,20 @@ def validate_config(groups: List[Dict], log_file: Optional[Path] = None) -> bool
         else:
             seen_ids[gid] = key
 
-        rules = group.get("rules", {})
-        if not isinstance(rules, dict):
-            errors.append(f"规则组 '{key}' 的 rules 必须是字典")
+        rules = group.get("rules", [])
+        if not isinstance(rules, list):
+            errors.append(f"规则组 '{key}' 的 rules 必须是列表")
             continue
 
-        for rule_id, rule in rules.items():
+        for idx, rule in enumerate(rules):
             if not isinstance(rule, dict):
-                errors.append(f"规则组 '{key}' rule[{rule_id}] 必须是字典")
+                errors.append(f"规则组 '{key}' rules[{idx}] 必须是字典")
                 continue
-            rule_type = rule.get("type", "blocklist")
+            rule_type = rule.get("type", "add")
             if rule_type not in VALID_RULE_TYPES:
                 errors.append(
-                    f"规则组 '{key}' rule[{rule_id}] type '{rule_type}' 无效，"
-                    f"必须是 {'/'.join(sorted(VALID_RULE_TYPES))}"
+                    f"规则组 '{key}' rules[{idx}] type '{rule_type}' 无效，"
+                    f"必须是 {' / '.join(sorted(VALID_RULE_TYPES))}"
                 )
 
     for err in errors:
@@ -749,7 +838,7 @@ def collect_urls(groups: List[Dict]) -> Set[str]:
     for group in groups:
         if not group["enabled"]:
             continue
-        for rule in (group.get("rules") or {}).values():
+        for rule in (group.get("rules") or []):
             if not isinstance(rule, dict):
                 continue
             for field in URL_FIELDS:
@@ -774,13 +863,17 @@ def process_group(
     group_cache_urls: Dict[int, Set[str]],
     all_stats: Dict,
     log_file: Path,
+    header_cfg: Dict,
+    timezone: str,
 ) -> None:
     """处理单个规则组。
 
-    按 rule id 升序遍历，根据 type 对当前域名集合执行：
-      blocklist        → 并入
-      whitelist        → 精确匹配过滤
-      whitelist_suffix → 子域名 Trie 过滤
+    按 rules 列表顺序遍历，根据 type 对当前域名集合执行：
+      add            → 并入（原 blocklist）
+      discard        → 精确匹配过滤（原 whitelist）
+      discard_suffix → 子域名 Trie 过滤（原 whitelist_suffix）
+      match          → 精确保留（discard 的反逻辑）
+      match_suffix   → 子域名 Trie 保留（discard_suffix 的反逻辑）
     """
     cfg_key    = group["cfg_key"]
     gid        = group["id"]
@@ -797,24 +890,18 @@ def process_group(
     log(f"处理规则组：{title or cfg_key} ({cfg_key}, id={gid})", log_file=log_file)
     log(f"{'═' * 70}", log_file=log_file)
 
-    rules = group.get("rules", {})
-    try:
-        sorted_rule_ids = sorted(rules.keys(), key=lambda k: int(k))
-    except (ValueError, TypeError):
-        sorted_rule_ids = sorted(rules.keys())
-
+    rules = group.get("rules", [])
     current_domains:  Set[str] = set()
     group_source_urls: Set[str] = set()
 
-    for rule_id in sorted_rule_ids:
-        rule = rules[rule_id]
+    for idx, rule in enumerate(rules):
         if not isinstance(rule, dict):
             continue
 
-        rule_type = rule.get("type", "blocklist")
-        is_wl     = rule_type in ("whitelist", "whitelist_suffix")
+        rule_type  = rule.get("type", "add")
+        is_discard = rule_type in ("discard", "discard_suffix", "match", "match_suffix")
 
-        log(f"  │  rule[{rule_id}] type={rule_type}", log_file=log_file)
+        log(f"  │  rules[{idx}] type={rule_type}", log_file=log_file)
         rule_domains: Set[str] = set()
 
         # url / pureurl / adblockurl：各字段对应各自提取逻辑
@@ -826,7 +913,7 @@ def process_group(
                 group_source_urls.add(url)
                 lines = downloaded.get(url, [])
                 if lines:
-                    domains = extract_from_lines(lines, field, is_wl, log_file)
+                    domains = extract_from_lines(lines, field, is_discard, log_file)
                     rule_domains.update(domains)
                     log(f"  │    {field}：{len(domains):,} 条 <- {url}", log_file=log_file)
                 else:
@@ -864,28 +951,42 @@ def process_group(
                     log_file=log_file,
                 )
 
-        log(f"  │    rule[{rule_id}] 共 {len(rule_domains):,} 条", log_file=log_file)
+        log(f"  │    rules[{idx}] 共 {len(rule_domains):,} 条", log_file=log_file)
 
         before = len(current_domains)
-        if rule_type == "blocklist":
+        if rule_type == "add":
             current_domains.update(rule_domains)
             added = len(current_domains) - before
             log(
-                f"  │    → 加入黑名单，新增 {added:,} 条（合计 {len(current_domains):,}）",
+                f"  │    → 加入集合，新增 {added:,} 条（合计 {len(current_domains):,}）",
                 log_file=log_file,
             )
-        elif rule_type == "whitelist":
-            current_domains = filter_whitelist_exact(current_domains, rule_domains)
+        elif rule_type == "discard":
+            current_domains = filter_discard_exact(current_domains, rule_domains)
             removed = before - len(current_domains)
             log(
-                f"  │    → 精确白名单过滤，移除 {removed:,} 条（剩余 {len(current_domains):,}）",
+                f"  │    → 精确丢弃，移除 {removed:,} 条（剩余 {len(current_domains):,}）",
                 log_file=log_file,
             )
-        elif rule_type == "whitelist_suffix":
-            current_domains = filter_whitelist(current_domains, rule_domains)
+        elif rule_type == "discard_suffix":
+            current_domains = filter_discard_suffix(current_domains, rule_domains)
             removed = before - len(current_domains)
             log(
-                f"  │    → 子域名白名单过滤，移除 {removed:,} 条（剩余 {len(current_domains):,}）",
+                f"  │    → 后缀丢弃，移除 {removed:,} 条（剩余 {len(current_domains):,}）",
+                log_file=log_file,
+            )
+        elif rule_type == "match":
+            current_domains = filter_match_exact(current_domains, rule_domains)
+            kept = len(current_domains)
+            log(
+                f"  │    → 精确保留，保留 {kept:,} 条（移除 {before - kept:,}）",
+                log_file=log_file,
+            )
+        elif rule_type == "match_suffix":
+            current_domains = filter_match_suffix(current_domains, rule_domains)
+            kept = len(current_domains)
+            log(
+                f"  │    → 后缀保留，保留 {kept:,} 条（移除 {before - kept:,}）",
                 log_file=log_file,
             )
 
@@ -913,7 +1014,8 @@ def process_group(
     group_dir = output_root / cfg_key
     group_dir.mkdir(parents=True, exist_ok=True)
     format_counts = save_domains(
-        current_domains, deduped_domains, group_dir, title, description, formats
+        current_domains, deduped_domains, group_dir,
+        title, description, formats, header_cfg, timezone,
     )
 
     gc.collect()
@@ -938,20 +1040,29 @@ def main() -> None:
     print("=" * 80)
     print()
 
-    output_root = Path("data/rules")
+    try:
+        global_cfg, groups = load_config()
+    except Exception as e:
+        log_error(f"配置加载失败：{e}")
+        traceback.print_exc()
+        sys.exit(1)
+
+    # 从全局配置读取参数，未配置则使用内置默认值
+    repo_url    = global_cfg.get("repo_url", REPO_URL)
+    raw_base    = global_cfg.get("raw_base", RAW_BASE)
+    output_root = Path(global_cfg.get("output_root", "data/rules"))
+    timezone    = global_cfg.get("timezone", "Asia/Shanghai")
+    user_agent  = global_cfg.get("user_agent", USER_AGENT)
+    header_cfg  = global_cfg.get("header", {}) or {}
+    # 将 repo_url 注入 header_cfg（若未单独配置）
+    header_cfg.setdefault("repo_url", repo_url)
+
     output_root.mkdir(parents=True, exist_ok=True)
     main_log = output_root / "log.txt"
     if main_log.exists():
         main_log.unlink()
 
     log("开始执行域名过滤工具", log_file=main_log)
-
-    try:
-        groups = load_config()
-    except Exception as e:
-        log_error(f"配置加载失败：{e}")
-        log(traceback.format_exc(), LogLevel.ERROR, main_log)
-        sys.exit(1)
 
     if not validate_config(groups, main_log):
         sys.exit(1)
@@ -961,7 +1072,7 @@ def main() -> None:
 
     all_urls = collect_urls(groups)
     try:
-        downloaded = download_all(list(all_urls), main_log)
+        downloaded = download_all(list(all_urls), user_agent, main_log)
     except Exception as e:
         log_error(f"下载过程中出现错误：{e}")
         log(traceback.format_exc(), LogLevel.ERROR, main_log)
@@ -987,13 +1098,14 @@ def main() -> None:
                 group, downloaded, output_root,
                 group_cache, group_cache_urls,
                 all_stats, main_log,
+                header_cfg, timezone,
             )
         except Exception as e:
             log_error(f"规则组处理异常 [{group['cfg_key']}]：{e}")
             log(traceback.format_exc(), LogLevel.ERROR, main_log)
 
     try:
-        generate_readme(output_root, all_stats)
+        generate_readme(output_root, all_stats, repo_url, raw_base)
     except Exception as e:
         log_error(f"README 生成失败：{e}")
         log(traceback.format_exc(), LogLevel.ERROR, main_log)
@@ -1006,6 +1118,14 @@ def main() -> None:
     _flush_log_buffer()
     gc.collect()
 
+
+# ─────────────────────────── 内置默认值（兜底）────────────────────────────────
+
+REPO_URL = "https://github.com/cjchxgxhc/domain-filter"
+RAW_BASE = (
+    "https://raw.githubusercontent.com/cjchxgxhc/domain-filter"
+    "/refs/heads/main/data/rules"
+)
 
 if __name__ == "__main__":
     try:
