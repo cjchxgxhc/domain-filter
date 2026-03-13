@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 6,367
-# Updated: 2026-03-13 17:34:13 CST
+# Total: 6,381
+# Updated: 2026-03-14 05:35:00 CST
 #
 payload:
   - +.035348383.weebly.com
@@ -298,6 +298,7 @@ payload:
   - +.ads-setu-proxy-eu.amazon.com
   - +.ads-setu-proxy.amazon.com
   - +.ads-sg.tiktok.com
+  - +.ads-sibbo.b-cdn.net
   - +.ads-thanhnien-vn.cdn.ampproject.org
   - +.ads-ttp2.tiktokw.eu.edgesuite.net
   - +.ads-ttp2.us.tiktok.com
@@ -541,7 +542,6 @@ payload:
   - +.aldinord.tt.omtrdc.net
   - +.aldisued.sc.omtrdc.net
   - +.aldisued.tt.omtrdc.net
-  - +.alerts.springer.com
   - +.aleum11.hopto.org
   - +.alex.daum.net
   - +.alexa-hybrid-interaction-log-config-prod-na.s3.amazonaws.com
@@ -713,6 +713,7 @@ payload:
   - +.analytics.grok.com
   - +.analytics.ietf.org
   - +.analytics.immersivetranslate.com
+  - +.analytics.inquirer.net
   - +.analytics.js.org
   - +.analytics.lastpass.com
   - +.analytics.live.com
@@ -1032,6 +1033,7 @@ payload:
   - +.badding.oss-ap-southeast-1.aliyuncs.com
   - +.badge.facebook.com
   - +.badges.instagram.com
+  - +.bajajallianzgeneralinsurance.sc.omtrdc.net
   - +.bajajfinance.tt.omtrdc.net
   - +.bam.nr-data.net.cdn.cloudflare.net
   - +.bamtech.tt.omtrdc.net
@@ -1111,6 +1113,7 @@ payload:
   - +.beacon.playback.api.brightcove.com
   - +.beacon.shazam.com
   - +.beacon.take2games.com
+  - +.beacon.twitch.tv
   - +.beacon.walmart.com
   - +.beacon.walmart.com.akadns.net
   - +.beaconimages-prod.dradis.netflix.com
@@ -1132,6 +1135,7 @@ payload:
   - +.beans.opensuse.org
   - +.beap-bc.yahoo.com
   - +.bear-ad.oss-us-west-1.aliyuncs.com
+  - +.beatselectronicsllc.tt.omtrdc.net
   - +.bectondickinsonandcompany.data.adobedc.net
   - +.beefit-tracker.s3.eu-west-2.amazonaws.com
   - +.beehiiv-adnetwork-production.s3.amazonaws.com
@@ -1984,6 +1988,7 @@ payload:
   - +.d3j1weegxvu8ns.cloudfront.net
   - +.d3jzhqnvnvdy34.cloudfront.net
   - +.d3k1w8lx8mqizo.cloudfront.net
+  - +.d3ko2p4zmfgl2g.cloudfront.net
   - +.d3kyk5bao1crtw.cloudfront.net
   - +.d3l739e8r8y9v7.cloudfront.net
   - +.d3lcz8vpax4lo2.cloudfront.net
@@ -2568,6 +2573,7 @@ payload:
   - +.ezrhirglfm.data.adobedc.net
   - +.f.convertkit.com.cdn.cloudflare.net
   - +.f3i5-0g49bgn-3h95-1324992141.cos.ap-jakarta.myqcloud.com
+  - +.fa-etbx-saasfaprod1.fa.ocs.oraclecloud.com
   - +.fa8aa448-devopsts-devopsts-116a-38259446.us-west-2.elb.amazonaws.com
   - +.faa.d2.sc.omtrdc.net
   - +.failover-telemetry-as.tradingview.com
@@ -2699,6 +2705,8 @@ payload:
   - +.freshfaxmail-1318034737.cos.sa-saopaulo.myqcloud.com
   - +.fresnel-events.vimeocdn.com
   - +.fresnel.vimeocdn.com
+  - +.fressnapf.de.ssl.sc.omtrdc.net
+  - +.fressnapftiernahrung.tt.omtrdc.net
   - +.friends2follow-us.s3.amazonaws.com
   - +.friendship.nbc.com
   - +.friendship.nbc.com.edgesuite.net
@@ -2821,6 +2829,7 @@ payload:
   - +.goindigo.in.data.adobedc.net
   - +.gold.roblox.com
   - +.golda.cafe.naver.com
+  - +.goldengoose.my.salesforce-sites.com
   - +.goodyear.tt.omtrdc.net
   - +.googleadapis.google.com
   - +.goshare-fleet-ads.s3.ap-southeast-1.amazonaws.com
@@ -2888,6 +2897,7 @@ payload:
   - +.gtm-npwscvr-nzljn.uc.r.appspot.com
   - +.gtm-nsxr2dd-ywmym.uc.r.appspot.com
   - +.gtm-nt597cv-ndmzm.uc.r.appspot.com
+  - +.gtm-nxw8wx7s-ztq0n.uc.r.appspot.com
   - +.gtm-p54b9bn8-mdq3n.uc.r.appspot.com
   - +.gtm-p6wspbt-ywq0m.uc.r.appspot.com
   - +.gtm-p8ngnn2k-yzdmz.uc.r.appspot.com
@@ -3195,6 +3205,7 @@ payload:
   - +.investorsbusinessdai.tt.omtrdc.net
   - +.invitation.samsungiotcloud.com
   - +.invitrogen.sc.omtrdc.net
+  - +.ionos.de.ssl.sc.omtrdc.net
   - +.ios-app-diagnostics.s3.us-west-2.amazonaws.com
   - +.ios.bugly.prod01.amer.cros.wr.pvp.net
   - +.iosdiags.apple.com
@@ -3877,6 +3888,7 @@ payload:
   - +.mon31-normal-useast1a.tiktokv.com
   - +.mon32-normal-useast1a.tiktokv.com
   - +.monelimited.tt.omtrdc.net
+  - +.monero.herominers.com
   - +.moneta.sc.omtrdc.net
   - +.monetate.edgekey.net
   - +.monitor.channel4.com
@@ -5094,6 +5106,7 @@ payload:
   - +.smetrics.mastercard.com
   - +.smetrics.mcafee.com
   - +.smetrics.mcdonalds.com
+  - +.smetrics.nintendo.com
   - +.smetrics.nvidia.com
   - +.smetrics.onetrust.com
   - +.smetrics.realtor.com
@@ -6325,6 +6338,7 @@ payload:
   - +.xz.fbcdn.net
   - +.xzliewk0jg.data.adobedc.net
   - +.y6rqjbto8p.data.adobedc.net
+  - +.yalp-store-crash-reports.duckdns.org
   - +.yandex-metrica-v2.galilcloud.wixapps.net
   - +.ybp.yahoo.com
   - +.ybs.data.adobedc.net
