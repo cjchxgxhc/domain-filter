@@ -1,9 +1,47 @@
-# ID: ads 1000, 代理规则 2000
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║                         Domain Filter 配置文件                          ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+#
+# 规则类型（type）说明：
+#   add            → 将规则域名并入当前集合
+#   discard        → 精确移除与规则匹配的域名
+#   discard_suffix → 移除被规则父域名覆盖的域名
+#   match          → 仅保留与规则精确匹配的域名（discard 的反逻辑）
+#   match_suffix   → 仅保留被规则父域名覆盖的域名（discard_suffix 的反逻辑）
+#
+# 数据来源字段：
+#   url        → 下载并提取域名，支持所有格式，验证域名合法性
+#   pureurl    → 下载并提取域名，支持所有格式，不严格验证
+#   adblockurl → 仅识别 adblock 格式（||domain^ 或 @@||domain^）
+#   domain     → 直接写入自定义域名列表
+#   preset     → 引用另一个规则组的处理结果（id 必须小于当前组）
+#
+# 规则在 rules 列表中按顺序执行，顺序影响最终结果。
+
+
+# ──────────────────────────── 全局配置 ────────────────────────────────────────
+
+global:
+  repo_url: https://github.com/cjchxgxhc/domain-filter
+  raw_base: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules
+  output_root: data/rules
+  timezone: Asia/Shanghai
+  header:
+    enabled: true
+    show_title: true
+    show_desc: true
+    show_homepage: true
+    show_total: true
+    show_updated: true
+    extra_lines: []
+
+
+# ──────────────────────────── 规则组 ──────────────────────────────────────────
 
 p_ads_white:
   id: 0
   rules:
-    0:
+    - type: add
       url:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
@@ -12,20 +50,17 @@ p_ads_white:
         - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-      type: blocklist
   output:
-    enabled: true
+    enabled: false
+
 
 p_proxy_tld:
   id: 1
-  enabled: false
   rules:
-    0:
-      # 国家后缀
+    - type: add
       pureurl:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-      type: blocklist
-    1:
+    - type: discard
       domain:
         - cn
         - com
@@ -34,48 +69,68 @@ p_proxy_tld:
         - co
         - io
         - xxx
-      type: whitelist
   output:
     enabled: true
+
 
 ads_big:
   id: 1000
   rules:
-    0:
+    - type: add
       url:
-        # SM广告丟那吗(引用广告联盟): https://github.com/2Gardon/SM-Ad-FuckU-hosts/blob/master/SMAdHosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
-        # 自动更新去广告的hosts(自定义规则): https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        # 秋风广告规则: https://awavenue.top/
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-        # DNS Blocklists(OPPO追踪域名): https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-        # anti-Ad: https://github.com/privacy-protection-tools/anti-AD
+        # DNS Blocklists: https://github.com/hagezi/dns-blocklists
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.txt
+    - type: discard_suffix
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
+    - type: add
+      url:
+        # OISD: https://oisd.nl
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+        - https://raw.githubusercontent.com/lingeringsound/10007/main/all
+        # anti-AD: https://github.com/privacy-protection-tools/anti-AD
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
         # AdRules: https://github.com/Cats-Team/AdRules
         - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-        # OISD: https://oisd.nl
-        - https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/abp_big.txt
-      type: blocklist
-    1:
+    - type: match_suffix
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
+    - type: add
+      url:
+        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        # 秋风广告规则: https://awavenue.top/
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+    - type: discard
       preset:
         - p_ads_white
-      type: whitelist
+    - type: discard_suffix
+      preset:
+        - p_proxy_tld
   output:
     enabled: true
-    title: Ads Blocklist Big
+    title: Ads Blocklist
     description: 优秀规则源的合并，尽量避免误杀。
-    formats:
-      - adblock
-      - clash
-      - singbox
+    formats: [adblock, clash, singbox]
+
 
 proxy:
   id: 2000
   rules:
-    0:
+    - type: add
       url:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
         - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
@@ -84,41 +139,44 @@ proxy:
         # DNS 测试
         - browserleaks.net
         - browserleaks.org
-        # Firefox 扩展商店，国内IP限制扩展安装
+        # Firefox 扩展商店（国内IP限制扩展安装）
         - addons.mozilla.org
         # 规则下载
         - adtidy.org
-        # Poweramp，国内IP禁止访问
+        # Poweramp（国内IP禁止访问）
         - powerampapp.com
         # 国内缓慢
         - cloud.9mod.space
         - modyolo.com
-      type: blocklist
+      preset:
+        - p_proxy_tld
+    - type: discard
+      preset:
+        - ads_big
   output:
     enabled: true
     title: Proxy
     description: 需要被代理的域名。
-    formats:
-      - clash
-      - singbox
+    formats: [clash, singbox]
+
 
 direct_fix:
   id: 2001
   rules:
-    0:
+    - type: add
       url:
         # 微软中国
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
         # 时间校准
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
-       # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
+        # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
         # 谷歌 FCM
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
         # Apple China
-       # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
+        # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
         # 游戏
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
-        # Notion 代理环境同步不稳定
+        # Notion（代理环境同步不稳定）
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
       pureurl:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
@@ -153,48 +211,28 @@ direct_fix:
         - translatoruser.intl.microsoft.com
         # Edge
         - edge.microsoft.com
-      type: blocklist
-    1:
-      # bing 不应进直连修复列表，子域名后缀过滤
+    # bing 不应进直连修复列表，按后缀移除
+    - type: discard_suffix
       domain:
         - bing.com
         - bing.net
-      type: whitelist_suffix
   output:
     enabled: true
     title: Direct Fix
     description: 不应被代理的域名。
-    formats:
-      - clash
-      - singbox
-
-ads_not_match_proxy:
-  id: 3000
-  rules:
-    0:
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
-      type: blocklist
-    1:
-      preset:
-        - proxy
-      type: whitelist_suffix
+    formats: [clash, singbox]
 
 ads_match_proxy:
-  id: 3001
+  id: 3000
   rules:
-    0:
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
-      type: blocklist
-    1:
+    - type: add
       preset:
-        - ads_not_match_proxy
-      type: whitelist
+        - ads_big
+    - type: match_suffix
+      preset:
+        - proxy
   output:
     enabled: true
     title: Ads Blocklist Proxy
-    description: 命中Proxy规则的广告域名。
-    formats:
-      - clash
-      - singbox
+    description: 命中 Proxy 规则的广告域名。
+    formats: [clash, singbox]
