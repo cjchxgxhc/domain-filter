@@ -172,8 +172,8 @@ ads_not_match_proxy:
   id: 3000
   rules:
     0:
-      preset:
-        - ads_big
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
       type: blocklist
     1:
       preset:
@@ -184,8 +184,8 @@ ads_match_proxy:
   id: 3001
   rules:
     0:
-      preset:
-        - ads_big
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.mini.txt
       type: blocklist
     1:
       preset:
