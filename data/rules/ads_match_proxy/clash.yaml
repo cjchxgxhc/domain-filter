@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 6,349
-# Updated: 2026-03-15 05:28:34 CST
+# Total: 6,358
+# Updated: 2026-03-16 05:29:37 CST
 #
 payload:
   - +.0gc6y58nkk.data.adobedc.net
@@ -117,6 +117,7 @@ payload:
   - +.ac2.tnaflix.com
   - +.academy.com.data.adobedc.net
   - +.accaglobal.tt.omtrdc.net
+  - +.acdn.sunporno.com
   - +.acds-events.adobe.io
   - +.ace.naver.com
   - +.acr.roku.com
@@ -186,6 +187,7 @@ payload:
   - +.ad.gt.cdn.cloudflare.net
   - +.ad.iherb.com
   - +.ad.jp.dell.com
+  - +.ad.ldplayer.net
   - +.ad.lgappstv.com
   - +.ad.line-scdn.net
   - +.ad.linkedin.com
@@ -442,6 +444,7 @@ payload:
   - +.adv.pussyspace.net
   - +.advancelocal-adapter-image-uploads.s3.amazonaws.com
   - +.adverster.b-cdn.net
+  - +.advertise.ldplayer.net
   - +.advertising-api-eu.amazon.com
   - +.advertising-api-fe.amazon.com
   - +.advertising-api.amazon.com
@@ -965,6 +968,7 @@ payload:
   - +.atresmedia.d1.sc.omtrdc.net
   - +.atresmedia.sc.omtrdc.net
   - +.attentivemobile.com.cdn.cloudflare.net
+  - +.attr-logs.s3.us-west-2.amazonaws.com
   - +.attributiontrackingga.googlecode.com
   - +.attservicesinc.tt.omtrdc.net
   - +.au-mobile.events.data.microsoft.com
@@ -1423,6 +1427,7 @@ payload:
   - +.charter.d2.sc.omtrdc.net
   - +.charter.tt.omtrdc.net
   - +.chartswap.my.salesforce-sites.com
+  - +.chasena.tt.omtrdc.net
   - +.checkout-analytics.paddle.com
   - +.cheddars.com.ssl.sc.omtrdc.net
   - +.chevrolet.com.ssl.sc.omtrdc.net
@@ -1540,7 +1545,6 @@ payload:
   - +.cnt.xhamster19.com
   - +.co-merchandise.opera-api.com
   - +.co.ssl.sc.omtrdc.net
-  - +.cobrowse-externale-8rgcdqborxnm-1333206640.us-east-1.elb.amazonaws.com
   - +.cobrowse-prod-1836182388.us-east-1.elb.amazonaws.com
   - +.cobrowse.oraclecloud.com
   - +.cobrowse.oraclecloud.com.edgekey.net
@@ -2282,6 +2286,7 @@ payload:
   - +.dsw.com.ssl.sc.omtrdc.net
   - +.dsy5wmnntou9c.cloudfront.net
   - +.dt-external-217593033.us-east-1.elb.amazonaws.com
+  - +.dt3y1f1i1disy.cloudfront.net
   - +.dteenergy.tt.omtrdc.net
   - +.dtl-tracker.herokuapp.com
   - +.dtm.adobe.com
@@ -2303,7 +2308,6 @@ payload:
   - +.dvqigh9b7wa32.cloudfront.net
   - +.dw.wmt.co
   - +.dx6ctphzljkf1.cloudfront.net
-  - +.dxc.dxi-na1.saas.broadcom.com
   - +.dxi-prod-matomo-alb-1143638841.us-east-1.elb.amazonaws.com
   - +.dxzc1o98vrjl6.cloudfront.net
   - +.dynamic.aol.com
@@ -2688,7 +2692,6 @@ payload:
   - +.freewheel-mtgx-tv.akamaized.net
   - +.frehf.oss-cn-hongkong.aliyuncs.com
   - +.freshatl.azurewebsites.net
-  - +.freshfaxmail-1318034737.cos.sa-saopaulo.myqcloud.com
   - +.fresnel-events.vimeocdn.com
   - +.fresnel.vimeocdn.com
   - +.fressnapf.de.ssl.sc.omtrdc.net
@@ -2778,6 +2781,7 @@ payload:
   - +.ghochv3eng.trafficmanager.net
   - +.gifs.luscious.net
   - +.giftbox.asus.com
+  - +.github.com.cnpmjs.org
   - +.gla.gameloft.com
   - +.glance-analytics.trafficmanager.net
   - +.glassmoni.researchgate.net
@@ -2898,6 +2902,7 @@ payload:
   - +.gtm-t9m23dk-mta4z.uc.r.appspot.com
   - +.gtm-tagging-server-prd.azurewebsites.net
   - +.gtm-tgh5g94-ndq5z.uc.r.appspot.com
+  - +.gtm-tmdjc2c-mwfhm.uc.r.appspot.com
   - +.gtm-tsxlxjl-owy5z.uc.r.appspot.com
   - +.gtm-tts99hk-nme5n.uc.r.appspot.com
   - +.gtm-ttxs5xc6-ogu0o.uc.r.appspot.com
@@ -3113,6 +3118,7 @@ payload:
   - +.images.cmbinsight.hsbc.com
   - +.images.engage.hp.com
   - +.images.frbusiness.samsung.com
+  - +.images.info.alibabacloud.com
   - +.images.it.business.samsung.com
   - +.images.partnersupport.samsung.com
   - +.images.response.cisco.com
@@ -3452,6 +3458,7 @@ payload:
   - +.log.tapatalk.com
   - +.log.tiktokv.com
   - +.log.v-videoapp.com.cdn.cloudflare.net
+  - +.log.webnovel.com
   - +.log.zoomgov.com
   - +.log15.byteoversea.com
   - +.log16-normal-alisg.tiktokv.com
@@ -3548,6 +3555,7 @@ payload:
   - +.m-stratovibe.prod.suno.com
   - +.m-zephyrtone.prod.suno.com
   - +.m.livejasmin.com
+  - +.m.moomoo.com
   - +.m.yap.yahoo.com
   - +.m100.chosun.com
   - +.m365-visitor-stats.azurewebsites.net
@@ -3977,7 +3985,6 @@ payload:
   - +.new.livejasmin.com
   - +.newhost.zapto.org
   - +.newjobs.d1.sc.omtrdc.net
-  - +.newkste01a8f.s3.amazonaws.com
   - +.newlook.sc.omtrdc.net
   - +.newrelic.com.cdn.cloudflare.net
   - +.news-app-events.apple.com
@@ -4225,7 +4232,6 @@ payload:
   - +.partiality.itunes.apple.com.edgekey.net
   - +.partner.googleadservices.com
   - +.partner.hidemy.name
-  - +.partnerad.l.google.com
   - +.partnerads-test.ysm.yahoo.net
   - +.partnersuccess.cisco.com
   - +.partnersuccessmetrics.cisco.com
@@ -4557,6 +4563,7 @@ payload:
   - +.raiservices.sc.omtrdc.net
   - +.raka.bing.com
   - +.ralphlauren.com.ssl.sc.omtrdc.net
+  - +.ralphlauren.nl.data.adobedc.net
   - +.rate.tt.omtrdc.net
   - +.rawtelemetry-east.servicebus.windows.net
   - +.rawtelemetry-west.servicebus.windows.net
@@ -4606,6 +4613,7 @@ payload:
   - +.reliantenergy.data.adobedc.net
   - +.reliantenergyretails.tt.omtrdc.net
   - +.remote-data.urbanairship.com
+  - +.renfe.sc.omtrdc.net
   - +.renfe.tt.omtrdc.net
   - +.rent-a-centerb2b.my.salesforce-sites.com
   - +.report-uri.cloudflare.com
@@ -4728,7 +4736,6 @@ payload:
   - +.s-ring-fallback.msedge.net
   - +.s-ring.msedge.net
   - +.s.deepl.com
-  - +.s.everydayporn.co
   - +.s.howtoforge.com
   - +.s.prod.suno.com
   - +.s.sharethis.com
@@ -5539,6 +5546,7 @@ payload:
   - +.telemetry.1passwordservices.com
   - +.telemetry.adblockplus.org
   - +.telemetry.adobe.io
+  - +.telemetry.api.joox.com
   - +.telemetry.appex.bing.net
   - +.telemetry.broadcom.com
   - +.telemetry.broadcom.com.cdn.cloudflare.net
@@ -6209,6 +6217,7 @@ payload:
   - +.whoslooking.herokuapp.com
   - +.widget-view.dmm.com
   - +.widget.cloudinary.com
+  - +.widget.custhelp.com
   - +.widget.starfieldtech.com
   - +.widgets.coingecko.com
   - +.widgets.getpocket.com
