@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 6,358
-# Updated: 2026-03-16 05:29:37 CST
+# Total: 6,369
+# Updated: 2026-03-17 05:41:22 CST
 #
 payload:
   - +.0gc6y58nkk.data.adobedc.net
@@ -366,6 +366,7 @@ payload:
   - +.ads.urbandictionary.com
   - +.ads.us.tiktok.com
   - +.ads.vk.com
+  - +.ads.vporn.com
   - +.ads.x.com
   - +.ads.yahoo.com
   - +.ads.yandex.com
@@ -1154,6 +1155,7 @@ payload:
   - +.betting.betfair.com
   - +.beur-hm-matomo-shared.azurewebsites.net
   - +.bf-ad.net.26664.edgekey.net
+  - +.bf-chromefdghd.oss-cn-hongkong.aliyuncs.com
   - +.bf.dynatrace.com
   - +.bfp.global.dual.dotomi.weighted.com.akadns.net
   - +.bh3-sdk-os-static.hoyoverse.com
@@ -1202,6 +1204,7 @@ payload:
   - +.bnpparibasfortis.sc.omtrdc.net
   - +.bnpparibasfortis.tt.omtrdc.net
   - +.bnpppf.sc.omtrdc.net
+  - +.bo-aruba.blogspot.com
   - +.boardriders.sc.omtrdc.net
   - +.boardriders.tt.omtrdc.net
   - +.boehringeringelheim.sc.omtrdc.net
@@ -1250,6 +1253,7 @@ payload:
   - +.btv-du-prod-eventhub-streamanalytics.servicebus.windows.net
   - +.buaqnj4zaa.data.adobedc.net
   - +.bug2.onlyfans.com
+  - +.bugly.cros.wr.pvp.net
   - +.bugs-bunny.sb.avast.com
   - +.bugs-notify.nordvpn.com
   - +.bugsnag-event.monitor.core.app.alexa.a2z.com
@@ -1554,6 +1558,7 @@ payload:
   - +.colibri-js.akamaized.net
   - +.collect-alb-987215758.eu-west-1.elb.amazonaws.com
   - +.collect.adidas.com
+  - +.collect.futuhk.com
   - +.collect.js.org
   - +.collect.myspace.com
   - +.collector-cdn.github.com
@@ -1683,6 +1688,7 @@ payload:
   - +.cpt.itv.com
   - +.cr.adobe.com
   - +.cr.naver.com
+  - +.crackling123.appspot.com
   - +.craommunications.tt.omtrdc.net
   - +.crash-bandicoot.fandom.com
   - +.crash-pings.mozilla.org
@@ -1874,6 +1880,7 @@ payload:
   - +.d2d6cf2do9znht.cloudfront.net
   - +.d2dq2ahtl5zl1z.cloudfront.net
   - +.d2e0sxz09bo7k2.cloudfront.net
+  - +.d2ele6m9umnaue.cloudfront.net
   - +.d2ezz24t9nm0vu.cloudfront.net
   - +.d2f5h9m0jmnhjh.cloudfront.net
   - +.d2fj3s7h83rb61.cloudfront.net
@@ -1947,7 +1954,6 @@ payload:
   - +.d36eyd5j1kt1m6.cloudfront.net
   - +.d36mpcpuzc4ztk.cloudfront.net
   - +.d36zfztxfflmqo.cloudfront.net
-  - +.d370pv1i0ks4ah.cloudfront.net
   - +.d37gvrvc0wt4s1.cloudfront.net
   - +.d37j8pfxu2iogi.cloudfront.net
   - +.d37oebn0w9ir6a.cloudfront.net
@@ -3612,6 +3618,7 @@ payload:
   - +.matchbin-assets.s3.amazonaws.com
   - +.mathworks.com.ssl.d1.sc.omtrdc.net
   - +.matomo-alb-1841731790.us-east-1.elb.amazonaws.com
+  - +.matomo-alb-252610027.us-east-2.elb.amazonaws.com
   - +.matomo-lb-1420184415.us-east-1.elb.amazonaws.com
   - +.matomo-production-313173901.us-east-2.elb.amazonaws.com
   - +.matomo-westnetz.germanywestcentral.cloudapp.azure.com
@@ -3639,6 +3646,7 @@ payload:
   - +.matomo.xdr.trendmicro.com
   - +.matomo1000.fc2.com
   - +.mattress.my.salesforce-sites.com
+  - +.matwprojectuk.data.adobedc.net
   - +.mau-analytic.ap-southeast-1.elasticbeanstalk.com
   - +.maurices.com.ssl.sc.omtrdc.net
   - +.maurices.tt.omtrdc.net
@@ -3708,8 +3716,10 @@ payload:
   - +.media-mercury.cursecdn.com
   - +.media-titanium.cursecdn.com
   - +.media.camsoda.com
+  - +.media.fc2.com
   - +.media.globalsign.com
   - +.media.monster.com
+  - +.media5.fc2.com
   - +.media6degrees.com.cdn.cloudflare.net
   - +.mediacdn.disqus.com
   - +.mediacorp.sc.omtrdc.net
@@ -3812,6 +3822,7 @@ payload:
   - +.microntechnology.tt.omtrdc.net
   - +.mid4.linkedin.com
   - +.middycdn-a.akamaihd.net
+  - +.miele.data.adobedc.net
   - +.miles-and-more.com.data.adobedc.net
   - +.milesandmore.tt.omtrdc.net
   - +.minerva.devices.a2z.com
@@ -4740,7 +4751,6 @@ payload:
   - +.s.prod.suno.com
   - +.s.sharethis.com
   - +.s.usenix.org
-  - +.s0-2mdn-net.l.google.com
   - +.s1325.t.eloqua.com
   - +.s2.appbrain.com
   - +.s2150.t.eloqua.com
@@ -4812,6 +4822,7 @@ payload:
   - +.schwarzgroup.data.adobedc.net
   - +.schweizerischesbb.tt.omtrdc.net
   - +.sci.intuit.com
+  - +.science-education.sa.com
   - +.scotiabank.com.ssl.sc.omtrdc.net
   - +.scotiabank.data.adobedc.net
   - +.scotiabank.sc.omtrdc.net
@@ -5095,6 +5106,7 @@ payload:
   - +.smetrics.sling.com
   - +.smetrics.td.com.edgekey.net
   - +.smetrics.ubi.com
+  - +.smetrics.verisign.com
   - +.smetrics.webex.com
   - +.smetrics.worldbank.org
   - +.smodus.nike.com
@@ -6013,7 +6025,6 @@ payload:
   - +.vbgdbyy9w7.data.adobedc.net
   - +.vcsa.vmware.com
   - +.veih8bee.xhcdn.com
-  - +.venezia-measurements.s3-external-1.amazonaws.com
   - +.verisk.d1.sc.omtrdc.net
   - +.verizon.com.ssl.d1.sc.omtrdc.net
   - +.verizonenterprisesol.tt.omtrdc.net
