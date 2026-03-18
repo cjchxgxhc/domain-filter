@@ -86,6 +86,8 @@ p_china:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
+        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
+        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
   output:
     enabled: false
 
