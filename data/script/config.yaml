@@ -51,11 +51,46 @@ p_ads_white:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
   output:
+    enabled: true
+
+p_ads_basic:
+  id: 1
+  rules:
+    - type: add
+      url:
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+    - type: discard
+      preset:
+        - p_ads_white
+    - type: add
+      url:
+        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        # 秋风广告规则: https://awavenue.top/
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
+        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+  output:
+    enabled: true
+
+p_china:
+  id: 2
+  rules:
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
+  output:
     enabled: false
 
-
 p_proxy_tld:
-  id: 1
+  id: 3
   rules:
     - type: add
       pureurl:
@@ -100,26 +135,17 @@ ads_big:
     - type: match_suffix
       url:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-    - type: add
-      url:
-        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        # 秋风广告规则: https://awavenue.top/
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+      preset:
+        - ads_big
     - type: discard
       preset:
         - p_ads_white
     - type: discard_suffix
       preset:
         - p_proxy_tld
+    - type: add
+      preset:
+        - p_ads_basic
   output:
     enabled: true
     title: Ads Blocklist
@@ -244,7 +270,7 @@ ads_hosts:
       url:
         - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
         - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
     - type: match_suffix
       preset:
         - ads_big
@@ -252,24 +278,11 @@ ads_hosts:
       preset:
         - ads_big
     - type: match_suffix
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-    - type: add
-      url:
-        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        # 秋风广告规则: https://awavenue.top/
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-    - type: discard
       preset:
-        - p_ads_white
+        - p_china
+    - type: add
+      preset:
+        - p_ads_basic
     - type: discard_suffix
       domain:
         - doubleclick.net
