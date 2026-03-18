@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,487
-# Updated: 2026-03-19 00:02:19 CST
+# Total: 5,491
+# Updated: 2026-03-19 05:35:42 CST
 #
 payload:
   - +.035348383.weebly.com
@@ -321,6 +321,7 @@ payload:
   - +.ads.ttv.com.tw
   - +.ads.tunein.com
   - +.ads.twitch.tv
+  - +.ads.unitychina.cn
   - +.ads.urbandictionary.com
   - +.ads.us.tiktok.com
   - +.ads.vk.com
@@ -868,7 +869,6 @@ payload:
   - +.au.ff.avast.com
   - +.aubank.tt.omtrdc.net
   - +.auc-visio-telemetry.officeapps.live.com
-  - +.auction.unityads.unity.cn
   - +.audemarspiguet.tt.omtrdc.net
   - +.audi.com.ssl.sc.omtrdc.net
   - +.audible.sc.omtrdc.net
@@ -2130,6 +2130,7 @@ payload:
   - +.errors-prd01-alb01-181037707.eu-west-1.elb.amazonaws.com
   - +.errors.figma.com
   - +.errors.stripe.com
+  - +.errors.tildacdn.com
   - +.errortracking-lb.deepl.com
   - +.errortracking.deepl.com
   - +.erstegroupitinternat.tt.omtrdc.net
@@ -3878,7 +3879,6 @@ payload:
   - +.prudential.sc.omtrdc.net
   - +.prudential.tt.omtrdc.net
   - +.pubgw.yahoo.com
-  - +.publisher-config.unityads.unity.cn
   - +.publix.com.data.adobedc.net
   - +.pubmatic.edgekey.net
   - +.pubstr.acs.org
@@ -4469,6 +4469,7 @@ payload:
   - +.spiegel.de.ssl.sc.omtrdc.net
   - +.spiritairlines.data.adobedc.net
   - +.spiritairlines.tt.omtrdc.net
+  - +.splash-ads.cdn.unity.cn
   - +.splash-ads.unitychina.cn
   - +.spo.nel.measure.office.net
   - +.spocs.getpocket.com
@@ -4541,6 +4542,8 @@ payload:
   - +.stat.okko.sport
   - +.stat.okko.tv
   - +.stat.tiara.tistory.com
+  - +.stat.tildaapi.com
+  - +.stat.tildacdn.com
   - +.stat.uptodown.com
   - +.stat1.s3.ap-southeast-3.amazonaws.com
   - +.stat2.okko.tv
@@ -5085,6 +5088,7 @@ payload:
   - +.unitedhealthgroup.tt.omtrdc.net
   - +.unitedparcelservice.sc.omtrdc.net
   - +.unitedstatestennisas.tt.omtrdc.net
+  - +.unityads.unity.cn
   - +.unityads.unity3d.com
   - +.unityads.unitychina.cn
   - +.universalorlando.com.data.adobedc.net

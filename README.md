@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--19_00:02:23-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--19_05:35:46-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`79,737`
+**规则数量**：`79,947`
 
 <details><summary>AdBlock</summary>
 
@@ -137,6 +137,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
@@ -151,6 +152,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -160,7 +162,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 需要被代理的域名。
 
-**规则数量**：`22,862`
+**规则数量**：`22,865`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -265,6 +267,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
 - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
+- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
@@ -280,6 +283,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -397,7 +401,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 命中 Proxy 规则的广告域名。
 
-**规则数量**：`5,487`
+**规则数量**：`5,491`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -502,6 +506,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
 - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
+- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
@@ -517,6 +522,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -526,7 +532,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`22,542`
+**规则数量**：`26,947`
 
 <details><summary>Hosts</summary>
 
@@ -565,6 +571,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
@@ -582,9 +589,10 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
 ---
 
-*更新时间：2026-03-19 00:02:23（北京时间）*
+*更新时间：2026-03-19 05:35:46（北京时间）*
