@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 35 个规则源...
-下载完成：35/35 成功，耗时 1.45 秒
+下载完成：35/35 成功，耗时 3.00 秒
 
 
 ================================================================================
@@ -54,9 +54,9 @@
   │    url：17,051 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
   │    url：106,772 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
   │    url：114,353 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：180,429 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    rules[2] 共 488,628 条
-  │    → 加入集合，新增 383,628 条（合计 564,646）
+  │    url：180,487 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    rules[2] 共 488,686 条
+  │    → 加入集合，新增 383,676 条（合计 564,694）
   │  rules[3] type=match_suffix
   │    url：108,725 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
   │    url：26,239 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
@@ -64,25 +64,25 @@
   │    url：118,166 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
   │    url：117,872 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
   │    rules[3] 共 247,197 条
-  │    → 后缀保留，保留 112,333 条（移除 452,313）
+  │    → 后缀保留，保留 112,334 条（移除 452,360）
   │  rules[4] type=add
-  │    url：2,585 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+  │    url：2,681 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    url：453 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-  │    rules[4] 共 4,446 条
-  │    → 加入集合，新增 1,850 条（合计 114,183）
+  │    rules[4] 共 4,530 条
+  │    → 加入集合，新增 1,913 条（合计 114,247）
   │  rules[5] type=discard
   │    preset：988 条 <- p_ads_white
   │    rules[5] 共 988 条
-  │    → 精确丢弃，移除 348 条（剩余 113,835）
+  │    → 精确丢弃，移除 352 条（剩余 113,895）
   │  rules[6] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[6] 共 828 条
-  │    → 后缀丢弃，移除 16,742 条（剩余 97,093）
-  │  处理完毕，共 97,093 条
-  │  子域去重：移除 17,616 条冗余子域
-  └─ 最终输出：79,477 条
+  │    → 后缀丢弃，移除 16,746 条（剩余 97,149）
+  │  处理完毕，共 97,149 条
+  │  子域去重：移除 17,619 条冗余子域
+  └─ 最终输出：79,530 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -96,8 +96,8 @@
   │    rules[0] 共 29,814 条
   │    → 加入集合，新增 29,814 条（合计 29,814）
   │  rules[1] type=discard
-  │    preset：97,093 条 <- ads_big
-  │    rules[1] 共 97,093 条
+  │    preset：97,149 条 <- ads_big
+  │    rules[1] 共 97,149 条
   │    → 精确丢弃，移除 305 条（剩余 29,509）
   │  处理完毕，共 29,509 条
   │  子域去重：移除 6,644 条冗余子域
@@ -129,16 +129,16 @@
 处理规则组：Ads Blocklist Proxy (ads_match_proxy, id=3000)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：97,093 条 <- ads_big
-  │    rules[0] 共 97,093 条
-  │    → 加入集合，新增 97,093 条（合计 97,093）
+  │    preset：97,149 条 <- ads_big
+  │    rules[0] 共 97,149 条
+  │    → 加入集合，新增 97,149 条（合计 97,149）
   │  rules[1] type=match_suffix
   │    preset：29,509 条 <- proxy
   │    rules[1] 共 29,509 条
-  │    → 后缀保留，保留 5,604 条（移除 91,489）
-  │  处理完毕，共 5,604 条
+  │    → 后缀保留，保留 5,607 条（移除 91,542）
+  │  处理完毕，共 5,607 条
   │  子域去重：移除 201 条冗余子域
-  └─ 最终输出：5,403 条
+  └─ 最终输出：5,406 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Hosts (ads_hosts, id=3001)
@@ -150,38 +150,38 @@
   │    rules[0] 共 516,390 条
   │    → 加入集合，新增 516,390 条（合计 516,390）
   │  rules[1] type=match_suffix
-  │    preset：97,093 条 <- ads_big
-  │    rules[1] 共 97,093 条
-  │    → 后缀保留，保留 214,641 条（移除 301,749）
+  │    preset：97,149 条 <- ads_big
+  │    rules[1] 共 97,149 条
+  │    → 后缀保留，保留 214,642 条（移除 301,748）
   │  rules[2] type=add
-  │    preset：97,093 条 <- ads_big
-  │    rules[2] 共 97,093 条
-  │    → 加入集合，新增 11,370 条（合计 226,011）
+  │    preset：97,149 条 <- ads_big
+  │    rules[2] 共 97,149 条
+  │    → 加入集合，新增 11,424 条（合计 226,066）
   │  rules[3] type=match_suffix
   │    url：26,239 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    url：5,509 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：118,166 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
   │    url：117,872 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
   │    rules[3] 共 142,675 条
-  │    → 后缀保留，保留 31,277 条（移除 194,734）
+  │    → 后缀保留，保留 31,317 条（移除 194,749）
   │  rules[4] type=add
-  │    url：2,585 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+  │    url：2,681 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    url：453 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-  │    rules[4] 共 4,446 条
-  │    → 加入集合，新增 1,457 条（合计 32,734）
+  │    rules[4] 共 4,530 条
+  │    → 加入集合，新增 1,482 条（合计 32,799）
   │  rules[5] type=discard
   │    preset：988 条 <- p_ads_white
   │    rules[5] 共 988 条
-  │    → 精确丢弃，移除 99 条（剩余 32,635）
+  │    → 精确丢弃，移除 105 条（剩余 32,694）
   │  rules[6] type=discard_suffix
   │    domain：3 条自定义
   │    rules[6] 共 3 条
-  │    → 后缀丢弃，移除 10,587 条（剩余 22,048）
-  │  处理完毕，共 22,048 条
-  └─ 最终输出：22,048 条
+  │    → 后缀丢弃，移除 10,587 条（剩余 22,107）
+  │  处理完毕，共 22,107 条
+  └─ 最终输出：22,107 条
 
 ================================================================================
-✓ 处理完成！耗时：12.89 秒
+✓ 处理完成！耗时：14.71 秒
 ================================================================================
