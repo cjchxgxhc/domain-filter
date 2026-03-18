@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--18_13:09:08-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--18_13:20:07-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -245,7 +245,7 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 系统级去广告。
 
-**规则数量**：`32,533`
+**规则数量**：`22,020`
 
 <details><summary>Hosts</summary>
 
@@ -287,4 +287,4 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 ---
 
-*更新时间：2026-03-18 13:09:08（北京时间）*
+*更新时间：2026-03-18 13:20:07（北京时间）*
