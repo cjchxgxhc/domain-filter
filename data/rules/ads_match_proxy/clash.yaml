@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 6,559
-# Updated: 2026-03-18 05:40:00 CST
+# Total: 6,558
+# Updated: 2026-03-18 12:00:05 CST
 #
 payload:
   - +.035348383.weebly.com
@@ -104,7 +104,6 @@ payload:
   - +.abcnews.tt.omtrdc.net
   - +.abercrombie.com.ssl.d1.sc.omtrdc.net
   - +.abercrombie.tt.omtrdc.net
-  - +.ablink.info.wise.com
   - +.abnamro.tt.omtrdc.net
   - +.aboutamzn.tt.omtrdc.net
   - +.absa.tt.omtrdc.net
