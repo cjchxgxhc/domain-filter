@@ -270,6 +270,11 @@ ads_hosts:
     - type: discard
       preset:
         - p_ads_white
+    - type: discard_suffix
+      domain:
+        - doubleclick.net
+        - googlesyndication.com
+        - amazonaws.com
   output:
     enabled: true
     title: Ads Blocklist Hosts
