@@ -60,6 +60,9 @@ URL_FIELDS = ("url", "pureurl", "adblockurl")
 # 配置文件路径
 CONFIG_PATH = Path("data/script/config.yaml")
 
+# ghproxy 默认反代前缀（可在 config.yaml global.ghproxy 中覆盖）
+GHPROXY_DEFAULT = "https://ghproxy.net/"
+
 
 # ─────────────────────────── 枚举 ────────────────────────────────────────────
 
@@ -100,6 +103,17 @@ REGEX_IMPORTANT  = re.compile(r"\$important\b")
 _REGEX_INVALID_CHARS = re.compile(r"[^a-z0-9.\-]", re.IGNORECASE)
 _REGEX_IPV4          = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}(?:/\d+)?$")
 _REGEX_PURE_DIGITS   = re.compile(r"^\d+$")
+
+# 匹配 raw.githubusercontent.com URL，提取各段
+# https://raw.githubusercontent.com/{user}/{repo}/refs/heads/{branch}/{path}
+# https://raw.githubusercontent.com/{user}/{repo}/{branch}/{path}
+_REGEX_RAW_GH = re.compile(
+    r"^https://raw\.githubusercontent\.com/"
+    r"(?P<user>[^/]+)/(?P<repo>[^/]+)/"
+    r"(?:refs/heads/)?"
+    r"(?P<branch>[^/]+)/"
+    r"(?P<path>.+)$"
+)
 
 
 # ─────────────────────────── 日志 ────────────────────────────────────────────
@@ -631,9 +645,50 @@ def save_domains(
     return counts
 
 
+# ─────────────────────────── URL 加速转换 ────────────────────────────────────
+
+def raw_to_accelerated(raw_url: str, ghproxy: str) -> Dict[str, str]:
+    """将 raw.githubusercontent.com URL 转换为各加速地址。
+
+    返回字典：
+      jsdelivr_cdn    → https://cdn.jsdelivr.net/gh/{user}/{repo}@{branch}/{path}
+      jsdelivr_fastly → https://fastly.jsdelivr.net/gh/{user}/{repo}@{branch}/{path}
+      ghproxy         → {ghproxy}{raw_url}
+
+    若 raw_url 不匹配 raw.githubusercontent.com，则 jsdelivr 两项为空字符串，
+    ghproxy 项仍正常生成。
+    """
+    # 确保 ghproxy 前缀以 / 结尾
+    proxy_prefix = ghproxy.rstrip("/") + "/"
+
+    m = _REGEX_RAW_GH.match(raw_url)
+    if m:
+        user   = m.group("user")
+        repo   = m.group("repo")
+        branch = m.group("branch")
+        path   = m.group("path")
+        jsd_base = f"gh/{user}/{repo}@{branch}/{path}"
+        return {
+            "jsdelivr_cdn":    f"https://cdn.jsdelivr.net/{jsd_base}",
+            "jsdelivr_fastly": f"https://fastly.jsdelivr.net/{jsd_base}",
+            "ghproxy":         f"{proxy_prefix}{raw_url}",
+        }
+    return {
+        "jsdelivr_cdn":    "",
+        "jsdelivr_fastly": "",
+        "ghproxy":         f"{proxy_prefix}{raw_url}",
+    }
+
+
 # ─────────────────────────── README 生成 ─────────────────────────────────────
 
-def generate_readme(output_root: Path, stats: Dict, repo_url: str, raw_base: str) -> None:
+def generate_readme(
+    output_root: Path,
+    stats: Dict,
+    repo_url: str,
+    raw_base: str,
+    ghproxy: str,
+) -> None:
     now_cst    = datetime.datetime.now(ZoneInfo("Asia/Shanghai"))
     timestamp  = now_cst.strftime("%Y-%m-%d %H:%M:%S")
     date_badge = now_cst.strftime("%Y--%m--%d_%H:%M:%S")
@@ -700,13 +755,46 @@ def generate_readme(output_root: Path, stats: Dict, repo_url: str, raw_base: str
             first_file = group_dir / Path(file_urls[0]).name
             if not first_file.exists():
                 continue
+
             lines.append(f"<details><summary>{fmt_labels[fmt]}</summary>")
             lines.append("")
+
             for fu in file_urls:
+                accel = raw_to_accelerated(fu, ghproxy)
+                cdn_url     = accel["jsdelivr_cdn"]
+                fastly_url  = accel["jsdelivr_fastly"]
+                ghproxy_url = accel["ghproxy"]
+
+                # 原始链接
+                lines.append("**原始**")
                 lines.append("```")
                 lines.append(fu)
                 lines.append("```")
                 lines.append("")
+
+                # jsDelivr CDN
+                if cdn_url:
+                    lines.append("**jsDelivr CDN**（国内加速）")
+                    lines.append("```")
+                    lines.append(cdn_url)
+                    lines.append("```")
+                    lines.append("")
+
+                # jsDelivr Fastly
+                if fastly_url:
+                    lines.append("**jsDelivr Fastly**（国内加速）")
+                    lines.append("```")
+                    lines.append(fastly_url)
+                    lines.append("```")
+                    lines.append("")
+
+                # ghproxy
+                lines.append("**ghproxy**（国内加速）")
+                lines.append("```")
+                lines.append(ghproxy_url)
+                lines.append("```")
+                lines.append("")
+
             lines.append("</details>")
             lines.append("")
 
@@ -742,6 +830,7 @@ def load_config() -> Tuple[Dict, List[Dict]]:
       output_root  → str  输出根目录，默认 data/rules
       timezone     → str  时区，默认 Asia/Shanghai
       user_agent   → str  HTTP User-Agent
+      ghproxy      → str  ghproxy 反代前缀，默认 https://ghproxy.net/
       header       → dict 文件头配置（各格式通用）
 
     规则组（其他键）：
@@ -1054,6 +1143,7 @@ def main() -> None:
     output_root = Path(global_cfg.get("output_root", "data/rules"))
     timezone    = global_cfg.get("timezone", "Asia/Shanghai")
     user_agent  = global_cfg.get("user_agent", USER_AGENT)
+    ghproxy     = global_cfg.get("ghproxy", GHPROXY_DEFAULT)
     header_cfg  = global_cfg.get("header", {}) or {}
     # 将 repo_url 注入 header_cfg（若未单独配置）
     header_cfg.setdefault("repo_url", repo_url)
@@ -1106,7 +1196,7 @@ def main() -> None:
             log(traceback.format_exc(), LogLevel.ERROR, main_log)
 
     try:
-        generate_readme(output_root, all_stats, repo_url, raw_base)
+        generate_readme(output_root, all_stats, repo_url, raw_base, ghproxy)
     except Exception as e:
         log_error(f"README 生成失败：{e}")
         log(traceback.format_exc(), LogLevel.ERROR, main_log)
