@@ -513,13 +513,13 @@ def build_header(
     if not title:
         return ""
 
-    repo_url     = header_cfg.get("repo_url", "")
-    show_title   = header_cfg.get("show_title", True)
-    show_desc    = header_cfg.get("show_desc", True)
-    show_homepage= header_cfg.get("show_homepage", True)
-    show_total   = header_cfg.get("show_total", True)
-    show_updated = header_cfg.get("show_updated", True)
-    extra_lines  = header_cfg.get("extra_lines", []) or []
+    repo_url      = header_cfg.get("repo_url", "")
+    show_title    = header_cfg.get("show_title", True)
+    show_desc     = header_cfg.get("show_desc", True)
+    show_homepage = header_cfg.get("show_homepage", True)
+    show_total    = header_cfg.get("show_total", True)
+    show_updated  = header_cfg.get("show_updated", True)
+    extra_lines   = header_cfg.get("extra_lines", []) or []
 
     c = comment_char
     parts = []
@@ -589,7 +589,8 @@ def save_domains(
         with path.open("w", encoding="utf-8") as f:
             f.write(_hash_header(count))
             for domain in sorted_simple:
-                f.write(f"0.0.0.0 {domain}\n")
+                f.write(f"::1 {domain}\n")
+                f.write(f"127.0.0.1 {domain}\n")
         log(f"  ✓ 已保存：{path.name}（{count:,} 条，精确去重）")
 
     if "adblock" in formats:
@@ -891,7 +892,7 @@ def process_group(
     log(f"{'═' * 70}", log_file=log_file)
 
     rules = group.get("rules", [])
-    current_domains:  Set[str] = set()
+    current_domains:   Set[str] = set()
     group_source_urls: Set[str] = set()
 
     for idx, rule in enumerate(rules):
