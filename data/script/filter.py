@@ -603,7 +603,7 @@ def save_domains(
         with path.open("w", encoding="utf-8") as f:
             f.write(_hash_header(count))
             for domain in sorted_simple:
-                f.write(f"::1 {domain}\n")
+                f.write(f":: {domain}\n")
                 f.write(f"127.0.0.1 {domain}\n")
         log(f"  ✓ 已保存：{path.name}（{count:,} 条，精确去重）")
 
