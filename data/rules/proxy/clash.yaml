@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,865
-# Updated: 2026-03-18 22:49:12 CST
+# Total: 22,873
+# Updated: 2026-03-18 23:48:42 CST
 #
 payload:
   - +.01.org
@@ -786,6 +786,7 @@ payload:
   - +.adidastabletennis.com
   - +.adidasusnews.com
   - +.adinst.com
+  - +.admob-cn.com
   - +.adobe-aemassets-value.com
   - +.adobe-audience-finder.com
   - +.adobe-video-partner-finder.com
@@ -901,7 +902,6 @@ payload:
   - +.adventuresbydisney.com
   - +.advertfan.com
   - +.advertising.com
-  - +.adwordsexpress.com
   - +.ae
   - +.ae-ad-1.myhuaweicloud.com
   - +.ae.hao123.com
@@ -1628,6 +1628,7 @@ payload:
   - +.apowersoft.com
   - +.app
   - +.app-dynamics.com
+  - +.app-measurement-cn.com
   - +.app-measurement.net
   - +.app-store.wang
   - +.app0le.com
@@ -1823,6 +1824,7 @@ payload:
   - +.aqi.aqicn.org
   - +.aquarelle
   - +.ar
+  - +.ar.hao123.com
   - +.arab
   - +.arabianchicks.com
   - +.arabidopsis.org
@@ -5379,6 +5381,7 @@ payload:
   - +.darmau.co
   - +.darrenliuwei.com
   - +.dartlang.org
+  - +.dartsearch-cn.net
   - +.dartsearch.net
   - +.darwindimensions.com
   - +.darwinsource.com
@@ -8878,6 +8881,7 @@ payload:
   - +.gongmeng.info
   - +.gongminliliang.com
   - +.gongwt.com
+  - +.gongyichuangyi.net
   - +.gonike.com
   - +.gonzo-movies.com
   - +.gonzo.com
@@ -8905,6 +8909,7 @@ payload:
   - +.googl.com
   - +.google
   - +.google-access.net
+  - +.google-analytics-cn.com
   - +.google-melange.com
   - +.google-syndication.com
   - +.google.cn
@@ -8950,6 +8955,7 @@ payload:
   - +.googlemail.com
   - +.googlemaps.com
   - +.googlemashups.com
+  - +.googleoptimize-cn.com
   - +.googlepagecreator.com
   - +.googlephotos.com
   - +.googleplay.com
@@ -8961,6 +8967,8 @@ payload:
   - +.googlesource.com
   - +.googlestore.com
   - +.googlesverige.com
+  - +.googletagmanager-cn.com
+  - +.googletraveladservices-cn.com
   - +.googleusercontent.com
   - +.googleventures.com
   - +.googlevideo.com
@@ -11111,6 +11119,7 @@ payload:
   - +.iyottube.com
   - +.iyouport.com
   - +.iyouport.org
+  - +.izatcloud.net
   - +.izihost.org
   - +.izles.net
   - +.izlesem.org
@@ -17637,7 +17646,6 @@ payload:
   - +.sensualgirls.org
   - +.sensualmothers.com
   - +.sensueel.net
-  - +.sentry.io
   - +.sentry.prod.mozaws.net
   - +.senzuritv.net
   - +.seqing.one
@@ -21664,6 +21672,7 @@ payload:
   - +.www-facebook.com
   - +.www-paypal.info
   - +.www-sms-apple.com
+  - +.www.destinationurl.com
   - +.www.pxcc.com
   - +.www1.biz
   - +.www8-hp.com
@@ -21810,7 +21819,6 @@ payload:
   - +.xhamster2.com
   - +.xhamster3.com
   - +.xhamsterlive.com
-  - +.xhcdn.com
   - +.xhot.pro
   - +.xhpjc6-cdn-settings.appsflyersdk.com
   - +.xhub.tv
