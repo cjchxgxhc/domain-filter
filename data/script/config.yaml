@@ -115,11 +115,8 @@ ads_big:
       url:
         # DNS Blocklists: https://github.com/hagezi/dns-blocklists
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
+    - type: discard_suffixpreset:
+        - p_china
     - type: add
       url:
         # OISD: https://oisd.nl
@@ -136,7 +133,7 @@ ads_big:
       url:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
       preset:
-        - ads_big
+        - p_china
     - type: discard
       preset:
         - p_ads_white
