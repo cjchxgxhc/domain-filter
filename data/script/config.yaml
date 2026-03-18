@@ -115,7 +115,8 @@ ads_big:
       url:
         # DNS Blocklists: https://github.com/hagezi/dns-blocklists
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
-    - type: discard_suffixpreset:
+    - type: discard_suffix
+      preset:
         - p_china
     - type: add
       url:
