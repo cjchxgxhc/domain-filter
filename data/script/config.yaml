@@ -236,3 +236,34 @@ ads_match_proxy:
     title: Ads Blocklist Proxy
     description: 命中 Proxy 规则的广告域名。
     formats: [clash, singbox]
+
+ads_hosts:
+  id: 3001
+  rules:
+    - type: add
+      preset:
+        - ads_big
+    - type: match_suffix
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
+    - type: add
+      url:
+        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        # 秋风广告规则: https://awavenue.top/
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+    - type: discard
+      preset:
+        - p_ads_white
+  output:
+    enabled: true
+    title: Ads Blocklist Hosts
+    description: 系统级去广告。
+    formats: [hosts]
