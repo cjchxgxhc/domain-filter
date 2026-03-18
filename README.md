@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--18_20:12:26-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--18_20:30:52-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -14,32 +14,112 @@
 
 <details><summary>AdBlock</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt
 ```
 
 </details>
 
 <details><summary>Clash / Mrs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.yaml
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/clash.yaml
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/clash.yaml
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.yaml
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.mrs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/clash.mrs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/clash.mrs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/clash.mrs
 ```
 
 </details>
 
 <details><summary>Sing-box / Srs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.json
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/singbox.json
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/singbox.json
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.json
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.srs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/singbox.srs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/singbox.srs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/singbox.srs
 ```
 
 </details>
@@ -81,24 +161,88 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 <details><summary>Clash / Mrs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.yaml
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/clash.yaml
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/clash.yaml
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.yaml
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.mrs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/clash.mrs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/clash.mrs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.mrs
 ```
 
 </details>
 
 <details><summary>Sing-box / Srs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.json
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/singbox.json
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/singbox.json
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.json
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.srs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/singbox.srs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/singbox.srs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/singbox.srs
 ```
 
 </details>
@@ -143,24 +287,88 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 <details><summary>Clash / Mrs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.yaml
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.yaml
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.yaml
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.yaml
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.mrs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.mrs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs
 ```
 
 </details>
 
 <details><summary>Sing-box / Srs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.json
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.json
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.srs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.srs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs
 ```
 
 </details>
@@ -187,24 +395,88 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 <details><summary>Clash / Mrs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/clash.yaml
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/clash.yaml
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/clash.yaml
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/clash.yaml
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/clash.mrs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/clash.mrs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/clash.mrs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/clash.mrs
 ```
 
 </details>
 
 <details><summary>Sing-box / Srs</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/singbox.json
 ```
 
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/singbox.json
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/singbox.json
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/singbox.json
+```
+
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/singbox.srs
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/singbox.srs
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_match_proxy/singbox.srs
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_match_proxy/singbox.srs
 ```
 
 </details>
@@ -249,8 +521,24 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 <details><summary>Hosts</summary>
 
+**原始**
 ```
 https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_hosts/hosts.txt
+```
+
+**jsDelivr CDN**（国内加速）
+```
+https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_hosts/hosts.txt
+```
+
+**jsDelivr Fastly**（国内加速）
+```
+https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_hosts/hosts.txt
+```
+
+**ghproxy**（国内加速）
+```
+https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_hosts/hosts.txt
 ```
 
 </details>
@@ -287,4 +575,4 @@ https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/r
 
 ---
 
-*更新时间：2026-03-18 20:12:26（北京时间）*
+*更新时间：2026-03-18 20:30:52（北京时间）*
