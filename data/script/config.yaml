@@ -47,7 +47,7 @@ p_ads_white:
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         # anti-ad: https://github.com/privacy-protection-tools/anti-AD
         - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-        - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
+        # - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
   output:
@@ -79,7 +79,7 @@ ads_big:
     - type: add
       url:
         # DNS Blocklists: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.plus.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
     - type: discard_suffix
       url:
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
@@ -240,6 +240,14 @@ ads_match_proxy:
 ads_hosts:
   id: 3001
   rules:
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
+        - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt
+    - type: match_suffix
+      preset:
+        - ads_big
     - type: add
       preset:
         - ads_big
