@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,491
-# Updated: 2026-03-19 05:35:42 CST
+# Total: 5,479
+# Updated: 2026-03-20 05:37:00 CST
 #
 payload:
   - +.035348383.weebly.com
@@ -17,7 +17,6 @@ payload:
   - +.1437953666.rsc.cdn77.org
   - +.1675450967.rsc.cdn77.org
   - +.168-1393918816.cos.ap-tokyo.myqcloud.com
-  - +.1800contacts.com.ssl.d1.sc.omtrdc.net
   - +.19-wgdvxb-xbneiu-zbvxgg.oss-ap-northeast-2.aliyuncs.com
   - +.1und1.de.ssl.sc.omtrdc.net
   - +.1wcp0yo5s7.data.adobedc.net
@@ -44,13 +43,11 @@ payload:
   - +.64vxnlajoo.data.adobedc.net
   - +.6mls9l0fcr.data.adobedc.net
   - +.70e0lr7rnk.data.adobedc.net
-  - +.781081410579-uspro-s3-telemetry-overflow.s3.us-east-1.amazonaws.com
   - +.7dzt0xnemh.data.adobedc.net
   - +.7eleven.sc.omtrdc.net
   - +.7zgiest3zy.data.adobedc.net
   - +.83qqy9olto.data.adobedc.net
   - +.857chwukib.data.adobedc.net
-  - +.8eezl9pjax.data.adobedc.net
   - +.92ab.playfabapi.com
   - +.96bkyzkstu.data.adobedc.net
   - +.9gt1f3cohu.data.adobedc.net
@@ -208,7 +205,6 @@ payload:
   - +.admarketplace.net.akadns.net
   - +.admarvel.s3.amazonaws.com
   - +.admgr.qingting.fm
-  - +.admob-app-id-8523918641.firebaseio.com
   - +.admob.google.com
   - +.admob.googleapis.com
   - +.adn-tktracking-virginia-621472495.us-east-1.elb.amazonaws.com
@@ -259,6 +255,7 @@ payload:
   - +.ads-prod-narrowcasting.s3.us-west-2.amazonaws.com
   - +.ads-production-public.s3.amazonaws.com
   - +.ads-production-public.s3.us-east-1.amazonaws.com
+  - +.ads-rendering-prod.corp.google.com
   - +.ads-resources.waze.com
   - +.ads-sdk-gateway.prd.mz.internal.unity3d.com
   - +.ads-servebom-com.cdn.ampproject.org
@@ -336,6 +333,7 @@ payload:
   - +.adsapi.snapchat.com
   - +.adsassets.waze.com
   - +.adsco.re
+  - +.adscontent2.indiatimes.com
   - +.adsdk.bing.net
   - +.adsdk.microsoft.com
   - +.adsdk.trafficmanager.net
@@ -398,7 +396,6 @@ payload:
   - +.adsmarketingwebp13n-pa.clients6.google.com
   - +.adsninjacdn.b-cdn.net
   - +.adspecs.yahoo.com
-  - +.adspy.javrank.com
   - +.adst.sc.omtrdc.net
   - +.adstage-analytics.herokuapp.com
   - +.adstore.response.gcp.eastus.trafficmanager.net
@@ -411,8 +408,8 @@ payload:
   - +.adtech.coingecko.com
   - +.adtechvideo.s3.amazonaws.com
   - +.adv.drtuber.com
-  - +.adv.ettoday.net
   - +.adv.lihkg.com
+  - +.adv.musixmatch.com
   - +.adv.mxmcdn.net
   - +.adv.pussyspace.com
   - +.adv.pussyspace.net
@@ -426,11 +423,11 @@ payload:
   - +.advertising-eu.amazon.com
   - +.advertising.a2z.com
   - +.advertising.adobe.com
-  - +.advertising.amazon.cn
   - +.advertising.amazon.com
   - +.advertising.amazon.com.edgekey.net
   - +.advertising.aol.com
   - +.advertising.apple.com
+  - +.advertising.dailymotion.com
   - +.advertising.microsoft.com
   - +.advertising.nytimes.com
   - +.advertising.roku.com
@@ -463,6 +460,7 @@ payload:
   - +.afc.https443.org
   - +.aff.bstatic.com
   - +.affiliate-script-pr.firebaseapp.com
+  - +.affiliate.fc2.com
   - +.affiliate.privatevpn.com
   - +.affiliationjs.s3.amazonaws.com
   - +.afs.googleusercontent.com
@@ -525,7 +523,6 @@ payload:
   - +.amcglobal.sc.omtrdc.net
   - +.americanairlines.sc.omtrdc.net
   - +.americaninternationa.tt.omtrdc.net
-  - +.americansocietyofcli.tt.omtrdc.net
   - +.amerigaspropanelp.tt.omtrdc.net
   - +.ameriprise.data.adobedc.net
   - +.ameriprisefinancial.tt.omtrdc.net
@@ -785,7 +782,6 @@ payload:
   - +.app-analytics-v2.snapchat.com
   - +.app-analytics.snapchat.com
   - +.app-analytics.trustwallet.com
-  - +.app-fnsp-matomo-analytics-prod.azurewebsites.net
   - +.app-matomo-prd-weu1-app.azurewebsites.net
   - +.app-stats.surfshark.com
   - +.app-tracking-gfa-collector.naver.com
@@ -798,7 +794,6 @@ payload:
   - +.applab-sdk.amazon.com
   - +.apple.ikwb.com
   - +.applechannel.sc.omtrdc.net
-  - +.appleevents.sc.omtrdc.net
   - +.applemirror.squirly.info
   - +.applemusic.isasecret.com
   - +.appliances-applog.s3.us-east-2.amazonaws.com
@@ -852,7 +847,6 @@ payload:
   - +.assistenza-servizi-poste.authorizeddns.net
   - +.assistenza-titolari-nexi.ddns.mobi
   - +.astat.nikkei.com
-  - +.astellasusllc.data.adobedc.net
   - +.asustekcomputerinc.tt.omtrdc.net
   - +.at.cbsi.com
   - +.athena.archive.org
@@ -894,7 +888,6 @@ payload:
   - +.aviary.amazon.com
   - +.avisbudgetgroup.data.adobedc.net
   - +.avisbudgetgroup.tt.omtrdc.net
-  - +.avivauk.data.adobedc.net
   - +.avivauk.tt.omtrdc.net
   - +.awaps.yandex.net
   - +.axatechnologyservice.tt.omtrdc.net
@@ -969,6 +962,7 @@ payload:
   - +.bathandbodyworks.com.data.adobedc.net
   - +.bats.video.yahoo.com
   - +.bavarianv.tt.omtrdc.net
+  - +.bavirastiop.blogspot.com
   - +.bazdigital.sc.omtrdc.net
   - +.bbangads.b-cdn.net
   - +.bbg.sc.omtrdc.net
@@ -986,7 +980,6 @@ payload:
   - +.bddf.sc.omtrdc.net
   - +.be.mrslove.com
   - +.be.yourtrap.com
-  - +.beacon--c.vf.force.com
   - +.beacon-cdn-custom.walmart.com.akadns.net
   - +.beacon-cdn.walmart.com.akadns.net
   - +.beacon.affil.walmart.com
@@ -1052,6 +1045,7 @@ payload:
   - +.bjs.com.data.adobedc.net
   - +.bjsrestaurants.tt.omtrdc.net
   - +.bjswholesaleclubinc.data.adobedc.net
+  - +.bkstr.com.ssl.sc.omtrdc.net
   - +.bldr.mkt.samsung.com
   - +.blobcollector.events.data.trafficmanager.net
   - +.blogergadgets.googlecode.com
@@ -1127,7 +1121,6 @@ payload:
   - +.c.bingapis.com
   - +.c.live.com
   - +.c.simply-hentai.com
-  - +.c.x.oanda.com
   - +.c00.adobe.com
   - +.c00001-dl.urbanairship.com
   - +.c00009-dl.urbanairship.com
@@ -1203,6 +1196,7 @@ payload:
   - +.caterpillarsigns.data.adobedc.net
   - +.caterpillarsigns.tt.omtrdc.net
   - +.cathaypacific.data.adobedc.net
+  - +.cathayunitedbank.tt.omtrdc.net
   - +.cba.d2.sc.omtrdc.net
   - +.cba.data.adobedc.net
   - +.cbbb.sc.omtrdc.net
@@ -1371,7 +1365,6 @@ payload:
   - +.cnc-ad-script-uncached.b-cdn.net
   - +.cndjs-1251973891.coshk.myqcloud.com
   - +.cno.jerkmate.com
-  - +.cnt.affiliate.fc2.com
   - +.cnt.drtuber.com
   - +.cnt.faphouse.com
   - +.cnt.iceporn.com
@@ -1388,7 +1381,6 @@ payload:
   - +.colesonline.sc.omtrdc.net
   - +.colessupermarketspty.tt.omtrdc.net
   - +.colgatepalmolive.tt.omtrdc.net
-  - +.collect.futuhk.com
   - +.collector-cdn.github.com
   - +.collector-main.trafficmanager.net
   - +.collector-proxy-alb-1167645830.eu-central-1.elb.amazonaws.com
@@ -1536,7 +1528,6 @@ payload:
   - +.ct.pinterest.com
   - +.ctc.wolterskluwer.com
   - +.ctldl.windowsupdate.lflinkup.com
-  - +.ctshirts.com.ssl.d2.sc.omtrdc.net
   - +.cub7ktzma4.data.adobedc.net
   - +.currys.co.uk.ssl.sc.omtrdc.net
   - +.customer-feedbacks.web.roku.com
@@ -1684,7 +1675,6 @@ payload:
   - +.d2r44jb1nipto0.cloudfront.net
   - +.d2rnkf2kqy5m6h.cloudfront.net
   - +.d2t77mnxyo7adj.cloudfront.net
-  - +.d2te5kruq0pvbl.cloudfront.net
   - +.d2uhnetoehh304.cloudfront.net
   - +.d2uu46itxfd65q.cloudfront.net
   - +.d2w9cdu84xc4eq.cloudfront.net
@@ -1743,7 +1733,6 @@ payload:
   - +.d3ik27cqx8s5ub.cloudfront.net
   - +.d3iouejux1os58.cloudfront.net
   - +.d3ip4t8fp90x81.cloudfront.net
-  - +.d3ipmxzmjf8cw7.cloudfront.net
   - +.d3j1weegxvu8ns.cloudfront.net
   - +.d3jdulus8lb392.cloudfront.net
   - +.d3jzhqnvnvdy34.cloudfront.net
@@ -1815,7 +1804,7 @@ payload:
   - +.data.m.starbucks.com
   - +.data.msn.com
   - +.data.news.paypal.com
-  - +.data.newsletter.lifemiles.com
+  - +.data.trx.costco.com
   - +.datacollect.cisco.com
   - +.dataops.mozgcp.net
   - +.dataplane.rum.eu-north-1.amazonaws.com
@@ -2009,6 +1998,7 @@ payload:
   - +.dsy5wmnntou9c.cloudfront.net
   - +.dt3y1f1i1disy.cloudfront.net
   - +.dteenergy.tt.omtrdc.net
+  - +.dtioykqj1u8de.cloudfront.net
   - +.dtl-tracker.herokuapp.com
   - +.dtym7iokkjlif.cloudfront.net
   - +.dtyry4ejybx0.cloudfront.net
@@ -2034,7 +2024,6 @@ payload:
   - +.dyv1bugovvq1g.cloudfront.net
   - +.dz1dt3wqswdezgx4j2ryem5iad.apple.com
   - +.dzpu6za66svjl.cloudfront.net
-  - +.e7syshdl3w.data.adobedc.net
   - +.e89.friendfinder.com
   - +.ea.epochbase.com
   - +.ea.onmypc.info
@@ -2173,7 +2162,6 @@ payload:
   - +.eurosport.pl.data.adobedc.net
   - +.eurowingsaviationgmb.tt.omtrdc.net
   - +.eus.rubiconproject.com.edgekey.net
-  - +.event-collector-lb-478759435.us-east-1.elb.amazonaws.com
   - +.event-collector-prod-use1-1328100352.us-east-1.elb.amazonaws.com
   - +.event-collector.moviesanywhere.com
   - +.event-tracking.samsung.com
@@ -2205,7 +2193,6 @@ payload:
   - +.events2.clips4sale.com
   - +.eventtrack.pandasecurity.com
   - +.everestjs.net.edgekey.net
-  - +.eversource.com.ssl.sc.omtrdc.net
   - +.ewieeinfach.tt.omtrdc.net
   - +.excel-telemetry.officeapps.live.com
   - +.excel-telemetry.wac.trafficmanager.net
@@ -2240,7 +2227,6 @@ payload:
   - +.fandango.sc.omtrdc.net
   - +.fandango.tt.omtrdc.net
   - +.faqs-lognn-trezr.weebly.com
-  - +.farnell.com.ssl.sc.omtrdc.net
   - +.fastemail.dnsrd.com
   - +.faz.tt.omtrdc.net
   - +.fc.yahoo.com
@@ -2271,6 +2257,7 @@ payload:
   - +.fifththirdbank.data.adobedc.net
   - +.filamentapp.s3.amazonaws.com
   - +.fimserve.ign.com
+  - +.fingerprint-https-balancer-322f16b30651aaab.elb.eu-west-1.amazonaws.com
   - +.fingerprinting36542.s3.us-east-1.amazonaws.com
   - +.firebasecrashlytics.googleapis.com
   - +.firebasedynamiclinks.googleapis.com
@@ -2288,7 +2275,6 @@ payload:
   - +.fishtownanalytics-collector-1340672531.us-east-1.elb.amazonaws.com
   - +.fitbook.de.ssl.sc.omtrdc.net
   - +.fkrkkmxsqeb5bj9r.s3.amazonaws.com
-  - +.fks1hj38x5.data.adobedc.net
   - +.flashtalking.com.edgekey.net
   - +.flex.msn.com
   - +.flipkart.d1.sc.omtrdc.net
@@ -2332,12 +2318,10 @@ payload:
   - +.foxnews.com.ssl.d1.sc.omtrdc.net
   - +.foxnews.tt.omtrdc.net
   - +.foxsports.com.ssl.d2.sc.omtrdc.net
-  - +.foxsportsau.data.adobedc.net
   - +.fp.msedge.net
   - +.fpa-cdn.newsweek.com
   - +.fpa-events.newsweek.com
   - +.fpa2uzenvs.data.adobedc.net
-  - +.fpl.com.ssl.sc.omtrdc.net
   - +.fpt.commerce.adobe.com
   - +.fpt.dfp.microsoft.com
   - +.fpt.norton.com
@@ -2364,6 +2348,7 @@ payload:
   - +.fullbeauty.tt.omtrdc.net
   - +.functional.events.data.microsoft.com
   - +.fundingchoicesmessages.google.com
+  - +.futbolclubbarcelona.tt.omtrdc.net
   - +.fwdcmp-collector-elb-1068580620.us-east-1.elb.amazonaws.com
   - +.fxnetworks.com.ssl.sc.omtrdc.net
   - +.fywqntanfv.data.adobedc.net
@@ -2405,6 +2390,7 @@ payload:
   - +.geoip.businessinsider.com
   - +.geolocation.forbes.com
   - +.geotargetly-1a441.appspot.com
+  - +.gepowerandwater.d2.sc.omtrdc.net
   - +.getadobeflashdownloader.proxydns.com
   - +.gg.google.com
   - +.gg7kgkhk8h.data.adobedc.net
@@ -2495,7 +2481,9 @@ payload:
   - +.gtm.you.com
   - +.gtrk.s3.amazonaws.com
   - +.gurgle.spiceworks.com
+  - +.guthealth.sa.com
   - +.gx-target-experiments-frontend-api.gx.nvidia.com
+  - +.h0wwx50ogz.data.adobedc.net
   - +.h3v9p8x2q1r7-agckaeh6g2ehcaes.westeurope-01.azurewebsites.net
   - +.h4g3z1-native.oppo-realme.web.app
   - +.h6uzemwry4.data.adobedc.net
@@ -2503,6 +2491,7 @@ payload:
   - +.hallmarkcom.tt.omtrdc.net
   - +.hargreaveslansdownpl.tt.omtrdc.net
   - +.harlandclarke.d1.sc.omtrdc.net
+  - +.harleydavidson.sc.omtrdc.net
   - +.harrahs.sc.omtrdc.net
   - +.harrahs.tt.omtrdc.net
   - +.harvardbusinessrevie.tt.omtrdc.net
@@ -2706,6 +2695,8 @@ payload:
   - +.insights.video.a2z.com
   - +.insitez.blob.core.windows.net
   - +.inspector-collector.m.naver.com
+  - +.insper.sc.omtrdc.net
+  - +.insper.tt.omtrdc.net
   - +.installer-drcn.hispace.dbankcloud.eu
   - +.installer-drcn.hispace.hihonorcloud.eu
   - +.intake-analytics.wikimedia.org
@@ -2773,7 +2764,6 @@ payload:
   - +.jcpenney.com.ssl.sc.omtrdc.net
   - +.jcpenney.sc.omtrdc.net
   - +.jcpenney.tt.omtrdc.net
-  - +.jefferson.tt.omtrdc.net
   - +.jioads.akamaized.net
   - +.jioadsweb.akamaized.net
   - +.jj.mysecondarydns.com
@@ -2841,9 +2831,11 @@ payload:
   - +.kohls.sc.omtrdc.net
   - +.kohls.tt.omtrdc.net
   - +.kok.eroterest.net
+  - +.kornferry.sc.omtrdc.net
   - +.kotakmahindrabank.sc.omtrdc.net
   - +.kotakmahindrabank.tt.omtrdc.net
   - +.kpn.data.adobedc.net
+  - +.kpn.sc.omtrdc.net
   - +.kq7rqzqxy4.data.adobedc.net
   - +.kr-col-ext.nelo.navercorp.com
   - +.kraken-measurements.s3-external-1.amazonaws.com
@@ -2986,7 +2978,6 @@ payload:
   - +.log32-normal-useast1a.tiktokv.com
   - +.log32-normal-useast2a.tiktokv.com
   - +.logagent-rum-1666438889.us-west-2.elb.amazonaws.com
-  - +.logagent-rum-292398709.cn-north-1.elb.amazonaws.com.cn
   - +.logagent-wf-1069852758.us-west-2.elb.amazonaws.com
   - +.logger.qingting.fm
   - +.logger007.cam4.com
@@ -3000,6 +2991,7 @@ payload:
   - +.logs-partners.coupang.com
   - +.logs.appsource.microsoft.com
   - +.logs.bloomberg.com
+  - +.logs.blpprofessional.com
   - +.logs.dradis.netflix.com
   - +.logs.eu-west-1.internal.dradis.netflix.com
   - +.logs.getadblock.com
@@ -3185,6 +3177,7 @@ payload:
   - +.mediation-tracking.prd.mz.internal.unity3d.com
   - +.mediation.unity3d.com
   - +.medscape.com.ssl.sc.omtrdc.net
+  - +.medtronic.com.ssl.sc.omtrdc.net
   - +.medtronicinc.tt.omtrdc.net
   - +.meijer.tt.omtrdc.net
   - +.membertoolsapp.sc.omtrdc.net
@@ -3290,7 +3283,6 @@ payload:
   - +.mms.cnn.com
   - +.mmsngaa.sc.omtrdc.net
   - +.mn.qwant.com
-  - +.mnbu-9gjwu07k13q4.s3.dualstack.us-east-1.amazonaws.com
   - +.mobile-collector.eu01.nr-data.net.cdn.cloudflare.net
   - +.mobile.events.data.microsoft.com
   - +.mobileads.indiatimes.com
@@ -3301,6 +3293,7 @@ payload:
   - +.modelcenter.livejasmin.com
   - +.mofa.ns01.info
   - +.moglilabsindiapvtltd.sc.omtrdc.net
+  - +.mohg.sc.omtrdc.net
   - +.molex.sc.omtrdc.net
   - +.molex.tt.omtrdc.net
   - +.mon-boot.tiktokv.com
@@ -3397,6 +3390,7 @@ payload:
   - +.nbcume.sc.omtrdc.net
   - +.nbcuniversal.data.adobedc.net
   - +.nbcuniversal.sc.omtrdc.net
+  - +.ncads.s3.amazonaws.com
   - +.ncmec.tt.omtrdc.net
   - +.ncspteltd.sc.omtrdc.net
   - +.nedbank.data.adobedc.net
@@ -3431,7 +3425,6 @@ payload:
   - +.news-sports-events.apple.com
   - +.news.com.au.ssl.sc.omtrdc.net
   - +.news.paypal.com.data.adobedc.net
-  - +.news.sa.com
   - +.newscorpau.data.adobedc.net
   - +.newscorpau.sc.omtrdc.net
   - +.newsday.d2.sc.omtrdc.net
@@ -3484,6 +3477,7 @@ payload:
   - +.nojsstats.appspot.com
   - +.nol.yahoo.com
   - +.norauto.fr.data.adobedc.net
+  - +.nordea.fi.ssl.sc.omtrdc.net
   - +.normandy.cdn.mozilla.net
   - +.northerntool.d1.sc.omtrdc.net
   - +.northerntool.tt.omtrdc.net
@@ -3505,7 +3499,6 @@ payload:
   - +.ntracker-collector.naver.com
   - +.ntv.io.edgekey.net
   - +.ntvcld-a.akamaihd.net
-  - +.nuffieldhealth.sc.omtrdc.net
   - +.nvda.d2.sc.omtrdc.net
   - +.nvidia.com.ssl.sc.omtrdc.net
   - +.nvm6zgsnhj.data.adobedc.net
@@ -3589,7 +3582,6 @@ payload:
   - +.org.ssl.d1.sc.omtrdc.net
   - +.org.ssl.d2.sc.omtrdc.net
   - +.org.ssl.sc.omtrdc.net
-  - +.origin.data.adobedc.net
   - +.originenergy.com.au.ssl.sc.omtrdc.net
   - +.os.fandango.com
   - +.osb-krsvc.samsungqbe.com
@@ -3633,7 +3625,6 @@ payload:
   - +.pagead-googlehosted.l.google.com
   - +.pagesense-collect.zoho.com
   - +.pageview.activengage.com.cdn.cloudflare.net
-  - +.paginasamarillas.tt.omtrdc.net
   - +.pagonxt.tt.omtrdc.net
   - +.pal.tt.omtrdc.net
   - +.paloaltonetworks.tt.omtrdc.net
@@ -3678,7 +3669,6 @@ payload:
   - +.performance.squarespace.com
   - +.personalize.livemint.com
   - +.personalreports.lexisnexis.com
-  - +.petbarn.com.au.data.adobedc.net
   - +.petco.com.ssl.sc.omtrdc.net
   - +.petco.tt.omtrdc.net
   - +.peterho386.weebly.com
@@ -3947,7 +3937,6 @@ payload:
   - +.reagroup.sc.omtrdc.net
   - +.real-feedback.toros.daum.net
   - +.realestate.com.au.ssl.sc.omtrdc.net
-  - +.realmadridclubdefutbol.data.adobedc.net
   - +.realtime-logger.production-public.tubi.io
   - +.realtor.com.ssl.d2.sc.omtrdc.net
   - +.rec.deezer.com
@@ -4048,7 +4037,6 @@ payload:
   - +.rtlog31-normal-alisg.tiktokv.com
   - +.rtstat.api.rt.com
   - +.rtve.d1.sc.omtrdc.net
-  - +.rtve.es.ssl.sc.omtrdc.net
   - +.rtve.sc.omtrdc.net
   - +.rubiconproject.com-v1.edgekey.net
   - +.rubiconproject.net.akadns.net
@@ -4065,7 +4053,6 @@ payload:
   - +.rum.us-east-2.amazonaws.com
   - +.rum.us-west-1.amazonaws.com
   - +.rum.us-west-2.amazonaws.com
-  - +.rum20.a.trbcdn.net
   - +.rv.furaffinity.net
   - +.rw-yieldmo-com-1673518954.ap-southeast-1.elb.amazonaws.com
   - +.rw-yieldmo-com-1857737650.us-west-2.elb.amazonaws.com
@@ -4100,9 +4087,9 @@ payload:
   - +.safeway.sc.omtrdc.net
   - +.safewayinc.tt.omtrdc.net
   - +.saksfifthavenue.com.ssl.sc.omtrdc.net
+  - +.saksoff5th.com.ssl.sc.omtrdc.net
   - +.salarycom.sc.omtrdc.net
   - +.salesiq.zohopublic.com
-  - +.salliemae.com.ssl.sc.omtrdc.net
   - +.salliemae.tt.omtrdc.net
   - +.samples.voice.cti.roku.com
   - +.samsclub.com.ssl.d1.sc.omtrdc.net
@@ -4184,7 +4171,6 @@ payload:
   - +.sdmsg.onmypc.org
   - +.sdsbucket.s3.amazonaws.com
   - +.sdtagging.azureedge.net
-  - +.sdxvkj0e6a.data.adobedc.net
   - +.seal.globalsign.com
   - +.seal.godaddy.com
   - +.seao.business.samsung.com
@@ -4341,6 +4327,7 @@ payload:
   - +.shs.comdotgame.com
   - +.shutterfly.com.ssl.sc.omtrdc.net
   - +.shutterflycom.tt.omtrdc.net
+  - +.si.sa.com
   - +.sia.internet.apps.samsung.com
   - +.sid.nordstrom.com
   - +.siemens.d1.sc.omtrdc.net
@@ -4378,7 +4365,6 @@ payload:
   - +.smartadserver.com.edgesuite.net
   - +.smetric.schwab.com
   - +.smetric.schwabplan.com
-  - +.smetrics-cns.panasonic.com
   - +.smetrics-ieeexplore.ieee.org
   - +.smetrics.att.com
   - +.smetrics.att.com.edgekey.net
@@ -4477,7 +4463,6 @@ payload:
   - +.spoor-api.ft.com
   - +.sportsline.com.ssl.sc.omtrdc.net
   - +.sportsnet.ca.ssl.sc.omtrdc.net
-  - +.springclick-ads.s3.amazonaws.com
   - +.sprocket-ping.s3.amazonaws.com
   - +.spynet2.microsoft.com
   - +.spynetalt.microsoft.com
@@ -4562,7 +4547,9 @@ payload:
   - +.stats-proto.pandora.com
   - +.stats-v2-proto.pandora.com
   - +.stats.adobe.com
+  - +.stats.avaaz.org
   - +.stats.avast.com
+  - +.stats.beeline.tv
   - +.stats.dell.com
   - +.stats.habr.com
   - +.stats.ivpn.net
@@ -4592,7 +4579,6 @@ payload:
   - +.stepstone.sc.omtrdc.net
   - +.stgeorge.com.au.ssl.sc.omtrdc.net
   - +.stjude.tt.omtrdc.net
-  - +.stjudehospital.sc.omtrdc.net
   - +.stlog1-local.kakao.com
   - +.stmicroelectronics.tt.omtrdc.net
   - +.stocks-analytics-events.apple.com
@@ -4613,6 +4599,7 @@ payload:
   - +.sumo.b-cdn.net
   - +.sunbeltrentals.tt.omtrdc.net
   - +.suncorpmetwayltd.tt.omtrdc.net
+  - +.sunglasshut.com.ssl.sc.omtrdc.net
   - +.sunlife.com.ph.ssl.sc.omtrdc.net
   - +.sunlife.com.ssl.sc.omtrdc.net
   - +.sunlife.sc.omtrdc.net
@@ -4671,6 +4658,7 @@ payload:
   - +.t.9gag.com
   - +.t.airasia.com
   - +.t.apkpure.net
+  - +.t.e.x.com
   - +.t.hentaivox.com
   - +.t.nypost.com
   - +.t.sharethis.com
@@ -4716,6 +4704,7 @@ payload:
   - +.talkback.mozilla.org
   - +.tallinksiljaoy.tt.omtrdc.net
   - +.tangerinebankingapp.data.adobedc.net
+  - +.tangible-analytics.appspot.com
   - +.tapi.apkpure.net
   - +.tapjoy-com-lb-vpc-332546193.us-east-1.elb.amazonaws.com
   - +.target-us.samsung.com
@@ -4825,6 +4814,7 @@ payload:
   - +.telus.tt.omtrdc.net
   - +.tempest.services.disqus.com
   - +.tempo-client-metric-prod.s3.amazonaws.com
+  - +.tesco.com.data.adobedc.net
   - +.tesco.com.ssl.sc.omtrdc.net
   - +.tescobankbarclays.data.adobedc.net
   - +.tescomobile.tt.omtrdc.net
@@ -4975,6 +4965,7 @@ payload:
   - +.traffic-adtracker.appspot.com
   - +.trafficfuelpixel.s3-us-west-2.amazonaws.com
   - +.trail.thomsonreuters.com
+  - +.tralut.chatpdf.com
   - +.transfer.lflinkup.org
   - +.transunion.tt.omtrdc.net
   - +.transurban.sc.omtrdc.net
@@ -5019,6 +5010,7 @@ payload:
   - +.twilio.tt.omtrdc.net
   - +.twitter-badges.s3.amazonaws.com
   - +.twltter.lflink.com
+  - +.twmobilereleases.s3.us-west-2.amazonaws.com
   - +.twmusic.proxydns.com
   - +.twsslpopservupro.dynssl.com
   - +.twx.mynumber.org
@@ -5030,7 +5022,6 @@ payload:
   - +.tynt.com.cdn.cloudflare.net
   - +.u.tampermonkey.net
   - +.ubi.com.ssl.d2.sc.omtrdc.net
-  - +.ubkt1x.oss-us-west-1.aliyuncs.com
   - +.ubs.com.ssl.sc.omtrdc.net
   - +.ubsag.tt.omtrdc.net
   - +.udc.yahoo.com
@@ -5137,9 +5128,9 @@ payload:
   - +.userreporting.cloud.unity3d.com
   - +.usfoods.tt.omtrdc.net
   - +.usga.data.adobedc.net
+  - +.usga.sc.omtrdc.net
   - +.uspharmacopeia.sc.omtrdc.net
   - +.usta.d2.sc.omtrdc.net
-  - +.utcourts.sc.omtrdc.net
   - +.utiq.faz.net
   - +.uvk.3hentai.net
   - +.v.tampermonkey.net
@@ -5187,7 +5178,6 @@ payload:
   - +.viking.com.data.adobedc.net
   - +.vineyardvines.sc.omtrdc.net
   - +.vineyardvines.tt.omtrdc.net
-  - +.virginatlantic.com.ssl.sc.omtrdc.net
   - +.virginaustralia.com.ssl.sc.omtrdc.net
   - +.virginaustralia.sc.omtrdc.net
   - +.virginaustralia.tt.omtrdc.net
@@ -5205,7 +5195,6 @@ payload:
   - +.vkcdnservice.appspot.com.storage.googleapis.com
   - +.vl2vy9mrpj.data.adobedc.net
   - +.vlaamseradio.tt.omtrdc.net
-  - +.vml1.s3.amazonaws.com
   - +.vmlnavy.tt.omtrdc.net
   - +.vmware.tt.omtrdc.net
   - +.vnwjlu7aoh.execute-api.ap-south-1.amazonaws.com
@@ -5328,7 +5317,6 @@ payload:
   - +.westelm.com.ssl.d1.sc.omtrdc.net
   - +.westerndigital.sc.omtrdc.net
   - +.westerndigital.tt.omtrdc.net
-  - +.westernunion.com.d1.sc.omtrdc.net
   - +.westernunion.com.ssl.d1.sc.omtrdc.net
   - +.westpac.co.nz.data.adobedc.net
   - +.westpac.com.au.ssl.d2.sc.omtrdc.net
@@ -5347,7 +5335,6 @@ payload:
   - +.whaatsapp.ygto.com
   - +.whatsapp-grupnew20.justdied.com
   - +.whattsapp2020.ygto.com
-  - +.whb0d8.sa.com
   - +.wheelioapp.azureedge.net
   - +.whirlpool.sc.omtrdc.net
   - +.whirlpool.tt.omtrdc.net
@@ -5400,6 +5387,7 @@ payload:
   - +.word-telemetry.wac.trafficmanager.net
   - +.wordonline.nel.measure.office.net
   - +.workday.tt.omtrdc.net
+  - +.workweek-ads-production.imgix.net
   - +.worldbank.tt.omtrdc.net
   - +.worldbankgroup.sc.omtrdc.net
   - +.worldmarket.com.ssl.d1.sc.omtrdc.net
@@ -5429,6 +5417,7 @@ payload:
   - +.x.xxxbule.com
   - +.x83pmegzme.data.adobedc.net
   - +.xa.poringa.net
+  - +.xelis.herominers.com
   - +.xerolimited.sc.omtrdc.net
   - +.xerolimited.tt.omtrdc.net
   - +.xfinity.com.ssl.sc.omtrdc.net
@@ -5482,7 +5471,6 @@ payload:
   - +.za.ssl.d2.sc.omtrdc.net
   - +.zacks.d2.sc.omtrdc.net
   - +.zaigawebinfo.rebatesrule.net
-  - +.zales.com.ssl.sc.omtrdc.net
   - +.zap.cdn.zynga.com
   - +.zebra.com.ssl.sc.omtrdc.net
   - +.zebra.pushbullet.com
