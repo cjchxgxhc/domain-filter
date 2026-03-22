@@ -61,7 +61,7 @@ p_ads_basic:
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
     - type: discard_suffix
       url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
+     #   - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
     - type: add
