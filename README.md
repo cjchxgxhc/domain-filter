@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--22_05:26:54-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--22_13:58:36-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`75,317`
+**规则数量**：`161,965`
 
 <details><summary>AdBlock</summary>
 
@@ -126,33 +126,28 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 <details><summary>引用源</summary>
 
-- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
 - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -162,7 +157,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 需要被代理的域名。
 
-**规则数量**：`22,871`
+**规则数量**：`23,168`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -254,36 +249,10 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 <details><summary>引用源</summary>
 
-- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
-- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
 - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
-- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
-- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-- https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
-- https://raw.githubusercontent.com/lingeringsound/10007/main/all
-- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
-- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -401,7 +370,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 命中 Proxy 规则的广告域名。
 
-**规则数量**：`5,449`
+**规则数量**：`5,863`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -493,36 +462,31 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 <details><summary>引用源</summary>
 
-- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
 - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
 - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -532,7 +496,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`25,009`
+**规则数量**：`17,979`
 
 <details><summary>Hosts</summary>
 
@@ -560,39 +524,36 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 <details><summary>引用源</summary>
 
-- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
+- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
+- https://hblock.molinero.dev/hosts
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
 - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
-- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
 - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
+- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
-- https://raw.githubusercontent.com/lingeringsound/10007/main/all
-- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
+- https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
-- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
+- https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
 
 </details>
 
 ---
 
-*更新时间：2026-03-22 05:26:54（北京时间）*
+*更新时间：2026-03-22 13:58:36（北京时间）*
