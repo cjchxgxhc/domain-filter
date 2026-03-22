@@ -58,6 +58,15 @@ p_ads_basic:
   rules:
     - type: add
       url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+    - type: discard_suffix
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
         # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
@@ -75,21 +84,6 @@ p_ads_basic:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   output:
     enabled: true
-
-p_china:
-  id: 2
-  rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.list
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/data/geo/direct-list.txt
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/build/china.txt
-        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
-        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-  output:
-    enabled: false
 
 p_proxy_tld:
   id: 3
@@ -115,15 +109,6 @@ ads_big:
   rules:
     - type: add
       url:
-        # DNS Blocklists: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/pro.txt
-    - type: discard_suffix
-      preset:
-        - p_china
-    - type: add
-      url:
-        # OISD: https://oisd.nl
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/refs/heads/main/sources/upstream/OISD_Big.txt
         # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
         - https://raw.githubusercontent.com/lingeringsound/10007/main/all
@@ -132,11 +117,6 @@ ads_big:
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
         # AdRules: https://github.com/Cats-Team/AdRules
         - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-    - type: match_suffix
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.plus.mini.txt
-      preset:
-        - p_china
     - type: discard
       preset:
         - p_ads_white
@@ -176,9 +156,6 @@ proxy:
         - modyolo.com
       preset:
         - p_proxy_tld
-    - type: discard
-      preset:
-        - ads_big
   output:
     enabled: true
     title: Proxy
@@ -271,15 +248,15 @@ ads_hosts:
         - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
         - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+        - https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
+        - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
+        - https://hblock.molinero.dev/hosts
+    - type: discard_suffix
+      preset:
+        - proxy
     - type: match_suffix
       preset:
-        - ads_big
-    - type: add
-      preset:
-        - ads_big
-    - type: match_suffix
-      preset:
-        - p_china
+        - p_ads_basic
     - type: add
       preset:
         - p_ads_basic
@@ -288,6 +265,15 @@ ads_hosts:
         - doubleclick.net
         - googlesyndication.com
         - amazonaws.com
+        - devices.a2z.com
+        - measure.office.com
+        - uaid.nmrodam.com
+        - daraz.com
+        - amazon-adsystem.com
+        - appsflyersdk.com
+        - sentry.io
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
   output:
     enabled: true
     title: Ads Blocklist Hosts
