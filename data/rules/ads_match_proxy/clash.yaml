@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,906
-# Updated: 2026-03-22 16:25:25 CST
+# Total: 5,905
+# Updated: 2026-03-23 05:28:02 CST
 #
 payload:
   - +.06-0040-0-3986-7356-1324992141.cos.ap-jakarta.myqcloud.com
@@ -22,7 +22,6 @@ payload:
   - +.1675450967.rsc.cdn77.org
   - +.168-1393918816.cos.ap-tokyo.myqcloud.com
   - +.17890714.ru
-  - +.19-wgdvxb-xbneiu-zbvxgg.oss-ap-northeast-2.aliyuncs.com
   - +.1991482557.rsc.cdn77.org
   - +.1oavsblobprodcus350.blob.core.windows.net
   - +.1stfinancefirm.wixsite.com
@@ -1249,6 +1248,7 @@ payload:
   - +.cookiemon-analytics.azurewebsites.net
   - +.cookies.nos.nl
   - +.cookiex.ngd.yahoo.com
+  - +.coolcams.duckdns.org
   - +.coop.vmware.com
   - +.copilot-telemetry.githubusercontent.com
   - +.core-apps.b-cdn.net
@@ -4320,7 +4320,6 @@ payload:
   - +.offerwall.yandex.net
   - +.officedesignappl0auth-1316860111.cos.na-ashburn.myqcloud.com
   - +.ofice365.github.io
-  - +.oficialrem.duckdns.org
   - +.ogads-pa.clients6.google.com
   - +.ogads-pa.googleapis.com
   - +.ohm-dot-hackster-io.appspot.com
@@ -4606,6 +4605,7 @@ payload:
   - +.r.turn.com.akadns.net
   - +.r0.mradx.net
   - +.r2---sn-j5o76n7e.gvt1.com
+  - +.r34fa352.duckdns.org
   - +.r451.jamanetwork.com
   - +.r7988-8t7jb6-u-1324992141.cos.ap-jakarta.myqcloud.com
   - +.ra.poringa.net
@@ -4615,7 +4615,6 @@ payload:
   - +.rads.stackoverflow.com
   - +.rainmaker.production-public.tubi.io
   - +.rainmaker4.production-public.tubi.io
-  - +.ralph-choices-jury-generator.trycloudflare.com
   - +.rambo.xhamster.com
   - +.ras.yahoo.com
   - +.ravm.tv
