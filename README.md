@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--22_13:58:36-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--22_16:25:32-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`161,965`
+**规则数量**：`163,098`
 
 <details><summary>AdBlock</summary>
 
@@ -141,7 +141,6 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
@@ -370,7 +369,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 命中 Proxy 规则的广告域名。
 
-**规则数量**：`5,863`
+**规则数量**：`5,906`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -480,7 +479,6 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
@@ -496,7 +494,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`17,979`
+**规则数量**：`20,305`
 
 <details><summary>Hosts</summary>
 
@@ -545,7 +543,6 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
 - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
@@ -556,4 +553,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-03-22 13:58:36（北京时间）*
+*更新时间：2026-03-22 16:25:32（北京时间）*

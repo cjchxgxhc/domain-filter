@@ -1,13 +1,14 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,863
-# Updated: 2026-03-22 13:58:29 CST
+# Total: 5,906
+# Updated: 2026-03-22 16:25:25 CST
 #
 payload:
   - +.06-0040-0-3986-7356-1324992141.cos.ap-jakarta.myqcloud.com
   - +.0a0d-d3l1vr.b-cdn.net
   - +.0emm.com
+  - +.0pensea-gifts-013.vercel.app
   - +.104231.dtiblog.com
   - +.1080872514.rsc.cdn77.org
   - +.1097834592.rsc.cdn77.org
@@ -45,7 +46,6 @@ payload:
   - +.3site-rss.s3-ap-northeast-1.amazonaws.com
   - +.450a.feet9.com
   - +.478789.everydayporn.co
-  - +.4e40d274.a8dbc06977ae324dae0f17b4.workers.dev
   - +.4hfvbao1ea.execute-api.ap-northeast-2.amazonaws.com
   - +.4k6.4kporn.xxx
   - +.51.la
@@ -118,11 +118,13 @@ payload:
   - +.ablink.your.audacy.com
   - +.abt.nike.com
   - +.abt.s3.yandex.net
+  - +.abtest-api-data-sg.hoyoverse.com
   - +.abtmetric.espn.go.com
   - +.abvghl.udn.com
   - +.ac.prism-world.jp.net
   - +.ac2.tnaflix.com
   - +.ac3.msn.com
+  - +.acccountverificatonlog.edgeone.app
   - +.accounts.longmusic.com
   - +.acds-events.adobe.io
   - +.ace.naver.com
@@ -481,6 +483,7 @@ payload:
   - +.adsgen.bangbros.com
   - +.adsguidelines-dfd4e.firebaseapp.com
   - +.adshunter.fra1.digitaloceanspaces.com
+  - +.adsimg.s3.cn-northwest-1.amazonaws.com.cn
   - +.adsk-pnxproxy-prd-1753980530.us-east-1.elb.amazonaws.com
   - +.adsmg.fanfox.net
   - +.adsninja.b-cdn.net
@@ -721,6 +724,7 @@ payload:
   - +.ape-tagit.timeinc.net
   - +.api-ad-callback.falconnet.app
   - +.api-adservices.apple.com
+  - +.api-adx-callback.falconnet.app
   - +.api-event.falconnet.app
   - +.api-gateway.us-west-2.elasticbeanstalk.com
   - +.api-iam.intercom.io
@@ -902,6 +906,7 @@ payload:
   - +.beamanalytics.b-cdn.net
   - +.beap-bc.yahoo.com
   - +.beap.adx.yahoo.com
+  - +.bear-ad.oss-us-west-1.aliyuncs.com
   - +.behance.vo.llnwd.net
   - +.belgium.wolterskluwer.com
   - +.benelux2.secureforms.mcafee.com
@@ -920,6 +925,7 @@ payload:
   - +.bingads.com
   - +.bingads.microsoft.com
   - +.binomo2.zendesk.com
+  - +.bitmovin-bitanalytics.appspot.com
   - +.bizographics.com
   - +.bj5y6-0f-9h4-9fgg4-1324992141.cos.ap-bangkok.myqcloud.com
   - +.bkrtx.com
@@ -1001,6 +1007,7 @@ payload:
   - +.bsdc.com.bd
   - +.bsnj.eyeblaster.akadns.net
   - +.btr.domywife.com
+  - +.bugly.cros.wr.pvp.net
   - +.bugsee-api-prod.elasticbeanstalk.com
   - +.bulletwhiskey.sa.com
   - +.business-api.tiktok.com
@@ -1054,7 +1061,6 @@ payload:
   - +.c1-stats.shopifysvc.com
   - +.c2shb.pubgw.yahoo.com
   - +.c2shb.ssp.yahoo.com
-  - +.c2vydmvydxbkyxri-kte1fxva3p.edgeone.app
   - +.c6.paypal.com
   - +.cache.datamart.windows.com
   - +.cache2.delvenetworks.com
@@ -1117,7 +1123,6 @@ payload:
   - +.check.tep.test.ajo.adobe.com
   - +.checkip.amazonaws.com
   - +.cheezwhiz.z9.web.core.windows.net
-  - +.chrisbenoitkane.edgeone.app
   - +.ci.intuit.com
   - +.ci.quickbooks.com
   - +.cimage.adobe.com
@@ -1188,6 +1193,7 @@ payload:
   - +.codepush.appcenter.ms
   - +.collect.4gtv.tv
   - +.collect.biomedcentral.com
+  - +.collect.futuhk.com
   - +.collect.nature.com
   - +.collection-endpoint-prod.herokuapp.com
   - +.collection-endpoint-staging.herokuapp.com
@@ -1222,6 +1228,7 @@ payload:
   - +.config.ad-snaptube.app
   - +.config.ad.falconnet.app
   - +.config.uca.cloud.unity3d.com
+  - +.connect-drru.hispace.dbankcloud.ru
   - +.connect.intel.com
   - +.connect.xo.com
   - +.connect2.secureforms.mcafee.com
@@ -2700,6 +2707,10 @@ payload:
   - +.deprecated-custom-domains.b-cdn.net
   - +.derangedadage91wis.files.wordpress.com
   - +.desgao1zt7irn.cloudfront.net
+  - +.detaillog-eu-base.zego.im
+  - +.detaillog-global.zego.im
+  - +.detaillog-hk-base.zego.im
+  - +.detaillog1506224533-api.zego.im
   - +.dev-imp.nextmedia.com
   - +.dev-lp-subdomain.carnival-uk-dev.test.ajo.adobe.com
   - +.dev-plan.intel.com
@@ -2745,6 +2756,8 @@ payload:
   - +.di2e2m1cmrtc9.cloudfront.net
   - +.di2xlfgjbl0v7.cloudfront.net
   - +.di2xwvxz1jrvu.cloudfront.net
+  - +.diagassets-lb.apple.com.akadns.net
+  - +.diagassets.apple.com
   - +.diagmon-serviceapi.samsungdm.com
   - +.diagnostics.support.microsoft.com
   - +.dic9vgwbkxd8r.cloudfront.net
@@ -2837,6 +2850,7 @@ payload:
   - +.dnh523js9661q.cloudfront.net
   - +.dnhfi5nn2dt67.cloudfront.net
   - +.dniyppubkuut7.cloudfront.net
+  - +.dnkeeper-drru.platform.dbankcloud.ru
   - +.dnkeeper.platform.dbankcloud.eu
   - +.dnks065sb0ww6.cloudfront.net
   - +.dnn4px252i5wx.cloudfront.net
@@ -3145,6 +3159,7 @@ payload:
   - +.exchange.dumb1.com
   - +.exchange.longmusic.com
   - +.experience.limelight.com
+  - +.experiments.apple.com
   - +.explore.att.com
   - +.external-api.impression-neo.naver.com
   - +.external-promo-metrics.yandex.net
@@ -3171,7 +3186,6 @@ payload:
   - +.filament-stats.herokuapp.com
   - +.filamentapp-assets.s3.amazonaws.com
   - +.filamentapp.s3.amazonaws.com
-  - +.file.dontjudge.workers.dev
   - +.filmsexeporno.com
   - +.fingerprinter-production.herokuapp.com
   - +.finnews7.wordpress.com
@@ -3189,6 +3203,7 @@ payload:
   - +.flex.msn.com
   - +.flipdish-cookie-consent.s3-eu-west-1.amazonaws.com
   - +.flirt4free.com
+  - +.fls-cn.amazon.cn
   - +.fls-na.amazon.com
   - +.flurry.cachefly.net
   - +.flurry.com
@@ -3280,6 +3295,7 @@ payload:
   - +.gimp.zendesk.com
   - +.girls.xyz
   - +.github.com.cnpmjs.org
+  - +.gkzy.app
   - +.glassmoni.researchgate.net
   - +.gld.samsungosp.com
   - +.glitter.services.disqus.com
@@ -3287,6 +3303,7 @@ payload:
   - +.globalcommunications.sc.com
   - +.globalsolutions.risk.lexisnexis.com
   - +.gloporn.com
+  - +.gmbl.sy99.de
   - +.go-elqau.oracle.com
   - +.go-stage.oracle.com
   - +.go-vmware.broadcom.com
@@ -3356,6 +3373,7 @@ payload:
   - +.grc2.secureforms.mcafee.com
   - +.green-griffin-860.appspot.com
   - +.grow.gab.com
+  - +.grs-pub.platform.dbankcloud.ru
   - +.grs.dbankcloud.eu
   - +.grs.platform.dbankcloud.ru
   - +.gtm.oasisfeng.com
@@ -3736,7 +3754,6 @@ payload:
   - +.karanpcofficial.blogspot.com
   - +.kga9szxosa.appspot.com
   - +.kinesis.eu-west-1.amazonaws.com
-  - +.kingitnet.com.bd
   - +.kj65rdasz.appspot.com
   - +.kj6787rsd.appspot.com
   - +.kjdvn1340-ads.blogspot.com
@@ -3857,6 +3874,7 @@ payload:
   - +.log.tiktokv.com
   - +.log.webnovel.com
   - +.log2.spotify.com
+  - +.logagent-rum-292398709.cn-north-1.elb.amazonaws.com.cn
   - +.logapi.tv.naver.com
   - +.logger.qingting.fm
   - +.logger.unsplash.com
@@ -4011,6 +4029,7 @@ payload:
   - +.mediamgr.ugo.com
   - +.mediasama.com
   - +.mediation-tracking.prd.mz.internal.unity3d.com
+  - +.mediation.goog
   - +.mediation.unity3d.com
   - +.megasena1.duckdns.org
   - +.mellowads.b-cdn.net
@@ -4184,6 +4203,12 @@ payload:
   - +.mseeru.faz.net
   - +.msg-test.att.com
   - +.msg.ettoday.net
+  - +.msgacs-m.lazada.co.id
+  - +.msgacs-m.lazada.co.th
+  - +.msgacs-m.lazada.com.my
+  - +.msgacs-m.lazada.com.ph
+  - +.msgacs-m.lazada.sg
+  - +.msgacs-m.lazada.vn
   - +.mshelp247.weebly.com
   - +.msoftdatastore.z22.web.core.windows.net
   - +.mssdk-sg.byteoversea.com
@@ -4211,6 +4236,7 @@ payload:
   - +.na2m-pr.licenses.adobe.com
   - +.naiadsystems.com
   - +.nalzahqp.page.link
+  - +.nano-game-ad-slot.oss-cn-hongkong.aliyuncs.com
   - +.nasi.etherscan.com
   - +.nativead.s3.amazonaws.com
   - +.nats.xing.com
@@ -4382,6 +4408,7 @@ payload:
   - +.otr.kaspersky.nl
   - +.outlookads.live.com
   - +.outreach.crossref.org
+  - +.overseas-ad-bucket.oss-cn-hongkong.aliyuncs.com
   - +.ox-d.hulkshare.com
   - +.ox8.topsexhdvideos.com
   - +.p-cg64-slinganalytics.movetv.com
@@ -4578,7 +4605,9 @@ payload:
   - +.r.tropictube.com
   - +.r.turn.com.akadns.net
   - +.r0.mradx.net
+  - +.r2---sn-j5o76n7e.gvt1.com
   - +.r451.jamanetwork.com
+  - +.r7988-8t7jb6-u-1324992141.cos.ap-jakarta.myqcloud.com
   - +.ra.poringa.net
   - +.rad.live.com
   - +.rad.msn.com
@@ -4597,7 +4626,6 @@ payload:
   - +.real-feedback.toros.daum.net
   - +.realtime-logger.production-public.tubi.io
   - +.rec.deezer.com
-  - +.red-sunset-26e1.importantrev.workers.dev
   - +.redir.metaservices.microsoft.com
   - +.redlightcenter.com
   - +.refer.wordpress.com
@@ -4634,6 +4662,7 @@ payload:
   - +.romeccs.microsoft.com
   - +.root20system20macosxdriver.serveusers.com
   - +.ropaly.com.bd
+  - +.roundcube-jrcfj7x9ek.edgeone.dev
   - +.rpc-tapjoy-com-lb-1378811527.us-east-1.elb.amazonaws.com
   - +.rtb-1.mylust.com
   - +.rtb-1.xcafe.com
@@ -4770,6 +4799,8 @@ payload:
   - +.sentry.eks.hoyoverse.com
   - +.sentry.hetzner.company
   - +.sentry.io
+  - +.sentry.ldplayer.net
+  - +.sentry2.domoai.app
   - +.ser.everydayporn.co
   - +.serve.ads.chaturbate.com
   - +.serve.bdsmstreak.com
@@ -5143,6 +5174,7 @@ payload:
   - +.stats.pornpics.com
   - +.stats.qwant.com
   - +.stats.shopify.com
+  - +.stats.skywork.ai
   - +.stats.slideshare.net
   - +.stats.tou.tv
   - +.stats.unity3d.com
@@ -5364,6 +5396,8 @@ payload:
   - +.telemetry.pod5.prod.avatar.ext.hp.com
   - +.telemetry.pod6.prod.avatar.ext.hp.com
   - +.telemetry.pod7.prod.avatar.ext.hp.com
+  - +.telemetry.pod8.prod.avatar.ext.hp.com
+  - +.telemetry.pod9.prod.avatar.ext.hp.com
   - +.telemetry.proton.me
   - +.telemetry.remoteapp.windowsazure.com
   - +.telemetry.soundcloud.com
@@ -5418,6 +5452,7 @@ payload:
   - +.tms.oracle.com
   - +.tmx.bestbuy.com
   - +.tmz.vo.llnwd.net
+  - +.tnc100-useast1a.tiktokv.com
   - +.tobecation.github.io
   - +.tobidad.cn.com
   - +.toolbar.avg.com
@@ -5497,6 +5532,7 @@ payload:
   - +.tracking.ps.shutterstock.com
   - +.tracking.risk.lexisnexis.com
   - +.tracking.securitymsp.cisco.com
+  - +.tracking.shopee.cn
   - +.tracking.smartbusiness.samsung.com
   - +.tracking.tidalhifi.com
   - +.tracking.umbrella.com
@@ -5556,7 +5592,6 @@ payload:
   - +.trksvg.business.us.hsbc.com
   - +.trksvg.gbm.hsbc.com
   - +.trksvg.sustainablefinance.hsbc.com
-  - +.tropical-red-pd56z5jhth.edgeone.dev
   - +.tru465rsda.appspot.com
   - +.trustedpeach.com
   - +.try.tableau.com
@@ -5591,8 +5626,10 @@ payload:
   - +.ultimate-tech-products.myshopify.com
   - +.um-public-panel-prod.s3.amazonaws.com
   - +.umami.zhul.in
+  - +.umami2.yiso.eu.org
   - +.umwatson.events.data.microsoft.com
   - +.umwatsonc.events.data.microsoft.com
+  - +.unagi.amazon.cn
   - +.uncanny.marvel.com
   - +.unibotscdn.b-cdn.net
   - +.unid.go.com
@@ -5641,9 +5678,11 @@ payload:
   - +.v20.vortex-win.data.microsoft.com
   - +.v9banners-com.cdn.ampproject.org
   - +.vaamsmgfreocmroe-1342087530.cos.sa-saopaulo.myqcloud.com
+  - +.vambanlopcaxomilsss.edgeone.dev
   - +.vatrack.hinet.net
   - +.vercel-analytics.com
   - +.vercel-insights.com
+  - +.verffddfkoiijbbvtfrcxswejkkloiuhvfrdskkolooknvc-qn7102xdig.edgeone.dev
   - +.veta.naver.com
   - +.vf.startpage.com
   - +.vge-business.vodafone.com
@@ -5790,6 +5829,9 @@ payload:
   - +.wixlabs-adsense-v3.uc.r.appspot.com
   - +.wklwyt.springer.com
   - +.wompanalytics.azurewebsites.net
+  - +.worker-twilight-firefly-7adf.letusreviewymail.workers.dev
+  - +.worker-weathered-frog-6c16.ks2616.workers.dev
+  - +.workers-playground-autumn-mouse-be3a.xcelenx23.workers.dev
   - +.wpcdn1.herokuapp.com
   - +.wphlvzycf5.execute-api.eu-west-2.amazonaws.com
   - +.ws.progrss.yahoo.com
@@ -5868,3 +5910,4 @@ payload:
   - +.zopro.duckdns.org
   - +.zrsetz.shutterstock.com
   - +.ztd.dds.microsoft.com
+  - +.zzz-log-upload-os.hoyoverse.com
