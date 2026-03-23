@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,168
-# Updated: 2026-03-23 05:28:01 CST
+# Total: 23,169
+# Updated: 2026-03-24 05:37:47 CST
 #
 payload:
   - +.000webhost.com
@@ -15302,6 +15302,7 @@ payload:
   - +.openlibrary.org
   - +.openmaps.org
   - +.openreality.com
+  - +.openrec.tv
   - +.openresty.org
   - +.openreview.net
   - +.opensea.io
