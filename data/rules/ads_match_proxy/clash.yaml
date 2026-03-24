@@ -1,11 +1,12 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,915
-# Updated: 2026-03-24 05:37:48 CST
+# Total: 5,905
+# Updated: 2026-03-25 05:39:14 CST
 #
 payload:
   - +.06-0040-0-3986-7356-1324992141.cos.ap-jakarta.myqcloud.com
+  - +.0668.us
   - +.0a0d-d3l1vr.b-cdn.net
   - +.0emm.com
   - +.104231.dtiblog.com
@@ -122,7 +123,6 @@ payload:
   - +.ac.prism-world.jp.net
   - +.ac2.tnaflix.com
   - +.ac3.msn.com
-  - +.acccountverificatonlog.edgeone.app
   - +.accounts.longmusic.com
   - +.acds-events.adobe.io
   - +.ace.naver.com
@@ -383,6 +383,7 @@ payload:
   - +.ads.stileproject.com
   - +.ads.sun.com
   - +.ads.talksport.com
+  - +.ads.teacherfucksteens.com
   - +.ads.tiktok.com
   - +.ads.ttv.com.tw
   - +.ads.tunein.com
@@ -481,7 +482,6 @@ payload:
   - +.adsgen.bangbros.com
   - +.adsguidelines-dfd4e.firebaseapp.com
   - +.adshunter.fra1.digitaloceanspaces.com
-  - +.adsimg.s3.cn-northwest-1.amazonaws.com.cn
   - +.adsk-pnxproxy-prd-1753980530.us-east-1.elb.amazonaws.com
   - +.adsmg.fanfox.net
   - +.adsninja.b-cdn.net
@@ -715,7 +715,6 @@ payload:
   - +.anrdoezrs.net
   - +.ans.avast.com
   - +.anti-adblock.herokuapp.com
-  - +.anycast104.254052671.workers.dev
   - +.anymind360-com.cdn.ampproject.org
   - +.ao-freegeoip.herokuapp.com
   - +.apac.zendesk.com
@@ -906,6 +905,7 @@ payload:
   - +.beap-bc.yahoo.com
   - +.beap.adx.yahoo.com
   - +.bear-ad.oss-us-west-1.aliyuncs.com
+  - +.beehiiv-adnetwork-production.s3.amazonaws.com
   - +.behance.vo.llnwd.net
   - +.belgium.wolterskluwer.com
   - +.benelux2.secureforms.mcafee.com
@@ -994,6 +994,7 @@ payload:
   - +.brick.xhamster.desi
   - +.brick.xhamster2.com
   - +.brick.xhamster3.com
+  - +.bro1.s3.amazonaws.com
   - +.bronto.com
   - +.browser-updater.yandex.net
   - +.browser.events.data.msn.com
@@ -1002,7 +1003,6 @@ payload:
   - +.browsercfg-drcn.cloud.hihonorcloud.eu
   - +.browserservice.zzux.com
   - +.bs-adserver.b-cdn.net
-  - +.bsdc.com.bd
   - +.bsnj.eyeblaster.akadns.net
   - +.btr.domywife.com
   - +.bugly.cros.wr.pvp.net
@@ -1193,7 +1193,6 @@ payload:
   - +.codepush.appcenter.ms
   - +.collect.4gtv.tv
   - +.collect.biomedcentral.com
-  - +.collect.futuhk.com
   - +.collect.nature.com
   - +.collection-endpoint-prod.herokuapp.com
   - +.collection-endpoint-staging.herokuapp.com
@@ -1271,7 +1270,6 @@ payload:
   - +.cpms.now.com
   - +.cpt.itv.com
   - +.crashlytics.com
-  - +.crashlytics2.l.google.com
   - +.crashlyticsreports-pa.googleapis.com
   - +.crbug.com
   - +.creative.live.javdock.com
@@ -2967,7 +2965,6 @@ payload:
   - +.dumpster.cam4.com
   - +.dupcczkfziyd3.cloudfront.net
   - +.duqamtr9ifv5t.cloudfront.net
-  - +.dust-0001.delorazahnow.workers.dev
   - +.duu8lzqdm8tsz.cloudfront.net
   - +.duy1ol4n1csnp.cloudfront.net
   - +.duz64ud8y8urc.cloudfront.net
@@ -3031,7 +3028,6 @@ payload:
   - +.e77lmzbqou0n-a.akamaihd.net
   - +.ea.epochbase.com
   - +.ea.youmaker.com
-  - +.earthewndegtheyased.edgeone.app
   - +.eas.etherscan.com
   - +.eastern2.secureforms.mcafee.com
   - +.easy-monetization.s3.yandex.net
@@ -3169,6 +3165,7 @@ payload:
   - +.external-promo-metrics.yandex.net
   - +.extmaps-api.yandex.net
   - +.f3i5-0g49bgn-3h95-1324992141.cos.ap-jakarta.myqcloud.com
+  - +.facebook.ximier.workers.dev
   - +.facebookads.com
   - +.fahmta.newstatesman.com
   - +.familygiftlove.myshopify.com
@@ -3197,7 +3194,6 @@ payload:
   - +.firebasedynamiclinks.googleapis.com
   - +.firebaselogging-pa.googleapis.com
   - +.firebaselogging.googleapis.com
-  - +.firma-registro2025-adjeho.cr-web.workers.dev
   - +.firstpartycookie.gettyimages.com
   - +.firstpartycookie.istockphoto.com
   - +.five.partner.archive-it.org
@@ -3292,7 +3288,6 @@ payload:
   - +.getyourgiftnow2.blogspot.com
   - +.getyourgiftnow3.blogspot.com
   - +.gg-ads.b-cdn.net
-  - +.ggnicer77.ggnicer.workers.dev
   - +.ggpht.cn
   - +.gh.fanatical.com
   - +.ghochv3eng.trafficmanager.net
@@ -3309,6 +3304,7 @@ payload:
   - +.globalcommunications.sc.com
   - +.globalsolutions.risk.lexisnexis.com
   - +.gloporn.com
+  - +.gmbl.sy99.de
   - +.go-elqau.oracle.com
   - +.go-stage.oracle.com
   - +.go-vmware.broadcom.com
@@ -3412,6 +3408,7 @@ payload:
   - +.hbrcv.adobe.com
   - +.hbrt.adobe.com
   - +.hc-analytics.idp.clogin.att.com
+  - +.hd-filmyonline.blogspot.com
   - +.hdapp1003-a.akamaihd.net
   - +.hdapp1008-a.akamaihd.net
   - +.hdsrc-a.akamaihd.net
@@ -3520,7 +3517,6 @@ payload:
   - +.hm2wjuuus3.execute-api.ap-northeast-1.amazonaws.com
   - +.hn-button.herokuapp.com
   - +.hnbutton.appspot.com
-  - +.hostecountspringweb-4sbw8uzi5y.edgeone.dev
   - +.hosted.stats.com.edgesuite.net
   - +.hostedads.realitykings.com
   - +.hotelembuguacu.blob.core.windows.net
@@ -3530,7 +3526,6 @@ payload:
   - +.hpacdn.pornpics.com
   - +.hpast.pornpics.com
   - +.hps.pornpics.com
-  - +.hq-cpanel-uptime-upgrade-hnrv61j7if.edgeone.app
   - +.hqmetrics.sony.com
   - +.hs.eloqua.com
   - +.html5adkit.plusmo.s3.amazonaws.com
@@ -3564,8 +3559,6 @@ payload:
   - +.ichnaea-web.netflix.com
   - +.ichnaea.dradis.netflix.com
   - +.ichnaea.netflix.com
-  - +.id.google.co.kr
-  - +.id.google.co.ve
   - +.iddu1vvb7sk8-a.akamaihd.net
   - +.idstatus.sky.com
   - +.ie-business.vodafone.com
@@ -3577,7 +3570,6 @@ payload:
   - +.ifs.lazada.sg
   - +.igetnaughty.com
   - +.ignifyecom.s3.amazonaws.com
-  - +.iha-analytics.vercel.app
   - +.iiceq.intuit.com
   - +.ijaabm.nbcsports.com
   - +.iloveyou.com.bd
@@ -4256,6 +4248,7 @@ payload:
   - +.net.daraz.lk
   - +.net.daraz.pk
   - +.netmarbleslog.netmarble.com
+  - +.netrip.ddns.net
   - +.networkingexchange.att.com
   - +.networkprotection.mcafee.com
   - +.newads.bangbros.com
@@ -4270,6 +4263,7 @@ payload:
   - +.nexusrules.officeapps.live.com
   - +.nexxtv-events.servicebus.windows.net
   - +.nffdg43zx.appspot.com
+  - +.nft-giftbox20-bay.vercel.app
   - +.ngads.go.com
   - +.nice.tranny.one
   - +.nid.mansionglobal.com
@@ -4398,7 +4392,6 @@ payload:
   - +.optimize-stats.voxmedia.com
   - +.optimize.google.com
   - +.optimize.mcafee.com
-  - +.optimum.com.bd
   - +.oracleinfinity.io
   - +.os.fandango.com
   - +.osb-ussvc.samsungqbe.com
@@ -4468,7 +4461,6 @@ payload:
   - +.pdupdate.organiccrap.com
   - +.pei-ads.playboy.com
   - +.pendo-data-prod.box.com
-  - +.peony.krones-act.workers.dev
   - +.perf-events.cloud.unity3d.com
   - +.perr.hola.org
   - +.peter-north-cum-shot.blogspot.com
@@ -4596,7 +4588,6 @@ payload:
   - +.qbse.intuit.com
   - +.qc.newyorker.com
   - +.qc.wired.com
-  - +.qcc.qccgeo.qualcomm.com
   - +.qcc.qualcomm.com
   - +.qchoh.lg.com
   - +.qfp.intuit.com
@@ -4644,6 +4635,8 @@ payload:
   - +.regi.di.atlas.samsung.com
   - +.register.digital.adobe.com
   - +.register.redhat.com
+  - +.registro-digital-2026-plmj.cr-web.workers.dev
+  - +.registro-formulario-2026-ghay.cr-web.workers.dev
   - +.registry.api.cnn.io
   - +.rel.msn.com
   - +.repdata.usatoday.com
@@ -5230,12 +5223,10 @@ payload:
   - +.suncanny.marvel.com
   - +.sunlightmetrics.b-cdn.net
   - +.supersonicads-a.akamaihd.net
-  - +.supp0rtpr0tect.vercel.app
   - +.support-ads-team-874a1.firebaseapp.com
   - +.supportmetrics.apple.com
   - +.survey.xo.com
   - +.surveygizmobeacon.s3.amazonaws.com
-  - +.suryaprasanthfx-ctxr7fqp4s.edgeone.dev
   - +.svc2.sc.com
   - +.sw.broadcom.com
   - +.sw88.abc.com
@@ -5694,7 +5685,6 @@ payload:
   - +.vatrack.hinet.net
   - +.vercel-analytics.com
   - +.vercel-insights.com
-  - +.verffddfkoiijbbvtfrcxswejkkloiuhvfrdskkolooknvc-qn7102xdig.edgeone.dev
   - +.veta.naver.com
   - +.vf.startpage.com
   - +.vge-business.vodafone.com

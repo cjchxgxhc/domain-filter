@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,169
-# Updated: 2026-03-24 05:37:47 CST
+# Total: 23,172
+# Updated: 2026-03-25 05:39:14 CST
 #
 payload:
   - +.000webhost.com
@@ -15489,6 +15489,8 @@ payload:
   - +.ozeex.com
   - +.ozodi.org
   - +.ozodlik.org
+  - +.ozon.com
+  - +.ozonru.me
   - +.ozonusercontent.com
   - +.ozvoice.org
   - +.ozxw.com
@@ -22121,6 +22123,7 @@ payload:
   - +.xiaolan.me
   - +.xiaolanapp.com
   - +.xiaoma.org
+  - +.xiaomiflash.com
   - +.xiaoou.io
   - +.xiaoou.tv
   - +.xiaoshuobb.life
