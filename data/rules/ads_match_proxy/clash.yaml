@@ -1,12 +1,10 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,905
-# Updated: 2026-03-25 05:39:14 CST
+# Total: 5,840
+# Updated: 2026-03-26 01:45:15 CST
 #
 payload:
-  - +.06-0040-0-3986-7356-1324992141.cos.ap-jakarta.myqcloud.com
-  - +.0668.us
   - +.0a0d-d3l1vr.b-cdn.net
   - +.0emm.com
   - +.104231.dtiblog.com
@@ -20,7 +18,6 @@ payload:
   - +.1548164934.rsc.cdn77.org
   - +.1558334541.rsc.cdn77.org
   - +.1675450967.rsc.cdn77.org
-  - +.168-1393918816.cos.ap-tokyo.myqcloud.com
   - +.17890714.ru
   - +.1991482557.rsc.cdn77.org
   - +.1oavsblobprodcus350.blob.core.windows.net
@@ -31,7 +28,6 @@ payload:
   - +.2mdn-cn.net
   - +.2mdn.net
   - +.2o7.net
-  - +.30sof.onedumb.com
   - +.31.media.tumblr.com
   - +.37bvsblobprodcus311.blob.core.windows.net
   - +.3dns-1.adobe.com
@@ -49,7 +45,6 @@ payload:
   - +.4k6.4kporn.xxx
   - +.51.la
   - +.51tongji.trafficmanager.net
-  - +.55.la
   - +.58680dd9.ngrok.io
   - +.61serve.everydayporn.co
   - +.6735a55d.ngrok.io
@@ -383,7 +378,6 @@ payload:
   - +.ads.stileproject.com
   - +.ads.sun.com
   - +.ads.talksport.com
-  - +.ads.teacherfucksteens.com
   - +.ads.tiktok.com
   - +.ads.ttv.com.tw
   - +.ads.tunein.com
@@ -722,7 +716,6 @@ payload:
   - +.ape-tagit.timeinc.net
   - +.api-ad-callback.falconnet.app
   - +.api-adservices.apple.com
-  - +.api-adx-callback.falconnet.app
   - +.api-event.falconnet.app
   - +.api-gateway.us-west-2.elasticbeanstalk.com
   - +.api-iam.intercom.io
@@ -841,7 +834,6 @@ payload:
   - +.b8ms7gkwq7g.crocotube.com
   - +.babes-mansion.s3.amazonaws.com
   - +.badad.googleplex.com
-  - +.badding.oss-ap-southeast-1.aliyuncs.com
   - +.badge.facebook.com
   - +.badges.instagram.com
   - +.bafybeias4uzwo3l336d5ewygv2dd3oqbnlvrer5ndf5wyhjcwkm4igaafa.ipfs.w3s.link
@@ -904,8 +896,6 @@ payload:
   - +.beamanalytics.b-cdn.net
   - +.beap-bc.yahoo.com
   - +.beap.adx.yahoo.com
-  - +.bear-ad.oss-us-west-1.aliyuncs.com
-  - +.beehiiv-adnetwork-production.s3.amazonaws.com
   - +.behance.vo.llnwd.net
   - +.belgium.wolterskluwer.com
   - +.benelux2.secureforms.mcafee.com
@@ -994,7 +984,6 @@ payload:
   - +.brick.xhamster.desi
   - +.brick.xhamster2.com
   - +.brick.xhamster3.com
-  - +.bro1.s3.amazonaws.com
   - +.bronto.com
   - +.browser-updater.yandex.net
   - +.browser.events.data.msn.com
@@ -1005,7 +994,6 @@ payload:
   - +.bs-adserver.b-cdn.net
   - +.bsnj.eyeblaster.akadns.net
   - +.btr.domywife.com
-  - +.bugly.cros.wr.pvp.net
   - +.bugsee-api-prod.elasticbeanstalk.com
   - +.bulletwhiskey.sa.com
   - +.business-api.tiktok.com
@@ -1065,7 +1053,6 @@ payload:
   - +.cache2.delvenetworks.com
   - +.cad.chosun.com
   - +.cafe-ads-api.daum.net
-  - +.cafopresident.gov.bd
   - +.cambaddies.com
   - +.camonster.com
   - +.campaign-tapad.s3.amazonaws.com
@@ -1081,7 +1068,6 @@ payload:
   - +.catalog.video.msn.com
   - +.cbola-ads-1-t3.us-east-1.elasticbeanstalk.com
   - +.cbola-analytics-c5-6.us-east-1.elasticbeanstalk.com
-  - +.cc-35g-pg03u5i-9gh-1324992141.cos.ap-bangkok.myqcloud.com
   - +.cc-api-data.adobe.io
   - +.cclink.carfax.com
   - +.cdn-bongdadem-net.cdn.ampproject.org
@@ -1104,7 +1090,6 @@ payload:
   - +.cdns.mydirtyhobby.com
   - +.cdnstaging-onead.cdn.hinet.net
   - +.cdnstats-a.akamaihd.net
-  - +.cdown883.oss-us-east-1.aliyuncs.com
   - +.cdp.cloud.unity.cn
   - +.cdp.cloud.unity3d.com
   - +.central2.secureforms.mcafee.com
@@ -1227,7 +1212,6 @@ payload:
   - +.config.ad-snaptube.app
   - +.config.ad.falconnet.app
   - +.config.uca.cloud.unity3d.com
-  - +.connect-drru.hispace.dbankcloud.ru
   - +.connect.intel.com
   - +.connect.xo.com
   - +.connect2.secureforms.mcafee.com
@@ -1291,8 +1275,6 @@ payload:
   - +.csp-reporting.cloudflare.com
   - +.csp.godaddy.com
   - +.csp.yandex.net
-  - +.cstat.apple.com
-  - +.cstat.cdn-apple.com
   - +.cstats.sankakucomplex.com
   - +.csvti.intuit.com
   - +.ct.pinterest.com
@@ -1315,7 +1297,6 @@ payload:
   - +.cyber-tracking.att.com
   - +.cz-business.vodafone.com
   - +.czwcvfbc.page.link
-  - +.d-098ybui-hgf-1324992141.cos.ap-bangkok.myqcloud.com
   - +.d.email.forbes.com
   - +.d.la1-c2-iad.salesforceliveagent.com
   - +.d.love4porn.com
@@ -2710,10 +2691,6 @@ payload:
   - +.deprecated-custom-domains.b-cdn.net
   - +.derangedadage91wis.files.wordpress.com
   - +.desgao1zt7irn.cloudfront.net
-  - +.detaillog-eu-base.zego.im
-  - +.detaillog-global.zego.im
-  - +.detaillog-hk-base.zego.im
-  - +.detaillog1506224533-api.zego.im
   - +.dev-imp.nextmedia.com
   - +.dev-lp-subdomain.carnival-uk-dev.test.ajo.adobe.com
   - +.dev-plan.intel.com
@@ -2851,7 +2828,6 @@ payload:
   - +.dnh523js9661q.cloudfront.net
   - +.dnhfi5nn2dt67.cloudfront.net
   - +.dniyppubkuut7.cloudfront.net
-  - +.dnkeeper-drru.platform.dbankcloud.ru
   - +.dnkeeper.platform.dbankcloud.eu
   - +.dnks065sb0ww6.cloudfront.net
   - +.dnn4px252i5wx.cloudfront.net
@@ -2923,7 +2899,6 @@ payload:
   - +.drbccw04ifva6.cloudfront.net
   - +.drda5yf9kgz5p.cloudfront.net
   - +.dre81lzpy0s7q.cloudfront.net
-  - +.dreamlight.com.bd
   - +.drf8e429z5jzt.cloudfront.net
   - +.drfdisvc.walmart.com
   - +.drulilqe8wg66.cloudfront.net
@@ -3028,13 +3003,13 @@ payload:
   - +.e77lmzbqou0n-a.akamaihd.net
   - +.ea.epochbase.com
   - +.ea.youmaker.com
+  - +.earthewndegtheyased.edgeone.app
   - +.eas.etherscan.com
   - +.eastern2.secureforms.mcafee.com
   - +.easy-monetization.s3.yandex.net
   - +.eats-ads-event-capture.coupang.com
   - +.eaus2watcab01.blob.core.windows.net
   - +.eaus2watcab02.blob.core.windows.net
-  - +.ebaba.com.bd
   - +.ebayadvertising.com
   - +.ebayclassifiedsgroup.com
   - +.ebayrtm.com
@@ -3052,7 +3027,6 @@ payload:
   - +.edgedc.ibm.com
   - +.eec.crunchyroll.com
   - +.ef.fanatical.com
-  - +.egr.com.bd
   - +.elads.kocpc.com.tw
   - +.electronics.sony-latin.com
   - +.eloqua-tracking.unity.com
@@ -3084,7 +3058,6 @@ payload:
   - +.engage2demand.cisco.com
   - +.engagement.feedly.com
   - +.engagemetrics.cisco.com
-  - +.engineershome.com.bd
   - +.ensighten.norton.com
   - +.enterprise2.secureforms.mcafee.com
   - +.entrecard.s3.amazonaws.com
@@ -3159,17 +3132,14 @@ payload:
   - +.exchange.dumb1.com
   - +.exchange.longmusic.com
   - +.experience.limelight.com
-  - +.experiments.apple.com
   - +.explore.att.com
   - +.external-api.impression-neo.naver.com
   - +.external-promo-metrics.yandex.net
   - +.extmaps-api.yandex.net
   - +.f3i5-0g49bgn-3h95-1324992141.cos.ap-jakarta.myqcloud.com
-  - +.facebook.ximier.workers.dev
   - +.facebookads.com
   - +.fahmta.newstatesman.com
   - +.familygiftlove.myshopify.com
-  - +.fangshan.us
   - +.fapality.com
   - +.fapcat.com
   - +.faphouse.com
@@ -3192,6 +3162,7 @@ payload:
   - +.finnews7.wordpress.com
   - +.fioricet-online.blogspot.com
   - +.firebasedynamiclinks.googleapis.com
+  - +.firebaseinstallations.googleapis.com
   - +.firebaselogging-pa.googleapis.com
   - +.firebaselogging.googleapis.com
   - +.firstpartycookie.gettyimages.com
@@ -3204,7 +3175,6 @@ payload:
   - +.flex.msn.com
   - +.flipdish-cookie-consent.s3-eu-west-1.amazonaws.com
   - +.flirt4free.com
-  - +.fls-cn.amazon.cn
   - +.fls-na.amazon.com
   - +.flurry.cachefly.net
   - +.flurry.com
@@ -3296,7 +3266,6 @@ payload:
   - +.gimp.zendesk.com
   - +.girls.xyz
   - +.github.com.cnpmjs.org
-  - +.gkzy.app
   - +.glassmoni.researchgate.net
   - +.gld.samsungosp.com
   - +.glitter.services.disqus.com
@@ -3374,7 +3343,6 @@ payload:
   - +.grc2.secureforms.mcafee.com
   - +.green-griffin-860.appspot.com
   - +.grow.gab.com
-  - +.grs-pub.platform.dbankcloud.ru
   - +.grs.dbankcloud.eu
   - +.grs.platform.dbankcloud.ru
   - +.gtm.oasisfeng.com
@@ -3408,7 +3376,6 @@ payload:
   - +.hbrcv.adobe.com
   - +.hbrt.adobe.com
   - +.hc-analytics.idp.clogin.att.com
-  - +.hd-filmyonline.blogspot.com
   - +.hdapp1003-a.akamaihd.net
   - +.hdapp1008-a.akamaihd.net
   - +.hdsrc-a.akamaihd.net
@@ -3517,6 +3484,7 @@ payload:
   - +.hm2wjuuus3.execute-api.ap-northeast-1.amazonaws.com
   - +.hn-button.herokuapp.com
   - +.hnbutton.appspot.com
+  - +.hostecountspringweb-4sbw8uzi5y.edgeone.dev
   - +.hosted.stats.com.edgesuite.net
   - +.hostedads.realitykings.com
   - +.hotelembuguacu.blob.core.windows.net
@@ -3526,12 +3494,12 @@ payload:
   - +.hpacdn.pornpics.com
   - +.hpast.pornpics.com
   - +.hps.pornpics.com
+  - +.hq-cpanel-uptime-upgrade-hnrv61j7if.edgeone.app
   - +.hqmetrics.sony.com
   - +.hs.eloqua.com
   - +.html5adkit.plusmo.s3.amazonaws.com
   - +.htmlads.s3.amazonaws.com
   - +.hu-business.vodafone.com
-  - +.huazitupian.oss-cn-hongkong.aliyuncs.com
   - +.hub.firestonecompleteautocare.com
   - +.hubt.pornhub.com
   - +.huq-query-loggers-california-3cec807da3e9dc0d.elb.us-west-1.amazonaws.com
@@ -3552,7 +3520,6 @@ payload:
   - +.iadworkbench.apple.com
   - +.ibeat.indiatimes.com
   - +.ibis.lgappstv.com
-  - +.ibs.com.bd
   - +.icas.ikea.com
   - +.icas.ikea.net
   - +.icelandclothing.myshopify.com
@@ -3572,7 +3539,6 @@ payload:
   - +.ignifyecom.s3.amazonaws.com
   - +.iiceq.intuit.com
   - +.ijaabm.nbcsports.com
-  - +.iloveyou.com.bd
   - +.ilyonanalytics.herokuapp.com
   - +.im-apps.net
   - +.imagefiles-backup.oss-ap-southeast-7.aliyuncs.com
@@ -3874,7 +3840,6 @@ payload:
   - +.log.tiktokv.com
   - +.log.webnovel.com
   - +.log2.spotify.com
-  - +.logagent-rum-292398709.cn-north-1.elb.amazonaws.com.cn
   - +.logapi.tv.naver.com
   - +.logger.qingting.fm
   - +.logger.unsplash.com
@@ -4176,7 +4141,6 @@ payload:
   - +.mobileleads.msn.com
   - +.mobiletelemetry.ebay.com
   - +.mobondhrd.appspot.com
-  - +.mobtech.com.bd
   - +.modern.watson.data.microsoft.com.akadns.net
   - +.modus.nike.com
   - +.moengagewebsdk.imgix.net
@@ -4194,7 +4158,6 @@ payload:
   - +.mp.theepochtimes.com
   - +.mr.homedepot.com
   - +.mrporngeek.com
-  - +.mrw.so
   - +.ms.vk.com
   - +.msadsscale.azureedge.net
   - +.msadsscale.microsoft.com
@@ -4222,7 +4185,6 @@ payload:
   - +.mx.carfax.com
   - +.mx.eneba.com
   - +.mx6.3pornhere.com
-  - +.mxj.cx
   - +.mxpl.9gag.com
   - +.myhandshops.myshopify.com
   - +.myphonenumbers-pa.googleapis.com
@@ -4235,7 +4197,6 @@ payload:
   - +.na2m-pr.licenses.adobe.com
   - +.naiadsystems.com
   - +.nalzahqp.page.link
-  - +.nano-game-ad-slot.oss-cn-hongkong.aliyuncs.com
   - +.nasi.etherscan.com
   - +.nativead.s3.amazonaws.com
   - +.nats.xing.com
@@ -4248,7 +4209,6 @@ payload:
   - +.net.daraz.lk
   - +.net.daraz.pk
   - +.netmarbleslog.netmarble.com
-  - +.netrip.ddns.net
   - +.networkingexchange.att.com
   - +.networkprotection.mcafee.com
   - +.newads.bangbros.com
@@ -4263,7 +4223,6 @@ payload:
   - +.nexusrules.officeapps.live.com
   - +.nexxtv-events.servicebus.windows.net
   - +.nffdg43zx.appspot.com
-  - +.nft-giftbox20-bay.vercel.app
   - +.ngads.go.com
   - +.nice.tranny.one
   - +.nid.mansionglobal.com
@@ -4319,7 +4278,6 @@ payload:
   - +.odd-onead.cdn.hinet.net
   - +.offers.nordvpn.com
   - +.offerwall.yandex.net
-  - +.officedesignappl0auth-1316860111.cos.na-ashburn.myqcloud.com
   - +.ofice365.github.io
   - +.ogads-pa.clients6.google.com
   - +.ogads-pa.googleapis.com
@@ -4407,7 +4365,6 @@ payload:
   - +.otr.kaspersky.nl
   - +.outlookads.live.com
   - +.outreach.crossref.org
-  - +.overseas-ad-bucket.oss-cn-hongkong.aliyuncs.com
   - +.ox-d.hulkshare.com
   - +.ox8.topsexhdvideos.com
   - +.p-cg64-slinganalytics.movetv.com
@@ -4516,7 +4473,6 @@ payload:
   - +.plx.porndig.com
   - +.pnekru6pxrum-a.akamaihd.net
   - +.podcast.e.adobe.com
-  - +.poe.com.bd
   - +.pointball-llvwkkfsoo.edgeone.app
   - +.polish-money-matters.blogspot.com
   - +.polls.services.disqus.com
@@ -4588,7 +4544,6 @@ payload:
   - +.qbse.intuit.com
   - +.qc.newyorker.com
   - +.qc.wired.com
-  - +.qcc.qualcomm.com
   - +.qchoh.lg.com
   - +.qfp.intuit.com
   - +.qgumjp.joins.com
@@ -4605,10 +4560,8 @@ payload:
   - +.r.tropictube.com
   - +.r.turn.com.akadns.net
   - +.r0.mradx.net
-  - +.r2---sn-j5o76n7e.gvt1.com
   - +.r34fa352.duckdns.org
   - +.r451.jamanetwork.com
-  - +.r7988-8t7jb6-u-1324992141.cos.ap-jakarta.myqcloud.com
   - +.ra.poringa.net
   - +.rad.live.com
   - +.rad.msn.com
@@ -4635,8 +4588,6 @@ payload:
   - +.regi.di.atlas.samsung.com
   - +.register.digital.adobe.com
   - +.register.redhat.com
-  - +.registro-digital-2026-plmj.cr-web.workers.dev
-  - +.registro-formulario-2026-ghay.cr-web.workers.dev
   - +.registry.api.cnn.io
   - +.rel.msn.com
   - +.repdata.usatoday.com
@@ -4663,7 +4614,6 @@ payload:
   - +.rockpoint.xhamster3.com
   - +.romeccs.microsoft.com
   - +.root20system20macosxdriver.serveusers.com
-  - +.ropaly.com.bd
   - +.roundcube-jrcfj7x9ek.edgeone.dev
   - +.rpc-tapjoy-com-lb-1378811527.us-east-1.elb.amazonaws.com
   - +.rtb-1.mylust.com
@@ -4738,7 +4688,6 @@ payload:
   - +.sanalytics.verizon.com
   - +.sanalytics.verizonenterprise.com
   - +.sanalytics.verizonwireless.com
-  - +.sanjeevani.edu.np
   - +.santander-open-academy.cip.test.ajo.adobe.com
   - +.saveeeee.myshopify.com
   - +.sbbanner-com.cdn.ampproject.org
@@ -4758,7 +4707,6 @@ payload:
   - +.scmetrics.exacttarget.com
   - +.scribe.twitter.com
   - +.sd-tagging.azurefd.net
-  - +.sd17glass3es1s0pan.oss-us-west-1.aliyuncs.com
   - +.sdata.wiley.com
   - +.sdk-log-upload-os.hoyoverse.com
   - +.sdk-os-static.hoyoverse.com
@@ -4802,8 +4750,6 @@ payload:
   - +.sentry.eks.hoyoverse.com
   - +.sentry.hetzner.company
   - +.sentry.io
-  - +.sentry.ldplayer.net
-  - +.sentry2.domoai.app
   - +.ser.everydayporn.co
   - +.serve.ads.chaturbate.com
   - +.serve.bdsmstreak.com
@@ -4836,8 +4782,6 @@ payload:
   - +.sgsnssdk.com.edgekey.net
   - +.sgtmao.greenpeace.org
   - +.sgw-analytics.panasonic.com
-  - +.sha.ikwb.com
-  - +.shahidul.com.bd
   - +.sharethis.com
   - +.shepherd.ff.avast.com
   - +.sherlock-events-sampler.ebay.com
@@ -5005,7 +4949,6 @@ payload:
   - +.somni.home.saxo
   - +.somni.istockphoto.com
   - +.somniture.corel.com
-  - +.sonagazicollege.gov.bd
   - +.sonar-iad.xx.fbcdn.net
   - +.soundcloud-pax.pandora.com
   - +.soxnwz.lg.com
@@ -5019,7 +4962,6 @@ payload:
   - +.spectrum.gettyimages.com
   - +.speeddials.opera.com
   - +.speee-ad.akamaized.net
-  - +.spider.com.bd
   - +.spike.email-disney.cjm.adobe.com
   - +.splash-ads.cdn.unity.cn
   - +.splash-ads.unitychina.cn
@@ -5177,7 +5119,6 @@ payload:
   - +.stats.pornpics.com
   - +.stats.qwant.com
   - +.stats.shopify.com
-  - +.stats.skywork.ai
   - +.stats.slideshare.net
   - +.stats.tou.tv
   - +.stats.unity3d.com
@@ -5399,8 +5340,6 @@ payload:
   - +.telemetry.pod5.prod.avatar.ext.hp.com
   - +.telemetry.pod6.prod.avatar.ext.hp.com
   - +.telemetry.pod7.prod.avatar.ext.hp.com
-  - +.telemetry.pod8.prod.avatar.ext.hp.com
-  - +.telemetry.pod9.prod.avatar.ext.hp.com
   - +.telemetry.proton.me
   - +.telemetry.remoteapp.windowsazure.com
   - +.telemetry.soundcloud.com
@@ -5534,7 +5473,6 @@ payload:
   - +.tracking.ps.shutterstock.com
   - +.tracking.risk.lexisnexis.com
   - +.tracking.securitymsp.cisco.com
-  - +.tracking.shopee.cn
   - +.tracking.smartbusiness.samsung.com
   - +.tracking.tidalhifi.com
   - +.tracking.umbrella.com
@@ -5629,14 +5567,11 @@ payload:
   - +.ultimate-tech-products.myshopify.com
   - +.um-public-panel-prod.s3.amazonaws.com
   - +.umami.zhul.in
-  - +.umami2.yiso.eu.org
   - +.umwatson.events.data.microsoft.com
   - +.umwatsonc.events.data.microsoft.com
-  - +.unagi.amazon.cn
   - +.uncanny.marvel.com
   - +.unibotscdn.b-cdn.net
   - +.unid.go.com
-  - +.uniraz.com.bd
   - +.unityads.unity.cn
   - +.unityads.unity3d.com
   - +.unityads.unity3d.com.edgekey.net
@@ -5685,6 +5620,7 @@ payload:
   - +.vatrack.hinet.net
   - +.vercel-analytics.com
   - +.vercel-insights.com
+  - +.verffddfkoiijbbvtfrcxswejkkloiuhvfrdskkolooknvc-qn7102xdig.edgeone.dev
   - +.veta.naver.com
   - +.vf.startpage.com
   - +.vge-business.vodafone.com
@@ -5909,4 +5845,3 @@ payload:
   - +.zopro.duckdns.org
   - +.zrsetz.shutterstock.com
   - +.ztd.dds.microsoft.com
-  - +.zzz-log-upload-os.hoyoverse.com
