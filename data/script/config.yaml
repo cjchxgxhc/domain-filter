@@ -58,14 +58,6 @@ p_ads_basic:
   rules:
     - type: add
       url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-    - type: discard_suffix
-      url:
-     #   - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/pro.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/tif.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/gambling.txt
-    - type: add
-      url:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
         # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
@@ -82,6 +74,8 @@ p_ads_basic:
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
         # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+        # hosts子域名
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
   output:
     enabled: true
 
@@ -123,6 +117,8 @@ ads_big:
     - type: discard_suffix
       preset:
         - p_proxy_tld
+      url:
+        - https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt
     - type: add
       preset:
         - p_ads_basic
