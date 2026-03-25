@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 741
-# Updated: 2026-03-26 01:45:14 CST
+# Total: 742
+# Updated: 2026-03-26 05:40:36 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -304,6 +304,7 @@ payload:
   - +.example
   - +.example.org
   - +.f.c2r.ts.cdn.office.net
+  - +.feihuo.com
   - +.ff.dorado.sdo.com
   - +.ff14.sdo.com
   - +.ffbuddy.com
