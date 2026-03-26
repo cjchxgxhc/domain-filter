@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 23,183
-# Updated: 2026-03-26 05:40:36 CST
+# Total: 23,185
+# Updated: 2026-03-27 05:32:33 CST
 #
 payload:
   - +.000webhost.com
@@ -16890,6 +16890,7 @@ payload:
   - +.qceventscenter.com.cn
   - +.qckprn.com
   - +.qcmod.xyz
+  - +.qcomgeo2.com
   - +.qctconnect.com
   - +.qdiehzz7.me
   - +.qdmomentum.com
@@ -16936,6 +16937,7 @@ payload:
   - +.qt.io
   - +.qtweeter.com
   - +.qualcomm-email.com
+  - +.qualcomm-inc.com
   - +.qualcomm.cn
   - +.qualcomm.com
   - +.qualcommhalo.com

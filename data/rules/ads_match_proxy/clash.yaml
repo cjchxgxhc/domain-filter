@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,840
-# Updated: 2026-03-26 05:40:36 CST
+# Total: 5,841
+# Updated: 2026-03-27 05:32:33 CST
 #
 payload:
   - +.0a0d-d3l1vr.b-cdn.net
@@ -45,6 +45,7 @@ payload:
   - +.4k6.4kporn.xxx
   - +.51.la
   - +.51tongji.trafficmanager.net
+  - +.55.la
   - +.58680dd9.ngrok.io
   - +.61serve.everydayporn.co
   - +.6735a55d.ngrok.io
@@ -118,6 +119,7 @@ payload:
   - +.ac.prism-world.jp.net
   - +.ac2.tnaflix.com
   - +.ac3.msn.com
+  - +.acccountverificatonlog.edgeone.app
   - +.accounts.longmusic.com
   - +.acds-events.adobe.io
   - +.ace.naver.com
@@ -1046,7 +1048,6 @@ payload:
   - +.c1-stats.shopifysvc.com
   - +.c2shb.pubgw.yahoo.com
   - +.c2shb.ssp.yahoo.com
-  - +.c2vydmvydxbkyxri-kte1fxva3p.edgeone.app
   - +.c6.paypal.com
   - +.cache.datamart.windows.com
   - +.cache2.delvenetworks.com
@@ -3478,7 +3479,6 @@ payload:
   - +.hk567rsda.appspot.com
   - +.hkrpg-log-upload-os.hoyoverse.com
   - +.hksdf924pzxoias.appspot.com
-  - +.hkz2311011313001-l5deuphxox.edgeone.app
   - +.hl2rcv.adobe.com
   - +.hm2wjuuus3.execute-api.ap-northeast-1.amazonaws.com
   - +.hn-button.herokuapp.com
@@ -3660,7 +3660,6 @@ payload:
   - +.ipmcdn.avast.com
   - +.ipv6-wildcard.applovin.com.edgekey.net
   - +.iqmetrics.faz.net
-  - +.irurng.wondershare.jp
   - +.is-tracking-pixel-api-prod.appspot.com
   - +.is.lg.com
   - +.ishinomakicatering.web.fc2.com
@@ -3811,6 +3810,7 @@ payload:
   - +.liverail.com
   - +.livesexasian.com
   - +.livexxx.me
+  - +.livsffer.sa.com
   - +.llnw.net
   - +.lm.licenses.adobe.com
   - +.lms.roblox.com
@@ -4238,6 +4238,7 @@ payload:
   - +.noa.yahoo.com
   - +.nol.yahoo.com
   - +.nom.familysearch.org
+  - +.notebooklm-download.squarespace.com
   - +.notes-analytics-events.apple.com
   - +.notes-analytics-events.news.apple-dns.net
   - +.notify.eset.com
