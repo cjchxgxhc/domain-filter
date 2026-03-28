@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,843
-# Updated: 2026-03-28 05:35:49 CST
+# Total: 5,838
+# Updated: 2026-03-29 05:31:10 CST
 #
 payload:
   - +.0a0d-d3l1vr.b-cdn.net
@@ -805,6 +805,7 @@ payload:
   - +.astat.nikkei.com
   - +.at.contact.alphabet.com
   - +.athena-ads.wikia.com
+  - +.athome-srw.s3.us-west-2.amazonaws.com
   - +.atsmetrics.adobe.com
   - +.attach.mail.daum.net
   - +.attributiontrackingga.googlecode.com
@@ -838,18 +839,14 @@ payload:
   - +.badad.googleplex.com
   - +.badge.facebook.com
   - +.badges.instagram.com
-  - +.bafybeias4uzwo3l336d5ewygv2dd3oqbnlvrer5ndf5wyhjcwkm4igaafa.ipfs.w3s.link
-  - +.bafybeibfoyi7ruuyoncarf4xr55qa3lthsjjjgrktk4ia4z3upesawb4ry.ipfs.w3s.link
   - +.bafybeibqcivjhwg2msil5g62did64uhtptlf7epidbrat4gexerzfv5mmq.ipfs.dweb.link
   - +.bafybeibwz6lzwo6u5gkhp3ydl4te3hl3plfkypox6mnejssqwfrpdsmqoy.ipfs.dweb.link
   - +.bafybeiccl6irsru52xsyiuy4pqlitflw4f57xovkfpk5w2wnhtmeaqpjuy.ipfs.dweb.link
   - +.bafybeidp7zdy2lu6yxvbgoev4b6xokuaa6jljr34vkflxzel2ya2gc3plm.ipfs.dweb.link
-  - +.bafybeidv6v7pezugmfpzwl2k2ni56nhvlyv5vaibriswtsthae5loxskpi.ipfs.dweb.link
   - +.bafybeidvf6tytrspkd4wnvxzs23m3kjr6bfvgszbfwybmmcosl4rrhvuo4.ipfs.dweb.link
   - +.bafybeidvgy76m4r347tpqg6plr3ac2p7o5bpcluicawc25nuh7mowtkssy.ipfs.dweb.link
   - +.bafybeiedkdwsp77zcvi6477lovtfde7rwsjdz7654kdnrgmciqg5mfhwh4.ipfs.dweb.link
   - +.bafybeieinfniokbzasdkpwazctmq3cgmzg3th4v44dkrjf3abl4o2zmjxy.ipfs.dweb.link
-  - +.bafybeieq7tctzxkqidqpq4fjvtznbupqrpo2w4n4lfmzksehei4dinilii.ipfs.w3s.link
   - +.bafybeiffpkay6l7heq55epccneb563p5chjzclxnso3vkozyorphlz6ana.ipfs.w3s.link
   - +.bafybeig5e7vfagk6xs4b2kk6s2bgaqm4trr56whisnhzirxutlovqkcnli.ipfs.dweb.link
   - +.bafybeihamvbzrm2tsifa4s7xruhfnsgnkzgtk2jqwj6cwgmdxj4wqe5lm4.ipfs.dweb.link
@@ -893,7 +890,6 @@ payload:
   - +.beacons.ads.fubo.tv
   - +.beacons.gcp.gvt2.com
   - +.beacons.gvt2.com
-  - +.beacons5.gvt3.com
   - +.beaconserver-ce-vpc0-1537565064.eu-west-1.elb.amazonaws.com
   - +.beaconserver-ce-vpc0-1909323404.us-west-2.elb.amazonaws.com
   - +.beamanalytics.b-cdn.net
@@ -3275,6 +3271,7 @@ payload:
   - +.globalcommunications.sc.com
   - +.globalsolutions.risk.lexisnexis.com
   - +.gloporn.com
+  - +.gmbl.sy99.de
   - +.go-elqau.oracle.com
   - +.go-stage.oracle.com
   - +.go-vmware.broadcom.com
@@ -4156,6 +4153,7 @@ payload:
   - +.monitoring-sdk.experimentation.intuit.com
   - +.mononoteapp.firebaseio.com
   - +.monorail-edge.shopifysvc.com
+  - +.move-friendly-international-observed.trycloudflare.com
   - +.mp.imgur.com
   - +.mp.theepochtimes.com
   - +.mr.homedepot.com
@@ -4810,6 +4808,7 @@ payload:
   - +.slc.commerce.naver.com
   - +.sli.huffpost.com
   - +.slike.indiatimes.com
+  - +.sm.dell.com
   - +.sm.delltechnologies.com
   - +.smartlock.google.com
   - +.smatrix.hbo.com
@@ -4976,7 +4975,6 @@ payload:
   - +.spyneteurope.microsoft.akadns.net
   - +.srepdata.usatoday.com
   - +.srtb.msn.com
-  - +.srv65ertui8uyt655io-7douf96n3o.edgeone.dev
   - +.srvcs.tumblr.com
   - +.ssa.discoveryplus.com
   - +.ssc.amerikaninsesi.com
@@ -5535,7 +5533,6 @@ payload:
   - +.trksvg.business.us.hsbc.com
   - +.trksvg.gbm.hsbc.com
   - +.trksvg.sustainablefinance.hsbc.com
-  - +.tropical-red-pd56z5jhth.edgeone.dev
   - +.tru465rsda.appspot.com
   - +.trustedpeach.com
   - +.try.tableau.com
@@ -5623,7 +5620,6 @@ payload:
   - +.vatrack.hinet.net
   - +.vercel-analytics.com
   - +.vercel-insights.com
-  - +.verffddfkoiijbbvtfrcxswejkkloiuhvfrdskkolooknvc-qn7102xdig.edgeone.dev
   - +.veta.naver.com
   - +.vf.startpage.com
   - +.vge-business.vodafone.com
@@ -5694,7 +5690,6 @@ payload:
   - +.wc.yahoodns.net
   - +.wcs.naver.com
   - +.wdig.vo.llnwd.net
-  - +.wealotheoloagathalimda.edgeone.app
   - +.weather-analytics-events.apple.com
   - +.weather-analytics-events.news.apple-dns.net
   - +.web-analytics.lastpass.com
