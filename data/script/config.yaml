@@ -247,30 +247,21 @@ ads_hosts:
         - https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
         - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
         - https://hblock.molinero.dev/hosts
-        - https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
+       # - https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
     - type: discard_suffix
       preset:
         - proxy
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
     - type: match_suffix
       preset:
         - p_ads_basic
     - type: add
       preset:
         - p_ads_basic
-    - type: discard_suffix
-      domain:
-        - doubleclick.net
-        - googlesyndication.com
-        - amazonaws.com
-        - devices.a2z.com
-        - measure.office.com
-        - uaid.nmrodam.com
-        - daraz.com
-        - amazon-adsystem.com
-        - appsflyersdk.com
-        - sentry.io
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
   output:
     enabled: true
     title: Ads Blocklist Hosts
