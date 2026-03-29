@@ -171,11 +171,17 @@ ads_hosts:
         - p_ads_basic
         - ads_china
         - p_ads_important
+    - type: discard
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
     - type: discard_suffix
       url:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
       preset:
         - p_proxy_tld
+    - type: add
+      preset:
+        - p_ads_important
   output:
     enabled: true
     title: Ads Blocklist Hosts
