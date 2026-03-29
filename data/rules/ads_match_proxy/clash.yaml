@@ -1,8 +1,8 @@
 # Title: Ads Blocklist Proxy
 # Description: 命中 Proxy 规则的广告域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 5,838
-# Updated: 2026-03-29 05:31:10 CST
+# Total: 5,836
+# Updated: 2026-03-29 17:43:21 CST
 #
 payload:
   - +.0a0d-d3l1vr.b-cdn.net
@@ -18,7 +18,6 @@ payload:
   - +.1548164934.rsc.cdn77.org
   - +.1558334541.rsc.cdn77.org
   - +.1675450967.rsc.cdn77.org
-  - +.17890714.ru
   - +.1991482557.rsc.cdn77.org
   - +.1oavsblobprodcus350.blob.core.windows.net
   - +.1stfinancefirm.wixsite.com
@@ -901,7 +900,6 @@ payload:
   - +.berryessa.stats.live-video.net
   - +.best10cdn.blob.core.windows.net
   - +.bestgames-2022.com
-  - +.better.com.np
   - +.bh3-sdk-os-static.hoyoverse.com
   - +.bi-analytics.cloudapp.net
   - +.bi.manhuaren.com
@@ -3853,7 +3851,6 @@ payload:
   - +.logs.roku.com
   - +.logx-experimentation.iherb.com
   - +.look-like-star.myshopify.com
-  - +.loud-bronze-vckfnrbimo.edgeone.dev
   - +.lp.americas.business.samsung.com
   - +.lp.apac.business.samsung.com
   - +.lp.b2bmail.adobe.com
@@ -4975,6 +4972,7 @@ payload:
   - +.spyneteurope.microsoft.akadns.net
   - +.srepdata.usatoday.com
   - +.srtb.msn.com
+  - +.srv65ertui8uyt655io-7douf96n3o.edgeone.dev
   - +.srvcs.tumblr.com
   - +.ssa.discoveryplus.com
   - +.ssc.amerikaninsesi.com
@@ -5616,7 +5614,6 @@ payload:
   - +.v20.vortex-win.data.microsoft.com
   - +.v9banners-com.cdn.ampproject.org
   - +.vaamsmgfreocmroe-1342087530.cos.sa-saopaulo.myqcloud.com
-  - +.vambanlopcaxomilsss.edgeone.dev
   - +.vatrack.hinet.net
   - +.vercel-analytics.com
   - +.vercel-insights.com
@@ -5690,6 +5687,7 @@ payload:
   - +.wc.yahoodns.net
   - +.wcs.naver.com
   - +.wdig.vo.llnwd.net
+  - +.wealotheoloagathalimda.edgeone.app
   - +.weather-analytics-events.apple.com
   - +.weather-analytics-events.news.apple-dns.net
   - +.web-analytics.lastpass.com

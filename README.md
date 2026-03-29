@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--29_05:31:18-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--29_17:44:10-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`159,446`
+**规则数量**：`159,613`
 
 <details><summary>AdBlock</summary>
 
@@ -368,7 +368,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 命中 Proxy 规则的广告域名。
 
-**规则数量**：`5,838`
+**规则数量**：`5,836`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -492,7 +492,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`14,357`
+**规则数量**：`21,486`
 
 <details><summary>Hosts</summary>
 
@@ -522,6 +522,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
+- https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
 - https://hblock.molinero.dev/hosts
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
@@ -549,4 +550,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-03-29 05:31:18（北京时间）*
+*更新时间：2026-03-29 17:44:10（北京时间）*
