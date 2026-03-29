@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--29_21:15:30-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--30_02:21:53-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`158,310`
+**规则数量**：`158,307`
 
 <details><summary>AdBlock</summary>
 
@@ -158,7 +158,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`15,376`
+**规则数量**：`40,901`
 
 <details><summary>Hosts</summary>
 
@@ -190,6 +190,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://hblock.molinero.dev/hosts
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
@@ -216,6 +217,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
 - https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
+- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
 
@@ -434,4 +436,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-03-29 21:15:30（北京时间）*
+*更新时间：2026-03-30 02:21:53（北京时间）*
