@@ -79,18 +79,6 @@ p_ads_basic:
     - type: discard
       preset:
         - p_ads_white
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
-    - type: add
-      preset:
-        - p_ads_important
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-      preset:
-        - p_proxy_tld
   output:
     enabled: true
 
@@ -133,8 +121,6 @@ ads_big:
     - type: discard_suffix
       preset:
         - p_proxy_tld
-      url:
-        - https://raw.githubusercontent.com/notracking/hosts-blocklists-scripts/master/domains.dead.txt
     - type: add
       preset:
         - p_ads_basic
@@ -162,9 +148,7 @@ ads_china:
       url:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-      preset:
-        - p_proxy_tld
+
 
 ads_hosts:
   id: 1002
@@ -181,6 +165,13 @@ ads_hosts:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
       preset:
         - ads_big
+    - type: discard_suffix
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+      preset:
+        - p_proxy_tld
     - type: match_suffix
       preset:
         - p_ads_basic
@@ -191,6 +182,11 @@ ads_hosts:
         - p_ads_basic
         - ads_china
         - p_ads_important
+    - type: discard_suffix
+      url:
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+      preset:
+        - p_proxy_tld
   output:
     enabled: true
     title: Ads Blocklist Hosts
