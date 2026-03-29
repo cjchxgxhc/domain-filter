@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 40 个规则源...
-下载完成：40/40 成功，耗时 1.51 秒
+下载完成：40/40 成功，耗时 1.42 秒
 
 
 ================================================================================
@@ -155,21 +155,21 @@
   │  rules[1] type=discard_suffix
   │    url：75,165 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
   │    url：864,803 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
-  │    url：22 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+  │    url：26 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
   │    preset：29,848 条 <- proxy
-  │    rules[1] 共 966,150 条
-  │    → 后缀丢弃，移除 505,205 条（剩余 609,380）
+  │    rules[1] 共 966,154 条
+  │    → 后缀丢弃，移除 506,365 条（剩余 608,220）
   │  rules[2] type=match_suffix
   │    preset：9,605 条 <- p_ads_basic
   │    rules[2] 共 9,605 条
-  │    → 后缀保留，保留 16,723 条（移除 592,657）
+  │    → 后缀保留，保留 15,603 条（移除 592,617）
   │  rules[3] type=add
   │    preset：9,605 条 <- p_ads_basic
   │    rules[3] 共 9,605 条
-  │    → 加入集合，新增 1,911 条（合计 18,634）
-  │  处理完毕，共 18,634 条
-  └─ 最终输出：18,634 条
+  │    → 加入集合，新增 1,982 条（合计 17,585）
+  │  处理完毕，共 17,585 条
+  └─ 最终输出：17,585 条
 
 ================================================================================
-✓ 处理完成！耗时：18.09 秒
+✓ 处理完成！耗时：17.53 秒
 ================================================================================
