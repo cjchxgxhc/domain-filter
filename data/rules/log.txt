@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 40 个规则源...
-下载完成：40/40 成功，耗时 2.60 秒
+下载完成：40/40 成功，耗时 3.64 秒
 
 
 ================================================================================
@@ -159,16 +159,16 @@
 处理规则组：Proxy (proxy, id=2000)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：27,712 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：27,711 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
   │    preset：828 条 <- p_proxy_tld
-  │    rules[0] 共 29,848 条
-  │    → 加入集合，新增 29,848 条（合计 29,848）
-  │  处理完毕，共 29,848 条
+  │    rules[0] 共 29,847 条
+  │    → 加入集合，新增 29,847 条（合计 29,847）
+  │  处理完毕，共 29,847 条
   │  子域去重：移除 6,662 条冗余子域
-  └─ 最终输出：23,186 条
+  └─ 最终输出：23,185 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix, id=2001)
@@ -193,5 +193,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：15.72 秒
+✓ 处理完成！耗时：16.84 秒
 ================================================================================
