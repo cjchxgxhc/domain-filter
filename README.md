@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--03--29_17:44:10-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--03--29_18:15:16-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -492,7 +492,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`21,486`
+**规则数量**：`18,634`
 
 <details><summary>Hosts</summary>
 
@@ -522,7 +522,6 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
 - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-- https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
 - https://hblock.molinero.dev/hosts
 - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
 - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
@@ -535,11 +534,14 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
+- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
 - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
 - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
@@ -550,4 +552,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-03-29 17:44:10（北京时间）*
+*更新时间：2026-03-29 18:15:16（北京时间）*

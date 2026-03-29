@@ -1,6 +1,6 @@
 开始执行域名过滤工具
-开始下载 38 个规则源...
-下载完成：38/38 成功，耗时 51.00 秒
+开始下载 40 个规则源...
+下载完成：40/40 成功，耗时 1.51 秒
 
 
 ================================================================================
@@ -149,29 +149,27 @@
   │    url：162,052 条 <- https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
   │    url：277,740 条 <- https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
   │    url：473,178 条 <- https://hblock.molinero.dev/hosts
-  │    url：9,464,766 条 <- https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
-  │    rules[0] 共 9,473,760 条
-  │    → 加入集合，新增 9,473,760 条（合计 9,473,760）
+  │    url：21,486 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
+  │    rules[0] 共 1,114,585 条
+  │    → 加入集合，新增 1,114,585 条（合计 1,114,585）
   │  rules[1] type=discard_suffix
+  │    url：75,165 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+  │    url：864,803 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
+  │    url：22 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
   │    preset：29,848 条 <- proxy
-  │    rules[1] 共 29,848 条
-  │    → 后缀丢弃，移除 2,404,342 条（剩余 7,069,418）
+  │    rules[1] 共 966,150 条
+  │    → 后缀丢弃，移除 505,205 条（剩余 609,380）
   │  rules[2] type=match_suffix
   │    preset：9,605 条 <- p_ads_basic
   │    rules[2] 共 9,605 条
-  │    → 后缀保留，保留 75,798 条（移除 6,993,620）
+  │    → 后缀保留，保留 16,723 条（移除 592,657）
   │  rules[3] type=add
   │    preset：9,605 条 <- p_ads_basic
   │    rules[3] 共 9,605 条
-  │    → 加入集合，新增 1,413 条（合计 77,211）
-  │  rules[4] type=discard_suffix
-  │    url：75,165 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-  │    domain：10 条自定义
-  │    rules[4] 共 75,175 条
-  │    → 后缀丢弃，移除 55,725 条（剩余 21,486）
-  │  处理完毕，共 21,486 条
-  └─ 最终输出：21,486 条
+  │    → 加入集合，新增 1,911 条（合计 18,634）
+  │  处理完毕，共 18,634 条
+  └─ 最终输出：18,634 条
 
 ================================================================================
-✓ 处理完成！耗时：104.78 秒
+✓ 处理完成！耗时：18.09 秒
 ================================================================================
