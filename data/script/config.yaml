@@ -247,6 +247,7 @@ ads_hosts:
         - https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
         - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
         - https://hblock.molinero.dev/hosts
+        - https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
     - type: discard_suffix
       preset:
         - proxy
