@@ -65,6 +65,13 @@ p_ads_basic:
     - type: discard
       preset:
         - p_ads_white
+    - type: discard_suffix
+      preset:
+        - proxy
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
     - type: add
       url:
         # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
@@ -249,13 +256,8 @@ ads_hosts:
         - https://hblock.molinero.dev/hosts
        # - https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
-    - type: discard_suffix
       preset:
-        - proxy
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+        - ads_big
     - type: match_suffix
       preset:
         - p_ads_basic
