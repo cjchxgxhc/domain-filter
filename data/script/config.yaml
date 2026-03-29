@@ -131,6 +131,7 @@ ads_big:
     description: 优秀规则源的合并，尽量避免误杀。
     formats: [adblock, clash, singbox]
 
+
 ads_china:
   id: 1001
   rules:
@@ -142,12 +143,7 @@ ads_china:
         - cn
       url:
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
         - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
 
 
 ads_hosts:
@@ -165,13 +161,6 @@ ads_hosts:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
       preset:
         - ads_big
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/nsfw.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/tif.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-      preset:
-        - p_proxy_tld
     - type: match_suffix
       preset:
         - p_ads_basic
