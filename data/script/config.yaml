@@ -118,6 +118,8 @@ ads_big:
     - type: discard
       preset:
         - p_ads_white
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
     - type: discard_suffix
       preset:
         - p_proxy_tld
