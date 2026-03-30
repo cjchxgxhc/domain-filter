@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 40 个规则源...
-下载完成：40/40 成功，耗时 1.74 秒
+下载完成：40/40 成功，耗时 5.49 秒
 
 
 ================================================================================
@@ -57,17 +57,17 @@
 处理规则组：p_ads_basic (p_ads_basic, id=3)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：5,903 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：5,766 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-  │    rules[0] 共 6,841 条
-  │    → 加入集合，新增 6,841 条（合计 6,841）
+  │    rules[0] 共 6,704 条
+  │    → 加入集合，新增 6,704 条（合计 6,704）
   │  rules[1] type=discard
   │    preset：990 条 <- p_ads_white
   │    rules[1] 共 990 条
-  │    → 精确丢弃，移除 210 条（剩余 6,631）
-  │  处理完毕，共 6,631 条
-  └─ 最终输出：6,631 条
+  │    → 精确丢弃，移除 210 条（剩余 6,494）
+  │  处理完毕，共 6,494 条
+  └─ 最终输出：6,494 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist (ads_big, id=1000)
@@ -77,41 +77,41 @@
   │    url：17,051 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
   │    url：107,581 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
   │    url：115,163 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：181,338 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    rules[0] 共 216,408 条
-  │    → 加入集合，新增 216,408 条（合计 216,408）
+  │    url：183,478 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    rules[0] 共 218,553 条
+  │    → 加入集合，新增 218,553 条（合计 218,553）
   │  rules[1] type=discard
   │    url：997,539 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
   │    preset：990 条 <- p_ads_white
   │    rules[1] 共 998,520 条
-  │    → 精确丢弃，移除 12,676 条（剩余 203,732）
+  │    → 精确丢弃，移除 12,676 条（剩余 205,877）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 42,758 条（剩余 160,974）
+  │    → 后缀丢弃，移除 43,656 条（剩余 162,221）
   │  rules[3] type=add
-  │    preset：6,631 条 <- p_ads_basic
+  │    preset：6,494 条 <- p_ads_basic
   │    preset：3,945 条 <- p_ads_important
-  │    rules[3] 共 9,749 条
-  │    → 加入集合，新增 4,309 条（合计 165,283）
-  │  处理完毕，共 165,283 条
-  │  子域去重：移除 15,178 条冗余子域
-  └─ 最终输出：150,105 条
+  │    rules[3] 共 9,612 条
+  │    → 加入集合，新增 4,195 条（合计 166,416）
+  │  处理完毕，共 166,416 条
+  │  子域去重：移除 15,180 条冗余子域
+  └─ 最终输出：151,236 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：ads_china (ads_china, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：6,631 条 <- p_ads_basic
-  │    rules[0] 共 6,631 条
-  │    → 加入集合，新增 6,631 条（合计 6,631）
+  │    preset：6,494 条 <- p_ads_basic
+  │    rules[0] 共 6,494 条
+  │    → 加入集合，新增 6,494 条（合计 6,494）
   │  rules[1] type=match_suffix
   │    url：35,187 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    url：37,108 条 <- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
   │    domain：1 条自定义
   │    rules[1] 共 71,918 条
-  │    → 后缀保留，保留 6,332 条（移除 299）
-  │  处理完毕，共 6,332 条
+  │    → 后缀保留，保留 6,196 条（移除 298）
+  │  处理完毕，共 6,196 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -125,36 +125,36 @@
   │    url：277,740 条 <- https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
   │    url：473,448 条 <- https://hblock.molinero.dev/hosts
   │    url：21,486 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
-  │    preset：165,283 条 <- ads_big
-  │    rules[0] 共 1,121,701 条
-  │    → 加入集合，新增 1,121,701 条（合计 1,121,701）
+  │    preset：166,416 条 <- ads_big
+  │    rules[0] 共 1,123,341 条
+  │    → 加入集合，新增 1,123,341 条（合计 1,123,341）
   │  rules[1] type=match_suffix
-  │    preset：6,631 条 <- p_ads_basic
-  │    preset：6,332 条 <- ads_china
+  │    preset：6,494 条 <- p_ads_basic
+  │    preset：6,196 条 <- ads_china
   │    preset：3,945 条 <- p_ads_important
-  │    rules[1] 共 9,749 条
-  │    → 后缀保留，保留 68,037 条（移除 1,053,664）
+  │    rules[1] 共 9,612 条
+  │    → 后缀保留，保留 67,839 条（移除 1,055,502）
   │  rules[2] type=add
-  │    preset：6,631 条 <- p_ads_basic
-  │    preset：6,332 条 <- ads_china
+  │    preset：6,494 条 <- p_ads_basic
+  │    preset：6,196 条 <- ads_china
   │    preset：3,945 条 <- p_ads_important
-  │    rules[2] 共 9,749 条
-  │    → 加入集合，新增 0 条（合计 68,037）
+  │    rules[2] 共 9,612 条
+  │    → 加入集合，新增 0 条（合计 67,839）
   │  rules[3] type=discard
   │    url：997,539 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
   │    rules[3] 共 997,539 条
-  │    → 精确丢弃，移除 1,349 条（剩余 66,688）
+  │    → 精确丢弃，移除 1,248 条（剩余 66,591）
   │  rules[4] type=discard_suffix
   │    url：33 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
   │    preset：828 条 <- p_proxy_tld
   │    rules[4] 共 861 条
-  │    → 后缀丢弃，移除 51,740 条（剩余 14,948）
+  │    → 后缀丢弃，移除 51,737 条（剩余 14,854）
   │  rules[5] type=add
   │    preset：3,945 条 <- p_ads_important
   │    rules[5] 共 3,945 条
-  │    → 加入集合，新增 377 条（合计 15,325）
-  │  处理完毕，共 15,325 条
-  └─ 最终输出：15,325 条
+  │    → 加入集合，新增 377 条（合计 15,231）
+  │  处理完毕，共 15,231 条
+  └─ 最终输出：15,231 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -194,5 +194,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：18.12 秒
+✓ 处理完成！耗时：22.05 秒
 ================================================================================
