@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 40 个规则源...
-下载完成：40/40 成功，耗时 3.29 秒
+下载完成：40/40 成功，耗时 2.66 秒
 
 
 ================================================================================
@@ -45,116 +45,116 @@
   │  rules[0] type=add
   │    url：162 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   │    url：149 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-  │    url：517 条 <- https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
+  │    url：518 条 <- https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
   │    url：332 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
   │    url：13 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  │    rules[0] 共 990 条
-  │    → 加入集合，新增 990 条（合计 990）
-  │  处理完毕，共 990 条
-  └─ 最终输出：990 条
+  │    rules[0] 共 991 条
+  │    → 加入集合，新增 991 条（合计 991）
+  │  处理完毕，共 991 条
+  └─ 最终输出：991 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：p_ads_basic (p_ads_basic, id=3)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：5,724 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+  │    url：5,566 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
   │    url：802 条 <- https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-  │    rules[0] 共 6,671 条
-  │    → 加入集合，新增 6,671 条（合计 6,671）
+  │    rules[0] 共 6,511 条
+  │    → 加入集合，新增 6,511 条（合计 6,511）
   │  rules[1] type=discard
-  │    preset：990 条 <- p_ads_white
-  │    rules[1] 共 990 条
-  │    → 精确丢弃，移除 209 条（剩余 6,462）
-  │  处理完毕，共 6,462 条
-  └─ 最终输出：6,462 条
+  │    preset：991 条 <- p_ads_white
+  │    rules[1] 共 991 条
+  │    → 精确丢弃，移除 211 条（剩余 6,300）
+  │  处理完毕，共 6,300 条
+  └─ 最终输出：6,300 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist (ads_big, id=1000)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：14,213 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-  │    url：17,051 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
-  │    url：108,218 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-  │    url：115,802 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：183,820 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    rules[0] 共 218,893 条
-  │    → 加入集合，新增 218,893 条（合计 218,893）
+  │    url：14,469 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+  │    url：17,123 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
+  │    url：108,413 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+  │    url：115,997 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    url：184,142 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    rules[0] 共 219,392 条
+  │    → 加入集合，新增 219,392 条（合计 219,392）
   │  rules[1] type=discard
-  │    url：1,097,228 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
-  │    preset：990 条 <- p_ads_white
-  │    rules[1] 共 1,098,209 条
-  │    → 精确丢弃，移除 16,716 条（剩余 202,177）
+  │    url：1,070,505 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
+  │    preset：991 条 <- p_ads_white
+  │    rules[1] 共 1,071,487 条
+  │    → 精确丢弃，移除 17,187 条（剩余 202,205）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 43,574 条（剩余 158,603）
+  │    → 后缀丢弃，移除 43,576 条（剩余 158,629）
   │  rules[3] type=add
-  │    preset：6,462 条 <- p_ads_basic
+  │    preset：6,300 条 <- p_ads_basic
   │    preset：3,945 条 <- p_ads_important
-  │    rules[3] 共 9,583 条
-  │    → 加入集合，新增 4,191 条（合计 162,794）
-  │  处理完毕，共 162,794 条
-  │  子域去重：移除 15,117 条冗余子域
-  └─ 最终输出：147,677 条
+  │    rules[3] 共 9,424 条
+  │    → 加入集合，新增 4,059 条（合计 162,688）
+  │  处理完毕，共 162,688 条
+  │  子域去重：移除 15,119 条冗余子域
+  └─ 最终输出：147,569 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：ads_china (ads_china, id=1001)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：6,462 条 <- p_ads_basic
-  │    rules[0] 共 6,462 条
-  │    → 加入集合，新增 6,462 条（合计 6,462）
+  │    preset：6,300 条 <- p_ads_basic
+  │    rules[0] 共 6,300 条
+  │    → 加入集合，新增 6,300 条（合计 6,300）
   │  rules[1] type=match_suffix
-  │    url：33,640 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-  │    url：37,108 条 <- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
+  │    url：34,734 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+  │    url：28,145 条 <- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
   │    domain：1 条自定义
-  │    rules[1] 共 70,399 条
-  │    → 后缀保留，保留 6,109 条（移除 353）
-  │  处理完毕，共 6,109 条
+  │    rules[1] 共 62,450 条
+  │    → 后缀保留，保留 5,946 条（移除 354）
+  │  处理完毕，共 5,946 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist Hosts (ads_hosts, id=1002)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：116,952 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
-  │    url：88,759 条 <- https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
-  │    url：543,759 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
-  │    url：164,072 条 <- https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
+  │    url：117,589 条 <- https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
+  │    url：91,973 条 <- https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
+  │    url：543,704 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+  │    url：164,522 条 <- https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
   │    url：277,740 条 <- https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
-  │    url：476,477 条 <- https://hblock.molinero.dev/hosts
+  │    url：475,624 条 <- https://hblock.molinero.dev/hosts
   │    url：21,486 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
-  │    preset：162,794 条 <- ads_big
-  │    rules[0] 共 1,131,405 条
-  │    → 加入集合，新增 1,131,405 条（合计 1,131,405）
+  │    preset：162,688 条 <- ads_big
+  │    rules[0] 共 1,129,983 条
+  │    → 加入集合，新增 1,129,983 条（合计 1,129,983）
   │  rules[1] type=match_suffix
-  │    preset：6,462 条 <- p_ads_basic
-  │    preset：6,109 条 <- ads_china
+  │    preset：6,300 条 <- p_ads_basic
+  │    preset：5,946 条 <- ads_china
   │    preset：3,945 条 <- p_ads_important
-  │    rules[1] 共 9,583 条
-  │    → 后缀保留，保留 67,685 条（移除 1,063,720）
+  │    rules[1] 共 9,424 条
+  │    → 后缀保留，保留 67,436 条（移除 1,062,547）
   │  rules[2] type=add
-  │    preset：6,462 条 <- p_ads_basic
-  │    preset：6,109 条 <- ads_china
+  │    preset：6,300 条 <- p_ads_basic
+  │    preset：5,946 条 <- ads_china
   │    preset：3,945 条 <- p_ads_important
-  │    rules[2] 共 9,583 条
-  │    → 加入集合，新增 0 条（合计 67,685）
+  │    rules[2] 共 9,424 条
+  │    → 加入集合，新增 0 条（合计 67,436）
   │  rules[3] type=discard
-  │    url：1,097,228 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
-  │    rules[3] 共 1,097,228 条
-  │    → 精确丢弃，移除 1,285 条（剩余 66,400）
+  │    url：1,070,505 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
+  │    rules[3] 共 1,070,505 条
+  │    → 精确丢弃，移除 1,172 条（剩余 66,264）
   │  rules[4] type=discard_suffix
   │    url：33 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
   │    preset：828 条 <- p_proxy_tld
   │    rules[4] 共 861 条
-  │    → 后缀丢弃，移除 51,563 条（剩余 14,837）
+  │    → 后缀丢弃，移除 51,523 条（剩余 14,741）
   │  rules[5] type=add
   │    preset：3,945 条 <- p_ads_important
   │    rules[5] 共 3,945 条
-  │    → 加入集合，新增 376 条（合计 15,213）
-  │  处理完毕，共 15,213 条
-  └─ 最终输出：15,213 条
+  │    → 加入集合，新增 376 条（合计 15,117）
+  │  处理完毕，共 15,117 条
+  └─ 最终输出：15,117 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy, id=2000)
@@ -194,5 +194,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：20.13 秒
+✓ 处理完成！耗时：19.25 秒
 ================================================================================
