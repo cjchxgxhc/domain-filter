@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--04--02_05:42:41-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--04--03_05:39:39-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`147,569`
+**规则数量**：`147,932`
 
 <details><summary>AdBlock</summary>
 
@@ -155,7 +155,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`15,117`
+**规则数量**：`15,128`
 
 <details><summary>Hosts</summary>
 
@@ -431,4 +431,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-04-02 05:42:41（北京时间）*
+*更新时间：2026-04-03 05:39:39（北京时间）*
