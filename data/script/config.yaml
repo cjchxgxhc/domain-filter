@@ -167,7 +167,7 @@ ads:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
     - type: match_suffix
       url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/ultimate.mini.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
     - type: add
       preset:
         - ads_hosts
