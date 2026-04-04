@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--04--04_05:35:19-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--04--04_23:37:07-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`148,205`
+**规则数量**：`148,364`
 
 <details><summary>AdBlock</summary>
 
@@ -155,7 +155,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 系统级去广告。
 
-**规则数量**：`15,154`
+**规则数量**：`31,484`
 
 <details><summary>Hosts</summary>
 
@@ -191,6 +191,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
 - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
 - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
+- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
 - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
@@ -222,7 +223,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 需要被代理的域名。
 
-**规则数量**：`23,262`
+**规则数量**：`22,832`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -431,4 +432,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-04-04 05:35:19（北京时间）*
+*更新时间：2026-04-04 23:37:07（北京时间）*
