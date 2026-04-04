@@ -718,7 +718,7 @@ def generate_readme(
         "",
     ]
 
-    for key in sorted(stats.keys(), key=lambda k: stats[k].get("id", 0)):
+    for key in sorted(stats.keys(), key=lambda k: stats[k].get("idx", 0)):
         data = stats[key]
         name = data.get("display_name", "")
         if not name:
@@ -832,11 +832,11 @@ def load_config() -> Tuple[Dict, List[Dict]]:
       ghproxy      → str  ghproxy 反代前缀，默认 https://ghproxy.net/
       header       → dict 文件头配置（各格式通用）
 
-    规则组（其他键）：
-      id:      int   处理顺序（小的先处理）
-      enabled: bool  默认 true
-      rules:   list  规则列表（按顺序处理）
-      output:  dict  enabled / title / description / formats
+    规则组（其他键，按 YAML 中出现顺序处理，前面的先处理）：
+      enabled:          bool  默认 true
+      dedup_subdomain:  bool  true=强制子域去重，false=强制不去重，缺省=按需（adblock/clash/singbox 自动去重）
+      rules:            list  规则列表（按顺序处理）
+      output:           dict  enabled / title / description / formats
     """
     if not CONFIG_PATH.is_file():
         log_error(f"错误：缺少 {CONFIG_PATH} 文件")
@@ -856,7 +856,7 @@ def load_config() -> Tuple[Dict, List[Dict]]:
     global_cfg = data.pop("global", {}) or {}
 
     groups = []
-    for cfg_key, cfg in data.items():
+    for idx, (cfg_key, cfg) in enumerate(data.items()):
         if not isinstance(cfg, dict):
             continue
 
@@ -869,15 +869,22 @@ def load_config() -> Tuple[Dict, List[Dict]]:
             except (ValueError, TypeError):
                 raw_rules = list(raw_rules.values())
 
+        # dedup_subdomain: True=强制去重, False=强制不去重, None=按需
+        raw_dedup = cfg.get("dedup_subdomain")
+        if raw_dedup is None:
+            dedup_subdomain = None
+        else:
+            dedup_subdomain = bool(raw_dedup)
+
         groups.append({
-            "cfg_key": cfg_key,
-            "id":      int(cfg.get("id", 0)),
-            "enabled": bool(cfg.get("enabled", True)),
-            "rules":   raw_rules,
-            "output":  cfg.get("output") or {},
+            "cfg_key":        cfg_key,
+            "idx":            idx,          # YAML 中的顺序索引（替代 id）
+            "enabled":        bool(cfg.get("enabled", True)),
+            "dedup_subdomain": dedup_subdomain,
+            "rules":          raw_rules,
+            "output":         cfg.get("output") or {},
         })
 
-    groups.sort(key=lambda g: g["id"])
     enabled_count = sum(1 for g in groups if g["enabled"])
     log(f"✓ 配置已加载：共 {len(groups)} 个规则组，{enabled_count} 个已启用")
     return global_cfg, groups
@@ -887,32 +894,42 @@ def load_config() -> Tuple[Dict, List[Dict]]:
 
 def validate_config(groups: List[Dict], log_file: Optional[Path] = None) -> bool:
     errors: List[str] = []
-    seen_ids: Dict[int, str] = {}
+    # cfg_key → idx（YAML顺序）用于 preset 引用校验
+    key_to_idx: Dict[str, int] = {g["cfg_key"]: g["idx"] for g in groups}
 
     for group in groups:
         key = group["cfg_key"]
-        gid = group["id"]
-
-        if gid in seen_ids:
-            errors.append(f"规则组 '{key}' 与 '{seen_ids[gid]}' 的 id={gid} 重复")
-        else:
-            seen_ids[gid] = key
+        gidx = group["idx"]
 
         rules = group.get("rules", [])
         if not isinstance(rules, list):
             errors.append(f"规则组 '{key}' 的 rules 必须是列表")
             continue
 
-        for idx, rule in enumerate(rules):
+        for ridx, rule in enumerate(rules):
             if not isinstance(rule, dict):
-                errors.append(f"规则组 '{key}' rules[{idx}] 必须是字典")
+                errors.append(f"规则组 '{key}' rules[{ridx}] 必须是字典")
                 continue
             rule_type = rule.get("type", "add")
             if rule_type not in VALID_RULE_TYPES:
                 errors.append(
-                    f"规则组 '{key}' rules[{idx}] type '{rule_type}' 无效，"
+                    f"规则组 '{key}' rules[{ridx}] type '{rule_type}' 无效，"
                     f"必须是 {' / '.join(sorted(VALID_RULE_TYPES))}"
                 )
+            for ref_key in rule.get("preset") or []:
+                if not isinstance(ref_key, str):
+                    continue
+                ref_key = ref_key.strip()
+                ref_idx = key_to_idx.get(ref_key)
+                if ref_idx is None:
+                    errors.append(
+                        f"规则组 '{key}' rules[{ridx}] preset 引用 '{ref_key}' 不存在"
+                    )
+                elif ref_idx >= gidx:
+                    errors.append(
+                        f"规则组 '{key}' rules[{ridx}] preset 引用 '{ref_key}' "
+                        f"在当前组之后或相同位置，不允许向后引用"
+                    )
 
     for err in errors:
         log(err, LogLevel.ERROR, log_file)
@@ -941,7 +958,7 @@ def collect_urls(groups: List[Dict]) -> Set[str]:
 
 # ─────────────────────────── 规则组处理 ──────────────────────────────────────
 
-_cfg_key_to_id_map: Dict[str, int] = {}
+_cfg_key_to_idx_map: Dict[str, int] = {}
 
 
 def process_group(
@@ -963,20 +980,26 @@ def process_group(
       discard_suffix → 子域名 Trie 过滤（原 whitelist_suffix）
       match          → 精确保留（discard 的反逻辑）
       match_suffix   → 子域名 Trie 保留（discard_suffix 的反逻辑）
+
+    dedup_subdomain（组级别）：
+      True  → 输出前强制进行子域去重
+      False → 输出前强制不进行子域去重
+      None  → 按需：含 adblock/clash/singbox 格式时自动去重
     """
     cfg_key    = group["cfg_key"]
-    gid        = group["id"]
+    gidx       = group["idx"]
     output_cfg = group.get("output", {})
 
-    output_enabled = output_cfg.get("enabled", False)
-    title          = output_cfg.get("title", "")
-    description    = output_cfg.get("description", "")
-    formats        = output_cfg.get("formats", ["domain"])
+    output_enabled  = output_cfg.get("enabled", False)
+    title           = output_cfg.get("title", "")
+    description     = output_cfg.get("description", "")
+    formats         = output_cfg.get("formats", ["domain"])
+    dedup_subdomain = group.get("dedup_subdomain")  # True / False / None
     if isinstance(formats, str):
         formats = [formats]
 
     log(f"\n{'═' * 70}", log_file=log_file)
-    log(f"处理规则组：{title or cfg_key} ({cfg_key}, id={gid})", log_file=log_file)
+    log(f"处理规则组：{title or cfg_key} ({cfg_key})", log_file=log_file)
     log(f"{'═' * 70}", log_file=log_file)
 
     rules = group.get("rules", [])
@@ -1022,20 +1045,20 @@ def process_group(
             rule_domains.update(custom)
             log(f"  │    domain：{len(custom):,} 条自定义", log_file=log_file)
 
-        # preset：引用已缓存规则组（id 必须小于当前组）
+        # preset：引用已缓存规则组（idx 必须小于当前组，即在当前组之前定义）
         for ref_key in rule.get("preset") or []:
             if not isinstance(ref_key, str):
                 continue
-            ref_key = ref_key.strip()
-            ref_id  = _cfg_key_to_id_map.get(ref_key)
-            if ref_id is not None and ref_id < gid and ref_id in group_cache:
-                ref_set = group_cache[ref_id]
+            ref_key  = ref_key.strip()
+            ref_idx  = _cfg_key_to_idx_map.get(ref_key)
+            if ref_idx is not None and ref_idx < gidx and ref_idx in group_cache:
+                ref_set = group_cache[ref_idx]
                 rule_domains.update(ref_set)
-                group_source_urls.update(group_cache_urls.get(ref_id, set()))
+                group_source_urls.update(group_cache_urls.get(ref_idx, set()))
                 log(f"  │    preset：{len(ref_set):,} 条 <- {ref_key}", log_file=log_file)
             else:
                 log(
-                    f"  │    preset：引用 '{ref_key}' 无效或 id 不小于当前组，跳过",
+                    f"  │    preset：引用 '{ref_key}' 无效或不在当前组之前，跳过",
                     LogLevel.WARNING,
                     log_file=log_file,
                 )
@@ -1081,22 +1104,36 @@ def process_group(
 
     log(f"  │  处理完毕，共 {len(current_domains):,} 条", log_file=log_file)
 
-    group_cache[gid]      = current_domains
-    group_cache_urls[gid] = group_source_urls
+    group_cache[gidx]      = current_domains
+    group_cache_urls[gidx] = group_source_urls
 
     if not output_enabled:
         log("  └─ 不输出文件（output.enabled=false）", log_file=log_file)
         return
 
-    needs_dedup = any(f in formats for f in ("adblock", "clash", "singbox"))
-    if needs_dedup:
+    # 子域去重：三态控制
+    if dedup_subdomain is True:
+        # 强制去重
         deduped_domains = remove_subdomains(current_domains)
         removed = len(current_domains) - len(deduped_domains)
-        log(f"  │  子域去重：移除 {removed:,} 条冗余子域", log_file=log_file)
+        log(f"  │  子域去重（强制）：移除 {removed:,} 条冗余子域", log_file=log_file)
         final_count = len(deduped_domains)
-    else:
+    elif dedup_subdomain is False:
+        # 强制不去重
         deduped_domains = current_domains
         final_count     = len(current_domains)
+        log(f"  │  子域去重（强制跳过）", log_file=log_file)
+    else:
+        # 按需：含 adblock/clash/singbox 格式时自动去重
+        needs_dedup = any(f in formats for f in ("adblock", "clash", "singbox"))
+        if needs_dedup:
+            deduped_domains = remove_subdomains(current_domains)
+            removed = len(current_domains) - len(deduped_domains)
+            log(f"  │  子域去重：移除 {removed:,} 条冗余子域", log_file=log_file)
+            final_count = len(deduped_domains)
+        else:
+            deduped_domains = current_domains
+            final_count     = len(current_domains)
 
     log(f"  └─ 最终输出：{final_count:,} 条", log_file=log_file)
 
@@ -1110,7 +1147,7 @@ def process_group(
     gc.collect()
 
     all_stats[cfg_key] = {
-        "id":            gid,
+        "idx":           gidx,
         "display_name":  title,
         "description":   description,
         "final_count":   final_count,
@@ -1157,8 +1194,8 @@ def main() -> None:
     if not validate_config(groups, main_log):
         sys.exit(1)
 
-    global _cfg_key_to_id_map
-    _cfg_key_to_id_map = {g["cfg_key"]: g["id"] for g in groups}
+    global _cfg_key_to_idx_map
+    _cfg_key_to_idx_map = {g["cfg_key"]: g["idx"] for g in groups}
 
     all_urls = collect_urls(groups)
     try:
@@ -1179,7 +1216,7 @@ def main() -> None:
     for group in groups:
         if not group["enabled"]:
             log(
-                f"  跳过规则组（已禁用）：{group['cfg_key']} (id={group['id']})",
+                f"  跳过规则组（已禁用）：{group['cfg_key']}",
                 log_file=main_log,
             )
             continue
