@@ -1,8 +1,8 @@
 # Title: Ads Blocklist
 # Description: 优秀规则源的合并，尽量避免误杀。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 74,631
-# Updated: 2026-04-05 02:24:10 CST
+# Total: 74,635
+# Updated: 2026-04-05 05:33:09 CST
 #
 payload:
   - +.0-0-0checkmate.com
@@ -10292,6 +10292,7 @@ payload:
   - +.allsports4free.live
   - +.allstarstate.com
   - +.allstat-pp.ru
+  - +.allsydevs.com
   - +.allthelogs.com
   - +.alltracked.com
   - +.allttns.com
@@ -25064,7 +25065,6 @@ payload:
   - +.dinecare.org
   - +.dinedai.pro
   - +.dingbu.bj.bcebos.com
-  - +.dingdong-1399351730.cos.ap-hongkong.myqcloud.com
   - +.dingebeek.com
   - +.dingon.com.cn
   - +.dingywearyfortress.com
@@ -25702,6 +25702,7 @@ payload:
   - +.download.wan.sohu.com
   - +.download.youzu.com
   - +.download1.vzuu.com
+  - +.download2.huduntech.com
   - +.download3.123cw.cn
   - +.downloada.dewmobile.net
   - +.downloadb.dewmobile.net
@@ -27273,6 +27274,7 @@ payload:
   - +.embed.ex.co
   - +.embed.name
   - +.embed.tapkal.fi
+  - +.embedone.com
   - +.embedx.name
   - +.embemy.com
   - +.embercascademaple.com
@@ -48297,6 +48299,7 @@ payload:
   - +.osrs-discord-bot.com
   - +.oss-asq-download.11222.cn
   - +.oss-asq-static.11222.cn
+  - +.ossapp.suning.com
   - +.ossetbulimus.com
   - +.ossgogoaton.com
   - +.ossmightyenar.net
@@ -56214,6 +56217,7 @@ payload:
   - +.scripts.static-od.com
   - +.scripts.stay22.com
   - +.scripts.tv2a.dk
+  - +.scriptwrapper.com
   - +.scrivanfinlet.com
   - +.scrivencaccias.com
   - +.scrodindustries.com
@@ -60744,6 +60748,7 @@ payload:
   - +.static-ssp.yidianzixun.com
   - +.static-swaven.com
   - +.static-tracking.klaviyo.com
+  - +.static.3001.net
   - +.static.66mobi.com
   - +.static.accesstrade.vn
   - +.static.admysports.com
@@ -63623,7 +63628,6 @@ payload:
   - +.testnet.nl
   - +.testony.com
   - +.testrole.care
-  - +.tests.yjzj.org
   - +.testsafe.com.cn
   - +.testtubeabilityinvited.com
   - +.testupdate.info

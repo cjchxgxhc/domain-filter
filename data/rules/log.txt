@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 36 个规则源...
-下载完成：36/36 成功，耗时 1.47 秒
+下载完成：36/36 成功，耗时 1.60 秒
 
 
 ================================================================================
@@ -38,43 +38,43 @@
 处理规则组：addata_adblock (addata_adblock)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：108,413 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-  │    url：115,997 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：184,911 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    rules[0] 共 207,942 条
-  │    → 加入集合，新增 207,942 条（合计 207,942）
+  │    url：108,897 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+  │    url：116,481 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    url：184,960 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    rules[0] 共 207,956 条
+  │    → 加入集合，新增 207,956 条（合计 207,956）
   │  rules[1] type=discard
   │    preset：761 条 <- addata_white
   │    rules[1] 共 761 条
-  │    → 精确丢弃，移除 163 条（剩余 207,779）
+  │    → 精确丢弃，移除 162 条（剩余 207,794）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 43,166 条（剩余 164,613）
-  │  处理完毕，共 164,613 条
+  │    → 后缀丢弃，移除 43,164 条（剩余 164,630）
+  │  处理完毕，共 164,630 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_china (addata_china)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：164,613 条 <- addata_adblock
-  │    rules[0] 共 164,613 条
-  │    → 加入集合，新增 164,613 条（合计 164,613）
+  │    preset：164,630 条 <- addata_adblock
+  │    rules[0] 共 164,630 条
+  │    → 加入集合，新增 164,630 条（合计 164,630）
   │  rules[1] type=match_suffix
   │    url：53,960 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    rules[1] 共 53,960 条
-  │    → 后缀保留，保留 9,346 条（移除 155,267）
+  │    → 后缀保留，保留 9,348 条（移除 155,282）
   │  rules[2] type=add
   │    url：5,567 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    rules[2] 共 5,994 条
-  │    → 加入集合，新增 2,445 条（合计 11,791）
+  │    → 加入集合，新增 2,445 条（合计 11,793）
   │  rules[3] type=discard
   │    preset：761 条 <- addata_white
   │    rules[3] 共 761 条
-  │    → 精确丢弃，移除 133 条（剩余 11,658）
-  │  处理完毕，共 11,658 条
+  │    → 精确丢弃，移除 133 条（剩余 11,660）
+  │  处理完毕，共 11,660 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -87,36 +87,36 @@
   │    rules[0] 共 676,973 条
   │    → 加入集合，新增 676,973 条（合计 676,973）
   │  rules[1] type=match_suffix
-  │    preset：11,658 条 <- addata_china
-  │    rules[1] 共 11,658 条
-  │    → 后缀保留，保留 26,899 条（移除 650,074）
+  │    preset：11,660 条 <- addata_china
+  │    rules[1] 共 11,660 条
+  │    → 后缀保留，保留 26,900 条（移除 650,073）
   │  rules[2] type=add
   │    url：14,469 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
   │    url：17,123 条 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
   │    rules[2] 共 20,077 条
-  │    → 加入集合，新增 17,583 条（合计 44,482）
+  │    → 加入集合，新增 17,583 条（合计 44,483）
   │  rules[3] type=match_suffix
   │    url：53,960 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
   │    url：118,518 条 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
   │    url：28,145 条 <- https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
   │    domain：1 条自定义
-  │    preset：11,658 条 <- addata_china
+  │    preset：11,660 条 <- addata_china
   │    rules[3] 共 188,279 条
-  │    → 后缀保留，保留 29,008 条（移除 15,474）
+  │    → 后缀保留，保留 29,009 条（移除 15,474）
   │  rules[4] type=add
   │    url：839 条 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-  │    preset：11,658 条 <- addata_china
-  │    rules[4] 共 12,235 条
-  │    → 加入集合，新增 661 条（合计 29,669）
+  │    preset：11,660 条 <- addata_china
+  │    rules[4] 共 12,237 条
+  │    → 加入集合，新增 663 条（合计 29,672）
   │  rules[5] type=discard
   │    preset：761 条 <- addata_white
   │    rules[5] 共 761 条
-  │    → 精确丢弃，移除 41 条（剩余 29,628）
+  │    → 精确丢弃，移除 41 条（剩余 29,631）
   │  rules[6] type=discard_suffix
   │    url：33 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
   │    preset：828 条 <- p_proxy_tld
   │    rules[6] 共 861 条
-  │    → 后缀丢弃，移除 12,101 条（剩余 17,527）
+  │    → 后缀丢弃，移除 12,101 条（剩余 17,530）
   │  rules[7] type=add
   │    url：2,681 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
   │    url：903 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
@@ -124,41 +124,41 @@
   │    url：454 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
   │    url：55 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
   │    rules[7] 共 3,950 条
-  │    → 加入集合，新增 2,270 条（合计 19,797）
-  │  处理完毕，共 19,797 条
-  └─ 最终输出：19,797 条
+  │    → 加入集合，新增 2,270 条（合计 19,800）
+  │  处理完毕，共 19,800 条
+  └─ 最终输出：19,800 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist (ads)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
   │    url：65,241 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
-  │    preset：164,613 条 <- addata_adblock
-  │    rules[0] 共 208,227 条
-  │    → 加入集合，新增 208,227 条（合计 208,227）
+  │    preset：164,630 条 <- addata_adblock
+  │    rules[0] 共 208,240 条
+  │    → 加入集合，新增 208,240 条（合计 208,240）
   │  rules[1] type=match_suffix
   │    url：128,685 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
   │    rules[1] 共 128,685 条
-  │    → 后缀保留，保留 76,219 条（移除 132,008）
+  │    → 后缀保留，保留 76,222 条（移除 132,018）
   │  rules[2] type=add
-  │    preset：19,797 条 <- ads_hosts
-  │    rules[2] 共 19,797 条
-  │    → 加入集合，新增 14,733 条（合计 90,952）
-  │  处理完毕，共 90,952 条
-  │  子域去重：移除 16,321 条冗余子域
-  └─ 最终输出：74,631 条
+  │    preset：19,800 条 <- ads_hosts
+  │    rules[2] 共 19,800 条
+  │    → 加入集合，新增 14,735 条（合计 90,957）
+  │  处理完毕，共 90,957 条
+  │  子域去重：移除 16,322 条冗余子域
+  └─ 最终输出：74,635 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist(BIG) (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：90,952 条 <- ads
-  │    preset：164,613 条 <- addata_adblock
-  │    rules[0] 共 216,187 条
-  │    → 加入集合，新增 216,187 条（合计 216,187）
-  │  处理完毕，共 216,187 条
+  │    preset：90,957 条 <- ads
+  │    preset：164,630 条 <- addata_adblock
+  │    rules[0] 共 216,200 条
+  │    → 加入集合，新增 216,200 条（合计 216,200）
+  │  处理完毕，共 216,200 条
   │  子域去重（强制跳过）
-  └─ 最终输出：216,187 条
+  └─ 最终输出：216,200 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
@@ -198,5 +198,5 @@
   └─ 最终输出：742 条
 
 ================================================================================
-✓ 处理完成！耗时：9.97 秒
+✓ 处理完成！耗时：10.02 秒
 ================================================================================
