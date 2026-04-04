@@ -14,9 +14,15 @@
 #   pureurl    → 下载并提取域名，支持所有格式，不严格验证
 #   adblockurl → 仅识别 adblock 格式（||domain^ 或 @@||domain^）
 #   domain     → 直接写入自定义域名列表
-#   preset     → 引用另一个规则组的处理结果（id 必须小于当前组）
+#   preset     → 引用另一个规则组的处理结果（只能引用在当前组之前定义的组）
 #
 # 规则在 rules 列表中按顺序执行，顺序影响最终结果。
+# 规则组按照在此文件中出现的顺序处理，前面的先处理；不允许引用后面的规则组。
+#
+# 子域去重控制（dedup_subdomain）：
+#   true  → 强制进行子域去重（无论输出格式）
+#   false → 强制不进行子域去重（无论输出格式）
+#   缺省  → 按需：含 adblock / clash / singbox 格式时自动去重
 
 
 # ──────────────────────────── 全局配置 ────────────────────────────────────────
@@ -30,61 +36,8 @@ global:
 
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
-p_ads_important:
-  id: 1
-  rules:
-    - type: add
-      url:
-        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
-        # 秋风广告规则: https://awavenue.top/
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
-        # hosts子域名
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
-    - type: discard
-      url:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  output:
-    enabled: true
-
-
-p_ads_white:
-  id: 2
-  rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-        # anti-ad: https://github.com/privacy-protection-tools/anti-AD
-        - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-        # - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  output:
-    enabled: true
-
-
-p_ads_basic:
-  id: 3
-  rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        - https://raw.githubusercontent.com/Cats-Team/dns-filter/main/abp.txt
-    - type: discard
-      preset:
-        - p_ads_white
-  output:
-    enabled: true
-
 
 p_proxy_tld:
-  id: 0
   rules:
     - type: add
       pureurl:
@@ -102,14 +55,23 @@ p_proxy_tld:
     enabled: true
 
 
-ads_big:
-  id: 1000
+addata_white:
   rules:
     - type: add
       url:
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-        - https://raw.githubusercontent.com/lingeringsound/10007/main/all
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+        # anti-ad: https://github.com/privacy-protection-tools/anti-AD
+        - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+  output:
+    enabled: true
+
+
+addata_adblock:
+  rules:
+    - type: add
+      url:
         # anti-AD: https://github.com/privacy-protection-tools/anti-AD
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
@@ -117,16 +79,98 @@ ads_big:
         - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
     - type: discard
       preset:
-        - p_ads_white
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
+        - addata_white
     - type: discard_suffix
       preset:
         - p_proxy_tld
+
+
+addata_china:
+  rules:
     - type: add
       preset:
-        - p_ads_basic
-        - p_ads_important
+        - addata_adblock
+    - type: match_suffix
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+    - type: discard
+      preset:
+        - addata_white
+
+
+ads_hosts:
+  rules:
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
+        - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+    - type: match_suffix
+      preset:
+        - addata_china
+    - type: add
+      url:
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+        - https://raw.githubusercontent.com/lingeringsound/10007/main/all
+    - type: match_suffix
+      preset:
+        - addata_china
+      domain:
+        - cn
+      url:
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
+    - type: add
+      url:
+        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+      preset:
+        - addata_china
+    - type: discard
+      preset:
+        - addata_white
+    - type: discard_suffix
+      url:
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+      preset:
+        - p_proxy_tld
+    - type: add
+      url:
+        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        # 秋风广告规则: https://awavenue.top/
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
+        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
+        # hosts子域名
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
+  output:
+    enabled: true
+    title: Ads Blocklist Hosts
+    description: 系统级去广告。
+    formats: [hosts]
+
+
+ads:
+  rules:
+    - type: add
+      preset:
+        - addata_adblock
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
+    - type: match_suffix
+      url:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/ultimate.mini.txt
+    - type: add
+      preset:
+        - ads_hosts
   output:
     enabled: true
     title: Ads Blocklist
@@ -134,66 +178,21 @@ ads_big:
     formats: [adblock, clash, singbox]
 
 
-ads_china:
-  id: 1001
+ads_big:
+  dedup_subdomain: false
   rules:
     - type: add
       preset:
-        - ads_big
-    - type: match_suffix
-      domain:
-        - cn
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
-
-
-ads_hosts:
-  id: 1002
-  rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
-        - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
-        - https://raw.githubusercontent.com/r-a-y/mobile-hosts/master/AdguardDNS.txt
-        - https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt
-        - https://hblock.molinero.dev/hosts
-       # - https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/hosts_data.txt
-      preset:
-        - ads_big
-    - type: match_suffix
-      preset:
-        - p_ads_basic
-        - ads_china
-        - p_ads_important
-    - type: add
-      preset:
-        - p_ads_basic
-        - ads_china
-        - p_ads_important
-    - type: discard
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/tif.txt
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-      preset:
-        - p_proxy_tld
-    - type: add
-      preset:
-        - p_ads_important
+        - ads
+        - addata_adblock
   output:
     enabled: true
-    title: Ads Blocklist Hosts
-    description: 系统级去广告。
-    formats: [hosts]
+    title: Ads Blocklist(BIG)
+    description: 优秀规则源的合并，尽量避免误杀。
+    formats: [adblock]
+
 
 proxy:
-  id: 2000
   rules:
     - type: add
       url:
@@ -223,7 +222,6 @@ proxy:
 
 
 direct_fix:
-  id: 2001
   rules:
     - type: add
       url:
