@@ -139,12 +139,14 @@ ads_china:
   rules:
     - type: add
       preset:
-        - p_ads_basic
+        - ads_big
     - type: match_suffix
       domain:
         - cn
       url:
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
         - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 
