@@ -138,6 +138,7 @@ ads_hosts:
     - type: discard_suffix
       url:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
+        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
       preset:
         - p_proxy_tld
     - type: add
