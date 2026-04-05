@@ -68,6 +68,19 @@ addata_white:
     enabled: true
 
 
+addata_white_suffix:
+  rules:
+    - type: add
+      url:
+        - https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
+  output:
+    enabled: true
+
+
 addata_adblock:
   rules:
     - type: add
@@ -83,6 +96,7 @@ addata_adblock:
     - type: discard_suffix
       preset:
         - p_proxy_tld
+        - addata_white_suffix
 
 
 addata_china:
@@ -100,6 +114,9 @@ addata_china:
     - type: discard
       preset:
         - addata_white
+    - type: discard_suffix
+      preset:
+        - addata_white_suffix
 
 
 ads_hosts:
@@ -140,6 +157,7 @@ ads_hosts:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
         - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
       preset:
+        - addata_white_suffix
         - p_proxy_tld
     - type: add
       url:
