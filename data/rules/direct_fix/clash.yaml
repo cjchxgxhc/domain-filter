@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 742
-# Updated: 2026-04-05 22:56:38 CST
+# Total: 741
+# Updated: 2026-04-06 05:33:36 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -626,7 +626,6 @@ payload:
   - +.tencentstart.com
   - +.tendawifi.com
   - +.test
-  - +.test.steampowered.com
   - +.texasholdemcup.cn
   - +.texasholdemcup.com
   - +.texasholdemcup.net
