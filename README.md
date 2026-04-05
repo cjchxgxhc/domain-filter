@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--04--05_22:19:59-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--04--05_22:56:38-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -10,7 +10,7 @@
 
 系统级去广告。
 
-**规则数量**：`15,980`
+**规则数量**：`15,852`
 
 <details><summary>Hosts</summary>
 
@@ -56,12 +56,17 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
 - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+- https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
 - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
@@ -72,7 +77,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`72,401`
+**规则数量**：`72,345`
 
 <details><summary>AdBlock</summary>
 
@@ -207,6 +212,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
@@ -214,6 +220,10 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+- https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
 - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
@@ -224,7 +234,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`213,333`
+**规则数量**：`213,212`
 
 <details><summary>AdBlock</summary>
 
@@ -271,6 +281,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
 - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
 - https://raw.githubusercontent.com/lingeringsound/10007/main/all
 - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
@@ -278,6 +289,10 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
 - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
+- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
+- https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
 - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
 
 </details>
@@ -497,4 +512,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-04-05 22:19:59（北京时间）*
+*更新时间：2026-04-05 22:56:38（北京时间）*
