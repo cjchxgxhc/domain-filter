@@ -99,47 +99,18 @@ addata_adblock:
         - addata_white_suffix
 
 
-addata_china:
-  rules:
-    - type: add
-      preset:
-        - addata_adblock
-    - type: match_suffix
-      url:
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-    - type: discard
-      preset:
-        - addata_white
-    - type: discard_suffix
-      preset:
-        - addata_white_suffix
-
-
 ads_hosts:
   rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/host
-        - https://raw.githubusercontent.com/StevenBlack/hosts/refs/heads/master/hosts
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
-    - type: match_suffix
-      preset:
-        - addata_china
     - type: add
       url:
         # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
         - https://raw.githubusercontent.com/lingeringsound/10007/main/all
     - type: match_suffix
-      preset:
-        - addata_china
       domain:
         - cn
       url:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
         - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
         - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
         - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
@@ -147,15 +118,12 @@ ads_hosts:
       url:
         # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-      preset:
-        - addata_china
     - type: discard
       preset:
         - addata_white
     - type: discard_suffix
       url:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt
       preset:
         - addata_white_suffix
         - p_proxy_tld
