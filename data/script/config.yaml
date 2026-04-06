@@ -180,8 +180,6 @@ ads:
     - type: add
       preset:
         - addata_adblock
-      url:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/light.txt
     - type: match_suffix
       url:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
@@ -200,7 +198,7 @@ ads_big:
   rules:
     - type: add
       preset:
-        - ads
+        - ads_hosts
         - addata_adblock
   output:
     enabled: true
