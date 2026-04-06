@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--04--06_19:31:54-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--04--07_05:38:48-green?style=flat-square)
 
 这是一个自动合并多源规则、精准去重并移除冗余子域的过滤列表。
 
@@ -69,7 +69,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`28,639`
+**规则数量**：`28,644`
 
 <details><summary>AdBlock</summary>
 
@@ -220,7 +220,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 优秀规则源的合并，尽量避免误杀。
 
-**规则数量**：`167,335`
+**规则数量**：`168,353`
 
 <details><summary>AdBlock</summary>
 
@@ -282,7 +282,7 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 需要被代理的域名。
 
-**规则数量**：`22,832`
+**规则数量**：`22,841`
 
 <details><summary>Clash / Mrs</summary>
 
@@ -491,4 +491,4 @@ https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/re
 
 ---
 
-*更新时间：2026-04-06 19:31:54（北京时间）*
+*更新时间：2026-04-07 05:38:48（北京时间）*

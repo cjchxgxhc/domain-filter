@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,832
-# Updated: 2026-04-06 19:31:54 CST
+# Total: 22,841
+# Updated: 2026-04-07 05:38:48 CST
 #
 payload:
   - +.000webhost.com
@@ -4819,6 +4819,7 @@ payload:
   - +.cloudyzgirl.com
   - +.cloupia.com
   - +.cloupia.net
+  - +.clstorage.net
   - +.club1069.com
   - +.clubhouse.com
   - +.clubhouseapi.com
@@ -8475,6 +8476,8 @@ payload:
   - +.gaywatch.com
   - +.gazotube.com
   - +.gazounabi.com
+  - +.gazprombank.com
+  - +.gazprombank.investments
   - +.gb
   - +.gbiz
   - +.gbxml.net
@@ -8662,6 +8665,7 @@ payload:
   - +.giffgaff.design
   - +.gifnuki.com
   - +.gifree.com
+  - +.giga.chat
   - +.gigabyte.cn
   - +.gigabyte.com
   - +.gigacircle.com
@@ -11799,7 +11803,6 @@ payload:
   - +.kinkypeepz.com
   - +.kinmen.travel
   - +.kinokuniya.com
-  - +.kinopoisk-ru.clstorage.net
   - +.kinorium.com
   - +.kir2kos.net
   - +.kirbysepicyarn.com
@@ -12940,6 +12943,7 @@ payload:
   - +.megacamz.com
   - +.megafilmporno.com
   - +.megahdporno.net
+  - +.megamarket.tech
   - +.megapornfreehd.com
   - +.megapornpics.com
   - +.megaproxy.com
@@ -17442,7 +17446,10 @@ payload:
   - +.sb-cd.com
   - +.sb-telecom.net
   - +.sb24.com
+  - +.sber.pro
+  - +.sberauto.com
   - +.sberbank.com
+  - +.sbercloud.tech
   - +.sbgkstv.shop
   - +.sbi
   - +.sbitravelcard.com
@@ -18666,6 +18673,7 @@ payload:
   - +.static-cisco.com
   - +.static-economist.com
   - +.static-nike.com
+  - +.static-storage.net
   - +.static-verizon.com
   - +.static.fun
   - +.staticflickr.com
@@ -19629,6 +19637,7 @@ payload:
   - +.tinkercad.com
   - +.tinkerentertainment.com
   - +.tinkerplay.net
+  - +.tinkoff-group.com
   - +.tintuc101.com
   - +.tiny.cc
   - +.tiny4k.com
@@ -20354,6 +20363,7 @@ payload:
   - +.unholyknight.com
   - +.uni.cc
   - +.unicode.org
+  - +.unidraw.io
   - +.unification.net
   - +.uninhibitedcomix.com
   - +.unirule.cloud
@@ -21264,8 +21274,6 @@ payload:
   - +.webtoonscorp.com
   - +.webtype.com
   - +.webupd8.org
-  - +.webvisor.com
-  - +.webvisor.org
   - +.webwarper.net
   - +.webworkerdaily.com
   - +.wechatlawsuit.com
@@ -22318,11 +22326,11 @@ payload:
   - +.xzxxporn.com
   - +.xzxxtube.com
   - +.y2mate.com
+  - +.ya.cc
   - +.yabang.org
   - +.yaburi.men
   - +.yaddal.tv
   - +.yadori.club
-  - +.yads.tech
   - +.yaeby.info
   - +.yaeby.pro
   - +.yahoo
@@ -22351,18 +22359,17 @@ payload:
   - +.yamoon.club
   - +.yandex
   - +.yandex-bank.net
-  - +.yandex-images.clstorage.net
-  - +.yandex-pogoda.static-storage.net
   - +.yandex.aero
+  - +.yandex.asia
   - +.yandex.cloud
   - +.yandex.com
   - +.yandex.jobs
+  - +.yandex.mobi
   - +.yandex.net
   - +.yandex.org
   - +.yandexadexchange.net
   - +.yandexcloud.net
   - +.yandexcom.net
-  - +.yandexmetrica.com
   - +.yandexwebcache.net
   - +.yandexwebcache.org
   - +.yanghengjun.com
@@ -22813,6 +22820,8 @@ payload:
   - +.zuobiao.me
   - +.zuola.com
   - +.zvereff.com
+  - +.zvuk-b2b.com
+  - +.zvuk.com
   - +.zw
   - +.zweiporn.com
   - +.zwtvusa.com
