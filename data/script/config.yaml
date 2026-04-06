@@ -166,8 +166,6 @@ ads_hosts:
         # 秋风广告规则: https://awavenue.top/
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-        # DNS Blocklists - OPPO 追踪域名: https://github.com/hagezi/dns-blocklists
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/domains/native.oppo-realme.txt
         # hosts子域名
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
   output:
