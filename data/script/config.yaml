@@ -63,20 +63,7 @@ addata_white:
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         # anti-ad: https://github.com/privacy-protection-tools/anti-AD
         - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
-  output:
-    enabled: true
-
-
-addata_white_suffix:
-  rules:
-    - type: add
-      url:
-        - https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
   output:
     enabled: true
 
@@ -90,13 +77,9 @@ addata_adblock:
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
         # AdRules: https://github.com/Cats-Team/AdRules
         - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-    - type: discard
-      preset:
-        - addata_white
     - type: discard_suffix
       preset:
         - p_proxy_tld
-        - addata_white_suffix
 
 
 ads_hosts:
@@ -124,12 +107,12 @@ ads_hosts:
     - type: add
       url:
         # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
         # 秋风广告规则: https://awavenue.top/
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-        # hosts子域名
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
+        # hosts补充
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
   output:
     enabled: true
     title: Ads Blocklist Hosts
