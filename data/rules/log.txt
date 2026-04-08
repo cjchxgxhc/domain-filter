@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 30 个规则源...
-下载完成：30/30 成功，耗时 1.19 秒
+下载完成：30/30 成功，耗时 1.28 秒
 
 
 ================================================================================
@@ -40,14 +40,14 @@
   │  rules[0] type=add
   │    url：106,454 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
   │    url：114,041 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    url：183,044 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
-  │    rules[0] 共 206,083 条
-  │    → 加入集合，新增 206,083 条（合计 206,083）
+  │    url：183,118 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+  │    rules[0] 共 206,157 条
+  │    → 加入集合，新增 206,157 条（合计 206,157）
   │  rules[1] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[1] 共 828 条
-  │    → 后缀丢弃，移除 43,978 条（剩余 162,105）
-  │  处理完毕，共 162,105 条
+  │    → 后缀丢弃，移除 43,979 条（剩余 162,178）
+  │  处理完毕，共 162,178 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -88,9 +88,9 @@
 处理规则组：Ads Blocklist (ads)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：162,105 条 <- addata_adblock
-  │    rules[0] 共 162,105 条
-  │    → 加入集合，新增 162,105 条（合计 162,105）
+  │    preset：162,178 条 <- addata_adblock
+  │    rules[0] 共 162,178 条
+  │    → 加入集合，新增 162,178 条（合计 162,178）
   │  rules[1] type=match_suffix
   │    url：5,460 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：47,532 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
@@ -99,40 +99,40 @@
   │    url：121,696 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
   │    domain：1 条自定义
   │    rules[1] 共 296,458 条
-  │    → 后缀保留，保留 43,268 条（移除 118,837）
+  │    → 后缀保留，保留 43,270 条（移除 118,908）
   │  rules[2] type=add
   │    preset：7,187 条 <- ads_hosts
   │    rules[2] 共 7,187 条
-  │    → 加入集合，新增 3,834 条（合计 47,102）
+  │    → 加入集合，新增 3,834 条（合计 47,104）
   │  rules[3] type=discard
   │    preset：771 条 <- addata_white
   │    rules[3] 共 771 条
-  │    → 精确丢弃，移除 169 条（剩余 46,933）
-  │  处理完毕，共 46,933 条
+  │    → 精确丢弃，移除 169 条（剩余 46,935）
+  │  处理完毕，共 46,935 条
   │  子域去重：移除 9,341 条冗余子域
-  └─ 最终输出：37,592 条
+  └─ 最终输出：37,594 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist(BIG) (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
   │    preset：7,187 条 <- ads_hosts
-  │    preset：162,105 条 <- addata_adblock
-  │    rules[0] 共 165,870 条
-  │    → 加入集合，新增 165,870 条（合计 165,870）
+  │    preset：162,178 条 <- addata_adblock
+  │    rules[0] 共 165,943 条
+  │    → 加入集合，新增 165,943 条（合计 165,943）
   │  rules[1] type=discard
   │    preset：771 条 <- addata_white
   │    rules[1] 共 771 条
-  │    → 精确丢弃，移除 187 条（剩余 165,683）
-  │  处理完毕，共 165,683 条
+  │    → 精确丢弃，移除 187 条（剩余 165,756）
+  │  处理完毕，共 165,756 条
   │  子域去重（强制跳过）
-  └─ 最终输出：165,683 条
+  └─ 最终输出：165,756 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：24,750 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：24,748 条 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：16,119 条 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    domain：7 条自定义
@@ -166,5 +166,5 @@
   └─ 最终输出：741 条
 
 ================================================================================
-✓ 处理完成！耗时：5.82 秒
+✓ 处理完成！耗时：6.09 秒
 ================================================================================
