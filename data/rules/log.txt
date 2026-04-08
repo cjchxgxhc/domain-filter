@@ -1,6 +1,6 @@
 开始执行域名过滤工具
-开始下载 35 个规则源...
-下载完成：35/35 成功，耗时 0.76 秒
+开始下载 30 个规则源...
+下载完成：30/30 成功，耗时 1.19 秒
 
 
 ================================================================================
@@ -28,25 +28,11 @@
   │    url：162 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   │    url：149 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
   │    url：518 条 <- https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-  │    url：23 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_white.txt
+  │    url：23 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
   │    rules[0] 共 771 条
   │    → 加入集合，新增 771 条（合计 771）
   │  处理完毕，共 771 条
   └─ 最终输出：771 条
-
-══════════════════════════════════════════════════════════════════════
-处理规则组：addata_white_suffix (addata_white_suffix)
-══════════════════════════════════════════════════════════════════════
-  │  rules[0] type=add
-  │    url：0 条 <- https://raw.githubusercontent.com/qq5460168/dangchu/main/white.txt
-  │    url：13 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
-  │    url：73 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/dns.txt
-  │    url：30 条 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/pcdn.txt
-  │    url：3,467 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/doh.txt
-  │    rules[0] 共 3,535 条
-  │    → 加入集合，新增 3,535 条（合计 3,535）
-  │  处理完毕，共 3,535 条
-  └─ 最终输出：3,535 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_adblock (addata_adblock)
@@ -57,16 +43,11 @@
   │    url：183,044 条 <- https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
   │    rules[0] 共 206,083 条
   │    → 加入集合，新增 206,083 条（合计 206,083）
-  │  rules[1] type=discard
-  │    preset：771 条 <- addata_white
-  │    rules[1] 共 771 条
-  │    → 精确丢弃，移除 169 条（剩余 205,914）
-  │  rules[2] type=discard_suffix
+  │  rules[1] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
-  │    preset：3,535 条 <- addata_white_suffix
-  │    rules[2] 共 4,363 条
-  │    → 后缀丢弃，移除 44,085 条（剩余 161,829）
-  │  处理完毕，共 161,829 条
+  │    rules[1] 共 828 条
+  │    → 后缀丢弃，移除 43,978 条（剩余 162,105）
+  │  处理完毕，共 162,105 条
   └─ 不输出文件（output.enabled=false）
 
 ══════════════════════════════════════════════════════════════════════
@@ -94,22 +75,22 @@
   │    rules[3] 共 771 条
   │    → 精确丢弃，移除 41 条（剩余 4,557）
   │  rules[4] type=add
-  │    url：2,681 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads.txt
+  │    url：2,598 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
   │    url：905 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
   │    url：895 条 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-  │    url：91 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_hosts.txt
-  │    rules[4] 共 3,546 条
-  │    → 加入集合，新增 2,641 条（合计 7,198）
-  │  处理完毕，共 7,198 条
-  └─ 最终输出：7,198 条
+  │    url：171 条 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
+  │    rules[4] 共 3,535 条
+  │    → 加入集合，新增 2,630 条（合计 7,187）
+  │  处理完毕，共 7,187 条
+  └─ 最终输出：7,187 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist (ads)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：161,829 条 <- addata_adblock
-  │    rules[0] 共 161,829 条
-  │    → 加入集合，新增 161,829 条（合计 161,829）
+  │    preset：162,105 条 <- addata_adblock
+  │    rules[0] 共 162,105 条
+  │    → 加入集合，新增 162,105 条（合计 162,105）
   │  rules[1] type=match_suffix
   │    url：5,460 条 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
   │    url：47,532 条 <- https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
@@ -118,34 +99,34 @@
   │    url：121,696 条 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
   │    domain：1 条自定义
   │    rules[1] 共 296,458 条
-  │    → 后缀保留，保留 43,013 条（移除 118,816）
+  │    → 后缀保留，保留 43,268 条（移除 118,837）
   │  rules[2] type=add
-  │    preset：7,198 条 <- ads_hosts
-  │    rules[2] 共 7,198 条
-  │    → 加入集合，新增 3,952 条（合计 46,965）
+  │    preset：7,187 条 <- ads_hosts
+  │    rules[2] 共 7,187 条
+  │    → 加入集合，新增 3,834 条（合计 47,102）
   │  rules[3] type=discard
   │    preset：771 条 <- addata_white
   │    rules[3] 共 771 条
-  │    → 精确丢弃，移除 65 条（剩余 46,900）
-  │  处理完毕，共 46,900 条
-  │  子域去重：移除 9,276 条冗余子域
-  └─ 最终输出：37,624 条
+  │    → 精确丢弃，移除 169 条（剩余 46,933）
+  │  处理完毕，共 46,933 条
+  │  子域去重：移除 9,341 条冗余子域
+  └─ 最终输出：37,592 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Blocklist(BIG) (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    preset：7,198 条 <- ads_hosts
-  │    preset：161,829 条 <- addata_adblock
-  │    rules[0] 共 165,714 条
-  │    → 加入集合，新增 165,714 条（合计 165,714）
+  │    preset：7,187 条 <- ads_hosts
+  │    preset：162,105 条 <- addata_adblock
+  │    rules[0] 共 165,870 条
+  │    → 加入集合，新增 165,870 条（合计 165,870）
   │  rules[1] type=discard
   │    preset：771 条 <- addata_white
   │    rules[1] 共 771 条
-  │    → 精确丢弃，移除 65 条（剩余 165,649）
-  │  处理完毕，共 165,649 条
+  │    → 精确丢弃，移除 187 条（剩余 165,683）
+  │  处理完毕，共 165,683 条
   │  子域去重（强制跳过）
-  └─ 最终输出：165,649 条
+  └─ 最终输出：165,683 条
 
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
@@ -185,5 +166,5 @@
   └─ 最终输出：741 条
 
 ================================================================================
-✓ 处理完成！耗时：5.69 秒
+✓ 处理完成！耗时：5.82 秒
 ================================================================================
