@@ -121,12 +121,6 @@ ads_hosts:
     - type: discard
       preset:
         - addata_white
-    - type: discard_suffix
-      url:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads_not_useful.txt
-      preset:
-        - addata_white_suffix
-        - p_proxy_tld
     - type: add
       url:
         # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
@@ -149,11 +143,20 @@ ads:
       preset:
         - addata_adblock
     - type: match_suffix
+      domain:
+        - cn
       url:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
     - type: add
       preset:
         - ads_hosts
+    - type: discard
+      preset:
+        - addata_white
   output:
     enabled: true
     title: Ads Blocklist
@@ -168,6 +171,9 @@ ads_big:
       preset:
         - ads_hosts
         - addata_adblock
+    - type: discard
+      preset:
+        - addata_white
   output:
     enabled: true
     title: Ads Blocklist(BIG)
