@@ -1,8 +1,8 @@
 # Title: Proxy
 # Description: 需要被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 22,841
-# Updated: 2026-04-09 05:41:33 CST
+# Total: 22,870
+# Updated: 2026-04-10 05:46:02 CST
 #
 payload:
   - +.000webhost.com
@@ -1525,7 +1525,6 @@ payload:
   - +.anistreaming.xyz
   - +.ankarazirvesi2018.com
   - +.annamilk.com
-  - +.annas-archive.org
   - +.annatam.com
   - +.annstores.net
   - +.annualpelvicexam.com
@@ -4015,6 +4014,7 @@ payload:
   - +.c4rex.co
   - +.c4slive.com
   - +.ca
+  - +.cabconnect.org
   - +.cabdirect.org
   - +.cableav.tv
   - +.cableav.xyz
@@ -4114,6 +4114,7 @@ payload:
   - +.candidforum-videos.com
   - +.candycumcity.com
   - +.candypleasure.com
+  - +.canny.io
   - +.canon
   - +.canon-cee.com
   - +.canon-cmos-sensors.com
@@ -6100,6 +6101,7 @@ payload:
   - +.drepung.org
   - +.drgan.net
   - +.dribbble.com
+  - +.driveawaytaxi.org
   - +.driverxxx.com
   - +.drivevideo.xyz
   - +.drkogyi.com
@@ -6693,6 +6695,9 @@ payload:
   - +.entrust.com
   - +.entrust.net
   - +.entrustdatacard.com
+  - +.envato-static.com
+  - +.envato.com
+  - +.envatousercontent.com
   - +.eotarchive.org
   - +.epc-jav.com
   - +.epicbrowser.com
@@ -8854,6 +8859,7 @@ payload:
   - +.gofundme.com
   - +.gog-statics.com
   - +.gog.com
+  - +.gogettaxi.org
   - +.gogle.com
   - +.gogo-load.com
   - +.gogoanime.wiki
@@ -11422,6 +11428,10 @@ payload:
   - +.jiuse904.com
   - +.jiuse905.com
   - +.jiuzhouyihuo.com
+  - +.jivo.chat
+  - +.jivochat.com
+  - +.jivochat.com.co
+  - +.jivosite.com
   - +.jiyou520.com
   - +.jizzboom.com
   - +.jizzbunker.com
@@ -13814,6 +13824,7 @@ payload:
   - +.my-enema.com
   - +.my-formosa.com
   - +.my-magazine.me
+  - +.my-manager-account.com
   - +.my-proxy.com
   - +.my03.com
   - +.my13la.com
@@ -14713,16 +14724,21 @@ payload:
   - +.ntdvn.com
   - +.ntlk.org
   - +.ntp.ripe.net
+  - +.ntp.time.nl
   - +.ntp0.ntp-servers.net
   - +.ntp1.ntp-servers.net
+  - +.ntp1.time.nl
   - +.ntp1.wakwak.com
   - +.ntp2.ntp-servers.net
+  - +.ntp2.time.nl
   - +.ntp2.wakwak.com
   - +.ntp3.ntp-servers.net
   - +.ntp4.ntp-servers.net
   - +.ntp5.ntp-servers.net
   - +.ntp6.ntp-servers.net
   - +.ntp7.ntp-servers.net
+  - +.ntppool1.time.nl
+  - +.ntppool2.time.nl
   - +.ntrfun.com
   - +.ntrqq.net
   - +.ntt
@@ -18892,6 +18908,7 @@ payload:
   - +.supjav.com
   - +.suppig.net
   - +.supplybestjerseys.com
+  - +.support-uber.com
   - +.supportfacebook.com
   - +.supremacy.com
   - +.supremacy.net
@@ -19121,7 +19138,10 @@ payload:
   - +.tawny-peaks.com
   - +.taxel.media
   - +.taxi69.com
+  - +.taxiaid.org
   - +.taxidrivermovie.com
+  - +.taxiguru.org
+  - +.taxitax.org
   - +.taylorandfrancis.com
   - +.taylorfrancis.com
   - +.tbank-online.com
@@ -19175,7 +19195,6 @@ payload:
   - +.technorati.com
   - +.techradar.com
   - +.techsmith.com
-  - +.techspot.com
   - +.techstreet.com
   - +.techtimes.com
   - +.techtudo.com
@@ -19400,6 +19419,7 @@ payload:
   - +.thelittleslush.com
   - +.themarvelexperiencetour.com
   - +.themathsfactor.com
+  - +.themeforest.net
   - +.themilfmovies.com
   - +.themoviedb.org
   - +.thenationalpulse.com
@@ -20502,6 +20522,7 @@ payload:
   - +.uwants.com
   - +.uwants.net
   - +.uwpcommunitytoolkit.com
+  - +.uxthemes.com
   - +.uxxxporn.com
   - +.uy
   - +.uyghur-j.org
@@ -22370,10 +22391,18 @@ payload:
   - +.yandexadexchange.net
   - +.yandexcloud.net
   - +.yandexcom.net
+  - +.yandexgo.com
   - +.yandexwebcache.net
   - +.yandexwebcache.org
   - +.yanghengjun.com
   - +.yangjianli.com
+  - +.yango-b2b.com
+  - +.yango-team.com
+  - +.yango-tech.com
+  - +.yango.com
+  - +.yango.taxi
+  - +.yango.tech
+  - +.yangofellowship.com
   - +.yangzhi.org
   - +.yantaqu.com
   - +.yaohubaba.com
