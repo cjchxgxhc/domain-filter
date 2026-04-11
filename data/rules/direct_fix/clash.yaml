@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 741
-# Updated: 2026-04-11 05:38:54 CST
+# Total: 742
+# Updated: 2026-04-12 05:34:20 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -379,6 +379,7 @@ payload:
   - +.jsdelivr.com
   - +.jsdelivr.net
   - +.juequling.com
+  - +.kis.v2.scr.kaspersky-labs.com
   - +.kk-rays.com
   - +.kk1.vip
   - +.kurogames.com
