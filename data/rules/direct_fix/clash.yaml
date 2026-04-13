@@ -1,8 +1,8 @@
 # Title: Direct Fix
 # Description: 不应被代理的域名。
 # Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 742
-# Updated: 2026-04-13 05:36:22 CST
+# Total: 749
+# Updated: 2026-04-14 05:51:47 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -325,6 +325,7 @@ payload:
   - +.gameitop.com
   - +.gameloop.com
   - +.gamemei.com
+  - +.gangwan.com
   - +.gcloudcs.com
   - +.gcloudcstest.com
   - +.gcloudcstestonly.com
@@ -392,6 +393,7 @@ payload:
   - +.ledu.com
   - +.leigod.cn
   - +.leigod.com
+  - +.leigodjsq.com
   - +.leike.cc
   - +.lens.l.google.com
   - +.linksys.com
@@ -409,6 +411,7 @@ payload:
   - +.logincdn.msftauth.net
   - +.longtugame.com
   - +.lorhf.com
+  - +.ls66.cn
   - +.lsplayer.com
   - +.ludosuperstar.cn
   - +.ludoworld.net
@@ -498,6 +501,8 @@ payload:
   - +.nagcloudcs.com
   - +.nextstudios.com
   - +.nextworkshop.net
+  - +.nn.com
+  - +.nnbooster.com
   - +.notion-static.com
   - +.notion.com
   - +.notion.new
@@ -694,6 +699,7 @@ payload:
   - +.vrzwk.top
   - +.vscode.download.prss.microsoft.com
   - +.vz.download.prss.microsoft.com
+  - +.waifushangcheng.com
   - +.wanmei.com
   - +.wanwan4399.com
   - +.wargaming.net
@@ -725,6 +731,7 @@ payload:
   - +.xnotify.xboxlive.com
   - +.xunyou.com
   - +.xunyou.mobi
+  - +.xxghh.biz
   - +.xz.pphimalayanrt.com
   - +.y.qq.com
   - +.yacd.metacubex.one
