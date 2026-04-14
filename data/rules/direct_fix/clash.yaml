@@ -1,8 +1,7 @@
 # Title: Direct Fix
-# Description: 不应被代理的域名。
-# Homepage: https://github.com/cjchxgxhc/domain-filter
-# Total: 749
-# Updated: 2026-04-14 13:04:26 CST
+# Description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
+# Total: 741
+# Updated: 2026-04-14 23:40:36 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -283,7 +282,6 @@ payload:
   - +.devblogs.microsoft.com
   - +.developer.microsoft.com
   - +.device-provisioning.googleapis.com
-  - +.direct
   - +.dl.delivery.mp.microsoft.com
   - +.dl.steam.clngaa.com
   - +.dl.steam.ksyna.com
@@ -301,7 +299,6 @@ payload:
   - +.epicgames-download1-1251447533.file.myqcloud.com
   - +.et-api.com
   - +.et001.com
-  - +.example
   - +.example.org
   - +.f.c2r.ts.cdn.office.net
   - +.feihuo.com
@@ -371,8 +368,6 @@ payload:
   - +.img4399.com
   - +.in.th
   - +.instant.arubanetworks.com
-  - +.internal
-  - +.invalid
   - +.ipv4only.arpa
   - +.isure.stream.qqmusic.qq.com
   - +.jiasu.bohe.com
@@ -386,7 +381,6 @@ payload:
   - +.kurogames.com
   - +.kuwo.cn
   - +.labycore.cn
-  - +.lan
   - +.langrenclub.com
   - +.ldmnq.com
   - +.learn.microsoft.com
@@ -401,10 +395,7 @@ payload:
   - +.liuxing.com
   - +.live.com
   - +.live.net
-  - +.local
   - +.local.adguard.org
-  - +.localdomain
-  - +.localhost
   - +.localhost.ptlogin2.qq.com
   - +.localhost.sec.qq.com
   - +.login.microsoftonline.com
@@ -554,6 +545,7 @@ payload:
   - +.peiluyou.com
   - +.phicomm.me
   - +.phira.cn
+  - +.plex.direct
   - +.powerapps.cn
   - +.powerappsportals.cn
   - +.powerautomate.cn
@@ -631,7 +623,6 @@ payload:
   - +.tencent-gcloud.com
   - +.tencentstart.com
   - +.tendawifi.com
-  - +.test
   - +.texasholdemcup.cn
   - +.texasholdemcup.com
   - +.texasholdemcup.net
