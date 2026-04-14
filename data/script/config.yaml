@@ -127,6 +127,11 @@ sources:
     mode:     common
     validate: true
 
+  src_acl4ssr_ban_program_ad:
+    url:      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    mode:     common
+    validate: true
+
   src_sm_ad:
     url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
     mode:     common
@@ -264,6 +269,7 @@ ads_hosts:
     - type: add
       source:
         - src_10007_custom
+        - src_acl4ssr_ban_program_ad
         - src_sm_ad
         - src_awavenue
         - src_awavenue_hosts
@@ -289,10 +295,6 @@ ads:
         - src_adrules_domainset
         - src_10007_auto
         - src_10007
-        - src_10007_custom
-        - src_sm_ad
-        - src_awavenue
-        - src_awavenue_hosts
     - type: discard
       preset:
         - addata_white
@@ -309,8 +311,6 @@ ads:
       domain:
         - cn
     - type: add
-      source:
-        - src_hosts_supplement
       preset:
         - ads_hosts
   output:
@@ -330,10 +330,6 @@ ads_big:
         - src_adrules_domainset
         - src_10007_auto
         - src_10007
-        - src_10007_custom
-        - src_sm_ad
-        - src_awavenue
-        - src_awavenue_hosts
     - type: discard
       preset:
         - addata_white
@@ -341,8 +337,8 @@ ads_big:
       preset:
         - p_proxy_tld
     - type: add
-      source:
-        - src_hosts_supplement
+      preset:
+        - ads_hosts
   output:
     enabled: true
     formats: [adblock]
