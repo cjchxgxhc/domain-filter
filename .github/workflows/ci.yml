@@ -2,183 +2,231 @@ name: Update
 
 on:
   schedule:
-    - cron: '0 21 * * *'  # 每天 05:00 更新
+    - cron: '0 21 * * *'  # 每天 05:00 CST 更新
   workflow_dispatch:
 
 env:
-  MIHOMO_VERSION: 1.19.3
+  MIHOMO_VERSION:  1.19.3
   SINGBOX_VERSION: 1.11.0
-  TOOLS_DIR: data/tools
+  TOOLS_DIR:       data/tools
+  RUST_TOOL:       data/tools/domain_filter
+  RUST_SRC:        data/script/domain_filter
 
 jobs:
   build:
     name: Build Rules
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     permissions:
       contents: write
       actions: write
 
     steps:
+      # ── 检出 ─────────────────────────────────────────────────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Install dependencies
+      # ── Python 依赖 ───────────────────────────────────────────────────────────
+      - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip -q
           pip install requests pyyaml -q
 
+      # ── 创建工具目录 ──────────────────────────────────────────────────────────
       - name: Create tools directory
-        run: |
-          mkdir -p ${{ env.TOOLS_DIR }}
-          echo "✓ Tools directory created"
+        run: mkdir -p ${{ env.TOOLS_DIR }}
 
-      - name: Check if tools exist
+      # ── 检查各工具是否已存在 ──────────────────────────────────────────────────
+      - name: Check existing tools
         id: check_tools
         run: |
-          if [ -f "${{ env.TOOLS_DIR }}/mihomo" ] && [ -f "${{ env.TOOLS_DIR }}/sing-box" ]; then
-            echo "tools_exist=true" >> $GITHUB_OUTPUT
-            echo "✓ Tools already exist locally"
+          if [ -f "$GITHUB_WORKSPACE/${{ env.RUST_TOOL }}" ]; then
+            echo "rust_ok=true"    >> $GITHUB_OUTPUT
+            echo "✓ domain_filter 已存在"
           else
-            echo "tools_exist=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ Tools not found, will download"
+            echo "rust_ok=false"   >> $GITHUB_OUTPUT
+            echo "ℹ️ domain_filter 不存在，将编译"
           fi
 
-      - name: Download Mihomo binary
-        if: steps.check_tools.outputs.tools_exist == 'false'
+          if [ -f "$GITHUB_WORKSPACE/${{ env.TOOLS_DIR }}/mihomo" ]; then
+            echo "mihomo_ok=true"  >> $GITHUB_OUTPUT
+            echo "✓ mihomo 已存在"
+          else
+            echo "mihomo_ok=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ mihomo 不存在，将下载"
+          fi
+
+          if [ -f "$GITHUB_WORKSPACE/${{ env.TOOLS_DIR }}/sing-box" ]; then
+            echo "singbox_ok=true"  >> $GITHUB_OUTPUT
+            echo "✓ sing-box 已存在"
+          else
+            echo "singbox_ok=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ sing-box 不存在，将下载"
+          fi
+
+      # ── 编译 Rust domain_filter ───────────────────────────────────────────────
+      - name: Setup Rust toolchain
+        if: steps.check_tools.outputs.rust_ok == 'false'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-unknown-linux-gnu
+
+      - name: Cache Rust build
+        if: steps.check_tools.outputs.rust_ok == 'false'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ${{ env.RUST_SRC }}/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles(format('{0}/Cargo.lock', env.RUST_SRC)) }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Build domain_filter (Rust)
+        if: steps.check_tools.outputs.rust_ok == 'false'
         run: |
-          echo "Downloading Mihomo v${{ env.MIHOMO_VERSION }}..."
+          DEST="$GITHUB_WORKSPACE/${{ env.RUST_TOOL }}"
+          mkdir -p "$(dirname "$DEST")"
+
+          cd "$GITHUB_WORKSPACE/${{ env.RUST_SRC }}"
+          cargo build --release --target x86_64-unknown-linux-gnu
+
+          cp target/x86_64-unknown-linux-gnu/release/domain_filter "$DEST"
+          chmod +x "$DEST"
+          echo "✓ domain_filter 编译完成（$(du -sh "$DEST" | cut -f1)）"
+
+      # ── 下载 mihomo ───────────────────────────────────────────────────────────
+      - name: Download Mihomo binary
+        if: steps.check_tools.outputs.mihomo_ok == 'false'
+        run: |
           cd ${{ env.TOOLS_DIR }}
-          wget -q --timeout=30 https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
+          wget -q --timeout=60 \
+            https://github.com/MetaCubeX/mihomo/releases/download/v${{ env.MIHOMO_VERSION }}/mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
           gzip -d mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }}.gz
           mv mihomo-linux-amd64-v${{ env.MIHOMO_VERSION }} mihomo
           chmod +x mihomo
-          cd -
-          echo "✓ Mihomo v${{ env.MIHOMO_VERSION }} ready"
+          echo "✓ Mihomo v${{ env.MIHOMO_VERSION }} 就绪"
 
+      # ── 下载 sing-box ──────────────────────────────────────────────────────────
       - name: Download sing-box binary
-        if: steps.check_tools.outputs.tools_exist == 'false'
+        if: steps.check_tools.outputs.singbox_ok == 'false'
         run: |
-          echo "Downloading sing-box v${{ env.SINGBOX_VERSION }}..."
           cd ${{ env.TOOLS_DIR }}
-          wget -q --timeout=30 https://github.com/SagerNet/sing-box/releases/download/v${{ env.SINGBOX_VERSION }}/sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          wget -q --timeout=60 \
+            https://github.com/SagerNet/sing-box/releases/download/v${{ env.SINGBOX_VERSION }}/sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
           tar xzf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
           mv sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/sing-box .
           chmod +x sing-box
-          rm -f sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
+          rm -f  sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64.tar.gz
           rm -rf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/
-          cd -
-          echo "✓ sing-box v${{ env.SINGBOX_VERSION }} ready"
+          echo "✓ sing-box v${{ env.SINGBOX_VERSION }} 就绪"
 
+      # ── 清理旧输出 ────────────────────────────────────────────────────────────
       - name: Clean old output
-        run: |
-          rm -rf data/rules README.md
+        run: rm -rf data/rules README.md
 
-      - name: Run script
+      # ── 1. 运行主过滤脚本 ──────────────────────────────────────────────────────
+      - name: Run filter.py
         run: |
           python data/script/filter.py
-          echo "✓ Filter script completed"
+          echo "✓ filter.py 完成"
 
+      # ── 2. 转换 MRS（Clash Meta Ruleset）────────────────────────────────────
       - name: Convert MRS
         run: |
           count=0
           for file in data/rules/*/clash.yaml; do
-            if [ -f "$file" ]; then
-              ${{ env.TOOLS_DIR }}/mihomo convert-ruleset domain yaml "$file" "${file%.yaml}.mrs"
-              count=$((count + 1))
-              echo "  ✓ Converted: ${file##*/}"
-            fi
+            [ -f "$file" ] || continue
+            ${{ env.TOOLS_DIR }}/mihomo convert-ruleset domain yaml \
+              "$file" "${file%.yaml}.mrs" \
+              && count=$((count + 1)) \
+              && echo "  ✓ ${file}"
           done
-          echo "✓ Converted $count files to MRS format"
+          echo "✓ 转换 $count 个 MRS 文件"
 
-      - name: Convert SRS
+      # ── 3. 编译 SRS（Sing-box Rule Set）─────────────────────────────────────
+      - name: Compile SRS
         run: |
           count=0
           for file in data/rules/*/singbox.json; do
-            if [ -f "$file" ]; then
-              ${{ env.TOOLS_DIR }}/sing-box rule-set compile -o "${file%.json}.srs" "$file"
-              count=$((count + 1))
-              echo "  ✓ Compiled: ${file##*/}"
-            fi
+            [ -f "$file" ] || continue
+            ${{ env.TOOLS_DIR }}/sing-box rule-set compile \
+              -o "${file%.json}.srs" "$file" \
+              && count=$((count + 1)) \
+              && echo "  ✓ ${file}"
           done
-          echo "✓ Compiled $count files to SRS format"
+          echo "✓ 编译 $count 个 SRS 文件"
 
+      # ── 4. 生成 README ────────────────────────────────────────────────────────
+      - name: Generate README
+        run: |
+          python data/script/gen_readme.py
+          echo "✓ gen_readme.py 完成"
+
+      # ── 检查变更 ──────────────────────────────────────────────────────────────
       - name: Check for changes
         id: check_changes
         run: |
           git add data/rules/ data/tools/ README.md 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ No changes detected"
+            echo "ℹ️ 无变更"
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "✓ Changes detected"
+            echo "✓ 检测到变更"
           fi
 
-      - name: Commit and push changes
+      # ── 提交推送 ──────────────────────────────────────────────────────────────
+      - name: Commit and push
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update rules, rule-sets & tools $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "chore: update rules & tools $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
-          echo "✓ Changes committed and pushed"
+          echo "✓ 已提交并推送"
 
-      - name: Cleanup old workflow
+      # ── 清理旧 Workflow 记录 ──────────────────────────────────────────────────
+      - name: Cleanup old workflow runs
         if: always()
         uses: actions/github-script@v7
         with:
           script: |
             const daysToKeep = 3;
             const runsToKeep = 2;
-            const cutoffDate = new Date();
-            cutoffDate.setDate(cutoffDate.getDate() - daysToKeep);
-            
-            console.log(`🧹 Cleaning workflow runs older than ${daysToKeep} days, keeping at least ${runsToKeep} recent runs`);
-            
-            try {
-              const { data: workflows } = await github.rest.actions.listRepoWorkflows({
-                owner: context.repo.owner,
-                repo: context.repo.repo
+            const cutoff = new Date();
+            cutoff.setDate(cutoff.getDate() - daysToKeep);
+
+            const { data: workflows } = await github.rest.actions.listRepoWorkflows({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+            });
+
+            let deleted = 0;
+            for (const wf of workflows.workflows) {
+              const { data: runs } = await github.rest.actions.listWorkflowRuns({
+                owner:       context.repo.owner,
+                repo:        context.repo.repo,
+                workflow_id: wf.id,
+                per_page:    100,
               });
-              
-              let totalDeleted = 0;
-              
-              for (const workflow of workflows.workflows) {
-                const { data: runs } = await github.rest.actions.listWorkflowRuns({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  workflow_id: workflow.id,
-                  per_page: 100
-                });
-                
-                const sortedRuns = runs.workflow_runs.sort((a, b) => 
-                  new Date(b.created_at) - new Date(a.created_at)
-                );
-                
-                for (let i = runsToKeep; i < sortedRuns.length; i++) {
-                  const run = sortedRuns[i];
-                  const runDate = new Date(run.created_at);
-                  
-                  if (runDate < cutoffDate) {
-                    try {
-                      await github.rest.actions.deleteWorkflowRun({
-                        owner: context.repo.owner,
-                        repo: context.repo.repo,
-                        run_id: run.id
-                      });
-                      totalDeleted++;
-                      console.log(`  ✓ Deleted run ${run.id} (${run.name}) from ${run.created_at}`);
-                    } catch (error) {
-                      console.log(`  ✗ Failed to delete run ${run.id}: ${error.message}`);
-                    }
-                  }
+              const sorted = runs.workflow_runs.sort(
+                (a, b) => new Date(b.created_at) - new Date(a.created_at)
+              );
+              for (let i = runsToKeep; i < sorted.length; i++) {
+                if (new Date(sorted[i].created_at) < cutoff) {
+                  try {
+                    await github.rest.actions.deleteWorkflowRun({
+                      owner:  context.repo.owner,
+                      repo:   context.repo.repo,
+                      run_id: sorted[i].id,
+                    });
+                    deleted++;
+                  } catch (_) {}
                 }
               }
-              
-              console.log(`✓ Cleanup completed. Deleted ${totalDeleted} workflow run(s)`);
-            } catch (error) {
-              console.error(`❌ Cleanup failed: ${error.message}`);
             }
+            console.log(`✓ 清理完成，删除 ${deleted} 条 Workflow 记录`);
