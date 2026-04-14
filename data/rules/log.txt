@@ -1,13 +1,13 @@
 开始执行域名过滤工具
-开始下载 30 个规则源...
-下载完成：30/30 成功，耗时 1.05s
-提取外部源域名（30 个）...
+开始下载 31 个规则源...
+下载完成：31/31 成功，耗时 0.98s
+提取外部源域名（31 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
   src_white_cats：149 条 [common]
   src_white_anti-AD：519 条 [common]
   src_white_self_list：23 条 [common]
-  src_cn_heidai_lite：5,656 条 [skip]
+  src_cn_heidai_lite：5,588 条 [skip]
   src_cn_aethersailor_lite：35,568 条 [skip]
   src_cn_loyalsoldier_direct：118,543 条 [common]
   src_cn_xmdhs_ext：28,045 条 [common]
@@ -18,6 +18,7 @@
   src_10007_auto：14,360 条 [common]
   src_10007：17,123 条 [common]
   src_10007_custom：839 条 [common]
+  src_acl4ssr_ban_program_ad：989 条 [common]
   src_sm_ad：2,598 条 [common]
   src_awavenue：905 条 [common]
   src_awavenue_hosts：895 条 [common]
@@ -32,7 +33,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.82s
+提取完成，耗时 1.76s
 ================================================================================
 处理规则组
 ================================================================================
@@ -48,7 +49,7 @@
   │    rules[1] 共 7 条
   │    → 精确丢弃，移除 3 条（剩余 828）
   │  处理完毕，共 828 条
-  └─ 最终输出：828 条，耗时 0.06s
+  └─ 最终输出：828 条，耗时 0.05s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_white (addata_white)
 ══════════════════════════════════════════════════════════════════════
@@ -85,7 +86,7 @@
   │    rules[0] 共 20,026 条
   │    → 加入，新增 20,026 条（合计 20,026）
   │  rules[1] type=match_suffix
-  │    source：5,656 条 <- src_cn_heidai_lite
+  │    source：5,588 条 <- src_cn_heidai_lite
   │    source：35,568 条 <- src_cn_aethersailor_lite
   │    source：118,543 条 <- src_cn_loyalsoldier_direct
   │    source：28,045 条 <- src_cn_xmdhs_ext
@@ -94,21 +95,22 @@
   │    → 后缀保留，保留 4,420 条（移除 15,606）
   │  rules[2] type=add
   │    source：839 条 <- src_10007_custom
+  │    source：989 条 <- src_acl4ssr_ban_program_ad
   │    source：2,598 条 <- src_sm_ad
   │    source：905 条 <- src_awavenue
   │    source：895 条 <- src_awavenue_hosts
-  │    rules[2] 共 4,024 条
-  │    → 加入，新增 2,628 条（合计 7,048）
+  │    rules[2] 共 4,920 条
+  │    → 加入，新增 3,289 条（合计 7,709）
   │  rules[3] type=discard
   │    preset：775 条 <- addata_white
   │    rules[3] 共 775 条
-  │    → 精确丢弃，移除 86 条（剩余 6,962）
+  │    → 精确丢弃，移除 117 条（剩余 7,592）
   │  rules[4] type=add
   │    source：171 条 <- src_hosts_supplement
   │    rules[4] 共 171 条
-  │    → 加入，新增 149 条（合计 7,111）
-  │  处理完毕，共 7,111 条
-  └─ 最终输出：7,111 条，耗时 0.15s
+  │    → 加入，新增 149 条（合计 7,741）
+  │  处理完毕，共 7,741 条
+  └─ 最终输出：7,741 条，耗时 0.15s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads (ads)
 ══════════════════════════════════════════════════════════════════════
@@ -118,37 +120,32 @@
   │    source：184,634 条 <- src_adrules_domainset
   │    source：14,360 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    source：839 条 <- src_10007_custom
-  │    source：2,598 条 <- src_sm_ad
-  │    source：905 条 <- src_awavenue
-  │    source：895 条 <- src_awavenue_hosts
-  │    rules[0] 共 221,611 条
-  │    → 加入，新增 221,611 条（合计 221,611）
+  │    rules[0] 共 220,030 条
+  │    → 加入，新增 220,030 条（合计 220,030）
   │  rules[1] type=discard
   │    preset：775 条 <- addata_white
   │    rules[1] 共 775 条
-  │    → 精确丢弃，移除 204 条（剩余 221,407）
+  │    → 精确丢弃，移除 187 条（剩余 219,843）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 45,106 条（剩余 176,301）
+  │    → 后缀丢弃，移除 45,082 条（剩余 174,761）
   │  rules[3] type=match_suffix
-  │    source：5,656 条 <- src_cn_heidai_lite
+  │    source：5,588 条 <- src_cn_heidai_lite
   │    source：35,568 条 <- src_cn_aethersailor_lite
   │    source：118,543 条 <- src_cn_loyalsoldier_direct
   │    source：28,045 条 <- src_cn_xmdhs_ext
   │    source：140,042 条 <- src_hagezi_ultimate
   │    domain：1 条自定义
   │    rules[3] 共 303,492 条
-  │    → 后缀保留，保留 48,707 条（移除 127,594）
+  │    → 后缀保留，保留 47,231 条（移除 127,530）
   │  rules[4] type=add
-  │    source：171 条 <- src_hosts_supplement
-  │    preset：7,111 条 <- ads_hosts
-  │    rules[4] 共 7,111 条
-  │    → 加入，新增 415 条（合计 49,122）
-  │  处理完毕，共 49,122 条
-  │  子域去重：移除 12,123 条冗余子域
-  └─ 最终输出：36,999 条，耗时 0.46s
+  │    preset：7,741 条 <- ads_hosts
+  │    rules[4] 共 7,741 条
+  │    → 加入，新增 1,972 条（合计 49,203）
+  │  处理完毕，共 49,203 条
+  │  子域去重：移除 12,124 条冗余子域
+  └─ 最终输出：37,079 条，耗时 0.50s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Big (ads_big)
 ══════════════════════════════════════════════════════════════════════
@@ -158,27 +155,23 @@
   │    source：184,634 条 <- src_adrules_domainset
   │    source：14,360 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    source：839 条 <- src_10007_custom
-  │    source：2,598 条 <- src_sm_ad
-  │    source：905 条 <- src_awavenue
-  │    source：895 条 <- src_awavenue_hosts
-  │    rules[0] 共 221,611 条
-  │    → 加入，新增 221,611 条（合计 221,611）
+  │    rules[0] 共 220,030 条
+  │    → 加入，新增 220,030 条（合计 220,030）
   │  rules[1] type=discard
   │    preset：775 条 <- addata_white
   │    rules[1] 共 775 条
-  │    → 精确丢弃，移除 204 条（剩余 221,407）
+  │    → 精确丢弃，移除 187 条（剩余 219,843）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 45,106 条（剩余 176,301）
+  │    → 后缀丢弃，移除 45,082 条（剩余 174,761）
   │  rules[3] type=add
-  │    source：171 条 <- src_hosts_supplement
-  │    rules[3] 共 171 条
-  │    → 加入，新增 138 条（合计 176,439）
-  │  处理完毕，共 176,439 条
-  │  子域去重：移除 16,474 条冗余子域
-  └─ 最终输出：159,965 条，耗时 0.51s
+  │    preset：7,741 条 <- ads_hosts
+  │    rules[3] 共 7,741 条
+  │    → 加入，新增 1,769 条（合计 176,530）
+  │  处理完毕，共 176,530 条
+  │  子域去重：移除 16,476 条冗余子域
+  └─ 最终输出：160,054 条，耗时 0.53s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
@@ -216,5 +209,5 @@
   └─ 最终输出：741 条，耗时 0.06s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.41s
+✓ 处理完成！总耗时 4.35s
 ================================================================================

@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: Ads Big
 ! Description: 聚合收录的所有广告规则，仅去除白名单、国外tld。
-! Total: 159,965
-! Updated: 2026-04-14 23:40:36 CST
+! Total: 160,054
+! Updated: 2026-04-15 01:18:42 CST
 !
 ||0.myikas.com^
 ||0.net.easyjet.com^
@@ -3603,6 +3603,7 @@
 ||a.booksir.cn^
 ||a.boredpanda.bio^
 ||a.boyjackpot.com^
+||a.breaktime.com.tw^
 ||a.breka.fit^
 ||a.brilmaver.com^
 ||a.bshu.com^
@@ -6014,6 +6015,7 @@
 ||ad-brix.com^
 ||ad-cache.dopool.com^
 ||ad-cdn.bilgin.pro^
+||ad-cdn.qingting.fm^
 ||ad-cdn.qtfm.cn^
 ||ad-center.com^
 ||ad-channel.diwodiwo.xyz^
@@ -6339,6 +6341,7 @@
 ||ad.iplayer.org^
 ||ad.iwhop.cn^
 ||ad.jamba.net^
+||ad.jamster.co.uk^
 ||ad.jamster.com^
 ||ad.janalta.com^
 ||ad.jaumo.com^
@@ -6375,6 +6378,7 @@
 ||ad.m.iqiyi.com^
 ||ad.m5prod.net^
 ||ad.magokoro-care-shoku.com^
+||ad.mail.ru^
 ||ad.mail.sohu.com^
 ||ad.mailo.com^
 ||ad.mangareader.net^
@@ -6410,6 +6414,7 @@
 ||ad.nozonedata.com^
 ||ad.ntvmsnbc.com^
 ||ad.nvdvr.cn^
+||ad.obuy.tw^
 ||ad.oceanengine.com^
 ||ad.oceanengine.com.queniukw.com^
 ||ad.oceanengine.com.w.cdngslb.com^
@@ -6440,6 +6445,7 @@
 ||ad.prismamediadigital.com^
 ||ad.qc789.vip^
 ||ad.qingcigame.com^
+||ad.qingting.fm^
 ||ad.qn.img-space.com^
 ||ad.qq.com^
 ||ad.queryly.com^
@@ -6473,6 +6479,7 @@
 ||ad.site-landing.com^
 ||ad.slashgear.com^
 ||ad.snappea.com^
+||ad.snaptube.app^
 ||ad.sohu.com^
 ||ad.soulapp.cn^
 ||ad.stsywl.com^
@@ -6545,6 +6552,7 @@
 ||ad.xxam.org^
 ||ad.yemeksepeti.com^
 ||ad.yeshitv.com^
+||ad.yixin.im^
 ||ad.ymcdn.org^
 ||ad.yo88.net^
 ||ad.yo88.tv^
@@ -7407,6 +7415,7 @@
 ||admetricspro.com^
 ||admex.com^
 ||admez.com^
+||admgr.qingting.fm^
 ||admhbl.xyz^
 ||admidadsp.com^
 ||admidainsight.com^
@@ -7832,6 +7841,7 @@
 ||ads-drcn.platform.hihonorcloud.cn^
 ||ads-drcn.platform.hihonorcloud.com^
 ||ads-game-187f4.firebaseapp.com^
+||ads-gdl.imovideo.ru^
 ||ads-go.adroi.com.cn^
 ||ads-i1.xhscdn.com^
 ||ads-i2.xhscdn.com^
@@ -7922,6 +7932,7 @@
 ||ads.adcorps.com^
 ||ads.addesktop.com^
 ||ads.adecosystems.net^
+||ads.adfox.ru^
 ||ads.adgoto.com^
 ||ads.adhall.com^
 ||ads.adhostingsolutions.com^
@@ -8345,6 +8356,7 @@
 ||ads.imgdesu.art^
 ||ads.imguol.com^
 ||ads.imgur.com^
+||ads.imovideo.ru^
 ||ads.impulsosocial.online^
 ||ads.indeed.com^
 ||ads.indexinfo.org^
@@ -8780,6 +8792,7 @@
 ||ads.tromaville.com^
 ||ads.truecaller.com^
 ||ads.trutv.com^
+||ads.ttv.com.tw^
 ||ads.tunein.com^
 ||ads.tvb.com^
 ||ads.twdcgrid.com^
@@ -9284,6 +9297,7 @@
 ||adsdk.vivo.com.cn^
 ||adsdk.vrvm.com^
 ||adsdk.whjzjx.cn^
+||adsdk.yandex.ru^
 ||adsdkapi.dxys.pro^
 ||adsds.digital^
 ||adse.test.ximalaya.com^
@@ -9313,6 +9327,7 @@
 ||adserv.maineguide.com^
 ||adserv.mywebtimes.com^
 ||adserv.net^
+||adserv.ontek.com.tr^
 ||adserv.postbulletin.com^
 ||adserv.tbussyb.com^
 ||adserv.usps.com^
@@ -9402,6 +9417,7 @@
 ||adserver.harktheherald.com^
 ||adserver.hispanoclick.com^
 ||adserver.hostinteractive.com^
+||adserver.html.it^
 ||adserver.humanux.com^
 ||adserver.ign.com^
 ||adserver.ilgazzettinovesuviano.com^
@@ -9501,11 +9517,34 @@
 ||adservice.aiyouaiyou.cn^
 ||adservice.aliexpress.com^
 ||adservice.com^
+||adservice.google.ca^
 ||adservice.google.cn^
+||adservice.google.co.in^
+||adservice.google.co.kr^
+||adservice.google.co.uk^
+||adservice.google.co.za^
 ||adservice.google.com^
+||adservice.google.com.ar^
+||adservice.google.com.au^
+||adservice.google.com.br^
 ||adservice.google.com.co^
+||adservice.google.com.gt^
 ||adservice.google.com.hk^
+||adservice.google.com.mx^
+||adservice.google.com.pe^
+||adservice.google.com.ph^
+||adservice.google.com.pk^
+||adservice.google.com.tr^
+||adservice.google.com.tw^
+||adservice.google.com.vn^
+||adservice.google.de^
+||adservice.google.dk^
+||adservice.google.fr^
 ||adservice.google.nl^
+||adservice.google.no^
+||adservice.google.pl^
+||adservice.google.ru^
+||adservice.google.vg^
 ||adservice.kugou.com^
 ||adservice.tohsoft.com^
 ||adserviceretry.kglink.cn^
@@ -10220,6 +10259,7 @@
 ||advertising.thediabetesnetwork.com^
 ||advertising.twitter.com^
 ||advertising.yahoo.com^
+||advertising.yandex.ru^
 ||advertising365.com^
 ||advertisingagencyinfaridabad.com^
 ||advertisingbanners.com^
@@ -10393,6 +10433,7 @@
 ||adx-drcn.op.dbankcloud.com^
 ||adx-drcn.op.hihonorcloud.cn^
 ||adx-dre.op.dbankcloud.com^
+||adx-drru.op.dbankcloud.ru^
 ||adx-exchange.toast.com^
 ||adx-open-service.youku.com^
 ||adx-static.ksosoft.com^
@@ -10415,6 +10456,7 @@
 ||adx.hupu.com^
 ||adx.ibibo.com^
 ||adx.io^
+||adx.kat.ph^
 ||adx.kuaiyiad.com^
 ||adx.mala.cn^
 ||adx.maplehaze.cn^
@@ -10434,6 +10476,7 @@
 ||adx.trackrsad.com^
 ||adx.xemvtv.net^
 ||adx.xiaodutv.com^
+||adx.yixin.im^
 ||adx.zuoyebang.com^
 ||adx1.com^
 ||adx1js.s3.amazonaws.com^
@@ -11984,6 +12027,7 @@
 ||allfreecounter.com^
 ||allgoodaivr.shop^
 ||alliance.adbureau.net^
+||alliance.breaktime.com.tw^
 ||alliance4media.com^
 ||alliancefurs.com^
 ||allicesoggier.com^
@@ -13587,6 +13631,7 @@
 ||andrqd.play.aiseet.atianqi.com^
 ||andvkyobbgoam.website^
 ||andyhoppe.com^
+||ane.yahoo.co.jp^
 ||anedukerationpeci.com^
 ||aneguftwymwfg.store^
 ||anemiachoky.com^
@@ -14097,6 +14142,7 @@
 ||api-access.pangolin-sdk-toutiao9-b.com^
 ||api-access.pangolin-sdk-toutiao9.com^
 ||api-ad-adapter.wps.com^
+||api-ad-callback.falconnet.app^
 ||api-ad-callback.mobiuspace.net^
 ||api-ad-data.kajicam.com^
 ||api-ad-extra.kajicam.com^
@@ -14257,6 +14303,7 @@
 ||api.aposentadoriamilitar.site^
 ||api.app.skysrt.com^
 ||api.app.xtudoreceitas.com^
+||api.appcenter.ms^
 ||api.applovefrom.com^
 ||api.appnxt.net^
 ||api.appsee.com^
@@ -14705,6 +14752,7 @@
 ||api.trafficfactory.com^
 ||api.trueaudience.io^
 ||api.trwl1.com^
+||api.ts.feedback.71.am^
 ||api.ts.feedback.qy.net^
 ||api.tsyouto.cn^
 ||api.tumra.com^
@@ -14941,6 +14989,7 @@
 ||app.acekuwait.com^
 ||app.acm.dzwww.com^
 ||app.activityhero.com^
+||app.adjust.net.in^
 ||app.adsbrook.com^
 ||app.advertisingsolutions.att-mail.com^
 ||app.agribusiness.53.com^
@@ -15658,6 +15707,7 @@
 ||app.waybetter.com^
 ||app.whartoncenter.com^
 ||app.what3words.com^
+||app.wiki.gg^
 ||app.wine.tweglobal.com^
 ||app.wish2wash.com^
 ||app.wishtrend.com^
@@ -16189,6 +16239,7 @@
 ||arctichold.pro^
 ||arcticinspector.com^
 ||arctwjodckpyz.site^
+||ard.yahoo.co.jp^
 ||ardalio.com^
 ||ardeliagaolers.cfd^
 ||ardena.pro^
@@ -17039,6 +17090,7 @@
 ||atyvapfwastoa.space^
 ||au-go.experian.com^
 ||au-partners.ingrammicro.com^
+||au.breaktime.com.tw^
 ||au.ideaure.com^
 ||au.interface.com^
 ||au.mywd.com^
@@ -17714,6 +17766,7 @@
 ||az512334.vo.msecnd.net^
 ||az693360.vo.msecnd.net^
 ||az6a8nmuz5vbrgd2.exasrv.com^
+||azabu-u.ac.jp^
 ||azadify.com^
 ||azaleada1.top^
 ||azatezgeqguhs.website^
@@ -21806,6 +21859,7 @@
 ||breakskibobs.qpon^
 ||breakthrough.kronos.com^
 ||breakthroughtrend.com^
+||breaktime.tw^
 ||brealtime.com^
 ||breastfeedingdelightedtease.com^
 ||breasycarrental.eccocar.com^
@@ -22052,8 +22106,10 @@
 ||browser.vivo.com.cn^
 ||browsercfg-drcn.cloud.dbankcloud.cn^
 ||browsercfg-drcn.cloud.dbankcloud.com^
+||browsercfg-drcn.cloud.dbankcloud.eu^
 ||browsercfg-drcn.cloud.hihonorcloud.cn^
 ||browsercfg-drcn.cloud.hihonorcloud.com^
+||browsercfg-drcn.cloud.hihonorcloud.eu^
 ||browsergames2018.com^
 ||browsergames2019.com^
 ||browserkernel.baidu.com^
@@ -27533,6 +27589,7 @@
 ||codenow.cn^
 ||codeonclick.com^
 ||codeotel.com^
+||codepush.appcenter.ms^
 ||coderexception.com^
 ||coderformylife.info^
 ||codesoftchina.com^
@@ -27848,6 +27905,7 @@
 ||com-auth.site^
 ||com-eonsun-owl.oss-cn-hangzhou.aliyuncs.com^
 ||com.econa.com^
+||com.yxcorp.gifshow.ad^
 ||com.yxcorp.gifshow.map^
 ||com052bin.com^
 ||com5.com.cn^
@@ -28171,6 +28229,7 @@
 ||confidencetalks.com^
 ||confidentialitydefensetshirt.com^
 ||confidescoffs.cfd^
+||config.ad-snaptube.app^
 ||config.baofeng.net^
 ||config.bdheaventouch.xyz^
 ||config.chsmarttv.com^
@@ -29141,6 +29200,7 @@
 ||cotylarhatrackbowlder.cfd^
 ||coucalhidated.com^
 ||coucalmildishbright.cyou^
+||couchcoaster.jp^
 ||cougar.augmentedmindapp.com^
 ||cougar.wzulfikar.com^
 ||couijnmkgjdim.site^
@@ -34966,6 +35026,7 @@
 ||delivery.boraso.com^
 ||delivery.casabito.io^
 ||delivery.dighty.com^
+||delivery.dmkt-sp.jp^
 ||delivery.gettopple.com^
 ||delivery.lululemon.com^
 ||delivery.marketing.boutiqaat.com^
@@ -36414,6 +36475,7 @@
 ||dl-test.myathath.com^
 ||dl-test.rivafashion.com^
 ||dl-vip.bav.baidu.com^
+||dl-vip.pcfaster.baidu.co.th^
 ||dl.1003b.56a.com^
 ||dl.4buy.net^
 ||dl.4kporn.xxx^
@@ -36518,6 +36580,7 @@
 ||dlmztrbyjydcn.space^
 ||dlne6myudrxi1.cloudfront.net^
 ||dlngzx.top^
+||dload.qd.qingting.fm^
 ||dlog-config.uu.cc^
 ||dlog.perfectworldgames.com^
 ||dlog.pwsdk.com^
@@ -36766,6 +36829,7 @@
 ||dnjuijdqxhzka.site^
 ||dnjxds.top^
 ||dnkeeper.platform.dbankcloud.cn^
+||dnkeeper.platform.dbankcloud.eu^
 ||dnkekesrad.xyz^
 ||dnkpxpnpxgxoy.website^
 ||dnks065sb0ww6.cloudfront.net^
@@ -40408,6 +40472,7 @@
 ||elaboratebasis.com^
 ||elade.mensuas.com^
 ||eladove.com^
+||elads.kocpc.com.tw^
 ||elajqjtwnoaef.space^
 ||eland-tech.com^
 ||elapeolh.com^
@@ -44040,6 +44105,7 @@
 ||fdkbu.thespeakerlab.com^
 ||fdkeip.azafashions.com^
 ||fdkjt.cn^
+||fdkss.sbs^
 ||fdl.flysleep.cn^
 ||fdl.zztfly.com^
 ||fdldg.trtltravel.com^
@@ -51192,6 +51258,7 @@
 ||grrzr.icoverdirect.com^
 ||grs.dbankcloud.cn^
 ||grs.dbankcloud.com^
+||grs.dbankcloud.eu^
 ||grs.hicloud.com^
 ||grs.platform.dbankcloud.ru^
 ||grsketenes.cyou^
@@ -61136,8 +61203,10 @@
 ||installationtruckuseful.com^
 ||installer-drcn.hispace.dbankcloud.cn^
 ||installer-drcn.hispace.dbankcloud.com^
+||installer-drcn.hispace.dbankcloud.eu^
 ||installer-drcn.hispace.hihonorcloud.cn^
 ||installer-drcn.hispace.hihonorcloud.com^
+||installer-drcn.hispace.hihonorcloud.eu^
 ||installerastonishment.com^
 ||installmac.com^
 ||installprudentmerriment.com^
@@ -65104,6 +65173,7 @@
 ||juicyteenie.com^
 ||juicyteenvideos.com^
 ||juicywebcams.com^
+||juicywin.pl^
 ||juicywives.com^
 ||juio.net^
 ||juisiqhqqap.com^
@@ -74639,6 +74709,7 @@
 ||logger.growstarry.com^
 ||logger.nerdwallet.com^
 ||logger.omio.com^
+||logger.qingting.fm^
 ||logger.radiatetheworld.com^
 ||logger.snackly.co^
 ||logger.treexml.baofeng.com^
@@ -82769,6 +82840,7 @@
 ||metrics.zonwizard.com^
 ||metrics0.com^
 ||metrics1-drcn.dt.dbankcloud.cn^
+||metrics1-drcn.dt.dbankcloud.eu^
 ||metrics1.citi.com^
 ||metrics1.citibank.com^
 ||metrics1.citibankonline.com^
@@ -82793,6 +82865,7 @@
 ||metricswpsh.com^
 ||metrika-informer.com^
 ||metrika.myseldon.com^
+||metrika.yandex.ru^
 ||metrilo.com^
 ||metrisecaiques.cyou^
 ||metrix.511tactical.com^
@@ -85335,6 +85408,7 @@
 ||msfpa.solawoodflowers.com^
 ||msg-intl.qy.net^
 ||msg-na.hismarttv.com^
+||msg.71.am^
 ||msg.c002.ottcn.com^
 ||msg.eclicks.cn^
 ||msg.ettoday.net^
@@ -85344,12 +85418,14 @@
 ||msg.ptqy.gitv.tv^
 ||msg.qy.net^
 ||msg.shouji.360.cn^
+||msg.simeji.baidu.jp^
 ||msg.simeji.me^
 ||msg.video.ptqy.gitv.tv^
 ||msg.youku.com^
 ||msg1.video.qiyi.com^
 ||msg2.video.ptqy.gitv.tv^
 ||msg2.video.qiyi.com^
+||msga.71.am^
 ||msga.cupid.iqiyi.com^
 ||msga.ptqy.gitv.tv^
 ||msgapp.com^
@@ -88317,6 +88393,7 @@
 ||niche247.trade^
 ||nichedlinks.com^
 ||nicheevaderesidential.com^
+||nichibenren.or.jp^
 ||nichools.com^
 ||nichsfhxnjvbe.online^
 ||nichtcloth.qpon^
@@ -88334,6 +88411,7 @@
 ||nicksstevmark.com^
 ||nicolasrhumbaenfile.cyou^
 ||nicoltimor.cyou^
+||nicorette.co.kr^
 ||nictatemonarda.cyou^
 ||nid.mansionglobal.com^
 ||nid.the-sun.com^
@@ -98801,6 +98879,7 @@
 ||power.offgridpowerstation.nl^
 ||power.viggo.com^
 ||poweradblocker.com^
+||powerads.breaktime.com.tw^
 ||powerain.biz^
 ||powerbooster.natureshifa.com^
 ||powerboostup.com^
@@ -106330,6 +106409,7 @@
 ||richeseventsphysics.com^
 ||richh.cn^
 ||richinfo.co^
+||richlifeads.ru^
 ||richmails.com^
 ||richmedia.yimg.com^
 ||richmediaads.com^
@@ -109222,8 +109302,10 @@
 ||s.productfaculty.com^
 ||s.projectorscreen.com^
 ||s.pxltgr.com^
+||s.qd.qingting.fm^
 ||s.qd.qingtingfm.com^
 ||s.qiangger.pw^
+||s.qtad.qingting.fm^
 ||s.qzkxt.com^
 ||s.recoilnetwork.com^
 ||s.relax-sex.me^
@@ -111132,6 +111214,7 @@
 ||sdk-log-upload-os.hoyoverse.com^
 ||sdk-log.airbridge.io^
 ||sdk-track.66mobi.com^
+||sdk.51.la^
 ||sdk.adsongo.com^
 ||sdk.airbridge.io^
 ||sdk.api.bjshcw.com^
@@ -112087,6 +112170,7 @@
 ||sensors.ibreader.com^
 ||sensors.larkplayerapp.com^
 ||sensors.snappea.com^
+||sensors.snaptube.app^
 ||sensors.umetrip.com.cn^
 ||sensorsdata-datasink.stardust-tv.com^
 ||sensorsdata.cn^
@@ -132311,6 +132395,7 @@
 ||tapsense.com^
 ||tapstream.com^
 ||tapulgospoda.com^
+||tapulsads.ru^
 ||tapvigai.property^
 ||taqavmaplont.com^
 ||taqezaknkopdw.site^
@@ -134842,6 +134927,7 @@
 ||tk.zenpark.com^
 ||tk0x1.com^
 ||tk2.xfadx.com^
+||tkads.millemedia.de^
 ||tkahagkc.com^
 ||tkamrzuamfues.online^
 ||tkavurbmhzrlj.space^
@@ -148515,6 +148601,7 @@
 ||we-stats.com^
 ||we.care.oswegohealth.org^
 ||we.kurly.com^
+||we.tm^
 ||weakenamidone.cfd^
 ||weakermumrespect.com^
 ||weaklady.pro^
@@ -155739,7 +155826,9 @@
 ||yacnbvkmpxerf.com^
 ||yacsvdpiqyrza.site^
 ||yadmarmizuogr.website^
+||yads.c.yimg.jp^
 ||yads.tech^
+||yads.yahoo.co.jp^
 ||yadsunkzjtzlb.space^
 ||yaebhbyweyxvt.store^
 ||yaffingunbegun.cyou^

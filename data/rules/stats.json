@@ -47,14 +47,15 @@
     "title": "Ads Hosts",
     "description": "仅收集广告联盟和不会造成问题的追踪。",
     "output_enabled": true,
-    "final_count": 7111,
+    "final_count": 7741,
     "format_counts": {
-      "hosts": 7111
+      "hosts": 7741
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
       "src_10007_custom",
+      "src_acl4ssr_ban_program_ad",
       "src_awavenue",
       "src_awavenue_hosts",
       "src_cn_aethersailor_lite",
@@ -74,16 +75,17 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 36999,
+    "final_count": 37079,
     "format_counts": {
-      "adblock": 36999,
-      "clash": 36999,
-      "singbox": 36999
+      "adblock": 37079,
+      "clash": 37079,
+      "singbox": 37079
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
       "src_10007_custom",
+      "src_acl4ssr_ban_program_ad",
       "src_adrules_domainset",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
@@ -108,19 +110,24 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 159965,
+    "final_count": 160054,
     "format_counts": {
-      "adblock": 159965
+      "adblock": 160054
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
       "src_10007_custom",
+      "src_acl4ssr_ban_program_ad",
       "src_adrules_domainset",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
       "src_awavenue",
       "src_awavenue_hosts",
+      "src_cn_aethersailor_lite",
+      "src_cn_heidai_lite",
+      "src_cn_loyalsoldier_direct",
+      "src_cn_xmdhs_ext",
       "src_hosts_supplement",
       "src_proxy_tld",
       "src_sm_ad",
