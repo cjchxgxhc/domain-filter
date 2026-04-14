@@ -9,20 +9,27 @@
 #   match          → 仅保留与规则精确匹配的域名（discard 的反逻辑）
 #   match_suffix   → 仅保留被规则父域名覆盖的域名（discard_suffix 的反逻辑）
 #
-# 数据来源字段：
-#   url        → 下载并提取域名，支持所有格式，验证域名合法性
-#   pureurl    → 下载并提取域名，支持所有格式，不严格验证
-#   adblockurl → 仅识别 adblock 格式（||domain^ 或 @@||domain^）
-#   domain     → 直接写入自定义域名列表
-#   preset     → 引用另一个规则组的处理结果（只能引用在当前组之前定义的组）
+# 规则来源字段（rules 中）：
+#   source  → 引用 sources 区块中的预定义外部源
+#   domain  → 直接写入自定义域名列表
+#   preset  → 引用另一个规则组的处理结果（只能引用在当前组之前定义的组）
 #
-# 规则在 rules 列表中按顺序执行，顺序影响最终结果。
-# 规则组按照在此文件中出现的顺序处理，前面的先处理；不允许引用后面的规则组。
+# sources 区块（外部链接统一在此定义，提前下载提取）：
+#   source_name:
+#     url:      https://...                    # 必填
+#     mode:     common | adblockwhite | skip   # 默认 common
+#               common       → 支持所有格式提取域名
+#               adblockwhite → 仅识别 adblock 白名单格式 @@||domain^
+#               skip         → 只去除注释，直接当域名处理
+#     validate: true | false                   # 默认 false，是否严格验证域名合法性
 #
-# 子域去重控制（dedup_subdomain）：
+# 子域去重控制（dedup_subdomain，与 title / description 同层）：
 #   true  → 强制进行子域去重（无论输出格式）
 #   false → 强制不进行子域去重（无论输出格式）
 #   缺省  → 按需：含 adblock / clash / singbox 格式时自动去重
+#
+# 规则在 rules 列表中按顺序执行，顺序影响最终结果。
+# 规则组按照在此文件中出现的顺序处理，不允许引用后面的规则组。
 
 
 # ──────────────────────────── 全局配置 ────────────────────────────────────────
@@ -30,8 +37,167 @@
 global:
   repo_url: https://github.com/cjchxgxhc/domain-filter
   raw_base: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules
-  output_root: data/rules
-  timezone: Asia/Shanghai
+
+
+# ──────────────────────────── 外部源定义 ──────────────────────────────────────
+
+sources:
+  # ── 代理 TLD 列表 ──────────────────────────────────────────────────────────
+  src_proxy_tld:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
+    mode:     common
+    validate: false
+
+  # ── 广告白名单 ─────────────────────────────────────────────────────────────
+  src_white_heidai:
+    url:      https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+    mode:     common
+    validate: true
+
+  src_white_cats:
+    url:      https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+    mode:     common
+    validate: true
+
+  src_white_anti-AD:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
+    mode:     common
+    validate: true
+
+  src_white_self_list:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+    mode:     common
+    validate: true
+
+  # ── CN 域名列表（用于 match_suffix 过滤精简域名）────────────────────────────────
+  src_cn_heidai_lite:
+    url:      https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
+    mode:     skip
+    validate: false
+
+  src_cn_aethersailor_lite:
+    url:      https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
+    mode:     skip
+    validate: false
+
+  src_cn_loyalsoldier_direct:
+    url:      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    mode:     common
+    validate: false
+
+  src_cn_xmdhs_ext:
+    url:      https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
+    mode:     common
+    validate: false
+
+  src_hagezi_ultimate:
+    url:      https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini-onlydomains.txt
+    mode:     skip
+    validate: false
+
+  # ── 广告拦截 ───────────────────────────────────────────────────────────────
+  src_anti_ad_clash:
+    url:      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    mode:     common
+    validate: true
+
+  src_anti_ad_domains:
+    url:      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+    mode:     skip
+    validate: true
+
+  src_adrules_domainset:
+    url:      https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/main/domain.txt
+    mode:     skip
+    validate: true
+
+  # ── hosts 广告拦截 ──────────────────────────────────────────────────────────
+  src_10007_auto:
+    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+    mode:     common
+    validate: true
+
+  src_10007:
+    url:      https://raw.githubusercontent.com/lingeringsound/10007/main/all
+    mode:     common
+    validate: true
+
+  src_10007_custom:
+    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+    mode:     common
+    validate: true
+
+  src_sm_ad:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
+    mode:     common
+    validate: true
+
+  src_awavenue:
+    url:      https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+    mode:     common
+    validate: true
+
+  src_awavenue_hosts:
+    url:      https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
+    mode:     common
+    validate: true
+
+  src_hosts_supplement:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
+    mode:     common
+    validate: true
+
+  # ── 代理规则 ───────────────────────────────────────────────────────────────
+  src_proxy_list:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+    mode:     common
+    validate: true
+
+  src_proxy_lmfirefly:
+    url:      https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
+    mode:     common
+    validate: true
+
+  src_proxy_self_ipcheck:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
+    mode:     common
+    validate: true
+
+  # ── 直连修复 ───────────────────────────────────────────────────────────────
+  src_ms_cn:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
+    mode:     common
+    validate: true
+
+  src_ntp:
+    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
+    mode:     common
+    validate: true
+
+  src_google_fcm:
+    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
+    mode:     common
+    validate: true
+
+  src_games_cn:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
+    mode:     common
+    validate: true
+
+  src_notion:
+    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
+    mode:     common
+    validate: true
+
+  src_private:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
+    mode:     common
+    validate: true
+
+  src_fakeip_filter:
+    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
+    mode:     common
+    validate: true
 
 
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
@@ -40,8 +206,8 @@ global:
 p_proxy_tld:
   rules:
     - type: add
-      pureurl:
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
+      source:
+        - src_proxy_tld
     - type: discard
       domain:
         - cn
@@ -58,12 +224,11 @@ p_proxy_tld:
 addata_white:
   rules:
     - type: add
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-        # anti-ad: https://github.com/privacy-protection-tools/anti-AD
-        - https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+      source:
+        - src_white_heidai
+        - src_white_cats
+        - src_white_anti-AD
+        - src_white_self_list
   output:
     enabled: true
 
@@ -71,106 +236,128 @@ addata_white:
 addata_adblock:
   rules:
     - type: add
-      url:
-        # anti-AD: https://github.com/privacy-protection-tools/anti-AD
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-        # AdRules: https://github.com/Cats-Team/AdRules
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+      source:
+        - src_anti_ad_clash
+        - src_anti_ad_domains
+        - src_adrules_domainset
     - type: discard_suffix
       preset:
         - p_proxy_tld
 
 
 ads_hosts:
+  title: Ads Hosts
+  description: 仅收集广告联盟和不会造成问题的追踪。
   rules:
     - type: add
-      url:
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-        - https://raw.githubusercontent.com/lingeringsound/10007/main/all
+      source:
+        - src_10007_auto
+        - src_10007
     - type: match_suffix
+      source:
+        - src_cn_heidai_lite
+        - src_cn_aethersailor_lite
+        - src_cn_loyalsoldier_direct
+        - src_cn_xmdhs_ext
       domain:
         - cn
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
     - type: add
-      url:
-        # 自动更新去广告 hosts: https://github.com/lingeringsound/10007_auto
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+      source:
+        - src_10007_custom
+        - src_sm_ad
+        - src_awavenue
+        - src_awavenue_hosts
     - type: discard
       preset:
         - addata_white
     - type: add
-      url:
-        # SM广告: https://github.com/2Gardon/SM-Ad-FuckU-hosts
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
-        # 秋风广告规则: https://awavenue.top/
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-        # hosts补充
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
+      source:
+        - src_hosts_supplement
   output:
     enabled: true
-    title: Ads Blocklist Hosts
-    description: 系统级去广告。
     formats: [hosts]
 
 
 ads:
+  title: Ads
+  description: 聚合收录的所有广告规则，去除白名单、不常见域名。
   rules:
     - type: add
-      preset:
-        - addata_adblock
-    - type: match_suffix
-      domain:
-        - cn
-      url:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Aethersailor/adblockfilters-modified/main/rules/adblockdomainlite.txt
-        - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
-        - https://raw.githubusercontent.com/xmdhs/cn-domain-list/refs/heads/rule-set/ext-cn-list.yaml
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/wildcard/ultimate.mini.txt
-    - type: add
-      preset:
-        - ads_hosts
+      source:
+        - src_anti_ad_clash
+        - src_anti_ad_domains
+        - src_adrules_domainset
+        - src_10007_auto
+        - src_10007
+        - src_10007_custom
+        - src_sm_ad
+        - src_awavenue
+        - src_awavenue_hosts
     - type: discard
       preset:
         - addata_white
+    - type: discard_suffix
+      preset:
+        - p_proxy_tld
+    - type: match_suffix
+      source:
+        - src_cn_heidai_lite
+        - src_cn_aethersailor_lite
+        - src_cn_loyalsoldier_direct
+        - src_cn_xmdhs_ext
+        - src_hagezi_ultimate
+      domain:
+        - cn
+    - type: add
+      source:
+        - src_hosts_supplement
+      preset:
+        - ads_hosts
   output:
     enabled: true
-    title: Ads Blocklist
-    description: 优秀规则源的合并，尽量避免误杀。
     formats: [adblock, clash, singbox]
 
 
 ads_big:
-  dedup_subdomain: false
+  title: Ads Big
+  description: 聚合收录的所有广告规则，仅去除白名单、国外tld。
+#  dedup_subdomain: false
   rules:
     - type: add
-      preset:
-        - ads_hosts
-        - addata_adblock
+      source:
+        - src_anti_ad_clash
+        - src_anti_ad_domains
+        - src_adrules_domainset
+        - src_10007_auto
+        - src_10007
+        - src_10007_custom
+        - src_sm_ad
+        - src_awavenue
+        - src_awavenue_hosts
     - type: discard
       preset:
         - addata_white
+    - type: discard_suffix
+      preset:
+        - p_proxy_tld
+    - type: add
+      source:
+        - src_hosts_supplement
   output:
     enabled: true
-    title: Ads Blocklist(BIG)
-    description: 优秀规则源的合并，尽量避免误杀。
     formats: [adblock]
 
 
 proxy:
+  title: Proxy
+  description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
   rules:
     - type: add
-      url:
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-        - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
+      source:
+        - src_proxy_list
+        - src_proxy_lmfirefly
+        - src_proxy_self_ipcheck
+        - src_proxy_tld
       domain:
         # DNS 测试
         - browserleaks.net
@@ -184,35 +371,24 @@ proxy:
         # 国内缓慢
         - cloud.9mod.space
         - modyolo.com
-      preset:
-        - p_proxy_tld
   output:
     enabled: true
-    title: Proxy
-    description: 需要被代理的域名。
     formats: [clash, singbox]
 
 
 direct_fix:
+  title: Direct Fix
+  description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
   rules:
     - type: add
-      url:
-        # 微软中国
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
-        # 时间校准
-        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
-        # - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/NTP-Service.list
-        # 谷歌 FCM
-        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
-        # Apple China
-        # - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list
-        # 游戏
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
-        # Notion（代理环境同步不稳定）
-        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
-      pureurl:
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
+      source:
+        - src_ms_cn
+        - src_ntp
+        - src_google_fcm
+        - src_games_cn
+        - src_notion
+        - src_private
+        - src_fakeip_filter
       domain:
         # Firefox
         - firefoxcn.net
@@ -243,13 +419,10 @@ direct_fix:
         - translatoruser.intl.microsoft.com
         # Edge
         - edge.microsoft.com
-    # bing 不应进直连修复列表，按后缀移除
     - type: discard_suffix
       domain:
         - bing.com
         - bing.net
   output:
     enabled: true
-    title: Direct Fix
-    description: 不应被代理的域名。
     formats: [clash, singbox]
