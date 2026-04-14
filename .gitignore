@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Rust build artifacts（不提交 target 目录，但提交编译好的二进制）
+data/script/domain_filter/target/
+
+# 临时文件
+*.tmp
+*.bak
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
