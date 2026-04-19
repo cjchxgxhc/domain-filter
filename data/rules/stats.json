@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 164013,
+    "final_count": 161560,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -47,9 +47,9 @@
     "title": "Ads Hosts",
     "description": "仅收集广告联盟和不会造成问题的追踪。",
     "output_enabled": true,
-    "final_count": 7769,
+    "final_count": 7764,
     "format_counts": {
-      "hosts": 7769
+      "hosts": 7764
     },
     "source_names": [
       "src_10007",
@@ -75,11 +75,11 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 36787,
+    "final_count": 36451,
     "format_counts": {
-      "adblock": 36787,
-      "clash": 36787,
-      "singbox": 36787
+      "adblock": 36451,
+      "clash": 36451,
+      "singbox": 36451
     },
     "source_names": [
       "src_10007",
@@ -110,9 +110,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 160184,
+    "final_count": 157746,
     "format_counts": {
-      "adblock": 160184
+      "adblock": 157746
     },
     "source_names": [
       "src_10007",
@@ -142,10 +142,10 @@
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
-    "final_count": 22000,
+    "final_count": 22594,
     "format_counts": {
-      "clash": 22000,
-      "singbox": 22000
+      "clash": 22594,
+      "singbox": 22594
     },
     "source_names": [
       "src_proxy_list",
