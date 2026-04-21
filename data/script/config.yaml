@@ -258,6 +258,8 @@ ads_hosts:
       source:
         - src_10007_auto
         - src_10007
+        - src_anti_ad_domains
+        - src_adrules_domainset
     - type: match_suffix
       source:
         - src_cn_heidai_lite
