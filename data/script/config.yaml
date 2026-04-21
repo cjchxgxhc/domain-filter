@@ -284,7 +284,7 @@ ads_hosts:
       preset:
         - addata_white
     - type: discard_suffix
-      preset:
+      source:
         - src_ads_useless_list
     - type: add
       source:
