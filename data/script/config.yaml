@@ -69,6 +69,11 @@ sources:
     mode:     common
     validate: true
 
+  src_ads_useless_list:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
+    mode:     common
+    validate: true
+
   # ── CN 域名列表（用于 match_suffix 过滤精简域名）────────────────────────────────
   src_cn_heidai_lite:
     url:      https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdomainlite.txt
@@ -278,6 +283,9 @@ ads_hosts:
     - type: discard
       preset:
         - addata_white
+    - type: discard_suffix
+      preset:
+        - src_ads_useless_list
     - type: add
       source:
         - src_hosts_supplement
