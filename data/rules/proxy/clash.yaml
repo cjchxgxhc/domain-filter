@@ -1,7 +1,7 @@
 # Title: Proxy
 # Description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-# Total: 22,603
-# Updated: 2026-04-23 05:51:49 CST
+# Total: 22,605
+# Updated: 2026-04-24 05:47:18 CST
 #
 payload:
   - +.000webhost.com
@@ -952,6 +952,7 @@ payload:
   - +.agefans.com
   - +.agemys.org
   - +.agendaweek.com
+  - +.agentclientprotocol.com
   - +.agilebits.com
   - +.agoogleaday.com
   - +.agri-bank.com
@@ -19920,6 +19921,7 @@ payload:
   - +.twitcause.com
   - +.twitch.tv
   - +.twitchcdn.net
+  - +.twitchcon.com
   - +.twitchsvc.net
   - +.twitgether.com
   - +.twitgoo.com
