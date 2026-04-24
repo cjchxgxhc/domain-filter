@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 仅收集广告联盟和不会造成问题的追踪。
 # Total: 15,774
-# Updated: 2026-04-24 05:47:17 CST
+# Updated: 2026-04-25 05:49:39 CST
 #
 127.0.0.1 000dn.com
 127.0.0.1 003store.com
@@ -1350,6 +1350,7 @@
 127.0.0.1 ads-i3.xhscdn.com
 127.0.0.1 ads-i4.xhscdn.com
 127.0.0.1 ads-img-al.xhscdn.com
+127.0.0.1 ads-img-bak.xhscdn.com
 127.0.0.1 ads-img-qc.xhscdn.com
 127.0.0.1 ads-lb.serving-sys.cn
 127.0.0.1 ads-marketing-vivofs.vivo.com.cn
@@ -2134,7 +2135,6 @@
 127.0.0.1 analytics.apps.seabroadnet.com
 127.0.0.1 analytics.cherry-ai.com
 127.0.0.1 analytics.cnblogs.com
-127.0.0.1 analytics.dealmoon.com
 127.0.0.1 analytics.dspunion.com
 127.0.0.1 analytics.dsyqt.com
 127.0.0.1 analytics.ganji.com
@@ -4138,6 +4138,7 @@
 127.0.0.1 corp.sohu.com
 127.0.0.1 corp.youdao.com
 127.0.0.1 couchcoaster.jp
+127.0.0.1 coumie.top
 127.0.0.1 count.1133.cc
 127.0.0.1 count.7m.com.cn
 127.0.0.1 count.atm.youku.com
@@ -4157,6 +4158,7 @@
 127.0.0.1 count.vrs.sohu.com
 127.0.0.1 count.west263.com
 127.0.0.1 count.wk2.com
+127.0.0.1 count.xxxssk.com
 127.0.0.1 count5.pconline.com.cn
 127.0.0.1 count6.pconline.com.cn
 127.0.0.1 counter.csdn.net
@@ -4237,6 +4239,7 @@
 127.0.0.1 cre.mix.sina.com.cn
 127.0.0.1 creative.medproad.com
 127.0.0.1 crf999.cn
+127.0.0.1 criticalltech.com
 127.0.0.1 crm-eve.b2b.alibaba-inc.com
 127.0.0.1 crossoverchina.com
 127.0.0.1 crosspro-track.tradplusad.com
@@ -4254,6 +4257,7 @@
 127.0.0.1 cs.twcczhu.com
 127.0.0.1 cs.voiceads.cn
 127.0.0.1 cs02-pps-drcn.dbankcdn.com
+127.0.0.1 csad.cc
 127.0.0.1 csaimall.com
 127.0.0.1 csbew.com
 127.0.0.1 csjplatform.com
@@ -5634,7 +5638,6 @@
 127.0.0.1 fakxqq.cn
 127.0.0.1 falal.cn
 127.0.0.1 familytaste.cn
-127.0.0.1 famoway-pro.net
 127.0.0.1 fan.liuxiaoer.com
 127.0.0.1 fancy-cm.cn.miaozhen.com
 127.0.0.1 fancyapi.com
@@ -10657,8 +10660,6 @@
 127.0.0.1 policy.rayjump.com
 127.0.0.1 policy.video.iqiyi.com
 127.0.0.1 policy.video.ptqy.gitv.tv
-127.0.0.1 polvestion-pro.net
-127.0.0.1 polvestium-pro.net
 127.0.0.1 polvexia-pro.net
 127.0.0.1 polyfill-js.cn
 127.0.0.1 pong.fccay.cn
@@ -11342,6 +11343,7 @@
 127.0.0.1 rumt-zh.com
 127.0.0.1 ruskhw.cn
 127.0.0.1 rvyjbwr.cn
+127.0.0.1 rwpt.top
 127.0.0.1 rwq.youle55.com
 127.0.0.1 rxoi.cn
 127.0.0.1 rxyggrq.cn
@@ -11675,7 +11677,6 @@
 127.0.0.1 samsung-com.112.2o7.net
 127.0.0.1 samsungads.com
 127.0.0.1 san.myadssupport.com
-127.0.0.1 sanalytics.radioberg.de
 127.0.0.1 sanalytics.sydneyuniversity.cn
 127.0.0.1 sandbox-elq.keysight.com.cn
 127.0.0.1 sandbox.appdriver.cn
@@ -12229,6 +12230,7 @@
 127.0.0.1 softdl.360tpcdn.com
 127.0.0.1 softdl2.360tpcdn.com
 127.0.0.1 softdl4.360.cn
+127.0.0.1 softdown.coumie.top
 127.0.0.1 softstart.kugou.com
 127.0.0.1 softxz.com
 127.0.0.1 sohu-dtv.m.cn.miaozhen.com
@@ -12478,6 +12480,7 @@
 127.0.0.1 stat2.openinstall.io
 127.0.0.1 state.jpush.cn
 127.0.0.1 static-addtoany-com.cdn.ampproject.org
+127.0.0.1 static-doubleclick-net.l.google.com
 127.0.0.1 static-img.threatbook.cn
 127.0.0.1 static-s.iqiyi.com
 127.0.0.1 static-ssl.mediav.com
@@ -13204,7 +13207,6 @@
 127.0.0.1 tr-asia.adsmoloco.com
 127.0.0.1 tr.adsame.com
 127.0.0.1 tr.attribuly.com
-127.0.0.1 tr.email.medicalexpo.com
 127.0.0.1 tr.iadsdk.apple.com
 127.0.0.1 tr.jianshu.com
 127.0.0.1 tr.p.360.cn
@@ -13332,6 +13334,8 @@
 127.0.0.1 tralog.ganji.com
 127.0.0.1 tran.mediav.com
 127.0.0.1 tran.news.so.com
+127.0.0.1 transmapp.com
+127.0.0.1 trblocked.com
 127.0.0.1 trcakingapp.trnox.com
 127.0.0.1 tree.logger.baofeng.com
 127.0.0.1 trendinsight.oceanengine.com
@@ -13550,6 +13554,7 @@
 127.0.0.1 ufolm.com
 127.0.0.1 ufvauj.cn
 127.0.0.1 ufxs.cn
+127.0.0.1 ug.baidu.com
 127.0.0.1 ug.pangolin-dsp-toutiao.com
 127.0.0.1 ug.snssdk.com
 127.0.0.1 ugame.umeng.com
@@ -14675,7 +14680,6 @@
 127.0.0.1 www.chengzijianzhan.com
 127.0.0.1 www.chenyanjiao.cn
 127.0.0.1 www.claiks.com
-127.0.0.1 www.cleanvvlife.com
 127.0.0.1 www.cleanvvmagic.com
 127.0.0.1 www.cm-analysis.com
 127.0.0.1 www.cmmob.cn
@@ -14723,7 +14727,6 @@
 127.0.0.1 www.ekkekkocapital.com
 127.0.0.1 www.emar.com.cn
 127.0.0.1 www.emarbox.com
-127.0.0.1 www.famoway-pro.net
 127.0.0.1 www.fancydigital.com.cn
 127.0.0.1 www.fancydmp.com
 127.0.0.1 www.fancydsp.com
@@ -14773,7 +14776,6 @@
 127.0.0.1 www.govyunfu.cn
 127.0.0.1 www.govyunnan.cn
 127.0.0.1 www.govzhajian.cn
-127.0.0.1 www.gpolitico.com
 127.0.0.1 www.growin.cn
 127.0.0.1 www.growingio.cn
 127.0.0.1 www.growingio.com
@@ -14832,6 +14834,7 @@
 127.0.0.1 www.kxid.cn
 127.0.0.1 www.la61d.cn
 127.0.0.1 www.lanaita.com
+127.0.0.1 www.langleyantiques.com
 127.0.0.1 www.lansha.tv
 127.0.0.1 www.lanzous.com
 127.0.0.1 www.laomaotao.com
@@ -14848,6 +14851,7 @@
 127.0.0.1 www.makeding.com
 127.0.0.1 www.maplehaze.cn
 127.0.0.1 www.mathtype.cn
+127.0.0.1 www.matifi.com
 127.0.0.1 www.mbai.cn
 127.0.0.1 www.mdfull.com
 127.0.0.1 www.mediav.com
@@ -14902,8 +14906,6 @@
 127.0.0.1 www.pikacn.com
 127.0.0.1 www.pkkjxs.cn
 127.0.0.1 www.poke88.com
-127.0.0.1 www.polvestion-pro.net
-127.0.0.1 www.polvestium-pro.net
 127.0.0.1 www.polvexia-pro.net
 127.0.0.1 www.pro.cn
 127.0.0.1 www.pushcfg.com
@@ -14918,7 +14920,6 @@
 127.0.0.1 www.qinchugudao.com
 127.0.0.1 www.qqads.com
 127.0.0.1 www.qumi.com
-127.0.0.1 www.rerminix.com
 127.0.0.1 www.s0n.cn
 127.0.0.1 www.sdkclick.com
 127.0.0.1 www.sdxitong.com
@@ -15058,7 +15059,6 @@
 127.0.0.1 www.zhuangjizhuli.net
 127.0.0.1 www.zhzzx.com
 127.0.0.1 www.zjsyawqj.cn
-127.0.0.1 www.zlotexium-pro.net
 127.0.0.1 www2.info.renesas.cn
 127.0.0.1 www2.xinmin.cn
 127.0.0.1 www5.oss-cn-hangzhou.aliyuncs.com
@@ -15572,6 +15572,7 @@
 127.0.0.1 yw78.cn
 127.0.0.1 yw800.com.cn
 127.0.0.1 ywrcqa.11alive.com
+127.0.0.1 ywrcqa.wtol.com
 127.0.0.1 ywsywh.cn
 127.0.0.1 ywtd.xyz
 127.0.0.1 yx.wucheshu.top
@@ -15696,7 +15697,6 @@
 127.0.0.1 zlclgzs.cn
 127.0.0.1 zljnwzp.cn
 127.0.0.1 zlongad.com
-127.0.0.1 zlotexium-pro.net
 127.0.0.1 zlsdk.1rtb.net
 127.0.0.1 zmhqhuq.cn
 127.0.0.1 zmj.guanqinjie.cn
