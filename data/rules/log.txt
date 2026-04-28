@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 0.96s
+下载完成：32/32 成功，耗时 1.25s
 提取外部源域名（32 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
@@ -8,14 +8,14 @@
   src_white_anti-AD：520 条 [common]
   src_white_self_list：23 条 [common]
   src_ads_useless_list：1,906 条 [common]
-  src_cn_heidai_lite：5,339 条 [skip]
-  src_cn_aethersailor_lite：33,695 条 [skip]
-  src_cn_loyalsoldier_direct：117,942 条 [common]
+  src_cn_heidai_lite：5,358 条 [skip]
+  src_cn_aethersailor_lite：32,590 条 [skip]
+  src_cn_loyalsoldier_direct：117,143 条 [common]
   src_cn_xmdhs_ext：28,045 条 [common]
-  src_hagezi_ultimate：130,371 条 [skip]
-  src_anti_ad_clash：106,124 条 [common]
-  src_anti_ad_domains：113,714 条 [skip]
-  src_adrules_domainset：182,824 条 [skip]
+  src_hagezi_ultimate：132,236 条 [skip]
+  src_anti_ad_clash：106,677 条 [common]
+  src_anti_ad_domains：114,270 条 [skip]
+  src_adrules_domainset：183,105 条 [skip]
   src_10007_auto：13,679 条 [common]
   src_10007：17,123 条 [common]
   src_10007_custom：839 条 [common]
@@ -24,7 +24,7 @@
   src_awavenue：905 条 [common]
   src_awavenue_hosts：895 条 [common]
   src_hosts_supplement：182 条 [common]
-  src_proxy_list：25,292 条 [common]
+  src_proxy_list：25,293 条 [common]
   src_proxy_lmfirefly：16,119 条 [common]
   src_proxy_self_ipcheck：7 条 [common]
   src_ms_cn：168 条 [common]
@@ -34,7 +34,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.75s
+提取完成，耗时 1.70s
 ================================================================================
 处理规则组
 ================================================================================
@@ -50,7 +50,7 @@
   │    rules[1] 共 7 条
   │    → 精确丢弃，移除 3 条（剩余 828）
   │  处理完毕，共 828 条
-  └─ 最终输出：828 条，耗时 0.21s
+  └─ 最终输出：828 条，耗时 0.05s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_white (addata_white)
 ══════════════════════════════════════════════════════════════════════
@@ -67,16 +67,16 @@
 处理规则组：addata_adblock (addata_adblock)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：106,124 条 <- src_anti_ad_clash
-  │    source：113,714 条 <- src_anti_ad_domains
-  │    source：182,824 条 <- src_adrules_domainset
-  │    rules[0] 共 205,932 条
-  │    → 加入，新增 205,932 条（合计 205,932）
+  │    source：106,677 条 <- src_anti_ad_clash
+  │    source：114,270 条 <- src_anti_ad_domains
+  │    source：183,105 条 <- src_adrules_domainset
+  │    rules[0] 共 206,213 条
+  │    → 加入，新增 206,213 条（合计 206,213）
   │  rules[1] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[1] 共 828 条
-  │    → 后缀丢弃，移除 44,072 条（剩余 161,860）
-  │  处理完毕，共 161,860 条
+  │    → 后缀丢弃，移除 44,088 条（剩余 162,125）
+  │  处理完毕，共 162,125 条
   └─ 不输出文件（output.enabled=false），耗时 0.10s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
@@ -84,18 +84,18 @@
   │  rules[0] type=add
   │    source：13,679 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    source：113,714 条 <- src_anti_ad_domains
-  │    source：182,824 条 <- src_adrules_domainset
-  │    rules[0] 共 217,244 条
-  │    → 加入，新增 217,244 条（合计 217,244）
+  │    source：114,270 条 <- src_anti_ad_domains
+  │    source：183,105 条 <- src_adrules_domainset
+  │    rules[0] 共 217,525 条
+  │    → 加入，新增 217,525 条（合计 217,525）
   │  rules[1] type=match_suffix
-  │    source：5,339 条 <- src_cn_heidai_lite
-  │    source：33,695 条 <- src_cn_aethersailor_lite
-  │    source：117,942 条 <- src_cn_loyalsoldier_direct
+  │    source：5,358 条 <- src_cn_heidai_lite
+  │    source：32,590 条 <- src_cn_aethersailor_lite
+  │    source：117,143 条 <- src_cn_loyalsoldier_direct
   │    source：28,045 条 <- src_cn_xmdhs_ext
   │    domain：1 条自定义
-  │    rules[1] 共 164,869 条
-  │    → 后缀保留，保留 14,792 条（移除 202,452）
+  │    rules[1] 共 163,137 条
+  │    → 后缀保留，保留 14,764 条（移除 202,761）
   │  rules[2] type=add
   │    source：839 条 <- src_10007_custom
   │    source：989 条 <- src_acl4ssr_ban_program_ad
@@ -103,96 +103,96 @@
   │    source：905 条 <- src_awavenue
   │    source：895 条 <- src_awavenue_hosts
   │    rules[2] 共 4,920 条
-  │    → 加入，新增 2,225 条（合计 17,017）
+  │    → 加入，新增 2,225 条（合计 16,989）
   │  rules[3] type=discard
   │    preset：776 条 <- addata_white
   │    rules[3] 共 776 条
-  │    → 精确丢弃，移除 167 条（剩余 16,850）
+  │    → 精确丢弃，移除 168 条（剩余 16,821）
   │  rules[4] type=discard_suffix
   │    source：1,906 条 <- src_ads_useless_list
   │    rules[4] 共 1,906 条
-  │    → 后缀丢弃，移除 1,279 条（剩余 15,571）
+  │    → 后缀丢弃，移除 1,278 条（剩余 15,543）
   │  rules[5] type=add
   │    source：182 条 <- src_hosts_supplement
   │    rules[5] 共 182 条
-  │    → 加入，新增 149 条（合计 15,720）
-  │  处理完毕，共 15,720 条
-  └─ 最终输出：15,720 条，耗时 0.24s
+  │    → 加入，新增 149 条（合计 15,692）
+  │  处理完毕，共 15,692 条
+  └─ 最终输出：15,692 条，耗时 0.23s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads (ads)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：106,124 条 <- src_anti_ad_clash
-  │    source：113,714 条 <- src_anti_ad_domains
-  │    source：182,824 条 <- src_adrules_domainset
+  │    source：106,677 条 <- src_anti_ad_clash
+  │    source：114,270 条 <- src_anti_ad_domains
+  │    source：183,105 条 <- src_adrules_domainset
   │    source：13,679 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    rules[0] 共 217,588 条
-  │    → 加入，新增 217,588 条（合计 217,588）
+  │    rules[0] 共 217,869 条
+  │    → 加入，新增 217,869 条（合计 217,869）
   │  rules[1] type=discard
   │    preset：776 条 <- addata_white
   │    rules[1] 共 776 条
-  │    → 精确丢弃，移除 186 条（剩余 217,402）
+  │    → 精确丢弃，移除 187 条（剩余 217,682）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 45,208 条（剩余 172,194）
+  │    → 后缀丢弃，移除 45,224 条（剩余 172,458）
   │  rules[3] type=match_suffix
-  │    source：5,339 条 <- src_cn_heidai_lite
-  │    source：33,695 条 <- src_cn_aethersailor_lite
-  │    source：117,942 条 <- src_cn_loyalsoldier_direct
+  │    source：5,358 条 <- src_cn_heidai_lite
+  │    source：32,590 条 <- src_cn_aethersailor_lite
+  │    source：117,143 条 <- src_cn_loyalsoldier_direct
   │    source：28,045 条 <- src_cn_xmdhs_ext
-  │    source：130,371 条 <- src_hagezi_ultimate
+  │    source：132,236 条 <- src_hagezi_ultimate
   │    domain：1 条自定义
-  │    rules[3] 共 291,022 条
-  │    → 后缀保留，保留 47,036 条（移除 125,158）
+  │    rules[3] 共 291,263 条
+  │    → 后缀保留，保留 47,345 条（移除 125,113）
   │  rules[4] type=add
-  │    preset：15,720 条 <- ads_hosts
-  │    rules[4] 共 15,720 条
-  │    → 加入，新增 1,781 条（合计 48,817）
-  │  处理完毕，共 48,817 条
-  │  子域去重：移除 11,951 条冗余子域
-  └─ 最终输出：36,866 条，耗时 0.47s
+  │    preset：15,692 条 <- ads_hosts
+  │    rules[4] 共 15,692 条
+  │    → 加入，新增 1,781 条（合计 49,126）
+  │  处理完毕，共 49,126 条
+  │  子域去重：移除 11,949 条冗余子域
+  └─ 最终输出：37,177 条，耗时 0.48s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Big (ads_big)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：106,124 条 <- src_anti_ad_clash
-  │    source：113,714 条 <- src_anti_ad_domains
-  │    source：182,824 条 <- src_adrules_domainset
+  │    source：106,677 条 <- src_anti_ad_clash
+  │    source：114,270 条 <- src_anti_ad_domains
+  │    source：183,105 条 <- src_adrules_domainset
   │    source：13,679 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    rules[0] 共 217,588 条
-  │    → 加入，新增 217,588 条（合计 217,588）
+  │    rules[0] 共 217,869 条
+  │    → 加入，新增 217,869 条（合计 217,869）
   │  rules[1] type=discard
   │    preset：776 条 <- addata_white
   │    rules[1] 共 776 条
-  │    → 精确丢弃，移除 186 条（剩余 217,402）
+  │    → 精确丢弃，移除 187 条（剩余 217,682）
   │  rules[2] type=discard_suffix
   │    preset：828 条 <- p_proxy_tld
   │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 45,208 条（剩余 172,194）
+  │    → 后缀丢弃，移除 45,224 条（剩余 172,458）
   │  rules[3] type=add
-  │    preset：15,720 条 <- ads_hosts
-  │    rules[3] 共 15,720 条
-  │    → 加入，新增 1,599 条（合计 173,793）
-  │  处理完毕，共 173,793 条
+  │    preset：15,692 条 <- ads_hosts
+  │    rules[3] 共 15,692 条
+  │    → 加入，新增 1,599 条（合计 174,057）
+  │  处理完毕，共 174,057 条
   │  子域去重：移除 16,054 条冗余子域
-  └─ 最终输出：157,739 条，耗时 0.49s
+  └─ 最终输出：158,003 条，耗时 0.50s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：25,292 条 <- src_proxy_list
+  │    source：25,293 条 <- src_proxy_list
   │    source：16,119 条 <- src_proxy_lmfirefly
   │    source：7 条 <- src_proxy_self_ipcheck
   │    source：831 条 <- src_proxy_tld
   │    domain：7 条自定义
-  │    rules[0] 共 30,267 条
-  │    → 加入，新增 30,267 条（合计 30,267）
-  │  处理完毕，共 30,267 条
+  │    rules[0] 共 30,268 条
+  │    → 加入，新增 30,268 条（合计 30,268）
+  │  处理完毕，共 30,268 条
   │  子域去重：移除 7,661 条冗余子域
-  └─ 最终输出：22,606 条，耗时 0.11s
+  └─ 最终输出：22,607 条，耗时 0.11s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -216,5 +216,5 @@
   └─ 最终输出：741 条，耗时 0.06s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.48s
+✓ 处理完成！总耗时 4.57s
 ================================================================================

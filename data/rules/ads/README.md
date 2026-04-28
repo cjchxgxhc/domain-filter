@@ -2,17 +2,17 @@
 
 > 聚合收录的所有广告规则，去除白名单、不常见域名。
 
-规则总数：**36,866**
-最后更新：2026-04-28 05:53:41（北京时间）
+规则总数：**37,177**
+最后更新：2026-04-29 05:58:56（北京时间）
 
 ## 订阅链接
 
 | 文件 | 规则数 | 原始链接 | 加速链接1 (jsDelivr CDN) | 加速链接2 (jsDelivr Fastly) | 加速链接3 (ghproxy) |
 | --- | --- | --- | --- | --- | --- |
-| `adblock.txt` | 36,866 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/adblock.txt) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/adblock.txt) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt) |
-| `clash.yaml` | 36,866 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.yaml) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.yaml) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml) |
+| `adblock.txt` | 37,177 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/adblock.txt) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/adblock.txt) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/adblock.txt) |
+| `clash.yaml` | 37,177 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.yaml) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.yaml) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.yaml) |
 | `clash.mrs` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.mrs) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.mrs) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/clash.mrs) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.mrs) |
-| `singbox.json` | 36,866 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.json) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.json) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json) |
+| `singbox.json` | 37,177 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.json) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.json) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.json) |
 | `singbox.srs` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.srs) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.srs) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads/singbox.srs) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/singbox.srs) |
 
 [← 返回主页](../../../README.md)
