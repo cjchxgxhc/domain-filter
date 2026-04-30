@@ -261,21 +261,6 @@ ads_hosts:
   rules:
     - type: add
       source:
-        - src_10007_auto
-        - src_10007
-        - src_anti_ad_domains
-        - src_adrules_domainset
-    - type: match_suffix
-      source:
-        - src_cn_heidai_lite
-        - src_cn_aethersailor_lite
-        - src_cn_loyalsoldier_direct
-        - src_cn_xmdhs_ext
-      domain:
-        - cn
-    - type: add
-      source:
-        - src_10007_custom
         - src_acl4ssr_ban_program_ad
         - src_sm_ad
         - src_awavenue
@@ -283,9 +268,6 @@ ads_hosts:
     - type: discard
       preset:
         - addata_white
-    - type: discard_suffix
-      source:
-        - src_ads_useless_list
     - type: add
       source:
         - src_hosts_supplement
