@@ -47,9 +47,9 @@
     "title": "Ads Hosts",
     "description": "仅收集广告联盟和不会造成问题的追踪。",
     "output_enabled": true,
-    "final_count": 4367,
+    "final_count": 4349,
     "format_counts": {
-      "hosts": 4367
+      "hosts": 4349
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
@@ -68,11 +68,11 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 48608,
+    "final_count": 48625,
     "format_counts": {
-      "adblock": 48608,
-      "clash": 48608,
-      "singbox": 48608
+      "adblock": 48625,
+      "clash": 48625,
+      "singbox": 48625
     },
     "source_names": [
       "src_10007",
@@ -102,9 +102,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 158315,
+    "final_count": 158332,
     "format_counts": {
-      "adblock": 158315
+      "adblock": 158332
     },
     "source_names": [
       "src_10007",
