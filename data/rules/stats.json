@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 162330,
+    "final_count": 162457,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -47,24 +47,14 @@
     "title": "Ads Hosts",
     "description": "仅收集广告联盟和不会造成问题的追踪。",
     "output_enabled": true,
-    "final_count": 15670,
+    "final_count": 4367,
     "format_counts": {
-      "hosts": 15670
+      "hosts": 4367
     },
     "source_names": [
-      "src_10007",
-      "src_10007_auto",
-      "src_10007_custom",
       "src_acl4ssr_ban_program_ad",
-      "src_adrules_domainset",
-      "src_ads_useless_list",
-      "src_anti_ad_domains",
       "src_awavenue",
       "src_awavenue_hosts",
-      "src_cn_aethersailor_lite",
-      "src_cn_heidai_lite",
-      "src_cn_loyalsoldier_direct",
-      "src_cn_xmdhs_ext",
       "src_hosts_supplement",
       "src_sm_ad",
       "src_white_anti-AD",
@@ -78,19 +68,17 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 37136,
+    "final_count": 48608,
     "format_counts": {
-      "adblock": 37136,
-      "clash": 37136,
-      "singbox": 37136
+      "adblock": 48608,
+      "clash": 48608,
+      "singbox": 48608
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
-      "src_10007_custom",
       "src_acl4ssr_ban_program_ad",
       "src_adrules_domainset",
-      "src_ads_useless_list",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
       "src_awavenue",
@@ -114,25 +102,19 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 158208,
+    "final_count": 158315,
     "format_counts": {
-      "adblock": 158208
+      "adblock": 158315
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
-      "src_10007_custom",
       "src_acl4ssr_ban_program_ad",
       "src_adrules_domainset",
-      "src_ads_useless_list",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
       "src_awavenue",
       "src_awavenue_hosts",
-      "src_cn_aethersailor_lite",
-      "src_cn_heidai_lite",
-      "src_cn_loyalsoldier_direct",
-      "src_cn_xmdhs_ext",
       "src_hosts_supplement",
       "src_proxy_tld",
       "src_sm_ad",
