@@ -158,8 +158,18 @@ sources:
     validate: true
 
   # ── 代理规则 ───────────────────────────────────────────────────────────────
-  src_proxy_list:
+  src_proxy_DustinWin:
     url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+    mode:     common
+    validate: true
+
+  src_proxy_Loyalsoldier:
+    url:      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    mode:     common
+    validate: true
+
+  src_proxy_blackmatrix7:
+    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
     mode:     common
     validate: true
 
@@ -342,8 +352,10 @@ proxy:
   rules:
     - type: add
       source:
-        - src_proxy_list
+        - src_proxy_DustinWin
         - src_proxy_lmfirefly
+        - src_proxy_blackmatrix7
+        - src_proxy_Loyalsoldier
         - src_proxy_self_ipcheck
         - src_proxy_tld
       domain:
