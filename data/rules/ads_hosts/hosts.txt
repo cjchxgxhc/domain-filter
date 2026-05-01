@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 仅收集广告联盟和不会造成问题的追踪。
-# Total: 4,349
-# Updated: 2026-05-01 18:25:44 CST
+# Total: 4,355
+# Updated: 2026-05-02 05:53:40 CST
 #
 127.0.0.1 01.adnxs.com
 127.0.0.1 1.letvlive.com
@@ -599,6 +599,7 @@
 127.0.0.1 ae.mmstat.com
 127.0.0.1 aegis.qq.com
 127.0.0.1 aem.dentsuchina.cn
+127.0.0.1 aeventlog.beacon.qq.com
 127.0.0.1 afd.baidu.cn
 127.0.0.1 afd.baidu.com
 127.0.0.1 afd.l.google.com
@@ -1378,6 +1379,7 @@
 127.0.0.1 cnzz.comw.cnzz.com
 127.0.0.1 cnzz.mmstat.com
 127.0.0.1 codepush.appcenter.ms
+127.0.0.1 coin-api.y5coin.com
 127.0.0.1 collect.cn.miaozhen.com
 127.0.0.1 collect.kugou.com
 127.0.0.1 collector.github.com
@@ -1770,6 +1772,7 @@
 127.0.0.1 ff.doubleclick.net
 127.0.0.1 file.daihuo.qq.com
 127.0.0.1 files2.sogou.com
+127.0.0.1 filex.51y5.net
 127.0.0.1 finplus.openapi.umeng.com
 127.0.0.1 firebase-settings.crashlytics.com
 127.0.0.1 firebaseinstallations.googleapis.com
@@ -2145,6 +2148,7 @@
 127.0.0.1 img.jiguang.cn
 127.0.0.1 img.taotaosou.cn
 127.0.0.1 img01.taotaosou.cn
+127.0.0.1 img03.51y5.net
 127.0.0.1 img1.126.net
 127.0.0.1 img2.126.net
 127.0.0.1 img2.360buyimg.com
@@ -3785,7 +3789,9 @@
 127.0.0.1 tracelog-debug.aiclk.com
 127.0.0.1 tracelog-debug.qquanquan.com
 127.0.0.1 tracelog-debug.yunxish.com
+127.0.0.1 track-config.y5kfpt.com
 127.0.0.1 track-dsp.adwangmai.com
+127.0.0.1 track-gateway.y5kfpt.com
 127.0.0.1 track.58.com
 127.0.0.1 track.appsflyer.com
 127.0.0.1 track.billowlink.com
