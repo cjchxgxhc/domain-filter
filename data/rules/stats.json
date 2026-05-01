@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 162498,
+    "final_count": 162609,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -68,11 +68,11 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 48636,
+    "final_count": 48676,
     "format_counts": {
-      "adblock": 48636,
-      "clash": 48636,
-      "singbox": 48636
+      "adblock": 48676,
+      "clash": 48676,
+      "singbox": 48676
     },
     "source_names": [
       "src_10007",
@@ -102,9 +102,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 158373,
+    "final_count": 158484,
     "format_counts": {
-      "adblock": 158373
+      "adblock": 158484
     },
     "source_names": [
       "src_10007",
@@ -129,13 +129,15 @@
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
-    "final_count": 22607,
+    "final_count": 23047,
     "format_counts": {
-      "clash": 22607,
-      "singbox": 22607
+      "clash": 23047,
+      "singbox": 23047
     },
     "source_names": [
-      "src_proxy_list",
+      "src_proxy_DustinWin",
+      "src_proxy_Loyalsoldier",
+      "src_proxy_blackmatrix7",
       "src_proxy_lmfirefly",
       "src_proxy_self_ipcheck",
       "src_proxy_tld"
