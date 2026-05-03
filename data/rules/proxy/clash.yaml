@@ -1,7 +1,7 @@
 # Title: Proxy
 # Description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-# Total: 23,047
-# Updated: 2026-05-03 05:41:30 CST
+# Total: 23,048
+# Updated: 2026-05-04 05:42:41 CST
 #
 payload:
   - +.000webhost.com
@@ -5708,6 +5708,7 @@ payload:
   - +.digitaldesire.com
   - +.digitalhub.com
   - +.digitalnomadsproject.org
+  - +.digitalocean-ui.com
   - +.digitalocean.com
   - +.digitaloceanspaces.com
   - +.digitalpack.com
