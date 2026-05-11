@@ -1,6 +1,6 @@
 # 🛡️ Domain Filter
 
-![Last Update](https://img.shields.io/badge/Last_Update-2026--05--11_05:49:37-green?style=flat-square)
+![Last Update](https://img.shields.io/badge/Last_Update-2026--05--12_06:08:16-green?style=flat-square)
 
 ## 📋 规则订阅
 
@@ -10,5 +10,5 @@
 - **Proxy** · `Clash / Mrs, Sing-box / Srs` · 国内无法稳定连接、用于代理环境测试、国外TLD域名。 · [查看详情](data/rules/proxy/README.md)
 - **Direct Fix** · `Clash / Mrs, Sing-box / Srs` · 国内连接状态好、代理可能出现问题域名，要优先于proxy组。 · [查看详情](data/rules/direct_fix/README.md)
 
-*最后更新：2026-05-11 05:49:37（北京时间）*
+*最后更新：2026-05-12 06:08:16（北京时间）*
 
