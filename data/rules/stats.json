@@ -17,9 +17,9 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 777,
+    "final_count": 778,
     "format_counts": {
-      "domain": 777
+      "domain": 778
     },
     "source_names": [
       "src_white_anti-AD",
@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 161970,
+    "final_count": 162194,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -68,11 +68,11 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 46770,
+    "final_count": 47025,
     "format_counts": {
-      "adblock": 46770,
-      "clash": 46770,
-      "singbox": 46770
+      "adblock": 47025,
+      "clash": 47025,
+      "singbox": 47025
     },
     "source_names": [
       "src_10007",
@@ -102,9 +102,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 157622,
+    "final_count": 157846,
     "format_counts": {
-      "adblock": 157622
+      "adblock": 157846
     },
     "source_names": [
       "src_10007",
@@ -129,10 +129,10 @@
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
-    "final_count": 23096,
+    "final_count": 23112,
     "format_counts": {
-      "clash": 23096,
-      "singbox": 23096
+      "clash": 23112,
+      "singbox": 23112
     },
     "source_names": [
       "src_proxy_DustinWin",
@@ -148,10 +148,10 @@
     "title": "Direct Fix",
     "description": "国内连接状态好、代理可能出现问题域名，要优先于proxy组。",
     "output_enabled": true,
-    "final_count": 743,
+    "final_count": 744,
     "format_counts": {
-      "clash": 743,
-      "singbox": 743
+      "clash": 744,
+      "singbox": 744
     },
     "source_names": [
       "src_fakeip_filter",

@@ -1,7 +1,7 @@
 # Title: Direct Fix
 # Description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
-# Total: 743
-# Updated: 2026-05-12 06:08:15 CST
+# Total: 744
+# Updated: 2026-05-13 06:12:02 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -140,6 +140,7 @@ payload:
   - +.97.100.in-addr.arpa
   - +.98.100.in-addr.arpa
   - +.99.100.in-addr.arpa
+  - +.99jiasu.net
   - +.9game.cn
   - +.9xgame.com
   - +.a.e.f.ip6.arpa

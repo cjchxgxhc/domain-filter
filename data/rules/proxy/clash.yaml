@@ -1,7 +1,7 @@
 # Title: Proxy
 # Description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-# Total: 23,096
-# Updated: 2026-05-12 06:08:15 CST
+# Total: 23,112
+# Updated: 2026-05-13 06:12:02 CST
 #
 payload:
   - +.000webhost.com
@@ -1156,6 +1156,7 @@ payload:
   - +.albastudio.co
   - +.albeats.com
   - +.alchemysynth.com
+  - +.alefbank.com
   - +.alexa.com
   - +.alexafund.cn
   - +.alexafund.com.cn
@@ -2536,6 +2537,7 @@ payload:
   - +.bangumi.tv
   - +.bangyoulater.com
   - +.bangyourwife.com
+  - +.bank131.com
   - +.bankmobilevibe.com
   - +.banned.video
   - +.bannedbook.net
@@ -7382,6 +7384,7 @@ payload:
   - +.fanbox.cc
   - +.fandango.com
   - +.fandom.com
+  - +.fanfictionero.com
   - +.fanfox.net
   - +.fangbinxing.com
   - +.fangeming.com
@@ -7639,8 +7642,11 @@ payload:
   - +.fi11.com
   - +.fi11av1.com
   - +.fi11tv1.com
+  - +.fic.fan
+  - +.ficador.com
   - +.ficbook.net
   - +.ficeboock.com
+  - +.ficmania.com
   - +.fictionmania.tv
   - +.fidelity
   - +.fido
@@ -11969,6 +11975,7 @@ payload:
   - +.koreanpornmovie.com
   - +.korenan2.com
   - +.korewaeroi.com
+  - +.korona.com
   - +.koskade.com
   - +.kostenlosepornoclips.com
   - +.kotlinconf.com
@@ -14533,6 +14540,7 @@ payload:
   - +.ni
   - +.nianticlabs.com
   - +.niceanimegames.com
+  - +.nicegram.cloud
   - +.niceporn.tv
   - +.nicesshop.net
   - +.nichepornsite.com
@@ -16746,6 +16754,7 @@ payload:
   - +.pv-cdn.net
   - +.pvp.net
   - +.pvp.tv
+  - +.pvubank.com
   - +.pvue1.com
   - +.pvue2.com
   - +.pvzgw2.com
@@ -17417,6 +17426,7 @@ payload:
   - +.rtycminnesota.org
   - +.ru
   - +.ru-moscow-1.myhuaweicloud.com
+  - +.ru.ccb.com
   - +.ruanyifeng.com
   - +.ruby-lang.org
   - +.rubygems.org
@@ -19377,6 +19387,7 @@ payload:
   - +.tegrazone.com
   - +.tehnodom.com
   - +.tehrantimes.com
+  - +.teinon.net
   - +.telebay.com
   - +.telecomspace.com
   - +.telega.info
@@ -20433,6 +20444,7 @@ payload:
   - +.ubnt.com
   - +.ubnw.net
   - +.ubs
+  - +.ubs.com
   - +.ubucentrum.net
   - +.ubuntu-br.org
   - +.ubuntu-cl.org
@@ -20476,6 +20488,7 @@ payload:
   - +.ucoz.net
   - +.ucoz.org
   - +.ucoz.site
+  - +.ucozmail.com
   - +.ucozmedia.com
   - +.ucoztemplates.com
   - +.udacity.com
@@ -20648,6 +20661,7 @@ payload:
   - +.userstyles.org
   - +.usertrust.com
   - +.usocctn.com
+  - +.usocial.pro
   - +.ustibetcommittee.org
   - +.ustream.tv
   - +.ustwrap.info
@@ -21271,6 +21285,8 @@ payload:
   - +.vsmarketplacebadge.apphb.com
   - +.vsphere.com
   - +.vsphere.net
+  - +.vtb-direct.com
+  - +.vtbglobalperspectives.com
   - +.vtsociety.org
   - +.vtunnel.com
   - +.vtvan.com
