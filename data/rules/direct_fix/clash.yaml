@@ -1,7 +1,7 @@
 # Title: Direct Fix
 # Description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
-# Total: 744
-# Updated: 2026-05-15 06:12:01 CST
+# Total: 745
+# Updated: 2026-05-16 05:59:41 CST
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -305,8 +305,6 @@ payload:
   - +.example.org
   - +.f.c2r.ts.cdn.office.net
   - +.feihuo.com
-  - +.ff.dorado.sdo.com
-  - +.ff14.sdo.com
   - +.ffbuddy.com
   - +.ffxiv.com
   - +.fhyx.com
@@ -584,11 +582,13 @@ payload:
   - +.scescdn.cn
   - +.scid.cn
   - +.scsentry.cn
+  - +.sdo.com
   - +.sdx.microsoft.com
   - +.setmeup.arubanetworks.com
   - +.sharepoint.cn
   - +.shark007.net
   - +.shell.cdn.office.net
+  - +.shengqugames.com
   - +.shyxhy.com
   - +.skydweller.cn
   - +.sl916.com
@@ -747,4 +747,5 @@ payload:
   - +.zcjbgame.com
   - +.zhuoyou.com
   - +.zhuoyuegame.com
+  - +.zjshulong.com
   - +.zte.home
