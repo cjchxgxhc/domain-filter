@@ -1,7 +1,7 @@
 # Title: Proxy
 # Description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-# Total: 23,127
-# Updated: 2026-05-19 06:03:31 CST
+# Total: 23,130
+# Updated: 2026-05-20 06:16:51 CST
 #
 payload:
   - +.000webhost.com
@@ -1162,6 +1162,7 @@ payload:
   - +.alexafund.com.cn
   - +.alexanderstreet.com
   - +.alexlur.org
+  - +.alfa.me
   - +.alfabank.oavdo.amc
   - +.alfera.com.hk
   - +.alforattv.net
@@ -19347,6 +19348,8 @@ payload:
   - +.teamamericany.com
   - +.teamneedforspeed.com
   - +.teamskeet.com
+  - +.teamspeak-services.com
+  - +.teamspeak.com
   - +.teamviewer.com
   - +.tearapeak.com
   - +.teatroporno.com
