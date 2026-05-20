@@ -1,0 +1,39 @@
+# 一些dns的解析地址
+# 阿里 DNS
+||dns.alidns.com^$dnsrewrite=NOERROR;A;223.5.5.5
+||dns.alidns.com^$dnsrewrite=NOERROR;A;223.6.6.6
+||dns.alidns.com^$dnsrewrite=NOERROR;AAAA;2400:3200::1
+||dns.alidns.com^$dnsrewrite=NOERROR;AAAA;2400:3200:baba::1
+# OneDNS
+||doh-pure.onedns.net^$dnsrewrite=NOERROR;A;106.75.165.71
+||doh-pure.onedns.net^$dnsrewrite=NOERROR;A;54.223.159.81
+# 360 DNS
+||doh.360.cn^$dnsrewrite=NOERROR;A;36.99.170.86
+||doh.360.cn^$dnsrewrite=NOERROR;A;101.91.111.153
+||doh.360.cn^$dnsrewrite=NOERROR;A;106.63.24.74
+||doh.360.cn^$dnsrewrite=NOERROR;A;101.198.192.33
+||doh.360.cn^$dnsrewrite=NOERROR;A;101.198.193.29
+||doh.360.cn^$dnsrewrite=NOERROR;A;112.65.69.15
+||doh.360.cn^$dnsrewrite=NOERROR;A;101.199.254.118
+||doh.360.cn^$dnsrewrite=NOERROR;A;123.6.48.18
+||doh.360.cn^$dnsrewrite=NOERROR;A;111.7.73.60
+||doh.360.cn^$dnsrewrite=NOERROR;A;221.181.72.233
+||doh.360.cn^$dnsrewrite=NOERROR;A;39.156.84.71
+||doh.360.cn^$dnsrewrite=NOERROR;A;101.198.191.4
+# 18bit DNS
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;42.51.37.204
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;42.51.41.217
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;124.220.23.147
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;115.190.192.208
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;36.133.139.25
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;42.51.13.218
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;115.190.191.220
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;36.138.230.22
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;111.170.6.190
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;111.170.19.184
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;118.89.133.75
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;119.45.115.228
+||doh.18bit.cn^$dnsrewrite=NOERROR;A;42.51.37.18
+# 腾讯 DNS
+||doh.pub^$dnsrewrite=NOERROR;A;1.12.12.12
+||doh.pub^$dnsrewrite=NOERROR;A;120.53.53.53
