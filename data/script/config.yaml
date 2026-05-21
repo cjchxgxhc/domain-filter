@@ -283,7 +283,7 @@ ads_hosts:
         - src_hosts_supplement
   output:
     enabled: true
-    formats: [hosts]
+    formats: [hosts, smartdns]
 
 
 ads:
@@ -317,7 +317,7 @@ ads:
         - ads_hosts
   output:
     enabled: true
-    formats: [adblock, clash, singbox]
+    formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge]
 
 
 ads_big:
@@ -373,7 +373,7 @@ proxy:
         - modyolo.com
   output:
     enabled: true
-    formats: [clash, singbox]
+    formats: [clash, singbox, quantumultx, shadowrocket, surge]
 
 
 direct_fix:
@@ -425,4 +425,4 @@ direct_fix:
         - bing.net
   output:
     enabled: true
-    formats: [clash, singbox]
+    formats: [clash, singbox, quantumultx, shadowrocket, surge]
