@@ -2,13 +2,13 @@
 
 > 聚合收录的所有广告规则，仅去除白名单、国外tld。
 
-规则总数：**156,145**
-最后更新：2026-05-21 13:59:07（北京时间）
+规则总数：**156,254**
+最后更新：2026-05-22 06:19:30（北京时间）
 
 ## 订阅链接
 
 | 文件 | 规则数 | 原始链接 | 加速链接1 (jsDelivr CDN) | 加速链接2 (jsDelivr Fastly) | 加速链接3 (ghproxy) |
 | --- | --- | --- | --- | --- | --- |
-| `adblock.txt` | 156,145 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) |
+| `adblock.txt` | 156,254 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) |
 
 

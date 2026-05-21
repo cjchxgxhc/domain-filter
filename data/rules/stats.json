@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 160535,
+    "final_count": 160644,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -69,14 +69,14 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 47898,
+    "final_count": 48005,
     "format_counts": {
-      "adblock": 47898,
-      "clash": 47898,
-      "singbox": 47898,
-      "quantumultx": 47898,
-      "shadowrocket": 47898,
-      "surge": 47898
+      "adblock": 48005,
+      "clash": 48005,
+      "singbox": 48005,
+      "quantumultx": 48005,
+      "shadowrocket": 48005,
+      "surge": 48005
     },
     "source_names": [
       "src_10007",
@@ -106,9 +106,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 156145,
+    "final_count": 156254,
     "format_counts": {
-      "adblock": 156145
+      "adblock": 156254
     },
     "source_names": [
       "src_10007",
