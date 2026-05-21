@@ -3,7 +3,7 @@
 > 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
 
 规则总数：**745**
-最后更新：2026-05-21 06:24:04（北京时间）
+最后更新：2026-05-21 13:59:07（北京时间）
 
 ## 订阅链接
 
@@ -13,6 +13,8 @@
 | `clash.mrs` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.mrs) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/clash.mrs) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs) |
 | `singbox.json` | 745 | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.json) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.json) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.json) |
 | `singbox.srs` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.srs) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/singbox.srs) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/singbox.srs) |
+| `quantumultx.list` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/quantumultx.list) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/quantumultx.list) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/quantumultx.list) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/quantumultx.list) |
+| `shadowrocket.list` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/shadowrocket.list) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/shadowrocket.list) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/shadowrocket.list) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/shadowrocket.list) |
+| `surge.list` | - | [原始](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/surge.list) | [加速1](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/surge.list) | [加速2](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/direct_fix/surge.list) | [加速3](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/surge.list) |
 
-[← 返回主页](../../../README.md)
 

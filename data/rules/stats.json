@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 160488,
+    "final_count": 160535,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -49,7 +49,8 @@
     "output_enabled": true,
     "final_count": 4360,
     "format_counts": {
-      "hosts": 4360
+      "hosts": 4360,
+      "smartdns": 4360
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
@@ -68,11 +69,14 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 47857,
+    "final_count": 47898,
     "format_counts": {
-      "adblock": 47857,
-      "clash": 47857,
-      "singbox": 47857
+      "adblock": 47898,
+      "clash": 47898,
+      "singbox": 47898,
+      "quantumultx": 47898,
+      "shadowrocket": 47898,
+      "surge": 47898
     },
     "source_names": [
       "src_10007",
@@ -102,9 +106,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 156077,
+    "final_count": 156145,
     "format_counts": {
-      "adblock": 156077
+      "adblock": 156145
     },
     "source_names": [
       "src_10007",
@@ -131,8 +135,11 @@
     "output_enabled": true,
     "final_count": 23132,
     "format_counts": {
-      "clash": 23132,
-      "singbox": 23132
+      "clash": 24655,
+      "singbox": 24655,
+      "quantumultx": 24655,
+      "shadowrocket": 24655,
+      "surge": 24655
     },
     "source_names": [
       "src_proxy_DustinWin",
@@ -151,7 +158,10 @@
     "final_count": 745,
     "format_counts": {
       "clash": 745,
-      "singbox": 745
+      "singbox": 745,
+      "quantumultx": 745,
+      "shadowrocket": 745,
+      "surge": 745
     },
     "source_names": [
       "src_fakeip_filter",

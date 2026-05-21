@@ -1,8 +1,3 @@
-# Title: Direct Fix
-# Description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
-# Total: 745
-# Updated: 2026-05-21 06:24:02 CST
-#
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
   - +.10.in-addr.arpa
