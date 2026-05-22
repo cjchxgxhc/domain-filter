@@ -33,7 +33,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 160644,
+    "final_count": 160797,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -69,14 +69,14 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 48005,
+    "final_count": 35506,
     "format_counts": {
-      "adblock": 48005,
-      "clash": 48005,
-      "singbox": 48005,
-      "quantumultx": 48005,
-      "shadowrocket": 48005,
-      "surge": 48005
+      "adblock": 35506,
+      "clash": 35506,
+      "singbox": 35506,
+      "quantumultx": 35506,
+      "shadowrocket": 35506,
+      "surge": 35506
     },
     "source_names": [
       "src_10007",
@@ -106,9 +106,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 156254,
+    "final_count": 156405,
     "format_counts": {
-      "adblock": 156254
+      "adblock": 156405
     },
     "source_names": [
       "src_10007",
@@ -133,13 +133,13 @@
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
-    "final_count": 23132,
+    "final_count": 23134,
     "format_counts": {
-      "clash": 24655,
-      "singbox": 24655,
-      "quantumultx": 24655,
-      "shadowrocket": 24655,
-      "surge": 24655
+      "clash": 24657,
+      "singbox": 24657,
+      "quantumultx": 24657,
+      "shadowrocket": 24657,
+      "surge": 24657
     },
     "source_names": [
       "src_proxy_DustinWin",
