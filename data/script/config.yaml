@@ -255,10 +255,10 @@ ads_hosts:
         - src_awavenue
         - src_awavenue_hosts
     - type: discard
-      source:
-        - src_ads_useless
       preset:
         - addata_white
+      source:
+        - src_ads_useless
     - type: add
       source:
         - src_hosts_supplement
