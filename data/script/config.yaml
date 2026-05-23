@@ -95,6 +95,11 @@ sources:
     mode:     skip
     validate: true
 
+  src_oisd_small:
+    url:      https://small.oisd.nl/
+    mode:     common
+    validate: true
+
   src_adrules_domainset:
     url:      https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/main/domain.txt
     mode:     skip
@@ -270,7 +275,7 @@ ads_hosts:
 
 ads:
   title: Ads
-  description: 额外收录10007、anti-AD规则，去除白名单。
+  description: 额外收录10007、anti-AD、oisd(small)规则，去除白名单。
   rules:
     - type: add
       source:
@@ -278,6 +283,7 @@ ads:
         - src_anti_ad_domains
         - src_10007_auto
         - src_10007
+        - src_oisd_small
     - type: discard
       preset:
         - addata_white
