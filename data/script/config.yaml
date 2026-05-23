@@ -302,7 +302,7 @@ ads:
       source:
         - src_anti_ad_clash
         - src_anti_ad_domains
-        - src_adrules_domainset
+       # - src_adrules_domainset
         - src_10007_auto
         - src_10007
     - type: discard
