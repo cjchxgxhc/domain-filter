@@ -69,9 +69,19 @@ sources:
     mode:     common
     validate: true
 
-  src_ads_useless_list:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
+  src_white_10007:
+    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
     mode:     common
+    validate: true
+
+  src_white_ublock:
+    url:      https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
+    mode:     adblockwhite
+    validate: true
+
+  src_white_doh_bypass:
+    url:      https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+    mode:     skip
     validate: true
 
   # ── CN 域名列表（用于 match_suffix 过滤精简域名）────────────────────────────────
@@ -124,11 +134,6 @@ sources:
 
   src_10007:
     url:      https://raw.githubusercontent.com/lingeringsound/10007/main/all
-    mode:     common
-    validate: true
-
-  src_10007_custom:
-    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
     mode:     common
     validate: true
 
@@ -249,6 +254,9 @@ addata_white:
         - src_white_cats
         - src_white_anti-AD
         - src_white_self_list
+        - src_white_10007
+        - src_white_ublock
+        - src_white_doh_bypass
   output:
     enabled: true
 
