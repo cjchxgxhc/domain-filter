@@ -1,7 +1,7 @@
 开始执行域名过滤工具
-开始下载 35 个规则源...
-下载完成：35/35 成功，耗时 1.13s
-提取外部源域名（35 个）...
+开始下载 30 个规则源...
+下载完成：30/30 成功，耗时 0.89s
+提取外部源域名（30 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
   src_white_cats：153 条 [common]
@@ -10,11 +10,6 @@
   src_white_10007：332 条 [common]
   src_white_ublock：0 条 [adblockwhite]
   src_white_doh_bypass：17,414 条 [skip]
-  src_cn_heidai_lite：5,653 条 [skip]
-  src_cn_aethersailor_lite：29,359 条 [skip]
-  src_cn_loyalsoldier_direct：113,662 条 [common]
-  src_cn_xmdhs_ext：28,045 条 [common]
-  src_hagezi_ultimate：131,094 条 [skip]
   src_anti_ad_clash：105,923 条 [common]
   src_anti_ad_domains：113,513 条 [skip]
   src_adrules_domainset：182,141 条 [skip]
@@ -37,7 +32,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.80s
+提取完成，耗时 1.32s
 ================================================================================
 处理规则组
 ================================================================================
@@ -85,7 +80,7 @@
   │    rules[1] 共 828 条
   │    → 后缀丢弃，移除 44,295 条（剩余 160,948）
   │  处理完毕，共 160,948 条
-  └─ 不输出文件（output.enabled=false），耗时 0.10s
+  └─ 不输出文件（output.enabled=false），耗时 0.11s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
 ══════════════════════════════════════════════════════════════════════
@@ -122,59 +117,19 @@
   │    preset：18,410 条 <- addata_white
   │    rules[1] 共 18,410 条
   │    → 精确丢弃，移除 190 条（剩余 128,091）
-  │  rules[2] type=discard_suffix
-  │    preset：828 条 <- p_proxy_tld
-  │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 16,671 条（剩余 111,420）
-  │  rules[3] type=match_suffix
-  │    source：5,653 条 <- src_cn_heidai_lite
-  │    source：29,359 条 <- src_cn_aethersailor_lite
-  │    source：113,662 条 <- src_cn_loyalsoldier_direct
-  │    source：28,045 条 <- src_cn_xmdhs_ext
-  │    source：131,094 条 <- src_hagezi_ultimate
-  │    domain：1 条自定义
-  │    rules[3] 共 283,572 条
-  │    → 后缀保留，保留 36,360 条（移除 75,060）
-  │  rules[4] type=add
+  │  rules[2] type=add
   │    preset：4,331 条 <- ads_hosts
-  │    rules[4] 共 4,331 条
-  │    → 加入，新增 1,892 条（合计 38,252）
-  │  处理完毕，共 38,252 条
-  │  子域去重：移除 10,780 条冗余子域
-✓ adblock.txt（27,472 条（子域去重））
-✓ clash.yaml（27,472 条（子域去重））
-✓ singbox.json（27,472 条（子域去重））
-✓ quantumultx.list（27,472 条（子域去重））
-✓ shadowrocket.list（27,472 条（子域去重））
-✓ surge.list（27,472 条（子域去重））
-  └─ 最终输出：27,472 条，耗时 0.41s
-══════════════════════════════════════════════════════════════════════
-处理规则组：Ads Big (ads_big)
-══════════════════════════════════════════════════════════════════════
-  │  rules[0] type=add
-  │    source：105,923 条 <- src_anti_ad_clash
-  │    source：113,513 条 <- src_anti_ad_domains
-  │    source：182,141 条 <- src_adrules_domainset
-  │    source：13,118 条 <- src_10007_auto
-  │    source：17,123 条 <- src_10007
-  │    rules[0] 共 216,364 条
-  │    → 加入，新增 216,364 条（合计 216,364）
-  │  rules[1] type=discard
-  │    preset：18,410 条 <- addata_white
-  │    rules[1] 共 18,410 条
-  │    → 精确丢弃，移除 306 条（剩余 216,058）
-  │  rules[2] type=discard_suffix
-  │    preset：828 条 <- p_proxy_tld
-  │    rules[2] 共 828 条
-  │    → 后缀丢弃，移除 45,437 条（剩余 170,621）
-  │  rules[3] type=add
-  │    preset：4,331 条 <- ads_hosts
-  │    rules[3] 共 4,331 条
-  │    → 加入，新增 1,733 条（合计 172,354）
-  │  处理完毕，共 172,354 条
-  │  子域去重：移除 15,808 条冗余子域
-✓ adblock.txt（156,546 条（子域去重））
-  └─ 最终输出：156,546 条，耗时 0.56s
+  │    rules[2] 共 4,331 条
+  │    → 加入，新增 1,725 条（合计 129,816）
+  │  处理完毕，共 129,816 条
+  │  子域去重：移除 14,322 条冗余子域
+✓ adblock.txt（115,494 条（子域去重））
+✓ clash.yaml（115,494 条（子域去重））
+✓ singbox.json（115,494 条（子域去重））
+✓ quantumultx.list（115,494 条（子域去重））
+✓ shadowrocket.list（115,494 条（子域去重））
+✓ surge.list（115,494 条（子域去重））
+  └─ 最终输出：115,494 条，耗时 0.54s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
@@ -195,7 +150,7 @@
 ✓ quantumultx.list（24,657 条（子域去重））
 ✓ shadowrocket.list（24,657 条（子域去重））
 ✓ surge.list（24,657 条（子域去重））
-  └─ 最终输出：23,134 条，耗时 0.17s
+  └─ 最终输出：23,134 条，耗时 0.18s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -224,5 +179,5 @@
   └─ 最终输出：745 条，耗时 0.09s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.55s
+✓ 处理完成！总耗时 3.41s
 ================================================================================
