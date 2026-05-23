@@ -84,6 +84,11 @@ sources:
     mode:     skip
     validate: true
 
+  src_ads_useless:
+    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
+    mode:     skip
+    validate: false
+
   # ── 广告拦截 ───────────────────────────────────────────────────────────────
   src_anti_ad_clash:
     url:      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
@@ -239,22 +244,9 @@ addata_white:
   output:
     enabled: true
 
-
-addata_adblock:
-  rules:
-    - type: add
-      source:
-        - src_anti_ad_clash
-        - src_anti_ad_domains
-        - src_adrules_domainset
-    - type: discard_suffix
-      preset:
-        - p_proxy_tld
-
-
 ads_hosts:
   title: Ads Hosts
-  description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
+  description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单和冗余域名。
   rules:
     - type: add
       source:
@@ -263,6 +255,8 @@ ads_hosts:
         - src_awavenue
         - src_awavenue_hosts
     - type: discard
+      source:
+        - src_ads_useless
       preset:
         - addata_white
     - type: add
