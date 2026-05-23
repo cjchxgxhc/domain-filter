@@ -257,8 +257,6 @@ ads_hosts:
     - type: discard
       preset:
         - addata_white
-      source:
-        - src_ads_useless
     - type: add
       source:
         - src_hosts_supplement
@@ -281,6 +279,8 @@ ads:
     - type: discard
       preset:
         - addata_white
+      source:
+        - src_ads_useless
     - type: add
       preset:
         - ads_hosts
