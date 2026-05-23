@@ -17,15 +17,18 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 774,
+    "final_count": 18411,
     "format_counts": {
-      "domain": 774
+      "domain": 1826
     },
     "source_names": [
+      "src_white_10007",
       "src_white_anti-AD",
       "src_white_cats",
+      "src_white_doh_bypass",
       "src_white_heidai",
-      "src_white_self_list"
+      "src_white_self_list",
+      "src_white_ublock"
     ]
   },
   "addata_adblock": {
@@ -33,7 +36,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 160797,
+    "final_count": 160901,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -47,10 +50,10 @@
     "title": "Ads Hosts",
     "description": "仅收集广告联盟和不会造成问题的追踪。",
     "output_enabled": true,
-    "final_count": 4360,
+    "final_count": 4331,
     "format_counts": {
-      "hosts": 4360,
-      "smartdns": 4360
+      "hosts": 4331,
+      "smartdns": 4331
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
@@ -58,10 +61,13 @@
       "src_awavenue_hosts",
       "src_hosts_supplement",
       "src_sm_ad",
+      "src_white_10007",
       "src_white_anti-AD",
       "src_white_cats",
+      "src_white_doh_bypass",
       "src_white_heidai",
-      "src_white_self_list"
+      "src_white_self_list",
+      "src_white_ublock"
     ]
   },
   "ads": {
@@ -69,14 +75,14 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 35506,
+    "final_count": 35534,
     "format_counts": {
-      "adblock": 35506,
-      "clash": 35506,
-      "singbox": 35506,
-      "quantumultx": 35506,
-      "shadowrocket": 35506,
-      "surge": 35506
+      "adblock": 35534,
+      "clash": 35534,
+      "singbox": 35534,
+      "quantumultx": 35534,
+      "shadowrocket": 35534,
+      "surge": 35534
     },
     "source_names": [
       "src_10007",
@@ -95,10 +101,13 @@
       "src_hosts_supplement",
       "src_proxy_tld",
       "src_sm_ad",
+      "src_white_10007",
       "src_white_anti-AD",
       "src_white_cats",
+      "src_white_doh_bypass",
       "src_white_heidai",
-      "src_white_self_list"
+      "src_white_self_list",
+      "src_white_ublock"
     ]
   },
   "ads_big": {
@@ -106,9 +115,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 156405,
+    "final_count": 156499,
     "format_counts": {
-      "adblock": 156405
+      "adblock": 156499
     },
     "source_names": [
       "src_10007",
@@ -122,10 +131,13 @@
       "src_hosts_supplement",
       "src_proxy_tld",
       "src_sm_ad",
+      "src_white_10007",
       "src_white_anti-AD",
       "src_white_cats",
+      "src_white_doh_bypass",
       "src_white_heidai",
-      "src_white_self_list"
+      "src_white_self_list",
+      "src_white_ublock"
     ]
   },
   "proxy": {
