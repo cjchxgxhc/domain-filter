@@ -36,14 +36,13 @@
     "title": "Ads Hosts",
     "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单和冗余域名。",
     "output_enabled": true,
-    "final_count": 4253,
+    "final_count": 4331,
     "format_counts": {
-      "hosts": 4253,
-      "smartdns": 4253
+      "hosts": 4331,
+      "smartdns": 4331
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
-      "src_ads_useless",
       "src_awavenue",
       "src_awavenue_hosts",
       "src_hosts_supplement",
@@ -62,14 +61,14 @@
     "title": "Ads",
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单。",
     "output_enabled": true,
-    "final_count": 128954,
+    "final_count": 85237,
     "format_counts": {
-      "adblock": 128954,
-      "clash": 128954,
-      "singbox": 128954,
-      "quantumultx": 128954,
-      "shadowrocket": 128954,
-      "surge": 128954
+      "adblock": 85237,
+      "clash": 85237,
+      "singbox": 85237,
+      "quantumultx": 85237,
+      "shadowrocket": 85237,
+      "surge": 85237
     },
     "source_names": [
       "src_10007",
