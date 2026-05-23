@@ -17,7 +17,7 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 18411,
+    "final_count": 18410,
     "format_counts": {
       "domain": 1826
     },
@@ -36,7 +36,7 @@
     "title": "",
     "description": "",
     "output_enabled": false,
-    "final_count": 160901,
+    "final_count": 160948,
     "format_counts": {},
     "source_names": [
       "src_adrules_domainset",
@@ -75,20 +75,19 @@
     "title": "Ads",
     "description": "聚合收录的所有广告规则，去除白名单、不常见域名。",
     "output_enabled": true,
-    "final_count": 35534,
+    "final_count": 27472,
     "format_counts": {
-      "adblock": 35534,
-      "clash": 35534,
-      "singbox": 35534,
-      "quantumultx": 35534,
-      "shadowrocket": 35534,
-      "surge": 35534
+      "adblock": 27472,
+      "clash": 27472,
+      "singbox": 27472,
+      "quantumultx": 27472,
+      "shadowrocket": 27472,
+      "surge": 27472
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
       "src_acl4ssr_ban_program_ad",
-      "src_adrules_domainset",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
       "src_awavenue",
@@ -115,9 +114,9 @@
     "title": "Ads Big",
     "description": "聚合收录的所有广告规则，仅去除白名单、国外tld。",
     "output_enabled": true,
-    "final_count": 156499,
+    "final_count": 156546,
     "format_counts": {
-      "adblock": 156499
+      "adblock": 156546
     },
     "source_names": [
       "src_10007",
