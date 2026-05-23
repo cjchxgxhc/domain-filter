@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 1.96s
+下载完成：32/32 成功，耗时 1.18s
 提取外部源域名（32 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
@@ -14,7 +14,7 @@
   src_anti_ad_clash：105,923 条 [common]
   src_anti_ad_domains：113,513 条 [skip]
   src_oisd_small：57,287 条 [common]
-  src_adrules_domainset：182,141 条 [skip]
+  src_adrules_domainset：182,201 条 [skip]
   src_10007_auto：13,118 条 [common]
   src_10007：17,123 条 [common]
   src_acl4ssr_ban_program_ad：989 条 [common]
@@ -24,7 +24,7 @@
   src_hosts_supplement：182 条 [common]
   src_proxy_DustinWin：25,560 条 [common]
   src_proxy_Loyalsoldier：26,212 条 [common]
-  src_proxy_blackmatrix7：34,124 条 [common]
+  src_proxy_blackmatrix7：34,127 条 [common]
   src_proxy_lmfirefly：16,119 条 [common]
   src_proxy_self_ipcheck：7 条 [common]
   src_ms_cn：168 条 [common]
@@ -34,7 +34,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.65s
+提取完成，耗时 1.58s
 ================================================================================
 处理规则组
 ================================================================================
@@ -118,14 +118,14 @@
 ✓ quantumultx.list（85,237 条（子域去重））
 ✓ shadowrocket.list（85,237 条（子域去重））
 ✓ surge.list（85,237 条（子域去重））
-  └─ 最终输出：85,237 条，耗时 0.46s
+  └─ 最终输出：85,237 条，耗时 0.45s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
   │    source：25,560 条 <- src_proxy_DustinWin
   │    source：16,119 条 <- src_proxy_lmfirefly
-  │    source：34,124 条 <- src_proxy_blackmatrix7
+  │    source：34,127 条 <- src_proxy_blackmatrix7
   │    source：26,212 条 <- src_proxy_Loyalsoldier
   │    source：7 条 <- src_proxy_self_ipcheck
   │    source：831 条 <- src_proxy_tld
@@ -139,7 +139,7 @@
 ✓ quantumultx.list（24,657 条（子域去重））
 ✓ shadowrocket.list（24,657 条（子域去重））
 ✓ surge.list（24,657 条（子域去重））
-  └─ 最终输出：23,134 条，耗时 0.17s
+  └─ 最终输出：23,134 条，耗时 0.18s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -168,5 +168,5 @@
   └─ 最终输出：745 条，耗时 0.09s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.64s
+✓ 处理完成！总耗时 3.79s
 ================================================================================

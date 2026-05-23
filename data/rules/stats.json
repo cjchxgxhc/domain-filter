@@ -34,7 +34,7 @@
   "ads_hosts": {
     "idx": 2,
     "title": "Ads Hosts",
-    "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单和冗余域名。",
+    "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。",
     "output_enabled": true,
     "final_count": 4331,
     "format_counts": {
@@ -59,7 +59,7 @@
   "ads": {
     "idx": 3,
     "title": "Ads",
-    "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单。",
+    "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。",
     "output_enabled": true,
     "final_count": 85237,
     "format_counts": {
