@@ -31,32 +31,19 @@
       "src_white_ublock"
     ]
   },
-  "addata_adblock": {
-    "idx": 2,
-    "title": "",
-    "description": "",
-    "output_enabled": false,
-    "final_count": 160948,
-    "format_counts": {},
-    "source_names": [
-      "src_adrules_domainset",
-      "src_anti_ad_clash",
-      "src_anti_ad_domains",
-      "src_proxy_tld"
-    ]
-  },
   "ads_hosts": {
-    "idx": 3,
+    "idx": 2,
     "title": "Ads Hosts",
-    "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。",
+    "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单和冗余域名。",
     "output_enabled": true,
-    "final_count": 4331,
+    "final_count": 4253,
     "format_counts": {
-      "hosts": 4331,
-      "smartdns": 4331
+      "hosts": 4253,
+      "smartdns": 4253
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
+      "src_ads_useless",
       "src_awavenue",
       "src_awavenue_hosts",
       "src_hosts_supplement",
@@ -71,23 +58,24 @@
     ]
   },
   "ads": {
-    "idx": 4,
+    "idx": 3,
     "title": "Ads",
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单。",
     "output_enabled": true,
-    "final_count": 128968,
+    "final_count": 128954,
     "format_counts": {
-      "adblock": 128968,
-      "clash": 128968,
-      "singbox": 128968,
-      "quantumultx": 128968,
-      "shadowrocket": 128968,
-      "surge": 128968
+      "adblock": 128954,
+      "clash": 128954,
+      "singbox": 128954,
+      "quantumultx": 128954,
+      "shadowrocket": 128954,
+      "surge": 128954
     },
     "source_names": [
       "src_10007",
       "src_10007_auto",
       "src_acl4ssr_ban_program_ad",
+      "src_ads_useless",
       "src_anti_ad_clash",
       "src_anti_ad_domains",
       "src_awavenue",
@@ -105,7 +93,7 @@
     ]
   },
   "proxy": {
-    "idx": 5,
+    "idx": 4,
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
@@ -127,7 +115,7 @@
     ]
   },
   "direct_fix": {
-    "idx": 6,
+    "idx": 5,
     "title": "Direct Fix",
     "description": "国内连接状态好、代理可能出现问题域名，要优先于proxy组。",
     "output_enabled": true,
