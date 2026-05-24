@@ -17,9 +17,9 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 18410,
+    "final_count": 18303,
     "format_counts": {
-      "domain": 1826
+      "domain": 1818
     },
     "source_names": [
       "src_white_10007",
@@ -36,10 +36,10 @@
     "title": "Ads Hosts",
     "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。",
     "output_enabled": true,
-    "final_count": 4331,
+    "final_count": 4332,
     "format_counts": {
-      "hosts": 4331,
-      "smartdns": 4331
+      "hosts": 4332,
+      "smartdns": 4332
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
@@ -61,14 +61,14 @@
     "title": "Ads",
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。",
     "output_enabled": true,
-    "final_count": 85237,
+    "final_count": 85351,
     "format_counts": {
-      "adblock": 85237,
-      "clash": 85237,
-      "singbox": 85237,
-      "quantumultx": 85237,
-      "shadowrocket": 85237,
-      "surge": 85237
+      "adblock": 85351,
+      "clash": 85351,
+      "singbox": 85351,
+      "quantumultx": 85351,
+      "shadowrocket": 85351,
+      "surge": 85351
     },
     "source_names": [
       "src_10007",

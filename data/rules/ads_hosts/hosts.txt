@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
-# Total: 4,331
-# Updated: 2026-05-24 05:56:00 CST
+# Total: 4,332
+# Updated: 2026-05-25 05:57:05 CST
 #
 127.0.0.1 01.adnxs.com
 127.0.0.1 1.letvlive.com
@@ -497,6 +497,7 @@
 127.0.0.1 adsfilebssdlbig.ali.kugou.com
 127.0.0.1 adsfileretry.service.kugou.com
 127.0.0.1 adsfs-sdkconfig.heytapimage.com
+127.0.0.1 adsfs.heytapimage.com
 127.0.0.1 adsfs.oppomobile.com
 127.0.0.1 adshownew.it168.com
 127.0.0.1 adshows.21cn.com
