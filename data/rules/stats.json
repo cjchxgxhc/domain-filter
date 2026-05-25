@@ -5,7 +5,9 @@
     "description": "",
     "output_enabled": true,
     "final_count": 828,
-    "format_counts": {},
+    "format_counts": {
+      "domain": 828
+    },
     "source_names": [
       "src_proxy_tld"
     ]
@@ -16,7 +18,9 @@
     "description": "",
     "output_enabled": true,
     "final_count": 18307,
-    "format_counts": {},
+    "format_counts": {
+      "domain": 1818
+    },
     "source_names": [
       "src_white_10007",
       "src_white_anti-AD",
@@ -33,7 +37,9 @@
     "description": "自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。",
     "output_enabled": true,
     "final_count": 4332,
-    "format_counts": {},
+    "format_counts": {
+      "hosts": 4332
+    },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
       "src_awavenue",
@@ -55,7 +61,15 @@
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。",
     "output_enabled": true,
     "final_count": 85528,
-    "format_counts": {},
+    "format_counts": {
+      "adblock": 85528,
+      "clash": 85528,
+      "singbox": 85528,
+      "quantumultx": 85528,
+      "shadowrocket": 85528,
+      "surge": 85528,
+      "smartdns": 99410
+    },
     "source_names": [
       "src_10007",
       "src_10007_auto",
@@ -83,7 +97,13 @@
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
     "final_count": 23134,
-    "format_counts": {},
+    "format_counts": {
+      "clash": 24657,
+      "singbox": 24657,
+      "quantumultx": 24657,
+      "shadowrocket": 24657,
+      "surge": 24657
+    },
     "source_names": [
       "src_proxy_DustinWin",
       "src_proxy_Loyalsoldier",
@@ -99,7 +119,13 @@
     "description": "国内连接状态好、代理可能出现问题域名，要优先于proxy组。",
     "output_enabled": true,
     "final_count": 745,
-    "format_counts": {},
+    "format_counts": {
+      "clash": 745,
+      "singbox": 745,
+      "quantumultx": 745,
+      "shadowrocket": 745,
+      "surge": 745
+    },
     "source_names": [
       "src_fakeip_filter",
       "src_games_cn",
