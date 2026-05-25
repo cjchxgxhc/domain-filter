@@ -246,6 +246,7 @@ addata_white:
 
 ads_hosts:
   title: Ads Hosts
+  dedup_subdomain: false 
   description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
   rules:
     - type: add
