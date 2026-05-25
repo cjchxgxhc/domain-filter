@@ -1,372 +1,258 @@
-# ╔══════════════════════════════════════════════════════════════════════════╗
-# ║                         Domain Filter 配置文件                          ║
-# ╚══════════════════════════════════════════════════════════════════════════╝
-#
-# 规则类型（type）说明：
-#   add            → 将规则域名并入当前集合
-#   discard        → 精确移除与规则匹配的域名
-#   discard_suffix → 移除被规则父域名覆盖的域名
-#   match          → 仅保留与规则精确匹配的域名（discard 的反逻辑）
-#   match_suffix   → 仅保留被规则父域名覆盖的域名（discard_suffix 的反逻辑）
-#
-# 规则来源字段（rules 中）：
-#   source  → 引用 sources 区块中的预定义外部源
-#   domain  → 直接写入自定义域名列表
-#   preset  → 引用另一个规则组的处理结果（只能引用在当前组之前定义的组）
-#
-# sources 区块（外部链接统一在此定义，提前下载提取）：
-#   source_name:
-#     url:      https://...                    # 必填
-#     mode:     common | adblockwhite | skip   # 默认 common
-#               common       → 支持所有格式提取域名
-#               adblockwhite → 仅识别 adblock 白名单格式 @@||domain^
-#               skip         → 只去除注释，直接当域名处理
-#     validate: true | false                   # 默认 false，是否严格验证域名合法性
-#
-# 子域去重控制（dedup_subdomain，与 title / description 同层）：
-#   true  → 强制进行子域去重（无论输出格式）
-#   false → 强制不进行子域去重（无论输出格式）
-#   缺省  → 按需：含 adblock / clash / singbox 格式时自动去重
-#
-# 规则在 rules 列表中按顺序执行，顺序影响最终结果。
-# 规则组按照在此文件中出现的顺序处理，不允许引用后面的规则组。
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Domain Filter - 规则格式生成脚本
+https://github.com/cjchxgxhc/domain-filter
+
+用法：
+    gen_rules.py <output_dir> <title> <description> <timezone> <format1> [format2 ...]
+
+stdin 格式：
+    <simple 域名，换行分隔>
+    ---
+    <deduped 域名，换行分隔>
+
+支持格式：
+    domain         domain.txt           纯域名列表（simple）
+    hosts          hosts.txt            127.0.0.1 domain（simple）
+    hostsipv6      hosts_ipv6.txt       127.0.0.1 + ::1 domain（simple）
+    smartdns       smartdns.txt         address /domain/#（simple）
+    adblock        adblock.txt          ||domain^（deduped）
+    clash          clash.yaml           +.domain（deduped）
+    singbox        singbox.json         domain_suffix（deduped）
+    wildcard       wildcard.txt         *.domain（deduped）
+    loon           loon.list            DOMAIN-SUFFIX,domain（deduped）
+    surge          surge.list           DOMAIN-SUFFIX,domain（deduped）
+    quantumultx    quantumultx.list     host-suffix,domain,reject（deduped）
+    shadowrocket   shadowrocket.list    DOMAIN-SUFFIX,domain,REJECT-DROP（deduped）
+"""
+
+import datetime
+import json
+import sys
+from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
-# ──────────────────────────── 全局配置 ────────────────────────────────────────
+_SIMPLE_FORMATS  = frozenset({"domain", "hosts", "hostsipv6", "smartdns"})
 
-global:
-  repo_url: https://github.com/cjchxgxhc/domain-filter
-  raw_base: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules
+_DEDUPED_FORMATS = frozenset({
+    "adblock",
+    "clash",
+    "singbox",
+    "wildcard",
+    "loon",
+    "surge",
+    "quantumultx",
+    "shadowrocket",
+})
 
-
-# ──────────────────────────── 外部源定义 ──────────────────────────────────────
-
-sources:
-  # ── 代理 TLD 列表 ──────────────────────────────────────────────────────────
-  src_proxy_tld:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-    mode:     common
-    validate: false
-
-  # ── 广告白名单 ─────────────────────────────────────────────────────────────
-  src_white_heidai:
-    url:      https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-    mode:     common
-    validate: true
-
-  src_white_cats:
-    url:      https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-    mode:     common
-    validate: true
-
-  src_white_anti-AD:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/self/refs/heads/main/rules/domains.txt
-    mode:     common
-    validate: true
-
-  src_white_self_list:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
-    mode:     common
-    validate: true
-
-  src_white_10007:
-    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
-    mode:     common
-    validate: true
-
-  src_white_ublock:
-    url:      https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-    mode:     adblockwhite
-    validate: true
-
-  src_white_doh_bypass:
-    url:      https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
-    mode:     skip
-    validate: true
-
-  src_ads_useless:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
-    mode:     skip
-    validate: false
-
-  # ── 广告拦截 ───────────────────────────────────────────────────────────────
-  src_anti_ad_clash:
-    url:      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-    mode:     common
-    validate: true
-
-  src_anti_ad_domains:
-    url:      https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-    mode:     skip
-    validate: true
-
-  src_oisd_small:
-    url:      https://small.oisd.nl/
-    mode:     common
-    validate: true
-
-  src_adrules_domainset:
-    url:      https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/main/domain.txt
-    mode:     skip
-    validate: true
-
-  # ── hosts 广告拦截 ──────────────────────────────────────────────────────────
-  src_10007_auto:
-    url:      https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-    mode:     common
-    validate: true
-
-  src_10007:
-    url:      https://raw.githubusercontent.com/lingeringsound/10007/main/all
-    mode:     common
-    validate: true
-
-  src_acl4ssr_ban_program_ad:
-    url:      https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
-    mode:     common
-    validate: true
-
-  src_sm_ad:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
-    mode:     common
-    validate: true
-
-  src_awavenue:
-    url:      https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-    mode:     common
-    validate: true
-
-  src_awavenue_hosts:
-    url:      https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-    mode:     common
-    validate: true
-
-  src_hosts_supplement:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
-    mode:     common
-    validate: true
-
-  # ── 代理规则 ───────────────────────────────────────────────────────────────
-  src_proxy_DustinWin:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-    mode:     common
-    validate: true
-
-  src_proxy_Loyalsoldier:
-    url:      https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
-    mode:     common
-    validate: true
-
-  src_proxy_blackmatrix7:
-    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
-    mode:     common
-    validate: true
-
-  src_proxy_lmfirefly:
-    url:      https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-    mode:     common
-    validate: true
-
-  src_proxy_self_ipcheck:
-    url:      https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
-    mode:     common
-    validate: true
-
-  # ── 直连修复 ───────────────────────────────────────────────────────────────
-  src_ms_cn:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
-    mode:     common
-    validate: true
-
-  src_ntp:
-    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
-    mode:     common
-    validate: true
-
-  src_google_fcm:
-    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
-    mode:     common
-    validate: true
-
-  src_games_cn:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
-    mode:     common
-    validate: true
-
-  src_notion:
-    url:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
-    mode:     common
-    validate: true
-
-  src_private:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
-    mode:     common
-    validate: true
-
-  src_fakeip_filter:
-    url:      https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
-    mode:     common
-    validate: true
+ALL_FORMATS = _SIMPLE_FORMATS | _DEDUPED_FORMATS
 
 
-# ──────────────────────────── 规则组 ──────────────────────────────────────────
+def build_header(
+    count: int,
+    title: str,
+    description: str,
+    now_str: str,
+    comment_char: str,
+) -> str:
+    if not title:
+        return ""
+    c = comment_char
+    parts = [f"{c} Title: {title}"]
+    if description:
+        parts.append(f"{c} Description: {description}")
+    parts.append(f"{c} Total: {count:,}")
+    parts.append(f"{c} Updated: {now_str}")
+    parts.append(c)
+    return "\n".join(parts) + "\n"
 
 
-p_proxy_tld:
-  rules:
-    - type: add
-      source:
-        - src_proxy_tld
-    - type: discard
-      domain:
-        - cn
-        - com
-        - com.cn
-        - nl
-        - co
-        - io
-        - xxx
-  output:
-    enabled: true
+def write_format(
+    fmt: str,
+    output_dir: Path,
+    sorted_simple: list,
+    sorted_deduped: list,
+    title: str,
+    description: str,
+    now_str: str,
+) -> tuple[str, int]:
+
+    def hash_hdr(count: int) -> str:
+        return build_header(count, title, description, now_str, "#")
+
+    def bang_hdr(count: int) -> str:
+        return build_header(count, title, description, now_str, "!")
+
+    # ───────── simple formats ─────────
+    if fmt == "domain":
+        count = len(sorted_simple)
+        path = output_dir / "domain.txt"
+        with path.open("w", encoding="utf-8") as f:
+            f.write("\n".join(sorted_simple) + "\n")
+        return path.name, count
+
+    if fmt == "hosts":
+        count = len(sorted_simple)
+        path = output_dir / "hosts.txt"
+        with path.open("w", encoding="utf-8") as f:
+            f.write(hash_hdr(count))
+            for domain in sorted_simple:
+                f.write(f"127.0.0.1 {domain}\n")
+        return path.name, count
+
+    if fmt == "hostsipv6":
+        count = len(sorted_simple)
+        path = output_dir / "hosts_ipv6.txt"
+        with path.open("w", encoding="utf-8") as f:
+            f.write(hash_hdr(count))
+            for domain in sorted_simple:
+                f.write(f"127.0.0.1 {domain}\n")
+                f.write(f"::1 {domain}\n")
+        return path.name, count
+
+    if fmt == "smartdns":
+        count = len(sorted_simple)
+        path = output_dir / "smartdns.txt"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_simple:
+                f.write(f"address /{domain}/#\n")
+        return path.name, count
+
+    # ───────── dedup formats ─────────
+    if fmt == "adblock":
+        count = len(sorted_deduped)
+        path = output_dir / "adblock.txt"
+        with path.open("w", encoding="utf-8") as f:
+            f.write("[Adblock Plus 2.0]\n")
+            f.write(bang_hdr(count))
+            for domain in sorted_deduped:
+                f.write(f"||{domain}^\n")
+        return path.name, count
+
+    if fmt == "clash":
+        count = len(sorted_deduped)
+        path = output_dir / "clash.yaml"
+        with path.open("w", encoding="utf-8") as f:
+            f.write("payload:\n")
+            for domain in sorted_deduped:
+                f.write(f"  - +.{domain}\n")
+        return path.name, count
+
+    if fmt == "singbox":
+        count = len(sorted_deduped)
+        path = output_dir / "singbox.json"
+        with path.open("w", encoding="utf-8") as f:
+            json.dump(
+                {"version": 3, "rules": [{"domain_suffix": sorted_deduped}]},
+                f,
+                indent=2,
+                ensure_ascii=False,
+            )
+        return path.name, count
+
+    if fmt == "wildcard":
+        count = len(sorted_deduped)
+        path = output_dir / "wildcard.txt"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_deduped:
+                f.write(f"*.{domain}\n")
+        return path.name, count
+
+    if fmt == "loon":
+        count = len(sorted_deduped)
+        path = output_dir / "loon.list"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_deduped:
+                f.write(f"DOMAIN-SUFFIX,{domain}\n")
+        return path.name, count
+
+    if fmt == "surge":
+        count = len(sorted_deduped)
+        path = output_dir / "surge.list"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_deduped:
+                f.write(f"DOMAIN-SUFFIX,{domain}\n")
+        return path.name, count
+
+    if fmt == "quantumultx":
+        count = len(sorted_deduped)
+        path = output_dir / "quantumultx.list"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_deduped:
+                f.write(f"host-suffix,{domain},reject\n")
+        return path.name, count
+
+    if fmt == "shadowrocket":
+        count = len(sorted_deduped)
+        path = output_dir / "shadowrocket.list"
+        with path.open("w", encoding="utf-8") as f:
+            f.write("[Rule]\n")
+            for domain in sorted_deduped:
+                f.write(f"DOMAIN-SUFFIX,{domain},REJECT-DROP\n")
+        return path.name, count
+
+    raise ValueError(f"未知格式：{fmt}")
 
 
-addata_white:
-  rules:
-    - type: add
-      source:
-        - src_white_heidai
-        - src_white_cats
-        - src_white_anti-AD
-        - src_white_self_list
-        - src_white_10007
-        - src_white_ublock
-        - src_white_doh_bypass
-  output:
-    enabled: true
+def main() -> None:
+    if len(sys.argv) < 6:
+        print(
+            "用法：gen_rules.py <output_dir> <title> <description> <timezone> <format1> [format2 ...]",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
-ads_hosts:
-  title: Ads Hosts
-  dedup_subdomain: false 
-  description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
-  rules:
-    - type: add
-      source:
-        - src_acl4ssr_ban_program_ad
-        - src_sm_ad
-        - src_awavenue
-        - src_awavenue_hosts
-    - type: discard
-      preset:
-        - addata_white
-    - type: add
-      source:
-        - src_hosts_supplement
-  output:
-    enabled: true
-    formats: [hosts]
+    output_dir = Path(sys.argv[1])
+    title = sys.argv[2]
+    description = sys.argv[3]
+    timezone = sys.argv[4]
+    formats = sys.argv[5:]
 
+    unknown = [f for f in formats if f not in ALL_FORMATS]
+    if unknown:
+        print(f"错误：未知格式 {unknown}，支持：{sorted(ALL_FORMATS)}", file=sys.stderr)
+        sys.exit(1)
 
-ads:
-  title: Ads
-  description: 额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。
-  rules:
-    - type: add
-      source:
-        - src_anti_ad_clash
-        - src_anti_ad_domains
-        - src_10007_auto
-        - src_10007
-        - src_oisd_small
-    - type: discard
-      preset:
-        - addata_white
-      source:
-        - src_ads_useless
-    - type: add
-      preset:
-        - ads_hosts
-  output:
-    enabled: true
-    formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns]
+    raw = sys.stdin.read()
+    if "---" in raw:
+        simple_part, deduped_part = raw.split("---", 1)
+    else:
+        simple_part = raw
+        deduped_part = ""
+
+    simple_domains = sorted(filter(None, (l.strip() for l in simple_part.splitlines())))
+    deduped_domains = sorted(filter(None, (l.strip() for l in deduped_part.splitlines())))
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    now = datetime.datetime.now(ZoneInfo(timezone))
+    now_str = now.strftime("%Y-%m-%d %H:%M:%S %Z")
+
+    counts = {}
+    for fmt in formats:
+        fname, count = write_format(
+            fmt,
+            output_dir,
+            simple_domains,
+            deduped_domains,
+            title,
+            description,
+            now_str,
+        )
+        counts[fmt] = count
+        dedup_note = "（子域去重）" if fmt in _DEDUPED_FORMATS else ""
+        print(f"  ✓ {fname}（{count:,} 条{dedup_note}）")
+
+    print(json.dumps(counts))
 
 
-proxy:
-  title: Proxy
-  description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-  rules:
-    - type: add
-      source:
-        - src_proxy_DustinWin
-        - src_proxy_lmfirefly
-        - src_proxy_blackmatrix7
-        - src_proxy_Loyalsoldier
-        - src_proxy_self_ipcheck
-        - src_proxy_tld
-      domain:
-        # DNS 测试
-        - browserleaks.net
-        - browserleaks.org
-        # Firefox 扩展商店（国内IP限制扩展安装）
-        - addons.mozilla.org
-        # 规则下载
-        - adtidy.org
-        # Poweramp（国内IP禁止访问）
-        - powerampapp.com
-        # 国内缓慢
-        - cloud.9mod.space
-        - modyolo.com
-  output:
-    enabled: true
-    formats: [clash, singbox, quantumultx, shadowrocket, surge]
-
-
-direct_fix:
-  title: Direct Fix
-  description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
-  rules:
-    - type: add
-      source:
-        - src_ms_cn
-        - src_ntp
-        - src_google_fcm
-        - src_games_cn
-        - src_notion
-        - src_private
-        - src_fakeip_filter
-      domain:
-        # Firefox
-        - firefoxcn.net
-        - firefox.com.cn
-        # 常见
-        - ipv4only.arpa
-        - example.org
-        - baidu.com
-        - ntp.org
-        # GitHub 加速
-        - jsdelivr.com
-        - jsdelivr.net
-        - ghproxy.net
-        # 时间校准
-        - time.windows.com
-        # 邮箱
-        - outlook.com
-        # 登录
-        - login.microsoftonline.com
-        - live.com
-        - live.net
-        - logincdn.msftauth.net
-        - acctcdn.msftauth.net
-        # 翻译
-        - microsofttranslator.com
-        - translate.microsoft.com
-        - api.cognitive.microsoft.com
-        - translatoruser.intl.microsoft.com
-        # Edge
-        - edge.microsoft.com
-    - type: discard_suffix
-      domain:
-        - bing.com
-        - bing.net
-  output:
-    enabled: true
-    formats: [clash, singbox, quantumultx, shadowrocket, surge]
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(130)
+    except Exception as e:
+        print(f"错误：{e}", file=sys.stderr)
+        sys.exit(1)
