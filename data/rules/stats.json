@@ -38,8 +38,7 @@
     "output_enabled": true,
     "final_count": 4332,
     "format_counts": {
-      "hosts": 4332,
-      "smartdns": 4332
+      "hosts": 4332
     },
     "source_names": [
       "src_acl4ssr_ban_program_ad",
@@ -68,7 +67,8 @@
       "singbox": 85528,
       "quantumultx": 85528,
       "shadowrocket": 85528,
-      "surge": 85528
+      "surge": 85528,
+      "smartdns": 85528
     },
     "source_names": [
       "src_10007",
