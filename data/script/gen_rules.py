@@ -113,11 +113,11 @@ def write_format(
         return path.name, count
 
     if fmt == "smartdns":
-        count = len(sorted_deduped)
+        count = len(sorted_simple)
         path = output_dir / "smartdns.txt"
         with path.open("w", encoding="utf-8") as f:
             for domain in sorted_simple:
-                f.write(f"server=/*.{domain}/#\n")
+                f.write(f"server=/{domain}/#\n")
         return path.name, count
 
     # ───────── dedup formats ─────────
