@@ -262,7 +262,7 @@ ads_hosts:
         - src_hosts_supplement
   output:
     enabled: true
-    formats: [hosts, smartdns]
+    formats: [hosts]
 
 
 ads:
@@ -286,7 +286,7 @@ ads:
         - ads_hosts
   output:
     enabled: true
-    formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge]
+    formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns]
 
 
 proxy:
