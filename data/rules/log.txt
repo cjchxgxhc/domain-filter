@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 1.43s
+下载完成：32/32 成功，耗时 1.68s
 提取外部源域名（32 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
@@ -34,7 +34,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.61s
+提取完成，耗时 1.63s
 ================================================================================
 处理规则组
 ================================================================================
@@ -50,8 +50,12 @@
   │    rules[1] 共 7 条
   │    → 精确丢弃，移除 3 条（剩余 828）
   │  处理完毕，共 828 条
-✓ domain.txt（828 条）
-  └─ 最终输出：828 条，耗时 0.07s
+[ERROR] gen_rules.py 调用失败 [p_proxy_tld]：gen_rules.py 调用失败（p_proxy_tld）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：828 条，耗时 0.15s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_white (addata_white)
 ══════════════════════════════════════════════════════════════════════
@@ -66,8 +70,12 @@
   │    rules[0] 共 18,307 条
   │    → 加入，新增 18,307 条（合计 18,307）
   │  处理完毕，共 18,307 条
-✓ domain.txt（1,818 条）
-  └─ 最终输出：18,307 条，耗时 0.09s
+[ERROR] gen_rules.py 调用失败 [addata_white]：gen_rules.py 调用失败（addata_white）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：18,307 条，耗时 0.15s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
 ══════════════════════════════════════════════════════════════════════
@@ -88,8 +96,12 @@
   │    → 加入，新增 157 条（合计 4,332）
   │  处理完毕，共 4,332 条
   │  子域去重（强制跳过）
-✓ hosts.txt（4,332 条）
-  └─ 最终输出：4,332 条，耗时 0.08s
+[ERROR] gen_rules.py 调用失败 [ads_hosts]：gen_rules.py 调用失败（ads_hosts）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：4,332 条，耗时 0.15s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads (ads)
 ══════════════════════════════════════════════════════════════════════
@@ -112,14 +124,12 @@
   │    → 加入，新增 1,761 条（合计 99,410）
   │  处理完毕，共 99,410 条
   │  子域去重：移除 13,882 条冗余子域
-✓ adblock.txt（85,528 条（子域去重））
-✓ clash.yaml（85,528 条（子域去重））
-✓ singbox.json（85,528 条（子域去重））
-✓ quantumultx.list（85,528 条（子域去重））
-✓ shadowrocket.list（85,528 条（子域去重））
-✓ surge.list（85,528 条（子域去重））
-✓ smartdns.txt（99,410 条）
-  └─ 最终输出：85,528 条，耗时 0.44s
+[ERROR] gen_rules.py 调用失败 [ads]：gen_rules.py 调用失败（ads）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：85,528 条，耗时 0.39s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
@@ -135,12 +145,12 @@
   │    → 加入，新增 37,125 条（合计 37,125）
   │  处理完毕，共 37,125 条
   │  子域去重：移除 13,991 条冗余子域
-✓ clash.yaml（24,657 条（子域去重））
-✓ singbox.json（24,657 条（子域去重））
-✓ quantumultx.list（24,657 条（子域去重））
-✓ shadowrocket.list（24,657 条（子域去重））
-✓ surge.list（24,657 条（子域去重））
-  └─ 最终输出：23,134 条，耗时 0.17s
+[ERROR] gen_rules.py 调用失败 [proxy]：gen_rules.py 调用失败（proxy）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：23,134 条，耗时 0.21s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -161,13 +171,13 @@
   │    → 后缀丢弃，移除 7 条（剩余 781）
   │  处理完毕，共 781 条
   │  子域去重：移除 36 条冗余子域
-✓ clash.yaml（745 条（子域去重））
-✓ singbox.json（745 条（子域去重））
-✓ quantumultx.list（745 条（子域去重））
-✓ shadowrocket.list（745 条（子域去重））
-✓ surge.list（745 条（子域去重））
-  └─ 最终输出：745 条，耗时 0.09s
+[ERROR] gen_rules.py 调用失败 [direct_fix]：gen_rules.py 调用失败（direct_fix）：  File "/home/runner/work/domain-filter/domain-filter/data/script/gen_rules.py", line 116
+    count = len(sorted_simple)
+    ^
+IndentationError: expected an indented block after 'if' statement on line 115
+
+  └─ 最终输出：745 条，耗时 0.16s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.04s
+✓ 处理完成！总耗时 4.55s
 ================================================================================
