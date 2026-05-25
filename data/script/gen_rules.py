@@ -16,7 +16,7 @@ stdin 格式：
     domain         domain.txt           纯域名列表（simple）
     hosts          hosts.txt            127.0.0.1 domain（simple）
     hostsipv6      hosts_ipv6.txt       127.0.0.1 + ::1 domain（simple）
-    smartdns       smartdns.txt         server=/domain/#（simple）
+    smartdns       smartdns.txt         address /domain/#（simple）
     adblock        adblock.txt          ||domain^（deduped）
     clash          clash.yaml           +.domain（deduped）
     singbox        singbox.json         domain_suffix（deduped）
@@ -113,12 +113,12 @@ def write_format(
         return path.name, count
 
     if fmt == "smartdns":
-    count = len(sorted_simple)
-    path = output_dir / "smartdns.conf"
-    with path.open("w", encoding="utf-8") as f:
-        for domain in sorted_simple:
-            f.write(f"address /{domain}/#\n")
-    return path.name, count
+        count = len(sorted_simple)
+        path = output_dir / "smartdns.txt"
+        with path.open("w", encoding="utf-8") as f:
+            for domain in sorted_simple:
+                f.write(f"address /{domain}/#\n")
+        return path.name, count
 
     # ───────── dedup formats ─────────
     if fmt == "adblock":
