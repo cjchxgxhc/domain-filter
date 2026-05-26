@@ -17,7 +17,7 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 18306,
+    "final_count": 18308,
     "format_counts": {
       "domain": 1818
     },
@@ -60,15 +60,15 @@
     "title": "Ads",
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。",
     "output_enabled": true,
-    "final_count": 85363,
+    "final_count": 85391,
     "format_counts": {
-      "adblock": 85363,
-      "clash": 85363,
-      "singbox": 85363,
-      "quantumultx": 85363,
-      "shadowrocket": 85363,
-      "surge": 85363,
-      "smartdns": 99245
+      "adblock": 85391,
+      "clash": 85391,
+      "singbox": 85391,
+      "quantumultx": 85391,
+      "shadowrocket": 85391,
+      "surge": 85391,
+      "smartdns": 99273
     },
     "source_names": [
       "src_10007",
