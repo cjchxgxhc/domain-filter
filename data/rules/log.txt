@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 1.72s
+下载完成：32/32 成功，耗时 2.53s
 提取外部源域名（32 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：165 条 [common]
@@ -13,8 +13,8 @@
   src_ads_useless：129,041 条 [skip]
   src_anti_ad_clash：106,114 条 [common]
   src_anti_ad_domains：113,704 条 [skip]
-  src_oisd_small：57,208 条 [common]
-  src_adrules_domainset：182,957 条 [skip]
+  src_oisd_small：57,436 条 [common]
+  src_adrules_domainset：183,234 条 [skip]
   src_10007_auto：13,087 条 [common]
   src_10007：17,123 条 [common]
   src_acl4ssr_ban_program_ad：989 条 [common]
@@ -22,9 +22,9 @@
   src_awavenue：905 条 [common]
   src_awavenue_hosts：895 条 [common]
   src_hosts_supplement：182 条 [common]
-  src_proxy_DustinWin：25,561 条 [common]
+  src_proxy_DustinWin：25,594 条 [common]
   src_proxy_Loyalsoldier：26,213 条 [common]
-  src_proxy_blackmatrix7：34,129 条 [common]
+  src_proxy_blackmatrix7：34,130 条 [common]
   src_proxy_lmfirefly：16,119 条 [common]
   src_proxy_self_ipcheck：7 条 [common]
   src_ms_cn：168 条 [common]
@@ -34,7 +34,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.26s
+提取完成，耗时 1.23s
 ================================================================================
 处理规则组
 ================================================================================
@@ -98,49 +98,49 @@
   │    source：113,704 条 <- src_anti_ad_domains
   │    source：13,087 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    source：57,208 条 <- src_oisd_small
-  │    rules[0] 共 142,817 条
-  │    → 加入，新增 142,817 条（合计 142,817）
+  │    source：57,436 条 <- src_oisd_small
+  │    rules[0] 共 143,047 条
+  │    → 加入，新增 143,047 条（合计 143,047）
   │  rules[1] type=discard
   │    source：129,041 条 <- src_ads_useless
   │    preset：18,308 条 <- addata_white
   │    rules[1] 共 147,311 条
-  │    → 精确丢弃，移除 45,305 条（剩余 97,512）
+  │    → 精确丢弃，移除 45,280 条（剩余 97,767）
   │  rules[2] type=add
   │    preset：4,332 条 <- ads_hosts
   │    rules[2] 共 4,332 条
-  │    → 加入，新增 1,761 条（合计 99,273）
-  │  处理完毕，共 99,273 条
+  │    → 加入，新增 1,761 条（合计 99,528）
+  │  处理完毕，共 99,528 条
   │  子域去重：移除 13,882 条冗余子域
-✓ adblock.txt（85,391 条（子域去重））
-✓ clash.yaml（85,391 条（子域去重））
-✓ singbox.json（85,391 条（子域去重））
-✓ quantumultx.list（85,391 条（子域去重））
-✓ shadowrocket.list（85,391 条（子域去重））
-✓ surge.list（85,391 条（子域去重））
-✓ smartdns.txt（99,273 条）
-  └─ 最终输出：85,391 条，耗时 0.40s
+✓ adblock.txt（85,646 条（子域去重））
+✓ clash.yaml（85,646 条（子域去重））
+✓ singbox.json（85,646 条（子域去重））
+✓ quantumultx.list（85,646 条（子域去重））
+✓ shadowrocket.list（85,646 条（子域去重））
+✓ surge.list（85,646 条（子域去重））
+✓ smartdns.txt（99,528 条）
+  └─ 最终输出：85,646 条，耗时 0.38s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：25,561 条 <- src_proxy_DustinWin
+  │    source：25,594 条 <- src_proxy_DustinWin
   │    source：16,119 条 <- src_proxy_lmfirefly
-  │    source：34,129 条 <- src_proxy_blackmatrix7
+  │    source：34,130 条 <- src_proxy_blackmatrix7
   │    source：26,213 条 <- src_proxy_Loyalsoldier
   │    source：7 条 <- src_proxy_self_ipcheck
   │    source：831 条 <- src_proxy_tld
   │    domain：7 条自定义
-  │    rules[0] 共 37,126 条
-  │    → 加入，新增 37,126 条（合计 37,126）
-  │  处理完毕，共 37,126 条
-  │  子域去重：移除 13,991 条冗余子域
-✓ clash.yaml（24,658 条（子域去重））
-✓ singbox.json（24,658 条（子域去重））
-✓ quantumultx.list（24,658 条（子域去重））
-✓ shadowrocket.list（24,658 条（子域去重））
-✓ surge.list（24,658 条（子域去重））
-  └─ 最终输出：23,135 条，耗时 0.15s
+  │    rules[0] 共 37,154 条
+  │    → 加入，新增 37,154 条（合计 37,154）
+  │  处理完毕，共 37,154 条
+  │  子域去重：移除 14,007 条冗余子域
+✓ clash.yaml（24,670 条（子域去重））
+✓ singbox.json（24,670 条（子域去重））
+✓ quantumultx.list（24,670 条（子域去重））
+✓ shadowrocket.list（24,670 条（子域去重））
+✓ surge.list（24,670 条（子域去重））
+  └─ 最终输出：23,147 条，耗时 0.14s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -169,5 +169,5 @@
   └─ 最终输出：745 条，耗时 0.07s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 3.86s
+✓ 处理完成！总耗时 4.60s
 ================================================================================
