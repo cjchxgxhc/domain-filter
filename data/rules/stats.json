@@ -17,7 +17,7 @@
     "title": "",
     "description": "",
     "output_enabled": true,
-    "final_count": 18312,
+    "final_count": 18313,
     "format_counts": {
       "domain": 1818
     },
@@ -60,15 +60,15 @@
     "title": "Ads",
     "description": "额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。",
     "output_enabled": true,
-    "final_count": 86036,
+    "final_count": 86215,
     "format_counts": {
-      "adblock": 86036,
-      "clash": 86036,
-      "singbox": 86036,
-      "quantumultx": 86036,
-      "shadowrocket": 86036,
-      "surge": 86036,
-      "smartdns": 99926
+      "adblock": 86215,
+      "clash": 86215,
+      "singbox": 86215,
+      "quantumultx": 86215,
+      "shadowrocket": 86215,
+      "surge": 86215,
+      "smartdns": 100105
     },
     "source_names": [
       "src_10007",
@@ -96,13 +96,13 @@
     "title": "Proxy",
     "description": "国内无法稳定连接、用于代理环境测试、国外TLD域名。",
     "output_enabled": true,
-    "final_count": 23148,
+    "final_count": 23149,
     "format_counts": {
-      "clash": 24671,
-      "singbox": 24671,
-      "quantumultx": 24671,
-      "shadowrocket": 24671,
-      "surge": 24671
+      "clash": 24672,
+      "singbox": 24672,
+      "quantumultx": 24672,
+      "shadowrocket": 24672,
+      "surge": 24672
     },
     "source_names": [
       "src_proxy_DustinWin",
