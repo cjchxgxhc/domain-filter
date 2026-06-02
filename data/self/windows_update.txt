@@ -1,0 +1,38 @@
+! Title: Windows 更新及安全软件更新拦截规则（仅限更新，不误伤其他功能）
+! Description: 阻止 Windows 更新/Defender、火绒、360、腾讯电脑管家的后台更新流量，适合手机共享流量时使用。不影响系统激活、证书验证、应用商店等正常功能。
+! Expires: 7 days
+! Version: 1.0
+! Last modified: 2026-06-02
+
+! ==================== Windows 更新 + Defender ====================
+||update.microsoft.com^
+||windowsupdate.com^
+||catalog.update.microsoft.com^
+||ctldl.windowsupdate.com^
+||download.windowsupdate.com^
+||delivery.mp.microsoft.com^
+||do.dsp.mp.microsoft.com^
+||dl.delivery.mp.microsoft.com^
+||fe3.delivery.mp.microsoft.com^
+||fe3.delivery.dsp.mp.microsoft.com^
+||emdl.ws.microsoft.com^
+||definitionupdates.microsoft.com^
+||forefrontdl.microsoft.com^
+||wsus.microsoft.com^
+! 如需阻止 Office 更新可取消下面一行注释，否则保留注释状态
+! ||officecdn.microsoft.com^
+
+! ==================== 火绒安全 ====================
+||down4.huorong.cn^
+||update.huorong.cn^
+
+! ==================== 360 安全卫士/杀毒 ====================
+||down.360safe.com^
+||upgrade.360safe.com^
+||sd.360.cn^
+||softm.360.cn^
+||yunji.360.cn^
+
+! ==================== 腾讯电脑管家 ====================
+||pcmgr.qq.com^
+||gj.qq.com^
