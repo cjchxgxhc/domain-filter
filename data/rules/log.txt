@@ -1,6 +1,6 @@
 开始执行域名过滤工具
 开始下载 32 个规则源...
-下载完成：32/32 成功，耗时 1.74s
+下载完成：32/32 成功，耗时 1.75s
 提取外部源域名（32 个）...
   src_proxy_tld：831 条 [common]
   src_white_heidai：168 条 [common]
@@ -9,22 +9,22 @@
   src_white_self_list：17 条 [common]
   src_white_10007：332 条 [common]
   src_white_ublock：0 条 [adblockwhite]
-  src_white_doh_bypass：17,275 条 [skip]
+  src_white_doh_bypass：17,189 条 [skip]
   src_ads_useless：129,041 条 [skip]
   src_anti_ad_clash：107,377 条 [common]
   src_anti_ad_domains：114,967 条 [skip]
-  src_oisd_small：58,270 条 [common]
-  src_adrules_domainset：179,325 条 [skip]
-  src_10007_auto：12,988 条 [common]
+  src_oisd_small：58,458 条 [common]
+  src_adrules_domainset：179,643 条 [skip]
+  src_10007_auto：13,004 条 [common]
   src_10007：17,123 条 [common]
   src_acl4ssr_ban_program_ad：989 条 [common]
   src_sm_ad：2,598 条 [common]
   src_awavenue：905 条 [common]
   src_awavenue_hosts：895 条 [common]
   src_hosts_supplement：182 条 [common]
-  src_proxy_DustinWin：25,606 条 [common]
-  src_proxy_Loyalsoldier：26,258 条 [common]
-  src_proxy_blackmatrix7：34,170 条 [common]
+  src_proxy_DustinWin：25,780 条 [common]
+  src_proxy_Loyalsoldier：26,259 条 [common]
+  src_proxy_blackmatrix7：34,173 条 [common]
   src_proxy_lmfirefly：16,119 条 [common]
   src_proxy_self_ipcheck：7 条 [common]
   src_ms_cn：168 条 [common]
@@ -34,7 +34,7 @@
   src_notion：6 条 [common]
   src_private：128 条 [common]
   src_fakeip_filter：79 条 [common]
-提取完成，耗时 1.64s
+提取完成，耗时 1.65s
 ================================================================================
 处理规则组
 ================================================================================
@@ -62,12 +62,12 @@
   │    source：17 条 <- src_white_self_list
   │    source：332 条 <- src_white_10007
   │    source：0 条 <- src_white_ublock
-  │    source：17,275 条 <- src_white_doh_bypass
-  │    rules[0] 共 18,275 条
-  │    → 加入，新增 18,275 条（合计 18,275）
-  │  处理完毕，共 18,275 条
-✓ domain.txt（1,808 条）
-  └─ 最终输出：18,275 条，耗时 0.09s
+  │    source：17,189 条 <- src_white_doh_bypass
+  │    rules[0] 共 18,189 条
+  │    → 加入，新增 18,189 条（合计 18,189）
+  │  处理完毕，共 18,189 条
+✓ domain.txt（1,805 条）
+  └─ 最终输出：18,189 条，耗时 0.09s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
 ══════════════════════════════════════════════════════════════════════
@@ -79,8 +79,8 @@
   │    rules[0] 共 4,294 条
   │    → 加入，新增 4,294 条（合计 4,294）
   │  rules[1] type=discard
-  │    preset：18,275 条 <- addata_white
-  │    rules[1] 共 18,275 条
+  │    preset：18,189 条 <- addata_white
+  │    rules[1] 共 18,189 条
   │    → 精确丢弃，移除 119 条（剩余 4,175）
   │  rules[2] type=add
   │    source：182 条 <- src_hosts_supplement
@@ -96,51 +96,51 @@
   │  rules[0] type=add
   │    source：107,377 条 <- src_anti_ad_clash
   │    source：114,967 条 <- src_anti_ad_domains
-  │    source：12,988 条 <- src_10007_auto
+  │    source：13,004 条 <- src_10007_auto
   │    source：17,123 条 <- src_10007
-  │    source：58,270 条 <- src_oisd_small
-  │    rules[0] 共 144,270 条
-  │    → 加入，新增 144,270 条（合计 144,270）
+  │    source：58,458 条 <- src_oisd_small
+  │    rules[0] 共 144,472 条
+  │    → 加入，新增 144,472 条（合计 144,472）
   │  rules[1] type=discard
   │    source：129,041 条 <- src_ads_useless
-  │    preset：18,275 条 <- addata_white
-  │    rules[1] 共 147,277 条
-  │    → 精确丢弃，移除 45,215 条（剩余 99,055）
+  │    preset：18,189 条 <- addata_white
+  │    rules[1] 共 147,191 条
+  │    → 精确丢弃，移除 45,223 条（剩余 99,249）
   │  rules[2] type=add
   │    preset：4,332 条 <- ads_hosts
   │    rules[2] 共 4,332 条
-  │    → 加入，新增 1,761 条（合计 100,816）
-  │  处理完毕，共 100,816 条
-  │  子域去重：移除 13,896 条冗余子域
-✓ adblock.txt（86,920 条（子域去重））
-✓ clash.yaml（86,920 条（子域去重））
-✓ singbox.json（86,920 条（子域去重））
-✓ quantumultx.list（86,920 条（子域去重））
-✓ shadowrocket.list（86,920 条（子域去重））
-✓ surge.list（86,920 条（子域去重））
-✓ smartdns.txt（100,816 条）
-  └─ 最终输出：86,920 条，耗时 0.44s
+  │    → 加入，新增 1,761 条（合计 101,010）
+  │  处理完毕，共 101,010 条
+  │  子域去重：移除 13,910 条冗余子域
+✓ adblock.txt（87,100 条（子域去重））
+✓ clash.yaml（87,100 条（子域去重））
+✓ singbox.json（87,100 条（子域去重））
+✓ quantumultx.list（87,100 条（子域去重））
+✓ shadowrocket.list（87,100 条（子域去重））
+✓ surge.list（87,100 条（子域去重））
+✓ smartdns.txt（101,010 条）
+  └─ 最终输出：87,100 条，耗时 0.45s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    source：25,606 条 <- src_proxy_DustinWin
+  │    source：25,780 条 <- src_proxy_DustinWin
   │    source：16,119 条 <- src_proxy_lmfirefly
-  │    source：34,170 条 <- src_proxy_blackmatrix7
-  │    source：26,258 条 <- src_proxy_Loyalsoldier
+  │    source：34,173 条 <- src_proxy_blackmatrix7
+  │    source：26,259 条 <- src_proxy_Loyalsoldier
   │    source：7 条 <- src_proxy_self_ipcheck
   │    source：831 条 <- src_proxy_tld
   │    domain：7 条自定义
-  │    rules[0] 共 37,166 条
-  │    → 加入，新增 37,166 条（合计 37,166）
-  │  处理完毕，共 37,166 条
-  │  子域去重：移除 14,011 条冗余子域
-✓ clash.yaml（24,678 条（子域去重））
-✓ singbox.json（24,678 条（子域去重））
-✓ quantumultx.list（24,678 条（子域去重））
-✓ shadowrocket.list（24,678 条（子域去重））
-✓ surge.list（24,678 条（子域去重））
-  └─ 最终输出：23,155 条，耗时 0.17s
+  │    rules[0] 共 37,342 条
+  │    → 加入，新增 37,342 条（合计 37,342）
+  │  处理完毕，共 37,342 条
+  │  子域去重：移除 14,052 条冗余子域
+✓ clash.yaml（24,813 条（子域去重））
+✓ singbox.json（24,813 条（子域去重））
+✓ quantumultx.list（24,813 条（子域去重））
+✓ shadowrocket.list（24,813 条（子域去重））
+✓ surge.list（24,813 条（子域去重））
+  └─ 最终输出：23,290 条，耗时 0.18s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -166,8 +166,8 @@
 ✓ quantumultx.list（749 条（子域去重））
 ✓ shadowrocket.list（749 条（子域去重））
 ✓ surge.list（749 条（子域去重））
-  └─ 最终输出：749 条，耗时 0.09s
+  └─ 最终输出：749 条，耗时 0.10s
 ✓ stats.json 已写出：data/rules/stats.json
 ================================================================================
-✓ 处理完成！总耗时 4.38s
+✓ 处理完成！总耗时 4.44s
 ================================================================================
