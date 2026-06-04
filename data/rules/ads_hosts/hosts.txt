@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
-# Total: 4,276
-# Updated: 2026-06-05 00:24:08 CST
+# Total: 4,300
+# Updated: 2026-06-05 06:21:27 CST
 #
 127.0.0.1 01.adnxs.com
 127.0.0.1 1.letvlive.com
@@ -121,6 +121,7 @@
 127.0.0.1 92x.tumblr.com
 127.0.0.1 99cases.oceanengine.com
 127.0.0.1 9ec126.d2api.shuzilm.cn
+127.0.0.1 9zadx.com
 127.0.0.1 a-dxk.play.api.3g.youku.com
 127.0.0.1 a-support.applovin.com
 127.0.0.1 a-usa.applovin.com
@@ -402,6 +403,7 @@
 127.0.0.1 ads.gmodules.com
 127.0.0.1 ads.google.cn
 127.0.0.1 ads.google.com
+127.0.0.1 ads.heytapmobi.com
 127.0.0.1 ads.house365.com
 127.0.0.1 ads.huan.tv
 127.0.0.1 ads.huantest.com
@@ -554,6 +556,7 @@
 127.0.0.1 advertpay.vip.xunlei.com
 127.0.0.1 advice-ads.s3.amazonaws.com
 127.0.0.1 adview.cn
+127.0.0.1 adwanji.com
 127.0.0.1 adx-ad-prod.wkanx.com
 127.0.0.1 adx-ad.smart-tv.cn
 127.0.0.1 adx-api.jinmo.tech
@@ -1028,8 +1031,10 @@
 127.0.0.1 bi.gameley.com
 127.0.0.1 bi.inmobi.cn
 127.0.0.1 bianxian.com
+127.0.0.1 bid-adx.bjqiyue.com.cn
 127.0.0.1 bid-adx.vlion.cn
 127.0.0.1 bid.g.doubleclick.net
+127.0.0.1 bid.hs.lingjuad.com
 127.0.0.1 bid.luciabid.com
 127.0.0.1 bidder.tradplusad.com
 127.0.0.1 bidmad.adop.cc
@@ -1641,6 +1646,7 @@
 127.0.0.1 e.aa985.cn
 127.0.0.1 e.ad.xiaomi.com
 127.0.0.1 e.ads.cn.miaozhen.com
+127.0.0.1 e.api.adwanji.com
 127.0.0.1 e.baidu.cn
 127.0.0.1 e.baidu.com
 127.0.0.1 e.cn.miaozhen.com
@@ -1778,6 +1784,7 @@
 127.0.0.1 ftp.shuzilm.cn
 127.0.0.1 fumiad.dxys.pro
 127.0.0.1 funds.iapp.jiguang.cn
+127.0.0.1 funlinkads.com
 127.0.0.1 funshion-mipdx.cn.miaozhen.com
 127.0.0.1 fuwu.oceanengine.com
 127.0.0.1 fvalid.appsflyer.com
@@ -1871,6 +1878,7 @@
 127.0.0.1 gimg.baidu.com
 127.0.0.1 gj.mmstat.com
 127.0.0.1 gjfzpt.cn
+127.0.0.1 glitchtip.jgeek00.com
 127.0.0.1 global.adserver.yahoo.com
 127.0.0.1 globalapi.ad.xiaomi.com
 127.0.0.1 gm.gds.mmstat.com
@@ -2088,6 +2096,7 @@
 127.0.0.1 image-ad.sm.cn
 127.0.0.1 image.gentags.com
 127.0.0.1 image.hpplay.cn
+127.0.0.1 image.uczzd.cn
 127.0.0.1 imageads.codoon.com
 127.0.0.1 imageplus.baidu.cn
 127.0.0.1 imageplus.baidu.com
@@ -2141,6 +2150,7 @@
 127.0.0.1 init.supersonicads.com
 127.0.0.1 inner-million-api.aiclk.com
 127.0.0.1 inner.baihemob.com
+127.0.0.1 inner.lovefree.cc
 127.0.0.1 inner.shunchangzhixing.com
 127.0.0.1 install.kugou.com
 127.0.0.1 install2.kugou.com
@@ -2165,6 +2175,7 @@
 127.0.0.1 iqiyi.irs01.com
 127.0.0.1 iqiyi.m.cn.miaozhen.com
 127.0.0.1 ir-na.amazon-adsystem.com
+127.0.0.1 ir-sdk.dun.163.com
 127.0.0.1 ir.jiguang.cn
 127.0.0.1 ir.mail.126.com
 127.0.0.1 ir.mail.yeah.net
@@ -2284,6 +2295,7 @@
 127.0.0.1 lh3.googleadsserving.cn
 127.0.0.1 lianmeng.360.cn
 127.0.0.1 license.vod2.myqcloud.com
+127.0.0.1 lingjuad.com
 127.0.0.1 linkeye.ximalaya.com
 127.0.0.1 litchiads.com
 127.0.0.1 live-api.hktvmall.com
@@ -2357,6 +2369,7 @@
 127.0.0.1 log.vcgame.cn
 127.0.0.1 log.web.kugou.com
 127.0.0.1 log.wifi.com
+127.0.0.1 log.yayaad.com
 127.0.0.1 log.zijieapi.com
 127.0.0.1 log1.17173.com
 127.0.0.1 log2.air.yoyi.com.cn
@@ -2371,6 +2384,7 @@
 127.0.0.1 logs.ads.vungle.com
 127.0.0.1 logs.amap.com
 127.0.0.1 logs.umeng.com
+127.0.0.1 logsdata.cxkfwn.com
 127.0.0.1 logservice.hicloud.com
 127.0.0.1 logservice1.hicloud.com
 127.0.0.1 logstat.t.sfht.com
@@ -2450,6 +2464,7 @@
 127.0.0.1 md-cfg-u1.ubixioe.com
 127.0.0.1 md-data-u1.ubixioe.com
 127.0.0.1 mdc.meitustat.com
+127.0.0.1 mdp-usertrace-cn.heytapdownload.com
 127.0.0.1 mdsp.vlion.cn
 127.0.0.1 me.xdrig.com
 127.0.0.1 media.admob.com
@@ -2706,6 +2721,7 @@
 127.0.0.1 open.phone.igexin.com
 127.0.0.1 open.talk.igexin.com
 127.0.0.1 open.umeng.com
+127.0.0.1 openadapi.bjqiyue.com.cn
 127.0.0.1 openadapi.fancydsp.com
 127.0.0.1 openapi-gy.getui.com
 127.0.0.1 openapi-news.meizu.com
@@ -3084,6 +3100,7 @@
 127.0.0.1 s.baidu.com
 127.0.0.1 s.cnzz.com
 127.0.0.1 s.domob.cn
+127.0.0.1 s.funlinkads.com
 127.0.0.1 s.irs03.com
 127.0.0.1 s.jpush.cn
 127.0.0.1 s.mic.mob.com
@@ -3313,6 +3330,7 @@
 127.0.0.1 sdkci.sigmob.com
 127.0.0.1 sdkclick.mobile.sina.cn
 127.0.0.1 sdkconf.avlyun.com
+127.0.0.1 sdkconf.hs.lingjuad.com
 127.0.0.1 sdkconfig.ad.intl.xiaomi.com
 127.0.0.1 sdkconfig.ad.xiaomi.com
 127.0.0.1 sdkconfig.play.aiseet.atianqi.com
@@ -3343,6 +3361,7 @@
 127.0.0.1 securepubads.g.doubleclick.net
 127.0.0.1 security.browser.miui.com
 127.0.0.1 sensors-log.dongqiudi.com
+127.0.0.1 sentry.io
 127.0.0.1 sentry.music.163.com
 127.0.0.1 ser.5tmovice.com
 127.0.0.1 server.m.pp.cn
@@ -3404,6 +3423,7 @@
 127.0.0.1 sitemonitor.cn.miaozhen.com
 127.0.0.1 skadsdk.appsflyer.com
 127.0.0.1 skdisplay.jd.com
+127.0.0.1 sl.hs.lingjuad.com
 127.0.0.1 slb-p2p.vcloud.ks-live.com
 127.0.0.1 slog.sina.com.cn
 127.0.0.1 sm.domob.cn
@@ -3514,6 +3534,7 @@
 127.0.0.1 statichf.shihuocdn.cn
 127.0.0.1 statics.woozooo.com
 127.0.0.1 staticxx.facebook.com
+127.0.0.1 statis.9zadx.com
 127.0.0.1 stats-ipv6.jpush.cn
 127.0.0.1 stats.appsflyer.com
 127.0.0.1 stats.autohome.com.cn
@@ -3587,7 +3608,9 @@
 127.0.0.1 t.cr-nielsen.com
 127.0.0.1 t.dangdang.com
 127.0.0.1 t.dentsuchina.cn
+127.0.0.1 t.funlinkads.com
 127.0.0.1 t.growingio.com
+127.0.0.1 t.hs.lingjuad.com
 127.0.0.1 t.l.qq.com
 127.0.0.1 t.pg.cn.miaozhen.com
 127.0.0.1 t.teads.tv
@@ -3759,6 +3782,7 @@
 127.0.0.1 truth.qchannel03.cn
 127.0.0.1 ts.crwdcntrl.net
 127.0.0.1 tsis-ipv6.jpush.cn
+127.0.0.1 tt.x.optimized-ai.com
 127.0.0.1 tui.cnzz.com
 127.0.0.1 tui.weibo.com
 127.0.0.1 tuia-adx-web.tuia.cn
