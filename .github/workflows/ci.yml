@@ -160,12 +160,6 @@ jobs:
           done
           echo "✓ 编译 $count 个 SRS 文件"
 
-      # ── 4. 生成 README ────────────────────────────────────────────────────────
-      - name: Generate README
-        run: |
-          python data/script/gen_readme.py
-          echo "✓ gen_readme.py 完成"
-
       # ── 检查变更 ──────────────────────────────────────────────────────────────
       - name: Check for changes
         id: check_changes
