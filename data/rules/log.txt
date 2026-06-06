@@ -1,9 +1,9 @@
 开始执行
 开始下载 31 个规则源...
-下载完成：31/31 成功，耗时 1.68s
+下载完成：31/31 成功，耗时 1.75s
 提取域名（31 个源）...
   src_proxy_tld：0 条 [skip]
-提取完成，耗时 1.78s
+提取完成，耗时 1.70s
 ================================================================================
 处理规则组
 ================================================================================
@@ -30,13 +30,13 @@
   │    url：20 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
   │    url：332 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
   │    url：2,836 <- https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-  │    url：17,026 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
-  │    共 20,391 条
-  │    → 加入 20,391（合计 20,391）
-  │  完毕，共 20,391 条
+  │    url：17,003 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+  │    共 20,368 条
+  │    → 加入 20,368（合计 20,368）
+  │  完毕，共 20,368 条
   │  子域去重：移除 1,161
-  ✓ adblockwhite.txt（19,230 条（去重））
-  └─ 输出 19,230 条，耗时 0.09s
+  ✓ adblockwhite.txt（19,207 条（去重））
+  └─ 输出 19,207 条，耗时 0.09s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
 ══════════════════════════════════════════════════════════════════════
@@ -48,8 +48,8 @@
   │    共 4,294 条
   │    → 加入 4,294（合计 4,294）
   │  rules[1] type=discard
-  │    @addata_white：20,391
-  │    共 20,391 条
+  │    @addata_white：20,368
+  │    共 20,368 条
   │    → 精确丢弃 177（剩余 4,117）
   │  rules[2] type=add
   │    url：206 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
@@ -67,50 +67,50 @@
   │    url：112,927 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
   │    url：13,004 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
   │    url：17,123 <- https://raw.githubusercontent.com/lingeringsound/10007/main/all
-  │    url：58,880 <- https://small.oisd.nl/
-  │    共 142,342 条
-  │    → 加入 142,342（合计 142,342）
+  │    url：58,966 <- https://small.oisd.nl/
+  │    共 142,428 条
+  │    → 加入 142,428（合计 142,428）
   │  rules[1] type=discard
-  │    @addata_white：20,391
+  │    @addata_white：20,368
   │    @p_proxy_tld：0
   │    url：129,041 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
-  │    共 149,395 条
-  │    → 精确丢弃 45,321（剩余 97,021）
+  │    共 149,372 条
+  │    → 精确丢弃 45,299（剩余 97,129）
   │  rules[2] type=add
   │    @ads_hosts：4,300
   │    共 4,300 条
-  │    → 加入 1,790（合计 98,811）
-  │  完毕，共 98,811 条
+  │    → 加入 1,790（合计 98,919）
+  │  完毕，共 98,919 条
   │  子域去重：移除 13,898
-  ✓ adblock.txt（84,913 条（去重））
-  ✓ clash.yaml（84,913 条（去重））
-  ✓ singbox.json（84,913 条（去重））
-  ✓ quantumultx.list（84,913 条（去重））
-  ✓ shadowrocket.list（84,913 条（去重））
-  ✓ surge.list（84,913 条（去重））
-  ✓ smartdns.conf（84,913 条（去重））
-  └─ 输出 84,913 条，耗时 0.40s
+  ✓ adblock.txt（85,021 条（去重））
+  ✓ clash.yaml（85,021 条（去重））
+  ✓ singbox.json（85,021 条（去重））
+  ✓ quantumultx.list（85,021 条（去重））
+  ✓ shadowrocket.list（85,021 条（去重））
+  ✓ surge.list（85,021 条（去重））
+  ✓ smartdns.conf（85,021 条（去重））
+  └─ 输出 85,021 条，耗时 0.36s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：25,783 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-  │    url：26,434 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+  │    url：25,811 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：26,438 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   │    url：34,345 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   │    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    named：0 <- src_proxy_tld
   │    domain：7 条自定义
-  │    共 36,511 条
-  │    → 加入 36,511（合计 36,511）
-  │  完毕，共 36,511 条
-  │  子域去重：移除 6,559
-  ✓ clash.yaml（29,952 条（去重））
-  ✓ singbox.json（29,952 条（去重））
-  ✓ quantumultx.list（29,952 条（去重））
-  ✓ shadowrocket.list（29,952 条（去重））
-  ✓ surge.list（29,952 条（去重））
-  └─ 输出 29,952 条，耗时 0.14s
+  │    共 36,542 条
+  │    → 加入 36,542（合计 36,542）
+  │  完毕，共 36,542 条
+  │  子域去重：移除 6,561
+  ✓ clash.yaml（29,981 条（去重））
+  ✓ singbox.json（29,981 条（去重））
+  ✓ quantumultx.list（29,981 条（去重））
+  ✓ shadowrocket.list（29,981 条（去重））
+  ✓ surge.list（29,981 条（去重））
+  └─ 输出 29,981 条，耗时 0.13s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -141,5 +141,5 @@
 生成 README
 ================================================================================
 ================================================================================
-✓ 完成，总耗时 4.20s
+✓ 完成，总耗时 4.15s
 ================================================================================
