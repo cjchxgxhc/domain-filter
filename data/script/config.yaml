@@ -1,6 +1,6 @@
-# ╔══════════════════════════════════════════════════════════════════════════╗
-# ║                         Domain Filter 配置文件                          ║
-# ╚══════════════════════════════════════════════════════════════════════════╝
+# ╔═════════════════════════════════════════════════════════════════════════╗
+# ║                         Domain Filter 配置文件                                                                            ║
+# ╚═════════════════════════════════════════════════════════════════════════╝
 #
 # 规则类型（type）说明：
 #   add            → 将规则域名并入当前集合
@@ -43,30 +43,19 @@ global:
 
 
 # ──────────────────────────── 外部源定义 ──────────────────────────────────────
-# 仅需在多个规则组中复用的源才在此命名；单次使用的源直接内联到 rules 里
 
 sources:
-  # 被 p_proxy_tld 和 proxy 两个组共用
   src_proxy_tld:
     url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
-    mode: skip
+    mode: common
     validate: false
 
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
-
-p_proxy_tld:
-  rules:
-    - type: add
-      source: [src_proxy_tld]
-    - type: discard
-      domain: [cn, com, com.cn, nl, co, io, xxx]
-
-
 addata_white:
   title: Ads White
   description: 广告白名单列表。
-  formats: [adblockwhite]
+  formats: [domain, wildcard]
   rules:
     - type: add
       source:
@@ -74,25 +63,37 @@ addata_white:
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/Adaway_white_list.prop
-        - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
 
+
+addata_need_removed:
+  rules:
+    - type: add
+      source: [src_proxy_tld]
+    - type: discard
+      domain: [cn, com, com.cn, nl, co, io, xxx]
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
 
 ads_hosts:
   title: Ads Hosts
-  description: 自用的轻量规则，包含SMAdHosts（部分）、acl4ssr、秋风规则，去除白名单。
-  dedup_subdomain: false
-  formats: [hosts]
+  description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
+  formats: [hosts, domain, wildcard, adblock]
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
         - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
     - type: discard
       source: ["@addata_white"]
+    - type: discard_suffix
+      source: ["@addata_need_removed"]
     - type: add
       source:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
@@ -100,22 +101,17 @@ ads_hosts:
 
 ads:
   title: Ads
-  description: 额外收录10007、anti-AD、oisd(small)规则，去除白名单和冗余域名。
-  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns]
+  description: 额外收录一些国外域名，去除白名单，代理软件使用。
+  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-        - https://raw.githubusercontent.com/lingeringsound/10007/main/all
-        - https://small.oisd.nl/
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt
+        - https://small.oisd.nl
     - type: discard
-      source:
-        - "@addata_white"
-        - "@p_proxy_tld"
-        - url: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
-          validate: false
+      source: ["@addata_white"]
+    - type: discard_suffix
+      source: ["@addata_need_removed"]
     - type: add
       source: ["@ads_hosts"]
 
@@ -123,7 +119,7 @@ ads:
 proxy:
   title: Proxy
   description: 国内无法稳定连接、用于代理环境测试、国外TLD域名。
-  formats: [clash, singbox, quantumultx, shadowrocket, surge]
+  formats: [clash, singbox, quantumultx, shadowrocket, surge, domain, wildcard]
   rules:
     - type: add
       source:
@@ -146,7 +142,7 @@ proxy:
 direct_fix:
   title: Direct Fix
   description: 国内连接状态好、代理可能出现问题域名，要优先于proxy组。
-  formats: [clash, singbox, quantumultx, shadowrocket, surge]
+  formats: [clash, singbox, quantumultx, shadowrocket, surge, domain, wildcard]
   rules:
     - type: add
       source:
