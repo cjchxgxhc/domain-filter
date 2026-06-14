@@ -58,6 +58,10 @@ host-suffix,30.172.in-addr.arpa,reject
 host-suffix,31.172.in-addr.arpa,reject
 host-suffix,3304399.com,reject
 host-suffix,3304399.net,reject
+host-suffix,37.com,reject
+host-suffix,37.com.cn,reject
+host-suffix,37wan.net,reject
+host-suffix,37wanimg.com,reject
 host-suffix,3839.com,reject
 host-suffix,3839apk.com,reject
 host-suffix,3839app.com,reject
@@ -256,11 +260,13 @@ host-suffix,brawlstars.cn,reject
 host-suffix,build.microsoft.com,reject
 host-suffix,buke999.com,reject
 host-suffix,bx1k.com,reject
+host-suffix,cbjq.com,reject
 host-suffix,ccspeed.cn,reject
 host-suffix,cdn.marketplaceimages.windowsphone.com,reject
 host-suffix,cdn.nintendo.net,reject
 host-suffix,cdncl.net,reject
 host-suffix,cegid-cloud.cn,reject
+host-suffix,changyou.com,reject
 host-suffix,chinacloud-mobile.cn,reject
 host-suffix,chinacloudapi.cn,reject
 host-suffix,chinacloudapp.cn,reject
@@ -272,6 +278,7 @@ host-suffix,cn.windowssearch.com,reject
 host-suffix,codm.com,reject
 host-suffix,cowlevel.net,reject
 host-suffix,ctldl.windowsupdate.com,reject
+host-suffix,cy.com,reject
 host-suffix,d.f.ip6.arpa,reject
 host-suffix,dcg.microsoft.com,reject
 host-suffix,devblogs.microsoft.com,reject
@@ -542,6 +549,7 @@ host-suffix,pbiwebcontent.cn,reject
 host-suffix,peiluyou.com,reject
 host-suffix,phicomm.me,reject
 host-suffix,phira.cn,reject
+host-suffix,playcool.com,reject
 host-suffix,plex.direct,reject
 host-suffix,powerapps.cn,reject
 host-suffix,powerappsportals.cn,reject
@@ -580,6 +588,9 @@ host-suffix,scid.cn,reject
 host-suffix,scsentry.cn,reject
 host-suffix,sdo.com,reject
 host-suffix,sdx.microsoft.com,reject
+host-suffix,seasungames.cn,reject
+host-suffix,seasungames.com,reject
+host-suffix,seasunwbl.com,reject
 host-suffix,setmeup.arubanetworks.com,reject
 host-suffix,sharepoint.cn,reject
 host-suffix,shark007.net,reject
@@ -622,6 +633,7 @@ host-suffix,tcfmglobal.com,reject
 host-suffix,tencent-gcloud.com,reject
 host-suffix,tencentstart.com,reject
 host-suffix,tendawifi.com,reject
+host-suffix,testplus.cn,reject
 host-suffix,texasholdemcup.cn,reject
 host-suffix,texasholdemcup.com,reject
 host-suffix,texasholdemcup.net,reject
@@ -717,8 +729,11 @@ host-suffix,xboxlive.cn,reject
 host-suffix,xhlsgs.com,reject
 host-suffix,xiami.com,reject
 host-suffix,xinwuji.com,reject
+host-suffix,xishanju.com,reject
 host-suffix,xn--owtw8cc49ajfl.cn,reject
 host-suffix,xnotify.xboxlive.com,reject
+host-suffix,xoyo.com,reject
+host-suffix,xoyocdn.com,reject
 host-suffix,xunyou.com,reject
 host-suffix,xunyou.mobi,reject
 host-suffix,xxghh.biz,reject
