@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 7,979
-# Updated: 2026-06-21 06:07:24 CST
+# Total: 7,993
+# Updated: 2026-06-22 06:15:00 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -105,6 +105,7 @@
 127.0.0.1 192168.luyouwang.com
 127.0.0.1 1a839d.api1.shuzilm.cn
 127.0.0.1 1alog.umeng.com
+127.0.0.1 1fw35mn5y7h-sdk.rum.aliyuncs.com
 127.0.0.1 1hlahoc4rpc-sdk.rum.aliyuncs.com
 127.0.0.1 1hte.xdplt.com
 127.0.0.1 1l1.cc
@@ -161,6 +162,7 @@
 127.0.0.1 2ztav5r7r.com
 127.0.0.1 3.5646.cn
 127.0.0.1 3.cjcp.cn
+127.0.0.1 3.ssqzj.com
 127.0.0.1 301848.com
 127.0.0.1 3135.oadz.com
 127.0.0.1 32.huanqiu.com
@@ -197,6 +199,7 @@
 127.0.0.1 511a.cn
 127.0.0.1 51240.com
 127.0.0.1 5166.info
+127.0.0.1 518ad.com
 127.0.0.1 51taifu.com
 127.0.0.1 51xuex.com.cn
 127.0.0.1 51yes.com
@@ -243,13 +246,6 @@
 127.0.0.1 7dot.cn
 127.0.0.1 7s7bvoungt.com
 127.0.0.1 7s8z7w24u.com
-127.0.0.1 7u2gej.com1.z0.glb.clouddn.com
-127.0.0.1 7u2ss1.com1.z0.glb.clouddn.com
-127.0.0.1 7vzmoi.com1.z0.glb.clouddn.com
-127.0.0.1 7xi9g1.com1.z0.glb.clouddn.com
-127.0.0.1 7xjob4.com1.z0.glb.clouddn.com
-127.0.0.1 7xo4q8.com1.z0.glb.clouddn.com
-127.0.0.1 7xsqvb.com1.z0.glb.clouddn.com
 127.0.0.1 8168974.fls.doubleclick.net
 127.0.0.1 8181zx.com
 127.0.0.1 81bkkx81zd.com
@@ -353,7 +349,6 @@
 127.0.0.1 aa.analog.com
 127.0.0.1 aa.birdgesdk.com
 127.0.0.1 aa.toponad.com
-127.0.0.1 aa67678156.com
 127.0.0.1 aads.shuzilm.cn
 127.0.0.1 aaid.umeng.com
 127.0.0.1 aaid.uyunad.com
@@ -378,7 +373,6 @@
 127.0.0.1 abodevra.com
 127.0.0.1 abody.39.net
 127.0.0.1 abroad-ad.kingsoft-office-service.com
-127.0.0.1 abroad-ad.kingsoft-office-service.com.dns.wps.com
 127.0.0.1 abroad-sdk-push.hiaiabc.com
 127.0.0.1 abroad.api.comm.intl.miui.com
 127.0.0.1 abroadad.cache.wpscdn.com
@@ -453,6 +447,7 @@
 127.0.0.1 ad-host-backup-europe.s3.eu-central-1.amazonaws.com
 127.0.0.1 ad-incentive.ximalaya.com
 127.0.0.1 ad-log-upload-os.hoyoverse.com
+127.0.0.1 ad-material.ys7.com
 127.0.0.1 ad-monitor.sh9130.com
 127.0.0.1 ad-plus.cn
 127.0.0.1 ad-r.soulapp.cn
@@ -816,6 +811,7 @@
 127.0.0.1 ads3-normal-lq.zijieapi.com.queniuiq.com
 127.0.0.1 ads3-normal-lq.zijieapi.com.w.cdngslb.com
 127.0.0.1 ads3-normal.zijieapi.com
+127.0.0.1 ads3-normal.zijieapi.com.queniusz.com
 127.0.0.1 ads360.cn
 127.0.0.1 ads5-normal-hj.zijieapi.com
 127.0.0.1 ads5-normal-hl.zijieapi.com
@@ -1580,6 +1576,7 @@
 127.0.0.1 as-datareceiver.aki-game.net
 127.0.0.1 as.aplus.pptv.com
 127.0.0.1 as.baidu.com
+127.0.0.1 as.weixin.qq.com
 127.0.0.1 as1.m.hao123.com
 127.0.0.1 as1.wenku.baidu.com
 127.0.0.1 asdkd.tutuapp.com
@@ -1660,6 +1657,7 @@
 127.0.0.1 audience-164723144.us-east-1.elb.amazonaws.com
 127.0.0.1 auth-em.hismarttv.com
 127.0.0.1 auth-eu.hismarttv.com
+127.0.0.1 auth-jp.hismarttv.com
 127.0.0.1 auth-launcher-em.hismarttv.com
 127.0.0.1 auth-launcher-eu.hismarttv.com
 127.0.0.1 auth-launcher-jp.hismarttv.com
@@ -1729,6 +1727,7 @@
 127.0.0.1 baidustatic.com
 127.0.0.1 baifen.music.baidu.com
 127.0.0.1 baifendian.com
+127.0.0.1 baminw.com.cn
 127.0.0.1 banana.le.com
 127.0.0.1 banners.appsflyer.com
 127.0.0.1 baobao.getui.com
@@ -2110,11 +2109,8 @@
 127.0.0.1 ce10aa.d2api.shuzilm.cn
 127.0.0.1 ce3e75d5-ipv6.jpush.cn
 127.0.0.1 ce3e75d5.jpush.cn
-127.0.0.1 ce71jubc2.com
 127.0.0.1 cee1.iteye.com
 127.0.0.1 cellinfo.tingyun.com
-127.0.0.1 cengqinglin.cn
-127.0.0.1 centralstylemarket.shop
 127.0.0.1 cesule.tingyun.com
 127.0.0.1 cf.getui.com
 127.0.0.1 cfg-cdn.aiclk.com
@@ -2312,6 +2308,7 @@
 127.0.0.1 cnzz.cn
 127.0.0.1 cnzz.com
 127.0.0.1 cnzz.comw.cnzz.com
+127.0.0.1 co-domaincfg.vivoglobal.com
 127.0.0.1 co-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 co-st-sl.vivoglobal.com
 127.0.0.1 co-timesync.vivoglobal.com
@@ -2957,6 +2954,7 @@
 127.0.0.1 eu-onrt-stsdk.vivoglobal.com
 127.0.0.1 eu-ort-stsdk.vivoglobal.com
 127.0.0.1 eu-p.vivoglobal.com
+127.0.0.1 eu-pnrt-stsdk.vivoglobal.com
 127.0.0.1 eu-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 eu-st-sl.vivoglobal.com
 127.0.0.1 eu-stsdk.vivoglobal.com
@@ -3032,6 +3030,7 @@
 127.0.0.1 f1.ichong123.com
 127.0.0.1 f1.webshare.mob.com
 127.0.0.1 f2.mob.com
+127.0.0.1 f8ds5tkidk-sdk.rum.aliyuncs.com
 127.0.0.1 fac2.oadz.com
 127.0.0.1 facai383.oss-cn-guangzhou.aliyuncs.com
 127.0.0.1 faceviro.shop
@@ -3430,7 +3429,6 @@
 127.0.0.1 gw.mediation.unity3d.com
 127.0.0.1 gw5.push.mcp.weibo.cn
 127.0.0.1 gw7jpuouik.com
-127.0.0.1 gwrtdp-tn690bfadt.tclclouds.com
 127.0.0.1 gxbnp.cn
 127.0.0.1 gxbr.cnzz.com
 127.0.0.1 gxgbvmg.cn
@@ -3460,6 +3458,7 @@
 127.0.0.1 h-adashx4ae.ut.taobao.com
 127.0.0.1 h-adashx4id.ut.taobao.com
 127.0.0.1 h-adashx4sg.ut.taobao.com
+127.0.0.1 h.baminw.cn
 127.0.0.1 h.trace.qq.com
 127.0.0.1 h1.kukuw.com
 127.0.0.1 h1.wk2.com
@@ -3985,6 +3984,7 @@
 127.0.0.1 jjjcyjj.cn
 127.0.0.1 jk.c.sdk.kwad.com
 127.0.0.1 jknrwe.cn
+127.0.0.1 jlwz.cn
 127.0.0.1 jmp-inner.tradplusad.com
 127.0.0.1 jnat.getui.com
 127.0.0.1 job.getui.com
@@ -4141,6 +4141,7 @@
 127.0.0.1 ky595images.com
 127.0.0.1 kychq.cn
 127.0.0.1 kz-onrt-stsdk.vivoglobal.com
+127.0.0.1 kz-ort-stsdk.vivoglobal.com
 127.0.0.1 kz-vcode-od.vivoglobal.com
 127.0.0.1 kzchyhr.cn
 127.0.0.1 kzki21j8f6.com
@@ -4417,6 +4418,7 @@
 127.0.0.1 logservice-dra.platform.hicloud.com
 127.0.0.1 logservice-dre.platform.dbankcloud.cn
 127.0.0.1 logservice-dre.platform.dbankcloud.com
+127.0.0.1 logservice-dre.platform.hicloud.com
 127.0.0.1 logservice-rtm.agora.io
 127.0.0.1 logservice.agora.io
 127.0.0.1 logservice.dbankcloud.cn
@@ -4629,6 +4631,7 @@
 127.0.0.1 metrics.mathworks.cn
 127.0.0.1 metrics.mzstatic.com
 127.0.0.1 metrics.rolex.cn
+127.0.0.1 metrics.yy.com
 127.0.0.1 metrics1-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics1-drcn.dt.dbankcloud.com
 127.0.0.1 metrics1.data.dbankcloud.cn
@@ -4942,7 +4945,6 @@
 127.0.0.1 nlzyp.cn
 127.0.0.1 nmetrics.samsung.com
 127.0.0.1 nmlastcallluxury.com
-127.0.0.1 nnocsin.cn
 127.0.0.1 notes-analytics-events.apple.com
 127.0.0.1 noti-asia.adsmoloco.com
 127.0.0.1 notice.game.xiaomi.com
@@ -5068,6 +5070,7 @@
 127.0.0.1 openapi-gy.getui.com
 127.0.0.1 openapi-news.meizu.com
 127.0.0.1 openapi-smsp.getui.com
+127.0.0.1 openapi.vip.ptqy.gitv.tv
 127.0.0.1 openapi.yoyi.com.cn
 127.0.0.1 openinstall.io
 127.0.0.1 openjmacs.m.taobao.com
@@ -5075,7 +5078,6 @@
 127.0.0.1 openlog.tapapis.com
 127.0.0.1 openmonitor.alipay-eco.com
 127.0.0.1 openmonitor.alipay.com
-127.0.0.1 openpl.shop
 127.0.0.1 openrcv.baidu.com
 127.0.0.1 opensdk.wlanbanlv.com
 127.0.0.1 oplus.cnzz.com
@@ -5109,6 +5111,7 @@
 127.0.0.1 otme.cn
 127.0.0.1 ott-v0-al.data.mgtv.com
 127.0.0.1 ott.v1.data.mgtv.com
+127.0.0.1 ottl7-l2.pandora.xiaomi.com
 127.0.0.1 oumax.oupeng.com
 127.0.0.1 ouplog.umeng.com
 127.0.0.1 ouqo05161luj.com
@@ -5168,6 +5171,7 @@
 127.0.0.1 p3-be-pack-sign.pglstatp-toutiao.com
 127.0.0.1 p3-lm.adkwai.com
 127.0.0.1 p3-tt.byteimg.com
+127.0.0.1 p3.zbjimg.com
 127.0.0.1 p33-ad.adkwai.com
 127.0.0.1 p4-be-pack-sign.pglstatp-toutiao.com
 127.0.0.1 p4psearch.china.alibaba.com
@@ -5210,12 +5214,14 @@
 127.0.0.1 partner.oceanengine.com
 127.0.0.1 partner.toutiao.com
 127.0.0.1 partnerad.l.doubleclick.net
+127.0.0.1 partnerad.l.google.com
 127.0.0.1 partnerads.ysm.yahoo.com
 127.0.0.1 partnerboost.com
 127.0.0.1 partnership.oceanengine.com
 127.0.0.1 passport.acla.org.cn
 127.0.0.1 passport.umeng.com
 127.0.0.1 patriot.cs.pp.cn
+127.0.0.1 pay.aqiu6.com
 127.0.0.1 pay.mobile.sina.cn
 127.0.0.1 pay.sboot.cn
 127.0.0.1 payment.yodo1api.com
@@ -5243,6 +5249,7 @@
 127.0.0.1 pcpop.com
 127.0.0.1 pcstat.kugou.com
 127.0.0.1 pcstatbak.kugou.com
+127.0.0.1 pcupd.com
 127.0.0.1 pcweb.v1.mgtv.com
 127.0.0.1 pd.ads.cn.miaozhen.com
 127.0.0.1 pdfxd.com
@@ -5737,6 +5744,7 @@
 127.0.0.1 ru-onrt-stsdk.vivoglobal.com
 127.0.0.1 ru-os-config-appstore.vivoglobal.com
 127.0.0.1 ru-p.vivoglobal.com
+127.0.0.1 ru-pnrt-stsdk.vivoglobal.com
 127.0.0.1 ru-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 ru-st-exappupgrade.vivoglobal.com
 127.0.0.1 ru-st-sl.vivoglobal.com
@@ -6367,7 +6375,6 @@
 127.0.0.1 ssp.qq.com
 127.0.0.1 ssp.supersonicads.com
 127.0.0.1 ssp.vivo.com.cn
-127.0.0.1 ssp.zf313.com
 127.0.0.1 sspapi.admobile.top
 127.0.0.1 sspapi.youxiaoad.com
 127.0.0.1 sss.umeng.com
@@ -6462,11 +6469,9 @@
 127.0.0.1 static.res.qq.com
 127.0.0.1 static.tieba.baidu.com
 127.0.0.1 static.tongdun.net
-127.0.0.1 static.topxgun.com
 127.0.0.1 static.trafficjunky.com
 127.0.0.1 static.wkanx.com
 127.0.0.1 static.ydbimg.com
-127.0.0.1 static.youdm.cn
 127.0.0.1 static.yximgs.com
 127.0.0.1 staticfile.net
 127.0.0.1 staticfile.org
@@ -6573,7 +6578,6 @@
 127.0.0.1 swwwxww.oss-cn-hangzhou.aliyuncs.com
 127.0.0.1 swx.domob.cn
 127.0.0.1 sxk9m8x.cn
-127.0.0.1 sxundrh.cn
 127.0.0.1 sy.cl2009.com
 127.0.0.1 sydyqg.cn
 127.0.0.1 syh-imp.cdnjtzy.com
@@ -6713,7 +6717,6 @@
 127.0.0.1 tengfeidn.cn
 127.0.0.1 tepusi888.cn
 127.0.0.1 tes.foisonad.com
-127.0.0.1 teslaamg.obs.cn-east-3.myhuaweicloud.com
 127.0.0.1 test-adx-event.tradplusad.com
 127.0.0.1 test-api-developer.tradplusad.com
 127.0.0.1 test-bidder.tradplusad.com
@@ -6858,6 +6861,7 @@
 127.0.0.1 tpush.html5.qq.com
 127.0.0.1 tr-asia.adsmoloco.com
 127.0.0.1 tr-domaincfg.vivoglobal.com
+127.0.0.1 tr-err-up.vivoglobal.com
 127.0.0.1 tr-onrt-stsdk.vivoglobal.com
 127.0.0.1 tr-ort-stsdk.vivoglobal.com
 127.0.0.1 tr-p.vivoglobal.com
@@ -7293,6 +7297,12 @@
 127.0.0.1 v3.gdt.qq.com
 127.0.0.1 v4-lm.adukwai.com
 127.0.0.1 v4.cnzz.com
+127.0.0.1 v5-bd-daily-reading-ad.qznovelvod.com
+127.0.0.1 v5-ex-reading-ad.qznovelvod.com
+127.0.0.1 v5-reading-ad.qznovelvod.com
+127.0.0.1 v5-se-ex-mc-reading-ad.qznovelvod.com
+127.0.0.1 v5-se-gddgtc-reading-ad.qznovelvod.com
+127.0.0.1 v5-se-jltc-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-sjy-daily-reading-ad.qznovelvod.com
 127.0.0.1 v6-api-p0.mobsurl.com
 127.0.0.1 v6-api-p0.yksdks.com
@@ -7316,8 +7326,11 @@
 127.0.0.1 v8.cnzz.com
 127.0.0.1 v84tz11w7.com
 127.0.0.1 v9-linkchat.oceanengine.com
+127.0.0.1 v9-reading-ad.qznovelvod.com
 127.0.0.1 v9.cnzz.com
 127.0.0.1 v95-se-zjwztc-reading-ad.qznovelvod.com
+127.0.0.1 v96-reading-ad.qznovelvod.com
+127.0.0.1 v96-sz-daily-reading-ad.qznovelvod.com
 127.0.0.1 va3yq7si6w.com
 127.0.0.1 vaas.junion.jiguang.cn
 127.0.0.1 valemora.shop
@@ -7628,6 +7641,7 @@
 127.0.0.1 www.inmobi.cn
 127.0.0.1 www.inmobi.com
 127.0.0.1 www.jiguang.cn
+127.0.0.1 www.jmine.cn
 127.0.0.1 www.jpush.cn
 127.0.0.1 www.kuaizitech.com
 127.0.0.1 www.ladymetro.com
@@ -7675,7 +7689,6 @@
 127.0.0.1 www.zhikey.com
 127.0.0.1 www2.info.renesas.cn
 127.0.0.1 www5.oss-cn-hangzhou.aliyuncs.com
-127.0.0.1 www6.ns1.name
 127.0.0.1 wxa.wxs.qq.com
 127.0.0.1 wxaintpcos.wxqcloud.qq.com.cn
 127.0.0.1 wxsmw.wxs.qq.com
@@ -7960,6 +7973,7 @@
 127.0.0.1 zs10.cnzz.com
 127.0.0.1 zs25.cnzz.com
 127.0.0.1 zs8.cnzz.com
+127.0.0.1 zsjxwj.com
 127.0.0.1 zt.gifshow.com
 127.0.0.1 ztoken.uyunad.com
 127.0.0.1 ztqdkzn.cn
