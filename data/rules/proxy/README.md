@@ -2,7 +2,7 @@
 
 > 国内无法稳定连接、用于代理环境测试、国外TLD域名。
 
-**规则总数：23,467**　　**更新时间：2026-06-26 06:21:19 (CST)**
+**规则总数：23,467**　　**更新时间：2026-06-27 06:13:57 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
@@ -11,6 +11,6 @@
 | `quantumultx.list` | 23,467 | ✓ | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/quantumultx.list) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/quantumultx.list) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/quantumultx.list) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/quantumultx.list) |
 | `shadowrocket.list` | 23,467 | ✓ | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/shadowrocket.list) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/shadowrocket.list) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/shadowrocket.list) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/shadowrocket.list) |
 | `surge.list` | 23,467 | ✓ | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/surge.list) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/surge.list) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/surge.list) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/surge.list) |
-| `domain.txt` | 37,570 | — | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/domain.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/domain.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/domain.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/domain.txt) |
+| `domain.txt` | 37,569 | — | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/domain.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/domain.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/domain.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/domain.txt) |
 | `wildcard.txt` | 23,467 | ✓ | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/wildcard.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/wildcard.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/proxy/wildcard.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/wildcard.txt) |
 
