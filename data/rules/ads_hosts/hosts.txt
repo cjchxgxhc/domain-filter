@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,020
-# Updated: 2026-07-02 06:17:24 CST
+# Total: 8,011
+# Updated: 2026-07-03 06:06:19 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -1688,7 +1688,6 @@
 127.0.0.1 ax.admobile.top
 127.0.0.1 ax.ifeng.com
 127.0.0.1 axbdlox.cn
-127.0.0.1 axyleu11gz-default-cn.rum.aliyuncs.com
 127.0.0.1 ay.eastmoney.com
 127.0.0.1 az.appstore.vivo.com.cn
 127.0.0.1 azdxypf.cn
@@ -1785,6 +1784,7 @@
 127.0.0.1 bdasd.chdbook.cn
 127.0.0.1 bdcdncnc.inter.71edge.com
 127.0.0.1 bdcode.2345.com
+127.0.0.1 bdcode.35d1.com
 127.0.0.1 bdcode.qinglue.com
 127.0.0.1 bdcode.youke.com
 127.0.0.1 bdjs.daziba.cn
@@ -1805,7 +1805,6 @@
 127.0.0.1 bdwmhz.120askimages.com
 127.0.0.1 bdx.playnext.cn
 127.0.0.1 bea-s.dinghuoche.com
-127.0.0.1 beacon-ad.ztgame.com.ztinfoga.com
 127.0.0.1 beacon-api.aliyuncs.com
 127.0.0.1 beacon-api.aliyuncs.com.gds.alibabadns.com
 127.0.0.1 beacon-err.tingyun.com
@@ -3785,7 +3784,6 @@
 127.0.0.1 img.anythinktech.com
 127.0.0.1 img.applovin.com
 127.0.0.1 img.dubyc.com
-127.0.0.1 img.easypass.cn
 127.0.0.1 img.ferlie.net
 127.0.0.1 img.jiguang.cn
 127.0.0.1 img.toponad.com
@@ -4221,7 +4219,6 @@
 127.0.0.1 lifestyle.tradeshow.globalsources.com
 127.0.0.1 line1-log.biligame.net
 127.0.0.1 line3-adscore-api.biligame.net
-127.0.0.1 lingd.cn
 127.0.0.1 lingjuad.com
 127.0.0.1 link.guoqi365.com
 127.0.0.1 link.heycloudy.co
@@ -4623,7 +4620,6 @@
 127.0.0.1 metaword.cn
 127.0.0.1 metok.sys.miui.com
 127.0.0.1 metric.huya.com
-127.0.0.1 metric.nuonuo.com
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.com
 127.0.0.1 metrics-ad-drcn.dt.hihonorcloud.cn
@@ -5297,7 +5293,6 @@
 127.0.0.1 pgdt.ugdtimg.com
 127.0.0.1 pglstatp-toutiao-b.com
 127.0.0.1 pglstatp-toutiao.com
-127.0.0.1 ph-log-emagzal.lazada.com
 127.0.0.1 phone.getui.com
 127.0.0.1 phone.igexin.com
 127.0.0.1 phpstat.cntcm.com.cn
@@ -6169,7 +6164,6 @@
 127.0.0.1 sf6-fe-tos.pglstatp-toutiao.com
 127.0.0.1 sfsafsadfjbbj-dsafjnb-1321533417.cos.ap-beijing.myqcloud.com
 127.0.0.1 sg-cfg-stsdk.vivoglobal.com
-127.0.0.1 sg-log-emagzal.lazada.com
 127.0.0.1 sg-new-ssplib-asia-southeast1-b-hb.rayjump.com
 127.0.0.1 sg-new-ssplib-asia-southeast1-c-hb.rayjump.com
 127.0.0.1 sg-public-data-api.hoyoverse.com
@@ -7319,11 +7313,9 @@
 127.0.0.1 v3.gdt.qq.com
 127.0.0.1 v4-lm.adukwai.com
 127.0.0.1 v4.cnzz.com
-127.0.0.1 v5-bd-daily-reading-ad.qznovelvod.com
 127.0.0.1 v5-ex-reading-ad.qznovelvod.com
 127.0.0.1 v5-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-gddgtc-reading-ad.qznovelvod.com
-127.0.0.1 v5-se-sjy-daily-reading-ad.qznovelvod.com
 127.0.0.1 v6-api-p0.mobsurl.com
 127.0.0.1 v6-api-p0.yksdks.com
 127.0.0.1 v6-api-p1.mobsurl.com
@@ -7756,7 +7748,6 @@
 127.0.0.1 xianshangzixun.com
 127.0.0.1 xianshangzixun.net
 127.0.0.1 xianzhice.com
-127.0.0.1 xiaobaixitong.com
 127.0.0.1 xiaodongrui.com
 127.0.0.1 xiaojifly.cn
 127.0.0.1 xiaomi-dtv.m.cn.miaozhen.com
