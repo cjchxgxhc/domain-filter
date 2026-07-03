@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,011
-# Updated: 2026-07-03 06:06:19 CST
+# Total: 8,019
+# Updated: 2026-07-04 06:04:45 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -537,6 +537,7 @@
 127.0.0.1 ad.partner.gifshow.com
 127.0.0.1 ad.qq.com
 127.0.0.1 ad.qyer.com
+127.0.0.1 ad.report.jihuoniao.com
 127.0.0.1 ad.richmob.cn
 127.0.0.1 ad.shenshiads.com
 127.0.0.1 ad.shunchangzhixing.com
@@ -723,6 +724,7 @@
 127.0.0.1 ads-jp.tiktok.com
 127.0.0.1 ads-lb.serving-sys.cn
 127.0.0.1 ads-marketing-vivofs.vivo.com.cn
+127.0.0.1 ads-monitoring.shziyi.com
 127.0.0.1 ads-privacy-api.prd.mz.internal.unity3d.com
 127.0.0.1 ads-sdk-api.ranfenghd.com
 127.0.0.1 ads-sg.tiktok.com
@@ -2304,6 +2306,7 @@
 127.0.0.1 cname-asia-st-exappupgrade.vivoglobal.com
 127.0.0.1 cname-in-apport-stsdk.vivoglobal.com
 127.0.0.1 cname-in-bom01-nginxpool03.vivoglobal.com
+127.0.0.1 cname-in-ctdbonrt-stsdk.vivoglobal.com
 127.0.0.1 cname-sin01-stsdk09.vivoglobal.com
 127.0.0.1 cncapi.getui.com
 127.0.0.1 cncrestapi.getui.com
@@ -2674,6 +2677,7 @@
 127.0.0.1 displayads-formats.googleusercontent.com
 127.0.0.1 disqusads.com
 127.0.0.1 dizhensubao.getui.com
+127.0.0.1 djs.baomihua.com
 127.0.0.1 dk-open-phone.getui.com
 127.0.0.1 dl-vip.bav.baidu.com
 127.0.0.1 dl.1003b.56a.com
@@ -3107,6 +3111,7 @@
 127.0.0.1 firebaselogging-pa.googleapis.com
 127.0.0.1 firebaselogging.googleapis.com
 127.0.0.1 first-hufu.oss-cn-shanghai.aliyuncs.com
+127.0.0.1 fiu07050kl.com
 127.0.0.1 fiwyjar.cn
 127.0.0.1 fjsytjs.cn
 127.0.0.1 flash.cn
@@ -4536,6 +4541,7 @@
 127.0.0.1 maoamao.myshoplaza.com
 127.0.0.1 mapi.m.jd.com
 127.0.0.1 mapping.yoyi.com.cn
+127.0.0.1 mariahcarey.cn
 127.0.0.1 mark.l.qq.com
 127.0.0.1 market-ad.oss-accelerate.aliyuncs.com
 127.0.0.1 market-ad.oss-cn-shenzhen.aliyuncs.com
@@ -4998,6 +5004,7 @@
 127.0.0.1 o.027eat.com
 127.0.0.1 o.lenovo.com
 127.0.0.1 o1069899.ingest.sentry.io
+127.0.0.1 o2o-ad-dev.oss-cn-shanghai.aliyuncs.com
 127.0.0.1 o2o.api.xiaomi.com
 127.0.0.1 o5y2zd1lq8.com
 127.0.0.1 o8u3n4q7fe.com
@@ -6454,6 +6461,7 @@
 127.0.0.1 stat.zol.com.cn
 127.0.0.1 stat2.deepinstall.com
 127.0.0.1 stat2.openinstall.io
+127.0.0.1 stat2.pixpin.cn
 127.0.0.1 stat6.y.qq.com
 127.0.0.1 state.jpush.cn
 127.0.0.1 static-doubleclick-net.l.google.com
@@ -7255,6 +7263,7 @@
 127.0.0.1 uxcnhsf.cn
 127.0.0.1 uxip-res.meizu.com
 127.0.0.1 uxip.meizu.com
+127.0.0.1 uxjw.cn
 127.0.0.1 uyfv.cn
 127.0.0.1 uyunad.com
 127.0.0.1 v-vay.com
@@ -7341,7 +7350,6 @@
 127.0.0.1 v9-reading-ad.qznovelvod.com
 127.0.0.1 v9.cnzz.com
 127.0.0.1 v95-se-zjwztc-reading-ad.qznovelvod.com
-127.0.0.1 v96-reading-ad.qznovelvod.com
 127.0.0.1 v96-sz-daily-reading-ad.qznovelvod.com
 127.0.0.1 va3yq7si6w.com
 127.0.0.1 vaas.junion.jiguang.cn
