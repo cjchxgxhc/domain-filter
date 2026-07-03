@@ -1,0 +1,77 @@
+# 只是一个简单的手机端mihomo配置文件
+## 需要内核支持type:smart
+## 只拦截广告&正确域名分流
+## 禁止用于IP严格的场景
+
+p: &p {type: http, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 600}}
+
+proxy-providers:
+  1:
+    <<: *p
+    url: https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
+    interval: 10800
+
+proxy-groups:
+  - name: 代理选择
+    type: select
+    proxies:
+      - 👍👍智能选择
+      - 👍自动选择
+    include-all: true
+  - name: 附加功能-广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - PASS
+  - name: 👍自动选择
+    type: url-test
+    tolerance: 100
+    include-all: true
+    hidden: true
+  - name: 👍👍智能选择
+    type: smart
+    url: https://www.gstatic.com/generate_204
+    include-all: true
+    hidden: true
+    
+rule-anchor:
+  Classical: &Classical {type: http, behavior: classical, format: yaml, interval: 86400}
+  IPCIDR: &IPCIDR {type: http, behavior: ipcidr, format: mrs, interval: 86400}
+  Domain: &Domain {type: http, behavior: domain, format: mrs, interval: 86400}
+
+rule-providers:
+  ADS:
+    <<: *Domain
+    url: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads/clash.mrs
+  PROXY:
+    <<: *Domain
+    url: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/proxy/clash.mrs
+  DIRECT_FIX:
+    <<: *Domain
+    url: https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/direct_fix/clash.mrs
+
+rules:
+ # Ads
+  - RULE-SET,ADS,附加功能-广告拦截
+  - RULE-SET,DIRECT_FIX,DIRECT
+#> Final
+  - RULE-SET,PROXY,代理选择
+  - MATCH,DIRECT
+
+mixed-port: 8080
+unified-delay: false
+ipv6: true
+
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.0/8
+  fake-ip-range6: fc00::/16
+  fake-ip-filter-mode: whitelist
+  fake-ip-filter: ['rule-set:ADS,PROXY']
+  nameserver:
+    - system
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - system
