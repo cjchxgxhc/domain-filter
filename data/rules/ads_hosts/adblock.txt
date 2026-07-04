@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: Ads Hosts
 ! Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-! Total: 6,196
-! Updated: 2026-07-04 06:04:45 CST
+! Total: 6,214
+! Updated: 2026-07-05 05:58:44 CST
 !
 ||0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
 ||0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
@@ -950,6 +950,7 @@
 ||alicoccdnct-xn.inter.71edge.com^
 ||alimama.alicdn.com^
 ||alime-pic.oss-cn-hangzhou.aliyuncs.com^
+||alimelog.taobao.com^
 ||alipaylog.com^
 ||alitui.weibo.com^
 ||all.cnzz.com.danuoyi.tbcache.com^
@@ -1017,6 +1018,7 @@
 ||analytics.tiktok.com^
 ||analytics.tv189.cn^
 ||analytics.umetrip.com^
+||analytics.umetrip.com.c.vedcdnlb.com^
 ||analytics.wanmei.com^
 ||analytics.wiwide.com^
 ||analytics.wondershare.cc^
@@ -1458,6 +1460,7 @@
 ||bdwmhz.120askimages.com^
 ||bdx.playnext.cn^
 ||bea-s.dinghuoche.com^
+||beacon-ad.ztgame.com.ztinfoga.com^
 ||beacon-api.aliyuncs.com^
 ||beacon-api.aliyuncs.com.gds.alibabadns.com^
 ||beacon-err.tingyun.com^
@@ -1690,6 +1693,7 @@
 ||cgigc.com.cn^
 ||ch-match.taboola.com^
 ||chance-ad.com^
+||chanced112.com^
 ||chanet.com.cn^
 ||changyan.sohu.com^
 ||changyi21.cn^
@@ -2211,6 +2215,7 @@
 ||dz6xqe19d2.com^
 ||e-goblin.hupu.com^
 ||e-ltvp.inmobi.com^
+||e-p4p.163.com^
 ||e-stat.huya.com^
 ||e.ad.xiaomi.com^
 ||e.baidu.com^
@@ -3079,6 +3084,7 @@
 ||ixav-cse.avlyun.com^
 ||ixelrsd.cn^
 ||ixjtpbj.cn^
+||iy.com.cn^
 ||iyfbodn.com^
 ||j.appjiagu.com^
 ||j.baminw.cn^
@@ -3253,6 +3259,7 @@
 ||ky595images.com^
 ||kychq.cn^
 ||kz-onrt-stsdk.vivoglobal.com^
+||kz-ort-stsdk.vivoglobal.com^
 ||kz-vcode-od.vivoglobal.com^
 ||kzchyhr.cn^
 ||kzki21j8f6.com^
@@ -3658,6 +3665,7 @@
 ||metaword.cn^
 ||metok.sys.miui.com^
 ||metric.huya.com^
+||metric.nuonuo.com^
 ||metrics-ad-drcn.dt.dbankcloud.cn^
 ||metrics-ad-drcn.dt.dbankcloud.com^
 ||metrics-ad-drcn.dt.hihonorcloud.cn^
@@ -4076,6 +4084,7 @@
 ||otme.cn^
 ||ott-v0-al.data.mgtv.com^
 ||ott.v1.data.mgtv.com^
+||ottl7-l2.pandora.xiaomi.com^
 ||oumax.oupeng.com^
 ||outcome-cdn.supersonicads.com^
 ||outcome-ssp.supersonicads.com^
@@ -4458,6 +4467,7 @@
 ||report-europe.agora.io^
 ||report-north-america.agora.io^
 ||report-oversea.agora.io^
+||report-oversea2.agora.io^
 ||report.baihemob.com^
 ||report.banyunjuhe.com^
 ||report.bjzghd.com^
@@ -4556,6 +4566,7 @@
 ||ru-onrt-stsdk.vivoglobal.com^
 ||ru-os-config-appstore.vivoglobal.com^
 ||ru-p.vivoglobal.com^
+||ru-pnrt-stsdk.vivoglobal.com^
 ||ru-romsp-unifyconfig.vivoglobal.com^
 ||ru-st-exappupgrade.vivoglobal.com^
 ||ru-st-sl.vivoglobal.com^
@@ -5310,6 +5321,7 @@
 ||tr.email.directindustry.com^
 ||tr.email.medicalexpo.com^
 ||tr.email.nauticexpo.com^
+||tr.email.virtual-expo.com^
 ||tr.jianshu.com^
 ||trace-api.aiclk.com^
 ||trace-v1.free-reels.com^
@@ -5647,9 +5659,11 @@
 ||v3-linkchat.oceanengine.com^
 ||v3-reading-ad.qznovelvod.com^
 ||v3-reading-ad.qznovelvod.com.230b2a2545cfa773.queniubg.com^
+||v5-bd-daily-reading-ad.qznovelvod.com^
 ||v5-ex-reading-ad.qznovelvod.com^
 ||v5-reading-ad.qznovelvod.com^
 ||v5-se-gddgtc-reading-ad.qznovelvod.com^
+||v5-se-sjy-daily-reading-ad.qznovelvod.com^
 ||v6-api-p0.mobsurl.com^
 ||v6-api-p0.yksdks.com^
 ||v6-api-p1.mobsurl.com^
@@ -5732,6 +5746,7 @@
 ||vrbrothers.com^
 ||vrr.name^
 ||vrrm.cn^
+||vs.funshion.com^
 ||vstat.borderlessbd.com^
 ||vstat.v.blog.sohu.com^
 ||vt.bidex.cn^
@@ -5766,6 +5781,8 @@
 ||wan.sogou.com^
 ||wan.youku.com^
 ||wangmeng.baidu.com^
+||wangsu-smetrics.redhat.com.edgekey.net^
+||wangsu-smetrics.redhat.com.edgekey.net.wanakadns.net^
 ||wap.koudaitong.com^
 ||watch.advertising.speed.cdn.vip.xunlei.com^
 ||watchworks.shop^
@@ -6013,6 +6030,7 @@
 ||xs.dmzj.com^
 ||xssncc2tv.com^
 ||xtc.xdplt.com^
+||xttaff.com^
 ||xue.zbyw.cn^
 ||xueaaaw.cn^
 ||xulizui6.com^

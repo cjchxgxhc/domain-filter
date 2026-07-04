@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,019
-# Updated: 2026-07-04 06:04:45 CST
+# Total: 8,037
+# Updated: 2026-07-05 05:58:44 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -1143,6 +1143,7 @@
 127.0.0.1 alicoccdnct-xn.inter.71edge.com
 127.0.0.1 alimama.alicdn.com
 127.0.0.1 alime-pic.oss-cn-hangzhou.aliyuncs.com
+127.0.0.1 alimelog.taobao.com
 127.0.0.1 alipaylog.com
 127.0.0.1 alitui.weibo.com
 127.0.0.1 alivc-aio.cn-hangzhou.log.aliyuncs.com
@@ -1228,6 +1229,7 @@
 127.0.0.1 analytics.tiktok.com
 127.0.0.1 analytics.tv189.cn
 127.0.0.1 analytics.umetrip.com
+127.0.0.1 analytics.umetrip.com.c.vedcdnlb.com
 127.0.0.1 analytics.wanmei.com
 127.0.0.1 analytics.wiwide.com
 127.0.0.1 analytics.wondershare.cc
@@ -1807,6 +1809,7 @@
 127.0.0.1 bdwmhz.120askimages.com
 127.0.0.1 bdx.playnext.cn
 127.0.0.1 bea-s.dinghuoche.com
+127.0.0.1 beacon-ad.ztgame.com.ztinfoga.com
 127.0.0.1 beacon-api.aliyuncs.com
 127.0.0.1 beacon-api.aliyuncs.com.gds.alibabadns.com
 127.0.0.1 beacon-err.tingyun.com
@@ -2132,6 +2135,7 @@
 127.0.0.1 cgigc.com.cn
 127.0.0.1 ch-match.taboola.com
 127.0.0.1 chance-ad.com
+127.0.0.1 chanced112.com
 127.0.0.1 chanet.com.cn
 127.0.0.1 changyan.sohu.com
 127.0.0.1 changyi21.cn
@@ -2849,6 +2853,7 @@
 127.0.0.1 dz6xqe19d2.com
 127.0.0.1 e-goblin.hupu.com
 127.0.0.1 e-ltvp.inmobi.com
+127.0.0.1 e-p4p.163.com
 127.0.0.1 e-stat.huya.com
 127.0.0.1 e-u1.ubixioe.com
 127.0.0.1 e-zlsdk.1rtb.net
@@ -3957,6 +3962,7 @@
 127.0.0.1 ixav-cse.avlyun.com
 127.0.0.1 ixelrsd.cn
 127.0.0.1 ixjtpbj.cn
+127.0.0.1 iy.com.cn
 127.0.0.1 iyfbodn.com
 127.0.0.1 j.appjiagu.com
 127.0.0.1 j.baminw.cn
@@ -4153,6 +4159,7 @@
 127.0.0.1 ky595images.com
 127.0.0.1 kychq.cn
 127.0.0.1 kz-onrt-stsdk.vivoglobal.com
+127.0.0.1 kz-ort-stsdk.vivoglobal.com
 127.0.0.1 kz-vcode-od.vivoglobal.com
 127.0.0.1 kzchyhr.cn
 127.0.0.1 kzki21j8f6.com
@@ -4626,6 +4633,7 @@
 127.0.0.1 metaword.cn
 127.0.0.1 metok.sys.miui.com
 127.0.0.1 metric.huya.com
+127.0.0.1 metric.nuonuo.com
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.com
 127.0.0.1 metrics-ad-drcn.dt.hihonorcloud.cn
@@ -5140,6 +5148,7 @@
 127.0.0.1 otme.cn
 127.0.0.1 ott-v0-al.data.mgtv.com
 127.0.0.1 ott.v1.data.mgtv.com
+127.0.0.1 ottl7-l2.pandora.xiaomi.com
 127.0.0.1 oumax.oupeng.com
 127.0.0.1 ouplog.umeng.com
 127.0.0.1 outcome-cdn.supersonicads.com
@@ -5639,6 +5648,7 @@
 127.0.0.1 report-europe.agora.io
 127.0.0.1 report-north-america.agora.io
 127.0.0.1 report-oversea.agora.io
+127.0.0.1 report-oversea2.agora.io
 127.0.0.1 report-stats.ad.jiguang.cn
 127.0.0.1 report.adview.cn
 127.0.0.1 report.baihemob.com
@@ -5768,6 +5778,7 @@
 127.0.0.1 ru-onrt-stsdk.vivoglobal.com
 127.0.0.1 ru-os-config-appstore.vivoglobal.com
 127.0.0.1 ru-p.vivoglobal.com
+127.0.0.1 ru-pnrt-stsdk.vivoglobal.com
 127.0.0.1 ru-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 ru-st-exappupgrade.vivoglobal.com
 127.0.0.1 ru-st-sl.vivoglobal.com
@@ -6897,6 +6908,7 @@
 127.0.0.1 tr.email.directindustry.com
 127.0.0.1 tr.email.medicalexpo.com
 127.0.0.1 tr.email.nauticexpo.com
+127.0.0.1 tr.email.virtual-expo.com
 127.0.0.1 tr.jianshu.com
 127.0.0.1 tr.medproad.com
 127.0.0.1 trace-api.aiclk.com
@@ -7322,9 +7334,11 @@
 127.0.0.1 v3.gdt.qq.com
 127.0.0.1 v4-lm.adukwai.com
 127.0.0.1 v4.cnzz.com
+127.0.0.1 v5-bd-daily-reading-ad.qznovelvod.com
 127.0.0.1 v5-ex-reading-ad.qznovelvod.com
 127.0.0.1 v5-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-gddgtc-reading-ad.qznovelvod.com
+127.0.0.1 v5-se-sjy-daily-reading-ad.qznovelvod.com
 127.0.0.1 v6-api-p0.mobsurl.com
 127.0.0.1 v6-api-p0.yksdks.com
 127.0.0.1 v6-api-p1.mobsurl.com
@@ -7428,6 +7442,7 @@
 127.0.0.1 vrbrothers.com
 127.0.0.1 vrr.name
 127.0.0.1 vrrm.cn
+127.0.0.1 vs.funshion.com
 127.0.0.1 vstat.borderlessbd.com
 127.0.0.1 vstat.v.blog.sohu.com
 127.0.0.1 vt.bidex.cn
@@ -7469,6 +7484,8 @@
 127.0.0.1 wan.sogou.com
 127.0.0.1 wan.youku.com
 127.0.0.1 wangmeng.baidu.com
+127.0.0.1 wangsu-smetrics.redhat.com.edgekey.net
+127.0.0.1 wangsu-smetrics.redhat.com.edgekey.net.wanakadns.net
 127.0.0.1 wap.koudaitong.com
 127.0.0.1 watch.advertising.speed.cdn.vip.xunlei.com
 127.0.0.1 watchworks.shop
@@ -7800,6 +7817,7 @@
 127.0.0.1 xs.dmzj.com
 127.0.0.1 xssncc2tv.com
 127.0.0.1 xtc.xdplt.com
+127.0.0.1 xttaff.com
 127.0.0.1 xue.zbyw.cn
 127.0.0.1 xueaaaw.cn
 127.0.0.1 xulizui6.com
