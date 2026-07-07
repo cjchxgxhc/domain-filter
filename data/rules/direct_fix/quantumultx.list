@@ -35,6 +35,8 @@ host-suffix,127.in-addr.arpa,reject
 host-suffix,16.172.in-addr.arpa,reject
 host-suffix,168.192.in-addr.arpa,reject
 host-suffix,17.172.in-addr.arpa,reject
+host-suffix,17173.com,reject
+host-suffix,17173cdn.com,reject
 host-suffix,17roco.com,reject
 host-suffix,18.172.in-addr.arpa,reject
 host-suffix,19.172.in-addr.arpa,reject
@@ -514,6 +516,8 @@ host-suffix,nagcloudcs.com,reject
 host-suffix,nalrer.cn,reject
 host-suffix,nextstudios.com,reject
 host-suffix,nextworkshop.net,reject
+host-suffix,nikkigames.cn,reject
+host-suffix,nikkigames.com.cn,reject
 host-suffix,nn.com,reject
 host-suffix,nnbooster.com,reject
 host-suffix,notion-static.com,reject
@@ -567,6 +571,8 @@ host-suffix,osrelease.download.prss.microsoft.com,reject
 host-suffix,outlook.cn,reject
 host-suffix,outlook.com,reject
 host-suffix,p.to,reject
+host-suffix,papegames.cn,reject
+host-suffix,papegames.com,reject
 host-suffix,pbiwebcontent.cn,reject
 host-suffix,peiluyou.com,reject
 host-suffix,phicomm.me,reject
@@ -658,6 +664,7 @@ host-suffix,swdownload.apple.com,reject
 host-suffix,swquery.apple.com,reject
 host-suffix,swscan.apple.com,reject
 host-suffix,syxlgame.com,reject
+host-suffix,tanwan.com,reject
 host-suffix,tcfmglobal.com,reject
 host-suffix,tencent-gcloud.com,reject
 host-suffix,tencentstart.com,reject
@@ -719,6 +726,8 @@ host-suffix,trustcenter.cn,reject
 host-suffix,ts.net,reject
 host-suffix,tuer123.com,reject
 host-suffix,tuyoo.com,reject
+host-suffix,twyx.cn,reject
+host-suffix,twyxh.com,reject
 host-suffix,ubisoftconnect.eo-edgefunctions7.com,reject
 host-suffix,uplaypc-s-ubisoft.cdn.ubionline.com.cn,reject
 host-suffix,uu.163.com,reject
@@ -772,6 +781,8 @@ host-suffix,yacd.metacubex.one,reject
 host-suffix,ycgame.com,reject
 host-suffix,yebaojiasu.com,reject
 host-suffix,yeshen.com,reject
+host-suffix,yeyou.com,reject
+host-suffix,yeyoucdn.com,reject
 host-suffix,yingxiong.com,reject
 host-suffix,yjwujian.cn,reject
 host-suffix,yokaverse.com,reject
@@ -791,3 +802,4 @@ host-suffix,zhuoyou.com,reject
 host-suffix,zhuoyuegame.com,reject
 host-suffix,zjshulong.com,reject
 host-suffix,zte.home,reject
+host-suffix,zx.com,reject
