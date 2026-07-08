@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,123
-# Updated: 2026-07-08 06:10:40 CST
+# Total: 8,134
+# Updated: 2026-07-09 06:05:57 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -394,7 +394,6 @@
 127.0.0.1 abroad.api.comm.intl.miui.com
 127.0.0.1 abroadad.cache.wpscdn.com
 127.0.0.1 abtest-api-data-sg.hoyoverse.com
-127.0.0.1 abtest-api-data.mihoyo.com
 127.0.0.1 abtest-ch.snssdk.com
 127.0.0.1 abtest.alibaba.com
 127.0.0.1 abtest.todesk.com
@@ -727,7 +726,9 @@
 127.0.0.1 ads-drcn.platform.dbankcloud.com
 127.0.0.1 ads-drcn.platform.hihonorcloud.cn
 127.0.0.1 ads-drcn.platform.hihonorcloud.com
+127.0.0.1 ads-dre.platform.hihonorcloud.com
 127.0.0.1 ads-drru.platform.hihonorcloud.com
+127.0.0.1 ads-i1.xhscdn.com
 127.0.0.1 ads-i10.xhscdn.com
 127.0.0.1 ads-i2.xhscdn.com
 127.0.0.1 ads-i3.xhscdn.com
@@ -750,6 +751,7 @@
 127.0.0.1 ads-video-al.xhscdn.com
 127.0.0.1 ads-video-al.xhscdn.com.w.cdngslb.com
 127.0.0.1 ads-video-qc.xhscdn.com
+127.0.0.1 ads-vp5.xhscdn.com
 127.0.0.1 ads.95516.com
 127.0.0.1 ads.activepower.net
 127.0.0.1 ads.adagent.chacha.com
@@ -1162,6 +1164,7 @@
 127.0.0.1 alimama.alicdn.com
 127.0.0.1 alime-pic.oss-cn-hangzhou.aliyuncs.com
 127.0.0.1 alimelog.taobao.com
+127.0.0.1 alipansou.com
 127.0.0.1 alipaylog.com
 127.0.0.1 alitui.weibo.com
 127.0.0.1 alivc-aio.cn-hangzhou.log.aliyuncs.com
@@ -1296,6 +1299,7 @@
 127.0.0.1 api-access.pangolin-sdk-toutiao3.com
 127.0.0.1 api-access.pangolin-sdk-toutiao4.com
 127.0.0.1 api-access.pangolin-sdk-toutiao5.com
+127.0.0.1 api-ad-adapter-mb.wps.com
 127.0.0.1 api-ad-adapter-sg.wps.com
 127.0.0.1 api-ad-adapter.wps.com
 127.0.0.1 api-ad-data.kajicam.com
@@ -3072,7 +3076,6 @@
 127.0.0.1 f1.ichong123.com
 127.0.0.1 f1.webshare.mob.com
 127.0.0.1 f2.mob.com
-127.0.0.1 f8ds5tkidk-sdk.rum.aliyuncs.com
 127.0.0.1 fac2.oadz.com
 127.0.0.1 facai383.oss-cn-guangzhou.aliyuncs.com
 127.0.0.1 fakjkwp.cn
@@ -4044,8 +4047,8 @@
 127.0.0.1 jikewan.com
 127.0.0.1 jikklfexh.com
 127.0.0.1 jing.58.com
-127.0.0.1 jintengli.mobi
 127.0.0.1 jipinyouwu.com
+127.0.0.1 jiuyuntian3.cn
 127.0.0.1 jk.c.sdk.kwad.com
 127.0.0.1 jknrwe.cn
 127.0.0.1 jmp-inner.tradplusad.com
@@ -4140,6 +4143,7 @@
 127.0.0.1 kad.gotokeep.com
 127.0.0.1 kadmimage.biz.weibo.com
 127.0.0.1 kajicam.com
+127.0.0.1 kapkh.cn
 127.0.0.1 kb894lngt.com
 127.0.0.1 kbae.qiqqh.cn
 127.0.0.1 kbkb.bet
@@ -4173,6 +4177,7 @@
 127.0.0.1 kokojia.com
 127.0.0.1 konka-mipdx.cn.miaozhen.com
 127.0.0.1 koowo.com
+127.0.0.1 kouclo.com
 127.0.0.1 kpshx.douguo.com
 127.0.0.1 kqg8jh8rk.com
 127.0.0.1 ks-adaptive.pull.yximgs.com
@@ -4509,6 +4514,7 @@
 127.0.0.1 lop.lamimi.cn
 127.0.0.1 lowa202606.myshoplaza.com
 127.0.0.1 lpmzt.cn
+127.0.0.1 lrphk.cn
 127.0.0.1 lrswl.com
 127.0.0.1 lstat.youku.com
 127.0.0.1 luaqxb.rainso.com
@@ -4683,6 +4689,7 @@
 127.0.0.1 metaword.cn
 127.0.0.1 metok.sys.miui.com
 127.0.0.1 metric.huya.com
+127.0.0.1 metric.nuonuo.com
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.com
 127.0.0.1 metrics-ad-drcn.dt.hihonorcloud.cn
@@ -5607,6 +5614,7 @@
 127.0.0.1 qhm2.cnzz.com
 127.0.0.1 qhonzpl.cn
 127.0.0.1 qianclick.baidu.com
+127.0.0.1 qienews.cn
 127.0.0.1 qijpaih.cn
 127.0.0.1 qingtingfm.ws.voiceads.cn
 127.0.0.1 qiniu-ad.super.cn
@@ -7444,7 +7452,6 @@
 127.0.0.1 v9-linkchat.oceanengine.com
 127.0.0.1 v9-reading-ad.qznovelvod.com
 127.0.0.1 v9.cnzz.com
-127.0.0.1 v95-aw-reading-ad.qznovelvod.com
 127.0.0.1 v95-se-zjwztc-reading-ad.qznovelvod.com
 127.0.0.1 v95-zjjx2tc-reading-ad.qznovelvod.com
 127.0.0.1 v96-sz-daily-reading-ad.qznovelvod.com
@@ -7567,6 +7574,8 @@
 127.0.0.1 wan.sogou.com
 127.0.0.1 wan.youku.com
 127.0.0.1 wangmeng.baidu.com
+127.0.0.1 wangsu-smetrics.redhat.com.edgekey.net
+127.0.0.1 wangsu-smetrics.redhat.com.edgekey.net.wanakadns.net
 127.0.0.1 wap.koudaitong.com
 127.0.0.1 watch.advertising.speed.cdn.vip.xunlei.com
 127.0.0.1 watson.microsoft.com
@@ -7585,6 +7594,7 @@
 127.0.0.1 wdb.cn.miaozhen.com
 127.0.0.1 wdp5rczwlp.com
 127.0.0.1 wdpkx.cn
+127.0.0.1 wdr160gz.dayugslb.com
 127.0.0.1 weather-analytics-events.apple.com
 127.0.0.1 weather-community-drcn.weather.dbankcloud.cn
 127.0.0.1 weather.xdplt.com
@@ -7614,6 +7624,7 @@
 127.0.0.1 webtrack.pospal.cn
 127.0.0.1 webview.unityads.unity3d.com
 127.0.0.1 weidianyuedu.com
+127.0.0.1 weilayun.com
 127.0.0.1 weishi.baidu.com
 127.0.0.1 weixin.miaozhen.com
 127.0.0.1 wenku-cms.bj.bcebos.com

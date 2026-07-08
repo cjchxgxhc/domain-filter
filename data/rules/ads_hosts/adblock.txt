@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: Ads Hosts
 ! Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-! Total: 6,294
-! Updated: 2026-07-08 06:10:40 CST
+! Total: 6,305
+! Updated: 2026-07-09 06:05:57 CST
 !
 ||0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
 ||0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
@@ -292,7 +292,6 @@
 ||abroad.api.comm.intl.miui.com^
 ||abroadad.cache.wpscdn.com^
 ||abtest-api-data-sg.hoyoverse.com^
-||abtest-api-data.mihoyo.com^
 ||abtest-ch.snssdk.com^
 ||abtest.alibaba.com^
 ||abtest.todesk.com^
@@ -584,7 +583,9 @@
 ||ads-drcn.platform.dbankcloud.com^
 ||ads-drcn.platform.hihonorcloud.cn^
 ||ads-drcn.platform.hihonorcloud.com^
+||ads-dre.platform.hihonorcloud.com^
 ||ads-drru.platform.hihonorcloud.com^
+||ads-i1.xhscdn.com^
 ||ads-i10.xhscdn.com^
 ||ads-i2.xhscdn.com^
 ||ads-i3.xhscdn.com^
@@ -607,6 +608,7 @@
 ||ads-video-al.xhscdn.com^
 ||ads-video-al.xhscdn.com.w.cdngslb.com^
 ||ads-video-qc.xhscdn.com^
+||ads-vp5.xhscdn.com^
 ||ads.95516.com^
 ||ads.activepower.net^
 ||ads.adagent.chacha.com^
@@ -967,6 +969,7 @@
 ||alimama.alicdn.com^
 ||alime-pic.oss-cn-hangzhou.aliyuncs.com^
 ||alimelog.taobao.com^
+||alipansou.com^
 ||alipaylog.com^
 ||alitui.weibo.com^
 ||all.cnzz.com.danuoyi.tbcache.com^
@@ -1076,6 +1079,7 @@
 ||api-access.pangolin-sdk-toutiao3.com^
 ||api-access.pangolin-sdk-toutiao4.com^
 ||api-access.pangolin-sdk-toutiao5.com^
+||api-ad-adapter-mb.wps.com^
 ||api-ad-adapter-sg.wps.com^
 ||api-ad-adapter.wps.com^
 ||api-ad-product.huxiu.com^
@@ -2387,7 +2391,6 @@
 ||eyp7uowejx.com^
 ||f.qstatic.com^
 ||f1.ichong123.com^
-||f8ds5tkidk-sdk.rum.aliyuncs.com^
 ||facai383.oss-cn-guangzhou.aliyuncs.com^
 ||fakjkwp.cn^
 ||falal.cn^
@@ -3157,8 +3160,8 @@
 ||jikewan.com^
 ||jikklfexh.com^
 ||jing.58.com^
-||jintengli.mobi^
 ||jipinyouwu.com^
+||jiuyuntian3.cn^
 ||jk.c.sdk.kwad.com^
 ||jknrwe.cn^
 ||jobsfe.funshion.com^
@@ -3239,6 +3242,7 @@
 ||k8velr77p.com^
 ||kad.gotokeep.com^
 ||kajicam.com^
+||kapkh.cn^
 ||kb894lngt.com^
 ||kbae.qiqqh.cn^
 ||kbkb.bet^
@@ -3270,6 +3274,7 @@
 ||knowsafe.com^
 ||kokojia.com^
 ||koowo.com^
+||kouclo.com^
 ||kpshx.douguo.com^
 ||kqg8jh8rk.com^
 ||ks-adaptive.pull.yximgs.com^
@@ -3572,6 +3577,7 @@
 ||lop.lamimi.cn^
 ||lowa202606.myshoplaza.com^
 ||lpmzt.cn^
+||lrphk.cn^
 ||lrswl.com^
 ||lstat.youku.com^
 ||luaqxb.rainso.com^
@@ -3712,6 +3718,7 @@
 ||metaword.cn^
 ||metok.sys.miui.com^
 ||metric.huya.com^
+||metric.nuonuo.com^
 ||metrics-ad-drcn.dt.dbankcloud.cn^
 ||metrics-ad-drcn.dt.dbankcloud.com^
 ||metrics-ad-drcn.dt.hihonorcloud.cn^
@@ -4441,6 +4448,7 @@
 ||qguwoq.cn^
 ||qhonzpl.cn^
 ||qianclick.baidu.com^
+||qienews.cn^
 ||qijpaih.cn^
 ||qiniu-ad.super.cn^
 ||qiniuyunxz.yxflzs.com^
@@ -5757,7 +5765,6 @@
 ||v84tz11w7.com^
 ||v9-linkchat.oceanengine.com^
 ||v9-reading-ad.qznovelvod.com^
-||v95-aw-reading-ad.qznovelvod.com^
 ||v95-se-zjwztc-reading-ad.qznovelvod.com^
 ||v95-zjjx2tc-reading-ad.qznovelvod.com^
 ||v96-sz-daily-reading-ad.qznovelvod.com^
@@ -5858,6 +5865,8 @@
 ||wan.sogou.com^
 ||wan.youku.com^
 ||wangmeng.baidu.com^
+||wangsu-smetrics.redhat.com.edgekey.net^
+||wangsu-smetrics.redhat.com.edgekey.net.wanakadns.net^
 ||wap.koudaitong.com^
 ||watch.advertising.speed.cdn.vip.xunlei.com^
 ||watson.microsoft.com^
@@ -5870,6 +5879,7 @@
 ||wct.softonic.cn^
 ||wdp5rczwlp.com^
 ||wdpkx.cn^
+||wdr160gz.dayugslb.com^
 ||weather-analytics-events.apple.com^
 ||weather-community-drcn.weather.dbankcloud.cn^
 ||weather.xdplt.com^
@@ -5891,6 +5901,7 @@
 ||webterren.com^
 ||webtrack.pospal.cn^
 ||weidianyuedu.com^
+||weilayun.com^
 ||weishi.baidu.com^
 ||wenku-cms.bj.bcebos.com^
 ||wenxue.youzhicn.com^
