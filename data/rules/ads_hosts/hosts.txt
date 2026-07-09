@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,134
-# Updated: 2026-07-09 06:05:57 CST
+# Total: 8,128
+# Updated: 2026-07-10 06:22:13 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -541,6 +541,7 @@
 127.0.0.1 ad.mobile.youku.com
 127.0.0.1 ad.nvdvr.cn
 127.0.0.1 ad.oceanengine.com
+127.0.0.1 ad.open.api.jihuoniao.com
 127.0.0.1 ad.open.jiguang.cn
 127.0.0.1 ad.ourgame.com
 127.0.0.1 ad.partner.gifshow.com
@@ -729,11 +730,12 @@
 127.0.0.1 ads-dre.platform.hihonorcloud.com
 127.0.0.1 ads-drru.platform.hihonorcloud.com
 127.0.0.1 ads-i1.xhscdn.com
+127.0.0.1 ads-i1.xhscdn.com.cdn.dnsv1.com
 127.0.0.1 ads-i10.xhscdn.com
 127.0.0.1 ads-i2.xhscdn.com
+127.0.0.1 ads-i2.xhscdn.com.w.cdngslb.com
 127.0.0.1 ads-i3.xhscdn.com
 127.0.0.1 ads-i3.xhscdn.com.a.bdydns.com
-127.0.0.1 ads-i8.xhscdn.com
 127.0.0.1 ads-img-al.xhscdn.com
 127.0.0.1 ads-img-al.xhscdn.com.w.cdngslb.com
 127.0.0.1 ads-img-bak.xhscdn.com
@@ -1715,6 +1717,7 @@
 127.0.0.1 ax.admobile.top
 127.0.0.1 ax.ifeng.com
 127.0.0.1 axbdlox.cn
+127.0.0.1 axyleu11gz-default-cn.rum.aliyuncs.com
 127.0.0.1 ay.eastmoney.com
 127.0.0.1 az.appstore.vivo.com.cn
 127.0.0.1 azdxypf.cn
@@ -2178,7 +2181,6 @@
 127.0.0.1 chinaqa.appsflyer.com
 127.0.0.1 chineseinla.com
 127.0.0.1 chiq-cloud.com
-127.0.0.1 choice-pl.shop
 127.0.0.1 cholo215.cn
 127.0.0.1 cholor201115.cn
 127.0.0.1 chshcms.net
@@ -3085,6 +3087,7 @@
 127.0.0.1 fans.bestvogue.com
 127.0.0.1 fanyi100.com.cn
 127.0.0.1 fanyiegg.youdao.com
+127.0.0.1 fanzhuang.net.cn
 127.0.0.1 fapi.hongxiu158.com
 127.0.0.1 fapi.xdrun.com
 127.0.0.1 fashion.edm.globalsources.com
@@ -3127,7 +3130,6 @@
 127.0.0.1 ff.doubleclick.net
 127.0.0.1 fight-pl.shop
 127.0.0.1 fighterspors.shop
-127.0.0.1 fightersports.shop
 127.0.0.1 fighterzz.shop
 127.0.0.1 file.blackint3.com
 127.0.0.1 file.daihuo.qq.com
@@ -3165,21 +3167,16 @@
 127.0.0.1 fm.duokanbox.com
 127.0.0.1 fmedia.im.jiguang.cn
 127.0.0.1 fms.ipinyou.com
-127.0.0.1 focus-pl.shop
 127.0.0.1 focusgarden-dom.shop
 127.0.0.1 focusgarden.cfd
 127.0.0.1 focusgardenes.shop
 127.0.0.1 focusgardenev.shop
 127.0.0.1 focusgardenhome.shop
 127.0.0.1 focusgardenme.shop
-127.0.0.1 focusgardenmeble.shop
-127.0.0.1 focusgardenmoda.shop
 127.0.0.1 focusgardens-pl.shop
 127.0.0.1 focusgardense.shop
 127.0.0.1 focusgardense.top
-127.0.0.1 focusgardm.shop
 127.0.0.1 focusgardom.shop
-127.0.0.1 focussklep.shop
 127.0.0.1 fodder.qq.com
 127.0.0.1 foisonad.com
 127.0.0.1 forestseasons.com.cn
@@ -3398,7 +3395,6 @@
 127.0.0.1 godloveme.cn
 127.0.0.1 godunns.shop
 127.0.0.1 goforandroid.com
-127.0.0.1 gogardens.shop
 127.0.0.1 gojunkclean.cn
 127.0.0.1 goldbye.vicp.net
 127.0.0.1 gongxifc.com
@@ -3493,7 +3489,6 @@
 127.0.0.1 gym-glamours.shop
 127.0.0.1 gym-glamoursklep.club
 127.0.0.1 gym-glamourspl.club
-127.0.0.1 gymyoga.club
 127.0.0.1 gymyogapl.shop
 127.0.0.1 gyqpyr.utsource.net
 127.0.0.1 gz-data.com
@@ -3861,6 +3856,7 @@
 127.0.0.1 img50.pingguolv.com
 127.0.0.1 imgapp.yeyou.com
 127.0.0.1 imgdspcdn.umeng.com
+127.0.0.1 imgsize.ph.126.net
 127.0.0.1 imgstat.baidu.com
 127.0.0.1 imgx.mediav.com
 127.0.0.1 imlb2c.com
@@ -4051,6 +4047,7 @@
 127.0.0.1 jiuyuntian3.cn
 127.0.0.1 jk.c.sdk.kwad.com
 127.0.0.1 jknrwe.cn
+127.0.0.1 jlwz.cn
 127.0.0.1 jmp-inner.tradplusad.com
 127.0.0.1 jnat.getui.com
 127.0.0.1 job.getui.com
@@ -4303,6 +4300,7 @@
 127.0.0.1 lives.l.aiseet.atianqi.com
 127.0.0.1 lives.l.ott.video.qq.com
 127.0.0.1 livetech.shopee.co.id.txlivecdn.com
+127.0.0.1 livetech.shopee.co.th.txlivecdn.com
 127.0.0.1 livetech.shopee.com.br.tlivecdn.com
 127.0.0.1 livetech.shopee.com.br.txlivecdn.com
 127.0.0.1 livetech.shopee.vn.txlivecdn.com
@@ -4632,6 +4630,7 @@
 127.0.0.1 max-files.oupeng.com
 127.0.0.1 max-l.mediav.com
 127.0.0.1 max.mediav.com
+127.0.0.1 mayi360.cn
 127.0.0.1 mazu.m.qq.com
 127.0.0.1 mazu.sec.miui.com
 127.0.0.1 mb.readke.com
@@ -4689,7 +4688,6 @@
 127.0.0.1 metaword.cn
 127.0.0.1 metok.sys.miui.com
 127.0.0.1 metric.huya.com
-127.0.0.1 metric.nuonuo.com
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics-ad-drcn.dt.dbankcloud.com
 127.0.0.1 metrics-ad-drcn.dt.hihonorcloud.cn
@@ -5003,7 +5001,6 @@
 127.0.0.1 new.915yzt.cn
 127.0.0.1 new.cnzz.com
 127.0.0.1 new.dashboard.mob.com
-127.0.0.1 newrock-sklep.club
 127.0.0.1 newrta.umeng.com
 127.0.0.1 news.oneway.mobi
 127.0.0.1 news.qcyz.cn
@@ -5190,7 +5187,6 @@
 127.0.0.1 oqyiapj.cn
 127.0.0.1 orange-dc.lazada.com
 127.0.0.1 orange-dc.youku.com
-127.0.0.1 orlen-pl.com
 127.0.0.1 ort-stsdk.vivo.com.cn
 127.0.0.1 os-mon.zijieapi.com
 127.0.0.1 os.data.cnzz.com
@@ -5277,6 +5273,7 @@
 127.0.0.1 p6-ad-sign.byteimg.com
 127.0.0.1 p6-be-pack-sign.pglstatp-toutiao.com
 127.0.0.1 p66-ad.adkwai.com
+127.0.0.1 p66-ad.adkwai.com.3dce113f.cdnhwchcg02.com
 127.0.0.1 p66-ad.adkwai.com.v1.kwaiselfcdn.com
 127.0.0.1 p74ugyuur.com
 127.0.0.1 p9-ad-sign.byteimg.com
@@ -5843,7 +5840,6 @@
 127.0.0.1 ru-onrt-stsdk.vivoglobal.com
 127.0.0.1 ru-os-config-appstore.vivoglobal.com
 127.0.0.1 ru-p.vivoglobal.com
-127.0.0.1 ru-pnrt-stsdk.vivoglobal.com
 127.0.0.1 ru-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 ru-st-exappupgrade.vivoglobal.com
 127.0.0.1 ru-st-sl.vivoglobal.com
@@ -6444,7 +6440,6 @@
 127.0.0.1 splashimgbssdl.yun.kugou.com
 127.0.0.1 splashimgretrybssdl.cloud.kugou.com
 127.0.0.1 splashqqlive.gtimg.com
-127.0.0.1 sportzz.shop
 127.0.0.1 spt.qchannel03.cn
 127.0.0.1 squirtatt15.sugar1818.net
 127.0.0.1 srbzw.cn
@@ -6571,7 +6566,6 @@
 127.0.0.1 static.g.iqiyi.com
 127.0.0.1 static.googleadsserving.cn
 127.0.0.1 static.ichehome.com
-127.0.0.1 static.ilclock.com
 127.0.0.1 static.jcvba.com
 127.0.0.1 static.luckas.cn
 127.0.0.1 static.m.sjzhushou.com
@@ -6643,7 +6637,6 @@
 127.0.0.1 stm-collect.cn.miaozhen.com
 127.0.0.1 stm.cn.miaozhen.com
 127.0.0.1 stnetsdk.vivo.com.cn
-127.0.0.1 store-pl.shop
 127.0.0.1 store.yeelight.com
 127.0.0.1 storeconfig.mistat.intl.xiaomi.com
 127.0.0.1 storeen.ldmnq.com
@@ -6806,7 +6799,6 @@
 127.0.0.1 tdsdk.xdrig.com
 127.0.0.1 techain.baidu.com
 127.0.0.1 techgifts.tradeshow.globalsources.com
-127.0.0.1 tecunonline.com
 127.0.0.1 telapi.getui.com
 127.0.0.1 telecom.shuzilm.cn
 127.0.0.1 telecome.cn
@@ -7424,9 +7416,9 @@
 127.0.0.1 v3.jiathis.com
 127.0.0.1 v4-lm.adukwai.com
 127.0.0.1 v4.cnzz.com
+127.0.0.1 v5-bd-daily-reading-ad.qznovelvod.com
 127.0.0.1 v5-ex-reading-ad.qznovelvod.com
 127.0.0.1 v5-reading-ad.qznovelvod.com
-127.0.0.1 v5-se-gddgtc-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-sjy-daily-reading-ad.qznovelvod.com
 127.0.0.1 v6-api-p0.mobsurl.com
 127.0.0.1 v6-api-p0.yksdks.com
@@ -7454,6 +7446,7 @@
 127.0.0.1 v9.cnzz.com
 127.0.0.1 v95-se-zjwztc-reading-ad.qznovelvod.com
 127.0.0.1 v95-zjjx2tc-reading-ad.qznovelvod.com
+127.0.0.1 v96-reading-ad.qznovelvod.com
 127.0.0.1 v96-sz-daily-reading-ad.qznovelvod.com
 127.0.0.1 va3yq7si6w.com
 127.0.0.1 vaas.junion.jiguang.cn
@@ -7799,6 +7792,7 @@
 127.0.0.1 www.supersonicads.com
 127.0.0.1 www.sygjx.com
 127.0.0.1 www.taboola.com
+127.0.0.1 www.tecunonline.com
 127.0.0.1 www.tiexing.com
 127.0.0.1 www.tingyun.com
 127.0.0.1 www.tradplusad.com
