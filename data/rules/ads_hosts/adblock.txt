@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: Ads Hosts
 ! Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-! Total: 6,299
-! Updated: 2026-07-10 06:22:13 CST
+! Total: 6,337
+! Updated: 2026-07-11 06:03:11 CST
 !
 ||0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
 ||0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn^
@@ -81,7 +81,6 @@
 ||21.fh21static.com^
 ||2144.cn^
 ||2345.cn^
-||2345.com^
 ||23986834.com^
 ||2525252fib.adnxs.com^
 ||25252fsecure.adnxs.com^
@@ -207,6 +206,7 @@
 ||92p3c8lgqt.com^
 ||9308935.com^
 ||93692zubo66936.com^
+||93ta.cn^
 ||93txjw4rt2.com^
 ||961.com^
 ||96382zubo66756.com^
@@ -426,6 +426,7 @@
 ||ad.partner.gifshow.com^
 ||ad.qq.com^
 ||ad.qyer.com^
+||ad.report.jihuoniao.com^
 ||ad.richmob.cn^
 ||ad.shunchangzhixing.com^
 ||ad.sina.com.cn^
@@ -587,7 +588,6 @@
 ||ads-dre.platform.hihonorcloud.com^
 ||ads-drru.platform.hihonorcloud.com^
 ||ads-i1.xhscdn.com^
-||ads-i1.xhscdn.com.cdn.dnsv1.com^
 ||ads-i10.xhscdn.com^
 ||ads-i2.xhscdn.com^
 ||ads-i2.xhscdn.com.w.cdngslb.com^
@@ -934,7 +934,6 @@
 ||ai.advertisement.alibabacorp.sm.cn^
 ||ai.bioon.com^
 ||ai.m.taobao.com^
-||ai.taobao.com^
 ||aibanka.cnibk.com^
 ||aic.oceanengine.com^
 ||aim.yoyi.com.cn^
@@ -978,6 +977,9 @@
 ||alliance-adreq-asia.vivoglobal.com^
 ||allyes.cn^
 ||allyes.com^
+||alpinuoutdoor.shop^
+||alpinus-pl.shop^
+||alpinusports.shop^
 ||am.szhome.com^
 ||amap-aos-info-nogw.amap.com^
 ||amazon-adsystem.com^
@@ -1027,6 +1029,7 @@
 ||analytics.oceanengine.com.bytedns1.com^
 ||analytics.oceanengine.com.queniuiq.com^
 ||analytics.oceanengine.com.w.cdngslb.com^
+||analytics.partnerboost.com^
 ||analytics.pinterest.com^
 ||analytics.pointdrive.linkedin.com^
 ||analytics.pushgrid.net^
@@ -1160,7 +1163,6 @@
 ||api.dewmobile.net^
 ||api.dollphoin.site^
 ||api.doublewin123.com^
-||api.e-toys.cn^
 ||api.fu.xcultur.com^
 ||api.g.micloud.xiaomi.net^
 ||api.hdtv.letv.com^
@@ -1265,6 +1267,7 @@
 ||app.log.nf.migu.cn^
 ||app.miui.com^
 ||app.moji001.com^
+||app.partnerboost.com^
 ||app.ssp.yahoo.com^
 ||app.storage.yunvm.com^
 ||app.update.lenovo.com^
@@ -1434,12 +1437,14 @@
 ||bcp.crwdcntrl.net^
 ||bd-adaptive.pull.yximgs.com^
 ||bd-cdn.halomobi.com^
+||bd-js1.2345.com^
 ||bd-livemate.pull.yximgs.com^
 ||bd-origin.pull.yximgs.com^
 ||bd-p2p-v2.pull.yximgs.com^
 ||bd-p2p.pull.yximgs.com^
 ||bd-pclivemate.pull.yximgs.com^
 ||bd-proxy.pull.yximgs.com^
+||bd-retrieval1.2345.com^
 ||bd-rwk.pull.etoote.com^
 ||bd-s.baixing.net^
 ||bd.czxuexi.com^
@@ -1461,6 +1466,7 @@
 ||bdapi.ads.oppomobile.com^
 ||bdasd.chdbook.cn^
 ||bdcdncnc.inter.71edge.com^
+||bdcode.2345.com^
 ||bdcode.35d1.com^
 ||bdcode.qinglue.com^
 ||bdcode.youke.com^
@@ -1536,6 +1542,7 @@
 ||bjmantis.net^
 ||bjvvqu.cn^
 ||bkt.clouddn.com^
+||blackhome.club^
 ||blog.branch.io^
 ||blog.ivup.cn^
 ||blog.taboola.com^
@@ -1572,6 +1579,7 @@
 ||browsercfg-drcn.cloud.hihonorcloud.cn^
 ||browsercfg-drcn.cloud.hihonorcloud.com^
 ||browserkernel.baidu.com^
+||brubeck-sports.shop^
 ||brubecksports.shop^
 ||bsbaswq.cn^
 ||bsccdn.net^
@@ -1778,7 +1786,6 @@
 ||cloooud.com^
 ||cloud-log.yy.com^
 ||cloud.cpatrk.net^
-||cloudcdn.dopa.com^
 ||cloudcollect.meitudata.com^
 ||cloudconf.fengkongcloud.com^
 ||cloudservice14.kingsoft-office-service.com^
@@ -2395,6 +2402,7 @@
 ||f1.ichong123.com^
 ||facai383.oss-cn-guangzhou.aliyuncs.com^
 ||fakjkwp.cn^
+||fakxqq.cn^
 ||falal.cn^
 ||fancyapi.com^
 ||fancydsp.com^
@@ -2436,6 +2444,8 @@
 ||fengyukun03.cn^
 ||fenxi.com^
 ||fight-pl.shop^
+||fighteres.shop^
+||fighterspor.shop^
 ||fighterspors.shop^
 ||fighterzz.shop^
 ||file.blackint3.com^
@@ -2563,10 +2573,13 @@
 ||ganjituiguang.ganji.com^
 ||ganon.yahoo.com^
 ||gaoshouyou.com^
+||garden-home.shop^
 ||garden-homes.shop^
 ||gardendodomu.shop^
 ||gardendom.shop^
 ||gardendomowy.shop^
+||gardenpl.club^
+||gardenshop.top^
 ||gardensztabik.shop^
 ||gate.datacaciques.com^
 ||gatecollect.kugou.com^
@@ -2608,6 +2621,7 @@
 ||gg86.pinggu.org^
 ||gg88.bj.bcebos.com^
 ||ggc.cmvideo.cn^
+||ggcode.2345.com^
 ||ggdm1.nhaidu.net^
 ||ggic01.miguvideo.com^
 ||ggjs.d17.cc^
@@ -2625,6 +2639,7 @@
 ||gid.tapapis.cn^
 ||gimg.baidu.com^
 ||giocdn.com^
+||gistalco.shop^
 ||gjapplog.uc.cn^
 ||gjapplog.ucweb.com^
 ||gjfzpt.cn^
@@ -2652,11 +2667,13 @@
 ||go.inmobi.com^
 ||go.shutterstock.com^
 ||go.tuev.cn^
+||goalpinus.shop^
 ||goblin.hupu.com^
 ||godloveme.cn^
 ||godunns.shop^
 ||goforandroid.com^
 ||gojunkclean.cn^
+||gokutahya.shop^
 ||goldbye.vicp.net^
 ||gongxifc.com^
 ||google-analytics-cn.com^
@@ -2792,6 +2809,7 @@
 ||hgkzl.cn^
 ||hgpbhuj.cn^
 ||hhttm.top^
+||hi-mountain.shop^
 ||hi.xiunm.cn^
 ||hiido.com^
 ||hijack.baidu.com^
@@ -2819,7 +2837,20 @@
 ||hnltcw.com^
 ||hnol.net^
 ||hoka-shoes.myshoplaza.com^
+||home-you.click^
+||home-you.club^
 ||home.edm.globalsources.com^
+||homeyous.shop^
+||homla-sklep.club^
+||homla.cfd^
+||homla.club^
+||homla.cyou^
+||homla.fashion^
+||homla.icu^
+||homla.ink^
+||homladom.homes^
+||homladom.shop^
+||homlas.homes^
 ||honorsearch-dra.hiboard.hihonorcloud.com^
 ||honorsearch-drcn.hiboard.hihonorcloud.com^
 ||honorsearch-dre.hiboard.hihonorcloud.com^
@@ -2860,6 +2891,9 @@
 ||huichuan-mc.sm.cn^
 ||huichuan.sm.cn^
 ||huishenghuiying.com.cn^
+||huo07100hy.com^
+||huo07110hy.com^
+||huo07120hy.com^
 ||huoche.com.cn^
 ||huodong.m.taobao.com^
 ||huohuo.huamuwo.com^
@@ -3378,7 +3412,6 @@
 ||lives.l.aiseet.atianqi.com^
 ||lives.l.ott.video.qq.com^
 ||livetech.shopee.co.id.txlivecdn.com^
-||livetech.shopee.co.th.txlivecdn.com^
 ||livetech.shopee.com.br.tlivecdn.com^
 ||livetech.shopee.com.br.txlivecdn.com^
 ||livetech.shopee.vn.txlivecdn.com^
@@ -3394,7 +3427,6 @@
 ||lnk8.cn^
 ||lnme1q1qa.com^
 ||load.tbyvvwvv.plasmatreatment.cn^
-||localads.chengzijianzhan.cn^
 ||locateanyphone.net^
 ||location.ximalaya.com^
 ||lockview.cn^
@@ -3610,6 +3642,7 @@
 ||m.sjzhushou.com^
 ||m.txtxr.com^
 ||m.yap.yahoo.com^
+||m.yocvn.com^
 ||m.yoyi.com.cn^
 ||m.z74d.com^
 ||m1.81312.com^
@@ -4099,7 +4132,6 @@
 ||online.sh.cn^
 ||onrt-stsdk.vivo.com.cn^
 ||onrt-stsdk.vivoglobal.com^
-||onrunningshop.com^
 ||onzj79fce.com^
 ||ooniu.com^
 ||oozushirp.com^
@@ -4220,7 +4252,6 @@
 ||partner.uc.cn^
 ||partnerad.l.google.com^
 ||partnerads.ysm.yahoo.com^
-||partnerboost.com^
 ||partnership.oceanengine.com^
 ||passport.acla.org.cn^
 ||patriot.cs.pp.cn^
@@ -4243,6 +4274,7 @@
 ||pclick.yahoo.com^
 ||pcm-img.zhls.qq.com^
 ||pcmactivity.chinacloudsites.cn^
+||pcmanage.cn^
 ||pcmx.autohome.com.cn^
 ||pcookie.aliexpress.com^
 ||pcookie.taobao.com^
@@ -4293,6 +4325,8 @@
 ||pingtas.qq.com^
 ||pitaya.bytedance.com^
 ||pitbull-pl.club^
+||pitbullsport.club^
+||pitbullsports.club^
 ||pitbullwestcoast.shop^
 ||pixel.adsafeprotected.com^
 ||pixel.tapad.com^
@@ -4481,6 +4515,7 @@
 ||qw2v.taoxiehui.cn^
 ||qwe0231141.bj.bcebos.com^
 ||qy.qchannel03.cn^
+||r-golsports.club^
 ||r.51wnl-cq.com^
 ||r.mail.163.com^
 ||ra.gtimg.com^
@@ -4672,7 +4707,6 @@
 ||sa.sina.cn^
 ||saad.ms.zhangyue.net^
 ||saas.tingyun.com^
-||sabbiremart.com^
 ||sadfasdfa962.com^
 ||safe.ucweb.com^
 ||safebrowsing.googleapis.com^
@@ -4849,7 +4883,6 @@
 ||simaba.m.taobao.com^
 ||simaba.taobao.com^
 ||simba.6.cn^
-||simicloud.com^
 ||sin1-ib.adnxs.com^
 ||sin3-ib.adnxs.com^
 ||sinawap.com^
@@ -4995,11 +5028,18 @@
 ||stalco-pl.club^
 ||stalco-sklep.online^
 ||stalco-sklep.store^
+||stalco.cc^
+||stalco.click^
 ||stalco.club^
+||stalco.icu^
+||stalco.ink^
 ||stalco.top^
 ||stalco24-pl.shop^
 ||stalcom-pl.shop^
 ||stalconar.club^
+||stalconars.club^
+||stalconarse.club^
+||stalcopl-24.shop^
 ||stalcopl24.shop^
 ||stalcos.shop^
 ||stalcosklep.top^
@@ -5499,7 +5539,6 @@
 ||tumeite.cn^
 ||tunion-api.m.taobao.com^
 ||turbo2sdk-push.oupeng.com^
-||tuxi.com.cn^
 ||tvabqt.cn^
 ||tvdpebx.cn^
 ||tvuser-ch.cedock.com^
@@ -5994,7 +6033,6 @@
 ||www.chengzijianzhan.com^
 ||www.claiks.com^
 ||www.destinationurl.com^
-||www.dopa.com^
 ||www.dualspace.com^
 ||www.fm120.com^
 ||www.gameley.com^
@@ -6109,9 +6147,9 @@
 ||xs.dmzj.com^
 ||xssncc2tv.com^
 ||xtc.xdplt.com^
-||xttaff.com^
 ||xue.zbyw.cn^
 ||xueaaaw.cn^
+||xukou.net^
 ||xulizui6.com^
 ||xundupdf.com^
 ||xvhttu3c9.com^

@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 自用的轻量规则，包含稳定的国内维护源，去除白名单。日常去广告使用，hosts 格式无法拦截部分广告子域名。
-# Total: 8,128
-# Updated: 2026-07-10 06:22:13 CST
+# Total: 8,166
+# Updated: 2026-07-11 06:03:11 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -132,7 +132,6 @@
 127.0.0.1 2144.cn
 127.0.0.1 2311.oadz.com
 127.0.0.1 2345.cn
-127.0.0.1 2345.com
 127.0.0.1 2345.oadz.com
 127.0.0.1 23986834.com
 127.0.0.1 2525252fib.adnxs.com
@@ -275,6 +274,7 @@
 127.0.0.1 92p3c8lgqt.com
 127.0.0.1 9308935.com
 127.0.0.1 93692zubo66936.com
+127.0.0.1 93ta.cn
 127.0.0.1 93txjw4rt2.com
 127.0.0.1 961.com
 127.0.0.1 96382zubo66756.com
@@ -547,6 +547,7 @@
 127.0.0.1 ad.partner.gifshow.com
 127.0.0.1 ad.qq.com
 127.0.0.1 ad.qyer.com
+127.0.0.1 ad.report.jihuoniao.com
 127.0.0.1 ad.richmob.cn
 127.0.0.1 ad.shenshiads.com
 127.0.0.1 ad.shunchangzhixing.com
@@ -730,7 +731,6 @@
 127.0.0.1 ads-dre.platform.hihonorcloud.com
 127.0.0.1 ads-drru.platform.hihonorcloud.com
 127.0.0.1 ads-i1.xhscdn.com
-127.0.0.1 ads-i1.xhscdn.com.cdn.dnsv1.com
 127.0.0.1 ads-i10.xhscdn.com
 127.0.0.1 ads-i2.xhscdn.com
 127.0.0.1 ads-i2.xhscdn.com.w.cdngslb.com
@@ -1125,7 +1125,6 @@
 127.0.0.1 ai.bioon.com
 127.0.0.1 ai.login.umeng.com
 127.0.0.1 ai.m.taobao.com
-127.0.0.1 ai.taobao.com
 127.0.0.1 ai.voiceads.cn
 127.0.0.1 aibanka.cnibk.com
 127.0.0.1 aic.oceanengine.com
@@ -1185,6 +1184,9 @@
 127.0.0.1 alogus.umeng.com
 127.0.0.1 alon.umeng.com
 127.0.0.1 along.umeng.com
+127.0.0.1 alpinuoutdoor.shop
+127.0.0.1 alpinus-pl.shop
+127.0.0.1 alpinusports.shop
 127.0.0.1 am.szhome.com
 127.0.0.1 amap-aos-info-nogw.amap.com
 127.0.0.1 amazon-adsystem.com
@@ -1239,6 +1241,7 @@
 127.0.0.1 analytics.oceanengine.com.bytedns1.com
 127.0.0.1 analytics.oceanengine.com.queniuiq.com
 127.0.0.1 analytics.oceanengine.com.w.cdngslb.com
+127.0.0.1 analytics.partnerboost.com
 127.0.0.1 analytics.pinterest.com
 127.0.0.1 analytics.pointdrive.linkedin.com
 127.0.0.1 analytics.pushgrid.net
@@ -1407,7 +1410,6 @@
 127.0.0.1 api.dollphoin.site
 127.0.0.1 api.domob.cn
 127.0.0.1 api.doublewin123.com
-127.0.0.1 api.e-toys.cn
 127.0.0.1 api.e.kuaishou.com
 127.0.0.1 api.exc.mob.com
 127.0.0.1 api.exv.mob.com
@@ -1565,6 +1567,7 @@
 127.0.0.1 app.log.nf.migu.cn
 127.0.0.1 app.miui.com
 127.0.0.1 app.moji001.com
+127.0.0.1 app.partnerboost.com
 127.0.0.1 app.ssp.yahoo.com
 127.0.0.1 app.storage.yunvm.com
 127.0.0.1 app.toponad.com
@@ -1784,12 +1787,14 @@
 127.0.0.1 bcp.crwdcntrl.net
 127.0.0.1 bd-adaptive.pull.yximgs.com
 127.0.0.1 bd-cdn.halomobi.com
+127.0.0.1 bd-js1.2345.com
 127.0.0.1 bd-livemate.pull.yximgs.com
 127.0.0.1 bd-origin.pull.yximgs.com
 127.0.0.1 bd-p2p-v2.pull.yximgs.com
 127.0.0.1 bd-p2p.pull.yximgs.com
 127.0.0.1 bd-pclivemate.pull.yximgs.com
 127.0.0.1 bd-proxy.pull.yximgs.com
+127.0.0.1 bd-retrieval1.2345.com
 127.0.0.1 bd-rwk.pull.etoote.com
 127.0.0.1 bd-s.baixing.net
 127.0.0.1 bd.czxuexi.com
@@ -1811,6 +1816,7 @@
 127.0.0.1 bdapi.ads.oppomobile.com
 127.0.0.1 bdasd.chdbook.cn
 127.0.0.1 bdcdncnc.inter.71edge.com
+127.0.0.1 bdcode.2345.com
 127.0.0.1 bdcode.35d1.com
 127.0.0.1 bdcode.qinglue.com
 127.0.0.1 bdcode.youke.com
@@ -1910,6 +1916,7 @@
 127.0.0.1 bjuser.jpush.cn
 127.0.0.1 bjvvqu.cn
 127.0.0.1 bkt.clouddn.com
+127.0.0.1 blackhome.club
 127.0.0.1 blink-upload.bayescom.com
 127.0.0.1 blink.bayescom.com
 127.0.0.1 blog.branch.io
@@ -1953,6 +1960,7 @@
 127.0.0.1 browsercfg-drcn.cloud.hihonorcloud.cn
 127.0.0.1 browsercfg-drcn.cloud.hihonorcloud.com
 127.0.0.1 browserkernel.baidu.com
+127.0.0.1 brubeck-sports.shop
 127.0.0.1 brubecksports.shop
 127.0.0.1 bsbaswq.cn
 127.0.0.1 bsccdn.net
@@ -2235,7 +2243,6 @@
 127.0.0.1 cloud-log.yy.com
 127.0.0.1 cloud.cpatrk.net
 127.0.0.1 cloud.xdrig.com
-127.0.0.1 cloudcdn.dopa.com
 127.0.0.1 cloudcollect.meitudata.com
 127.0.0.1 cloudconf.fengkongcloud.com
 127.0.0.1 cloudservice14.kingsoft-office-service.com
@@ -3081,6 +3088,7 @@
 127.0.0.1 fac2.oadz.com
 127.0.0.1 facai383.oss-cn-guangzhou.aliyuncs.com
 127.0.0.1 fakjkwp.cn
+127.0.0.1 fakxqq.cn
 127.0.0.1 falal.cn
 127.0.0.1 fancyapi.com
 127.0.0.1 fancydsp.com
@@ -3129,6 +3137,8 @@
 127.0.0.1 fenxi.com
 127.0.0.1 ff.doubleclick.net
 127.0.0.1 fight-pl.shop
+127.0.0.1 fighteres.shop
+127.0.0.1 fighterspor.shop
 127.0.0.1 fighterspors.shop
 127.0.0.1 fighterzz.shop
 127.0.0.1 file.blackint3.com
@@ -3283,10 +3293,13 @@
 127.0.0.1 ganjituiguang.ganji.com
 127.0.0.1 ganon.yahoo.com
 127.0.0.1 gaoshouyou.com
+127.0.0.1 garden-home.shop
 127.0.0.1 garden-homes.shop
 127.0.0.1 gardendodomu.shop
 127.0.0.1 gardendom.shop
 127.0.0.1 gardendomowy.shop
+127.0.0.1 gardenpl.club
+127.0.0.1 gardenshop.top
 127.0.0.1 gardensztabik.shop
 127.0.0.1 gate.datacaciques.com
 127.0.0.1 gatecollect.kugou.com
@@ -3342,6 +3355,7 @@
 127.0.0.1 gg86.pinggu.org
 127.0.0.1 gg88.bj.bcebos.com
 127.0.0.1 ggc.cmvideo.cn
+127.0.0.1 ggcode.2345.com
 127.0.0.1 ggdm1.nhaidu.net
 127.0.0.1 ggic01.miguvideo.com
 127.0.0.1 ggjs.d17.cc
@@ -3361,6 +3375,7 @@
 127.0.0.1 gid.tapapis.cn
 127.0.0.1 gimg.baidu.com
 127.0.0.1 giocdn.com
+127.0.0.1 gistalco.shop
 127.0.0.1 gjapplog.uc.cn
 127.0.0.1 gjapplog.ucweb.com
 127.0.0.1 gjfzpt.cn
@@ -3391,11 +3406,13 @@
 127.0.0.1 go.inmobi.com
 127.0.0.1 go.shutterstock.com
 127.0.0.1 go.tuev.cn
+127.0.0.1 goalpinus.shop
 127.0.0.1 goblin.hupu.com
 127.0.0.1 godloveme.cn
 127.0.0.1 godunns.shop
 127.0.0.1 goforandroid.com
 127.0.0.1 gojunkclean.cn
+127.0.0.1 gokutahya.shop
 127.0.0.1 goldbye.vicp.net
 127.0.0.1 gongxifc.com
 127.0.0.1 google-analytics-cn.com
@@ -3566,6 +3583,7 @@
 127.0.0.1 hgkzl.cn
 127.0.0.1 hgpbhuj.cn
 127.0.0.1 hhttm.top
+127.0.0.1 hi-mountain.shop
 127.0.0.1 hi.xiunm.cn
 127.0.0.1 hiido.com
 127.0.0.1 hijack.baidu.com
@@ -3598,7 +3616,20 @@
 127.0.0.1 hnltcw.com
 127.0.0.1 hnol.net
 127.0.0.1 hoka-shoes.myshoplaza.com
+127.0.0.1 home-you.click
+127.0.0.1 home-you.club
 127.0.0.1 home.edm.globalsources.com
+127.0.0.1 homeyous.shop
+127.0.0.1 homla-sklep.club
+127.0.0.1 homla.cfd
+127.0.0.1 homla.club
+127.0.0.1 homla.cyou
+127.0.0.1 homla.fashion
+127.0.0.1 homla.icu
+127.0.0.1 homla.ink
+127.0.0.1 homladom.homes
+127.0.0.1 homladom.shop
+127.0.0.1 homlas.homes
 127.0.0.1 honorsearch-dra.hiboard.hihonorcloud.com
 127.0.0.1 honorsearch-drcn.hiboard.hihonorcloud.com
 127.0.0.1 honorsearch-dre.hiboard.hihonorcloud.com
@@ -3654,6 +3685,9 @@
 127.0.0.1 hunantv-dtv.m.cn.miaozhen.com
 127.0.0.1 hunantv-mipdx.cn.miaozhen.com
 127.0.0.1 hunantv.m.cn.miaozhen.com
+127.0.0.1 huo07100hy.com
+127.0.0.1 huo07110hy.com
+127.0.0.1 huo07120hy.com
 127.0.0.1 huoche.com.cn
 127.0.0.1 huodong.m.taobao.com
 127.0.0.1 huohuo.huamuwo.com
@@ -4300,7 +4334,6 @@
 127.0.0.1 lives.l.aiseet.atianqi.com
 127.0.0.1 lives.l.ott.video.qq.com
 127.0.0.1 livetech.shopee.co.id.txlivecdn.com
-127.0.0.1 livetech.shopee.co.th.txlivecdn.com
 127.0.0.1 livetech.shopee.com.br.tlivecdn.com
 127.0.0.1 livetech.shopee.com.br.txlivecdn.com
 127.0.0.1 livetech.shopee.vn.txlivecdn.com
@@ -4318,7 +4351,6 @@
 127.0.0.1 lnk8.cn
 127.0.0.1 lnme1q1qa.com
 127.0.0.1 load.tbyvvwvv.plasmatreatment.cn
-127.0.0.1 localads.chengzijianzhan.cn
 127.0.0.1 locateanyphone.net
 127.0.0.1 location.ximalaya.com
 127.0.0.1 lockview.cn
@@ -4558,6 +4590,7 @@
 127.0.0.1 m.umeng.com
 127.0.0.1 m.wrating.com
 127.0.0.1 m.yap.yahoo.com
+127.0.0.1 m.yocvn.com
 127.0.0.1 m.yoyi.com.cn
 127.0.0.1 m.z74d.com
 127.0.0.1 m1.81312.com
@@ -5144,7 +5177,6 @@
 127.0.0.1 online.sh.cn
 127.0.0.1 onrt-stsdk.vivo.com.cn
 127.0.0.1 onrt-stsdk.vivoglobal.com
-127.0.0.1 onrunningshop.com
 127.0.0.1 onzj79fce.com
 127.0.0.1 ooniu.com
 127.0.0.1 oozushirp.com
@@ -5311,7 +5343,6 @@
 127.0.0.1 partnerad.l.doubleclick.net
 127.0.0.1 partnerad.l.google.com
 127.0.0.1 partnerads.ysm.yahoo.com
-127.0.0.1 partnerboost.com
 127.0.0.1 partnership.oceanengine.com
 127.0.0.1 passport.acla.org.cn
 127.0.0.1 passport.umeng.com
@@ -5338,6 +5369,7 @@
 127.0.0.1 pclick.yahoo.com
 127.0.0.1 pcm-img.zhls.qq.com
 127.0.0.1 pcmactivity.chinacloudsites.cn
+127.0.0.1 pcmanage.cn
 127.0.0.1 pcmx.autohome.com.cn
 127.0.0.1 pcookie.aliexpress.com
 127.0.0.1 pcookie.cnzz.com
@@ -5400,6 +5432,8 @@
 127.0.0.1 pingtas.qq.com
 127.0.0.1 pitaya.bytedance.com
 127.0.0.1 pitbull-pl.club
+127.0.0.1 pitbullsport.club
+127.0.0.1 pitbullsports.club
 127.0.0.1 pitbullwestcoast.shop
 127.0.0.1 pitk.birdgesdk.com
 127.0.0.1 pixel.adsafeprotected.com
@@ -5657,6 +5691,7 @@
 127.0.0.1 qwe0231141.bj.bcebos.com
 127.0.0.1 qy.qchannel03.cn
 127.0.0.1 qzs.gdtimg.com
+127.0.0.1 r-golsports.club
 127.0.0.1 r.51wnl-cq.com
 127.0.0.1 r.applovin.com
 127.0.0.1 r.domob.cn
@@ -6033,7 +6068,6 @@
 127.0.0.1 saad.ms.zhangyue.net
 127.0.0.1 saas.hpplay.cn
 127.0.0.1 saas.tingyun.com
-127.0.0.1 sabbiremart.com
 127.0.0.1 sadfasdfa962.com
 127.0.0.1 safe.ucweb.com
 127.0.0.1 safebrowsing.googleapis.com
@@ -6307,7 +6341,6 @@
 127.0.0.1 simaba.m.taobao.com
 127.0.0.1 simaba.taobao.com
 127.0.0.1 simba.6.cn
-127.0.0.1 simicloud.com
 127.0.0.1 sin1-ib.adnxs.com
 127.0.0.1 sin3-ib.adnxs.com
 127.0.0.1 sinawap.com
@@ -6498,11 +6531,18 @@
 127.0.0.1 stalco-pl.club
 127.0.0.1 stalco-sklep.online
 127.0.0.1 stalco-sklep.store
+127.0.0.1 stalco.cc
+127.0.0.1 stalco.click
 127.0.0.1 stalco.club
+127.0.0.1 stalco.icu
+127.0.0.1 stalco.ink
 127.0.0.1 stalco.top
 127.0.0.1 stalco24-pl.shop
 127.0.0.1 stalcom-pl.shop
 127.0.0.1 stalconar.club
+127.0.0.1 stalconars.club
+127.0.0.1 stalconarse.club
+127.0.0.1 stalcopl-24.shop
 127.0.0.1 stalcopl24.shop
 127.0.0.1 stalcos.shop
 127.0.0.1 stalcosklep.top
@@ -7109,7 +7149,6 @@
 127.0.0.1 tumeite.cn
 127.0.0.1 tunion-api.m.taobao.com
 127.0.0.1 turbo2sdk-push.oupeng.com
-127.0.0.1 tuxi.com.cn
 127.0.0.1 tvabqt.cn
 127.0.0.1 tvapp.hpplay.cn
 127.0.0.1 tvdpebx.cn
@@ -7748,7 +7787,6 @@
 127.0.0.1 www.cnzz.com
 127.0.0.1 www.destinationurl.com
 127.0.0.1 www.domob.cn
-127.0.0.1 www.dopa.com
 127.0.0.1 www.doubleclick.com
 127.0.0.1 www.dualspace.com
 127.0.0.1 www.flurry.com
@@ -7902,9 +7940,9 @@
 127.0.0.1 xs.dmzj.com
 127.0.0.1 xssncc2tv.com
 127.0.0.1 xtc.xdplt.com
-127.0.0.1 xttaff.com
 127.0.0.1 xue.zbyw.cn
 127.0.0.1 xueaaaw.cn
+127.0.0.1 xukou.net
 127.0.0.1 xulizui6.com
 127.0.0.1 xundupdf.com
 127.0.0.1 xunlei.ipdx.cn.miaozhen.com
