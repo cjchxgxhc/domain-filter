@@ -94,21 +94,29 @@ ads_hosts:
 
 ads:
   title: Ads
-  description: 主要引用 217heidai/adblockfilters (lite)、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告、国外广告（轻量）；删除：白名单域名、proxy_tld（减小大小）。
+  description: 主要引用 217heidai/adblockfilters (lite)、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告；删除：白名单域名、proxy_tld（减小大小）。
   formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt
         - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-        - https://small.oisd.nl
     - type: discard
       source: ["@addata_discard"]
     - type: discard_suffix
       source: ["@addata_discard_suffix"]
     - type: add
       source: ["@ads_hosts"]
+
+
+ads_proxy:
+  title: Ads Proxy
+  description: 国外广告规则，不保证正常网络环境误杀和拦截率，国内流量不应经过此规则过滤。
+  formats: [clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
 
 
 proxy:
