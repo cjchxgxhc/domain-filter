@@ -1,7 +1,7 @@
 # Title: Ads Hosts
 # Description: 主要引用 217heidai/adblockfilters (lite) 项目规则，增添：手机端应用程序广告、子域名（用于hosts格式）；删除：白名单域名、proxy_tld（减小大小）。
-# Total: 8,973
-# Updated: 2026-07-14 05:56:55 CST
+# Total: 8,938
+# Updated: 2026-07-15 05:57:44 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -114,7 +114,6 @@
 127.0.0.1 192168.luyouwang.com
 127.0.0.1 1a839d.api1.shuzilm.cn
 127.0.0.1 1alog.umeng.com
-127.0.0.1 1fw35mn5y7h-sdk.rum.aliyuncs.com
 127.0.0.1 1hlahoc4rpc-sdk.rum.aliyuncs.com
 127.0.0.1 1hte.xdplt.com
 127.0.0.1 1l1.cc
@@ -273,7 +272,13 @@
 127.0.0.1 7dot.cn
 127.0.0.1 7s7bvoungt.com
 127.0.0.1 7s8z7w24u.com
+127.0.0.1 7u2gej.com1.z0.glb.clouddn.com
+127.0.0.1 7u2ss1.com1.z0.glb.clouddn.com
+127.0.0.1 7vzmoi.com1.z0.glb.clouddn.com
 127.0.0.1 7xi9g1.com1.z0.glb.clouddn.com
+127.0.0.1 7xjob4.com1.z0.glb.clouddn.com
+127.0.0.1 7xo4q8.com1.z0.glb.clouddn.com
+127.0.0.1 7xsqvb.com1.z0.glb.clouddn.com
 127.0.0.1 801.tianya.cn
 127.0.0.1 801.tianyaui.cn
 127.0.0.1 803.tianya.cn
@@ -424,7 +429,6 @@
 127.0.0.1 abroad.api.comm.intl.miui.com
 127.0.0.1 abroadad.cache.wpscdn.com
 127.0.0.1 abtest-api-data-sg.hoyoverse.com
-127.0.0.1 abtest-api-data.mihoyo.com
 127.0.0.1 abtest.alibaba.com
 127.0.0.1 abtest.todesk.com
 127.0.0.1 abtest3-misc-hl.zijieapi.com
@@ -508,7 +512,6 @@
 127.0.0.1 ad-locus.com
 127.0.0.1 ad-log-upload-os.hoyoverse.com
 127.0.0.1 ad-log-upload.mihoyo.com
-127.0.0.1 ad-material.ys7.com
 127.0.0.1 ad-monitor.sh9130.com
 127.0.0.1 ad-plus.cn
 127.0.0.1 ad-r.soulapp.cn
@@ -532,7 +535,6 @@
 127.0.0.1 ad.12306.cn.wscdns.com
 127.0.0.1 ad.163.com
 127.0.0.1 ad.3.cn
-127.0.0.1 ad.51wnl-cq.com
 127.0.0.1 ad.51wnl.com
 127.0.0.1 ad.95306.cn
 127.0.0.1 ad.a.yximgs.com
@@ -596,7 +598,6 @@
 127.0.0.1 ad.mobile.youku.com
 127.0.0.1 ad.nvdvr.cn
 127.0.0.1 ad.oceanengine.com
-127.0.0.1 ad.open.api.jihuoniao.com
 127.0.0.1 ad.open.jiguang.cn
 127.0.0.1 ad.ourgame.com
 127.0.0.1 ad.partner.gifshow.com
@@ -604,7 +605,6 @@
 127.0.0.1 ad.qq.com
 127.0.0.1 ad.qun.qq.com
 127.0.0.1 ad.qyer.com
-127.0.0.1 ad.report.jihuoniao.com
 127.0.0.1 ad.richmob.cn
 127.0.0.1 ad.shenshiads.com
 127.0.0.1 ad.shunchangzhixing.com
@@ -616,6 +616,7 @@
 127.0.0.1 ad.tagtoo.co
 127.0.0.1 ad.tencentmusic.com
 127.0.0.1 ad.thepaper.cn
+127.0.0.1 ad.thsi.cn
 127.0.0.1 ad.tianmu.mobi
 127.0.0.1 ad.toutiao.com
 127.0.0.1 ad.track.66mobi.com
@@ -848,7 +849,6 @@
 127.0.0.1 ads-jp.tiktok.com
 127.0.0.1 ads-lb.serving-sys.cn
 127.0.0.1 ads-marketing-vivofs.vivo.com.cn
-127.0.0.1 ads-marketing-vivofs.vivo.com.cn.ctdns.cn
 127.0.0.1 ads-monitoring.shziyi.com
 127.0.0.1 ads-privacy-api.prd.mz.internal.unity3d.com
 127.0.0.1 ads-sdk-api.ranfenghd.com
@@ -1306,7 +1306,6 @@
 127.0.0.1 aligtr072.mmstat.com
 127.0.0.1 alimama.alicdn.com
 127.0.0.1 alime-pic.oss-cn-hangzhou.aliyuncs.com
-127.0.0.1 alimelog.taobao.com
 127.0.0.1 alipansou.com
 127.0.0.1 alipaylog.com
 127.0.0.1 alitui.weibo.com
@@ -1370,7 +1369,6 @@
 127.0.0.1 analytics.adjust.cn
 127.0.0.1 analytics.afirstsoft.cn
 127.0.0.1 analytics.apps.seabroadnet.com
-127.0.0.1 analytics.apps.seabroadnet.com.a1.initgg.com
 127.0.0.1 analytics.cherry-ai.com
 127.0.0.1 analytics.cnblogs.com
 127.0.0.1 analytics.dealmoon.com
@@ -1436,7 +1434,6 @@
 127.0.0.1 apd-pcdnwxnat.teg.tencent-cloud.net
 127.0.0.1 apd-pcdnwxstat.teg.tencent-cloud.net
 127.0.0.1 api-4know-em.hismarttv.com
-127.0.0.1 api-4know-eu.hismarttv.com
 127.0.0.1 api-access.pangolin-sdk-toutiao-b.com
 127.0.0.1 api-access.pangolin-sdk-toutiao-b.com.bytedns1.com
 127.0.0.1 api-access.pangolin-sdk-toutiao-b.com.queniuyk.com
@@ -1471,7 +1468,6 @@
 127.0.0.1 api-c.dutils.com
 127.0.0.1 api-c.hiaiabc.com
 127.0.0.1 api-cfg.8ziben.com
-127.0.0.1 api-cloudfalcon.hismarttv.com
 127.0.0.1 api-d.dutils.com
 127.0.0.1 api-d.hiaiabc.com
 127.0.0.1 api-data-collection.insta360.cn
@@ -1539,7 +1535,6 @@
 127.0.0.1 api.banyunjuhe.com
 127.0.0.1 api.bbs.miui.com
 127.0.0.1 api.bridgeoos.com
-127.0.0.1 api.browser.intl.miui.com
 127.0.0.1 api.brs.intl.miui.com
 127.0.0.1 api.bytegle.site
 127.0.0.1 api.bz.igexin.com
@@ -1850,7 +1845,6 @@
 127.0.0.1 audience-164723144.us-east-1.elb.amazonaws.com
 127.0.0.1 auth-em.hismarttv.com
 127.0.0.1 auth-eu.hismarttv.com
-127.0.0.1 auth-jp.hismarttv.com
 127.0.0.1 auth-launcher-em.hismarttv.com
 127.0.0.1 auth-launcher-eu.hismarttv.com
 127.0.0.1 auth-launcher-jp.hismarttv.com
@@ -1858,7 +1852,6 @@
 127.0.0.1 auth-launcher-sa.hismarttv.com
 127.0.0.1 auth-na.hismarttv.com
 127.0.0.1 auth-phone-afr.hismarttv.com
-127.0.0.1 auth-phone-ap.hismarttv.com
 127.0.0.1 auth-sa.hismarttv.com
 127.0.0.1 auth.api.gitv.tv
 127.0.0.1 auth.dlb.mob.com
@@ -2470,7 +2463,6 @@
 127.0.0.1 clientlogsf.music.163.com
 127.0.0.1 clkservice.youdao.com
 127.0.0.1 clog.miguvideo.com
-127.0.0.1 clog.skysrt.com
 127.0.0.1 clog.tanshudata.com
 127.0.0.1 cloooud.com
 127.0.0.1 cloud-log.yy.com
@@ -2582,7 +2574,6 @@
 127.0.0.1 cname-asia-st-exappupgrade.vivoglobal.com
 127.0.0.1 cname-in-apport-stsdk.vivoglobal.com
 127.0.0.1 cname-in-bom01-nginxpool03.vivoglobal.com
-127.0.0.1 cname-in-ctdbonrt-stsdk.vivoglobal.com
 127.0.0.1 cname-sin01-stsdk09.vivoglobal.com
 127.0.0.1 cncapi.getui.com
 127.0.0.1 cncrestapi.getui.com
@@ -2596,10 +2587,8 @@
 127.0.0.1 cnzz.comw.cnzz.com
 127.0.0.1 cnzz.mmstat.com
 127.0.0.1 cnzzlink.com
-127.0.0.1 co-domaincfg.vivoglobal.com
 127.0.0.1 co-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 co-st-sl.vivoglobal.com
-127.0.0.1 co-timesync.vivoglobal.com
 127.0.0.1 co-vcode-api.vivoglobal.com
 127.0.0.1 co-vcode-od.vivoglobal.com
 127.0.0.1 cocounion.com
@@ -2908,7 +2897,6 @@
 127.0.0.1 dcc-awareness-cn.heytapmobi.com
 127.0.0.1 dcc.shuzilm.cn
 127.0.0.1 dcc2.shuzilm.cn
-127.0.0.1 dcintl.push.heytapmobi.com
 127.0.0.1 dcmdaa.51y5.net
 127.0.0.1 dco-jads-727222375.us-west-2.elb.amazonaws.com
 127.0.0.1 dd.browser.360.cn
@@ -3316,15 +3304,12 @@
 127.0.0.1 etoolads.cn
 127.0.0.1 etoolads.cn.com
 127.0.0.1 etoolads.com
-127.0.0.1 eu-album-api.vivoglobal.com
-127.0.0.1 eu-cota.vivoglobal.com
 127.0.0.1 eu-datareceiver.aki-game.net
 127.0.0.1 eu-domaincfg.vivoglobal.com
 127.0.0.1 eu-errup.vivoglobal.com
 127.0.0.1 eu-onrt-stsdk.vivoglobal.com
 127.0.0.1 eu-ort-stsdk.vivoglobal.com
 127.0.0.1 eu-p.vivoglobal.com
-127.0.0.1 eu-pnrt-stsdk.vivoglobal.com
 127.0.0.1 eu-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 eu-st-sl.vivoglobal.com
 127.0.0.1 eu-stsdk.vivoglobal.com
@@ -4132,7 +4117,6 @@
 127.0.0.1 hzs9.cnzz.com
 127.0.0.1 hzvs1.cnzz.com
 127.0.0.1 hzvs2.cnzz.com
-127.0.0.1 i-cn01a.ocloud.heytapmobi.com
 127.0.0.1 i-fk.cn
 127.0.0.1 i-sdk.mediation.unity3d.com
 127.0.0.1 i-sg01a.ocloud.heytapmobi.com
@@ -4586,6 +4570,7 @@
 127.0.0.1 jy135.com
 127.0.0.1 jyd.fjzdmy.com
 127.0.0.1 jygdb.com
+127.0.0.1 jyhengyi.cn
 127.0.0.1 jzclick.soso.com
 127.0.0.1 jzdwl4.cn
 127.0.0.1 jzt.jd.com
@@ -4675,10 +4660,7 @@
 127.0.0.1 ky595images.com
 127.0.0.1 kychq.cn
 127.0.0.1 kz-onrt-stsdk.vivoglobal.com
-127.0.0.1 kz-ort-stsdk.vivoglobal.com
-127.0.0.1 kz-st-exappupgrade.vivoglobal.com
 127.0.0.1 kz-vcode-od.vivoglobal.com
-127.0.0.1 kz-vcode-or.vivoglobal.com
 127.0.0.1 kzchyhr.cn
 127.0.0.1 kzki21j8f6.com
 127.0.0.1 l-rcd.iqiyi.com
@@ -4832,7 +4814,6 @@
 127.0.0.1 log-h5.cmpassport.com
 127.0.0.1 log-hl.snssdk.com
 127.0.0.1 log-klink.zijieapi.com
-127.0.0.1 log-lf.snssdk.com
 127.0.0.1 log-lq.snssdk.com
 127.0.0.1 log-pub-hk.aoshitang.com
 127.0.0.1 log-report.com
@@ -4881,7 +4862,6 @@
 127.0.0.1 log.outbrain.com
 127.0.0.1 log.pinterest.com
 127.0.0.1 log.popin.cc
-127.0.0.1 log.qcast.cn
 127.0.0.1 log.qchannel01.cn
 127.0.0.1 log.qchannel03.cn
 127.0.0.1 log.qiniuapi.com
@@ -4988,7 +4968,6 @@
 127.0.0.1 logservice-dra.platform.hicloud.com
 127.0.0.1 logservice-dre.platform.dbankcloud.cn
 127.0.0.1 logservice-dre.platform.dbankcloud.com
-127.0.0.1 logservice-dre.platform.hicloud.com
 127.0.0.1 logservice.dbankcloud.cn
 127.0.0.1 logservice.hicloud.com
 127.0.0.1 logservice1.dbankcloud.cn
@@ -5192,7 +5171,6 @@
 127.0.0.1 member.tingyun.com
 127.0.0.1 memelq.acs.org
 127.0.0.1 mepodownload.mediatek.com
-127.0.0.1 mercury-sdk.snssdk.com
 127.0.0.1 message.meitu.com
 127.0.0.1 message.umeng.com
 127.0.0.1 met2.hp.com
@@ -5229,7 +5207,6 @@
 127.0.0.1 metrics.mathworks.cn
 127.0.0.1 metrics.mzstatic.com
 127.0.0.1 metrics.rolex.cn
-127.0.0.1 metrics.yy.com
 127.0.0.1 metrics1-drcn-dt-dbankcloud-cn.gere.dbankedge.cn
 127.0.0.1 metrics1-drcn.dt.dbankcloud.cn
 127.0.0.1 metrics1-drcn.dt.dbankcloud.com
@@ -5449,7 +5426,6 @@
 127.0.0.1 mssdk5-normal-hl.zijieapi.com
 127.0.0.1 mssdk5-normal-lf.zijieapi.com
 127.0.0.1 mssdk5-normal-lq.zijieapi.com
-127.0.0.1 msstatic.com.gslb.kuiniuca.com
 127.0.0.1 mstatik.com
 127.0.0.1 msz3.destinia.cn
 127.0.0.1 mt.cnzz.com
@@ -5600,7 +5576,6 @@
 127.0.0.1 nl-rcd.iqiyi.com
 127.0.0.1 nlzyp.cn
 127.0.0.1 nmetrics.samsung.com
-127.0.0.1 nosup-jd1.127.net
 127.0.0.1 notes-analytics-events.apple.com
 127.0.0.1 noti-asia.adsmoloco.com
 127.0.0.1 notice.game.xiaomi.com
@@ -5784,7 +5759,6 @@
 127.0.0.1 otme.cn
 127.0.0.1 ott-v0-al.data.mgtv.com
 127.0.0.1 ott.v1.data.mgtv.com
-127.0.0.1 ottl7-l2.pandora.xiaomi.com
 127.0.0.1 oumax.oupeng.com
 127.0.0.1 ouplog.umeng.com
 127.0.0.1 outcome-cdn.supersonicads.com
@@ -5865,7 +5839,6 @@
 127.0.0.1 p6-ad-sign.byteimg.com
 127.0.0.1 p6-be-pack-sign.pglstatp-toutiao.com
 127.0.0.1 p66-ad.adkwai.com
-127.0.0.1 p66-ad.adkwai.com.3dce113f.cdnhwchcg02.com
 127.0.0.1 p66-ad.adkwai.com.v1.kwaiselfcdn.com
 127.0.0.1 p74ugyuur.com
 127.0.0.1 p9-ad-sign.byteimg.com
@@ -5923,7 +5896,6 @@
 127.0.0.1 pb.sogou.com
 127.0.0.1 pb3.pstatp.com
 127.0.0.1 pbaiyho.cn
-127.0.0.1 pc-mon.snssdk.com
 127.0.0.1 pc-mon.zijieapi.com
 127.0.0.1 pc-util.gamersky.com
 127.0.0.1 pc.jipinyouwu.com
@@ -6504,7 +6476,6 @@
 127.0.0.1 ru-onrt-stsdk.vivoglobal.com
 127.0.0.1 ru-os-config-appstore.vivoglobal.com
 127.0.0.1 ru-p.vivoglobal.com
-127.0.0.1 ru-pnrt-stsdk.vivoglobal.com
 127.0.0.1 ru-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 ru-st-exappupgrade.vivoglobal.com
 127.0.0.1 ru-st-sl.vivoglobal.com
@@ -7771,7 +7742,6 @@
 127.0.0.1 tracker-00.qvb.qcloud.com
 127.0.0.1 tracker.baidu.com
 127.0.0.1 tracker.cdnbye.com
-127.0.0.1 tracker.chat.bilibili.com
 127.0.0.1 tracker.citicsinfo.com
 127.0.0.1 tracker.dcdn.baidu.com
 127.0.0.1 tracker.fengkongcloud.com
@@ -7888,6 +7858,7 @@
 127.0.0.1 tx-proxy.pull.yximgs.com
 127.0.0.1 tx-rwk.pull.etoote.com
 127.0.0.1 tx.pull.yximgs.com
+127.0.0.1 ty.cn
 127.0.0.1 tyaqy.m.cn.miaozhen.com
 127.0.0.1 tyh.taobao.com
 127.0.0.1 tyrd1.tingyun.com
@@ -7970,7 +7941,6 @@
 127.0.0.1 ulic.baidu.com
 127.0.0.1 ulink.adjust.com
 127.0.0.1 ulog-sdk.gifshow.com
-127.0.0.1 ulog-sdk.ksapisrv.com
 127.0.0.1 ulog.gifshow.com
 127.0.0.1 ulog.imap.baidu.com
 127.0.0.1 ulog.ksapisrv.com
@@ -8195,7 +8165,6 @@
 127.0.0.1 v5-bd-daily-reading-ad.qznovelvod.com
 127.0.0.1 v5-ex-reading-ad.qznovelvod.com
 127.0.0.1 v5-reading-ad.qznovelvod.com
-127.0.0.1 v5-se-bjtc-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-gddgtc-reading-ad.qznovelvod.com
 127.0.0.1 v5-se-sjy-daily-reading-ad.qznovelvod.com
 127.0.0.1 v6-api-p0.mobsurl.com
@@ -8314,7 +8283,6 @@
 127.0.0.1 vrbrothers.com
 127.0.0.1 vrr.name
 127.0.0.1 vrrm.cn
-127.0.0.1 vs.funshion.com
 127.0.0.1 vstat.borderlessbd.com
 127.0.0.1 vstat.v.blog.sohu.com
 127.0.0.1 vt.bidex.cn
@@ -8387,7 +8355,6 @@
 127.0.0.1 web-event.tradplusad.com
 127.0.0.1 web-stat.jiguang.cn
 127.0.0.1 web-stat.jpush.cn
-127.0.0.1 web-tonghuashun.com.cn
 127.0.0.1 web-trace.ksapisrv.com
 127.0.0.1 web.ali213.net
 127.0.0.1 web.novogene.com
@@ -8398,7 +8365,6 @@
 127.0.0.1 webcert.cnmstl.net
 127.0.0.1 webcollects.kugou.com
 127.0.0.1 webdissector.com
-127.0.0.1 weblogger-wss.coolgcloud.com
 127.0.0.1 webmail.miaozhen.com
 127.0.0.1 websdk.appsflyer.com
 127.0.0.1 websgsadvert.sanguosha.com
@@ -8473,7 +8439,6 @@
 127.0.0.1 wm.baidu.com
 127.0.0.1 wm.mipcdn.com
 127.0.0.1 wmbd.gamersky.com
-127.0.0.1 wmedia-track.uc.cn
 127.0.0.1 wmeng.feihuadns.com
 127.0.0.1 wmmax.com
 127.0.0.1 wn.x.jd.com
