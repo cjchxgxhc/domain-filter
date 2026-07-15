@@ -61,6 +61,7 @@ addata_discard:
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
         - https://raw.githubusercontent.com/Potterli20/file/refs/heads/main/file-hosts/allow/Domains
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
 
 
 addata_discard_suffix:
@@ -68,7 +69,6 @@ addata_discard_suffix:
     - type: add
       source:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
         - src_proxy_tld
 
 ads_hosts:
