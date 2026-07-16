@@ -1,9 +1,9 @@
 开始执行
-开始下载 29 个规则源...
-下载完成：29/29 成功，耗时 0.88s
-提取域名（29 个源）...
+开始下载 28 个规则源...
+下载完成：28/28 成功，耗时 0.83s
+提取域名（28 个源）...
   src_proxy_tld：829 条 [common]
-提取完成，耗时 1.08s
+提取完成，耗时 1.13s
 ================================================================================
 处理规则组
 ================================================================================
@@ -11,26 +11,24 @@
 处理规则组：addata_discard (addata_discard)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：176 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+  │    url：175 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   │    url：157 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
   │    url：461 <- https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-  │    url：26 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
   │    url：1,402 <- https://raw.githubusercontent.com/Potterli20/file/refs/heads/main/file-hosts/allow/Domains
-  │    url：2,958 <- https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
   │    url：26 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
-  │    共 4,442 条
-  │    → 加入 4,442（合计 4,442）
-  │  完毕，共 4,442 条
+  │    共 2,043 条
+  │    → 加入 2,043（合计 2,043）
+  │  完毕，共 2,043 条
   └─ 不输出（无 formats），耗时 0.00s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：addata_discard_suffix (addata_discard_suffix)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：16,698 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+  │    url：16,739 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
   │    named：829 <- src_proxy_tld
-  │    共 17,527 条
-  │    → 加入 17,527（合计 17,527）
-  │  完毕，共 17,527 条
+  │    共 17,568 条
+  │    → 加入 17,568（合计 17,568）
+  │  完毕，共 17,568 条
   └─ 不输出（无 formats），耗时 0.00s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Hosts (ads_hosts)
@@ -38,83 +36,83 @@
   │  rules[0] type=add
   │    url：2,598 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
   │    url：889 <- https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-  │    url：5,033 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+  │    url：5,065 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
   │    url：1,625 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt
   │    url：839 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-  │    共 9,298 条
-  │    → 加入 9,298（合计 9,298）
+  │    共 9,330 条
+  │    → 加入 9,330（合计 9,330）
   │  rules[1] type=discard
-  │    @addata_discard：4,442
-  │    共 4,442 条
-  │    → 精确丢弃 486（剩余 8,812）
+  │    @addata_discard：2,043
+  │    共 2,043 条
+  │    → 精确丢弃 297（剩余 9,033）
   │  rules[2] type=discard_suffix
-  │    @addata_discard_suffix：17,527
-  │    共 17,527 条
-  │    → 后缀丢弃 246（剩余 8,566）
+  │    @addata_discard_suffix：17,568
+  │    共 17,568 条
+  │    → 后缀丢弃 253（剩余 8,780）
   │  rules[3] type=add
   │    url：219 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
   │    共 219 条
-  │    → 加入 184（合计 8,750）
-  │  完毕，共 8,750 条
-  ✓ hosts.txt（8,750 条）
-  ✓ domain.txt（8,750 条）
-  └─ 输出 8,750 条，耗时 0.05s
+  │    → 加入 180（合计 8,960）
+  │  完毕，共 8,960 条
+  ✓ hosts.txt（8,960 条）
+  ✓ domain.txt（8,960 条）
+  └─ 输出 8,960 条，耗时 0.06s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads (ads)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
   │    url：17,052 <- https://raw.githubusercontent.com/lingeringsound/10007/main/reward
-  │    url：107,032 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  │    共 119,761 条
-  │    → 加入 119,761（合计 119,761）
+  │    url：107,583 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+  │    共 120,313 条
+  │    → 加入 120,313（合计 120,313）
   │  rules[1] type=discard
-  │    @addata_discard：4,442
-  │    共 4,442 条
-  │    → 精确丢弃 387（剩余 119,374）
+  │    @addata_discard：2,043
+  │    共 2,043 条
+  │    → 精确丢弃 203（剩余 120,110）
   │  rules[2] type=discard_suffix
-  │    @addata_discard_suffix：17,527
-  │    共 17,527 条
-  │    → 后缀丢弃 17,674（剩余 101,700）
+  │    @addata_discard_suffix：17,568
+  │    共 17,568 条
+  │    → 后缀丢弃 17,679（剩余 102,431）
   │  rules[3] type=add
-  │    @ads_hosts：8,750
-  │    共 8,750 条
-  │    → 加入 3,637（合计 105,337）
-  │  完毕，共 105,337 条
-  │  子域去重：移除 12,234
-  ✓ adblock.txt（93,103 条（去重））
-  ✓ clash.yaml（93,103 条（去重））
-  ✓ singbox.json（93,103 条（去重））
-  ✓ quantumultx.list（93,103 条（去重））
-  ✓ shadowrocket.list（93,103 条（去重））
-  ✓ surge.list（93,103 条（去重））
-  ✓ smartdns.conf（93,103 条（去重））
-  ✓ domain.txt（105,337 条）
-  ✓ wildcard.txt（93,103 条（去重））
-  └─ 输出 93,103 条，耗时 0.39s
+  │    @ads_hosts：8,960
+  │    共 8,960 条
+  │    → 加入 3,717（合计 106,148）
+  │  完毕，共 106,148 条
+  │  子域去重：移除 12,359
+  ✓ adblock.txt（93,789 条（去重））
+  ✓ clash.yaml（93,789 条（去重））
+  ✓ singbox.json（93,789 条（去重））
+  ✓ quantumultx.list（93,789 条（去重））
+  ✓ shadowrocket.list（93,789 条（去重））
+  ✓ surge.list（93,789 条（去重））
+  ✓ smartdns.conf（93,789 条（去重））
+  ✓ domain.txt（106,148 条）
+  ✓ wildcard.txt（93,789 条（去重））
+  └─ 输出 93,789 条，耗时 0.42s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Proxy (ads_proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：74,317 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
-  │    共 74,317 条
-  │    → 加入 74,317（合计 74,317）
-  │  完毕，共 74,317 条
+  │    url：74,207 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
+  │    共 74,207 条
+  │    → 加入 74,207（合计 74,207）
+  │  完毕，共 74,207 条
   │  子域去重：移除 0
-  ✓ clash.yaml（74,317 条（去重））
-  ✓ singbox.json（74,317 条（去重））
-  ✓ quantumultx.list（74,317 条（去重））
-  ✓ shadowrocket.list（74,317 条（去重））
-  ✓ surge.list（74,317 条（去重））
-  ✓ smartdns.conf（74,317 条（去重））
-  ✓ domain.txt（74,317 条）
-  ✓ wildcard.txt（74,317 条（去重））
-  └─ 输出 74,317 条，耗时 0.25s
+  ✓ clash.yaml（74,207 条（去重））
+  ✓ singbox.json（74,207 条（去重））
+  ✓ quantumultx.list（74,207 条（去重））
+  ✓ shadowrocket.list（74,207 条（去重））
+  ✓ surge.list（74,207 条（去重））
+  ✓ smartdns.conf（74,207 条（去重））
+  ✓ domain.txt（74,207 条）
+  ✓ wildcard.txt（74,207 条（去重））
+  └─ 输出 74,207 条，耗时 0.28s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
   │    url：26,078 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
-  │    url：26,763 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+  │    url：26,766 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   │    url：34,648 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   │    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
@@ -164,5 +162,5 @@
 生成 README
 ================================================================================
 ================================================================================
-✓ 完成，总耗时 2.85s
+✓ 完成，总耗时 2.92s
 ================================================================================
