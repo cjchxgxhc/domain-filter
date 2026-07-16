@@ -1,9 +1,9 @@
 开始执行
 开始下载 28 个规则源...
-下载完成：28/28 成功，耗时 0.83s
+下载完成：28/28 成功，耗时 0.91s
 提取域名（28 个源）...
   src_proxy_tld：829 条 [common]
-提取完成，耗时 1.13s
+提取完成，耗时 1.06s
 ================================================================================
 处理规则组
 ================================================================================
@@ -88,7 +88,7 @@
   ✓ smartdns.conf（93,789 条（去重））
   ✓ domain.txt（106,148 条）
   ✓ wildcard.txt（93,789 条（去重））
-  └─ 输出 93,789 条，耗时 0.42s
+  └─ 输出 93,789 条，耗时 0.41s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Ads Proxy (ads_proxy)
 ══════════════════════════════════════════════════════════════════════
@@ -106,30 +106,30 @@
   ✓ smartdns.conf（74,207 条（去重））
   ✓ domain.txt（74,207 条）
   ✓ wildcard.txt（74,207 条（去重））
-  └─ 输出 74,207 条，耗时 0.28s
+  └─ 输出 74,207 条，耗时 0.26s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Proxy (proxy)
 ══════════════════════════════════════════════════════════════════════
   │  rules[0] type=add
-  │    url：26,078 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  │    url：26,079 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   │    url：26,766 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   │    url：34,648 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   │    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   │    url：7 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   │    named：829 <- src_proxy_tld
   │    domain：7 条自定义
-  │    共 37,670 条
-  │    → 加入 37,670（合计 37,670）
-  │  完毕，共 37,670 条
+  │    共 37,671 条
+  │    → 加入 37,671（合计 37,671）
+  │  完毕，共 37,671 条
   │  子域去重：移除 14,139
-  ✓ clash.yaml（23,531 条（去重））
-  ✓ singbox.json（23,531 条（去重））
-  ✓ quantumultx.list（23,531 条（去重））
-  ✓ shadowrocket.list（23,531 条（去重））
-  ✓ surge.list（23,531 条（去重））
-  ✓ domain.txt（37,670 条）
-  ✓ wildcard.txt（23,531 条（去重））
-  └─ 输出 23,531 条，耗时 0.11s
+  ✓ clash.yaml（23,532 条（去重））
+  ✓ singbox.json（23,532 条（去重））
+  ✓ quantumultx.list（23,532 条（去重））
+  ✓ shadowrocket.list（23,532 条（去重））
+  ✓ surge.list（23,532 条（去重））
+  ✓ domain.txt（37,671 条）
+  ✓ wildcard.txt（23,532 条（去重））
+  └─ 输出 23,532 条，耗时 0.12s
 ══════════════════════════════════════════════════════════════════════
 处理规则组：Direct Fix (direct_fix)
 ══════════════════════════════════════════════════════════════════════
@@ -162,5 +162,5 @@
 生成 README
 ================================================================================
 ================================================================================
-✓ 完成，总耗时 2.92s
+✓ 完成，总耗时 2.89s
 ================================================================================
