@@ -52,70 +52,31 @@ sources:
 
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
-addata_discard:
-  rules:
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-        - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-        - https://raw.githubusercontent.com/Potterli20/file/refs/heads/main/file-hosts/allow/Domains
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
-
-
-addata_discard_suffix:
-  rules:
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
-        - src_proxy_tld
-
-ads_hosts:
-  title: Ads Hosts
-  description: 主要引用 217heidai/adblockfilters (lite) 项目规则，增添：手机端应用程序广告、子域名（用于hosts格式）；删除：白名单域名、proxy_tld（减小大小）。
-  formats: [hosts, domain]
-  rules:
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/SMAdHosts.txt
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-    - type: discard
-      source: ["@addata_discard"]
-    - type: discard_suffix
-      source: ["@addata_discard_suffix"]
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/hostslist.txt
-
 
 ads:
   title: Ads
-  description: 主要引用 217heidai/adblockfilters (lite)、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告；删除：白名单域名、proxy_tld（减小大小）。
+  description: 主要引用 217heidai/adblockfilters、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告；删除：白名单域名、proxy_tld（减小大小）。
   formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
   rules:
     - type: add
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
     - type: discard
-      source: ["@addata_discard"]
+      source:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
     - type: discard_suffix
-      source: ["@addata_discard_suffix"]
-    - type: add
-      source: ["@ads_hosts"]
-
-
-ads_proxy:
-  title: Ads Proxy
-  description: 国外广告规则，不保证正常网络环境误杀和拦截率，国内流量不应经过此规则过滤。
-  formats: [clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
-  rules:
+      source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
+        - src_proxy_tld
     - type: add
       source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
 
 
 proxy:
@@ -131,14 +92,7 @@ proxy:
         - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
         - src_proxy_tld
-      domain:
-        - browserleaks.net
-        - browserleaks.org
-        - addons.mozilla.org
-        - adtidy.org
-        - powerampapp.com
-        - cloud.9mod.space
-        - modyolo.com
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/proxy/addlist.txt
 
 
 direct_fix:
@@ -155,27 +109,6 @@ direct_fix:
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
-      domain:
-        - firefoxcn.net
-        - firefox.com.cn
-        - ipv4only.arpa
-        - example.org
-        - baidu.com
-        - ntp.org
-        - jsdelivr.com
-        - jsdelivr.net
-        - ghproxy.net
-        - time.windows.com
-        - outlook.com
-        - login.microsoftonline.com
-        - live.com
-        - live.net
-        - logincdn.msftauth.net
-        - acctcdn.msftauth.net
-        - microsofttranslator.com
-        - translate.microsoft.com
-        - api.cognitive.microsoft.com
-        - translatoruser.intl.microsoft.com
-        - edge.microsoft.com
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/direct_fix/addlist.txt
     - type: discard_suffix
       domain: [bing.com, bing.net]
