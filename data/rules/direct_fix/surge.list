@@ -1,3 +1,6 @@
+# 修复可能被proxy组错误分流的直连域名。
+# 适用：Surge  规则数：811  更新：2026-07-19 00:09:27 CST
+#
 DOMAIN-SUFFIX,1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 DOMAIN-SUFFIX,10.in-addr.arpa
 DOMAIN-SUFFIX,100.100.in-addr.arpa
