@@ -4,8 +4,8 @@
 Domain Filter - 主脚本（含规则格式生成 + README 生成）
 https://github.com/cjchxgxhc/domain-filter
 
-执行顺序：filter.py → domain_filter（Rust）→ 转换 MRS/SRS
-本脚本负责：下载源 → 提取域名 → 规则组处理 → 生成规则文件 → 生成 README
+执行顺序：filter.py -> domain_filter（Rust）-> 转换 MRS/SRS
+本脚本负责：下载源 -> 提取域名 -> 规则组处理 -> 生成规则文件 -> 生成 README
 """
 
 import datetime
@@ -88,7 +88,6 @@ _FMT_FILE: Dict[str, str] = {
     "shadowrocket": "shadowrocket.list",
 }
 
-# 转换产物继承原格式规则数
 _CONV_FILE: Dict[str, str] = {
     "clash":   "clash.mrs",
     "singbox": "singbox.srs",
@@ -100,8 +99,6 @@ _REGEX_RAW_GH = re.compile(
     r"(?P<branch>[^/]+)/(?P<path>.+)$"
 )
 
-
-# ─────────────────────────── 枚举 ────────────────────────────────────────────
 
 class LogLevel(Enum):
     INFO    = "INFO"
@@ -117,8 +114,6 @@ class ExtractMode(Enum):
 
 VALID_RULE_TYPES = frozenset({"add", "discard", "discard_suffix", "match", "match_suffix"})
 
-
-# ─────────────────────────── 正则 ────────────────────────────────────────────
 
 DOMAIN_PATTERN  = re.compile(r"^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$", re.IGNORECASE)
 REGEX_ADBLOCK   = re.compile(r"^\|\|([a-z0-9][a-z0-9.\-]*[a-z0-9])\^", re.IGNORECASE)
@@ -137,8 +132,6 @@ _REGEX_IPV4     = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}(?:/\d+)?$")
 _REGEX_DIGITS   = re.compile(r"^\d+$")
 _VALID_CHARS    = frozenset("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-")
 
-
-# ─────────────────────────── 日志 ────────────────────────────────────────────
 
 _log_lock   = threading.Lock()
 _log_buffer: List[Tuple[Path, str]] = []
@@ -173,8 +166,6 @@ def _flush_log() -> None:
     _log_buffer = []
 
 
-# ─────────────────────────── 域名验证 ────────────────────────────────────────
-
 def _is_valid(domain: str) -> bool:
     if not domain or len(domain) > _MAX_DOMAIN_LEN or "." not in domain:
         return False
@@ -193,8 +184,6 @@ def _is_invalid_bare(s: str) -> bool:
         or bool(_REGEX_DIGITS.match(s))
     )
 
-
-# ─────────────────────────── 域名提取 ────────────────────────────────────────
 
 def _strip_comment(line: str) -> str:
     line = line.strip()
@@ -299,8 +288,6 @@ def _extract_lines(
     return result
 
 
-# ─────────────────────────── Rust 工具 ───────────────────────────────────────
-
 def _rust(mode: str, current: Set[str], ref: Optional[Set[str]] = None) -> Set[str]:
     if not _RUST_TOOL.exists():
         raise FileNotFoundError(f"Rust 工具不存在：{_RUST_TOOL}")
@@ -348,8 +335,6 @@ def _dedup(domains: Set[str], lf: Optional[Path] = None) -> Set[str]:
         return domains
 
 
-# ─────────────────────────── 下载 ────────────────────────────────────────────
-
 def _download(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, List[str]]:
     if not urls:
         return {}
@@ -394,20 +379,35 @@ def _download(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, Lis
 
     log(f"下载完成：{len(urls)-len(failed)}/{len(urls)} 成功，耗时 {time.time()-t0:.2f}s", log_file=log_file)
     for url in failed:
-        log(f"  ✗ {url}", LogLevel.WARNING, log_file)
+        log(f"  FAIL {url}", LogLevel.WARNING, log_file)
     return result
 
 
-# ─────────────────────────── 规则文件生成 ────────────────────────────────────
-
-def _hdr(count: int, title: str, desc: str, now: str, c: str) -> str:
-    if not title:
-        return ""
-    parts = [f"{c} Title: {title}"]
+def _hdr(count: int, tool: str, desc: str, now: str, c: str) -> str:
+    """通用简单头部：描述 + 适用工具 + 规则数 + 更新时间"""
+    parts: List[str] = []
     if desc:
-        parts.append(f"{c} Description: {desc}")
-    parts += [f"{c} Total: {count:,}", f"{c} Updated: {now}", c]
+        parts.append(f"{c} {desc}")
+    parts.append(f"{c} 适用：{tool}  规则数：{count:,}  更新：{now}")
+    parts.append(c)
     return "\n".join(parts) + "\n"
+
+
+def _hdr_adblock(count: int, title: str, desc: str, now: str) -> str:
+    """AdGuard 兼容头部：使用 AdGuard/AdGuard Home 可识别的元数据字段
+    （Title / Description / Last modified / Expires / Homepage / Total count），
+    便于在 AdGuard 系产品的过滤器信息面板中正常显示。
+    """
+    lines: List[str] = []
+    if title:
+        lines.append(f"! Title: {title}")
+    if desc:
+        lines.append(f"! Description: {desc}")
+    lines.append(f"! Homepage: https://github.com/cjchxgxhc/domain-filter")
+    lines.append(f"! Last modified: {now}")
+    lines.append("! Expires: 1 days (update frequency)")
+    lines.append(f"! Total count: {count:,}")
+    return "\n".join(lines) + "\n"
 
 
 def _write_fmt(
@@ -416,6 +416,7 @@ def _write_fmt(
     title: str, desc: str, now: str,
 ) -> Tuple[str, int]:
     s, d = simple, deduped
+    tool = _FMT_LABEL.get(fmt, fmt)
 
     if fmt == "domain":
         p = out / "domain.txt"
@@ -425,29 +426,29 @@ def _write_fmt(
     if fmt == "hosts":
         p = out / "hosts.txt"
         with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(s), title, desc, now, "#"))
+            f.write(_hdr(len(s), tool, desc, now, "#"))
             for x in s: f.write(f"127.0.0.1 {x}\n")
         return p.name, len(s)
 
     if fmt == "hostsipv6":
         p = out / "hosts_ipv6.txt"
         with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(s), title, desc, now, "#"))
+            f.write(_hdr(len(s), tool, desc, now, "#"))
             for x in s: f.write(f"127.0.0.1 {x}\n::1 {x}\n")
         return p.name, len(s)
 
     if fmt == "smartdns":
         p = out / "smartdns.conf"
         with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), title, desc, now, "#"))
-            for x in d: f.write(f"server=/{x}/#\n")
+            f.write(_hdr(len(d), tool, desc, now, "#"))
+            for x in d: f.write(f"address /{x}/#\n")
         return p.name, len(d)
 
     if fmt == "adblock":
         p = out / "adblock.txt"
         with p.open("w", encoding="utf-8") as f:
             f.write("[Adblock Plus 2.0]\n")
-            f.write(_hdr(len(d), title, desc, now, "!"))
+            f.write(_hdr_adblock(len(d), title, desc, now))
             for x in d: f.write(f"||{x}^\n")
         return p.name, len(d)
 
@@ -455,13 +456,14 @@ def _write_fmt(
         p = out / "adblockwhite.txt"
         with p.open("w", encoding="utf-8") as f:
             f.write("[Adblock Plus 2.0]\n")
-            f.write(_hdr(len(d), title, desc, now, "!"))
+            f.write(_hdr_adblock(len(d), title, desc, now))
             for x in d: f.write(f"@@||{x}^\n")
         return p.name, len(d)
 
     if fmt == "clash":
         p = out / "clash.yaml"
         with p.open("w", encoding="utf-8") as f:
+            f.write(_hdr(len(d), tool, desc, now, "#"))
             f.write("payload:\n")
             for x in d: f.write(f"  - +.{x}\n")
         return p.name, len(d)
@@ -481,18 +483,21 @@ def _write_fmt(
     if fmt == "loon":
         p = out / "loon.list"
         with p.open("w", encoding="utf-8") as f:
+            f.write(_hdr(len(d), tool, desc, now, "#"))
             for x in d: f.write(f"DOMAIN-SUFFIX,{x}\n")
         return p.name, len(d)
 
     if fmt == "surge":
         p = out / "surge.list"
         with p.open("w", encoding="utf-8") as f:
+            f.write(_hdr(len(d), tool, desc, now, "#"))
             for x in d: f.write(f"DOMAIN-SUFFIX,{x}\n")
         return p.name, len(d)
 
     if fmt == "quantumultx":
         p = out / "quantumultx.list"
         with p.open("w", encoding="utf-8") as f:
+            f.write(_hdr(len(d), tool, desc, now, "#"))
             for x in d: f.write(f"host-suffix,{x},reject\n")
         return p.name, len(d)
 
@@ -523,11 +528,9 @@ def _save(
         fname, count = _write_fmt(fmt, out, ss, dd, title, desc, now)
         counts[fmt] = count
         note = "（去重）" if fmt in _DEDUPED_FORMATS else ""
-        log(f"  ✓ {fname}（{count:,} 条{note}）", log_file=log_file)
+        log(f"  OK {fname}（{count:,} 条{note}）", log_file=log_file)
     return counts
 
-
-# ─────────────────────────── README 生成 ─────────────────────────────────────
 
 def _jsd_url(raw_url: str) -> Tuple[str, str]:
     m = _REGEX_RAW_GH.match(raw_url)
@@ -550,7 +553,6 @@ def _group_readme(
     group_dir   = out_root / cfg_key
     ts          = now.strftime("%Y-%m-%d %H:%M:%S")
 
-    # 构建文件行：(fname, count, dedup_label, cdn, fastly, ghp)
     rows: List[Tuple[str, str, str, str, str, str]] = []
     for fmt, count in fmt_counts.items():
         fname = _FMT_FILE.get(fmt)
@@ -564,13 +566,12 @@ def _group_readme(
         ghp    = f"[ghproxy]({ghp_url})"
 
         if fmt in _DEDUPED_FORMATS:
-            dedup = "原始(强制)" if forced_off else "✓"
+            dedup = "原始(强制)" if forced_off else "OK"
         else:
             dedup = "—"
 
         rows.append((fname, f"{count:,}", dedup, f"[↓]({raw_url})", cdn, fastly, ghp))
 
-        # 转换产物
         conv = _CONV_FILE.get(fmt)
         if conv and (group_dir / conv).exists():
             raw_conv = f"{raw_base.rstrip('/')}/{cfg_key}/{conv}"
@@ -588,7 +589,7 @@ def _group_readme(
     if desc:
         lines += [f"> {desc}", ""]
     lines += [
-        f"**规则总数：{final_count:,}**　　**更新时间：{ts} (CST)**",
+        f"**规则总数：{final_count:,}**    **更新时间：{ts} (CST)**",
         "",
         "| 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |",
         "| :--- | ---: | :---: | :---: | :---: | :---: | :---: |",
@@ -598,14 +599,14 @@ def _group_readme(
     lines.append("")
 
     (group_dir / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    log(f"  ✓ {cfg_key}/README.md")
+    log(f"  OK {cfg_key}/README.md")
 
 
 def _main_readme(all_stats: Dict, now: datetime.datetime) -> None:
     ts    = now.strftime("%Y-%m-%d %H:%M:%S")
     badge = now.strftime("%Y--%m--%d_%H:%M:%S")
     lines: List[str] = [
-        "# 🛡️ Domain Filter",
+        "# Domain Filter",
         "",
         f"![Updated](https://img.shields.io/badge/Updated-{badge}-brightgreen?style=flat-square)",
         "",
@@ -617,14 +618,14 @@ def _main_readme(all_stats: Dict, now: datetime.datetime) -> None:
         key=lambda x: x[1].get("idx", 0),
     )
     for cfg_key, data in visible:
-        fmts = " · ".join(_FMT_LABEL.get(f, f) for f in data.get("format_counts", {}))
+        fmts = " - ".join(_FMT_LABEL.get(f, f) for f in data.get("format_counts", {}))
         lines.append(
             f"- **{data['title']}** — {data.get('description', '')}  \n"
-            f"  `{fmts}` · [查看详情](data/rules/{cfg_key})"
+            f"  `{fmts}` - [查看详情](data/rules/{cfg_key})"
         )
     lines += ["", f"*{ts} (CST)*", ""]
     _README_ROOT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    log("✓ README.md")
+    log("OK README.md")
 
 
 def _readmes(
@@ -649,8 +650,6 @@ def _readmes(
         log(f"主 README 失败：{e}", LogLevel.ERROR)
 
 
-# ─────────────────────────── 配置解析 ────────────────────────────────────────
-
 def _parse_mode(raw: Optional[str]) -> ExtractMode:
     return {
         "common": ExtractMode.COMMON,
@@ -660,12 +659,6 @@ def _parse_mode(raw: Optional[str]) -> ExtractMode:
 
 
 def _parse_src(entry) -> Optional[Dict]:
-    """
-    返回：
-      {"kind": "url",   "url", "mode", "validate"}
-      {"kind": "named", "name"}
-      {"kind": "group", "key"}   ← "@group_key"
-    """
     if isinstance(entry, str):
         s = entry.strip()
         if s.startswith(("http://", "https://")):
@@ -735,7 +728,7 @@ def _load_config(path: Path) -> Tuple[Dict, List[Dict], Dict[str, Dict]]:
         })
 
     enabled_count = sum(1 for g in groups if g["enabled"])
-    log(f"✓ 配置已加载：{len(named)} 个命名源，{len(groups)} 个规则组（{enabled_count} 个已启用）")
+    log(f"OK 配置已加载：{len(named)} 个命名源，{len(groups)} 个规则组（{enabled_count} 个已启用）")
     return global_cfg, groups, named
 
 
@@ -781,8 +774,6 @@ def _validate(
     return not errors
 
 
-# ─────────────────────────── 规则组处理 ──────────────────────────────────────
-
 def _process(
     group: Dict,
     dl: Dict[str, Set[str]],
@@ -802,9 +793,9 @@ def _process(
     dedup  = group.get("dedup_subdomain")
 
     t0 = time.time()
-    log("═" * 70, log_file=log_file)
+    log("=" * 70, log_file=log_file)
     log(f"处理规则组：{title or key} ({key})", log_file=log_file)
-    log("═" * 70, log_file=log_file)
+    log("=" * 70, log_file=log_file)
 
     cur: Set[str] = set()
 
@@ -812,7 +803,7 @@ def _process(
         if not isinstance(rule, dict):
             continue
         rtype = rule["type"]
-        log(f"  │  rules[{ri}] type={rtype}", log_file=log_file)
+        log(f"  |  rules[{ri}] type={rtype}", log_file=log_file)
         rd: Set[str] = set()
 
         for entry in rule.get("source") or []:
@@ -822,49 +813,49 @@ def _process(
             if p["kind"] == "url":
                 s = dl.get(p["url"], set())
                 rd.update(s)
-                log(f"  │    url：{len(s):,} <- {p['url']}", log_file=log_file)
+                log(f"  |    url：{len(s):,} <- {p['url']}", log_file=log_file)
             elif p["kind"] == "named":
                 s = dl.get(p["name"], set())
                 rd.update(s)
-                log(f"  │    named：{len(s):,} <- {p['name']}", log_file=log_file)
+                log(f"  |    named：{len(s):,} <- {p['name']}", log_file=log_file)
             elif p["kind"] == "group":
                 ref = idx_map.get(p["key"])
                 if ref is not None and ref < gidx and ref in cache:
                     s = cache[ref]
                     rd.update(s)
-                    log(f"  │    @{p['key']}：{len(s):,}", log_file=log_file)
+                    log(f"  |    @{p['key']}：{len(s):,}", log_file=log_file)
                 else:
-                    log(f"  │    @{p['key']} 无效，跳过", LogLevel.WARNING, log_file)
+                    log(f"  |    @{p['key']} 无效，跳过", LogLevel.WARNING, log_file)
 
         custom = [d.strip().lower() for d in (rule.get("domain") or []) if isinstance(d, str) and d.strip()]
         if custom:
             rd.update(custom)
-            log(f"  │    domain：{len(custom):,} 条自定义", log_file=log_file)
+            log(f"  |    domain：{len(custom):,} 条自定义", log_file=log_file)
 
-        log(f"  │    共 {len(rd):,} 条", log_file=log_file)
+        log(f"  |    共 {len(rd):,} 条", log_file=log_file)
         before = len(cur)
 
         if rtype == "add":
             cur.update(rd)
-            log(f"  │    → 加入 {len(cur)-before:,}（合计 {len(cur):,}）", log_file=log_file)
+            log(f"  |    -> 加入 {len(cur)-before:,}（合计 {len(cur):,}）", log_file=log_file)
         elif rtype == "discard":
             cur = _discard_exact(cur, rd)
-            log(f"  │    → 精确丢弃 {before-len(cur):,}（剩余 {len(cur):,}）", log_file=log_file)
+            log(f"  |    -> 精确丢弃 {before-len(cur):,}（剩余 {len(cur):,}）", log_file=log_file)
         elif rtype == "discard_suffix":
             cur = _discard_suffix(cur, rd, log_file)
-            log(f"  │    → 后缀丢弃 {before-len(cur):,}（剩余 {len(cur):,}）", log_file=log_file)
+            log(f"  |    -> 后缀丢弃 {before-len(cur):,}（剩余 {len(cur):,}）", log_file=log_file)
         elif rtype == "match":
             cur = _match_exact(cur, rd)
-            log(f"  │    → 精确保留 {len(cur):,}（移除 {before-len(cur):,}）", log_file=log_file)
+            log(f"  |    -> 精确保留 {len(cur):,}（移除 {before-len(cur):,}）", log_file=log_file)
         elif rtype == "match_suffix":
             cur = _match_suffix(cur, rd, log_file)
-            log(f"  │    → 后缀保留 {len(cur):,}（移除 {before-len(cur):,}）", log_file=log_file)
+            log(f"  |    -> 后缀保留 {len(cur):,}（移除 {before-len(cur):,}）", log_file=log_file)
 
-    log(f"  │  完毕，共 {len(cur):,} 条", log_file=log_file)
+    log(f"  |  完毕，共 {len(cur):,} 条", log_file=log_file)
     cache[gidx] = cur
 
     if not out_en:
-        log(f"  └─ 不输出（无 formats），耗时 {time.time()-t0:.2f}s", log_file=log_file)
+        log(f"  `- 不输出（无 formats），耗时 {time.time()-t0:.2f}s", log_file=log_file)
         all_stats[key] = {"idx": gidx, "title": title, "description": desc,
                           "output_enabled": False, "final_count": len(cur),
                           "format_counts": {}, "dedup_forced_off": False}
@@ -875,13 +866,13 @@ def _process(
 
     if dedup is True:
         dd = _dedup(cur, log_file)
-        log(f"  │  子域去重（强制）：移除 {len(cur)-len(dd):,}", log_file=log_file)
+        log(f"  |  子域去重（强制）：移除 {len(cur)-len(dd):,}", log_file=log_file)
     elif forced_off:
         dd = cur
-        log("  │  子域去重（强制跳过）", log_file=log_file)
+        log("  |  子域去重（强制跳过）", log_file=log_file)
     elif needs_dedup:
         dd = _dedup(cur, log_file)
-        log(f"  │  子域去重：移除 {len(cur)-len(dd):,}", log_file=log_file)
+        log(f"  |  子域去重：移除 {len(cur)-len(dd):,}", log_file=log_file)
     else:
         dd = cur
 
@@ -894,13 +885,11 @@ def _process(
         fmt_counts = {}
 
     gc.collect()
-    log(f"  └─ 输出 {len(dd):,} 条，耗时 {time.time()-t0:.2f}s", log_file=log_file)
+    log(f"  `- 输出 {len(dd):,} 条，耗时 {time.time()-t0:.2f}s", log_file=log_file)
     all_stats[key] = {"idx": gidx, "title": title, "description": desc,
                       "output_enabled": True, "final_count": len(dd),
                       "format_counts": fmt_counts, "dedup_forced_off": forced_off}
 
-
-# ─────────────────────────── 主入口 ──────────────────────────────────────────
 
 def main() -> None:
     t_start = time.time()
@@ -928,7 +917,6 @@ def main() -> None:
 
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
 
-    # 收集所有 URL
     all_urls: Set[str] = {s["url"] for s in named.values()}
     for g in groups:
         for rule in g.get("rules", []):
@@ -946,7 +934,6 @@ def main() -> None:
         log(traceback.format_exc(), LogLevel.ERROR, log_file)
         sys.exit(1)
 
-    # 构建 url → cfg 表，检测同 URL 不同 mode 的冲突
     src_cfgs: Dict[str, Dict] = {s["url"]: s for s in named.values()}
     for g in groups:
         for rule in g.get("rules", []):
@@ -968,7 +955,6 @@ def main() -> None:
                 else:
                     src_cfgs[url] = p
 
-    # 并行提取
     log(f"提取域名（{len(src_cfgs)} 个源）...", log_file=log_file)
     t_ex = time.time()
     dl: Dict[str, Set[str]] = {}
@@ -994,7 +980,6 @@ def main() -> None:
 
     log(f"提取完成，耗时 {time.time()-t_ex:.2f}s", log_file=log_file)
 
-    # 规则组处理
     cache: Dict[int, Set[str]] = {}
     all_stats: Dict = {}
 
@@ -1012,7 +997,6 @@ def main() -> None:
             log(f"规则组异常 [{g['cfg_key']}]：{e}", LogLevel.ERROR, log_file)
             log(traceback.format_exc(), LogLevel.ERROR, log_file)
 
-    # README
     log("=" * 80, log_file=log_file)
     log("生成 README", log_file=log_file)
     log("=" * 80, log_file=log_file)
@@ -1022,7 +1006,7 @@ def main() -> None:
         log(f"README 失败：{e}", LogLevel.WARNING, log_file)
 
     log("=" * 80, log_file=log_file)
-    log(f"✓ 完成，总耗时 {time.time()-t_start:.2f}s", log_file=log_file)
+    log(f"OK 完成，总耗时 {time.time()-t_start:.2f}s", log_file=log_file)
     log("=" * 80, log_file=log_file)
 
     _flush_log()
