@@ -1,9 +1,9 @@
 开始执行
 开始下载 25 个规则源...
-下载完成：25/25 成功，耗时 0.91s
+下载完成：25/25 成功，耗时 3.55s
 提取域名（25 个源）...
   src_proxy_tld：829 条 [common]
-提取完成，耗时 1.84s
+提取完成，耗时 1.12s
 ================================================================================
 处理规则组
 ================================================================================
@@ -13,38 +13,38 @@
   |  rules[0] type=add
   |    url：17,052 <- https://raw.githubusercontent.com/lingeringsound/10007/main/reward
   |    url：107,583 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  |    url：185,740 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
-  |    共 227,799 条
-  |    -> 加入 227,799（合计 227,799）
+  |    url：185,824 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
+  |    共 227,883 条
+  |    -> 加入 227,883（合计 227,883）
   |  rules[1] type=discard
   |    url：175 <- https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
   |    url：157 <- https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
   |    url：461 <- https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
   |    url：18 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
   |    共 747 条
-  |    -> 精确丢弃 206（剩余 227,593）
+  |    -> 精确丢弃 206（剩余 227,677）
   |  rules[2] type=discard_suffix
-  |    url：16,804 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+  |    url：16,813 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    named：829 <- src_proxy_tld
-  |    共 146,667 条
-  |    -> 后缀丢弃 106,598（剩余 120,995）
+  |    共 146,676 条
+  |    -> 后缀丢弃 106,598（剩余 121,079）
   |  rules[3] type=add
   |    url：2,396 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
   |    共 2,396 条
-  |    -> 加入 1,548（合计 122,543）
-  |  完毕，共 122,543 条
+  |    -> 加入 1,548（合计 122,627）
+  |  完毕，共 122,627 条
   |  子域去重：移除 13,547
-  OK adblock.txt（108,996 条（去重））
-  OK clash.yaml（108,996 条（去重））
-  OK singbox.json（108,996 条（去重））
-  OK quantumultx.list（108,996 条（去重））
-  OK shadowrocket.list（108,996 条（去重））
-  OK surge.list（108,996 条（去重））
-  OK smartdns.conf（108,996 条（去重））
-  OK domain.txt（122,543 条）
-  OK wildcard.txt（108,996 条（去重））
-  `- 输出 108,996 条，耗时 0.60s
+  OK adblock.txt（109,080 条（去重））
+  OK clash.yaml（109,080 条（去重））
+  OK singbox.json（109,080 条（去重））
+  OK quantumultx.list（109,080 条（去重））
+  OK shadowrocket.list（109,080 条（去重））
+  OK surge.list（109,080 条（去重））
+  OK smartdns.conf（109,080 条（去重））
+  OK domain.txt（122,627 条）
+  OK wildcard.txt（109,080 条（去重））
+  `- 输出 109,080 条，耗时 0.51s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
@@ -67,7 +67,7 @@
   OK surge.list（23,534 条（去重））
   OK domain.txt（37,673 条）
   OK wildcard.txt（23,534 条（去重））
-  `- 输出 23,534 条，耗时 0.12s
+  `- 输出 23,534 条，耗时 0.10s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -95,10 +95,10 @@
   OK surge.list（811 条（去重））
   OK domain.txt（847 条）
   OK wildcard.txt（811 条（去重））
-  `- 输出 811 条，耗时 0.04s
+  `- 输出 811 条，耗时 0.05s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 3.54s
+OK 完成，总耗时 5.35s
 ================================================================================
