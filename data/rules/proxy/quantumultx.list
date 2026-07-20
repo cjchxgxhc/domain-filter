@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,534  更新：2026-07-20 05:52:45 CST
+# 适用：QuantumultX  规则数：23,542  更新：2026-07-21 05:59:52 CST
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -3003,6 +3003,7 @@ host-suffix,berlin,reject
 host-suffix,berlincompanions.com,reject
 host-suffix,berlintwitterwall.com,reject
 host-suffix,best-sex-games.com,reject
+host-suffix,best2pay.net,reject
 host-suffix,best3dhere.com,reject
 host-suffix,best4bim.com,reject
 host-suffix,bestamateurcumshots.com,reject
@@ -4784,6 +4785,7 @@ host-suffix,clashmini.com,reject
 host-suffix,clashofclans.com,reject
 host-suffix,clashroyale.com,reject
 host-suffix,clashroyaleapp.com,reject
+host-suffix,clashyun.com,reject
 host-suffix,clasporno.org,reject
 host-suffix,classicalguitarblog.net,reject
 host-suffix,classicnike.com,reject
@@ -7150,6 +7152,8 @@ host-suffix,f-dro1d.org,reject
 host-suffix,f-droid.com,reject
 host-suffix,f-droid.org,reject
 host-suffix,f-secure.com,reject
+host-suffix,f1.com,reject
+host-suffix,f1tv.com,reject
 host-suffix,f2pool.com,reject
 host-suffix,f5pf.com,reject
 host-suffix,f6.security,reject
@@ -7971,6 +7975,7 @@ host-suffix,forgecdn.net,reject
 host-suffix,forhertube.com,reject
 host-suffix,formit360.com,reject
 host-suffix,formitfactory.com,reject
+host-suffix,formula1.com,reject
 host-suffix,forosuse.org,reject
 host-suffix,forpojie.pics,reject
 host-suffix,fortawesome.com,reject
@@ -17298,8 +17303,10 @@ host-suffix,rbmavericks.com,reject
 host-suffix,rbnainternational.com,reject
 host-suffix,rbplc.com,reject
 host-suffix,rbrandlibrary.com,reject
+host-suffix,rbsgate.com,reject
 host-suffix,rbsgr.com,reject
 host-suffix,rbspeakup.com,reject
+host-suffix,rbsuat.com,reject
 host-suffix,rbth.com,reject
 host-suffix,rbx.com,reject
 host-suffix,rbxcdn.com,reject
@@ -19534,6 +19541,7 @@ host-suffix,syosetu.com,reject
 host-suffix,sysinternals.com,reject
 host-suffix,sysresccd.org,reject
 host-suffix,system76.com,reject
+host-suffix,sysub.com,reject
 host-suffix,sytes.net,reject
 host-suffix,syx86.cn,reject
 host-suffix,syx86.com,reject
