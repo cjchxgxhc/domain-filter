@@ -1,9 +1,9 @@
 开始执行
 开始下载 26 个规则源...
-下载完成：26/26 成功，耗时 0.95s
+下载完成：26/26 成功，耗时 4.30s
 提取域名（26 个源）...
   src_proxy_tld：829 条 [common]
-提取完成，耗时 1.92s
+提取完成，耗时 1.83s
 ================================================================================
 处理规则组
 ================================================================================
@@ -24,10 +24,10 @@
   |    共 747 条
   |    -> 精确丢弃 205（剩余 230,892）
   |  rules[2] type=discard_suffix
-  |    url：17,045 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+  |    url：17,232 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    named：829 <- src_proxy_tld
-  |    共 146,908 条
+  |    共 147,095 条
   |    -> 后缀丢弃 106,522（剩余 124,370）
   |  rules[3] type=add
   |    url：2,396 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
@@ -44,7 +44,7 @@
   OK smartdns.conf（112,371 条（去重））
   OK domain.txt（125,918 条）
   OK wildcard.txt（112,371 条（去重））
-  `- 输出 112,371 条，耗时 0.62s
+  `- 输出 112,371 条，耗时 0.66s
 ======================================================================
 处理规则组：Ads Hosts (ads_hosts)
 ======================================================================
@@ -60,25 +60,25 @@
 处理规则组：Proxy (proxy)
 ======================================================================
   |  rules[0] type=add
-  |    url：26,089 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  |    url：26,090 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   |    url：26,779 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   |    url：34,663 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   |    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   |    url：7 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
   |    named：829 <- src_proxy_tld
   |    url：9 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/proxy/addlist.txt
-  |    共 37,684 条
-  |    -> 加入 37,684（合计 37,684）
-  |  完毕，共 37,684 条
-  |  子域去重：移除 14,142
+  |    共 37,685 条
+  |    -> 加入 37,685（合计 37,685）
+  |  完毕，共 37,685 条
+  |  子域去重：移除 14,143
   OK clash.yaml（23,542 条（去重））
   OK singbox.json（23,542 条（去重））
   OK quantumultx.list（23,542 条（去重））
   OK shadowrocket.list（23,542 条（去重））
   OK surge.list（23,542 条（去重））
-  OK domain.txt（37,684 条）
+  OK domain.txt（37,685 条）
   OK wildcard.txt（23,542 条（去重））
-  `- 输出 23,542 条，耗时 0.12s
+  `- 输出 23,542 条，耗时 0.13s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -111,5 +111,5 @@
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 3.72s
+OK 完成，总耗时 7.03s
 ================================================================================
