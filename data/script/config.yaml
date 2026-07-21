@@ -79,6 +79,17 @@ ads:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
 
 
+ads_hosts:
+  title: Ads Hosts
+  description: 只包含基本规则。
+  formats: [hosts]
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
+
+
 proxy:
   title: Proxy
   description: 所有需要被代理分流的域名。
