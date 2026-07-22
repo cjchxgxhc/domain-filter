@@ -1,6 +1,6 @@
 # Domain Filter
 
-![Updated](https://img.shields.io/badge/Updated-2026--07--22_21:46:36-brightgreen?style=flat-square)
+![Updated](https://img.shields.io/badge/Updated-2026--07--23_06:03:30-brightgreen?style=flat-square)
 
 ## 规则列表
 
@@ -13,5 +13,5 @@
 - **Direct Fix** — 修复可能被proxy组错误分流的直连域名。  
   `Clash - Sing-box - QuantumultX - ShadowRocket - Surge - Domain - Wildcard` - [查看详情](data/rules/direct_fix)
 
-*2026-07-22 21:46:36 (CST)*
+*2026-07-23 06:03:30 (CST)*
 
