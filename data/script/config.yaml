@@ -87,6 +87,8 @@ ads_hosts:
     - type: add
       source:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
 
 
