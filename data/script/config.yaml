@@ -86,6 +86,19 @@ ads_hosts:
   rules:
     - type: add
       source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+        - "@ads"
+    - type: discard_suffix
+      source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
+        - src_proxy_tld
+    - type: match_suffix
+      source:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
+    - type: add
+      source:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt
@@ -118,8 +131,6 @@ direct_fix:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
-        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/direct_fix/addlist.txt
