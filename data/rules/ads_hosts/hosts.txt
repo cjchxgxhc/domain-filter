@@ -1,5 +1,5 @@
 # 只包含基本规则。
-# 适用：Hosts  规则数：11,544  更新：2026-07-23 06:03:29 CST
+# 适用：Hosts  规则数：11,558  更新：2026-07-24 06:03:46 CST
 #
 127.0.0.1 0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
 127.0.0.1 0002-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -595,7 +595,6 @@
 127.0.0.1 ad-locus.com
 127.0.0.1 ad-log-upload-os.hoyoverse.com
 127.0.0.1 ad-log-upload.mihoyo.com
-127.0.0.1 ad-material.ys7.com
 127.0.0.1 ad-monitor.sh9130.com
 127.0.0.1 ad-open2.fancydsp.com
 127.0.0.1 ad-plus.cn
@@ -936,6 +935,7 @@
 127.0.0.1 ads-i2.xhscdn.com.w.cdngslb.com
 127.0.0.1 ads-i3.xhscdn.com
 127.0.0.1 ads-i3.xhscdn.com.a.bdydns.com
+127.0.0.1 ads-i4.xhscdn.com
 127.0.0.1 ads-img-al.xhscdn.com
 127.0.0.1 ads-img-al.xhscdn.com.w.cdngslb.com
 127.0.0.1 ads-img-bak.xhscdn.com
@@ -1017,7 +1017,6 @@
 127.0.0.1 ads.ysepay.com
 127.0.0.1 ads.zhinengxiyifang.cn
 127.0.0.1 ads.zijieapi.com
-127.0.0.1 ads13000.cpmoz.com
 127.0.0.1 ads3-normal-hl.zijieapi.com
 127.0.0.1 ads3-normal-hl.zijieapi.com.queniurc.com
 127.0.0.1 ads3-normal-hl.zijieapi.com.w.cdngslb.com
@@ -1183,7 +1182,6 @@
 127.0.0.1 adver.qq.com
 127.0.0.1 adverpub.com
 127.0.0.1 advert-prod.hyrz.qq.com
-127.0.0.1 advert.58.com
 127.0.0.1 advert.api.thejoyrun.com
 127.0.0.1 advert.lx.netease.com
 127.0.0.1 advert.swiftpass.cn
@@ -1330,6 +1328,7 @@
 127.0.0.1 ahm.jiankang123.net
 127.0.0.1 ahn.jiankang123.net
 127.0.0.1 ahov1.top
+127.0.0.1 ai-nexork.com
 127.0.0.1 ai.advertisement.alibabacorp.sm.cn
 127.0.0.1 ai.bioon.com
 127.0.0.1 ai.login.umeng.com
@@ -3004,6 +3003,7 @@
 127.0.0.1 cnzzlink.com
 127.0.0.1 co-romsp-unifyconfig.vivoglobal.com
 127.0.0.1 co-st-sl.vivoglobal.com
+127.0.0.1 co-timesync.vivoglobal.com
 127.0.0.1 co-vcode-api.vivoglobal.com
 127.0.0.1 co-vcode-od.vivoglobal.com
 127.0.0.1 cocounion.com
@@ -3140,7 +3140,6 @@
 127.0.0.1 cpc.sogou.com
 127.0.0.1 cpi.adinall.com
 127.0.0.1 cpmchina.co
-127.0.0.1 cpmoz.com
 127.0.0.1 cpoml.iask.sina.com.cn
 127.0.0.1 cpro.baidu.cn
 127.0.0.1 cpro.baidu.com
@@ -4030,7 +4029,6 @@
 127.0.0.1 feedback.miui.com
 127.0.0.1 feedback.uc.cn
 127.0.0.1 feedback.umeng.com
-127.0.0.1 feedbackstorage.blob.core.chinacloudapi.cn
 127.0.0.1 feedsads.cn
 127.0.0.1 feitian001.com
 127.0.0.1 feixin2.com
@@ -6454,7 +6452,6 @@
 127.0.0.1 mtp.cnzz.com
 127.0.0.1 mtp.umeng.com
 127.0.0.1 mtrace.qq.com
-127.0.0.1 mtrace.ysp.cctv.cn
 127.0.0.1 mtt.eve.mdt.qq.com
 127.0.0.1 mtt.str.mdt.qq.com
 127.0.0.1 mtteve.beacon.qq.com
@@ -6639,6 +6636,7 @@
 127.0.0.1 notifiter.youmi.net
 127.0.0.1 notify.sec.miui.com
 127.0.0.1 notify.wps.cn
+127.0.0.1 novacapital-ai.net
 127.0.0.1 novel.pangolin-sdk-toutiao.com
 127.0.0.1 noxagile.duapp.com
 127.0.0.1 noyvyv.bosonshop.com
@@ -7215,6 +7213,7 @@
 127.0.0.1 pre.vd.f.360.cn
 127.0.0.1 preload.xiaomi.com
 127.0.0.1 premierbuyer.edm.globalsources.com
+127.0.0.1 pretty-white-ziekneey.edgeone.dev
 127.0.0.1 preview-api.installer.xiaomi.com
 127.0.0.1 preview.adsame.com
 127.0.0.1 preview.tianjimedia.com
@@ -7227,7 +7226,9 @@
 127.0.0.1 pro.letv.com
 127.0.0.1 product.pcpop.com
 127.0.0.1 profiler-collector.dalyfeds.com
+127.0.0.1 proinvest-pl.net
 127.0.0.1 projecta-common-1258344701.file.myqcloud.com
+127.0.0.1 prolnvest-polska.net
 127.0.0.1 prom.gome.com.cn
 127.0.0.1 promotion-en.xmeye.net
 127.0.0.1 promotion-partner.kuaishou.com
@@ -7372,6 +7373,7 @@
 127.0.0.1 qgo.mmstat.com
 127.0.0.1 qguwoq.cn
 127.0.0.1 qh.taojike.com.cn
+127.0.0.1 qhkxs.cn
 127.0.0.1 qhm1.cnzz.com
 127.0.0.1 qhm2.cnzz.com
 127.0.0.1 qhonzpl.cn
@@ -8523,6 +8525,7 @@
 127.0.0.1 sso.oceanengine.com
 127.0.0.1 sso.woniu.com
 127.0.0.1 ssp-adx.ads.heytapmobi.com
+127.0.0.1 ssp-api.dmrtb.com
 127.0.0.1 ssp-api.domob.cn
 127.0.0.1 ssp-event.domob.cn
 127.0.0.1 ssp-monitor.adstarcharm.com
@@ -9128,7 +9131,6 @@
 127.0.0.1 tns.simba.taobao.com
 127.0.0.1 tnze.cn
 127.0.0.1 tob-cms.bj.bcebos.com
-127.0.0.1 tob-tracker.yximgs.com
 127.0.0.1 tobapplog.ctobsnssdk.com
 127.0.0.1 tobapplog.volceapplog.com
 127.0.0.1 tobidad.cn
@@ -9271,6 +9273,7 @@
 127.0.0.1 tracking-data-drru.platform.hihonorcloud.com
 127.0.0.1 tracking-data.platform.hihonorcloud.com
 127.0.0.1 tracking-jmlink.jpush.cn
+127.0.0.1 tracking-tpadx.kajicam.com
 127.0.0.1 tracking.ad-survey.com
 127.0.0.1 tracking.adwo.com
 127.0.0.1 tracking.apptrackerlink.com
@@ -9970,6 +9973,7 @@
 127.0.0.1 w1.kskwai.com
 127.0.0.1 w11.zhongkaohelp.com
 127.0.0.1 w3cfba6ufr.com
+127.0.0.1 w6r46g0hb-dpv3acpgp8ta.edgeone.dev
 127.0.0.1 w8.com.cn
 127.0.0.1 w88.shanghaidisneyresort.com.cn
 127.0.0.1 w97nv5ibv4.com
@@ -10039,6 +10043,7 @@
 127.0.0.1 webdissector.com
 127.0.0.1 webfile.adview.cn
 127.0.0.1 webfile.adview.com
+127.0.0.1 webmail-myaccount-secure-micrsoftnotifications-dpob324t4jqd.zh-cn.edgeone.cool
 127.0.0.1 webmail.miaozhen.com
 127.0.0.1 websdk.appsflyer.com
 127.0.0.1 webserver1.quanmama.com
@@ -10084,6 +10089,7 @@
 127.0.0.1 wisem-cm.cn.miaozhen.com
 127.0.0.1 wisemedia.cm.admaster.com.cn
 127.0.0.1 wisepush.video.baidu.com
+127.0.0.1 wislazyskor-pl.com
 127.0.0.1 wisport-pl.shop
 127.0.0.1 wiyun.com
 127.0.0.1 wj.jiancai365.cn
@@ -10320,6 +10326,7 @@
 127.0.0.1 www.adxvip.com
 127.0.0.1 www.adyun.com
 127.0.0.1 www.adzp.cn
+127.0.0.1 www.ai-nexork.com
 127.0.0.1 www.aiwanma99.com
 127.0.0.1 www.aiwei365.net
 127.0.0.1 www.ajiang.net
@@ -10410,7 +10417,6 @@
 127.0.0.1 www.coocaatv.com
 127.0.0.1 www.cp7iys8fp.com
 127.0.0.1 www.cpanclean.cn
-127.0.0.1 www.cpmoz.com
 127.0.0.1 www.crasheye.cn
 127.0.0.1 www.crf999.cn
 127.0.0.1 www.csaimall.com
@@ -10789,6 +10795,7 @@
 127.0.0.1 www.nhuk707eex.com
 127.0.0.1 www.nike666.com
 127.0.0.1 www.nkscdn.com
+127.0.0.1 www.novacapital-ai.net
 127.0.0.1 www.nshvhfw.cn
 127.0.0.1 www.o5y2zd1lq8.com
 127.0.0.1 www.oaclrst.cn
@@ -10840,6 +10847,8 @@
 127.0.0.1 www.polzentraai-pl.com
 127.0.0.1 www.poqwua.cn
 127.0.0.1 www.prdohgp.cn
+127.0.0.1 www.proinvest-pl.net
+127.0.0.1 www.prolnvest-polska.net
 127.0.0.1 www.przyrost-pl.com
 127.0.0.1 www.ptengine.cn
 127.0.0.1 www.ptgdb.cn
@@ -10856,6 +10865,7 @@
 127.0.0.1 www.qdlzj.cn
 127.0.0.1 www.qf51ho9qtz.com
 127.0.0.1 www.qguwoq.cn
+127.0.0.1 www.qhkxs.cn
 127.0.0.1 www.qienews.cn
 127.0.0.1 www.qijpaih.cn
 127.0.0.1 www.qiuxl11.cn
@@ -10916,6 +10926,7 @@
 127.0.0.1 www.stalcopl-24.shop
 127.0.0.1 www.stalcopl24.shop
 127.0.0.1 www.stalcos.shop
+127.0.0.1 www.stargame.com
 127.0.0.1 www.staticfile.net
 127.0.0.1 www.staticfile.org
 127.0.0.1 www.steamproxy.net
@@ -11029,6 +11040,7 @@
 127.0.0.1 www.whaleprotect.cn
 127.0.0.1 www.winads.cn
 127.0.0.1 www.winbaicai.com
+127.0.0.1 www.wislazyskor-pl.com
 127.0.0.1 www.wisport-pl.shop
 127.0.0.1 www.wjxcdn.com
 127.0.0.1 www.wkanx.com
@@ -11070,6 +11082,7 @@
 127.0.0.1 www.xycdn.com
 127.0.0.1 www.xzswn87hm.com
 127.0.0.1 www.y4n.cn
+127.0.0.1 www.yangshengzu.cn
 127.0.0.1 www.ydmob.com
 127.0.0.1 www.yegziyf.cn
 127.0.0.1 www.yicha.cn
@@ -11274,6 +11287,7 @@
 127.0.0.1 yahekby.cn
 127.0.0.1 yahoo.com.cn
 127.0.0.1 yandui.com
+127.0.0.1 yangshengzu.cn
 127.0.0.1 yaolan.adsame.com
 127.0.0.1 yaolu.mh.163.com
 127.0.0.1 yaolu.yuedu.163.com
