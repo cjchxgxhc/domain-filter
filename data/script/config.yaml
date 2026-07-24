@@ -80,6 +80,7 @@ ads:
 
 
 ads_hosts:
+  enable: false
   title: Ads Hosts
   description: 只包含基本规则。
   formats: [hosts]
@@ -107,13 +108,10 @@ ads_hosts:
     - type: discard_suffix
       source:
         - src_proxy_tld
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif-onlydomains.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.huawei.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.vivo.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.xiaomi.txt
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/popupads-onlydomains.txt
 
 
