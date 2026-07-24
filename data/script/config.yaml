@@ -71,48 +71,11 @@ ads:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
     - type: discard_suffix
       source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
         - src_proxy_tld
     - type: add
       source:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
-
-
-ads_hosts:
-  enable: false
-  title: Ads Hosts
-  description: 只包含基本规则。
-  formats: [hosts]
-  rules:
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
-        - "@ads"
-    - type: discard_suffix
-      source:
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
-        - src_proxy_tld
-    - type: match_suffix
-      source:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
-    - type: add
-      source:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-rules.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
-    - type: discard_suffix
-      source:
-        - src_proxy_tld
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.huawei.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
-        - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/popupads-onlydomains.txt
 
 
 proxy:
