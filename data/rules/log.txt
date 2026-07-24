@@ -1,9 +1,9 @@
 开始执行
-开始下载 36 个规则源...
-下载完成：36/36 成功，耗时 3.22s
-提取域名（36 个源）...
+开始下载 33 个规则源...
+下载完成：33/33 成功，耗时 1.07s
+提取域名（33 个源）...
   src_proxy_tld：829 条 [common]
-提取完成，耗时 9.26s
+提取完成，耗时 4.44s
 ================================================================================
 处理规则组
 ================================================================================
@@ -44,27 +44,27 @@
   OK smartdns.conf（119,345 条（去重））
   OK domain.txt（132,902 条）
   OK wildcard.txt（119,345 条（去重））
-  `- 输出 119,345 条，耗时 0.67s
+  `- 输出 119,345 条，耗时 0.70s
 ======================================================================
 处理规则组：Ads Hosts (ads_hosts)
 ======================================================================
   |  rules[0] type=add
-  |    url：677,787 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+  |    url：677,731 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
   |    @ads：132,902
-  |    共 741,725 条
-  |    -> 加入 741,725（合计 741,725）
+  |    共 741,632 条
+  |    -> 加入 741,632（合计 741,632）
   |  rules[1] type=discard_suffix
   |    url：17,237 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/doh-vpn-proxy-bypass-onlydomains.txt
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    url：1,909 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
   |    named：829 <- src_proxy_tld
   |    共 147,950 条
-  |    -> 后缀丢弃 247,764（剩余 493,961）
+  |    -> 后缀丢弃 247,749（剩余 493,883）
   |  rules[2] type=match_suffix
   |    url：5,099 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
   |    url：2,419 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
   |    共 7,374 条
-  |    -> 后缀保留 9,567（移除 484,394）
+  |    -> 后缀保留 9,567（移除 484,316）
   |  rules[3] type=add
   |    url：5,099 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
   |    url：839 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
@@ -74,19 +74,16 @@
   |    -> 加入 2,042（合计 11,609）
   |  rules[4] type=discard_suffix
   |    named：829 <- src_proxy_tld
-  |    url：2,059,196 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/tif-onlydomains.txt
   |    url：361 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt
   |    url：107 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt
   |    url：136 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.huawei.txt
   |    url：202 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
-  |    url：227 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.vivo.txt
-  |    url：347 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.xiaomi.txt
-  |    url：56,584 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/popupads-onlydomains.txt
-  |    共 2,091,286 条
-  |    -> 后缀丢弃 1,672（剩余 9,937）
-  |  完毕，共 9,937 条
-  OK hosts.txt（9,937 条）
-  `- 输出 9,937 条，耗时 2.14s
+  |    url：56,583 <- https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/popupads-onlydomains.txt
+  |    共 58,208 条
+  |    -> 后缀丢弃 610（剩余 10,999）
+  |  完毕，共 10,999 条
+  OK hosts.txt（10,999 条）
+  `- 输出 10,999 条，耗时 0.69s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
@@ -109,7 +106,7 @@
   OK surge.list（23,542 条（去重））
   OK domain.txt（37,686 条）
   OK wildcard.txt（23,542 条（去重））
-  `- 输出 23,542 条，耗时 0.23s
+  `- 输出 23,542 条，耗时 0.16s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -135,10 +132,10 @@
   OK surge.list（472 条（去重））
   OK domain.txt（502 条）
   OK wildcard.txt（472 条（去重））
-  `- 输出 472 条，耗时 0.16s
+  `- 输出 472 条，耗时 0.08s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 15.76s
+OK 完成，总耗时 7.19s
 ================================================================================

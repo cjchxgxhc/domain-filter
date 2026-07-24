@@ -1,5 +1,5 @@
 # 主要引用 217heidai/adblockfilters、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告；删除：白名单域名、proxy_tld（减小大小）。
-# 适用：QuantumultX  规则数：119,345  更新：2026-07-24 19:52:27 CST
+# 适用：QuantumultX  规则数：119,345  更新：2026-07-24 23:02:22 CST
 #
 host-suffix,0-02.net,reject
 host-suffix,0-0asia.com,reject
