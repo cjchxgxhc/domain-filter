@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,542  更新：2026-07-24 23:02:23 CST
+# 适用：Clash  规则数：23,544  更新：2026-07-25 06:04:21 CST
 #
 payload:
   - +.000webhost.com
@@ -4701,6 +4701,7 @@ payload:
   - +.cios.org
   - +.cipfg.org
   - +.cipriani
+  - +.circle19.org
   - +.circlethebayfortibet.org
   - +.cirosantilli.com
   - +.cisco
@@ -11965,6 +11966,7 @@ payload:
   - +.kaotic.com
   - +.karabako-gmo.com
   - +.karayou.com
+  - +.kards.com
   - +.karger.com
   - +.karinahart.com
   - +.karkhung.com

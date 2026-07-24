@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,542  更新：2026-07-24 23:02:23 CST
+# 适用：QuantumultX  规则数：23,544  更新：2026-07-25 06:04:21 CST
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -4700,6 +4700,7 @@ host-suffix,cinnamon.org,reject
 host-suffix,cios.org,reject
 host-suffix,cipfg.org,reject
 host-suffix,cipriani,reject
+host-suffix,circle19.org,reject
 host-suffix,circlethebayfortibet.org,reject
 host-suffix,cirosantilli.com,reject
 host-suffix,cisco,reject
@@ -11964,6 +11965,7 @@ host-suffix,kaob3.xyz,reject
 host-suffix,kaotic.com,reject
 host-suffix,karabako-gmo.com,reject
 host-suffix,karayou.com,reject
+host-suffix,kards.com,reject
 host-suffix,karger.com,reject
 host-suffix,karinahart.com,reject
 host-suffix,karkhung.com,reject
