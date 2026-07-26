@@ -1,0 +1,150 @@
+# ─────────────────────────────────────────────────────────────────────────
+# 规则输出格式定义
+# https://github.com/cjchxgxhc/domain-filter
+#
+# 每个规则组的 `formats:` 列表引用这里的 key（如 domain / hosts / clash ...）。
+# 新增 / 删除 / 修改一种输出格式，只需要编辑本文件，不需要改动 filter.py。
+#
+# 字段说明：
+#   label                 显示名称（README 表格、AdGuard 头部里的 "适用" 字段）
+#   filename              输出文件名
+#   dedup                 true = 使用子域去重后的集合并标注"（去重）"；false = 使用原始集合
+#   header                头部类型：none | simple | adblock
+#                           - none    不写头部
+#                           - simple  `#` 注释风格头部（描述 + 适用 + 规则数 + 更新时间），
+#                                     由 _hdr() 生成
+#                           - adblock AdGuard 兼容头部（! Title / Description / ...），
+#                                     由 _hdr_adblock() 生成
+#   prefix                写在正文前的固定文本（可选，默认空）
+#   prefix_before_header  true = prefix 写在 header 之前；false（默认）= header 之后
+#   lines                 每个域名对应输出的行模板列表（用 {domain} 占位）。
+#                         一个域名可以对应多行（如 hostsipv6 需要 IPv4 + IPv6 两行）。
+#   kind                  写入方式：line（默认，按 lines 模板逐行写）| singbox_json
+#                         （sing-box 的 JSON 结构不是逐行文本，仍由代码内置处理，
+#                         这里只是登记 label/filename/dedup/convert）
+#   convert               可选，此格式还需转换成的额外文件名（如 clash.mrs / singbox.srs），
+#                         对应 mihomo/sing-box 的编译产物，由 GitHub Actions 里的转换步骤生成
+# ─────────────────────────────────────────────────────────────────────────
+
+formats:
+
+  domain:
+    label: "Domain"
+    filename: "domain.txt"
+    dedup: false
+    header: none
+    lines:
+      - "{domain}"
+
+  hosts:
+    label: "Hosts"
+    filename: "hosts.txt"
+    dedup: false
+    header: simple
+    lines:
+      - "127.0.0.1 {domain}"
+
+  hostsipv6:
+    label: "Hosts IPv6"
+    filename: "hosts_ipv6.txt"
+    dedup: false
+    header: simple
+    lines:
+      - "127.0.0.1 {domain}"
+      - "::1 {domain}"
+
+  smartdns:
+    label: "SmartDNS"
+    filename: "smartdns.conf"
+    dedup: true
+    header: simple
+    lines:
+      - "address /{domain}/#"
+
+  adblock:
+    label: "AdBlock"
+    filename: "adblock.txt"
+    dedup: true
+    header: adblock
+    prefix: "[Adblock Plus 2.0]\n"
+    prefix_before_header: true
+    lines:
+      - "||{domain}^"
+
+  adblockwhite:
+    label: "AdBlock White"
+    filename: "adblockwhite.txt"
+    dedup: true
+    header: adblock
+    prefix: "[Adblock Plus 2.0]\n"
+    prefix_before_header: true
+    lines:
+      - "@@||{domain}^"
+
+  clash:
+    label: "Clash"
+    filename: "clash.yaml"
+    dedup: true
+    header: simple
+    prefix: "payload:\n"
+    lines:
+      - "  - +.{domain}"
+    convert: "clash.mrs"
+
+  singbox:
+    label: "Sing-box"
+    filename: "singbox.json"
+    dedup: true
+    header: none
+    kind: singbox_json
+    convert: "singbox.srs"
+
+  wildcard:
+    label: "Wildcard"
+    filename: "wildcard.txt"
+    dedup: true
+    header: none
+    lines:
+      - "*.{domain}"
+
+  loon:
+    label: "Loon"
+    filename: "loon.list"
+    dedup: true
+    header: simple
+    lines:
+      - "DOMAIN-SUFFIX,{domain}"
+
+  surge:
+    label: "Surge"
+    filename: "surge.list"
+    dedup: true
+    header: simple
+    lines:
+      - "DOMAIN-SUFFIX,{domain}"
+
+  quantumultx:
+    label: "QuantumultX"
+    filename: "quantumultx.list"
+    dedup: true
+    header: simple
+    lines:
+      - "host-suffix,{domain},reject"
+
+  shadowrocket:
+    label: "ShadowRocket"
+    filename: "shadowrocket.list"
+    dedup: true
+    header: none
+    prefix: "[Rule]\n"
+    lines:
+      - "DOMAIN-SUFFIX,{domain},REJECT-DROP"
+
+  # ── 示例：想加一种新格式，直接照抄下面这段改改就行 ──────────────────────
+  # mosdns:
+  #   label: "MosDNS"
+  #   filename: "mosdns.txt"
+  #   dedup: true
+  #   header: simple
+  #   lines:
+  #     - "domain:{domain}"

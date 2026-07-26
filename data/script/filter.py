@@ -1,17 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Domain Filter - 主脚本（含规则格式生成 + README 生成）
-https://github.com/cjchxgxhc/domain-filter
-
-执行顺序：filter.py -> domain_filter（Rust）-> 转换 MRS/SRS
-本脚本负责：下载源 -> 提取域名 -> 规则组处理 -> 生成规则文件 -> 生成 README
-"""
 
 import datetime
 import gc
 import json
-import os
 import re
 import subprocess
 import sys
@@ -32,10 +24,7 @@ from zoneinfo import ZoneInfo
 
 # ─────────────────────────── 常量 ────────────────────────────────────────────
 
-_CHUNK_SIZE       = 50000
-_MAX_DOMAIN_LEN   = 253
-_DOWNLOAD_WORKERS = 16
-_EXTRACT_WORKERS  = os.cpu_count() or 4
+_DOWNLOAD_WORKERS = 16   # 同时也是并发调用 Rust 提取子进程的数量（下载+提取按源融合并发）
 _CONNECT_TIMEOUT  = 10
 _READ_TIMEOUT     = 30
 _RETRY_COUNT      = 3
@@ -45,53 +34,10 @@ _USER_AGENT       = (
     "+https://github.com/cjchxgxhc/domain-filter)"
 )
 
-_RUST_TOOL   = Path("data/tools/domain_filter")
-_CONFIG_PATH = Path("data/script/config.yaml")
-_README_ROOT = Path("README.md")
-
-_SIMPLE_FORMATS  = frozenset({"domain", "hosts", "hostsipv6"})
-_DEDUPED_FORMATS = frozenset({
-    "adblock", "adblockwhite", "clash", "singbox", "wildcard",
-    "loon", "surge", "quantumultx", "shadowrocket", "smartdns",
-})
-ALL_FORMATS = _SIMPLE_FORMATS | _DEDUPED_FORMATS
-
-_FMT_LABEL: Dict[str, str] = {
-    "domain":       "Domain",
-    "hosts":        "Hosts",
-    "hostsipv6":    "Hosts IPv6",
-    "smartdns":     "SmartDNS",
-    "adblock":      "AdBlock",
-    "adblockwhite": "AdBlock White",
-    "clash":        "Clash",
-    "singbox":      "Sing-box",
-    "wildcard":     "Wildcard",
-    "loon":         "Loon",
-    "surge":        "Surge",
-    "quantumultx":  "QuantumultX",
-    "shadowrocket": "ShadowRocket",
-}
-
-_FMT_FILE: Dict[str, str] = {
-    "domain":       "domain.txt",
-    "hosts":        "hosts.txt",
-    "hostsipv6":    "hosts_ipv6.txt",
-    "smartdns":     "smartdns.conf",
-    "adblock":      "adblock.txt",
-    "adblockwhite": "adblockwhite.txt",
-    "clash":        "clash.yaml",
-    "singbox":      "singbox.json",
-    "wildcard":     "wildcard.txt",
-    "loon":         "loon.list",
-    "surge":        "surge.list",
-    "quantumultx":  "quantumultx.list",
-    "shadowrocket": "shadowrocket.list",
-}
-
-_CONV_FILE: Dict[str, str] = {
-    "clash":   "clash.mrs",
-    "singbox": "singbox.srs",
-}
+_RUST_TOOL      = Path("data/tools/domain_filter")
+_CONFIG_PATH    = Path("data/script/config.yaml")
+_FORMATS_PATH   = Path("data/script/formats.yaml")
+_README_ROOT    = Path("README.md")
 
 _REGEX_RAW_GH = re.compile(
     r"^https://raw\.githubusercontent\.com/"
@@ -113,24 +59,6 @@ class ExtractMode(Enum):
 
 
 VALID_RULE_TYPES = frozenset({"add", "discard", "discard_suffix", "match", "match_suffix"})
-
-
-DOMAIN_PATTERN  = re.compile(r"^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,}$", re.IGNORECASE)
-REGEX_ADBLOCK   = re.compile(r"^\|\|([a-z0-9][a-z0-9.\-]*[a-z0-9])\^", re.IGNORECASE)
-REGEX_WHITELIST = re.compile(r"^@@\|\|([a-z0-9][a-z0-9.\-]*[a-z0-9])\^", re.IGNORECASE)
-REGEX_CLASH     = re.compile(
-    r"^(?:DOMAIN|DOMAIN-SUFFIX|HOST|HOST-SUFFIX)\s*,\s*"
-    r"([a-z0-9][a-z0-9.\-]*[a-z0-9])(?:\s*,.*)?$",
-    re.IGNORECASE,
-)
-REGEX_HOSTS     = re.compile(r"^(?:0\.0\.0\.0|127\.0\.0\.1|::1)\s", re.IGNORECASE)
-REGEX_LEAD_DASH = re.compile(r"^\s*-\s*")
-REGEX_IMPORTANT = re.compile(r"\$important\b")
-
-_REGEX_INVALID  = re.compile(r"[^a-z0-9.\-]", re.IGNORECASE)
-_REGEX_IPV4     = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}(?:/\d+)?$")
-_REGEX_DIGITS   = re.compile(r"^\d+$")
-_VALID_CHARS    = frozenset("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-")
 
 
 _log_lock   = threading.Lock()
@@ -166,127 +94,55 @@ def _flush_log() -> None:
     _log_buffer = []
 
 
-def _is_valid(domain: str) -> bool:
-    if not domain or len(domain) > _MAX_DOMAIN_LEN or "." not in domain:
-        return False
-    if domain[0] == "." or domain[-1] == ".":
-        return False
-    if not _VALID_CHARS.issuperset(domain):
-        return False
-    return bool(DOMAIN_PATTERN.fullmatch(domain))
+# ─────────────────────────── 格式定义（formats.yaml） ─────────────────────────
+
+_FORMATS: Optional[Dict[str, Dict]] = None
 
 
-def _is_invalid_bare(s: str) -> bool:
-    return (
-        bool(_REGEX_INVALID.search(s))
-        or s.startswith(".") or s.endswith(".")
-        or bool(_REGEX_IPV4.match(s))
-        or bool(_REGEX_DIGITS.match(s))
-    )
+def _load_formats(path: Path) -> Dict[str, Dict]:
+    if not path.is_file():
+        log(f"错误：缺少格式配置文件 {path}", LogLevel.ERROR)
+        sys.exit(1)
+    try:
+        with path.open(encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+    except yaml.YAMLError as e:
+        log(f"格式配置文件解析失败：{e}", LogLevel.ERROR)
+        sys.exit(1)
+
+    raw = data.get("formats") or {}
+    formats: Dict[str, Dict] = {}
+    for fid, spec in raw.items():
+        if not isinstance(spec, dict):
+            log(f"格式 '{fid}' 定义无效，已跳过", LogLevel.WARNING)
+            continue
+        spec = dict(spec)
+        spec.setdefault("label", fid)
+        spec.setdefault("filename", f"{fid}.txt")
+        spec.setdefault("dedup", False)
+        spec.setdefault("header", "none")
+        spec.setdefault("prefix", "")
+        spec.setdefault("prefix_before_header", False)
+        spec.setdefault("lines", [])
+        spec.setdefault("kind", "line")
+        spec.setdefault("convert", None)
+        if spec["header"] not in ("none", "simple", "adblock"):
+            log(f"格式 '{fid}' header 取值无效：{spec['header']}", LogLevel.WARNING)
+            spec["header"] = "none"
+        formats[fid] = spec
+
+    log(f"OK 格式配置已加载：{len(formats)} 种输出格式")
+    return formats
 
 
-def _strip_comment(line: str) -> str:
-    line = line.strip()
-    if not line or line[0] in ("#", "!"):
-        return ""
-    if " #" in line:
-        line = line.split(" #", 1)[0].rstrip()
-    return line.strip()
+def _get_formats() -> Dict[str, Dict]:
+    global _FORMATS
+    if _FORMATS is None:
+        _FORMATS = _load_formats(_FORMATS_PATH)
+    return _FORMATS
 
 
-def _extract_common(line: str, validate: bool) -> Optional[str]:
-    cleaned = _strip_comment(line)
-    if not cleaned:
-        return None
-    cleaned = REGEX_LEAD_DASH.sub("", cleaned).strip().strip("'\"")
-    cleaned = REGEX_IMPORTANT.sub("", cleaned).strip()
-    if not cleaned or cleaned.startswith("@@"):
-        return None
-
-    m = REGEX_ADBLOCK.match(cleaned)
-    if m:
-        d = m.group(1).lower()
-        return d if (not validate or _is_valid(d)) else None
-
-    m = REGEX_CLASH.match(cleaned)
-    if m:
-        d = m.group(1).strip().lower()
-        return d if (not validate or _is_valid(d)) else None
-
-    if cleaned.startswith(("+.", "*.")):
-        d = cleaned[2:].strip().lower()
-        return d if (not validate or _is_valid(d)) else None
-
-    if cleaned.startswith(".") and len(cleaned) > 1:
-        d = cleaned[1:].lower()
-        return d if (not validate or _is_valid(d)) else None
-
-    if REGEX_HOSTS.match(cleaned):
-        parts = cleaned.split(None, 1)
-        if len(parts) < 2:
-            return None
-        d = parts[1].strip().lower()
-        return d if (not validate or _is_valid(d)) else None
-
-    d = cleaned.lower()
-    if _is_invalid_bare(d):
-        return None
-    return d if (not validate or _is_valid(d)) else None
-
-
-def _extract_adblockwhite(line: str) -> Optional[str]:
-    line = line.strip()
-    if not line or line[0] in ("#", "!"):
-        return None
-    m = REGEX_WHITELIST.match(line)
-    return m.group(1).lower() if m else None
-
-
-def _extract_skip(line: str, validate: bool) -> Optional[str]:
-    d = _strip_comment(line).lower()
-    if not d:
-        return None
-    if validate:
-        return d if _is_valid(d) else None
-    return None if _is_invalid_bare(d) else d
-
-
-def _extract_chunk(chunk: List[str], mode: ExtractMode, validate: bool) -> Set[str]:
-    result: Set[str] = set()
-    if mode == ExtractMode.COMMON:
-        for line in chunk:
-            d = _extract_common(line, validate)
-            if d:
-                result.add(d)
-    elif mode == ExtractMode.ADBLOCKWHITE:
-        for line in chunk:
-            d = _extract_adblockwhite(line)
-            if d:
-                result.add(d)
-    else:
-        for line in chunk:
-            d = _extract_skip(line, validate)
-            if d:
-                result.add(d)
-    return result
-
-
-def _extract_lines(
-    lines: List[str], mode: ExtractMode, validate: bool,
-    log_file: Optional[Path] = None,
-) -> Set[str]:
-    if not lines:
-        return set()
-    chunks = [lines[i : i + _CHUNK_SIZE] for i in range(0, len(lines), _CHUNK_SIZE)]
-    result: Set[str] = set()
-    with ThreadPoolExecutor(max_workers=_EXTRACT_WORKERS) as ex:
-        for future in as_completed([ex.submit(_extract_chunk, c, mode, validate) for c in chunks]):
-            try:
-                result.update(future.result())
-            except Exception as e:
-                log(f"并行提取失败: {e}", LogLevel.WARNING, log_file)
-    return result
-
+# ─────────────────────────── 域名过滤 / 去重（调用 Rust） ─────────────────────
 
 def _rust(mode: str, current: Set[str], ref: Optional[Set[str]] = None) -> Set[str]:
     if not _RUST_TOOL.exists():
@@ -299,6 +155,27 @@ def _rust(mode: str, current: Set[str], ref: Optional[Set[str]] = None) -> Set[s
         return set(p.stdout.splitlines())
     except subprocess.CalledProcessError as e:
         raise RuntimeError(f"domain_filter {mode} 失败：{e.stderr[:200]}")
+
+
+def _rust_extract(
+    lines: List[str], mode: ExtractMode, validate: bool,
+    log_file: Optional[Path] = None,
+) -> Set[str]:
+    """调用 Rust `extract` 子命令完成域名提取 + 格式校验，替代原 Python 正则实现。"""
+    if not lines:
+        return set()
+    if not _RUST_TOOL.exists():
+        raise FileNotFoundError(f"Rust 工具不存在：{_RUST_TOOL}")
+    inp = "\n".join(lines)
+    try:
+        p = subprocess.run(
+            [str(_RUST_TOOL), "extract", mode.value, "1" if validate else "0"],
+            input=inp, capture_output=True, text=True, check=True,
+        )
+        return set(p.stdout.splitlines())
+    except subprocess.CalledProcessError as e:
+        log(f"Rust 提取失败（{mode.value}）：{e.stderr[:200]}", LogLevel.WARNING, log_file)
+        return set()
 
 
 def _discard_exact(cur: Set[str], ref: Set[str]) -> Set[str]:
@@ -335,11 +212,19 @@ def _dedup(domains: Set[str], lf: Optional[Path] = None) -> Set[str]:
         return domains
 
 
-def _download(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, List[str]]:
-    if not urls:
+def _download_and_extract(
+    src_cfgs: Dict[str, Dict],
+    log_file: Optional[Path] = None,
+) -> Dict[str, Set[str]]:
+    """按源并发下载 + 调 Rust 提取，融合成一步（不必等全部下载完成才开始提取）。
+    不做跨次运行缓存——每次都是一次完整下载 + 提取。
+    """
+    if not src_cfgs:
         return {}
-    log(f"开始下载 {len(urls)} 个规则源...", log_file=log_file)
+
+    log(f"下载并提取（{len(src_cfgs)} 个源）...", log_file=log_file)
     t0 = time.time()
+
     session = requests.Session()
     adapter = HTTPAdapter(
         max_retries=Retry(
@@ -353,34 +238,39 @@ def _download(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, Lis
     session.mount("https://", adapter)
     session.headers["User-Agent"] = _USER_AGENT
 
-    result: Dict[str, List[str]] = {}
-    failed: List[str] = []
+    stats = {"ok": 0, "failed": 0}
 
-    def _fetch(url: str) -> Tuple[str, bool, List[str]]:
+    def _one(url: str, cfg: Dict) -> Tuple[str, Set[str], bool]:
         try:
             r = session.get(url, timeout=(_CONNECT_TIMEOUT, _READ_TIMEOUT))
             r.raise_for_status()
-            return url, True, r.text.splitlines()
-        except Exception:
-            return url, False, []
+        except Exception as e:
+            log(f"  FAIL {url}：{e}", LogLevel.WARNING, log_file)
+            return url, set(), False
+        domains = _rust_extract(r.text.splitlines(), cfg["mode"], cfg["validate"], log_file)
+        return url, domains, True
 
+    result: Dict[str, Set[str]] = {}
     with ThreadPoolExecutor(max_workers=_DOWNLOAD_WORKERS) as ex:
-        futures = {ex.submit(_fetch, url): url for url in urls}
+        futures = {ex.submit(_one, url, cfg): url for url, cfg in src_cfgs.items()}
         for future in as_completed(futures):
+            url = futures[future]
             try:
-                url, ok, lines = future.result()
-                result[url] = lines
-                if not ok:
-                    failed.append(url)
-            except Exception:
-                url = futures[future]
-                failed.append(url)
-                result[url] = []
+                u, domains, ok = future.result()
+            except Exception as e:
+                result[url] = set()
+                stats["failed"] += 1
+                log(f"  FAIL {url}：{e}", LogLevel.WARNING, log_file)
+                continue
+            result[u] = domains
+            stats["ok" if ok else "failed"] += 1
 
-    log(f"下载完成：{len(urls)-len(failed)}/{len(urls)} 成功，耗时 {time.time()-t0:.2f}s", log_file=log_file)
-    for url in failed:
-        log(f"  FAIL {url}", LogLevel.WARNING, log_file)
+    log(
+        f"完成：{stats['ok']} 个成功，{stats['failed']} 个失败，耗时 {time.time()-t0:.2f}s",
+        log_file=log_file,
+    )
     return result
+
 
 
 def _hdr(count: int, tool: str, desc: str, now: str, c: str) -> str:
@@ -415,100 +305,40 @@ def _write_fmt(
     simple: List[str], deduped: List[str],
     title: str, desc: str, now: str,
 ) -> Tuple[str, int]:
-    s, d = simple, deduped
-    tool = _FMT_LABEL.get(fmt, fmt)
+    """按 formats.yaml 中的格式定义生成单个规则文件。"""
+    spec = _get_formats().get(fmt)
+    if spec is None:
+        raise ValueError(f"未知格式：{fmt}")
 
-    if fmt == "domain":
-        p = out / "domain.txt"
-        p.write_text("\n".join(s) + "\n", encoding="utf-8")
-        return p.name, len(s)
+    values = deduped if spec["dedup"] else simple
+    fname  = spec["filename"]
+    p      = out / fname
+    tool   = spec["label"]
 
-    if fmt == "hosts":
-        p = out / "hosts.txt"
+    # sing-box 的 JSON 结构不是逐行文本，单独处理
+    if spec["kind"] == "singbox_json":
         with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(s), tool, desc, now, "#"))
-            for x in s: f.write(f"127.0.0.1 {x}\n")
-        return p.name, len(s)
+            json.dump({"version": 3, "rules": [{"domain_suffix": values}]}, f, indent=2, ensure_ascii=False)
+        return fname, len(values)
 
-    if fmt == "hostsipv6":
-        p = out / "hosts_ipv6.txt"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(s), tool, desc, now, "#"))
-            for x in s: f.write(f"127.0.0.1 {x}\n::1 {x}\n")
-        return p.name, len(s)
+    header  = spec["header"]
+    prefix  = spec.get("prefix") or ""
+    pre_hdr = bool(spec.get("prefix_before_header"))
 
-    if fmt == "smartdns":
-        p = out / "smartdns.conf"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), tool, desc, now, "#"))
-            for x in d: f.write(f"address /{x}/#\n")
-        return p.name, len(d)
+    with p.open("w", encoding="utf-8") as f:
+        if pre_hdr and prefix:
+            f.write(prefix)
+        if header == "simple":
+            f.write(_hdr(len(values), tool, desc, now, "#"))
+        elif header == "adblock":
+            f.write(_hdr_adblock(len(values), title, desc, now))
+        if not pre_hdr and prefix:
+            f.write(prefix)
+        for x in values:
+            for tmpl in spec["lines"]:
+                f.write(tmpl.format(domain=x) + "\n")
 
-    if fmt == "adblock":
-        p = out / "adblock.txt"
-        with p.open("w", encoding="utf-8") as f:
-            f.write("[Adblock Plus 2.0]\n")
-            f.write(_hdr_adblock(len(d), title, desc, now))
-            for x in d: f.write(f"||{x}^\n")
-        return p.name, len(d)
-
-    if fmt == "adblockwhite":
-        p = out / "adblockwhite.txt"
-        with p.open("w", encoding="utf-8") as f:
-            f.write("[Adblock Plus 2.0]\n")
-            f.write(_hdr_adblock(len(d), title, desc, now))
-            for x in d: f.write(f"@@||{x}^\n")
-        return p.name, len(d)
-
-    if fmt == "clash":
-        p = out / "clash.yaml"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), tool, desc, now, "#"))
-            f.write("payload:\n")
-            for x in d: f.write(f"  - +.{x}\n")
-        return p.name, len(d)
-
-    if fmt == "singbox":
-        p = out / "singbox.json"
-        with p.open("w", encoding="utf-8") as f:
-            json.dump({"version": 3, "rules": [{"domain_suffix": d}]}, f, indent=2, ensure_ascii=False)
-        return p.name, len(d)
-
-    if fmt == "wildcard":
-        p = out / "wildcard.txt"
-        with p.open("w", encoding="utf-8") as f:
-            for x in d: f.write(f"*.{x}\n")
-        return p.name, len(d)
-
-    if fmt == "loon":
-        p = out / "loon.list"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), tool, desc, now, "#"))
-            for x in d: f.write(f"DOMAIN-SUFFIX,{x}\n")
-        return p.name, len(d)
-
-    if fmt == "surge":
-        p = out / "surge.list"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), tool, desc, now, "#"))
-            for x in d: f.write(f"DOMAIN-SUFFIX,{x}\n")
-        return p.name, len(d)
-
-    if fmt == "quantumultx":
-        p = out / "quantumultx.list"
-        with p.open("w", encoding="utf-8") as f:
-            f.write(_hdr(len(d), tool, desc, now, "#"))
-            for x in d: f.write(f"host-suffix,{x},reject\n")
-        return p.name, len(d)
-
-    if fmt == "shadowrocket":
-        p = out / "shadowrocket.list"
-        with p.open("w", encoding="utf-8") as f:
-            f.write("[Rule]\n")
-            for x in d: f.write(f"DOMAIN-SUFFIX,{x},REJECT-DROP\n")
-        return p.name, len(d)
-
-    raise ValueError(f"未知格式：{fmt}")
+    return fname, len(values)
 
 
 def _save(
@@ -524,10 +354,11 @@ def _save(
     now = datetime.datetime.now(ZoneInfo(tz)).strftime("%Y-%m-%d %H:%M:%S %Z")
     ss, dd = sorted(simple), sorted(deduped)
     counts: Dict[str, int] = {}
+    fmt_registry = _get_formats()
     for fmt in formats:
         fname, count = _write_fmt(fmt, out, ss, dd, title, desc, now)
         counts[fmt] = count
-        note = "（去重）" if fmt in _DEDUPED_FORMATS else ""
+        note = "（去重）" if fmt_registry.get(fmt, {}).get("dedup") else ""
         log(f"  OK {fname}（{count:,} 条{note}）", log_file=log_file)
     return counts
 
@@ -552,10 +383,12 @@ def _group_readme(
     forced_off  = data.get("dedup_forced_off", False)
     group_dir   = out_root / cfg_key
     ts          = now.strftime("%Y-%m-%d %H:%M:%S")
+    fmt_registry = _get_formats()
 
     rows: List[Tuple[str, str, str, str, str, str]] = []
     for fmt, count in fmt_counts.items():
-        fname = _FMT_FILE.get(fmt)
+        spec = fmt_registry.get(fmt)
+        fname = spec.get("filename") if spec else None
         if not fname or not (group_dir / fname).exists():
             continue
         raw_url = f"{raw_base.rstrip('/')}/{cfg_key}/{fname}"
@@ -565,14 +398,11 @@ def _group_readme(
         fastly = f"[Fastly]({fastly_url})" if fastly_url else "—"
         ghp    = f"[ghproxy]({ghp_url})"
 
-        if fmt in _DEDUPED_FORMATS:
-            dedup = "原始(强制)" if forced_off else "OK"
-        else:
-            dedup = "—"
+        dedup = ("原始(强制)" if forced_off else "OK") if spec.get("dedup") else "—"
 
         rows.append((fname, f"{count:,}", dedup, f"[↓]({raw_url})", cdn, fastly, ghp))
 
-        conv = _CONV_FILE.get(fmt)
+        conv = spec.get("convert")
         if conv and (group_dir / conv).exists():
             raw_conv = f"{raw_base.rstrip('/')}/{cfg_key}/{conv}"
             cdn_c, fastly_c = _jsd_url(raw_conv)
@@ -613,12 +443,13 @@ def _main_readme(all_stats: Dict, now: datetime.datetime) -> None:
         "## 规则列表",
         "",
     ]
+    fmt_registry = _get_formats()
     visible = sorted(
         [(k, v) for k, v in all_stats.items() if v.get("output_enabled") and v.get("title")],
         key=lambda x: x[1].get("idx", 0),
     )
     for cfg_key, data in visible:
-        fmts = " - ".join(_FMT_LABEL.get(f, f) for f in data.get("format_counts", {}))
+        fmts = " - ".join(fmt_registry.get(f, {}).get("label", f) for f in data.get("format_counts", {}))
         lines.append(
             f"- **{data['title']}** — {data.get('description', '')}  \n"
             f"  `{fmts}` - [查看详情](data/rules/{cfg_key})"
@@ -738,11 +569,12 @@ def _validate(
 ) -> bool:
     errors: List[str] = []
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
+    known_formats = _get_formats()
 
     for g in groups:
         key, gidx = g["cfg_key"], g["idx"]
         for fmt in g.get("formats", []):
-            if fmt not in ALL_FORMATS:
+            if fmt not in known_formats:
                 errors.append(f"规则组 '{key}' formats 包含未知格式：'{fmt}'")
         if not isinstance(g["rules"], list):
             errors.append(f"规则组 '{key}' rules 必须是列表")
@@ -861,8 +693,9 @@ def _process(
                           "format_counts": {}, "dedup_forced_off": False}
         return
 
-    needs_dedup    = any(f in _DEDUPED_FORMATS for f in fmts)
-    forced_off     = dedup is False
+    fmt_registry = _get_formats()
+    needs_dedup  = any(fmt_registry.get(f, {}).get("dedup") for f in fmts)
+    forced_off   = dedup is False
 
     if dedup is True:
         dd = _dedup(cur, log_file)
@@ -898,6 +731,9 @@ def main() -> None:
     print("=" * 80)
     print()
 
+    # 提前加载格式定义：一是让 _validate 能校验 formats 字段，二是尽早暴露 formats.yaml 的配置错误
+    _get_formats()
+
     global_cfg, groups, named = _load_config(_CONFIG_PATH)
 
     out_root = Path(global_cfg.get("output_root", "data/rules"))
@@ -916,23 +752,6 @@ def main() -> None:
         sys.exit(1)
 
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
-
-    all_urls: Set[str] = {s["url"] for s in named.values()}
-    for g in groups:
-        for rule in g.get("rules", []):
-            if not isinstance(rule, dict):
-                continue
-            for entry in rule.get("source") or []:
-                p = _parse_src(entry)
-                if p and p["kind"] == "url":
-                    all_urls.add(p["url"])
-
-    try:
-        raw_dl = _download(list(all_urls), log_file)
-    except Exception as e:
-        log(f"下载失败：{e}", LogLevel.ERROR, log_file)
-        log(traceback.format_exc(), LogLevel.ERROR, log_file)
-        sys.exit(1)
 
     src_cfgs: Dict[str, Dict] = {s["url"]: s for s in named.values()}
     for g in groups:
@@ -955,30 +774,18 @@ def main() -> None:
                 else:
                     src_cfgs[url] = p
 
-    log(f"提取域名（{len(src_cfgs)} 个源）...", log_file=log_file)
-    t_ex = time.time()
+    # 下载 + 提取融合为一步（按源并发，不必等全部下载完才开始提取），不做跨次运行缓存
     dl: Dict[str, Set[str]] = {}
-
-    with ThreadPoolExecutor(max_workers=_EXTRACT_WORKERS) as ex:
-        fut: Dict = {}
-        for url, cfg in src_cfgs.items():
-            lines = raw_dl.get(url, [])
-            if lines:
-                fut[ex.submit(_extract_lines, lines, cfg["mode"], cfg["validate"])] = url
-            else:
-                dl[url] = set()
-        for future, url in fut.items():
-            try:
-                dl[url] = future.result()
-            except Exception as e:
-                log(f"  {url}：提取失败 {e}", LogLevel.ERROR, log_file)
-                dl[url] = set()
+    try:
+        dl = _download_and_extract(src_cfgs, log_file)
+    except Exception as e:
+        log(f"下载/提取失败：{e}", LogLevel.ERROR, log_file)
+        log(traceback.format_exc(), LogLevel.ERROR, log_file)
+        sys.exit(1)
 
     for sname, cfg in named.items():
         dl[sname] = dl.get(cfg["url"], set())
         log(f"  {sname}：{len(dl[sname]):,} 条 [{cfg['mode'].value}]", log_file=log_file)
-
-    log(f"提取完成，耗时 {time.time()-t_ex:.2f}s", log_file=log_file)
 
     cache: Dict[int, Set[str]] = {}
     all_stats: Dict = {}

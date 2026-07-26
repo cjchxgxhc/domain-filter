@@ -55,27 +55,42 @@ sources:
 
 ads:
   title: Ads
-  description: 主要引用 217heidai/adblockfilters、lingeringsound/10007、privacy-protection-tools/anti-AD 项目规则，增添：手机端应用程序广告；删除：白名单域名、proxy_tld（减小大小）。
-  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, domain, wildcard]
+  description: 喵喵喵。
+  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard]
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
     - type: discard
       source:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+
+
+ads_hosts:
+  title: Ads Hosts
+  description: hosts格式喵。
+  formats: [hosts, domain]
+  rules:
+    # 补全子域名，hosts格式不可屏蔽子域名。
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
     - type: discard_suffix
       source:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
         - src_proxy_tld
+    - type: match_suffix
+      source:
+        - "@ads"
     - type: add
       source:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
+        - "@ads"
 
 
 proxy:
@@ -104,6 +119,8 @@ direct_fix:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
+        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
+        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/direct_fix/addlist.txt
