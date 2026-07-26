@@ -6,11 +6,9 @@ on:
   workflow_dispatch:
 
 env:
-  MIHOMO_VERSION:  1.19.3
-  SINGBOX_VERSION: 1.11.0
-  TOOLS_DIR:       data/tools
-  RUST_TOOL:       data/tools/domain_filter
-  RUST_SRC:        data/script/domain_filter
+  MIHOMO_VERSION:   1.19.3
+  SINGBOX_VERSION:  1.11.0
+  TOOLS_DIR:        data/tools
 
 jobs:
   build:
@@ -38,18 +36,10 @@ jobs:
       - name: Create tools directory
         run: mkdir -p ${{ env.TOOLS_DIR }}
 
-      # ── 检查各工具是否已存在 ──────────────────────────────────────────────────
+      # ── 检查 mihomo / sing-box 是否已存在 ──────────────────────────────────
       - name: Check existing tools
         id: check_tools
         run: |
-          if [ -f "$GITHUB_WORKSPACE/${{ env.RUST_TOOL }}" ]; then
-            echo "rust_ok=true"    >> $GITHUB_OUTPUT
-            echo "✓ domain_filter 已存在"
-          else
-            echo "rust_ok=false"   >> $GITHUB_OUTPUT
-            echo "ℹ️ domain_filter 不存在，将编译"
-          fi
-
           if [ -f "$GITHUB_WORKSPACE/${{ env.TOOLS_DIR }}/mihomo" ]; then
             echo "mihomo_ok=true"  >> $GITHUB_OUTPUT
             echo "✓ mihomo 已存在"
@@ -65,38 +55,6 @@ jobs:
             echo "singbox_ok=false" >> $GITHUB_OUTPUT
             echo "ℹ️ sing-box 不存在，将下载"
           fi
-
-      # ── 编译 Rust domain_filter ───────────────────────────────────────────────
-      - name: Setup Rust toolchain
-        if: steps.check_tools.outputs.rust_ok == 'false'
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: x86_64-unknown-linux-gnu
-
-      - name: Cache Rust build
-        if: steps.check_tools.outputs.rust_ok == 'false'
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            ${{ env.RUST_SRC }}/target
-          key: ${{ runner.os }}-cargo-${{ hashFiles(format('{0}/Cargo.lock', env.RUST_SRC)) }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
-
-      - name: Build domain_filter (Rust)
-        if: steps.check_tools.outputs.rust_ok == 'false'
-        run: |
-          DEST="$GITHUB_WORKSPACE/${{ env.RUST_TOOL }}"
-          mkdir -p "$(dirname "$DEST")"
-
-          cd "$GITHUB_WORKSPACE/${{ env.RUST_SRC }}"
-          cargo build --release --target x86_64-unknown-linux-gnu
-
-          cp target/x86_64-unknown-linux-gnu/release/domain_filter "$DEST"
-          chmod +x "$DEST"
-          echo "✓ domain_filter 编译完成（$(du -sh "$DEST" | cut -f1)）"
 
       # ── 下载 mihomo ───────────────────────────────────────────────────────────
       - name: Download Mihomo binary
