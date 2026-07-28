@@ -53,6 +53,18 @@ sources:
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
 
+ads_white:
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+    - type: discard
+      source:
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/ads_specific.txt
+
 ads:
   title: Ads
   description: 喵喵喵。
@@ -65,10 +77,7 @@ ads:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
     - type: discard
       source:
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-        - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+        - "@ads_white"
 
 
 ads_hosts:
@@ -80,6 +89,7 @@ ads_hosts:
     - type: add
       source:
         - https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/hosts/ultimate.txt
+    # 防止列表异常，主要去除随机生成前缀域名。
     - type: discard_suffix
       source:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
