@@ -1,5 +1,5 @@
 # 喵喵喵。
-# 适用：Clash  规则数：6,199  更新：2026-07-27 05:57:23 CST
+# 适用：Clash  规则数：6,026  更新：2026-07-28 20:17:29 CST
 #
 payload:
   - +.0001-metrics1-drcn-dt-dbankcloud-cn.geac.dbankedge.cn
@@ -8,6 +8,7 @@ payload:
   - +.0471fcw.com
   - +.0575bbs.com
   - +.0597kk.com
+  - +.05gdfi007-dpm2gawaoxpl.edgeone.dev
   - +.080999.cn
   - +.087tqb.cn
   - +.0dy3evz6x.com
@@ -71,7 +72,6 @@ payload:
   - +.1wkg.cn
   - +.2.haoxue360.com
   - +.20091222.com
-  - +.2016.appsflyer.com
   - +.2021.dxsbb.com
   - +.21.fh21static.com
   - +.2144.cn
@@ -103,7 +103,6 @@ payload:
   - +.360shuke.com
   - +.365dmp.com
   - +.37wan.com
-  - +.3917.com
   - +.39jz.com
   - +.3hg6yh6h0.com
   - +.3is34bpqs4.com
@@ -158,7 +157,6 @@ payload:
   - +.5ipifco2tf.com
   - +.5mgrgsc.cn
   - +.5mm.zxfw5.cn
-  - +.5pub.com
   - +.5qzone.net
   - +.5tmobi.cn
   - +.5vkyqkc.cn
@@ -219,7 +217,6 @@ payload:
   - +.9ics.cn
   - +.9v7sbm9zc.com
   - +.9wee.com
-  - +.9zadx.com
   - +.a.4aqq.com
   - +.a.52zxw.com
   - +.a.alimama.cn
@@ -244,6 +241,7 @@ payload:
   - +.a.nowscore.com
   - +.a.oh100.com
   - +.a.qchannel01.cn
+  - +.a.qchannel03.cn
   - +.a.realsrv.com
   - +.a.rohde-schwarz.com.cn
   - +.a.tiyuxiu.com
@@ -272,6 +270,7 @@ payload:
   - +.a8.jp.peacebird.com
   - +.a8cv.jp.redodopower.com
   - +.aa.analog.com
+  - +.aai07280mu.com
   - +.aaoffice.cn
   - +.aapz.com
   - +.ab3de9.gamersky.com
@@ -287,7 +286,6 @@ payload:
   - +.abroad.api.comm.intl.miui.com
   - +.abroadad.cache.wpscdn.com
   - +.abtest-api-data-sg.hoyoverse.com
-  - +.abtest-api-data.mihoyo.com
   - +.abtest-ch.snssdk.com
   - +.abtest.alibaba.com
   - +.abtest.todesk.com
@@ -302,7 +300,6 @@ payload:
   - +.ac2.dcloud.net.cn
   - +.acc.3gbizhi.com
   - +.acc.jiangsujiaxue.com
-  - +.access.pangolin-sdk-toutiao-b.com
   - +.account.tingyun.com
   - +.accscdn.m.taobao.com
   - +.acjs.aliyun.com
@@ -342,14 +339,12 @@ payload:
   - +.ad-sdk.aiclk.com
   - +.ad-sdk.altamob.xiaoying.co
   - +.ad-sdk.huxiu.com
-  - +.ad-sign.byteimg.com
   - +.ad-static-xg.tagtic.cn
   - +.ad.12306.cn
   - +.ad.12306.cn.wscdns.com
   - +.ad.163.com
   - +.ad.3.cn
   - +.ad.51wnl.com
-  - +.ad.99jiasu.com
   - +.ad.a.yximgs.com
   - +.ad.adsrvr.cn
   - +.ad.adsrvr.cn.com
@@ -392,16 +387,13 @@ payload:
   - +.ad.mh.163.com
   - +.ad.mi.com
   - +.ad.mobile.youku.com
-  - +.ad.moonton.cn
   - +.ad.nvdvr.cn
   - +.ad.oceanengine.com
-  - +.ad.open.api.jihuoniao.com
   - +.ad.ourgame.com
   - +.ad.partner.gifshow.com
   - +.ad.qingting.fm
   - +.ad.qq.com
   - +.ad.qyer.com
-  - +.ad.report.jihuoniao.com
   - +.ad.richmob.cn
   - +.ad.shunchangzhixing.com
   - +.ad.sina.com.cn
@@ -409,6 +401,7 @@ payload:
   - +.ad.sohu.com
   - +.ad.soulapp.cn
   - +.ad.tencentmusic.com
+  - +.ad.thsi.cn
   - +.ad.toutiao.com
   - +.ad.track.66mobi.com
   - +.ad.union.api
@@ -419,7 +412,6 @@ payload:
   - +.ad.weixin.qq.com
   - +.ad.weplayer.cc
   - +.ad.winrar.com.cn
-  - +.ad.xhey.top
   - +.ad.xiaohongshu.com
   - +.ad.ximalaya.com
   - +.ad.xunkids.com
@@ -465,20 +457,18 @@ payload:
   - +.adbehavior.ximalaya.com
   - +.adblock.sina.cn
   - +.adbox.sina.com.cn
-  - +.adbrand.byteimg.com
   - +.adcdn.tencentmusic.com
   - +.adchina.cc
   - +.adclick.tencentmusic.com
   - +.adcome.cn
-  - +.adconf.rqmob.com
   - +.adcore.lenovomm.com
   - +.adcos.adxmly.com
-  - +.adcs.rqmob.com
   - +.addata.jd.com
   - +.adeventtracker.spotify.com
   - +.adexpo.tencentmusic.com
   - +.adfilter.imtt.qq.com
   - +.adfunds.org
+  - +.adfunlink.com
   - +.adfuture.cn
   - +.adgeo.163.com
   - +.adhdsb.cn
@@ -533,6 +523,7 @@ payload:
   - +.adpai.thepaper.cn
   - +.adping.qq.com
   - +.adproxy.autohome.com.cn
+  - +.adpublish.ydstatic.com
   - +.adquan.com
   - +.adrdir.qq.com
   - +.adreq.vivo.com.cn
@@ -555,8 +546,6 @@ payload:
   - +.ads-i2.xhscdn.com
   - +.ads-i2.xhscdn.com.w.cdngslb.com
   - +.ads-i3.xhscdn.com
-  - +.ads-i3.xhscdn.com.a.bdydns.com
-  - +.ads-i4.xhscdn.com
   - +.ads-img-al.xhscdn.com
   - +.ads-img-al.xhscdn.com.w.cdngslb.com
   - +.ads-img-bak.xhscdn.com
@@ -565,9 +554,7 @@ payload:
   - +.ads-leona-s1.xhscdn.com
   - +.ads-marketing-vivofs.vivo.com.cn
   - +.ads-monitoring.shziyi.com
-  - +.ads-sdk-api.ranfenghd.com
   - +.ads-shopping.shouqianba.com
-  - +.ads-tracker.ranfenghd.com
   - +.ads-union.jd.com
   - +.ads-video-al.xhscdn.com
   - +.ads-video-al.xhscdn.com.w.cdngslb.com
@@ -576,7 +563,6 @@ payload:
   - +.ads.95516.com
   - +.ads.activepower.net
   - +.ads.adagent.chacha.com
-  - +.ads.adfunlink.com
   - +.ads.api.fakeloc.cc
   - +.ads.api.lerist.cc
   - +.ads.bjlxin.cn
@@ -715,7 +701,6 @@ payload:
   - +.adstage-analytics.herokuapp.com
   - +.adstat.izuiyou.com
   - +.adstatic.zhihu.com
-  - +.adstatis.99jiasu.com
   - +.adstatistics.av380.net
   - +.adstats.tencentmusic.com
   - +.adstextview.qq.com
@@ -731,10 +716,8 @@ payload:
   - +.adtrack.uc.cn
   - +.adtrack.ucweb.com
   - +.adtrack.xiaojukeji.com
-  - +.adtracker.adfunlink.com
   - +.adttrackingprd.hwwt8.com
   - +.adtx2.cn
-  - +.adui.tg.meitu.com
   - +.adukwai.com
   - +.adups.cn
   - +.adups.com
@@ -767,13 +750,16 @@ payload:
   - +.advlion.com
   - +.advmob.cn
   - +.advsdkreport-def.tt.cn
-  - +.adwanji.com
   - +.adwetec.com
   - +.adwo.com
   - +.adx-ads-test.wanyol.com
   - +.adx-api.hupu.com
   - +.adx-api.jinmo.tech
+  - +.adx-bj-req.anythinktech.com
+  - +.adx-bj.anythinktech.com
   - +.adx-cfg-u1.ubixioe.com
+  - +.adx-cn-req.anythinktech.com
+  - +.adx-cn.anythinktech.com
   - +.adx-core.youku.com
   - +.adx-data-u1.ubixioe.com
   - +.adx-dra-op-dbankcloud-com-dra.appacc.dbankedge.cn
@@ -789,6 +775,8 @@ payload:
   - +.adx-id.ads.heytapmobi.com
   - +.adx-in.ads.heytapmobi.com
   - +.adx-open-service.youku.com
+  - +.adx-os-req.anythinktech.com
+  - +.adx-os.anythinktech.com
   - +.adx-os.toponadss.com
   - +.adx-sg.ads.heytapmobi.com
   - +.adx.36kr.com
@@ -797,6 +785,7 @@ payload:
   - +.adx.adtaipo.com
   - +.adx.adubest.com
   - +.adx.adwangmai.com
+  - +.adx.anythinktech.com
   - +.adx.apicgate.com
   - +.adx.halomobi.com
   - +.adx.hubcloud.com
@@ -817,6 +806,7 @@ payload:
   - +.adxlog.vivo.com.cn
   - +.adxmi.com
   - +.adxstatic.vivo.com.cn
+  - +.adxtk.anythinktech.com
   - +.adxvip.com
   - +.adyun.com
   - +.adzp.cn
@@ -830,7 +820,6 @@ payload:
   - +.af1tsjdta.com
   - +.afd.baidu.com
   - +.affiliate.klook.com
-  - +.afmarketingdev.appsflyer.com
   - +.afp.alicdn.com
   - +.afraud-cse.avlyun.com
   - +.africa.edm.globalsources.com
@@ -848,6 +837,7 @@ payload:
   - +.aicleaner.shouji.360.cn
   - +.aim.yoyi.com.cn
   - +.aip.aiclk.com
+  - +.aiproinvestpolska.net
   - +.aiseet.aa.atianqi.com
   - +.aivaylaco.com
   - +.aiwanma99.com
@@ -863,27 +853,18 @@ payload:
   - +.album-sg01a.ocloud.heytapmobi.com
   - +.alert.autohome.com.cn
   - +.ali-ad.a.yximgs.com
-  - +.ali-adaptive.pull.yximgs.com
-  - +.ali-kmpaudio.pull.yximgs.com
-  - +.ali-kmplive.pull.yximgs.com
-  - +.ali-livemate.pull.yximgs.com
-  - +.ali-origin.pull.yximgs.com
   - +.ali-p2p-v2.pull.yximgs.com
   - +.ali-p2p.pull.yximgs.com
-  - +.ali-pclivemate.pull.yximgs.com
-  - +.ali-proxy.pull.yximgs.com
   - +.ali-rwk.pull.etoote.com
   - +.ali-web-player-tracker.biliapi.net
-  - +.ali.pull.yximgs.com
   - +.ali2.a.yximgs.com
+  - +.alicmmov.a.etoote.com
   - +.aligtr026.mmstat.com
   - +.aligtr072.mmstat.com
   - +.alimama.alicdn.com
   - +.alime-pic.oss-cn-hangzhou.aliyuncs.com
-  - +.alimelog.taobao.com
   - +.alipaylog.com
   - +.alitui.weibo.com
-  - +.alivc-aio.cn-hangzhou.log.aliyuncs.com
   - +.all.cnzz.com.danuoyi.tbcache.com
   - +.allcars.cn
   - +.alliance-adreq-asia.vivoglobal.com
@@ -902,7 +883,6 @@ payload:
   - +.amplitude.photoroom.com
   - +.amps.yoyi.com.cn
   - +.amradmin.5173.com
-  - +.an-tonghuashun.com.cn
   - +.analy.qq.com
   - +.analy.tuniu.cn
   - +.analyse.weather.com.cn
@@ -922,7 +902,6 @@ payload:
   - +.analytics.95516.com.wscdns.com
   - +.analytics.afirstsoft.cn
   - +.analytics.apps.seabroadnet.com
-  - +.analytics.bytescm.com
   - +.analytics.cherry-ai.com
   - +.analytics.cnblogs.com
   - +.analytics.dealmoon.com
@@ -943,7 +922,6 @@ payload:
   - +.analytics.pushgrid.net
   - +.analytics.shop.hisense.com
   - +.analytics.sixt.cn
-  - +.analytics.snssdk.com
   - +.analytics.sve.cc
   - +.analytics.tv189.cn
   - +.analytics.umetrip.com
@@ -965,7 +943,6 @@ payload:
   - +.answers.teradata.com.cn
   - +.antivirus.baidu.com
   - +.anysdk.com
-  - +.anythinktech.com
   - +.aofeida.com
   - +.aoqinglv.cn
   - +.ap.dongdianqiu.com
@@ -977,7 +954,6 @@ payload:
   - +.apd-pcdnwxnat.teg.tencent-cloud.net
   - +.apd-pcdnwxstat.teg.tencent-cloud.net
   - +.api-4know-em.hismarttv.com
-  - +.api-access.pangolin-sdk-toutiao-b.com
   - +.api-access.pangolin-sdk-toutiao-b.com.bytedns1.com
   - +.api-access.pangolin-sdk-toutiao-b.com.queniuyk.com
   - +.api-access.pangolin-sdk-toutiao-b.com.w.cdngslb.com
@@ -991,7 +967,6 @@ payload:
   - +.api-access.pangolin-sdk-toutiao2.com
   - +.api-access.pangolin-sdk-toutiao3.com
   - +.api-access.pangolin-sdk-toutiao4.com
-  - +.api-ad-adapter-mb.wps.com
   - +.api-ad-adapter-sg.wps.com
   - +.api-ad-adapter.wps.com
   - +.api-ad-callback.falconnet.app
@@ -1005,9 +980,11 @@ payload:
   - +.api-analytics.zepp.com
   - +.api-auth.flysleep.cn
   - +.api-auth.zztfly.com
+  - +.api-c.dutils.com
   - +.api-c.hiaiabc.com
   - +.api-cfg.8ziben.com
   - +.api-cn.cdo.heytapmobi.com
+  - +.api-d.dutils.com
   - +.api-d.hiaiabc.com
   - +.api-data-collection.insta360.cn
   - +.api-df.hiaiabc.com
@@ -1039,7 +1016,6 @@ payload:
   - +.api-p4.mobsurl.com
   - +.api-p4.yksdks.com
   - +.api-push.meizu.com
-  - +.api-user.dalyfeds.com
   - +.api-verify.hiaiabc.com
   - +.api-z.weidian.com
   - +.api-zhibo.qtfm.cn
@@ -1052,7 +1028,7 @@ payload:
   - +.api.afdback.ppsimg.com
   - +.api.aiclk.com
   - +.api.antibanads.com
-  - +.api.appsflyer.com
+  - +.api.anythinktech.com
   - +.api.aurogon.intl.miui.com
   - +.api.banyunjuhe.com
   - +.api.bbs.miui.com
@@ -1094,7 +1070,6 @@ payload:
   - +.api.quminglemei.com
   - +.api.qvpublish.com
   - +.api.revenuads.com
-  - +.api.rqmob.com
   - +.api.sec.intl.miui.com
   - +.api.segment.io
   - +.api.setting.intl.miui.com
@@ -1112,7 +1087,6 @@ payload:
   - +.api.xmpush.xiaomi.com
   - +.api.yellow-river.cn
   - +.api.youngle.site
-  - +.api2.appsflyer.com
   - +.api2.deepinstall.com
   - +.api5-normal-quic-lf.ixigua.com
   - +.apidns.kwd.inkuai.com
@@ -1123,6 +1097,7 @@ payload:
   - +.apishow.babybus.com
   - +.apishowstats.babybus.com
   - +.apiv4-iyes.youku.com
+  - +.apiv4.anythinktech.com
   - +.apiwmda.58.com.cn
   - +.apiyd.my91app.com
   - +.apkevery.com
@@ -1154,7 +1129,6 @@ payload:
   - +.app.aflink.com
   - +.app.aishuttler.com
   - +.app.aplus.pptv.com
-  - +.app.appsflyer.com
   - +.app.log.nf.migu.cn
   - +.app.miui.com
   - +.app.moji001.com
@@ -1166,7 +1140,6 @@ payload:
   - +.appadapi.ihuman.com
   - +.appc.baidu.com
   - +.appcfg.v.qq.com
-  - +.appconf.mail.163.com
   - +.appdriver.cn
   - +.appgiftwall.oss-us-west-1.aliyuncs.com
   - +.apple.www.letv.com
@@ -1185,11 +1158,12 @@ payload:
   - +.apppromoteapi.babybus.com
   - +.apppush.xiaohongshu.com
   - +.appres.camera360.com
-  - +.apps.bytesfield-b.com
   - +.apps.bytesfield.com
   - +.apps.oceanengine.com
   - +.apps5.oingo.com
   - +.appsdt.com
+  - +.appsflyer.com
+  - +.appsflyersdk.com
   - +.appstore.cdn.pandora.xiaomi.com
   - +.appstore.pandora.xiaomi.com
   - +.appsupport.qq.com
@@ -1198,8 +1172,6 @@ payload:
   - +.aqc.gucheng.com
   - +.aries.mzres.com
   - +.ark.letv.com
-  - +.arm.z74d.cn
-  - +.arm.z74d.com
   - +.arpun.com
   - +.arthur.oceanengine.com
   - +.as-datareceiver.aki-game.net
@@ -1257,7 +1229,6 @@ payload:
   - +.atm.yoyi.com.cn
   - +.ato.tooopen.com
   - +.atom-log.3.cn
-  - +.attr.appsflyer.com
   - +.attribuly.com
   - +.au.ff.avast.sec.miui.com
   - +.audid-api-sg.taobao.com
@@ -1293,12 +1264,14 @@ payload:
   - +.b.appjiagu.com
   - +.b.kouke5.com
   - +.b.qchannel01.cn
+  - +.b.qchannel03.cn
   - +.b.smartvideo.youku.com
   - +.b.unjs.com
   - +.b1-data.ads.heytapmobi.com
   - +.b1.b2b168.com
   - +.b1.b2b168.net
   - +.b2-data.ads.heytapmobi.com
+  - +.b2.qchannel03.cn
   - +.b4641y3dw.com
   - +.b48411138-0326-4a61-9b6e-51b0d590d944.edgeone.dev
   - +.b73223085-49c6-4dca-a2f1-4722014079bf-dpcj8stbzfif.edgeone.dev
@@ -1306,7 +1279,6 @@ payload:
   - +.b73223085-49c6-4dca-a2f1-4722014079fb-dpi4fgipupcs.edgeone.dev
   - +.b74364238-d49c-4f21-a234-d47e9697ee92-dpowf5bnj9al.edgeone.dev
   - +.b8b4ix7bj.com
-  - +.bact.cpc.heytapmobi.com
   - +.badjs.qq.com
   - +.badjs.weixinbridge.com
   - +.baichuan-sdk.alicdn.com
@@ -1321,7 +1293,6 @@ payload:
   - +.baltic-pipe.net
   - +.baminw.com.cn
   - +.banana.le.com
-  - +.banners.appsflyer.com
   - +.bar.baidu.com
   - +.baycode.cn
   - +.bayescom.com
@@ -1331,20 +1302,14 @@ payload:
   - +.bce-track-dsp.adwangmai.com
   - +.bchina-1.xsfaya.com
   - +.bcomniture.focus.de
-  - +.bd-adaptive.pull.yximgs.com
   - +.bd-js1.2345.com
-  - +.bd-livemate.pull.yximgs.com
-  - +.bd-origin.pull.yximgs.com
   - +.bd-p2p-v2.pull.yximgs.com
   - +.bd-p2p.pull.yximgs.com
-  - +.bd-pclivemate.pull.yximgs.com
-  - +.bd-proxy.pull.yximgs.com
   - +.bd-retrieval1.2345.com
   - +.bd-rwk.pull.etoote.com
   - +.bd-s.baixing.net
   - +.bd.czxuexi.com
   - +.bd.hd.sohu.com
-  - +.bd.pull.yximgs.com
   - +.bd.watu.cn
   - +.bd1.click.com.cn
   - +.bd1.flfgw.cn
@@ -1365,6 +1330,8 @@ payload:
   - +.bdapi.ads.oppomobile.com
   - +.bdasd.chdbook.cn
   - +.bdcdncnc.inter.71edge.com
+  - +.bdcm.a.etoote.com
+  - +.bdcmmov.a.etoote.com
   - +.bdcode.2345.com
   - +.bdcode.35d1.com
   - +.bdcode.qinglue.com
@@ -1372,6 +1339,7 @@ payload:
   - +.bdjs.daziba.cn
   - +.bdjs.guangyuanol.cn
   - +.bdjs.uimg.cn
+  - +.bdloc.qchannel03.cn
   - +.bdlog.tanx.com
   - +.bdm.ye-su.cn
   - +.bdmjs.xywy.com
@@ -1418,6 +1386,7 @@ payload:
   - +.bianxian.com
   - +.bianxianmao.com
   - +.bid-adx.bjqiyue.com.cn
+  - +.bid.hs.lingjuad.com
   - +.bid.luciabid.com
   - +.bidder.dsp.outfit7.com
   - +.biddingx.com
@@ -1425,14 +1394,13 @@ payload:
   - +.bigwww.com
   - +.bihaipack.com
   - +.bill.agent.56.com
-  - +.billboard.allsaints.top
   - +.birdgesdk.com
   - +.bitradex-polska.com
-  - +.biz.appsflyer.com
   - +.biz.gexing.com
   - +.biz.live.xunlei.com
   - +.biz.weibo.com
   - +.biz5.sandai.net
+  - +.bj.qchannel03.cn
   - +.bjfesdk.douyucdn.cn
   - +.bjmantis.net
   - +.bjvvqu.cn
@@ -1467,7 +1435,6 @@ payload:
   - +.brc2.aigrammar.net
   - +.bridgeoos.com
   - +.bro.flyme.cn
-  - +.broadcast.chat.bilibili.com
   - +.browser.sentry-cdn.com
   - +.browsercfg-drcn.cloud.dbankcloud.cn
   - +.browsercfg-drcn.cloud.dbankcloud.com
@@ -1485,7 +1452,6 @@ payload:
   - +.bsrv.qq.com
   - +.bss.pandora.xiaomi.com
   - +.bswsmlp.cn
-  - +.bsync3-normal-lq.zijieapi.com
   - +.bt1.patexplorer.com
   - +.btrace.qq.com
   - +.btrace.video.qq.com
@@ -1496,7 +1462,6 @@ payload:
   - +.bugly.qq.com
   - +.bun1.dayi.org.cn
   - +.business-ad.cdn-go.cn
-  - +.business-syh-cdn.2345ii.com
   - +.business.oceanengine.com
   - +.busuanzi.ibruce.info
   - +.bvafrgmentumioter-dpun22ih62e8.edgeone.dev
@@ -1508,7 +1473,6 @@ payload:
   - +.byyz.cn
   - +.bzclk.baidu.com
   - +.c-adash.m.taobao.com
-  - +.c-adx.2345.com
   - +.c-nfa.jd.com
   - +.c-w-s.applk.cn
   - +.c-w.applk.cn
@@ -1528,7 +1492,6 @@ payload:
   - +.c81.ipanocloud.com
   - +.ca.yangshengtv.com
   - +.cache-verify.hiaiabc.com
-  - +.cache.gaode.com
   - +.caclick.baidu.com
   - +.cad.youku.com
   - +.cal.meizu.com
@@ -1575,15 +1538,15 @@ payload:
   - +.cdn-exp-sg-recommend.pt.xiaomi.com
   - +.cdn-new-ad.wtzw.com
   - +.cdn-plugin-sync-upgrade-juui.hismarttv.com
-  - +.cdn-settings.appsflyersdk.com
+  - +.cdn.7nsc.cn
   - +.cdn.ad.xelements.cn
   - +.cdn.aiclk.com
   - +.cdn.aiyituo.com
   - +.cdn.appads.com
-  - +.cdn.appsflyer.com
   - +.cdn.banyunjuhe.com
   - +.cdn.exp.xiaomi.com
   - +.cdn.fds.api.xiaomi.com
+  - +.cdn.file6.goodid.com
   - +.cdn.haocaa.com
   - +.cdn.iads.unitychina.cn
   - +.cdn.lakdc.top
@@ -1594,7 +1557,6 @@ payload:
   - +.cdn.xianliao.me
   - +.cdn.ynuf.aliapp.org
   - +.cdn2.moji002.com
-  - +.cdnappicons.appsflyer.com
   - +.cdnlog.zhenai.com
   - +.cdnmaster.cn
   - +.cdnmaster.com
@@ -1627,7 +1589,6 @@ payload:
   - +.check02.51y5.net
   - +.cherry.le.com
   - +.chinaapper.com
-  - +.chinaqa.appsflyer.com
   - +.chineseinla.com
   - +.chiq-cloud.com
   - +.cholo215.cn
@@ -1667,7 +1628,6 @@ payload:
   - +.clickn.fang.com
   - +.clickserver.googleads.com
   - +.client-api.ele.me
-  - +.client-upload.cn-shanghai.log.aliyuncs.com
   - +.client.mail.163.com
   - +.clientlog.music.163.com
   - +.clientlog3.music.163.com
@@ -1682,7 +1642,6 @@ payload:
   - +.cloudconf.fengkongcloud.com
   - +.cloudservice14.kingsoft-office-service.com
   - +.cloudservice24.kingsoft-office-service.com
-  - +.club.bilibili.com
   - +.clue.oceanengine.com
   - +.cm.baidu.com
   - +.cm.jd.com
@@ -1696,6 +1655,10 @@ payload:
   - +.cms.tanx.com
   - +.cms.ucweb.com
   - +.cmx.autohome.com.cn
+  - +.cn-api-sec.anythinktech.com
+  - +.cn-api.anythinktech.com
+  - +.cn-da.anythinktech.com
+  - +.cn-tk.anythinktech.com
   - +.cn1-bid.adsrvr.cn
   - +.cn2-bid.adsrvr.cn
   - +.cn3-bid.adsrvr.cn
@@ -1704,12 +1667,12 @@ payload:
   - +.cname-asia-st-exappupgrade.vivoglobal.com
   - +.cname-in-apport-stsdk.vivoglobal.com
   - +.cname-in-bom01-nginxpool03.vivoglobal.com
+  - +.cname-in-ctdbonrt-stsdk.vivoglobal.com
   - +.cname-sin01-stsdk09.vivoglobal.com
   - +.cnuspider.yuanshen.com
   - +.cnzz.cn
   - +.cnzz.com
   - +.cnzz.mmstat.com
-  - +.co-domaincfg.vivoglobal.com
   - +.co-romsp-unifyconfig.vivoglobal.com
   - +.co-st-sl.vivoglobal.com
   - +.co-timesync.vivoglobal.com
@@ -1732,7 +1695,6 @@ payload:
   - +.collector2c.zhihuishu.com
   - +.com.yxcorp.gifshow.ad
   - +.com.yxcorp.gifshow.map
-  - +.comfylink.com
   - +.commdata.v.qq.com
   - +.commondata.oss-cn-hangzhou.aliyuncs.com
   - +.conf-cn.dc.heytapmobi.com
@@ -1753,8 +1715,6 @@ payload:
   - +.consult.oceanengine.com
   - +.content-understand-strategy.sm.cn
   - +.conv.youdao.com
-  - +.conversions.appsflyer.com
-  - +.conversions.appsflyersdk.com
   - +.conyz.cn
   - +.coocaatv.com
   - +.cookies.joneslanglasalle.com.cn
@@ -1802,6 +1762,7 @@ payload:
   - +.crash2.zhihu.com
   - +.crasheye.cn
   - +.crashlytics.163.com
+  - +.crashlytics.com
   - +.crashlyticsreports-pa.googleapis.com
   - +.crbug.com
   - +.cre.dp.sina.cn
@@ -1810,7 +1771,6 @@ payload:
   - +.crf999.cn
   - +.crosspromotion.weplayer.cc
   - +.crs.baidu.com
-  - +.cs-feige.iqiyi.com
   - +.cs02-pps-drcn.dbankcdn.com
   - +.csaimall.com
   - +.csbew.com
@@ -1826,11 +1786,8 @@ payload:
   - +.ctrmi.com
   - +.ctv-ads.api.leiniao.com
   - +.cuqpi.cn
-  - +.customlinks.appsflyer.com
   - +.cv3qb5813.com
   - +.cvda.17173.com
-  - +.cvhcs0-cdn-settings.appsflyersdk.com
-  - +.cvhcs0-launches.appsflyersdk.com
   - +.cyberpolice.mps.gov.cn
   - +.cyhbrjf.cn
   - +.cyq8vqq9s.com
@@ -1841,8 +1798,8 @@ payload:
   - +.d.g.mi.com
   - +.d.kugou.com
   - +.d.qchannel01.cn
+  - +.d.qchannel03.cn
   - +.d.toutiao.com
-  - +.d.url.cn
   - +.d.wanyouxi7.com
   - +.d.yoyi.com.cn
   - +.d0.sina.com.cn
@@ -1871,6 +1828,8 @@ payload:
   - +.d8.sina.com.cn
   - +.d8.sinaimg.cn
   - +.d9.sina.com.cn
+  - +.da.anythinktech.com
+  - +.da.mmarket.com
   - +.da.netease.com
   - +.daccp.cn
   - +.dadcc.cn
@@ -1881,6 +1840,7 @@ payload:
   - +.daima.ijq.tv
   - +.daima.yggk.net
   - +.daliantong.com.cn
+  - +.damax.anythinktech.com
   - +.daoyoudao.com
   - +.daraz.com
   - +.darren01.oss-cn-beijing.aliyuncs.com
@@ -1899,7 +1859,6 @@ payload:
   - +.data.ajo-dev.srv.smart.com
   - +.data.ajo-stage.notifications.future.smart.com
   - +.data.ajo-stage.srv.smart.com
-  - +.data.bilibili.cn
   - +.data.chsmarttv.com
   - +.data.dev-notifications.future.smart.com
   - +.data.game.xiaomi.com
@@ -1927,6 +1886,7 @@ payload:
   - +.datamaster.com.cn
   - +.datarangers-event.myrightone.com
   - +.datas.tianqistatic.com
+  - +.datk.anythinktech.com
   - +.datk.toponadss.com
   - +.dazhantai.com
   - +.db8b41ie5.com
@@ -1972,6 +1932,7 @@ payload:
   - +.dhfs-id.heytapimage.com
   - +.dhfs-in.heytapimage.com
   - +.dhfs-my.heytapimage.com
+  - +.dhlpaketzustellung.xjili99.vip
   - +.dianru.com
   - +.dianying-1304791696.cos.ap-shanghai.myqcloud.com
   - +.dig.lianjia.com
@@ -2038,7 +1999,6 @@ payload:
   - +.dnyzbp.cn
   - +.do-global.com
   - +.doc.tingyun.com
-  - +.docerad.wps.cn
   - +.doglobal.net
   - +.dogo.intel.cn
   - +.doh.iqiyi.com
@@ -2063,6 +2023,7 @@ payload:
   - +.down.apps.sina.cn
   - +.down.fwqlt.com
   - +.down.nishuoa.com
+  - +.down.qqfarmer.com.cn
   - +.download.56.com
   - +.download.bav.baidu.com
   - +.download.caihong.com
@@ -2121,7 +2082,6 @@ payload:
   - +.duologinsupersdk.ewan.cn
   - +.duomai.com
   - +.duomeng.cn
-  - +.dutils.com
   - +.dv.amtwcvh.cn
   - +.dvb.pandora.xiaomi.com
   - +.dvs.china.com
@@ -2143,6 +2103,7 @@ payload:
   - +.e-goblin.hupu.com
   - +.e-stat.huya.com
   - +.e-u1.ubixioe.com
+  - +.e.api.adwanji.com
   - +.e.baidu.com
   - +.e.kuaishou.cn
   - +.e.kuaishou.com
@@ -2185,7 +2146,6 @@ payload:
   - +.eheb8.cn
   - +.eiv.baidu.com
   - +.ekdky.cn
-  - +.ekiison.com
   - +.ekpsn3kja.com
   - +.electronics.edm.globalsources.com
   - +.electronics.tradeshow.globalsources.com
@@ -2194,7 +2154,6 @@ payload:
   - +.elq.mouser.cn
   - +.em.baidu.com
   - +.email-ap.joneslanglasalle.com.cn
-  - +.email.appsflyer.com
   - +.emarketing.sina.com.cn
   - +.emdcadvertise.eastmoney.com
   - +.emjs.mkzhan.com
@@ -2235,7 +2194,6 @@ payload:
   - +.etoolads.cn
   - +.etoolads.cn.com
   - +.etoolads.com
-  - +.eu-cota.vivoglobal.com
   - +.eu-datareceiver.aki-game.net
   - +.eu-domaincfg.vivoglobal.com
   - +.eu-errup.vivoglobal.com
@@ -2276,7 +2234,6 @@ payload:
   - +.events-dre.op.dbankcloud.com
   - +.events-drru.op.dbankcloud.ru
   - +.events.8ziben.com
-  - +.events.appsflyer.com
   - +.events.baicizhan.com
   - +.ewrrpuquc1.com
   - +.ex-adreq-asia.vivoglobal.com
@@ -2316,9 +2273,10 @@ payload:
   - +.fc-feed.cdn.bcebos.com
   - +.fc.3dmgame.com
   - +.fc.gaizong.cn
-  - +.fcard.api.moji.com
   - +.fclick.baidu.com
   - +.fclog.baidu.com
+  - +.fd.qchannel03.cn
+  - +.fd2.qchannel03.cn
   - +.fdfda.zhuzhai.com
   - +.fdhvczd.cn
   - +.fdkss.sbs
@@ -2351,8 +2309,8 @@ payload:
   - +.filex.51y5.net
   - +.findapi.micloud.xiaomi.net
   - +.fingerprint-upload.hellobike.com
-  - +.firebase-settings.crashlytics.com
-  - +.firsecuckoo.com
+  - +.firebaselogging-pa.googleapis.com
+  - +.firebaselogging.googleapis.com
   - +.first-hufu.oss-cn-shanghai.aliyuncs.com
   - +.fishingstore.club
   - +.fiu07050kl.com
@@ -2405,16 +2363,15 @@ payload:
   - +.frp8r3le9c.com
   - +.fs.cl2009.com
   - +.fsr.lenovomm.com
+  - +.ftp.qchannel03.cn
   - +.ftwo-feedback.autohome.com.cn
   - +.ftwo-receiver.autohome.com.cn
   - +.fucnm.com
   - +.fugetech.com
   - +.fujincenter.com
   - +.fumiad.dxys.pro
-  - +.funlinkads.com
   - +.fusion.qq.com
   - +.fuwu.oceanengine.com
-  - +.fvalid.appsflyer.com
   - +.fw.qq.com
   - +.fwmbjrl.cn
   - +.fx455rrt4b.com
@@ -2456,7 +2413,6 @@ payload:
   - +.game.weibo.cn
   - +.gameanalytics.com
   - +.ganjituiguang.ganji.com
-  - +.gaoneng.bilibili.com
   - +.gaoshouyou.com
   - +.garden-home.shop
   - +.garden-homes.shop
@@ -2469,20 +2425,15 @@ payload:
   - +.gatecollect.kugou.com
   - +.gator.volces.com
   - +.gb.corp.163.com
-  - +.gcdsdk.appsflyer.com
-  - +.gcdsdk.appsflyersdk.com
   - +.gdfp.gifshow.com
   - +.gdl.i9dhjx.ru
+  - +.gdloc.qchannel03.cn
+  - +.gdloc2.qchannel03.cn
   - +.gdt.qq.com
   - +.gdtimg.com
-  - +.gecko-hl.snssdk.com
-  - +.gecko-lq.snssdk.com
   - +.gecko.snssdk.com
-  - +.gecko.zijieapi.com
   - +.gecko3-lf.zijieapi.com
-  - +.gecko3-lq.zijieapi.com
   - +.gecko5-lf.zijieapi.com
-  - +.gecko5-lq.zijieapi.com
   - +.gentian-frd.hjapi.com
   - +.geofence.sys.miui.com
   - +.gepush.com
@@ -2532,7 +2483,6 @@ payload:
   - +.gl0r6d2uyy.com
   - +.glaz-kapitonis.net
   - +.glitchtip.jgeek00.com
-  - +.gloaphoo.net
   - +.global-ad-extranet-pri-azams.alb.xiaomi.com
   - +.global-ad-extranet-pri-azpn.alb.xiaomi.com
   - +.global-ad-intl-pri-alisgp.alb.xiaomi.com
@@ -2546,7 +2496,6 @@ payload:
   - +.glwxw.net
   - +.gm.gds.mmstat.com
   - +.gma.alicdn.com
-  - +.go.appsflyer.com
   - +.go.bigo.tv
   - +.go.hangzhou.com.cn
   - +.go.mmstat.com
@@ -2559,6 +2508,7 @@ payload:
   - +.gofizjo.shop
   - +.goforandroid.com
   - +.gojunkclean.cn
+  - +.gokoton.shop
   - +.gokutahya.shop
   - +.goldbye.vicp.net
   - +.gonaoko.shop
@@ -2612,7 +2562,6 @@ payload:
   - +.gtcqbnu.cn
   - +.gtglobal.intl.miui.com
   - +.gtreus.aliexpress.com
-  - +.guanggao-prod.cn-shanghai.log.aliyuncs.com
   - +.guangzhuiyuan.com
   - +.guaranty.com.cn
   - +.guid.tpns.hk.tencent.com
@@ -2673,6 +2622,7 @@ payload:
   - +.hao.360.cn
   - +.hao222.com
   - +.haostat.qihoo.com
+  - +.hap.qchannel03.cn
   - +.hapying.com
   - +.hashnest.com
   - +.hb-af-us-central1.outfit7.com
@@ -2756,9 +2706,8 @@ payload:
   - +.hpplay.cdn.cibn.cc
   - +.hpplay.cn
   - +.hpplay.com.cn
-  - +.hq.appsflyer.com
-  - +.hq1.appsflyer.com
   - +.hs.178yc.com
+  - +.hseda.com
   - +.hsrgnac.cn
   - +.hsych.com
   - +.htrace.wetvinfo.com
@@ -2848,6 +2797,7 @@ payload:
   - +.i.hao61.net
   - +.i.pokerbros.net
   - +.i.popincdn.com
+  - +.i.qchannel03.cn
   - +.i.snssdk.com
   - +.i0.letvimg.com
   - +.i1.go2yd.com
@@ -2861,15 +2811,14 @@ payload:
   - +.iadmusicpic.music.126.net
   - +.iadsdk.apple.com
   - +.iadsdk.qtlcdn.com
-  - +.ib.snssdk.com.edgekey.net
   - +.ibozys.cn
   - +.ic.ksosoft.com
-  - +.ichannel.snssdk.com
   - +.ichc1.xinglinpukang.com
   - +.iconpark.oceanengine.com
   - +.icosa-sg.coloros.com
   - +.icota-eu.coloros.com
   - +.id-third-appstore.vivoglobal.com
+  - +.id6.me
   - +.idm-su.baidu.com
   - +.idm.api.autohome.com.cn
   - +.idm.iot.mi.com
@@ -2915,8 +2864,6 @@ payload:
   - +.images8.gaotie.cn
   - +.imageter.com
   - +.imap.tingyun.com
-  - +.imapi2.snssdk.com
-  - +.imapi5-oth-lq.zijieapi.com
   - +.imediacodec.com
   - +.img-c.heytapimage.com
   - +.img-x.jd.com
@@ -2926,6 +2873,7 @@ payload:
   - +.img.adprod.cn
   - +.img.alibaba.com
   - +.img.alimama.cn
+  - +.img.anythinktech.com
   - +.img.dubyc.com
   - +.img.easypass.cn
   - +.img.ferlie.net
@@ -2949,7 +2897,6 @@ payload:
   - +.imlb2c.com
   - +.immob.cn
   - +.imp-cdp.yoyi.com.cn
-  - +.imp-toutiao-data.37.com.cn
   - +.imp.ad.xelements.cn
   - +.imp.ads.rgyun.com
   - +.imp.go.sohu.com
@@ -2957,8 +2904,6 @@ payload:
   - +.imp.yoyi.com.cn
   - +.imp.zol.com.cn
   - +.impdsp.meituan.com
-  - +.impression.appsflyer.com
-  - +.impression.biligame.com
   - +.in-ad-mkt-vivofs.vivoglobal.com
   - +.in-adlog.vivoglobal.com
   - +.in-adreq.vivoglobal.com
@@ -2994,8 +2939,6 @@ payload:
   - +.in.tv.global.mi.com
   - +.in.vipliangmei.com
   - +.inad.com
-  - +.inapps.appsflyer.com
-  - +.inapps.appsflyersdk.com
   - +.indoeasia.edm.globalsources.com
   - +.inf.miui.com
   - +.info.3g.qq.com
@@ -3045,6 +2988,7 @@ payload:
   - +.ipinyou.com
   - +.ipinyou.com.cn
   - +.iplogger.cn
+  - +.ipt.qchannel03.cn
   - +.ipv4.kkmh.com
   - +.ipv4.music.163.com
   - +.ir-sdk.dun.163.com
@@ -3056,18 +3000,12 @@ payload:
   - +.irs01.com
   - +.irs03.com
   - +.irurng.wondershare.jp
-  - +.is-lq.snssdk.com
-  - +.is.snssdk.com.queniukw.com
   - +.is16yobjh7.com
   - +.iscrv.com
   - +.ispl.mps.gov.cn
-  - +.isub.snssdk.com
-  - +.isub.snssdk.com.bytedns.net
-  - +.it.snssdk.com.edgekey.net
   - +.itsdata.map.baidu.com
   - +.itv.hexun.com
   - +.ityangstudy.cn
-  - +.iu.snssdk.com.edgekey.net
   - +.ivqtrjt.cn
   - +.ivy.pconline.com.cn
   - +.iwan-s.video.qq.com
@@ -3094,6 +3032,7 @@ payload:
   - +.jdpm.net.cn
   - +.jebe.renren.com
   - +.jesgoo.com
+  - +.jhzfwl.cn
   - +.jiankongbao.com
   - +.jiaoben.ganji.cn
   - +.jiaopei.com
@@ -3143,7 +3082,7 @@ payload:
   - +.js.yjbys.com
   - +.js1.dadiniu.cn
   - +.jsb.qianzhan.com
-  - +.jsb.zijieapi.com
+  - +.jscmmov.a.etoote.com
   - +.jscode.acg68.com
   - +.jsebmcv.cn
   - +.jsing.net
@@ -3188,7 +3127,6 @@ payload:
   - +.jzclick.soso.com
   - +.jzdwl4.cn
   - +.jzt.jd.com
-  - +.jzts.cmpassport.com
   - +.k1.wanwenwan.cn
   - +.k2n0f.cn
   - +.k69wes8q8.com
@@ -3233,13 +3171,8 @@ payload:
   - +.kqg8jh8rk.com
   - +.krakow-rynowekta-bot.net
   - +.krakowrynowektabot.net
-  - +.ks-adaptive.pull.yximgs.com
-  - +.ks-livemate.pull.yximgs.com
-  - +.ks-origin.pull.yximgs.com
   - +.ks-p2p-v2.pull.yximgs.com
   - +.ks-p2p.pull.yximgs.com
-  - +.ks-pclivemate.pull.yximgs.com
-  - +.ks-proxy.pull.yximgs.com
   - +.ks.ferlytc.com
   - +.ks.pull.yximgs.com
   - +.kstj.baidu.com
@@ -3248,6 +3181,7 @@ payload:
   - +.kuaishang.cn
   - +.kuaishang.com.cn
   - +.kuaishouad.cn
+  - +.kuanxin.top
   - +.kuheju.com
   - +.kunpeng-sc.csdnimg.cn
   - +.kunpeng.csdn.net
@@ -3256,6 +3190,7 @@ payload:
   - +.kuxkddg.cn
   - +.kuyun.com
   - +.kvxc7buwv3.com
+  - +.kw.qchannel03.cn
   - +.kwdgudw.cn
   - +.kwflvcdn.000dn.com
   - +.kwmsg.kuwo.cn
@@ -3275,8 +3210,6 @@ payload:
   - +.lady177.com
   - +.landing.domobcdn.com
   - +.laomaotao.net
-  - +.launches.appsflyer.com
-  - +.launches.appsflyersdk.com
   - +.lbprjdi.cn
   - +.lccfjszp.cn
   - +.lcd.aivote.com
@@ -3288,7 +3221,6 @@ payload:
   - +.leabd.douguo.com
   - +.leads.baidu.com
   - +.leads.oceanengine.com
-  - +.learn.appsflyer.com
   - +.learnwithnahid.com
   - +.lejuliang.com
   - +.lekkirendovikai.com
@@ -3298,18 +3230,9 @@ payload:
   - +.leshu.com
   - +.lexoralegalpl.com
   - +.lf-ad-ies.bytecdn.cn
-  - +.lf-cdn-tos.bytescm.com
   - +.lf-event-manager.oceanengine.com
-  - +.lf1-cdn-tos.bytegoofy.com
-  - +.lf3-cdn-tos.bytegecko.com
-  - +.lf3-orange.byteorge.com
-  - +.lf6-cdn-tos.bytegecko.com
-  - +.lf6-orange.byteorge.com
-  - +.lf9-cdn-tos.bytegecko.com
-  - +.lf9-orange.byteorge.com
   - +.lhippac.cn
   - +.lianmeng.360.cn
-  - +.lianmengapi.snssdk.com
   - +.lianwangtech.com
   - +.libaishuo.com
   - +.libs.baidu.com
@@ -3321,7 +3244,6 @@ payload:
   - +.line1-log.biligame.net
   - +.line3-adscore-api.biligame.net
   - +.lingd.cn
-  - +.lingjuad.com
   - +.link.guoqi365.com
   - +.link.heycloudy.co
   - +.link.infineon.cn
@@ -3331,7 +3253,6 @@ payload:
   - +.linkhaitao.com
   - +.linktrace.diningcity.cn
   - +.list.z.qingting.fm
-  - +.listening-report.allsaints.top
   - +.litchiads.com
   - +.lite.a.market.xiaomi.com
   - +.live-api.immomo.com
@@ -3362,7 +3283,6 @@ payload:
   - +.log-api.cli.im
   - +.log-api.huxiu.com
   - +.log-api.oceanengine.com
-  - +.log-api.pangolin-sdk-toutiao-b.com
   - +.log-api.pangolin-sdk-toutiao-b.com.bytedns1.com
   - +.log-api.pangolin-sdk-toutiao.com.bytedns1.com
   - +.log-api.pangolin-sdk-toutiao.com.queniuyk.com
@@ -3389,9 +3309,9 @@ payload:
   - +.log-upload-os.mihoyo.com
   - +.log-upload-v6.mihoyo.com
   - +.log-verify.hiaiabc.com
-  - +.log-vip-ssl.xunlei.com
   - +.log.51changdu.com
   - +.log.aispeech.com
+  - +.log.aliyuncs.com
   - +.log.amemv.com
   - +.log.apk.v-mate.mobi
   - +.log.appstore3.huan.tv
@@ -3417,11 +3337,11 @@ payload:
   - +.log.music.baidu.com
   - +.log.nuomi.com
   - +.log.qchannel01.cn
+  - +.log.qchannel03.cn
   - +.log.qiniuapi.com
   - +.log.qookkagames.com
   - +.log.qvb.qcloud.com
   - +.log.sina.cn
-  - +.log.snssdk.com.bytedns.net
   - +.log.tbs.qq.com
   - +.log.tec73.com
   - +.log.tpns.gz2.tencent.com
@@ -3531,6 +3451,7 @@ payload:
   - +.lpmzt.cn
   - +.lrswl.com
   - +.lstat.youku.com
+  - +.lsttnews.com
   - +.luaqxb.rainso.com
   - +.luciochen.cn
   - +.ludashi.com
@@ -3549,7 +3470,6 @@ payload:
   - +.m-vali.cp31.ott.cibntv.net
   - +.m.91heima.cn
   - +.m.advast.cn
-  - +.m.appsflyer.com
   - +.m.ercos.cn
   - +.m.moomoo.com
   - +.m.mps.gov.cn
@@ -3573,8 +3493,6 @@ payload:
   - +.m5.66077.cn
   - +.ma-adx.ctrip.com
   - +.ma-api.yoyi.com.cn
-  - +.ma.zijieapi.com
-  - +.ma5-normal-lq.zijieapi.com
   - +.mad.ireader.com
   - +.madhouse.cn
   - +.mads.meituan.com
@@ -3591,7 +3509,6 @@ payload:
   - +.maoamao.myshoplaza.com
   - +.mapi.m.jd.com
   - +.mapping.yoyi.com.cn
-  - +.maps.testing.amap.com
   - +.mark.l.qq.com
   - +.market-ad.oss-accelerate.aliyuncs.com
   - +.market-ad.oss-cn-shenzhen.aliyuncs.com
@@ -3651,7 +3568,6 @@ payload:
   - +.member.tingyun.com
   - +.memelq.acs.org
   - +.mepodownload.mediatek.com
-  - +.mercury-sdk.snssdk.com
   - +.message.meitu.com
   - +.met2.hp.com
   - +.meta-transparency-appeal-form-471ed0d914a1.edgeone.dev
@@ -3715,7 +3631,6 @@ payload:
   - +.milink.pandora.xiaomi.com
   - +.million-api.aiclk.com
   - +.mimg.126.net
-  - +.mine.z74d.com
   - +.minfo.wps.cn
   - +.mini-prog-drm.vodplayvideo.net
   - +.mini.hao123.com
@@ -3772,7 +3687,6 @@ payload:
   - +.mobisage.cn
   - +.mobvista.com
   - +.mobwsa.ximalaya.com
-  - +.modeel-dpuxqwbcglha.edgeone.app
   - +.moduleanalysis.aliexpress.com
   - +.mon.ad.xelements.cn
   - +.mon.snssdk.com
@@ -3790,10 +3704,10 @@ payload:
   - +.monitor.adxsenmeng.com
   - +.monitor.music.qq.com
   - +.monitor.qq.com
-  - +.monitorsdk.appsflyer.com
   - +.monsetting.toutiao.com
   - +.moodoo.com.cn
   - +.moquanad.com
+  - +.mores.anythinktech.com
   - +.mos.adubest.com
   - +.mos.m.taobao.com
   - +.motsjnv.cn
@@ -3828,7 +3742,6 @@ payload:
   - +.mshow.fang.com
   - +.msite.baidu.com
   - +.mssdk-bu.bytedance.com
-  - +.mssdk-bu.snssdk.com
   - +.mssdk.bytedance.com
   - +.mssdk.volces.com
   - +.mssdk.zijieapi.com
@@ -3846,7 +3759,6 @@ payload:
   - +.mta.qq.com
   - +.mtj.baidu.com
   - +.mtrace.qq.com
-  - +.mtrace.ysp.cctv.cn
   - +.mtt.eve.mdt.qq.com
   - +.mtt.str.mdt.qq.com
   - +.multi-az-ad.kuaishou.cn
@@ -3891,6 +3803,7 @@ payload:
   - +.n--pan-eixe.xn--baidu-jm6h.com
   - +.n-st.vip.com
   - +.n.mark.letv.com
+  - +.n.qchannel03.cn
   - +.n.vs108.com
   - +.n.wifi188.com
   - +.n4d3ev3m1.com
@@ -3911,7 +3824,6 @@ payload:
   - +.nbsdk-baichuan.taobao.com
   - +.ndct-data.video.iqiyi.com
   - +.neptune-api.volces.com
-  - +.neptune-platform.zijieapi.com
   - +.net.daraz.pk
   - +.netapm.music.163.com
   - +.netstat.yunnan.cn
@@ -3964,7 +3876,6 @@ payload:
   - +.nsp-logservice-hiview-p07-dra.obs.ap-southeast-3.myhuaweicloud.com
   - +.nsp-logservice-hiview-p08-dra.obs.ap-southeast-3.myhuaweicloud.com
   - +.ny.lshdw.cc
-  - +.nztl.z74d.com
   - +.o.027eat.com
   - +.o.lenovo.com
   - +.o2o-ad-dev.oss-cn-shanghai.aliyuncs.com
@@ -3974,11 +3885,8 @@ payload:
   - +.oaclrst.cn
   - +.oadz.com
   - +.obsworks.com
-  - +.obus-cn.dc.heytapmobi.com
   - +.obus-config-cn.heytapmobi.com
   - +.obus-dc10-cn.heytapmobi.com
-  - +.obus-dc136101-cn.heytapmobi.com
-  - +.obus-dc2-cn.heytapmobi.com
   - +.obus-dc20058-cn.heytapmobi.com
   - +.obus-dc2007-cn.heytapmobi.com
   - +.obus-dc20123-cn.heytapmobi.com
@@ -3997,7 +3905,6 @@ payload:
   - +.oe-book.xdplt.com
   - +.offer.alibaba.com
   - +.offerstrack.net
-  - +.offfurreton.com
   - +.offie-wps.com.cn
   - +.ofkqiy.knowfashionstyle.com
   - +.og.mmstat.com
@@ -4032,12 +3939,10 @@ payload:
   - +.op.hihonorcloud.com
   - +.ope.tanx.com
   - +.opehs.tanx.com
-  - +.open-cms-api.quark.cn
   - +.open.kuaishouzt.com
   - +.open.kwaizt.com
   - +.open.oceanengine.com
   - +.open.snssdk.com
-  - +.open.snssdk.com.bytedns.net
   - +.openadapi.bjqiyue.com.cn
   - +.openapi-news.meizu.com
   - +.openapi.yoyi.com.cn
@@ -4051,7 +3956,6 @@ payload:
   - +.openrcv.baidu.com
   - +.opensdk.wlanbanlv.com
   - +.optimix.asia
-  - +.optimus-ads-ykx.amap.com
   - +.optimus-ads.amap.com
   - +.optimus-ads.amap.com.w.alikunlun.com
   - +.oqyiapj.cn
@@ -4069,7 +3973,6 @@ payload:
   - +.otme.cn
   - +.ott-v0-al.data.mgtv.com
   - +.ott.v1.data.mgtv.com
-  - +.ottl7-l2.pandora.xiaomi.com
   - +.oumax.oupeng.com
   - +.ouyaoxiazai.com
   - +.overlay.top
@@ -4091,8 +3994,6 @@ payload:
   - +.p0-adplatform-private.oceanengine.com
   - +.p0y.cn
   - +.p0yixb3wfv.com
-  - +.p1-dpa.byteimg.com
-  - +.p1-dy.bytexservice.com
   - +.p1-feedback.byteimg.com
   - +.p1.360soucha.com
   - +.p2-lm.adkwai.com
@@ -4111,25 +4012,18 @@ payload:
   - +.p3-ad-sign.byteimg.com.queniusy.com
   - +.p3-ad-sign.byteimg.com.w.kunluncan.com
   - +.p3-lm.adkwai.com
-  - +.p3-novel.byteimg.com
   - +.p3-tt.byteimg.com
-  - +.p3-webcast.douyinpic.com
   - +.p3.zbjimg.com
   - +.p33-ad.adkwai.com
   - +.p4psearch.china.alibaba.com
   - +.p6-ad-sign.byteimg.com
-  - +.p6-novel.byteimg.com
-  - +.p6-webcast.douyinpic.com
   - +.p66-ad.adkwai.com
-  - +.p66-ad.adkwai.com.3dce113f.cdnhwchcg02.com
   - +.p66-ad.adkwai.com.v1.kwaiselfcdn.com
   - +.p74ugyuur.com
   - +.p9-ad-sign.byteimg.com
-  - +.p9-webcast.douyinpic.com
   - +.paas-push-api-log.immomo.com
   - +.paas-push-api.immomo.com
   - +.package.box.xiaomi.com
-  - +.page.amap.com
   - +.page.xdplt.com
   - +.pagead-googlehosted.l.google.com
   - +.pagechoice.net
@@ -4142,7 +4036,6 @@ payload:
   - +.pangolin-sdk-toutiao.com
   - +.pangolin-sdk-toutiao1.com
   - +.pangolin.snssdk.com
-  - +.pangolin16.sgsnssdk.com
   - +.panplayable-toutiao-b.com
   - +.panplayable-toutiao.com
   - +.paopao-monitor.iqiyi.com
@@ -4247,7 +4140,6 @@ payload:
   - +.pmvlwjy.cn
   - +.pnrt-stsdk.vivo.com.cn
   - +.po.funshion.com
-  - +.polaris-sinfonlinea.zijieapi.com
   - +.polaris.zijieapi.com
   - +.polaris3-normal-hl.zijieapi.com
   - +.polaris3-normal-lf.zijieapi.com
@@ -4310,8 +4202,6 @@ payload:
   - +.pub.funshion.com
   - +.pub.se.360.cn
   - +.pubstr.acs.org
-  - +.puds.quark.cn
-  - +.pull-flv-l11.douyincdn.com
   - +.puma-api.iqiyi.com
   - +.puma-api.ptqy.gitv.tv
   - +.puma.api.iqiyi.com
@@ -4346,7 +4236,6 @@ payload:
   - +.pylon.micstatic.com
   - +.pyqqx.dcbxnc.cn
   - +.pzkrgcp.cn
-  - +.q.z74d.com
   - +.q0m9dkp5c.com
   - +.q1yv4669q6.com
   - +.q4173l5op.com
@@ -4355,7 +4244,6 @@ payload:
   - +.qawxpzm.cn
   - +.qbdsp.html5.qq.com
   - +.qc1.cheshipin.com
-  - +.qchannel03.cn
   - +.qchannel04.cn
   - +.qcloud-sg-datareceiver.kurogame.xyz
   - +.qcvf.ifeng.com
@@ -4405,6 +4293,7 @@ payload:
   - +.qujishu.com
   - +.qw2v.taoxiehui.cn
   - +.qwe0231141.bj.bcebos.com
+  - +.qy.qchannel03.cn
   - +.r-golsports.club
   - +.r.51wnl-cq.com
   - +.r.browser.miui.com
@@ -4415,7 +4304,6 @@ payload:
   - +.raffle-entry.info.smart.com
   - +.rainbow-prod-jdlog.ldoverseas.com
   - +.rankhit.china.com
-  - +.rawdata.appsflyer.com
   - +.rayjump.com
   - +.rbioclv.cn
   - +.rc.ie13.com
@@ -4434,7 +4322,6 @@ payload:
   - +.reachmax.cn
   - +.reader.meizu.com
   - +.reader.res.meizu.com
-  - +.reading-lq.snssdk.com
   - +.ready-to-g0u3yt-dp10u3ka993x.edgeone.dev
   - +.rec.xdplt.com
   - +.recommend-drcn.hms.dbankcloud.cn
@@ -4442,7 +4329,6 @@ payload:
   - +.redirect.simba.taobao.com
   - +.redlk.com
   - +.referee.xiaohongshu.com
-  - +.register.appsflyer.com
   - +.register.xmpush.global.xiaomi.com
   - +.reke.at.sohu.com
   - +.reksaidnslog.security.mihoyo.com
@@ -4517,7 +4403,6 @@ payload:
   - +.rpahyhn.cn
   - +.rpe.xdplt.com
   - +.rpen.xdplt.com
-  - +.rs.dalyfeds.com
   - +.rs.sinajs.cn
   - +.rs1.qq.com
   - +.rs2.qq.com
@@ -4578,6 +4463,7 @@ payload:
   - +.s.bdstatic.com
   - +.s.btime.com
   - +.s.c-ctrip.com
+  - +.s.funlinkads.com
   - +.s.lenovo.com
   - +.s.moatads.com
   - +.s.p.youku.com
@@ -4586,7 +4472,6 @@ payload:
   - +.s0p6s02x28.com
   - +.s1.hanlinzhijia.com
   - +.s1gr2198h.com
-  - +.s2s.appsflyer.com
   - +.s3.pfp.sina.net
   - +.s3a.pstatp.com
   - +.s4y6lhotaw.com
@@ -4609,7 +4494,6 @@ payload:
   - +.sanme2.lanzoux.com
   - +.sanme2.taisantech.com
   - +.sas.oceanengine.com
-  - +.saveu5-normal-lf.zijieapi.com
   - +.saveu5-normal-lq.zijieapi.com
   - +.sax.sina.cn
   - +.sax.sina.com.cn
@@ -4618,7 +4502,6 @@ payload:
   - +.sbbd1.qulishi.com
   - +.sbeacon.sina.com.cn
   - +.sbird.xyz
-  - +.sbkh5.z74d.com
   - +.sbldw.cn
   - +.sc-report.tantanapp.com
   - +.sc.shayugg.com
@@ -4637,7 +4520,6 @@ payload:
   - +.sd6hon.cn
   - +.sdapprecv.app.cntvwb.cn
   - +.sdd.hi1718.com
-  - +.sdfp.snssdk.com
   - +.sdhuawen.cn
   - +.sdk-ab-config-cdn.qquanquan.com
   - +.sdk-ab-config.aiclk.com
@@ -4653,9 +4535,7 @@ payload:
   - +.sdk-log.partner.sm.cn
   - +.sdk-os-static.hoyoverse.com
   - +.sdk-push.hiaiabc.com
-  - +.sdk-services.appsflyer.com
   - +.sdk-track.66mobi.com
-  - +.sdk.appsflyer.com
   - +.sdk.fliduo.cn
   - +.sdk.hzsanjiaomao.com
   - +.sdk.loveota.net
@@ -4675,6 +4555,7 @@ payload:
   - +.sdkapp.mobile.sina.cn
   - +.sdkclick.mobile.sina.cn
   - +.sdkconf.avlyun.com
+  - +.sdkconf.hs.lingjuad.com
   - +.sdkconfig.ad.global.xiaomi.com
   - +.sdkconfig.ad.india.xiaomi.com
   - +.sdkconfig.ad.intl.xiaomi.com
@@ -4697,7 +4578,6 @@ payload:
   - +.security-hl.snssdk.com
   - +.security-lq.snssdk.com
   - +.security.browser.miui.com
-  - +.security.snssdk.com
   - +.seeder.igetget.com
   - +.seiya.tantanapp.com
   - +.sellfox.com
@@ -4723,12 +4603,9 @@ payload:
   - +.service.changhong.upgrade2.huan.tv
   - +.service.vmos.cn
   - +.servicecut.meizu.com
-  - +.services.appsflyer.com
   - +.sestat.baidu.com
   - +.settings.ttwebview.com
-  - +.sf-tb-sg.ibytedtos.com
   - +.sf3-fe-tos.pglstatp-toutiao.com.queniuuf.com
-  - +.sf6-amtos-cdn.bytesmanager.com
   - +.sfsafsadfjbbj-dsafjnb-1321533417.cos.ap-beijing.myqcloud.com
   - +.sg-cfg-stsdk.vivoglobal.com
   - +.sg-log-emagzal.lazada.com
@@ -4751,9 +4628,7 @@ payload:
   - +.shilian168.cn
   - +.shipin.tingyun.com
   - +.shoppingbox.com
-  - +.shoppingday.allsaints.top
   - +.show-api.qquanquan.com
-  - +.show-api.qquanquan.com.home
   - +.show-msgch.qq.com
   - +.show.ssports.com
   - +.show.worldcrm.cn
@@ -4782,10 +4657,10 @@ payload:
   - +.sjarvis.taobao.com
   - +.sjh.baidu.com
   - +.sjoy7rq.cn
-  - +.skadsdk.appsflyer.com
   - +.skdisplay.jd.com
   - +.skfqxkk.cn
   - +.sky.tongjiai.com
+  - +.sl.hs.lingjuad.com
   - +.sla-media.immomo.com
   - +.slb-p2p.vcloud.ks-live.com
   - +.slog.sina.com.cn
@@ -4797,7 +4672,6 @@ payload:
   - +.sm.easysale.domobcdn.com
   - +.smad.ms.zhangyue.net
   - +.smartad.10010.com
-  - +.smartcard.apps.coloros.com
   - +.smartopen.jd.com
   - +.smetrics.abercrombie.cn
   - +.smetrics.airasia.com
@@ -4831,7 +4705,6 @@ payload:
   - +.smetrics.tuvsud.cn
   - +.smetrics.visitsingapore.com.cn
   - +.smkt.edm.globalsources.com
-  - +.smr.snssdk.com
   - +.sms.ads.oppomobile.com
   - +.sms.info.smart.com
   - +.smuc.cnnfootballclub.com
@@ -4872,6 +4745,7 @@ payload:
   - +.splashimgbssdl.yun.kugou.com
   - +.splashimgretrybssdl.cloud.kugou.com
   - +.splashqqlive.gtimg.com
+  - +.spt.qchannel03.cn
   - +.squirtatt15.sugar1818.net
   - +.srbzw.cn
   - +.srd.simba.taobao.com
@@ -4906,7 +4780,6 @@ payload:
   - +.sta.oceanengine.com
   - +.staco-shop.shop
   - +.stadig.ifeng.com
-  - +.staging-cdn-testsettings.appsflyersdk.com
   - +.staging.sdkconfig.ad.xiaomi.srv
   - +.stalco-nar.club
   - +.stalco-pl.club
@@ -4985,7 +4858,6 @@ payload:
   - +.static.paddlewaver.com
   - +.static.ptqy.gitv.tv
   - +.static.res.qq.com
-  - +.static.rqmob.com
   - +.static.tieba.baidu.com
   - +.static.topxgun.com
   - +.static.trafficjunky.com
@@ -4997,6 +4869,7 @@ payload:
   - +.statichf.shihuocdn.cn
   - +.statics.adanxing.com
   - +.statics.woozooo.com
+  - +.statis.9zadx.com
   - +.statis1.mama.cn
   - +.statistic-overseas.yunxinfw.com
   - +.statistic.cj.sina.cn
@@ -5004,7 +4877,6 @@ payload:
   - +.statistic.qzone.qq.com
   - +.statistical-report.djiservice.org
   - +.stats-sdk.tange365.com
-  - +.stats.appsflyer.com
   - +.stats.autohome.com.cn
   - +.stats.chinaz.com
   - +.stats.cn.ronghub.com
@@ -5025,12 +4897,9 @@ payload:
   - +.statscollector-1-south-america.agora.io
   - +.statscollector-1.agora.io
   - +.statscollector.sd-rtn.com
-  - +.statsgoogle.appsflyer.com
-  - +.statusdevops.appsflyer.com
   - +.statwup.huya.com
   - +.stdown.dinju.com
   - +.ste000u5mk.com
-  - +.steam66.cn
   - +.steamproxy.net
   - +.stg-data-f.ads.heytapmobi.com
   - +.stg-data-id.ads.heytapmobi.com
@@ -5043,7 +4912,6 @@ payload:
   - +.store.yeelight.com
   - +.storeconfig.mistat.intl.xiaomi.com
   - +.storeen.ldmnq.com
-  - +.stqt.weathercn.com
   - +.strack.concur.cn
   - +.stratus.campaign-image.com.cn
   - +.strausstore.shop
@@ -5065,7 +4933,6 @@ payload:
   - +.super.cat898.com
   - +.super.kdnet.net
   - +.superads.cn
-  - +.support.appsflyer.com
   - +.support.browser.heytapmobi.com
   - +.support.hqts.com
   - +.supreme-lavender-t9nd7q0w.edgeone.dev
@@ -5089,7 +4956,6 @@ payload:
   - +.synacast.com
   - +.synad2.nuffnang.com.cn
   - +.syr66.com.cn
-  - +.syrs.z74d.com
   - +.sys.tv.india.xiaomi.com
   - +.sys.zhangyue.com
   - +.sysdk.cl2009.com
@@ -5108,17 +4974,17 @@ payload:
   - +.t.adbiding.com
   - +.t.adxchina.cn
   - +.t.airasia.com
-  - +.t.appsflyer.com
   - +.t.atpanel.com
   - +.t.dangdang.com
   - +.t.dentsuchina.cn
+  - +.t.funlinkads.com
   - +.t.home.news.cn
+  - +.t.hs.lingjuad.com
   - +.t.uc.cn
   - +.t.zhipin.com
   - +.t03-api.xlmc.xunlei.com
   - +.t1.a.market.xiaomi.com
   - +.t101.cn
-  - +.t17.market.xiaomi.com
   - +.t2.xiaohongshu.com
   - +.t28goe.cn
   - +.t9x2gu6it3.com
@@ -5146,6 +5012,7 @@ payload:
   - +.tb4gv2cp5z.com
   - +.tbm.snssdk.com
   - +.tbsone.imtt.qq.com
+  - +.tc.anythinktech.com
   - +.tc.ci123.com
   - +.tcbox.baidu.com
   - +.tce.alicdn.com
@@ -5154,7 +5021,6 @@ payload:
   - +.td.yoyi.com.cn
   - +.tdc.qq.com
   - +.tdlop7tsme.com
-  - +.tdrdwhxxgjzhztwxtxsf-dp9ctcz1v8gi.edgeone.dev
   - +.tdsdk.cpatrk.net
   - +.techain.baidu.com
   - +.techgifts.tradeshow.globalsources.com
@@ -5169,7 +5035,6 @@ payload:
   - +.telemetry.pod5.prod.avatar.ext.hp.com
   - +.telemetry.pod6.prod.avatar.ext.hp.com
   - +.telemetry.pod7.prod.avatar.ext.hp.com
-  - +.temai.snssdk.com
   - +.temp.163.com
   - +.tencent-ssp.66mobi.com
   - +.tencentapigw.com
@@ -5216,8 +5081,13 @@ payload:
   - +.tjinit-global-register.babybus.com
   - +.tjs.sjs.sinajs.cn
   - +.tjsptech.com
+  - +.tk-api.anythinktech.com
+  - +.tk-da.anythinktech.com
+  - +.tk-sg.anythinktech.com
+  - +.tk.anythinktech.com
   - +.tk.toponadss.com
   - +.tkads.millemedia.de
+  - +.tkda.anythinktech.com
   - +.tl.oway.mobi
   - +.tls-cn-beijing.volces.com
   - +.tlsgq.cn
@@ -5245,7 +5115,6 @@ payload:
   - +.tobidad.cn
   - +.tobidad.cn.com
   - +.tobidad.com
-  - +.toblog.snssdk.com
   - +.toblog.volceapplog.com
   - +.todesk-log-upload.todesk.com
   - +.tongdun-fingerprint.walmartmobile.cn
@@ -5293,7 +5162,6 @@ payload:
   - +.tr-vcode-api.vivoglobal.com
   - +.tr-vcode-od.vivoglobal.com
   - +.tr-vcode-or.vivoglobal.com
-  - +.tr.byteurl.cn
   - +.tr.ekatox.com
   - +.tr.email.archiexpo.com
   - +.tr.email.directindustry.com
@@ -5306,7 +5174,6 @@ payload:
   - +.trace.51jingying.com
   - +.trace.mjyx.com
   - +.trace.qq.com
-  - +.trace.seeyouyima.com
   - +.trace.zhiyan.tencent-cloud.net
   - +.tracelog-debug.aiclk.com
   - +.tracelog-debug.qquanquan.com
@@ -5314,7 +5181,6 @@ payload:
   - +.track-dsp.adwangmai.com
   - +.track-gateway.y5kfpt.com
   - +.track.58.com
-  - +.track.appsflyer.com
   - +.track.billowlink.com
   - +.track.easeus.com
   - +.track.hujiang.com
@@ -5329,11 +5195,9 @@ payload:
   - +.track.tom.com
   - +.track.tomwx.net
   - +.track.uc.cn
-  - +.track.xiachufang.com
   - +.trackcommon.hujiang.com
   - +.tracker-00.qvb.qcloud.com
   - +.tracker.cdnbye.com
-  - +.tracker.chat.bilibili.com
   - +.tracker.citicsinfo.com
   - +.tracker.dcdn.baidu.com
   - +.tracker.fengkongcloud.com
@@ -5389,6 +5253,7 @@ payload:
   - +.troubleshoot-ad-account-issues.edgeone.dev
   - +.trustutn.org
   - +.truth.qchannel01.cn
+  - +.truth.qchannel03.cn
   - +.ts166.net
   - +.tsearch.snssdk.com
   - +.tt.x.optimized-ai.com
@@ -5402,32 +5267,22 @@ payload:
   - +.tumeite.cn
   - +.tunion-api.m.taobao.com
   - +.turbo2sdk-push.oupeng.com
-  - +.tv.snssdk.com
   - +.tvabqt.cn
   - +.tvdpebx.cn
+  - +.tvrom.cn
   - +.tvuser-ch.cedock.com
   - +.tw13b093.sandai.net
   - +.twdjn.cn
-  - +.twqwq.z74d.com
   - +.twzui6.com
   - +.tx-ad.a.yximgs.com
-  - +.tx-adaptive.pull.yximgs.com
   - +.tx-cfg-u1.ubixioe.com
   - +.tx-data-u1.ubixioe.com
-  - +.tx-dwk.pull.yximgs.com
-  - +.tx-game.pull.yximgs.com
   - +.tx-kmpaudio.pull.yximgs.com
-  - +.tx-kmplive.pull.yximgs.com
-  - +.tx-livemate.pull.yximgs.com
-  - +.tx-origin.pull.yximgs.com
   - +.tx-p2p-pull.live-voip.com
   - +.tx-p2p-pull.video-voip.com
   - +.tx-p2p-v2.pull.yximgs.com
   - +.tx-p2p.pull.yximgs.com
-  - +.tx-pclivemate.pull.yximgs.com
-  - +.tx-proxy.pull.yximgs.com
   - +.tx-rwk.pull.etoote.com
-  - +.tx.pull.yximgs.com
   - +.ty.cn
   - +.tyh.taobao.com
   - +.tyrd1.tingyun.com
@@ -5453,7 +5308,6 @@ payload:
   - +.ubacollect-drcn.cloud.dbankcloud.cn
   - +.ubxqerc.cn
   - +.uc-ap.yodo1api.com
-  - +.uc-track-gl.heytapmobi.com
   - +.uc.ucweb.com
   - +.uc9.suinidai.com.cn
   - +.uc9.ucweb.com
@@ -5467,7 +5321,6 @@ payload:
   - +.udeztrb.cn
   - +.udiab1.jianshu.com
   - +.udpolimenew.baidu.com
-  - +.udpolimeok.baidu.com
   - +.udrig.com
   - +.ue.yeyoucdn.com
   - +.uebabuf.cn
@@ -5475,19 +5328,17 @@ payload:
   - +.uem.migu.cn
   - +.uerzyr.cn
   - +.uevrhqra7u.com
-  - +.ug-data.mihoyo.com
   - +.ug.baidu.com
   - +.ug.snssdk.com
   - +.ugc.moji001.com
   - +.ugdtimg.com
-  - +.ugsdk.cn
   - +.uhabo.com
   - +.uhwnrfu.cn
   - +.uibjh29vqc.com
   - +.uimr.cn
   - +.ujian.cc
+  - +.ujoy.anythinktech.com
   - +.uk-timesync.vivoglobal.com
-  - +.ulike-api3.faceu.mobi
   - +.ulog-sdk.gifshow.com
   - +.ulog.gifshow.com
   - +.ulog.imap.baidu.com
@@ -5498,7 +5349,6 @@ payload:
   - +.ulogjs.gifshow.com
   - +.ulogjs.ksapisrv.com
   - +.ulogko.gifshow.com
-  - +.ulogs.umengcloud.com.gds.alibabadns.com
   - +.ulogs1.gifshow.com
   - +.ulogs1.ksapisrv.com
   - +.ulogs2.gifshow.com
@@ -5552,7 +5402,6 @@ payload:
   - +.upc.zztfly.com
   - +.upceshop.cn
   - +.update.9mod.com
-  - +.update.app.2345.com
   - +.update.baidu.com
   - +.update.cg100iii.com
   - +.update.dbankcdn.com
@@ -5560,7 +5409,6 @@ payload:
   - +.update.mobile.kugou.com
   - +.update.pan.baidu.com
   - +.update.quetta.net
-  - +.update.thread0.com
   - +.update.wps.cn
   - +.update0.aiclk.com
   - +.update0.qquanquan.com
@@ -5575,7 +5423,6 @@ payload:
   - +.upgrade.thejeu.com
   - +.upgrade.xl9.xunlei.com
   - +.uphzxdv.cn
-  - +.upl.baidu.com
   - +.upload-up.qtfm.cn
   - +.upload.aiclk.com
   - +.uploadlog.xlmc.sandai.net
@@ -5660,32 +5507,27 @@ payload:
   - +.v6-cc.oceanengine.com
   - +.v6-daily-reading-ad.qznovelvod.com
   - +.v6-linkchat.oceanengine.com
-  - +.v6-novelapp.fqnovelvod.com
   - +.v6-reading-ad.qznovelvod.com
   - +.v84tz11w7.com
   - +.v9-linkchat.oceanengine.com
   - +.v9-reading-ad.qznovelvod.com
   - +.v95-aw-reading-ad.qznovelvod.com
   - +.v95-se-zjwztc-reading-ad.qznovelvod.com
-  - +.v95-ynkmtc-reading-ad.qznovelvod.com
   - +.v95-zjjx2tc-reading-ad.qznovelvod.com
   - +.v96-reading-ad.qznovelvod.com
   - +.v96-sz-daily-reading-ad.qznovelvod.com
   - +.va3yq7si6w.com
   - +.vali-g1.cp31.ott.cibntv.net
   - +.vali-ugc.cp31.ott.cibntv.net
-  - +.validate.appsflyer.com
   - +.valipl.cp31.ott.cibntv.net
   - +.vamaker.com
   - +.vanaheim.shop
   - +.vas-hl-x.snssdk.com
-  - +.vas-lf-x.snssdk.com
   - +.vcardsdkservice.vivo.com.cn
   - +.vcl-brain.snssdk.com
   - +.vcs.zijieapi.com
   - +.vda.17173.com
   - +.vdapprecv.app.cntvwb.cn
-  - +.vdo.api.moji.com
   - +.veepai-device-log.eye4.cn
   - +.vendhelpuous.pgvjmp.cn
   - +.veryboys.com
@@ -5699,7 +5541,6 @@ payload:
   - +.video.market.xiaomi.com
   - +.video.upqzfile.com
   - +.video231.oss-cn-beijing.aliyuncs.com
-  - +.videocloud.cn-hangzhou.log.aliyuncs.com
   - +.videohub.xdplt.com
   - +.view.zijieapi.com
   - +.vigyn4gpx.com
@@ -5751,7 +5592,6 @@ payload:
   - +.w6r46g0hb-dpv3acpgp8ta.edgeone.dev
   - +.w88.shanghaidisneyresort.com.cn
   - +.w97nv5ibv4.com
-  - +.wa.appsflyer.com
   - +.wa.gtimg.com
   - +.wa.kuwo.cn
   - +.wan.360.cn
@@ -5779,14 +5619,11 @@ payload:
   - +.web.novogene.com
   - +.webanalytics.logitech.com.cn
   - +.webanalytics.logitechg.com.cn
-  - +.webcast-open.douyin.com
-  - +.webcast5-open-lf.douyin.com
   - +.webcert.cnmstl.net
   - +.webcollector-rtm.agora.io
   - +.webcollects.kugou.com
   - +.webdissector.com
   - +.webmail-myaccount-secure-micrsoftnotifications-dpob324t4jqd.zh-cn.edgeone.cool
-  - +.websdk.appsflyer.com
   - +.websgsadvert.sanguosha.com
   - +.webstat.qiumibao.com
   - +.webstat.ws.126.net
@@ -5797,6 +5634,7 @@ payload:
   - +.weidianyuedu.com
   - +.weilayun.com
   - +.weishi.baidu.com
+  - +.well-aquamarine-psata8ej.edgeone.dev
   - +.wenku-cms.bj.bcebos.com
   - +.wenxue.youzhicn.com
   - +.wer.qdwght.com
@@ -5847,20 +5685,14 @@ payload:
   - +.wpwpquse.cn
   - +.wr.yiyouliao.com
   - +.wrating.com
-  - +.ws-adaptive.pull.yximgs.com
   - +.ws-keyboard.shouji.sogou.com
-  - +.ws-livemate.pull.yximgs.com
-  - +.ws-origin.pull.yximgs.com
   - +.ws-p2p-pull.live-voip.com
   - +.ws-p2p-pull.video-voip.com
   - +.ws-p2p-v2.pull.yximgs.com
   - +.ws-p2p.pull.yximgs.com
-  - +.ws-pclivemate.pull.yximgs.com
-  - +.ws-proxy.pull.yximgs.com
   - +.ws-rwk.pull.etoote.com
   - +.ws.ksmobile.net
   - +.ws.mmstat.com
-  - +.ws.pull.yximgs.com
   - +.ws.sj.qq.com
   - +.wsacjdg.cn
   - +.wsds.cn
@@ -5880,7 +5712,7 @@ payload:
   - +.www.31d.net
   - +.www.360anquan.cn
   - +.www.56.com
-  - +.www.appsflyer.com
+  - +.www.anythinktech.com
   - +.www.assoc-amazon.cn
   - +.www.che.com
   - +.www.chengzijianzhan.com
@@ -5891,7 +5723,6 @@ payload:
   - +.www.fm120.com
   - +.www.gameley.com
   - +.www.histar.com
-  - +.www.hseda.com
   - +.www.huabian.com
   - +.www.jmine.cn
   - +.www.kuaizitech.com
@@ -5902,10 +5733,9 @@ payload:
   - +.www.mps.gov.cn
   - +.www.oceanengine.com
   - +.www.pagechoice.com
-  - +.www.pullcf.com
-  - +.www.pullcm.com
   - +.www.q4ee.top
   - +.www.qchannel01.cn
+  - +.www.qchannel03.cn
   - +.www.qqads.com
   - +.www.redmx.cn
   - +.www.silurian.cn
@@ -5922,7 +5752,6 @@ payload:
   - +.www.yoyi.com.cn
   - +.www.yundabao.com
   - +.www.yunfan.com
-  - +.www.z74d.com
   - +.www.zhikey.com
   - +.www2.info.renesas.cn
   - +.www5.oss-cn-hangzhou.aliyuncs.com
@@ -5934,6 +5763,7 @@ payload:
   - +.wxsnsdy.tc.qq.com
   - +.wxsnsdy.wxs.qq.com
   - +.wxsnsdythumb.wxs.qq.com
+  - +.wy.qchannel03.cn
   - +.wy213.com
   - +.wzjs1.oss-accelerate.aliyuncs.com
   - +.x-api-shoulei.xunlei.com
@@ -5960,7 +5790,6 @@ payload:
   - +.xianshangzixun.com
   - +.xianshangzixun.net
   - +.xianzhice.com
-  - +.xiaobaixitong.com
   - +.xiaodongrui.com
   - +.xiaojifly.cn
   - +.xiaomifood.cn
@@ -6018,7 +5847,6 @@ payload:
   - +.y4n.cn
   - +.y66xvgo5i.chuimg.com
   - +.y6a7ap3io3.com
-  - +.y87f6s34a2qw-dp3fy8azkrz8.edgeone.dev
   - +.yahekby.cn
   - +.yahoo.com.cn
   - +.yangshengzu.cn
@@ -6097,7 +5925,6 @@ payload:
   - +.yumao.puata.info
   - +.yumimobi.com
   - +.yun-hl.3g.qq.com
-  - +.yun.tuitiger.com
   - +.yunpifu.cn
   - +.yunqishi8.com
   - +.yunshipei.com

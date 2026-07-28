@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,544  更新：2026-07-27 05:57:23 CST
+# 适用：QuantumultX  规则数：23,545  更新：2026-07-28 20:17:30 CST
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -8947,6 +8947,7 @@ host-suffix,githubcopilot.com,reject
 host-suffix,githubhackathon.com,reject
 host-suffix,githubnext.com,reject
 host-suffix,githubstatus.com,reject
+host-suffix,githubsupport.com,reject
 host-suffix,githubuniverse.com,reject
 host-suffix,githubusercontent.com,reject
 host-suffix,gitlab-static.net,reject

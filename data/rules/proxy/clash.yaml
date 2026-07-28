@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,544  更新：2026-07-27 05:57:23 CST
+# 适用：Clash  规则数：23,545  更新：2026-07-28 20:17:30 CST
 #
 payload:
   - +.000webhost.com
@@ -8948,6 +8948,7 @@ payload:
   - +.githubhackathon.com
   - +.githubnext.com
   - +.githubstatus.com
+  - +.githubsupport.com
   - +.githubuniverse.com
   - +.githubusercontent.com
   - +.gitlab-static.net
