@@ -63,8 +63,8 @@ mdp-usertrace-cn.heytapdownload.com
 
 ############################## 应用分类 #####################
 ## 微信 com.tencent.mm
-wximg.wxs.qq.com  #微信小程序开屏和其他广告图片，然而照样会空白屏显示3~5秒，弹窗广告照弹(只是无图)，广告位照样占(只是无图)。误杀暂未发现，看域名应该会有一些。
-wxsmw.wxs.qq.com  #微信小程序底下的视频广告，广告位还在，只是能省点流量，不会被视频打扰。误杀未知。
+wximg.wxs.qq.com
+wxsmw.wxs.qq.com
 ## QQ com.tencent.mobileqq
 aeventlog.beacon.qq.com
 tianshu.gtimg.cn  #顶部横幅广告图片，误杀签到打卡后的图片
@@ -239,14 +239,6 @@ ads-video-qc.xhscdn.com
 spider-tracker.xiaohongshu.com
 splash-online-decision.xiaohongshu.com
 ads-img-bak.xhscdn.com
-##高德地图
-qchannel03.cn
-logs.amap.com
-maps.testing.amap.com
-page.amap.com
-cache.gaode.com
-optimus-ads.amap.com
-optimus-ads-ykx.amap.com
 #迅雷 
 admark-x.xunlei.com
 advertpay-vip-ssl.xunlei.com
@@ -272,25 +264,14 @@ static.m.sjzhushou.com
 m.sjzhushou.com
 scene.vip.xunlei.com
 #夸克浏览器(①②更新提示缺一不可)
-open-cms-api.quark.cn
-puds.quark.cn
 adtrack.quark.cn
 track.lc.quark.cn
-#WPS
-ad.docer.wps.cn
-adm.zookingsoft.com
-docerad.wps.cn
-update.thread0.com  #自定义水印相机更新？
 #百度网盘（①是开屏广告②网页分享页上半部分的广告图片）
 dss0.bdstatic.com
 staticsns.cdn.bcebos.com
 
 
 # 其他
-
-
-
-
 
 static.wkanx.com
 adx-ad-prod.wkanx.com
@@ -2299,141 +2280,3 @@ ads-drcn.platform.hihonorcloud.com  #华为云的
 android-sdk.zhangyuyidong.cn
 ads.adfunlink.com #抓自韩小圈
 adtracker.adfunlink.com
-
-#字节系 AD API SDK 屏蔽
-security.snssdk.com
-pangolin.snssdk.com
-gecko.snssdk.com
-vas-lf-x.snssdk.com
-anythinktech.com
-ugsdk.cn
-mssdk-bu.snssdk.com
-pangolin16.sgsnssdk.com
-is.snssdk.com.queniukw.com
-imapi2.snssdk.com
-is-lq.snssdk.com
-hubcloud.com.cn
-ichannel.snssdk.com
-vas-hl-x.snssdk.com
-applog.snssdk.com
-abtest-ch.snssdk.com
-tv.snssdk.com
-reading-lq.snssdk.com
-tbm.snssdk.com
-temai.snssdk.com
-tnc3-bjlgy.snssdk.com
-toblog.snssdk.com
-ug.snssdk.com
-xlog.snssdk.com
-log-hl.snssdk.com
-mercury-sdk.snssdk.com
-sdfp.snssdk.com
-bds.snssdk.com
-extlog.snssdk.com
-gecko-hl.snssdk.com
-gecko-lq.snssdk.com
-ug.snssdk.com
-extlog.snssdk.com
-bds.snssdk.com
-analytics.snssdk.com
-ib.snssdk.com.edgekey.net
-isub.snssdk.com
-isub.snssdk.com.bytedns.net
-it.snssdk.com.edgekey.net
-iu.snssdk.com.edgekey.net
-lianmengapi.snssdk.com
-log.snssdk.com.bytedns.net
-open.snssdk.com.bytedns.net
-smr.snssdk.com
-stream.snssdk.com
-saveu5-normal-lf.zijieapi.com
-lf6-orange.byteorge.com
-lf9-orange.byteorge.com
-lf3-orange.byteorge.com
-v6-novelapp.fqnovelvod.com
-sf6-ttcdn-tos.pstatp.com
-sf1-ttcdn-tos.pstatp.com
-ma5-normal-lq.zijieapi.com
-abtest3-misc-lq.zijieapi.com
-mssdk3-normal-lf.zijieapi.com
-abtest3-misc-hl.zijieapi.com
-ads5-normal-lq.zijieapi.com.c.dsa.cdnbuild.net
-vcl-brain.snssdk.com
-polaris-sinfonlinea.zijieapi.com
-ads.zijieapi.com
-gecko3-lq.zijieapi.com
-polaris.zijieapi.com
-jsb.zijieapi.com
-tnc0-bjlgy.zijieapi.com
-tnc0-alisc1.zijieapi.com
-tnc0-aliec2.zijieapi.com
-neptune-platform.zijieapi.com
-applog.zijieapi.com
-ads3-normal-lf.zijieapi.com
-ads3-normal-hl.zijieapi.com
-ads3-normal-lq.zijieapi.com
-ads5-normal-lf.zijieapi.com
-ads5-normal-hl.zijieapi.com
-ads5-normal-lq.zijieapi.com
-polaris3-normal-lf.zijieapi.com
-polaris3-normal-hl.zijieapi.com
-polaris3-normal-lq.zijieapi.com
-ad.zijieapi.com
-mssdk3-normal-lq.zijieapi.com
-feedback-c.zijieapi.com
-gecko5-lq.zijieapi.com
-vcs.zijieapi.com
-tnc3-aliec2.zijieapi.com
-saveu5-normal-lq.zijieapi.com
-log.zijieapi.com
-tnc3-alisc1.zijieapi.com
-ma.zijieapi.com
-tnc3-bjlgy.zijieapi.com
-bsync3-normal-lq.zijieapi.com
-imapi5-oth-lq.zijieapi.com
-ads5-normal.zijieapi.com
-ads3-normal.zijieapi.com
-polaris5-normal-lq.zijieapi.com
-timon.zijieapi.com
-gecko.zijieapi.com
-
-#Umeng | 友盟
-ulogs.umeng.com
-umeng.co
-ar.umeng.com
-msg.umengcloud.com
-errlog.umeng.com
-plbslog.umeng.com
-sec.umeng.com
-ulogs.umeng.com
-sss.umeng.com
-audid.umeng.com
-cnlogs.umeng.com
-aaid.umeng.com
-ulogs.umengcloud.com.gds.alibabadns.com
-alog-default.umeng.com
-ai.login.umeng.com
-resolve.umeng.com
-ucc.umeng.com
-imp-toutiao-data.37.com.cn
-ulogs.umengcloud.com
-deeplink.umeng.com
-umengjmacs.m.taobao.com
-umeng.com
-umengcloud.com
-utoken.umeng.com
-alogus.umeng.com
-alogs.umengcloud.com
-alogsus.umengcloud.com
-errnewlog.umeng.com
-alog.umeng.com
-oc.umeng.com
-alogs.umeng.com
-alogsus.umeng.com
-oc.umeng.com
-ocx.umeng.com
-ouplog.umeng.com
-track.xiachufang.com
-oc.umeng.com
-ocx.umeng.com
-ouplog.umeng.com
