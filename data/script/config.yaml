@@ -80,6 +80,23 @@ ads:
         - "@ads_white"
 
 
+ads_big:
+  title: Ads Big
+  description: 补充列表喵。
+  formats: [adblock, smartdns, wildcard]
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
+        - https://raw.githubusercontent.com/lingeringsound/10007/refs/heads/main/all
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
+        - "@ads"
+    - type: discard
+      source:
+        - "@ads_white"
+
+
 ads_hosts:
   title: Ads Hosts
   description: hosts格式喵。
