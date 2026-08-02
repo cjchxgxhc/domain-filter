@@ -1,8 +1,8 @@
 开始执行
 下载并提取（30 个源）...
-完成：30 个成功，0 个失败，耗时 67.78s
+完成：30 个成功，0 个失败，耗时 70.43s
   src_proxy_tld：829 条 [common]
-  src_big_hosts：10,667,053 条 [skip]
+  src_big_hosts：10,649,983 条 [skip]
 ================================================================================
 处理规则组
 ================================================================================
@@ -45,30 +45,30 @@
   OK surge.list（6,036 条（去重））
   OK smartdns.conf（6,036 条（去重））
   OK wildcard.txt（6,036 条（去重））
-  `- 输出 6,036 条，耗时 0.59s
+  `- 输出 6,036 条，耗时 0.60s
 ======================================================================
 处理规则组：Ads Hosts (ads_hosts)
 ======================================================================
   |  rules[0] type=add
-  |    named：10,667,053 <- src_big_hosts
-  |    共 10,667,053 条
-  |    -> 加入 10,667,053（合计 10,667,053）
+  |    named：10,649,983 <- src_big_hosts
+  |    共 10,649,983 条
+  |    -> 加入 10,649,983（合计 10,649,983）
   |  rules[1] type=match_suffix
   |    @ads：7,613
   |    共 7,613 条
-  |    -> 后缀保留 90,896（移除 10,576,157）
+  |    -> 后缀保留 90,897（移除 10,559,086）
   |  rules[2] type=discard_suffix
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    url：2,860 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
   |    共 130,842 条
-  |    -> 后缀丢弃 78,139（剩余 12,757）
+  |    -> 后缀丢弃 78,139（剩余 12,758）
   |  rules[3] type=add
   |    @ads：7,613
   |    共 7,613 条
-  |    -> 加入 1,428（合计 14,185）
-  |  完毕，共 14,185 条
-  OK hosts.txt（14,185 条）
-  `- 输出 14,185 条，耗时 4.36s
+  |    -> 加入 1,428（合计 14,186）
+  |  完毕，共 14,186 条
+  OK hosts.txt（14,186 条）
+  `- 输出 14,186 条，耗时 4.45s
 ======================================================================
 处理规则组：Ads Big (ads_big)
 ======================================================================
@@ -89,12 +89,12 @@
   OK adblock.txt（228,259 条（去重））
   OK smartdns.conf（228,259 条（去重））
   OK wildcard.txt（228,259 条（去重））
-  `- 输出 228,259 条，耗时 1.48s
+  `- 输出 228,259 条，耗时 1.47s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
   |  rules[0] type=add
-  |    url：26,134 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  |    url：26,131 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   |    url：26,825 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   |    url：34,696 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   |    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
@@ -112,7 +112,7 @@
   OK surge.list（23,561 条（去重））
   OK domain.txt（37,727 条）
   OK wildcard.txt（23,561 条（去重））
-  `- 输出 23,561 条，耗时 0.70s
+  `- 输出 23,561 条，耗时 0.73s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -140,10 +140,10 @@
   OK surge.list（811 条（去重））
   OK domain.txt（847 条）
   OK wildcard.txt（811 条（去重））
-  `- 输出 811 条，耗时 0.57s
+  `- 输出 811 条，耗时 0.63s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 75.53s
+OK 完成，总耗时 78.36s
 ================================================================================
