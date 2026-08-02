@@ -2,11 +2,11 @@
 
 > 扩展列表喵。
 
-**规则总数：228,193**    **更新时间：2026-08-03 01:07:43 (CST)**
+**规则总数：228,259**    **更新时间：2026-08-03 01:13:00 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
-| `adblock.txt` | 228,193 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) |
-| `smartdns.conf` | 228,193 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/smartdns.conf) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/smartdns.conf) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/smartdns.conf) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/smartdns.conf) |
-| `wildcard.txt` | 228,193 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/wildcard.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/wildcard.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/wildcard.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/wildcard.txt) |
+| `adblock.txt` | 228,259 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/adblock.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/adblock.txt) |
+| `smartdns.conf` | 228,259 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/smartdns.conf) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/smartdns.conf) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/smartdns.conf) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/smartdns.conf) |
+| `wildcard.txt` | 228,259 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/wildcard.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/wildcard.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@main/data/rules/ads_big/wildcard.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules/ads_big/wildcard.txt) |
 

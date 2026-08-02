@@ -1,6 +1,6 @@
 开始执行
 下载并提取（30 个源）...
-完成：30 个成功，0 个失败，耗时 51.70s
+完成：30 个成功，0 个失败，耗时 67.78s
   src_proxy_tld：829 条 [common]
   src_big_hosts：10,667,053 条 [skip]
 ================================================================================
@@ -45,7 +45,7 @@
   OK surge.list（6,036 条（去重））
   OK smartdns.conf（6,036 条（去重））
   OK wildcard.txt（6,036 条（去重））
-  `- 输出 6,036 条，耗时 0.55s
+  `- 输出 6,036 条，耗时 0.59s
 ======================================================================
 处理规则组：Ads Hosts (ads_hosts)
 ======================================================================
@@ -57,18 +57,18 @@
   |    @ads：7,613
   |    共 7,613 条
   |    -> 后缀保留 90,896（移除 10,576,157）
-  |  rules[2] type=discard
+  |  rules[2] type=discard_suffix
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    url：2,860 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
   |    共 130,842 条
-  |    -> 精确丢弃 599（剩余 90,297）
+  |    -> 后缀丢弃 78,139（剩余 12,757）
   |  rules[3] type=add
   |    @ads：7,613
   |    共 7,613 条
-  |    -> 加入 1,366（合计 91,663）
-  |  完毕，共 91,663 条
-  OK hosts.txt（91,663 条）
-  `- 输出 91,663 条，耗时 4.13s
+  |    -> 加入 1,428（合计 14,185）
+  |  完毕，共 14,185 条
+  OK hosts.txt（14,185 条）
+  `- 输出 14,185 条，耗时 4.36s
 ======================================================================
 处理规则组：Ads Big (ads_big)
 ======================================================================
@@ -76,20 +76,20 @@
   |    url：13,644 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
   |    url：17,123 <- https://raw.githubusercontent.com/lingeringsound/10007/refs/heads/main/all
   |    url：109,897 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  |    url：200,052 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
+  |    url：200,118 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
   |    @ads：7,613
-  |    共 245,293 条
-  |    -> 加入 245,293（合计 245,293）
+  |    共 245,359 条
+  |    -> 加入 245,359（合计 245,359）
   |  rules[1] type=discard
   |    @ads_white：751
   |    共 751 条
-  |    -> 精确丢弃 208（剩余 245,085）
-  |  完毕，共 245,085 条
+  |    -> 精确丢弃 208（剩余 245,151）
+  |  完毕，共 245,151 条
   |  子域去重：移除 16,892
-  OK adblock.txt（228,193 条（去重））
-  OK smartdns.conf（228,193 条（去重））
-  OK wildcard.txt（228,193 条（去重））
-  `- 输出 228,193 条，耗时 1.22s
+  OK adblock.txt（228,259 条（去重））
+  OK smartdns.conf（228,259 条（去重））
+  OK wildcard.txt（228,259 条（去重））
+  `- 输出 228,259 条，耗时 1.48s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
@@ -112,7 +112,7 @@
   OK surge.list（23,561 条（去重））
   OK domain.txt（37,727 条）
   OK wildcard.txt（23,561 条（去重））
-  `- 输出 23,561 条，耗时 0.64s
+  `- 输出 23,561 条，耗时 0.70s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -140,10 +140,10 @@
   OK surge.list（811 条（去重））
   OK domain.txt（847 条）
   OK wildcard.txt（811 条（去重））
-  `- 输出 811 条，耗时 0.54s
+  `- 输出 811 条，耗时 0.57s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 58.82s
+OK 完成，总耗时 75.53s
 ================================================================================
