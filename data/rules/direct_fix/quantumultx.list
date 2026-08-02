@@ -1,5 +1,5 @@
 # 修复可能被proxy组错误分流的直连域名。
-# 适用：QuantumultX  规则数：811  更新：2026-08-03 01:01:53 CST
+# 适用：QuantumultX  规则数：811  更新：2026-08-03 01:07:42 CST
 #
 host-suffix,1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa,reject
 host-suffix,10.in-addr.arpa,reject

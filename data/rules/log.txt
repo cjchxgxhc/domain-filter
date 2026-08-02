@@ -1,6 +1,6 @@
 开始执行
 下载并提取（30 个源）...
-完成：30 个成功，0 个失败，耗时 73.81s
+完成：30 个成功，0 个失败，耗时 51.70s
   src_proxy_tld：829 条 [common]
   src_big_hosts：10,667,053 条 [skip]
 ================================================================================
@@ -31,25 +31,21 @@
   |    url：2,124 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
   |    共 7,738 条
   |    -> 加入 7,738（合计 7,738）
-  |  rules[1] type=match_suffix
+  |  rules[1] type=discard
   |    @ads_white：751
   |    共 751 条
-  |    -> 后缀保留 345（移除 7,393）
-  |  rules[2] type=add
-  |    @ads_white：751
-  |    共 751 条
-  |    -> 加入 626（合计 971）
-  |  完毕，共 971 条
-  |  子域去重：移除 299
-  OK adblock.txt（672 条（去重））
-  OK clash.yaml（672 条（去重））
-  OK singbox.json（672 条（去重））
-  OK quantumultx.list（672 条（去重））
-  OK shadowrocket.list（672 条（去重））
-  OK surge.list（672 条（去重））
-  OK smartdns.conf（672 条（去重））
-  OK wildcard.txt（672 条（去重））
-  `- 输出 672 条，耗时 0.59s
+  |    -> 精确丢弃 125（剩余 7,613）
+  |  完毕，共 7,613 条
+  |  子域去重：移除 1,577
+  OK adblock.txt（6,036 条（去重））
+  OK clash.yaml（6,036 条（去重））
+  OK singbox.json（6,036 条（去重））
+  OK quantumultx.list（6,036 条（去重））
+  OK shadowrocket.list（6,036 条（去重））
+  OK surge.list（6,036 条（去重））
+  OK smartdns.conf（6,036 条（去重））
+  OK wildcard.txt（6,036 条（去重））
+  `- 输出 6,036 条，耗时 0.55s
 ======================================================================
 处理规则组：Ads Hosts (ads_hosts)
 ======================================================================
@@ -58,21 +54,21 @@
   |    共 10,667,053 条
   |    -> 加入 10,667,053（合计 10,667,053）
   |  rules[1] type=match_suffix
-  |    @ads：971
-  |    共 971 条
-  |    -> 后缀保留 82,637（移除 10,584,416）
+  |    @ads：7,613
+  |    共 7,613 条
+  |    -> 后缀保留 90,896（移除 10,576,157）
   |  rules[2] type=discard
   |    url：129,040 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
   |    url：2,860 <- https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
   |    共 130,842 条
-  |    -> 精确丢弃 1,415（剩余 81,222）
+  |    -> 精确丢弃 599（剩余 90,297）
   |  rules[3] type=add
-  |    @ads：971
-  |    共 971 条
-  |    -> 加入 262（合计 81,484）
-  |  完毕，共 81,484 条
-  OK hosts.txt（81,484 条）
-  `- 输出 81,484 条，耗时 4.39s
+  |    @ads：7,613
+  |    共 7,613 条
+  |    -> 加入 1,366（合计 91,663）
+  |  完毕，共 91,663 条
+  OK hosts.txt（91,663 条）
+  `- 输出 91,663 条，耗时 4.13s
 ======================================================================
 处理规则组：Ads Big (ads_big)
 ======================================================================
@@ -81,19 +77,19 @@
   |    url：17,123 <- https://raw.githubusercontent.com/lingeringsound/10007/refs/heads/main/all
   |    url：109,897 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
   |    url：200,052 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
-  |    @ads：971
-  |    共 244,497 条
-  |    -> 加入 244,497（合计 244,497）
+  |    @ads：7,613
+  |    共 245,293 条
+  |    -> 加入 245,293（合计 245,293）
   |  rules[1] type=discard
   |    @ads_white：751
   |    共 751 条
-  |    -> 精确丢弃 751（剩余 243,746）
-  |  完毕，共 243,746 条
-  |  子域去重：移除 15,843
-  OK adblock.txt（227,903 条（去重））
-  OK smartdns.conf（227,903 条（去重））
-  OK wildcard.txt（227,903 条（去重））
-  `- 输出 227,903 条，耗时 1.42s
+  |    -> 精确丢弃 208（剩余 245,085）
+  |  完毕，共 245,085 条
+  |  子域去重：移除 16,892
+  OK adblock.txt（228,193 条（去重））
+  OK smartdns.conf（228,193 条（去重））
+  OK wildcard.txt（228,193 条（去重））
+  `- 输出 228,193 条，耗时 1.22s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
@@ -116,7 +112,7 @@
   OK surge.list（23,561 条（去重））
   OK domain.txt（37,727 条）
   OK wildcard.txt（23,561 条（去重））
-  `- 输出 23,561 条，耗时 0.72s
+  `- 输出 23,561 条，耗时 0.64s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -144,10 +140,10 @@
   OK surge.list（811 条（去重））
   OK domain.txt（847 条）
   OK wildcard.txt（811 条（去重））
-  `- 输出 811 条，耗时 0.59s
+  `- 输出 811 条，耗时 0.54s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 81.56s
+OK 完成，总耗时 58.82s
 ================================================================================
