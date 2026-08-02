@@ -49,7 +49,10 @@ sources:
     url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
     mode: common
     validate: false
-
+  src_big_hosts:
+    url: https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
+    mode: skip
+    validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
 
@@ -68,16 +71,39 @@ ads_white:
 ads:
   title: Ads
   description: 喵喵喵。
-  formats: [hosts, adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard]
+  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard]
   rules:
     - type: add
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
-    - type: discard
+    - type: match_suffix
       source:
         - "@ads_white"
+    - type: add
+      source:
+        - "@ads_white"
+
+
+ads_hosts:
+  title: Ads Hosts
+  description: hosts格式喵。
+  formats: [hosts]
+  rules:
+    - type: add
+      source:
+        - src_big_hosts
+    - type: match_suffix
+      source:
+        - "@ads"
+    - type: discard
+      source:
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
+        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
+    - type: add
+      source:
+        - "@ads"
 
 
 ads_big:
