@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,556  更新：2026-08-01 17:18:18 CST
+# 适用：Clash  规则数：23,561  更新：2026-08-03 01:01:52 CST
 #
 payload:
   - +.000webhost.com
@@ -750,6 +750,7 @@ payload:
   - +.acs.org
   - +.actalis.com
   - +.actfortibet.org
+  - +.actifio.com
   - +.activematter.game
   - +.activeteachonline.com
   - +.activpn.com
@@ -14329,6 +14330,7 @@ payload:
   - +.myiphide.com
   - +.myiphider.com
   - +.myipod.net
+  - +.myjetbrains.com
   - +.myjkwd.com
   - +.mykomica.org
   - +.mylcloud.net
@@ -15116,6 +15118,7 @@ payload:
   - +.ntdtv.org
   - +.ntdtvla.com
   - +.ntdvn.com
+  - +.nthlink.com
   - +.ntl.fyi
   - +.ntlk.org
   - +.ntp.ripe.net
@@ -15532,6 +15535,7 @@ payload:
   - +.openwebster.com
   - +.openwrt.org
   - +.openwrt.org.cn
+  - +.openxla.org
   - +.opera-api.com
   - +.opera-api2.com
   - +.opera-browser.com
@@ -19627,6 +19631,7 @@ payload:
   - +.talkatone.com
   - +.talkboxapp.com
   - +.talkcc.com
+  - +.talkingkotlin.com
   - +.talkonly.net
   - +.talksport.com
   - +.tamilsexvideos.cc

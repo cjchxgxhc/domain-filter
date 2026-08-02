@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,556  更新：2026-08-01 17:18:18 CST
+# 适用：QuantumultX  规则数：23,561  更新：2026-08-03 01:01:52 CST
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -749,6 +749,7 @@ host-suffix,acrobat.com,reject
 host-suffix,acs.org,reject
 host-suffix,actalis.com,reject
 host-suffix,actfortibet.org,reject
+host-suffix,actifio.com,reject
 host-suffix,activematter.game,reject
 host-suffix,activeteachonline.com,reject
 host-suffix,activpn.com,reject
@@ -14328,6 +14329,7 @@ host-suffix,myilibrary.com,reject
 host-suffix,myiphide.com,reject
 host-suffix,myiphider.com,reject
 host-suffix,myipod.net,reject
+host-suffix,myjetbrains.com,reject
 host-suffix,myjkwd.com,reject
 host-suffix,mykomica.org,reject
 host-suffix,mylcloud.net,reject
@@ -15115,6 +15117,7 @@ host-suffix,ntdtv.com,reject
 host-suffix,ntdtv.org,reject
 host-suffix,ntdtvla.com,reject
 host-suffix,ntdvn.com,reject
+host-suffix,nthlink.com,reject
 host-suffix,ntl.fyi,reject
 host-suffix,ntlk.org,reject
 host-suffix,ntp.ripe.net,reject
@@ -15531,6 +15534,7 @@ host-suffix,openweathermap.org,reject
 host-suffix,openwebster.com,reject
 host-suffix,openwrt.org,reject
 host-suffix,openwrt.org.cn,reject
+host-suffix,openxla.org,reject
 host-suffix,opera-api.com,reject
 host-suffix,opera-api2.com,reject
 host-suffix,opera-browser.com,reject
@@ -19626,6 +19630,7 @@ host-suffix,talk853.com,reject
 host-suffix,talkatone.com,reject
 host-suffix,talkboxapp.com,reject
 host-suffix,talkcc.com,reject
+host-suffix,talkingkotlin.com,reject
 host-suffix,talkonly.net,reject
 host-suffix,talksport.com,reject
 host-suffix,tamilsexvideos.cc,reject
