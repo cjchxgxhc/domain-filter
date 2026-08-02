@@ -94,7 +94,7 @@ ads_hosts:
     - type: match_suffix
       source:
         - "@ads"
-    - type: discard
+    - type: discard_suffix
       source:
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
         - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
