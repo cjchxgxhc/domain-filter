@@ -67,7 +67,7 @@ sources:
     validate: false
   src_useless_tld:
     url: local:data/self/ads/useless_tld.txt
-    mode: common
+    mode: skip
     validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
