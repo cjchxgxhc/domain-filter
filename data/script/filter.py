@@ -45,6 +45,8 @@ _REGEX_RAW_GH = re.compile(
     r"(?P<branch>[^/]+)/(?P<path>.+)$"
 )
 
+_LOCAL_PREFIX = "local:"
+
 
 class LogLevel(Enum):
     INFO    = "INFO"
@@ -272,29 +274,100 @@ def _download_and_extract(
     return result
 
 
+def _read_and_extract_local(
+    local_cfgs: Dict[str, Dict],
+    log_file: Optional[Path] = None,
+) -> Dict[str, Set[str]]:
+    """读取仓库内本地文件并提取域名（local: 前缀），用于引用仓库自身维护的名单，
+    避免通过 raw.githubusercontent.com 回环拉取自己仓库（刚提交还没生效时
+    会读到旧内容甚至 404）。key 统一为 "local:<path>"。
+    """
+    result: Dict[str, Set[str]] = {}
+    if not local_cfgs:
+        return result
 
-def _hdr(count: int, tool: str, desc: str, now: str, c: str) -> str:
-    """通用简单头部：描述 + 适用工具 + 规则数 + 更新时间"""
+    log(f"读取本地文件（{len(local_cfgs)} 个）...", log_file=log_file)
+    t0 = time.time()
+    ok, failed = 0, 0
+    for key, cfg in local_cfgs.items():
+        p = Path(cfg["path"])
+        if not p.is_file():
+            log(f"  FAIL 本地文件不存在：{p}", LogLevel.WARNING, log_file)
+            result[key] = set()
+            failed += 1
+            continue
+        try:
+            text = p.read_text(encoding="utf-8", errors="ignore")
+        except Exception as e:
+            log(f"  FAIL 读取本地文件失败 {p}：{e}", LogLevel.WARNING, log_file)
+            result[key] = set()
+            failed += 1
+            continue
+        domains = _rust_extract(text.splitlines(), cfg["mode"], cfg["validate"], log_file)
+        result[key] = domains
+        log(f"  OK {p}：{len(domains):,} 条 [{cfg['mode'].value}]", log_file=log_file)
+        ok += 1
+
+    log(f"完成：{ok} 个成功，{failed} 个失败，耗时 {time.time()-t0:.2f}s", log_file=log_file)
+    return result
+
+
+def _download_raw_texts(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, str]:
+    """仅下载原始文本，不做域名提取，供 Adblock 聚合组使用。"""
+    if not urls:
+        return {}
+
+    session = requests.Session()
+    adapter = HTTPAdapter(
+        max_retries=Retry(
+            total=_RETRY_COUNT, backoff_factor=_RETRY_DELAY,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["GET"], raise_on_status=False,
+        ),
+        pool_connections=_DOWNLOAD_WORKERS, pool_maxsize=_DOWNLOAD_WORKERS * 2,
+    )
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    session.headers["User-Agent"] = _USER_AGENT
+
+    def _one(url: str) -> Tuple[str, str]:
+        try:
+            r = session.get(url, timeout=(_CONNECT_TIMEOUT, _READ_TIMEOUT))
+            r.raise_for_status()
+            return url, r.text
+        except Exception as e:
+            log(f"  FAIL {url}：{e}", LogLevel.WARNING, log_file)
+            return url, ""
+
+    result: Dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=_DOWNLOAD_WORKERS) as ex:
+        futures = {ex.submit(_one, url): url for url in urls}
+        for future in as_completed(futures):
+            u, text = future.result()
+            result[u] = text
+    return result
+
+
+# ─────────────────────────── 输出头部（不含时间戳，避免内容未变也产生 diff） ────
+
+def _hdr(count: int, tool: str, desc: str, c: str) -> str:
+    """通用简单头部：描述 + 适用工具 + 规则数（不含更新时间）"""
     parts: List[str] = []
     if desc:
         parts.append(f"{c} {desc}")
-    parts.append(f"{c} 适用：{tool}  规则数：{count:,}  更新：{now}")
+    parts.append(f"{c} 适用：{tool}  规则数：{count:,}")
     parts.append(c)
     return "\n".join(parts) + "\n"
 
 
-def _hdr_adblock(count: int, title: str, desc: str, now: str) -> str:
-    """AdGuard 兼容头部：使用 AdGuard/AdGuard Home 可识别的元数据字段
-    （Title / Description / Last modified / Expires / Homepage / Total count），
-    便于在 AdGuard 系产品的过滤器信息面板中正常显示。
-    """
+def _hdr_adblock(count: int, title: str, desc: str) -> str:
+    """AdGuard 兼容头部（不含 Last modified，避免内容未变也产生 diff）"""
     lines: List[str] = []
     if title:
         lines.append(f"! Title: {title}")
     if desc:
         lines.append(f"! Description: {desc}")
     lines.append(f"! Homepage: https://github.com/cjchxgxhc/domain-filter")
-    lines.append(f"! Last modified: {now}")
     lines.append("! Expires: 1 days (update frequency)")
     lines.append(f"! Total count: {count:,}")
     return "\n".join(lines) + "\n"
@@ -303,7 +376,7 @@ def _hdr_adblock(count: int, title: str, desc: str, now: str) -> str:
 def _write_fmt(
     fmt: str, out: Path,
     simple: List[str], deduped: List[str],
-    title: str, desc: str, now: str,
+    title: str, desc: str,
 ) -> Tuple[str, int]:
     """按 formats.yaml 中的格式定义生成单个规则文件。"""
     spec = _get_formats().get(fmt)
@@ -329,9 +402,9 @@ def _write_fmt(
         if pre_hdr and prefix:
             f.write(prefix)
         if header == "simple":
-            f.write(_hdr(len(values), tool, desc, now, "#"))
+            f.write(_hdr(len(values), tool, desc, "#"))
         elif header == "adblock":
-            f.write(_hdr_adblock(len(values), title, desc, now))
+            f.write(_hdr_adblock(len(values), title, desc))
         if not pre_hdr and prefix:
             f.write(prefix)
         for x in values:
@@ -344,19 +417,18 @@ def _write_fmt(
 def _save(
     simple: Set[str], deduped: Set[str],
     out: Path, title: str, desc: str,
-    formats: List[str], tz: str,
+    formats: List[str],
     log_file: Optional[Path] = None,
 ) -> Dict[str, int]:
     if not simple and not deduped:
         log(f"警告：没有域名可保存（{out.name}）", LogLevel.ERROR, log_file)
         return {}
     out.mkdir(parents=True, exist_ok=True)
-    now = datetime.datetime.now(ZoneInfo(tz)).strftime("%Y-%m-%d %H:%M:%S %Z")
     ss, dd = sorted(simple), sorted(deduped)
     counts: Dict[str, int] = {}
     fmt_registry = _get_formats()
     for fmt in formats:
-        fname, count = _write_fmt(fmt, out, ss, dd, title, desc, now)
+        fname, count = _write_fmt(fmt, out, ss, dd, title, desc)
         counts[fmt] = count
         note = "（去重）" if fmt_registry.get(fmt, {}).get("dedup") else ""
         log(f"  OK {fname}（{count:,} 条{note}）", log_file=log_file)
@@ -385,7 +457,7 @@ def _group_readme(
     ts          = now.strftime("%Y-%m-%d %H:%M:%S")
     fmt_registry = _get_formats()
 
-    rows: List[Tuple[str, str, str, str, str, str]] = []
+    rows: List[Tuple[str, str, str, str, str, str, str]] = []
     for fmt, count in fmt_counts.items():
         spec = fmt_registry.get(fmt)
         fname = spec.get("filename") if spec else None
@@ -414,6 +486,18 @@ def _group_readme(
                 f"[Fastly]({fastly_c})" if fastly_c else "—",
                 f"[ghproxy]({ghp_c})",
             ))
+
+    # Adblock 聚合组等不走 formats.yaml 的自定义产出文件
+    for fname, count in data.get("custom_files", []):
+        if not (group_dir / fname).exists():
+            continue
+        raw_url = f"{raw_base.rstrip('/')}/{cfg_key}/{fname}"
+        cdn_url, fastly_url = _jsd_url(raw_url)
+        ghp_url = f"{ghproxy.rstrip('/')}/{raw_url}"
+        cdn    = f"[CDN]({cdn_url})"    if cdn_url    else "—"
+        fastly = f"[Fastly]({fastly_url})" if fastly_url else "—"
+        ghp    = f"[ghproxy]({ghp_url})"
+        rows.append((fname, f"{count:,}", "OK", f"[↓]({raw_url})", cdn, fastly, ghp))
 
     lines: List[str] = [f"# {title}", ""]
     if desc:
@@ -450,6 +534,8 @@ def _main_readme(all_stats: Dict, now: datetime.datetime) -> None:
     )
     for cfg_key, data in visible:
         fmts = " - ".join(fmt_registry.get(f, {}).get("label", f) for f in data.get("format_counts", {}))
+        if not fmts and data.get("custom_files"):
+            fmts = "Adblock"
         lines.append(
             f"- **{data['title']}** — {data.get('description', '')}  \n"
             f"  `{fmts}` - [查看详情](data/rules/{cfg_key})"
@@ -494,12 +580,22 @@ def _parse_src(entry) -> Optional[Dict]:
         s = entry.strip()
         if s.startswith(("http://", "https://")):
             return {"kind": "url", "url": s, "mode": ExtractMode.COMMON, "validate": True}
+        if s.startswith(_LOCAL_PREFIX):
+            return {"kind": "local", "path": s[len(_LOCAL_PREFIX):].strip(),
+                     "mode": ExtractMode.COMMON, "validate": True}
         if s.startswith("@"):
             return {"kind": "group", "key": s[1:]}
         if s:
             return {"kind": "named", "name": s}
     elif isinstance(entry, dict):
-        url = (entry.get("url") or "").strip()
+        local = (entry.get("local") or "").strip()
+        url   = (entry.get("url") or "").strip()
+        if local:
+            return {
+                "kind": "local", "path": local,
+                "mode": _parse_mode(entry.get("mode")),
+                "validate": bool(entry.get("validate", True)),
+            }
         if url:
             return {
                 "kind": "url", "url": url,
@@ -526,18 +622,52 @@ def _load_config(path: Path) -> Tuple[Dict, List[Dict], Dict[str, Dict]]:
     named: Dict[str, Dict] = {}
     for name, cfg in sources_raw.items():
         if isinstance(cfg, str) and cfg.strip():
-            named[name] = {"url": cfg.strip(), "mode": ExtractMode.COMMON, "validate": True}
-        elif isinstance(cfg, dict) and (cfg.get("url") or "").strip():
-            named[name] = {
-                "url":      cfg["url"].strip(),
-                "mode":     _parse_mode(cfg.get("mode")),
-                "validate": bool(cfg.get("validate", True)),
-            }
+            s = cfg.strip()
+            if s.startswith(_LOCAL_PREFIX):
+                named[name] = {"kind": "local", "path": s[len(_LOCAL_PREFIX):].strip(),
+                               "mode": ExtractMode.COMMON, "validate": True}
+            else:
+                named[name] = {"kind": "url", "url": s, "mode": ExtractMode.COMMON, "validate": True}
+        elif isinstance(cfg, dict):
+            local = (cfg.get("local") or "").strip()
+            url   = (cfg.get("url") or "").strip()
+            if local:
+                named[name] = {
+                    "kind": "local", "path": local,
+                    "mode": _parse_mode(cfg.get("mode")),
+                    "validate": bool(cfg.get("validate", True)),
+                }
+            elif url:
+                named[name] = {
+                    "kind": "url", "url": url,
+                    "mode": _parse_mode(cfg.get("mode")),
+                    "validate": bool(cfg.get("validate", True)),
+                }
 
     groups = []
     for idx, (key, cfg) in enumerate(data.items()):
         if not isinstance(cfg, dict):
             continue
+        enabled = bool(cfg.get("enabled", cfg.get("enable", True)))
+        is_adblock = "sources" in cfg and "rules" not in cfg
+
+        if is_adblock:
+            groups.append({
+                "cfg_key":            key,
+                "idx":                idx,
+                "kind":               "adblock",
+                "enabled":            enabled,
+                "title":              cfg.get("title", ""),
+                "description":        cfg.get("description", ""),
+                "sources":            cfg.get("sources") or [],
+                "exclude_pure_domain": bool(cfg.get("exclude_pure_domain", True)),
+                "output_enabled":     True,
+                "dedup_subdomain":    None,
+                "rules":              [],
+                "formats":            [],
+            })
+            continue
+
         fmts = cfg.get("formats")
         if fmts is None:
             enabled_out, fmts = False, []
@@ -549,13 +679,16 @@ def _load_config(path: Path) -> Tuple[Dict, List[Dict], Dict[str, Dict]]:
         groups.append({
             "cfg_key":         key,
             "idx":             idx,
-            "enabled":         bool(cfg.get("enabled", True)),
+            "kind":            "domain",
+            "enabled":         enabled,
             "dedup_subdomain": None if raw_dedup is None else bool(raw_dedup),
             "title":           cfg.get("title", ""),
             "description":     cfg.get("description", ""),
             "rules":           cfg.get("rules") or [],
             "formats":         fmts,
             "output_enabled":  enabled_out,
+            "sources":         [],
+            "exclude_pure_domain": False,
         })
 
     enabled_count = sum(1 for g in groups if g["enabled"])
@@ -573,6 +706,16 @@ def _validate(
 
     for g in groups:
         key, gidx = g["cfg_key"], g["idx"]
+
+        if g["kind"] == "adblock":
+            if not isinstance(g.get("sources"), list) or not g["sources"]:
+                errors.append(f"Adblock 聚合组 '{key}' sources 不能为空")
+            else:
+                for u in g["sources"]:
+                    if not isinstance(u, str) or not u.strip():
+                        errors.append(f"Adblock 聚合组 '{key}' sources 含无效条目：{u!r}")
+            continue
+
         for fmt in g.get("formats", []):
             if fmt not in known_formats:
                 errors.append(f"规则组 '{key}' formats 包含未知格式：'{fmt}'")
@@ -594,6 +737,8 @@ def _validate(
                     errors.append(f"规则组 '{key}' rules[{ri}] source 无法识别：{entry!r}")
                 elif p["kind"] == "named" and p["name"] not in named:
                     errors.append(f"规则组 '{key}' rules[{ri}] source '{p['name']}' 未定义")
+                elif p["kind"] == "local" and not Path(p["path"]).is_file():
+                    errors.append(f"规则组 '{key}' rules[{ri}] 本地文件不存在：{p['path']}")
                 elif p["kind"] == "group":
                     ref = idx_map.get(p["key"])
                     if ref is None:
@@ -614,7 +759,6 @@ def _process(
     out_root: Path,
     all_stats: Dict,
     log_file: Path,
-    tz: str,
 ) -> None:
     key    = group["cfg_key"]
     gidx   = group["idx"]
@@ -646,6 +790,10 @@ def _process(
                 s = dl.get(p["url"], set())
                 rd.update(s)
                 log(f"  |    url：{len(s):,} <- {p['url']}", log_file=log_file)
+            elif p["kind"] == "local":
+                s = dl.get(_LOCAL_PREFIX + p["path"], set())
+                rd.update(s)
+                log(f"  |    local：{len(s):,} <- {p['path']}", log_file=log_file)
             elif p["kind"] == "named":
                 s = dl.get(p["name"], set())
                 rd.update(s)
@@ -712,7 +860,7 @@ def _process(
     gdir = out_root / key
     gdir.mkdir(parents=True, exist_ok=True)
     try:
-        fmt_counts = _save(cur, dd, gdir, title, desc, fmts, tz, log_file)
+        fmt_counts = _save(cur, dd, gdir, title, desc, fmts, log_file)
     except Exception as e:
         log(f"规则文件生成失败 [{key}]：{e}", LogLevel.ERROR, log_file)
         fmt_counts = {}
@@ -722,6 +870,149 @@ def _process(
     all_stats[key] = {"idx": gidx, "title": title, "description": desc,
                       "output_enabled": True, "final_count": len(dd),
                       "format_counts": fmt_counts, "dedup_forced_off": forced_off}
+
+
+# ─────────────────────────── Adblock 规则聚合（元素隐藏 + 网络规则） ───────────
+
+_CSS_RE         = re.compile(r'##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#')
+_GENERIC_CSS_RE = re.compile(r'^(##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#)')
+_COMMENT_RE     = re.compile(r'^\s*[!\[]')
+# 「纯域名拦截规则」：||domain^ 及其只做整域封锁、不带更细粒度匹配条件的简单变体。
+# 带 $domain=、$script、$xmlhttprequest 等精细选项的不算「纯」，予以保留。
+_PURE_DOMAIN_RE = re.compile(
+    r'^\|\|[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?'
+    r'(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?)+\^'
+    r'(\$(third-party|important|all|badfilter)(,(third-party|important|all|badfilter))*)?$'
+)
+
+
+def _classify_adblock_lines(text: str) -> Tuple[List[str], List[str], List[str], int]:
+    generic_css: List[str] = []
+    domain_css:  List[str] = []
+    url_rules:   List[str] = []
+    seen: Set[str] = set()
+    pure_domain_dropped = 0
+
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or _COMMENT_RE.match(line):
+            continue
+        if line in seen:
+            continue
+        seen.add(line)
+
+        if _CSS_RE.search(line):
+            (generic_css if _GENERIC_CSS_RE.match(line) else domain_css).append(line)
+        else:
+            if not line.startswith("@@") and _PURE_DOMAIN_RE.match(line):
+                pure_domain_dropped += 1
+                continue
+            url_rules.append(line)
+
+    return generic_css, domain_css, url_rules, pure_domain_dropped
+
+
+def _dedup_keep_order(items: List[str]) -> List[str]:
+    seen: Set[str] = set()
+    out: List[str] = []
+    for x in items:
+        if x not in seen:
+            seen.add(x)
+            out.append(x)
+    return out
+
+
+def _process_adblock(
+    group: Dict, out_root: Path, all_stats: Dict, log_file: Path,
+) -> None:
+    key   = group["cfg_key"]
+    title = group.get("title", "")
+    desc  = group.get("description", "")
+    urls  = group.get("sources", [])
+    exclude_pure = group.get("exclude_pure_domain", True)
+
+    t0 = time.time()
+    log("=" * 70, log_file=log_file)
+    log(f"处理 Adblock 聚合组：{title or key} ({key})", log_file=log_file)
+    log("=" * 70, log_file=log_file)
+
+    texts = _download_raw_texts(urls, log_file)
+
+    generic_css: List[str] = []
+    domain_css:  List[str] = []
+    url_rules:   List[str] = []
+    dropped_total = 0
+
+    for url in urls:
+        text = texts.get(url, "")
+        if not text:
+            continue
+        g, d, u, dropped = _classify_adblock_lines(text)
+        generic_css.extend(g)
+        domain_css.extend(d)
+        url_rules.extend(u)
+        if exclude_pure:
+            dropped_total += dropped
+        else:
+            # 不剔除时，把「纯域名规则」并回网络规则里
+            pass
+        log(
+            f"  |  {url}：元素 {len(g)+len(d):,}（通用 {len(g):,}/域名限定 {len(d):,}），"
+            f"网络 {len(u):,}，丢弃纯域名 {dropped if exclude_pure else 0:,}",
+            log_file=log_file,
+        )
+
+    generic_css = _dedup_keep_order(generic_css)
+    domain_css  = _dedup_keep_order(domain_css)
+    url_rules   = _dedup_keep_order(url_rules)
+
+    gdir = out_root / key
+    gdir.mkdir(parents=True, exist_ok=True)
+    fname = "adblock.txt"
+    total = len(generic_css) + len(domain_css) + len(url_rules)
+
+    with (gdir / fname).open("w", encoding="utf-8") as f:
+        f.write("[Adblock Plus 2.0]\n")
+        if title:
+            f.write(f"! Title: {title}\n")
+        if desc:
+            f.write(f"! Description: {desc}\n")
+        f.write("! Homepage: https://github.com/cjchxgxhc/domain-filter\n")
+        f.write("! Expires: 1 days (update frequency)\n")
+        f.write(
+            f"! Element hiding rules: {len(generic_css)+len(domain_css):,} "
+            f"(generic: {len(generic_css):,}, domain-specific: {len(domain_css):,})\n"
+        )
+        f.write(f"! URL / network rules: {len(url_rules):,}\n")
+        if exclude_pure:
+            f.write(f"! Pure domain-block rules excluded: {dropped_total:,}\n")
+        f.write("!\n")
+        f.write("!" + "-" * 76 + "!\n")
+        f.write("! Element hiding rules (generic rules first)\n")
+        f.write("!" + "-" * 76 + "!\n")
+        for x in generic_css:
+            f.write(x + "\n")
+        for x in domain_css:
+            f.write(x + "\n")
+        f.write("!\n")
+        f.write("!" + "-" * 76 + "!\n")
+        f.write(
+            "! URL / network rules (pure domain-block rules excluded)\n"
+            if exclude_pure else "! URL / network rules\n"
+        )
+        f.write("!" + "-" * 76 + "!\n")
+        for x in url_rules:
+            f.write(x + "\n")
+
+    log(f"  OK {fname}（{total:,} 条，丢弃纯域名 {dropped_total:,}）", log_file=log_file)
+    log(f"  `- 完毕，耗时 {time.time()-t0:.2f}s", log_file=log_file)
+
+    all_stats[key] = {
+        "idx": group["idx"], "title": title, "description": desc,
+        "output_enabled": True, "final_count": total,
+        "format_counts": {}, "dedup_forced_off": False,
+        "custom_files": [(fname, total)],
+    }
 
 
 def main() -> None:
@@ -738,7 +1029,7 @@ def main() -> None:
 
     out_root = Path(global_cfg.get("output_root", "data/rules"))
     tz       = global_cfg.get("timezone",  "Asia/Shanghai")
-    raw_base = global_cfg.get("raw_base",  "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules")
+    raw_base = global_cfg.get("raw_base",  "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules")
     ghproxy  = global_cfg.get("ghproxy",   "https://ghproxy.net/")
 
     out_root.mkdir(parents=True, exist_ok=True)
@@ -753,38 +1044,63 @@ def main() -> None:
 
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
 
-    src_cfgs: Dict[str, Dict] = {s["url"]: s for s in named.values()}
+    src_cfgs:   Dict[str, Dict] = {}
+    local_cfgs: Dict[str, Dict] = {}
+
+    for sname, cfg in named.items():
+        if cfg["kind"] == "local":
+            local_cfgs.setdefault(_LOCAL_PREFIX + cfg["path"], cfg)
+        else:
+            src_cfgs.setdefault(cfg["url"], cfg)
+
     for g in groups:
+        if g["kind"] != "domain":
+            continue
         for rule in g.get("rules", []):
             if not isinstance(rule, dict):
                 continue
             for entry in rule.get("source") or []:
                 p = _parse_src(entry)
-                if not p or p["kind"] != "url":
+                if not p:
                     continue
-                url = p["url"]
-                if url in src_cfgs:
-                    ex = src_cfgs[url]
-                    if ex["mode"] != p["mode"] or ex["validate"] != p["validate"]:
-                        log(
-                            f"警告：'{url}' 多次内联且 mode/validate 不同，"
-                            f"使用首次配置（mode={ex['mode'].value}, validate={ex['validate']}）",
-                            LogLevel.WARNING, log_file,
-                        )
-                else:
-                    src_cfgs[url] = p
+                if p["kind"] == "url":
+                    url = p["url"]
+                    if url in src_cfgs:
+                        ex = src_cfgs[url]
+                        if ex["mode"] != p["mode"] or ex["validate"] != p["validate"]:
+                            log(
+                                f"警告：'{url}' 多次内联且 mode/validate 不同，"
+                                f"使用首次配置（mode={ex['mode'].value}, validate={ex['validate']}）",
+                                LogLevel.WARNING, log_file,
+                            )
+                    else:
+                        src_cfgs[url] = p
+                elif p["kind"] == "local":
+                    key = _LOCAL_PREFIX + p["path"]
+                    if key in local_cfgs:
+                        ex = local_cfgs[key]
+                        if ex["mode"] != p["mode"] or ex["validate"] != p["validate"]:
+                            log(
+                                f"警告：本地文件 '{p['path']}' 多次内联且 mode/validate 不同，"
+                                f"使用首次配置（mode={ex['mode'].value}, validate={ex['validate']}）",
+                                LogLevel.WARNING, log_file,
+                            )
+                    else:
+                        local_cfgs[key] = p
 
     # 下载 + 提取融合为一步（按源并发，不必等全部下载完才开始提取），不做跨次运行缓存
     dl: Dict[str, Set[str]] = {}
     try:
-        dl = _download_and_extract(src_cfgs, log_file)
+        dl.update(_download_and_extract(src_cfgs, log_file))
+        dl.update(_read_and_extract_local(local_cfgs, log_file))
     except Exception as e:
         log(f"下载/提取失败：{e}", LogLevel.ERROR, log_file)
         log(traceback.format_exc(), LogLevel.ERROR, log_file)
         sys.exit(1)
 
     for sname, cfg in named.items():
-        dl[sname] = dl.get(cfg["url"], set())
+        key = (_LOCAL_PREFIX + cfg["path"]) if cfg["kind"] == "local" else cfg["url"]
+        dl[sname] = dl.get(key, set())
         log(f"  {sname}：{len(dl[sname]):,} 条 [{cfg['mode'].value}]", log_file=log_file)
 
     cache: Dict[int, Set[str]] = {}
@@ -799,7 +1115,10 @@ def main() -> None:
             log(f"  跳过（已禁用）：{g['cfg_key']}", log_file=log_file)
             continue
         try:
-            _process(g, dl, cache, idx_map, out_root, all_stats, log_file, tz)
+            if g["kind"] == "adblock":
+                _process_adblock(g, out_root, all_stats, log_file)
+            else:
+                _process(g, dl, cache, idx_map, out_root, all_stats, log_file)
         except Exception as e:
             log(f"规则组异常 [{g['cfg_key']}]：{e}", LogLevel.ERROR, log_file)
             log(traceback.format_exc(), LogLevel.ERROR, log_file)
