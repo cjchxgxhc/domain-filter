@@ -9,17 +9,22 @@
 #   match          → 仅保留与规则精确匹配的域名
 #   match_suffix   → 仅保留被规则父域名覆盖的域名
 #
-# rules 中 source 字段支持三种写法：
+# rules 中 source 字段支持四种写法：
 #   - src_name                         → 引用 sources 中的命名源
 #   - https://example.com/list.txt     → 内联 URL（mode=common, validate=true）
+#   - local:data/self/xxx.txt          → 内联本地文件（相对仓库根目录，mode=common, validate=true）
+#                                          用于引用仓库自身维护的名单，直接读盘，不经网络，
+#                                          避免通过 raw.githubusercontent.com 回环拉取自己仓库
+#                                          （刚提交还没生效时会 404 或读到旧内容）。
 #   - "@group_key"                       → 引用前置规则组的处理结果
 #   - url: https://...                 → 内联 URL 完整写法，可指定 mode / validate
 #     mode: skip
 #
 # sources 支持两种写法：
 #   name: https://...                  → 单行，mode=common, validate=true
+#   name: local:data/self/xxx.txt      → 单行本地文件
 #   name:                              → 完整写法，validate 默认 true
-#     url: https://...
+#     url: https://...                 → 或写 local: data/self/xxx.txt
 #     mode: skip | adblockwhite | common
 #     validate: false                  → 仅需关闭校验时才写
 #
@@ -30,13 +35,24 @@
 # dedup_subdomain（可选，与 title 同层）：
 #   true  → 强制去重   false → 强制不去重   不写 → 按格式自动判断
 #   domain / hosts / hostsipv6 默认不去重，其余格式默认去重
+#
+# enabled（可选，别名 enable，与 title 同层，默认 true）：
+#   写 false 即可整组跳过（既不下载/处理，也不产出文件、不出现在 README 中）。
+#   例：
+#     some_group:
+#       enabled: false
+#       ...
+#
+# 规则组还支持另一种「Adblock 聚合组」写法（见文末 adblock_extra 示例）：
+#   只要组内有 sources 而没有 rules，就会被识别为聚合组，走独立的处理逻辑，
+#   直接聚合 uBlock/ABP 格式规则文本（不是域名），产出元素隐藏 + 网络规则。
 
 
 # ──────────────────────────── 全局配置 ────────────────────────────────────────
 
 global:
   repo_url:    https://github.com/cjchxgxhc/domain-filter
-  raw_base:    https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules
+  raw_base:    https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules
   ghproxy:     https://ghproxy.net/
   timezone:    Asia/Shanghai
   output_root: data/rules
@@ -49,10 +65,6 @@ sources:
     url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
     mode: common
     validate: false
-  src_big_hosts:
-    url: https://github.com/Potterli20/file/releases/download/ad-hosts-pro/ad-domains.txt
-    mode: skip
-    validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
 
@@ -63,44 +75,24 @@ ads_white:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/whitelist.txt
+        - local:data/self/ads/whitelist.txt
     - type: discard
       source:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/ads_specific.txt
+        - local:data/self/ads/ads_specific.txt
 
 ads:
   title: Ads
   description: 喵喵喵。
-  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard]
+  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard, hosts]
   rules:
     - type: add
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/addlist.txt
+        - local:data/self/ads/addlist.txt
     - type: discard
       source:
         - "@ads_white"
-
-
-ads_hosts:
-  title: Ads Hosts
-  description: hosts格式喵。
-  formats: [hosts]
-  rules:
-    - type: add
-      source:
-        - src_big_hosts
-    - type: match_suffix
-      source:
-        - "@ads"
-    - type: discard_suffix
-      source:
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_domain.txt
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/ads/useless_suffix.txt
-    - type: add
-      source:
-        - "@ads"
 
 
 ads_big:
@@ -131,9 +123,9 @@ proxy:
         - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
         - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/FlClash_IP_Check.txt
+        - local:data/self/FlClash_IP_Check.txt
         - src_proxy_tld
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/proxy/addlist.txt
+        - local:data/self/proxy/addlist.txt
 
 
 direct_fix:
@@ -150,6 +142,29 @@ direct_fix:
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
-        - https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/self/direct_fix/addlist.txt
+        - local:data/self/direct_fix/addlist.txt
     - type: discard_suffix
       domain: [bing.com, bing.net]
+
+
+# ──────────────────────────── Adblock 规则聚合（元素隐藏 + 网络规则）──────────
+# 与上面基于域名的 rules 体系不同，这里直接聚合 uBlock/ABP 格式的规则文本本身，
+# 保留元素隐藏规则、以及带路径/参数/选项的网络规则；
+# 「纯域名拦截规则」（如 ||example.com^、||example.com^$important 这种只做
+# 整域名封锁、没有更细粒度匹配条件的规则）默认会被剔除，因为这部分已经由上面
+# 基于域名的 ads / ads_big 等组覆盖，没必要重复维护两份。
+# exclude_pure_domain 设为 false 可以关闭这个剔除行为。
+
+adblock_extra:
+  enabled: true
+  title: Adblock Extra Rules
+  description: 元素隐藏规则与非域名网络规则聚合（已剔除纯域名拦截规则）
+  exclude_pure_domain: true
+  sources:
+    - https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt   # AdGuard Base filter (精简版)
+    - https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt  # AdGuard Mobile Ads filter (精简版)
+    - https://filters.adtidy.org/extension/ublock/filters/17.txt            # AdGuard URL Tracking Protection
+    - https://easylist.to/easylist/easyprivacy.txt                          # EasyPrivacy
+    - https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt   # AdGuard Social Widgets filter (精简版)
+    - https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt  # AdGuard Annoyances filter (精简版)
+    - https://filters.adtidy.org/extension/ublock/filters/224.txt           # AdGuard Chinese filter
