@@ -9,6 +9,7 @@ env:
   MIHOMO_VERSION:   1.19.3
   SINGBOX_VERSION:  1.11.0
   TOOLS_DIR:        data/tools
+  RULE_BRANCH:      rule
 
 jobs:
   build:
@@ -20,7 +21,7 @@ jobs:
       actions: write
 
     steps:
-      # ── 检出 ─────────────────────────────────────────────────────────────────
+      # ── 检出（只检出脚本/配置所在的主分支，不带规则数据）────────────────────
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -82,11 +83,9 @@ jobs:
           rm -rf sing-box-${{ env.SINGBOX_VERSION }}-linux-amd64/
           echo "✓ sing-box v${{ env.SINGBOX_VERSION }} 就绪"
 
-      # ── 清理旧输出 ────────────────────────────────────────────────────────────
-      - name: Clean old output
-        run: rm -rf data/rules README.md
-
       # ── 1. 运行主过滤脚本 ──────────────────────────────────────────────────────
+      # 不再预先 rm -rf data/rules：产物最终只会与 rule 分支现有内容做 rsync --delete
+      # 同步，没变化的文件天然不会出现在 commit 里；组被禁用/删除时会被自动清理。
       - name: Run filter.py
         run: |
           python data/script/filter.py
@@ -118,26 +117,60 @@ jobs:
           done
           echo "✓ 编译 $count 个 SRS 文件"
 
-      # ── 检查变更 ──────────────────────────────────────────────────────────────
-      - name: Check for changes
-        id: check_changes
+      # ── 4. 把产物同步到独立的 rule 分支并提交 ─────────────────────────────────
+      # rule 分支只放生成结果（data/rules + README.md），主分支只放脚本/配置/
+      # 缓存的工具二进制，两者互不干扰；rsync --delete 让 git diff 只反映真实
+      # 内容变化，组被禁用/删除时旧目录也会被自动清理，无需在脚本里额外维护。
+      - name: Sync rules to rule branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add data/rules/ data/tools/ README.md 2>/dev/null || true
-          if git diff --staged --quiet; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ 无变更"
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          RULE_DIR="$RUNNER_TEMP/rule-branch"
+          rm -rf "$RULE_DIR"
+          REMOTE_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+          if git ls-remote --exit-code --heads "$REMOTE_URL" "${{ env.RULE_BRANCH }}" >/dev/null 2>&1; then
+            git clone --depth 1 --branch "${{ env.RULE_BRANCH }}" "$REMOTE_URL" "$RULE_DIR"
           else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "✓ 检测到变更"
+            git clone --depth 1 "$REMOTE_URL" "$RULE_DIR"
+            git -C "$RULE_DIR" checkout --orphan "${{ env.RULE_BRANCH }}"
+            git -C "$RULE_DIR" rm -rf . >/dev/null 2>&1 || true
           fi
 
-      # ── 提交推送 ──────────────────────────────────────────────────────────────
-      - name: Commit and push
+          mkdir -p "$RULE_DIR/data"
+          rsync -a --delete data/rules/ "$RULE_DIR/data/rules/"
+          cp README.md "$RULE_DIR/README.md"
+
+          cd "$RULE_DIR"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "ℹ️ 规则内容无变更，跳过提交"
+          else
+            git commit -m "chore: update rules $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin HEAD:"${{ env.RULE_BRANCH }}"
+            echo "✓ 已提交并推送到 ${{ env.RULE_BRANCH }} 分支"
+          fi
+
+      # ── 5. 主分支只提交缓存的工具二进制（脚本/配置改动由人工提交）───────────
+      - name: Check tool cache changes
+        id: check_changes
+        run: |
+          git add ${{ env.TOOLS_DIR }} 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 工具缓存无变更"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✓ 检测到工具缓存变更"
+          fi
+
+      - name: Commit tool cache
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update rules & tools $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "chore: cache mihomo/sing-box binaries $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
           echo "✓ 已提交并推送"
 
