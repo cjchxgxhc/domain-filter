@@ -65,6 +65,10 @@ sources:
     url: https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.list
     mode: common
     validate: false
+  src_useless_tld:
+    url: local:data/self/ads/useless_tld.txt
+    mode: common
+    validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
 
 
@@ -107,6 +111,10 @@ ads_big:
         - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
         - "@ads"
+    - type: discard_suffix
+      source:
+        - src_useless_tld
+        - local:data/self/ads/useless_domain.txt
     - type: discard
       source:
         - "@ads_white"
