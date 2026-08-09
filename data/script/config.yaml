@@ -138,13 +138,10 @@ direct_fix:
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/NTPService/NTPService.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GoogleFCM/GoogleFCM.list
-        - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.list
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Notion/Notion_No_Resolve.yaml
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.list
         - https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.list
         - local:data/self/direct_fix/addlist.txt
-    - type: discard_suffix
-      domain: [bing.com, bing.net]
 
 
 # ──────────────────────────── Adblock 规则聚合（元素隐藏 + 网络规则）──────────
