@@ -42,7 +42,7 @@ formats:
     dedup: false
     header: simple
     lines:
-      - "127.0.0.1 {domain}"
+      - "0.0.0.0 {domain}"
 
   hostsipv6:
     label: "Hosts IPv6"
