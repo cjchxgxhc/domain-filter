@@ -1,6 +1,6 @@
 # Domain Filter
 
-![Updated](https://img.shields.io/badge/Updated-2026--08--09_17:05:10-brightgreen?style=flat-square)
+![Updated](https://img.shields.io/badge/Updated-2026--08--09_17:57:57-brightgreen?style=flat-square)
 
 ## 规则列表
 
@@ -15,5 +15,5 @@
 - **Adblock Extra Rules** — 元素隐藏规则与非域名网络规则聚合（已剔除纯域名拦截规则）  
   `Adblock` - [查看详情](data/rules/adblock_extra)
 
-*2026-08-09 17:05:10 (CST)*
+*2026-08-09 17:57:57 (CST)*
 
