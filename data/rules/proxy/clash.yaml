@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,599
+# 适用：Clash  规则数：23,601
 #
 payload:
   - +.000webhost.com
@@ -1019,6 +1019,7 @@ payload:
   - +.aibaobei.me
   - +.aicoin.com
   - +.aig
+  - +.aihub.top
   - +.aimei133.com
   - +.aimoon.com
   - +.aimsciences.org
@@ -7009,6 +7010,7 @@ payload:
   - +.eset.systems
   - +.esetsoftware.com
   - +.esforce.com
+  - +.esim.redteago.com
   - +.eskimotube.com
   - +.eslite.com
   - +.esm.run

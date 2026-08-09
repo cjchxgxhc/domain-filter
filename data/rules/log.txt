@@ -1,7 +1,7 @@
 开始执行
 下载并提取（21 个源）...
 [WARNING]   FAIL local:data/self/ads/useless_tld.txt：No connection adapters were found for 'local:data/self/ads/useless_tld.txt'
-完成：20 个成功，1 个失败，耗时 1.08s
+完成：20 个成功，1 个失败，耗时 1.04s
 读取本地文件（7 个）...
   OK data/self/ads/whitelist.txt：27 条 [common]
   OK data/self/ads/ads_specific.txt：6 条 [common]
@@ -10,7 +10,7 @@
   OK data/self/FlClash_IP_Check.txt：7 条 [common]
   OK data/self/proxy/addlist.txt：11 条 [common]
   OK data/self/direct_fix/addlist.txt：18 条 [common]
-完成：7 个成功，0 个失败，耗时 0.17s
+完成：7 个成功，0 个失败，耗时 0.15s
   src_proxy_tld：829 条 [common]
   src_useless_tld：0 条 [skip]
 ================================================================================
@@ -56,7 +56,7 @@
   OK smartdns.conf（5,936 条（去重））
   OK wildcard.txt（5,936 条（去重））
   OK hosts.txt（7,502 条）
-  `- 输出 5,936 条，耗时 0.07s
+  `- 输出 5,936 条，耗时 0.08s
 ======================================================================
 处理规则组：Ads Big (ads_big)
 ======================================================================
@@ -64,48 +64,48 @@
   |    url：13,601 <- https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
   |    url：17,123 <- https://raw.githubusercontent.com/lingeringsound/10007/refs/heads/main/all
   |    url：110,862 <- https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-  |    url：191,402 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
+  |    url：191,500 <- https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
   |    @ads：7,502
-  |    共 239,368 条
-  |    -> 加入 239,368（合计 239,368）
+  |    共 239,466 条
+  |    -> 加入 239,466（合计 239,466）
   |  rules[1] type=discard_suffix
   |    named：0 <- src_useless_tld
   |    local：129,040 <- data/self/ads/useless_domain.txt
   |    共 129,040 条
-  |    -> 后缀丢弃 75,890（剩余 163,478）
+  |    -> 后缀丢弃 75,890（剩余 163,576）
   |  rules[2] type=discard
   |    @ads_white：751
   |    共 751 条
-  |    -> 精确丢弃 191（剩余 163,287）
-  |  完毕，共 163,287 条
+  |    -> 精确丢弃 191（剩余 163,385）
+  |  完毕，共 163,385 条
   |  子域去重：移除 15,367
-  OK adblock.txt（147,920 条（去重））
-  OK smartdns.conf（147,920 条（去重））
-  OK wildcard.txt（147,920 条（去重））
-  `- 输出 147,920 条，耗时 0.83s
+  OK adblock.txt（148,018 条（去重））
+  OK smartdns.conf（148,018 条（去重））
+  OK wildcard.txt（148,018 条（去重））
+  `- 输出 148,018 条，耗时 0.83s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
   |  rules[0] type=add
-  |    url：26,184 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
+  |    url：26,186 <- https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.list
   |    url：26,878 <- https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
   |    url：34,759 <- https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
   |    url：16,119 <- https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
   |    local：7 <- data/self/FlClash_IP_Check.txt
   |    named：829 <- src_proxy_tld
   |    local：11 <- data/self/proxy/addlist.txt
-  |    共 37,780 条
-  |    -> 加入 37,780（合计 37,780）
-  |  完毕，共 37,780 条
+  |    共 37,782 条
+  |    -> 加入 37,782（合计 37,782）
+  |  完毕，共 37,782 条
   |  子域去重：移除 14,181
-  OK clash.yaml（23,599 条（去重））
-  OK singbox.json（23,599 条（去重））
-  OK quantumultx.list（23,599 条（去重））
-  OK shadowrocket.list（23,599 条（去重））
-  OK surge.list（23,599 条（去重））
-  OK domain.txt（37,780 条）
-  OK wildcard.txt（23,599 条（去重））
-  `- 输出 23,599 条，耗时 0.17s
+  OK clash.yaml（23,601 条（去重））
+  OK singbox.json（23,601 条（去重））
+  OK quantumultx.list（23,601 条（去重））
+  OK shadowrocket.list（23,601 条（去重））
+  OK surge.list（23,601 条（去重））
+  OK domain.txt（37,782 条）
+  OK wildcard.txt（23,601 条（去重））
+  `- 输出 23,601 条，耗时 0.18s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -128,22 +128,22 @@
   OK surge.list（437 条（去重））
   OK domain.txt（512 条）
   OK wildcard.txt（437 条（去重））
-  `- 输出 437 条，耗时 0.04s
+  `- 输出 437 条，耗时 0.05s
 ======================================================================
 处理 Adblock 聚合组：Adblock Extra Rules (adblock_extra)
 ======================================================================
-  |  https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt：元素 19,229（通用 3,976/域名限定 15,253），网络 5,801，丢弃纯域名 20,409
+  |  https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt：元素 19,229（通用 3,976/域名限定 15,253），网络 5,801，丢弃纯域名 20,558
   |  https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt：元素 6,257（通用 34/域名限定 6,223），网络 617，丢弃纯域名 917
   |  https://filters.adtidy.org/extension/ublock/filters/17.txt：元素 1（通用 0/域名限定 1），网络 2,573，丢弃纯域名 0
   |  https://easylist.to/easylist/easyprivacy.txt：元素 34（通用 2/域名限定 32），网络 9,114，丢弃纯域名 46,544
   |  https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt：元素 10,371（通用 935/域名限定 9,436），网络 442，丢弃纯域名 1
-  |  https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt：元素 27,605（通用 1,204/域名限定 26,401），网络 3,320，丢弃纯域名 174
-  |  https://filters.adtidy.org/extension/ublock/filters/224.txt：元素 8,970（通用 1,033/域名限定 7,937），网络 7,317，丢弃纯域名 6,031
-  OK adblock.txt（101,240 条，丢弃纯域名 74,076）
-  `- 完毕，耗时 1.82s
+  |  https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt：元素 27,606（通用 1,204/域名限定 26,402），网络 3,320，丢弃纯域名 174
+  |  https://filters.adtidy.org/extension/ublock/filters/224.txt：元素 8,970（通用 1,033/域名限定 7,937），网络 7,317，丢弃纯域名 6,033
+  OK adblock.txt（101,241 条，丢弃纯域名 74,227）
+  `- 完毕，耗时 1.88s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 4.25s
+OK 完成，总耗时 4.26s
 ================================================================================

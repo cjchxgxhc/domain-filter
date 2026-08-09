@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,599
+# 适用：QuantumultX  规则数：23,601
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -1018,6 +1018,7 @@ host-suffix,aiaa.org,reject
 host-suffix,aibaobei.me,reject
 host-suffix,aicoin.com,reject
 host-suffix,aig,reject
+host-suffix,aihub.top,reject
 host-suffix,aimei133.com,reject
 host-suffix,aimoon.com,reject
 host-suffix,aimsciences.org,reject
@@ -7008,6 +7009,7 @@ host-suffix,eset.com,reject
 host-suffix,eset.systems,reject
 host-suffix,esetsoftware.com,reject
 host-suffix,esforce.com,reject
+host-suffix,esim.redteago.com,reject
 host-suffix,eskimotube.com,reject
 host-suffix,eslite.com,reject
 host-suffix,esm.run,reject
