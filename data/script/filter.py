@@ -865,9 +865,13 @@ _UBO_CSS_RE      = re.compile(r'##|#@#|#\?#|#@\?#')
 _ADG_ONLY_CSS_RE = re.compile(r'#\$#|#@\$#|#%#|#@%#')
 # 任意一种「元素/脚本类」标记（用于先把这类规则和普通网络规则分开）
 _ANY_COSMETIC_RE = re.compile(r'##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#')
-_GENERIC_COSMETIC_RE = re.compile(r'^(##|#@#|#\?#|#@\?#)')  # 前面没有 domain 限定
+# 用于定位标记具体位置，从而拆出「域名限定部分」和「选择器部分」
+_UBO_MARKER_SPLIT_RE = re.compile(r'(##|#@#|#\?#|#@\?#)')
 _HTML_FILTER_RE  = re.compile(r'##\^')
 _SCRIPTLET_RE    = re.compile(r'#@?#\+js\(')
+# 通用（无 domain 限定）选择器里，纯裸标签/通配符的选择器（如 ##div、##*、
+# ##body）——站点级别一刀切隐藏整个标签，几乎总是垃圾/误配置规则，予以剔除。
+_BARE_TAG_SELECTOR_RE = re.compile(r'^(\*|[a-zA-Z][a-zA-Z0-9]*)$')
 
 _COMMENT_RE = re.compile(r'^\s*[!\[]')
 
@@ -888,15 +892,20 @@ _REGEX_FILTER_RE = re.compile(r'^(@@)?/.+/(\$[^$]*)?$')
 # 过宽，是 uBlock 明确警示的性能反模式，予以剔除。
 _MIN_UNANCHORED_PATTERN_LEN = 4
 
-# AdGuard 专属、uBlock 不支持（或语义不同）的网络规则选项，出现即整条剔除。
+# AdGuard 专属、uBlock 确定不支持的网络规则选项，出现即整条剔除。
+# 这个集合刻意收得比较窄：只放"确定不支持"的选项，避免把 uBlock 真正支持、
+# 只是不太常见的选项（比如 $removeparam 这种全局/纯选项写法）也一并误杀。
 _ADG_ONLY_NET_OPTIONS = {
-    "replace", "cookie", "hls", "jsonprune", "referrerpolicy",
-    "stealth", "extension", "app", "network",
+    "replace", "cookie", "hls", "jsonprune", "app", "extension",
 }
 
 
 def _is_low_value_network_rule(line: str) -> Optional[str]:
-    """返回丢弃原因（用于统计/日志），能保留则返回 None。"""
+    """返回丢弃原因（用于统计/日志），能保留则返回 None。
+
+    注意：纯选项、不带匹配主体的规则（如 `$removeparam=eml-name`）是 uBlock
+    里合法且常见的「全局规则」写法（对所有请求生效），不应该当成残缺规则剔除。
+    """
     body = line[2:] if line.startswith("@@") else line
 
     if not body.strip():
@@ -905,23 +914,22 @@ def _is_low_value_network_rule(line: str) -> Optional[str]:
     if _REGEX_FILTER_RE.match(line):
         return "正则规则（性能）"
 
-    # 网络规则选项部分
+    pattern_part = body
     opt_part = ""
     if "$" in body:
         pattern_part, _, opt_part = body.partition("$")
-    else:
-        pattern_part = body
+
+    if not pattern_part.strip() and not opt_part.strip():
+        return "空规则"
 
     if opt_part:
         opts = {o.split("=", 1)[0].strip().lstrip("~").lower() for o in opt_part.split(",") if o.strip()}
         hit = opts & _ADG_ONLY_NET_OPTIONS
         if hit:
             return f"AdGuard 专属选项（{','.join(sorted(hit))}）"
-        # 只有选项、没有匹配主体，且没有 domain= 限定 —— 视为不规范
-        if not pattern_part.strip() and not any(o.startswith("domain=") for o in opt_part.split(",")):
-            return "残缺规则（仅选项无匹配主体）"
 
-    # 未锚定的超短泛匹配：既不是 || 开头，也不是 | 开头，去掉通配符后太短
+    # 未锚定的超短泛匹配：既不是 || 开头，也不是 | 开头，去掉通配符后太短。
+    # pattern_part 为空（纯选项全局规则）不在此列剔除范围内。
     if pattern_part and not pattern_part.startswith(("||", "|")):
         core = pattern_part.strip("*^")
         if len(core) < _MIN_UNANCHORED_PATTERN_LEN:
@@ -930,11 +938,18 @@ def _is_low_value_network_rule(line: str) -> Optional[str]:
     return None
 
 
-def _classify_ubo_lines(text: str) -> Dict[str, object]:
+def _classify_ubo_lines(text: str, exclude_pure_domain: bool = True) -> Dict[str, object]:
     """把一份 uBlock/ABP 格式规则文本分类为：
       generic_css / domain_css   —— uBlock 支持的元素隐藏（含扩展 CSS/HTML 过滤/脚本注入）
       net_rules                  —— 网络规则（已剔除低质量/非标准/纯域名的）
     以及各类丢弃计数，供统计展示。
+
+    对通用（无 domain 限定）元素规则额外做两项清理：
+      - 通用白名单/例外规则（#@#、#@?# 且不带 domain）：脱离具体站点语境的
+        全局例外规则几乎没有实际意义，只会增加体积，予以剔除；
+      - 裸标签/通配符选择器（##div、##*、##body 这类）：站点级一刀切隐藏
+        整个标签，几乎总是垃圾或误配置规则，予以剔除。
+    这两项只针对「通用」规则；带 domain 限定的同类规则语境明确，予以保留。
     """
     generic_css: List[str] = []
     domain_css:  List[str] = []
@@ -943,6 +958,9 @@ def _classify_ubo_lines(text: str) -> Dict[str, object]:
 
     stats = {
         "adg_only_cosmetic": 0,   # AdGuard 专属元素/脚本注入语法
+        "malformed_cosmetic": 0,  # 选择器为空等残缺元素规则
+        "generic_exception": 0,   # 通用（无 domain）白名单/例外规则
+        "overbroad_generic": 0,   # 通用裸标签/通配符选择器
         "pure_domain":       0,   # 纯域名拦截规则
         "low_value_net":     0,   # 性能差/不规范的网络规则
         "html_filter":       0,   # 落在元素隐藏分类里的 HTML 过滤规则数（信息统计）
@@ -961,16 +979,44 @@ def _classify_ubo_lines(text: str) -> Dict[str, object]:
             if _ADG_ONLY_CSS_RE.search(line) and not _UBO_CSS_RE.search(line):
                 stats["adg_only_cosmetic"] += 1
                 continue
+
+            m = _UBO_MARKER_SPLIT_RE.search(line)
+            if not m:
+                stats["adg_only_cosmetic"] += 1
+                continue
+
+            domains_part = line[:m.start()]
+            marker       = m.group(1)
+            selector     = line[m.end():]
+
+            if not selector.strip():
+                stats["malformed_cosmetic"] += 1
+                continue
+
+            is_generic   = not domains_part.strip()
+            is_exception = marker in ("#@#", "#@?#")
+
+            if is_generic and is_exception:
+                stats["generic_exception"] += 1
+                continue
+            if is_generic and not is_exception and _BARE_TAG_SELECTOR_RE.match(selector.strip()):
+                stats["overbroad_generic"] += 1
+                continue
+
             if _HTML_FILTER_RE.search(line):
                 stats["html_filter"] += 1
             if _SCRIPTLET_RE.search(line):
                 stats["scriptlet"] += 1
-            (generic_css if _GENERIC_COSMETIC_RE.match(line) else domain_css).append(line)
+            (generic_css if is_generic else domain_css).append(line)
             continue
 
         # 网络规则
-        if _PURE_DOMAIN_RE.match(line) and not line.startswith("@@"):
+        is_pure_domain = bool(_PURE_DOMAIN_RE.match(line) and not line.startswith("@@"))
+        if is_pure_domain:
             stats["pure_domain"] += 1
+            if exclude_pure_domain:
+                continue
+            net_rules.append(line)
             continue
 
         reason = _is_low_value_network_rule(line)
@@ -1051,34 +1097,35 @@ def _process_adblock(
     generic_css: List[str] = []
     domain_css:  List[str] = []
     net_rules:   List[str] = []
-    totals = {"adg_only_cosmetic": 0, "pure_domain": 0, "low_value_net": 0,
-              "html_filter": 0, "scriptlet": 0}
+    totals = {
+        "adg_only_cosmetic": 0, "malformed_cosmetic": 0,
+        "generic_exception": 0, "overbroad_generic": 0,
+        "pure_domain": 0, "low_value_net": 0,
+        "html_filter": 0, "scriptlet": 0,
+    }
 
     for url in urls:
         text = texts.get(url, "")
         if not text:
             continue
-        r = _classify_ubo_lines(text)
+        r = _classify_ubo_lines(text, exclude_pure)
         generic_css.extend(r["generic_css"])
         domain_css.extend(r["domain_css"])
-        if exclude_pure:
-            net_rules.extend(r["net_rules"])
-        else:
-            # 不剔除纯域名规则时，把它们并回网络规则（此时不再单独统计丢弃）
-            net_rules.extend(r["net_rules"])
+        net_rules.extend(r["net_rules"])
         for k in totals:
             totals[k] += r[k]
         log(
             f"  |  {url}：元素 {len(r['generic_css'])+len(r['domain_css']):,}"
             f"（含 HTML过滤 {r['html_filter']:,}/脚本注入 {r['scriptlet']:,}），"
             f"网络 {len(r['net_rules']):,}，"
-            f"丢弃：AdGuard专属 {r['adg_only_cosmetic']:,}/纯域名 {r['pure_domain']:,}/"
-            f"低质量网络规则 {r['low_value_net']:,}",
+            f"丢弃：AdGuard专属 {r['adg_only_cosmetic']:,}/残缺 {r['malformed_cosmetic']:,}/"
+            f"通用白名单 {r['generic_exception']:,}/过泛通用选择器 {r['overbroad_generic']:,}/"
+            f"纯域名 {r['pure_domain'] if exclude_pure else 0:,}/低质量网络规则 {r['low_value_net']:,}",
             log_file=log_file,
         )
 
     if not exclude_pure:
-        totals["pure_domain"] = 0  # 保留时不计入“丢弃”统计
+        totals["pure_domain"] = 0  # 保留时不计入"丢弃"统计
 
     generic_css = _dedup_keep_order(generic_css)
     domain_css  = _dedup_keep_order(domain_css)
@@ -1105,6 +1152,9 @@ def _process_adblock(
         f.write(f"! Network rules: {len(net_rules):,}\n")
         f.write(
             f"! Dropped: AdGuard-only syntax {totals['adg_only_cosmetic']:,}, "
+            f"malformed {totals['malformed_cosmetic']:,}, "
+            f"generic exception {totals['generic_exception']:,}, "
+            f"overbroad generic selector {totals['overbroad_generic']:,}, "
             f"pure domain-block {totals['pure_domain']:,}, "
             f"low-value network rules {totals['low_value_net']:,}\n"
         )
