@@ -1,7 +1,7 @@
 开始执行
 下载并提取（21 个源）...
 [WARNING]   FAIL local:data/self/ads/useless_tld.txt：No connection adapters were found for 'local:data/self/ads/useless_tld.txt'
-完成：20 个成功，1 个失败，耗时 1.04s
+完成：20 个成功，1 个失败，耗时 0.94s
 读取本地文件（7 个）...
   OK data/self/ads/whitelist.txt：27 条 [common]
   OK data/self/ads/ads_specific.txt：6 条 [common]
@@ -11,8 +11,8 @@
   OK data/self/proxy/addlist.txt：11 条 [common]
   OK data/self/direct_fix/addlist.txt：18 条 [common]
 完成：7 个成功，0 个跳过，耗时 0.15s
-  src_proxy_tld：829 条 [common]
   src_useless_tld：0 条 [skip]
+  src_proxy_tld：829 条 [common]
 ================================================================================
 处理规则组
 ================================================================================
@@ -82,7 +82,7 @@
   OK adblock.txt（148,144 条（去重））
   OK smartdns.conf（148,144 条（去重））
   OK wildcard.txt（148,144 条（去重））
-  `- 输出 148,144 条，耗时 0.85s
+  `- 输出 148,144 条，耗时 0.76s
 ======================================================================
 处理规则组：Proxy (proxy)
 ======================================================================
@@ -105,7 +105,7 @@
   OK surge.list（23,601 条（去重））
   OK domain.txt（37,782 条）
   OK wildcard.txt（23,601 条（去重））
-  `- 输出 23,601 条，耗时 0.18s
+  `- 输出 23,601 条，耗时 0.17s
 ======================================================================
 处理规则组：Direct Fix (direct_fix)
 ======================================================================
@@ -132,18 +132,18 @@
 ======================================================================
 处理 Adblock CSS Rule 聚合组：Adblock Extra Rules (adblock_extra)
 ======================================================================
-  |  https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt：元素 19,215（含 HTML过滤 0/脚本注入 4,315），网络 5,699，丢弃：AdGuard专属 0/纯域名 20,454/低质量网络规则 103
-  |  https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt：元素 6,257（含 HTML过滤 0/脚本注入 90），网络 605，丢弃：AdGuard专属 0/纯域名 917/低质量网络规则 12
-  |  https://filters.adtidy.org/extension/ublock/filters/17.txt：元素 1（含 HTML过滤 0/脚本注入 0），网络 2,247，丢弃：AdGuard专属 0/纯域名 0/低质量网络规则 326
-  |  https://easylist.to/easylist/easyprivacy.txt：元素 34（含 HTML过滤 1/脚本注入 27），网络 9,106，丢弃：AdGuard专属 0/纯域名 46,549/低质量网络规则 8
-  |  https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt：元素 10,344（含 HTML过滤 0/脚本注入 24），网络 441，丢弃：AdGuard专属 0/纯域名 1/低质量网络规则 1
-  |  https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt：元素 27,624（含 HTML过滤 0/脚本注入 3,417），网络 3,315，丢弃：AdGuard专属 0/纯域名 174/低质量网络规则 4
-  |  https://filters.adtidy.org/extension/ublock/filters/224.txt：元素 8,970（含 HTML过滤 0/脚本注入 247），网络 7,271，丢弃：AdGuard专属 0/纯域名 6,037/低质量网络规则 46
-  OK adblock.txt（100,717 条）
-  `- 完毕，耗时 1.96s
+  |  https://filters.adtidy.org/extension/ublock/filters/2_optimized.txt：元素 19,208（含 HTML过滤 0/脚本注入 4,315），网络 5,699，丢弃：AdGuard专属 0/残缺 0/通用白名单 6/过泛通用选择器 1/纯域名 19,211/低质量网络规则 103
+  |  https://filters.adtidy.org/extension/ublock/filters/11_optimized.txt：元素 6,257（含 HTML过滤 0/脚本注入 90），网络 605，丢弃：AdGuard专属 0/残缺 0/通用白名单 0/过泛通用选择器 0/纯域名 917/低质量网络规则 12
+  |  https://filters.adtidy.org/extension/ublock/filters/17.txt：元素 1（含 HTML过滤 0/脚本注入 0），网络 2,563，丢弃：AdGuard专属 0/残缺 0/通用白名单 0/过泛通用选择器 0/纯域名 0/低质量网络规则 10
+  |  https://easylist.to/easylist/easyprivacy.txt：元素 34（含 HTML过滤 1/脚本注入 27），网络 9,107，丢弃：AdGuard专属 0/残缺 0/通用白名单 0/过泛通用选择器 0/纯域名 46,549/低质量网络规则 7
+  |  https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt：元素 10,344（含 HTML过滤 0/脚本注入 24），网络 441，丢弃：AdGuard专属 0/残缺 0/通用白名单 0/过泛通用选择器 0/纯域名 1/低质量网络规则 1
+  |  https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt：元素 27,624（含 HTML过滤 0/脚本注入 3,417），网络 3,315，丢弃：AdGuard专属 0/残缺 0/通用白名单 0/过泛通用选择器 0/纯域名 174/低质量网络规则 4
+  |  https://filters.adtidy.org/extension/ublock/filters/224.txt：元素 8,968（含 HTML过滤 0/脚本注入 247），网络 7,271，丢弃：AdGuard专属 0/残缺 0/通用白名单 2/过泛通用选择器 0/纯域名 6,040/低质量网络规则 46
+  OK adblock.txt（101,025 条）
+  `- 完毕，耗时 2.85s
 ================================================================================
 生成 README
 ================================================================================
 ================================================================================
-OK 完成，总耗时 4.35s
+OK 完成，总耗时 5.03s
 ================================================================================
