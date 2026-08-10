@@ -281,6 +281,9 @@ def _read_and_extract_local(
     """读取仓库内本地文件并提取域名（local: 前缀），用于引用仓库自身维护的名单，
     避免通过 raw.githubusercontent.com 回环拉取自己仓库（刚提交还没生效时
     会读到旧内容甚至 404）。key 统一为 "local:<path>"。
+
+    本地文件不存在或读取失败时，只记警告并当作空集合处理，不会导致整个任务失败
+    ——本地清单文件可能只是临时还没建，不应该阻塞其它规则组的产出。
     """
     result: Dict[str, Set[str]] = {}
     if not local_cfgs:
@@ -292,14 +295,14 @@ def _read_and_extract_local(
     for key, cfg in local_cfgs.items():
         p = Path(cfg["path"])
         if not p.is_file():
-            log(f"  FAIL 本地文件不存在：{p}", LogLevel.WARNING, log_file)
+            log(f"  跳过：本地文件不存在（当作空集合处理）：{p}", LogLevel.WARNING, log_file)
             result[key] = set()
             failed += 1
             continue
         try:
             text = p.read_text(encoding="utf-8", errors="ignore")
         except Exception as e:
-            log(f"  FAIL 读取本地文件失败 {p}：{e}", LogLevel.WARNING, log_file)
+            log(f"  跳过：读取本地文件失败 {p}：{e}", LogLevel.WARNING, log_file)
             result[key] = set()
             failed += 1
             continue
@@ -308,43 +311,7 @@ def _read_and_extract_local(
         log(f"  OK {p}：{len(domains):,} 条 [{cfg['mode'].value}]", log_file=log_file)
         ok += 1
 
-    log(f"完成：{ok} 个成功，{failed} 个失败，耗时 {time.time()-t0:.2f}s", log_file=log_file)
-    return result
-
-
-def _download_raw_texts(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, str]:
-    """仅下载原始文本，不做域名提取，供 Adblock 聚合组使用。"""
-    if not urls:
-        return {}
-
-    session = requests.Session()
-    adapter = HTTPAdapter(
-        max_retries=Retry(
-            total=_RETRY_COUNT, backoff_factor=_RETRY_DELAY,
-            status_forcelist=[429, 500, 502, 503, 504],
-            allowed_methods=["GET"], raise_on_status=False,
-        ),
-        pool_connections=_DOWNLOAD_WORKERS, pool_maxsize=_DOWNLOAD_WORKERS * 2,
-    )
-    session.mount("http://", adapter)
-    session.mount("https://", adapter)
-    session.headers["User-Agent"] = _USER_AGENT
-
-    def _one(url: str) -> Tuple[str, str]:
-        try:
-            r = session.get(url, timeout=(_CONNECT_TIMEOUT, _READ_TIMEOUT))
-            r.raise_for_status()
-            return url, r.text
-        except Exception as e:
-            log(f"  FAIL {url}：{e}", LogLevel.WARNING, log_file)
-            return url, ""
-
-    result: Dict[str, str] = {}
-    with ThreadPoolExecutor(max_workers=_DOWNLOAD_WORKERS) as ex:
-        futures = {ex.submit(_one, url): url for url in urls}
-        for future in as_completed(futures):
-            u, text = future.result()
-            result[u] = text
+    log(f"完成：{ok} 个成功，{failed} 个跳过，耗时 {time.time()-t0:.2f}s", log_file=log_file)
     return result
 
 
@@ -487,7 +454,6 @@ def _group_readme(
                 f"[ghproxy]({ghp_c})",
             ))
 
-    # Adblock 聚合组等不走 formats.yaml 的自定义产出文件
     for fname, count in data.get("custom_files", []):
         if not (group_dir / fname).exists():
             continue
@@ -649,9 +615,10 @@ def _load_config(path: Path) -> Tuple[Dict, List[Dict], Dict[str, Dict]]:
         if not isinstance(cfg, dict):
             continue
         enabled = bool(cfg.get("enabled", cfg.get("enable", True)))
-        is_adblock = "sources" in cfg and "rules" not in cfg
 
-        if is_adblock:
+        # 有 sources 无 rules 的组被识别为「Adblock 聚合组」：直接聚合
+        # uBlock/ABP 格式规则文本本身，走独立处理逻辑，而不是域名规则体系。
+        if "sources" in cfg and "rules" not in cfg:
             groups.append({
                 "cfg_key":            key,
                 "idx":                idx,
@@ -700,6 +667,10 @@ def _validate(
     groups: List[Dict], named: Dict[str, Dict],
     log_file: Optional[Path] = None,
 ) -> bool:
+    """校验配置结构性问题（会导致任务失败的错误）。
+    本地文件是否存在不在这里检查——那只是运行时警告，不应该阻塞整个任务，
+    详见 _read_and_extract_local。
+    """
     errors: List[str] = []
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
     known_formats = _get_formats()
@@ -707,11 +678,12 @@ def _validate(
     for g in groups:
         key, gidx = g["cfg_key"], g["idx"]
 
-        if g["kind"] == "adblock":
-            if not isinstance(g.get("sources"), list) or not g["sources"]:
+        if g.get("kind") == "adblock":
+            srcs = g.get("sources")
+            if not isinstance(srcs, list) or not srcs:
                 errors.append(f"Adblock 聚合组 '{key}' sources 不能为空")
             else:
-                for u in g["sources"]:
+                for u in srcs:
                     if not isinstance(u, str) or not u.strip():
                         errors.append(f"Adblock 聚合组 '{key}' sources 含无效条目：{u!r}")
             continue
@@ -737,8 +709,6 @@ def _validate(
                     errors.append(f"规则组 '{key}' rules[{ri}] source 无法识别：{entry!r}")
                 elif p["kind"] == "named" and p["name"] not in named:
                     errors.append(f"规则组 '{key}' rules[{ri}] source '{p['name']}' 未定义")
-                elif p["kind"] == "local" and not Path(p["path"]).is_file():
-                    errors.append(f"规则组 '{key}' rules[{ri}] 本地文件不存在：{p['path']}")
                 elif p["kind"] == "group":
                     ref = idx_map.get(p["key"])
                     if ref is None:
@@ -872,12 +842,37 @@ def _process(
                       "format_counts": fmt_counts, "dedup_forced_off": forced_off}
 
 
-# ─────────────────────────── Adblock 规则聚合（元素隐藏 + 网络规则） ───────────
+# ─────────────────────────── Adblock CSS Rule 聚合（仅面向 uBlock Origin） ────
+#
+# 与上面基于域名的 rules 体系不同，这里直接聚合 uBlock/ABP 格式的规则文本本身。
+# 目标只有 uBlock Origin，因此：
+#   1. 只保留 uBlock 能解析的语法，AdGuard 专属语法（CSS 注入 #$#/#@$#、
+#      脚本注入 #%#/#@%#、以及少量 AdGuard 专属网络规则选项）一律剔除；
+#   2. 剔除已知会拖慢 uBlock 匹配性能的写法（正则规则、未锚定的超短泛匹配）；
+#   3. 剔除明显格式不规范（残缺）的规则；
+#   4. 剔除「纯域名拦截规则」（如 ||example.com^），因为域名维度的拦截已经由
+#      上面 ads / ads_big 等基于域名的规则组覆盖，没必要重复维护两份；
+#   5. 按 uBlock 支持的规则大类分类输出：通用元素隐藏 / 域名限定元素隐藏
+#      （含 uBlock 的扩展 CSS 选择器、HTML 过滤 ##^、脚本注入 ##+js() —— 这些
+#      都共用 ## / #@# / #?# / #@?# 标记，天然落在同一类里）与网络规则。
+#
+# 以下判定均为启发式规则，不追求 100% 精确覆盖 uBlock 的完整语法定义，
+# 只处理常见、明确的情况；如果发现误判，可按需调整下面的正则/集合。
 
-_CSS_RE         = re.compile(r'##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#')
-_GENERIC_CSS_RE = re.compile(r'^(##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#)')
-_COMMENT_RE     = re.compile(r'^\s*[!\[]')
-# 「纯域名拦截规则」：||domain^ 及其只做整域封锁、不带更细粒度匹配条件的简单变体。
+# uBlock 支持解析的元素标记
+_UBO_CSS_RE      = re.compile(r'##|#@#|#\?#|#@\?#')
+# AdGuard 专属、uBlock 不支持的标记（CSS 注入 / 脚本注入）——直接剔除
+_ADG_ONLY_CSS_RE = re.compile(r'#\$#|#@\$#|#%#|#@%#')
+# 任意一种「元素/脚本类」标记（用于先把这类规则和普通网络规则分开）
+_ANY_COSMETIC_RE = re.compile(r'##|#@#|#\?#|#\$#|#%#|#@\?#|#@\$#|#@%#')
+_GENERIC_COSMETIC_RE = re.compile(r'^(##|#@#|#\?#|#@\?#)')  # 前面没有 domain 限定
+_HTML_FILTER_RE  = re.compile(r'##\^')
+_SCRIPTLET_RE    = re.compile(r'#@?#\+js\(')
+
+_COMMENT_RE = re.compile(r'^\s*[!\[]')
+
+# 「纯域名拦截规则」：||domain^ 及其只做整域封锁、不带更细粒度匹配条件的简单
+# 变体（$important/$third-party/$all/$badfilter 这类不改变匹配范围的修饰符）。
 # 带 $domain=、$script、$xmlhttprequest 等精细选项的不算「纯」，予以保留。
 _PURE_DOMAIN_RE = re.compile(
     r'^\|\|[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?'
@@ -885,13 +880,74 @@ _PURE_DOMAIN_RE = re.compile(
     r'(\$(third-party|important|all|badfilter)(,(third-party|important|all|badfilter))*)?$'
 )
 
+# 正则形式的网络规则（/pattern/ ），uBlock 官方文档明确指出这类规则匹配开销
+# 远高于普通字符串规则，数量一多会拖慢整体过滤性能，予以剔除。
+_REGEX_FILTER_RE = re.compile(r'^(@@)?/.+/(\$[^$]*)?$')
 
-def _classify_adblock_lines(text: str) -> Tuple[List[str], List[str], List[str], int]:
+# 未锚定、且去掉通配符/选项后剩余有效字符过短的网络规则——这类规则匹配面
+# 过宽，是 uBlock 明确警示的性能反模式，予以剔除。
+_MIN_UNANCHORED_PATTERN_LEN = 4
+
+# AdGuard 专属、uBlock 不支持（或语义不同）的网络规则选项，出现即整条剔除。
+_ADG_ONLY_NET_OPTIONS = {
+    "replace", "cookie", "hls", "jsonprune", "referrerpolicy",
+    "stealth", "extension", "app", "network",
+}
+
+
+def _is_low_value_network_rule(line: str) -> Optional[str]:
+    """返回丢弃原因（用于统计/日志），能保留则返回 None。"""
+    body = line[2:] if line.startswith("@@") else line
+
+    if not body.strip():
+        return "空规则"
+
+    if _REGEX_FILTER_RE.match(line):
+        return "正则规则（性能）"
+
+    # 网络规则选项部分
+    opt_part = ""
+    if "$" in body:
+        pattern_part, _, opt_part = body.partition("$")
+    else:
+        pattern_part = body
+
+    if opt_part:
+        opts = {o.split("=", 1)[0].strip().lstrip("~").lower() for o in opt_part.split(",") if o.strip()}
+        hit = opts & _ADG_ONLY_NET_OPTIONS
+        if hit:
+            return f"AdGuard 专属选项（{','.join(sorted(hit))}）"
+        # 只有选项、没有匹配主体，且没有 domain= 限定 —— 视为不规范
+        if not pattern_part.strip() and not any(o.startswith("domain=") for o in opt_part.split(",")):
+            return "残缺规则（仅选项无匹配主体）"
+
+    # 未锚定的超短泛匹配：既不是 || 开头，也不是 | 开头，去掉通配符后太短
+    if pattern_part and not pattern_part.startswith(("||", "|")):
+        core = pattern_part.strip("*^")
+        if len(core) < _MIN_UNANCHORED_PATTERN_LEN:
+            return "未锚定超短泛匹配（性能）"
+
+    return None
+
+
+def _classify_ubo_lines(text: str) -> Dict[str, object]:
+    """把一份 uBlock/ABP 格式规则文本分类为：
+      generic_css / domain_css   —— uBlock 支持的元素隐藏（含扩展 CSS/HTML 过滤/脚本注入）
+      net_rules                  —— 网络规则（已剔除低质量/非标准/纯域名的）
+    以及各类丢弃计数，供统计展示。
+    """
     generic_css: List[str] = []
     domain_css:  List[str] = []
-    url_rules:   List[str] = []
+    net_rules:   List[str] = []
     seen: Set[str] = set()
-    pure_domain_dropped = 0
+
+    stats = {
+        "adg_only_cosmetic": 0,   # AdGuard 专属元素/脚本注入语法
+        "pure_domain":       0,   # 纯域名拦截规则
+        "low_value_net":     0,   # 性能差/不规范的网络规则
+        "html_filter":       0,   # 落在元素隐藏分类里的 HTML 过滤规则数（信息统计）
+        "scriptlet":         0,   # 落在元素隐藏分类里的脚本注入规则数（信息统计）
+    }
 
     for raw in text.splitlines():
         line = raw.strip()
@@ -901,15 +957,69 @@ def _classify_adblock_lines(text: str) -> Tuple[List[str], List[str], List[str],
             continue
         seen.add(line)
 
-        if _CSS_RE.search(line):
-            (generic_css if _GENERIC_CSS_RE.match(line) else domain_css).append(line)
-        else:
-            if not line.startswith("@@") and _PURE_DOMAIN_RE.match(line):
-                pure_domain_dropped += 1
+        if _ANY_COSMETIC_RE.search(line):
+            if _ADG_ONLY_CSS_RE.search(line) and not _UBO_CSS_RE.search(line):
+                stats["adg_only_cosmetic"] += 1
                 continue
-            url_rules.append(line)
+            if _HTML_FILTER_RE.search(line):
+                stats["html_filter"] += 1
+            if _SCRIPTLET_RE.search(line):
+                stats["scriptlet"] += 1
+            (generic_css if _GENERIC_COSMETIC_RE.match(line) else domain_css).append(line)
+            continue
 
-    return generic_css, domain_css, url_rules, pure_domain_dropped
+        # 网络规则
+        if _PURE_DOMAIN_RE.match(line) and not line.startswith("@@"):
+            stats["pure_domain"] += 1
+            continue
+
+        reason = _is_low_value_network_rule(line)
+        if reason:
+            stats["low_value_net"] += 1
+            continue
+
+        net_rules.append(line)
+
+    return {
+        "generic_css": generic_css, "domain_css": domain_css, "net_rules": net_rules,
+        **stats,
+    }
+
+
+def _download_raw_texts(urls: List[str], log_file: Optional[Path] = None) -> Dict[str, str]:
+    """仅下载原始文本，不做域名提取，供 Adblock CSS Rule 聚合组使用。"""
+    if not urls:
+        return {}
+
+    session = requests.Session()
+    adapter = HTTPAdapter(
+        max_retries=Retry(
+            total=_RETRY_COUNT, backoff_factor=_RETRY_DELAY,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["GET"], raise_on_status=False,
+        ),
+        pool_connections=_DOWNLOAD_WORKERS, pool_maxsize=_DOWNLOAD_WORKERS * 2,
+    )
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    session.headers["User-Agent"] = _USER_AGENT
+
+    def _one(url: str) -> Tuple[str, str]:
+        try:
+            r = session.get(url, timeout=(_CONNECT_TIMEOUT, _READ_TIMEOUT))
+            r.raise_for_status()
+            return url, r.text
+        except Exception as e:
+            log(f"  FAIL {url}：{e}", LogLevel.WARNING, log_file)
+            return url, ""
+
+    result: Dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=_DOWNLOAD_WORKERS) as ex:
+        futures = {ex.submit(_one, url): url for url in urls}
+        for future in as_completed(futures):
+            u, text = future.result()
+            result[u] = text
+    return result
 
 
 def _dedup_keep_order(items: List[str]) -> List[str]:
@@ -933,43 +1043,51 @@ def _process_adblock(
 
     t0 = time.time()
     log("=" * 70, log_file=log_file)
-    log(f"处理 Adblock 聚合组：{title or key} ({key})", log_file=log_file)
+    log(f"处理 Adblock CSS Rule 聚合组：{title or key} ({key})", log_file=log_file)
     log("=" * 70, log_file=log_file)
 
     texts = _download_raw_texts(urls, log_file)
 
     generic_css: List[str] = []
     domain_css:  List[str] = []
-    url_rules:   List[str] = []
-    dropped_total = 0
+    net_rules:   List[str] = []
+    totals = {"adg_only_cosmetic": 0, "pure_domain": 0, "low_value_net": 0,
+              "html_filter": 0, "scriptlet": 0}
 
     for url in urls:
         text = texts.get(url, "")
         if not text:
             continue
-        g, d, u, dropped = _classify_adblock_lines(text)
-        generic_css.extend(g)
-        domain_css.extend(d)
-        url_rules.extend(u)
+        r = _classify_ubo_lines(text)
+        generic_css.extend(r["generic_css"])
+        domain_css.extend(r["domain_css"])
         if exclude_pure:
-            dropped_total += dropped
+            net_rules.extend(r["net_rules"])
         else:
-            # 不剔除时，把「纯域名规则」并回网络规则里
-            pass
+            # 不剔除纯域名规则时，把它们并回网络规则（此时不再单独统计丢弃）
+            net_rules.extend(r["net_rules"])
+        for k in totals:
+            totals[k] += r[k]
         log(
-            f"  |  {url}：元素 {len(g)+len(d):,}（通用 {len(g):,}/域名限定 {len(d):,}），"
-            f"网络 {len(u):,}，丢弃纯域名 {dropped if exclude_pure else 0:,}",
+            f"  |  {url}：元素 {len(r['generic_css'])+len(r['domain_css']):,}"
+            f"（含 HTML过滤 {r['html_filter']:,}/脚本注入 {r['scriptlet']:,}），"
+            f"网络 {len(r['net_rules']):,}，"
+            f"丢弃：AdGuard专属 {r['adg_only_cosmetic']:,}/纯域名 {r['pure_domain']:,}/"
+            f"低质量网络规则 {r['low_value_net']:,}",
             log_file=log_file,
         )
 
+    if not exclude_pure:
+        totals["pure_domain"] = 0  # 保留时不计入“丢弃”统计
+
     generic_css = _dedup_keep_order(generic_css)
     domain_css  = _dedup_keep_order(domain_css)
-    url_rules   = _dedup_keep_order(url_rules)
+    net_rules   = _dedup_keep_order(net_rules)
 
     gdir = out_root / key
     gdir.mkdir(parents=True, exist_ok=True)
     fname = "adblock.txt"
-    total = len(generic_css) + len(domain_css) + len(url_rules)
+    total = len(generic_css) + len(domain_css) + len(net_rules)
 
     with (gdir / fname).open("w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
@@ -981,11 +1099,15 @@ def _process_adblock(
         f.write("! Expires: 1 days (update frequency)\n")
         f.write(
             f"! Element hiding rules: {len(generic_css)+len(domain_css):,} "
-            f"(generic: {len(generic_css):,}, domain-specific: {len(domain_css):,})\n"
+            f"(generic: {len(generic_css):,}, domain-specific: {len(domain_css):,}, "
+            f"html-filter: {totals['html_filter']:,}, scriptlet: {totals['scriptlet']:,})\n"
         )
-        f.write(f"! URL / network rules: {len(url_rules):,}\n")
-        if exclude_pure:
-            f.write(f"! Pure domain-block rules excluded: {dropped_total:,}\n")
+        f.write(f"! Network rules: {len(net_rules):,}\n")
+        f.write(
+            f"! Dropped: AdGuard-only syntax {totals['adg_only_cosmetic']:,}, "
+            f"pure domain-block {totals['pure_domain']:,}, "
+            f"low-value network rules {totals['low_value_net']:,}\n"
+        )
         f.write("!\n")
         f.write("!" + "-" * 76 + "!\n")
         f.write("! Element hiding rules (generic rules first)\n")
@@ -996,15 +1118,12 @@ def _process_adblock(
             f.write(x + "\n")
         f.write("!\n")
         f.write("!" + "-" * 76 + "!\n")
-        f.write(
-            "! URL / network rules (pure domain-block rules excluded)\n"
-            if exclude_pure else "! URL / network rules\n"
-        )
+        f.write("! Network rules\n")
         f.write("!" + "-" * 76 + "!\n")
-        for x in url_rules:
+        for x in net_rules:
             f.write(x + "\n")
 
-    log(f"  OK {fname}（{total:,} 条，丢弃纯域名 {dropped_total:,}）", log_file=log_file)
+    log(f"  OK {fname}（{total:,} 条）", log_file=log_file)
     log(f"  `- 完毕，耗时 {time.time()-t0:.2f}s", log_file=log_file)
 
     all_stats[key] = {
@@ -1029,7 +1148,7 @@ def main() -> None:
 
     out_root = Path(global_cfg.get("output_root", "data/rules"))
     tz       = global_cfg.get("timezone",  "Asia/Shanghai")
-    raw_base = global_cfg.get("raw_base",  "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules")
+    raw_base = global_cfg.get("raw_base",  "https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/main/data/rules")
     ghproxy  = global_cfg.get("ghproxy",   "https://ghproxy.net/")
 
     out_root.mkdir(parents=True, exist_ok=True)
@@ -1044,17 +1163,18 @@ def main() -> None:
 
     idx_map = {g["cfg_key"]: g["idx"] for g in groups}
 
+    # 只收集「已启用」规则组实际引用到的源，未被启用组用到的源（包括 sources 里
+    # 定义了但没人引用的命名源）一律不下载/不处理，省下不必要的网络与提取开销。
+    disabled_keys = [g["cfg_key"] for g in groups if not g["enabled"]]
+    if disabled_keys:
+        log(f"已禁用（跳过）：{', '.join(disabled_keys)}", log_file=log_file)
+
     src_cfgs:   Dict[str, Dict] = {}
     local_cfgs: Dict[str, Dict] = {}
-
-    for sname, cfg in named.items():
-        if cfg["kind"] == "local":
-            local_cfgs.setdefault(_LOCAL_PREFIX + cfg["path"], cfg)
-        else:
-            src_cfgs.setdefault(cfg["url"], cfg)
+    used_named: Set[str] = set()
 
     for g in groups:
-        if g["kind"] != "domain":
+        if not g["enabled"]:
             continue
         for rule in g.get("rules", []):
             if not isinstance(rule, dict):
@@ -1087,6 +1207,21 @@ def main() -> None:
                             )
                     else:
                         local_cfgs[key] = p
+                elif p["kind"] == "named":
+                    used_named.add(p["name"])
+
+    unused_named = set(named) - used_named
+    if unused_named:
+        log(f"命名源未被任何启用组引用，跳过下载：{', '.join(sorted(unused_named))}", log_file=log_file)
+
+    for sname in used_named:
+        cfg = named.get(sname)
+        if not cfg:
+            continue
+        if cfg["kind"] == "local":
+            local_cfgs.setdefault(_LOCAL_PREFIX + cfg["path"], cfg)
+        else:
+            src_cfgs.setdefault(cfg["url"], cfg)
 
     # 下载 + 提取融合为一步（按源并发，不必等全部下载完才开始提取），不做跨次运行缓存
     dl: Dict[str, Set[str]] = {}
@@ -1098,7 +1233,10 @@ def main() -> None:
         log(traceback.format_exc(), LogLevel.ERROR, log_file)
         sys.exit(1)
 
-    for sname, cfg in named.items():
+    for sname in used_named:
+        cfg = named.get(sname)
+        if not cfg:
+            continue
         key = (_LOCAL_PREFIX + cfg["path"]) if cfg["kind"] == "local" else cfg["url"]
         dl[sname] = dl.get(key, set())
         log(f"  {sname}：{len(dl[sname]):,} 条 [{cfg['mode'].value}]", log_file=log_file)
@@ -1115,7 +1253,7 @@ def main() -> None:
             log(f"  跳过（已禁用）：{g['cfg_key']}", log_file=log_file)
             continue
         try:
-            if g["kind"] == "adblock":
+            if g.get("kind") == "adblock":
                 _process_adblock(g, out_root, all_stats, log_file)
             else:
                 _process(g, dl, cache, idx_map, out_root, all_stats, log_file)
