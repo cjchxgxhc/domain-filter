@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,601
+# 适用：Clash  规则数：23,643
 #
 payload:
   - +.000webhost.com
@@ -758,6 +758,9 @@ payload:
   - +.actifio.com
   - +.activematter.game
   - +.activeteachonline.com
+  - +.activision.com
+  - +.activisionblizzard.com
+  - +.activisionblizzardmedia.com
   - +.activpn.com
   - +.actualidad-rt.com
   - +.ad
@@ -3004,6 +3007,7 @@ payload:
   - +.bellsouth.net
   - +.bemywife.cc
   - +.benaughty.fun
+  - +.benefitsforeveryworld.com
   - +.bengalisexvideos.com
   - +.benliton.com
   - +.bentley
@@ -3948,6 +3952,7 @@ payload:
   - +.buicha.social
   - +.building3dcontent.com
   - +.builtfromebay.com
+  - +.builtwithnix.org
   - +.bukkake-jav.com
   - +.bukkake.link
   - +.bullguard.com
@@ -4136,6 +4141,11 @@ payload:
   - +.callbackkiller.com
   - +.callersbane.com
   - +.callhulu.com
+  - +.callofduty.com
+  - +.callofdutyendowment.com
+  - +.callofdutyendowment.org
+  - +.callofdutyleague.com
+  - +.callofdutymobile.com
   - +.calvappd.me
   - +.calvinklein
   - +.cam-duct.com
@@ -4192,6 +4202,7 @@ payload:
   - +.canadameet.com
   - +.canalporno.com
   - +.candidforum-videos.com
+  - +.candycrush.com
   - +.candycumcity.com
   - +.candypleasure.com
   - +.canon
@@ -5204,6 +5215,7 @@ payload:
   - +.crackle.com
   - +.craigslist.org
   - +.crankplayer.com
+  - +.crashbandicoot.com
   - +.crashlytics.com
   - +.crazy-amateurs.com
   - +.crazyav.xyz
@@ -5689,6 +5701,7 @@ payload:
   - +.demfhz.xyz
   - +.democracy.earth
   - +.democrats.org
+  - +.demonware.net
   - +.demoprint.com
   - +.demosisto.hk
   - +.dengeamerika.com
@@ -5777,7 +5790,9 @@ payload:
   - +.dhcp.biz
   - +.dhl
   - +.dhlestudio.com.co
+  - +.diablo.com
   - +.diablo3.com
+  - +.diablo4.com
   - +.diabloimmortal.com
   - +.diabrowser.com
   - +.diabrowser.engineering
@@ -5984,6 +5999,7 @@ payload:
   - +.distribution.qatp1.net
   - +.distribution.qcpp1.net
   - +.distribution.qpdp1.net
+  - +.divdyn.com
   - +.diwodiwo.xyz
   - +.diy
   - +.diyang.org
@@ -7087,6 +7103,7 @@ payload:
   - +.europeansustainabledesign.net
   - +.europeansustainabledesigncouncil.com
   - +.europeansustainabledesigncouncil.net
+  - +.europeanwarzoneseries.com
   - +.europepmc.org
   - +.europornstar.com
   - +.eurosexscene.com
@@ -9909,6 +9926,7 @@ payload:
   - +.highbolt.net
   - +.highcolonic.info
   - +.highdefinitionbeatsbydre.com
+  - +.highmoonstudios.com
   - +.highpeakspureearth.com
   - +.highporn.net
   - +.highrockmedia.com
@@ -10967,6 +10985,7 @@ payload:
   - +.infinitetoons.com
   - +.infinitetube.com
   - +.infiniti
+  - +.infinityward.com
   - +.influencersgonewild.com
   - +.infocert.digital
   - +.infoq.com
@@ -12116,6 +12135,7 @@ payload:
   - +.kindnudist.com
   - +.kindteenporn.com
   - +.kinescopecdn.net
+  - +.king.com
   - +.kingcomix.com
   - +.kingdomsalvation.org
   - +.kingextre.me
@@ -14378,6 +14398,7 @@ payload:
   - +.mynetav.org
   - +.mynetname.net
   - +.mynike.com
+  - +.mynixos.com
   - +.mynumber.org
   - +.myoctocat.com
   - +.myparagliding.com
@@ -15030,7 +15051,14 @@ payload:
   - +.nivod.tv
   - +.nivodi.tv
   - +.nivodz.com
+  - +.nix-community.org
+  - +.nix.store
+  - +.nixcon.org
+  - +.nixcon2017.org
+  - +.nixlang.com
   - +.nixos.org
+  - +.nixos.wiki
+  - +.nixpkgs.org
   - +.niziero.info
   - +.njactb.org
   - +.njav.tv
@@ -17317,6 +17345,7 @@ payload:
   - +.ratedgross.com
   - +.rateyourmusic.com
   - +.rationalwiki.org
+  - +.ravensoftware.com
   - +.ravm.tv
   - +.rawgit.com
   - +.rawgithub.com
@@ -17855,6 +17884,7 @@ payload:
   - +.rutracker.me
   - +.rutracker.net
   - +.rutracker.org
+  - +.rutracker.wiki
   - +.rutrecker.net
   - +.rutrk.org
   - +.rutube.sport
@@ -18024,6 +18054,8 @@ payload:
   - +.sbuxcard.com
   - +.sc
   - +.sc-cdn.net
+  - +.sc-gw.com
+  - +.sc-static.net
   - +.sc.com
   - +.sca-tolo.info
   - +.scala-lang.org
@@ -18171,6 +18203,7 @@ payload:
   - +.sejie.com
   - +.sejie80.com
   - +.sekai.colorfulpalette.org
+  - +.sekirothegame.com
   - +.sekur1213.guru
   - +.selcdn.net
   - +.selectanescort.com
@@ -18619,6 +18652,7 @@ payload:
   - +.sidelinessportseatery.com
   - +.siege-amazon.com
   - +.sierrafriendsoftibet.org
+  - +.sierragames.com
   - +.sifangclub.com
   - +.sigcomm.org
   - +.sigfpe.com
@@ -18739,6 +18773,7 @@ payload:
   - +.skyassets.com
   - +.skybet.com
   - +.skykiwi.com
+  - +.skylanders.com
   - +.skymansion.net
   - +.skymatter.com
   - +.skyoceanrescue.com
@@ -18785,6 +18820,7 @@ payload:
   - +.sleazydream.com
   - +.sleazyfork.org
   - +.sleazyneasy.com
+  - +.sledgehammergames.com
   - +.slheng.com
   - +.slickvpn.com
   - +.slides.com
@@ -18934,6 +18970,7 @@ payload:
   - +.solarcity.com
   - +.solidaritetibet.org
   - +.solidfiles.com
+  - +.solidstate.com
   - +.solostudioksale.com
   - +.solutionstation.com
   - +.solv.finance
@@ -19127,6 +19164,7 @@ payload:
   - +.sputnikmediabank.com
   - +.sputniknews.com
   - +.spyjinx.com
+  - +.spyrothedragon.com
   - +.sqlite.org
   - +.sqlserveronlinux.com
   - +.sqool.net
@@ -20331,6 +20369,8 @@ payload:
   - +.toncenter.com
   - +.tonec.com
   - +.tonicmovies.com
+  - +.tonyhawk.com
+  - +.tonyhawkthegame.com
   - +.tonyyan.net
   - +.toodoc.com
   - +.toolforge.org
@@ -20479,6 +20519,7 @@ payload:
   - +.trendmicro.com
   - +.trendsmap.com
   - +.trendyporn.com
+  - +.treyarch.com
   - +.trialofccp.org
   - +.triangulationblog.com
   - +.triballo.net
@@ -22263,6 +22304,7 @@ payload:
   - +.worldscientific.com
   - +.worldsecureemail.com
   - +.worldsecuresystems.com
+  - +.worldseriesofwarzone.com
   - +.worldsex.com
   - +.worldsfastestgamer.net
   - +.worldvpn.net

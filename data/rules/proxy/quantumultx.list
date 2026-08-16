@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：QuantumultX  规则数：23,601
+# 适用：QuantumultX  规则数：23,643
 #
 host-suffix,000webhost.com,reject
 host-suffix,01.org,reject
@@ -757,6 +757,9 @@ host-suffix,actfortibet.org,reject
 host-suffix,actifio.com,reject
 host-suffix,activematter.game,reject
 host-suffix,activeteachonline.com,reject
+host-suffix,activision.com,reject
+host-suffix,activisionblizzard.com,reject
+host-suffix,activisionblizzardmedia.com,reject
 host-suffix,activpn.com,reject
 host-suffix,actualidad-rt.com,reject
 host-suffix,ad,reject
@@ -3003,6 +3006,7 @@ host-suffix,bellotube.com,reject
 host-suffix,bellsouth.net,reject
 host-suffix,bemywife.cc,reject
 host-suffix,benaughty.fun,reject
+host-suffix,benefitsforeveryworld.com,reject
 host-suffix,bengalisexvideos.com,reject
 host-suffix,benliton.com,reject
 host-suffix,bentley,reject
@@ -3947,6 +3951,7 @@ host-suffix,buhidoh.net,reject
 host-suffix,buicha.social,reject
 host-suffix,building3dcontent.com,reject
 host-suffix,builtfromebay.com,reject
+host-suffix,builtwithnix.org,reject
 host-suffix,bukkake-jav.com,reject
 host-suffix,bukkake.link,reject
 host-suffix,bullguard.com,reject
@@ -4135,6 +4140,11 @@ host-suffix,callabitch.org,reject
 host-suffix,callbackkiller.com,reject
 host-suffix,callersbane.com,reject
 host-suffix,callhulu.com,reject
+host-suffix,callofduty.com,reject
+host-suffix,callofdutyendowment.com,reject
+host-suffix,callofdutyendowment.org,reject
+host-suffix,callofdutyleague.com,reject
+host-suffix,callofdutymobile.com,reject
 host-suffix,calvappd.me,reject
 host-suffix,calvinklein,reject
 host-suffix,cam-duct.com,reject
@@ -4191,6 +4201,7 @@ host-suffix,canada-beatsbydre.com,reject
 host-suffix,canadameet.com,reject
 host-suffix,canalporno.com,reject
 host-suffix,candidforum-videos.com,reject
+host-suffix,candycrush.com,reject
 host-suffix,candycumcity.com,reject
 host-suffix,candypleasure.com,reject
 host-suffix,canon,reject
@@ -5203,6 +5214,7 @@ host-suffix,crabporn.com,reject
 host-suffix,crackle.com,reject
 host-suffix,craigslist.org,reject
 host-suffix,crankplayer.com,reject
+host-suffix,crashbandicoot.com,reject
 host-suffix,crashlytics.com,reject
 host-suffix,crazy-amateurs.com,reject
 host-suffix,crazyav.xyz,reject
@@ -5688,6 +5700,7 @@ host-suffix,demdex.net,reject
 host-suffix,demfhz.xyz,reject
 host-suffix,democracy.earth,reject
 host-suffix,democrats.org,reject
+host-suffix,demonware.net,reject
 host-suffix,demoprint.com,reject
 host-suffix,demosisto.hk,reject
 host-suffix,dengeamerika.com,reject
@@ -5776,7 +5789,9 @@ host-suffix,dharmakara.net,reject
 host-suffix,dhcp.biz,reject
 host-suffix,dhl,reject
 host-suffix,dhlestudio.com.co,reject
+host-suffix,diablo.com,reject
 host-suffix,diablo3.com,reject
+host-suffix,diablo4.com,reject
 host-suffix,diabloimmortal.com,reject
 host-suffix,diabrowser.com,reject
 host-suffix,diabrowser.engineering,reject
@@ -5983,6 +5998,7 @@ host-suffix,disqusservice.com,reject
 host-suffix,distribution.qatp1.net,reject
 host-suffix,distribution.qcpp1.net,reject
 host-suffix,distribution.qpdp1.net,reject
+host-suffix,divdyn.com,reject
 host-suffix,diwodiwo.xyz,reject
 host-suffix,diy,reject
 host-suffix,diyang.org,reject
@@ -7086,6 +7102,7 @@ host-suffix,europeansustainabledesign.com,reject
 host-suffix,europeansustainabledesign.net,reject
 host-suffix,europeansustainabledesigncouncil.com,reject
 host-suffix,europeansustainabledesigncouncil.net,reject
+host-suffix,europeanwarzoneseries.com,reject
 host-suffix,europepmc.org,reject
 host-suffix,europornstar.com,reject
 host-suffix,eurosexscene.com,reject
@@ -9908,6 +9925,7 @@ host-suffix,higfw.com,reject
 host-suffix,highbolt.net,reject
 host-suffix,highcolonic.info,reject
 host-suffix,highdefinitionbeatsbydre.com,reject
+host-suffix,highmoonstudios.com,reject
 host-suffix,highpeakspureearth.com,reject
 host-suffix,highporn.net,reject
 host-suffix,highrockmedia.com,reject
@@ -10966,6 +10984,7 @@ host-suffix,inf.news,reject
 host-suffix,infinitetoons.com,reject
 host-suffix,infinitetube.com,reject
 host-suffix,infiniti,reject
+host-suffix,infinityward.com,reject
 host-suffix,influencersgonewild.com,reject
 host-suffix,infocert.digital,reject
 host-suffix,infoq.com,reject
@@ -12115,6 +12134,7 @@ host-suffix,kindleren.com,reject
 host-suffix,kindnudist.com,reject
 host-suffix,kindteenporn.com,reject
 host-suffix,kinescopecdn.net,reject
+host-suffix,king.com,reject
 host-suffix,kingcomix.com,reject
 host-suffix,kingdomsalvation.org,reject
 host-suffix,kingextre.me,reject
@@ -14377,6 +14397,7 @@ host-suffix,mynetav.net,reject
 host-suffix,mynetav.org,reject
 host-suffix,mynetname.net,reject
 host-suffix,mynike.com,reject
+host-suffix,mynixos.com,reject
 host-suffix,mynumber.org,reject
 host-suffix,myoctocat.com,reject
 host-suffix,myparagliding.com,reject
@@ -15029,7 +15050,14 @@ host-suffix,niusnews.com,reject
 host-suffix,nivod.tv,reject
 host-suffix,nivodi.tv,reject
 host-suffix,nivodz.com,reject
+host-suffix,nix-community.org,reject
+host-suffix,nix.store,reject
+host-suffix,nixcon.org,reject
+host-suffix,nixcon2017.org,reject
+host-suffix,nixlang.com,reject
 host-suffix,nixos.org,reject
+host-suffix,nixos.wiki,reject
+host-suffix,nixpkgs.org,reject
 host-suffix,niziero.info,reject
 host-suffix,njactb.org,reject
 host-suffix,njav.tv,reject
@@ -17316,6 +17344,7 @@ host-suffix,raspbian.org,reject
 host-suffix,ratedgross.com,reject
 host-suffix,rateyourmusic.com,reject
 host-suffix,rationalwiki.org,reject
+host-suffix,ravensoftware.com,reject
 host-suffix,ravm.tv,reject
 host-suffix,rawgit.com,reject
 host-suffix,rawgithub.com,reject
@@ -17854,6 +17883,7 @@ host-suffix,rutracker.cc,reject
 host-suffix,rutracker.me,reject
 host-suffix,rutracker.net,reject
 host-suffix,rutracker.org,reject
+host-suffix,rutracker.wiki,reject
 host-suffix,rutrecker.net,reject
 host-suffix,rutrk.org,reject
 host-suffix,rutube.sport,reject
@@ -18023,6 +18053,8 @@ host-suffix,sbs,reject
 host-suffix,sbuxcard.com,reject
 host-suffix,sc,reject
 host-suffix,sc-cdn.net,reject
+host-suffix,sc-gw.com,reject
+host-suffix,sc-static.net,reject
 host-suffix,sc.com,reject
 host-suffix,sca-tolo.info,reject
 host-suffix,scala-lang.org,reject
@@ -18170,6 +18202,7 @@ host-suffix,seiron-sankei.com,reject
 host-suffix,sejie.com,reject
 host-suffix,sejie80.com,reject
 host-suffix,sekai.colorfulpalette.org,reject
+host-suffix,sekirothegame.com,reject
 host-suffix,sekur1213.guru,reject
 host-suffix,selcdn.net,reject
 host-suffix,selectanescort.com,reject
@@ -18618,6 +18651,7 @@ host-suffix,sidelinesnews.com,reject
 host-suffix,sidelinessportseatery.com,reject
 host-suffix,siege-amazon.com,reject
 host-suffix,sierrafriendsoftibet.org,reject
+host-suffix,sierragames.com,reject
 host-suffix,sifangclub.com,reject
 host-suffix,sigcomm.org,reject
 host-suffix,sigfpe.com,reject
@@ -18738,6 +18772,7 @@ host-suffix,sky.com,reject
 host-suffix,skyassets.com,reject
 host-suffix,skybet.com,reject
 host-suffix,skykiwi.com,reject
+host-suffix,skylanders.com,reject
 host-suffix,skymansion.net,reject
 host-suffix,skymatter.com,reject
 host-suffix,skyoceanrescue.com,reject
@@ -18784,6 +18819,7 @@ host-suffix,sldolls.com,reject
 host-suffix,sleazydream.com,reject
 host-suffix,sleazyfork.org,reject
 host-suffix,sleazyneasy.com,reject
+host-suffix,sledgehammergames.com,reject
 host-suffix,slheng.com,reject
 host-suffix,slickvpn.com,reject
 host-suffix,slides.com,reject
@@ -18933,6 +18969,7 @@ host-suffix,solana.com,reject
 host-suffix,solarcity.com,reject
 host-suffix,solidaritetibet.org,reject
 host-suffix,solidfiles.com,reject
+host-suffix,solidstate.com,reject
 host-suffix,solostudioksale.com,reject
 host-suffix,solutionstation.com,reject
 host-suffix,solv.finance,reject
@@ -19126,6 +19163,7 @@ host-suffix,sputnikimages.com,reject
 host-suffix,sputnikmediabank.com,reject
 host-suffix,sputniknews.com,reject
 host-suffix,spyjinx.com,reject
+host-suffix,spyrothedragon.com,reject
 host-suffix,sqlite.org,reject
 host-suffix,sqlserveronlinux.com,reject
 host-suffix,sqool.net,reject
@@ -20330,6 +20368,8 @@ host-suffix,ton.org,reject
 host-suffix,toncenter.com,reject
 host-suffix,tonec.com,reject
 host-suffix,tonicmovies.com,reject
+host-suffix,tonyhawk.com,reject
+host-suffix,tonyhawkthegame.com,reject
 host-suffix,tonyyan.net,reject
 host-suffix,toodoc.com,reject
 host-suffix,toolforge.org,reject
@@ -20478,6 +20518,7 @@ host-suffix,trellocdn.com,reject
 host-suffix,trendmicro.com,reject
 host-suffix,trendsmap.com,reject
 host-suffix,trendyporn.com,reject
+host-suffix,treyarch.com,reject
 host-suffix,trialofccp.org,reject
 host-suffix,triangulationblog.com,reject
 host-suffix,triballo.net,reject
@@ -22262,6 +22303,7 @@ host-suffix,worldpornvideos.com,reject
 host-suffix,worldscientific.com,reject
 host-suffix,worldsecureemail.com,reject
 host-suffix,worldsecuresystems.com,reject
+host-suffix,worldseriesofwarzone.com,reject
 host-suffix,worldsex.com,reject
 host-suffix,worldsfastestgamer.net,reject
 host-suffix,worldvpn.net,reject
