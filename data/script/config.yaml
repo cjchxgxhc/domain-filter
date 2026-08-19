@@ -84,46 +84,59 @@ ads_white:
       source:
         - local:data/self/ads/ads_specific.txt
 
-ads:
-  title: Ads
-  description: 喵喵喵。
-  formats: [adblock, clash, singbox, quantumultx, shadowrocket, surge, smartdns, wildcard, hosts]
+
+ads_lite:
+  title: Ads Lite
+  description: 自用的轻量手机补充规则片段。
+  formats: [adblock]
   rules:
     - type: add
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhostslite.txt
         - local:data/self/ads/addlist.txt
     - type: discard
       source:
         - "@ads_white"
 
 
-ads_big:
-  title: Ads Big
-  description: 扩展列表喵。
-  formats: [adblock, smartdns, wildcard]
+ads_hosts:
+  title: Ads Hosts
+  description: 由系统底层网络服务读取
+并生效，有一定局限性。
+  formats: [hosts]
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/master/all
-        - https://raw.githubusercontent.com/lingeringsound/10007/refs/heads/main/all
-        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt
-        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockhosts.txt
-        - "@ads"
-    - type: discard_suffix
-      source:
-        - src_useless_tld
-        - local:data/self/ads/useless_domain.txt
+        - "@ads_lite"
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts-No.Unwelcome.txt
+        - local:data/self/ads/addlist.txt
     - type: discard
       source:
         - "@ads_white"
+
+ads_proxy:
+  title: Ads Proxy
+  description: 用于代理程序的拦截列表。
+  formats: [clash]
+  rules:
+    - type: add
+      source:
+        - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro.mini-onlydomains.txt
+    - type: discard
+      source:
+        - "@ads_white"
+    - type: discard_suffix
+      source:
+        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaTest/ChinaTest.list
+    - type: add
+      source:
+        - "@ads_hosts"
 
 
 proxy:
   title: Proxy
   description: 所有需要被代理分流的域名。
-  formats: [clash, singbox, quantumultx, shadowrocket, surge, domain, wildcard]
+  formats: [clash]
   rules:
     - type: add
       source:
@@ -139,7 +152,7 @@ proxy:
 direct_fix:
   title: Direct Fix
   description: 修复可能被proxy组错误分流的直连域名。
-  formats: [clash, singbox, quantumultx, shadowrocket, surge, domain, wildcard]
+  formats: [clash]
   rules:
     - type: add
       source:
