@@ -101,8 +101,7 @@ ads_lite:
 
 ads_hosts:
   title: Ads Hosts
-  description: 由系统底层网络服务读取
-并生效，有一定局限性。
+  description: 由系统底层网络服务读取并生效，有一定局限性。
   formats: [hosts]
   rules:
     - type: add
