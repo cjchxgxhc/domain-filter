@@ -1,10 +1,3 @@
-# 26.7.17
-public.gdtimg.com
-
-## 屏蔽可能造成问题域名
-# 抖音
-dig.bdurl.net
-
 ## 更新提醒
 update.9mod.com
 update.quetta.net
@@ -17,11 +10,10 @@ appsflyer.com
 cvhcs0-cdn-settings.appsflyersdk.com
 cvhcs0-launches.appsflyersdk.com
 # google firebase
-firebaseinstallations.googleapis.com
-firebaselogging-pa.googleapis.com
-firebaselogging.googleapis.com
-crashlytics.com
-firebase-settings.crashlytics.com
+# firebaseinstallations.googleapis.com
+# firebaselogging-pa.googleapis.com
+# firebaselogging.googleapis.com
+# firebase-settings.crashlytics.com
 # 淘宝
 log.aliyuncs.com
 guanggao-prod.cn-shanghai.log.aliyuncs.com
@@ -31,13 +23,12 @@ client-upload.cn-shanghai.log.aliyuncs.com
 videocloud.cn-hangzhou.log.aliyuncs.com
 mon.toutiao.com
 # 字节
-ctobsnssdk.com
-tobapplog.ctobsnssdk.com
-toblog.ctobsnssdk.com
-log.snssdk.com
+# ctobsnssdk.com
+# tobapplog.ctobsnssdk.com
+# toblog.ctobsnssdk.com
+# log.snssdk.com
 
 ## OPPO
-actcpc.heytapimage.com
 adsfs.heytapimage.com
 adsbdfs.heytapimage.com
 ads-fuxi-cn.heytapmobi.com
@@ -50,16 +41,9 @@ push-ads-cn.heytapmobi.com
 sms.ads.heytapmobi.com
 stg-data.ads.heytapmobi.com
 uapi.ads.heytapmobi.com
-ads-fuxi-cn.oppo.local
-adsfs-ads-test.wanyol.com
-adx-ads-test.wanyol.com
 bdapi.ads.oppomobile.com
 ck.ads.oppomobile.com
 data.ads.oppomobile.com
-dc-dragate-cn.heytapmobi.com
-u.bot.heytapmobi.com
-mdp-usertrace-cn.heytapmobi.com
-mdp-usertrace-cn.heytapdownload.com
 
 ############################## 应用分类 #####################
 ## 微信 com.tencent.mm
@@ -742,10 +726,6 @@ web-stat.jpush.cn
 wj.jpush.cn
 
 #友盟广告
-umeng.cn
-umeng.co
-umeng.cc
-umeng.com
 www.umeng.co
 www.umeng.com
 alog.umeng.co
