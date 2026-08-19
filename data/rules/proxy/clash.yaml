@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,643
+# 适用：Clash  规则数：23,644
 #
 payload:
   - +.000webhost.com
@@ -15098,6 +15098,7 @@ payload:
   - +.noodlemagazine.com
   - +.noodlevpn.com
   - +.norbulingka.org
+  - +.nordcdn.com
   - +.nordstrom.com
   - +.nordstromimage.com
   - +.nordstrommedia.com
