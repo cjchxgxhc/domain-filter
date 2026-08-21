@@ -1,5 +1,5 @@
 # 修复可能被proxy组错误分流的直连域名。
-# 适用：Clash  规则数：437
+# 适用：Clash  规则数：436
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -205,7 +205,6 @@ payload:
   - +.download.windowsupdate.com
   - +.dynamics.cn
   - +.dynv6.net
-  - +.emoi-cncdn.bing.com
   - +.engkoo.com
   - +.example.org
   - +.f.c2r.ts.cdn.office.net

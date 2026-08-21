@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,644
+# 适用：Clash  规则数：23,650
 #
 payload:
   - +.000webhost.com
@@ -1409,6 +1409,7 @@ payload:
   - +.amazonvideo.cc
   - +.amazonvideo.com
   - +.amazonvideodirect.com
+  - +.amazonwebservices.com
   - +.amazonworkdocs.cn
   - +.amazonworkdocs.com
   - +.amazonworkdocs.com.cn
@@ -6248,6 +6249,7 @@ payload:
   - +.drdreprobeatssale.com
   - +.dreamamateurs.com
   - +.dreamforce.com
+  - +.dreamgen.com
   - +.dreammovies.com
   - +.dreamorder.com
   - +.dreamteamfc.com
@@ -7549,6 +7551,7 @@ payload:
   - +.fanqiangzhe.com
   - +.fans-here.com
   - +.fans17.com
+  - +.fansly.com
   - +.fansnudes.com
   - +.fansone.co
   - +.fansta.me
@@ -15118,6 +15121,7 @@ payload:
   - +.notionusercontent.com
   - +.nottinghampost.com
   - +.novafile.com
+  - +.novelai.net
   - +.novelasia.com
   - +.noveltrove.com
   - +.novids.com
@@ -15418,6 +15422,7 @@ payload:
   - +.older.tube
   - +.oldhornymilfs.com
   - +.oldje.com
+  - +.oldmapsonline.org
   - +.olehd.com
   - +.olehdtv.com
   - +.olelive.com
@@ -19703,6 +19708,7 @@ payload:
   - +.talentlens.com
   - +.taleofthenight.com
   - +.talk853.com
+  - +.talkai.info
   - +.talkatone.com
   - +.talkboxapp.com
   - +.talkcc.com
