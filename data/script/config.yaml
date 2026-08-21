@@ -88,7 +88,7 @@ ads_white:
 ads_lite:
   title: Ads Lite
   description: 自用的轻量手机补充规则片段。
-  formats: [adblock]
+  formats: [adblock, hosts]
   rules:
     - type: add
       source:
