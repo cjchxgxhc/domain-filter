@@ -94,6 +94,7 @@ ads_lite:
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - local:data/self/ads/addlist.txt
+        - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
     - type: discard
       source:
         - "@ads_white"
@@ -185,3 +186,13 @@ adblock_extra:
     - https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt   # AdGuard Social Widgets filter (精简版)
     - https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt  # AdGuard Annoyances filter (精简版)
     - https://filters.adtidy.org/extension/ublock/filters/224.txt           # AdGuard Chinese filter
+
+adguard_home_extra:
+  enabled: true
+  title: AdGround Home Extra Rules
+  description: 白名单/特殊格式
+  exclude_pure_domain: true
+  sources:
+    - https://anti-ad.net/easylist.txt
+    - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/data/rules/whitelist.txt
+    - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
