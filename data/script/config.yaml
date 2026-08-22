@@ -14,9 +14,7 @@
 #   - src_name                         → 引用 sources 中的命名源
 #   - https://example.com/list.txt     → 内联 URL（mode=common, validate=true）
 #   - local:data/self/xxx.txt          → 内联本地文件（相对仓库根目录，mode=common, validate=true）
-#                                          用于引用仓库自身维护的名单，直接读盘，不经网络，
-#                                          避免通过 raw.githubusercontent.com 回环拉取自己仓库
-#                                          （刚提交还没生效时会 404 或读到旧内容）。
+#                                          用于引用仓库自身维护的名单
 #   - "@group_key"                       → 引用前置规则组的处理结果
 #   - url: https://...                 → 内联 URL 完整写法，可指定 mode / validate
 #     mode: skip
@@ -204,6 +202,7 @@ proxy:
         - https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
         - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Domain.txt
         - https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY.list
+        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.list
         - local:data/self/FlClash_IP_Check.txt
         - src_proxy_tld
         - local:data/self/proxy/addlist.txt
