@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,651
+# 适用：Clash  规则数：23,665
 #
 payload:
   - +.000webhost.com
@@ -4380,12 +4380,15 @@ payload:
   - +.cdjp.org
   - +.cdkworkshop.com
   - +.cdmatech.com
+  - +.cdn-ali.content.steamchina.com
   - +.cdn-apple.com
   - +.cdn-cookieyes.com
+  - +.cdn-qc.content.steamchina.com
   - +.cdn-spotify-experiments.conductrics.com
   - +.cdn-telegram.org
   - +.cdn-terapeak.com
   - +.cdn-vk.net
+  - +.cdn-ws.content.steamchina.com
   - +.cdn.js7k.com
   - +.cdn77.com
   - +.cdn77.org
@@ -5301,6 +5304,7 @@ payload:
   - +.cs4hs.com
   - +.csdparty.com
   - +.csgfnmdb.com
+  - +.csgo.wmsj.cn
   - +.cshive.com
   - +.csifund.org
   - +.csis.org
@@ -6023,6 +6027,8 @@ payload:
   - +.dkrecttv.com
   - +.dl-iphone.com
   - +.dl.begellhouse.com
+  - +.dl.steam.clngaa.com
+  - +.dl.steam.ksyna.com
   - +.dlap001.xyz
   - +.dlap301.com
   - +.dldlinks.com
@@ -6168,6 +6174,7 @@ payload:
   - +.doseofporn.com
   - +.dot.net
   - +.dota2.com
+  - +.dota2.wmsj.cn
   - +.dotcernpilot.info
   - +.dotdeb.org
   - +.dotfacebook.com
@@ -19226,6 +19233,9 @@ payload:
   - +.ssx3.com
   - +.st
   - +.st.com
+  - +.st.dl.bscstorage.net
+  - +.st.dl.eccdnx.com
+  - +.st.dl.pinyuncloud.com
   - +.stackage.org
   - +.stackapps.com
   - +.stackauth.com
@@ -19330,6 +19340,7 @@ payload:
   - +.steamcommunity.com
   - +.steamconnecttest.com
   - +.steamcontent.com
+  - +.steamcontent.tnkjmec.com
   - +.steamdb.info
   - +.steamdeck.com
   - +.steamgames.com
@@ -19337,8 +19348,10 @@ payload:
   - +.steamladder.com
   - +.steamofporn.com
   - +.steampowered.com
+  - +.steampowered.com.8686c.com
   - +.steamserver.net
   - +.steamstatic.com
+  - +.steamstatic.com.8686c.com
   - +.steamunlocked.net
   - +.steamusercontent.com
   - +.steamygamer.com
@@ -22248,6 +22261,7 @@ payload:
   - +.wme
   - +.wmflabs.org
   - +.wmfusercontent.org
+  - +.wmsjsteam.com
   - +.wmt.co
   - +.wn.com
   - +.wnacg.com
