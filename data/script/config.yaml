@@ -6,6 +6,7 @@
 #   add            → 将规则域名并入当前集合
 #   discard        → 精确移除与规则匹配的域名
 #   discard_suffix → 移除被规则父域名覆盖的域名
+#   discard_parent → 若当前域名或其子域名存在于参考列表，则移除该域名（用于白名单覆盖）
 #   match          → 仅保留与规则精确匹配的域名
 #   match_suffix   → 仅保留被规则父域名覆盖的域名
 #
@@ -70,6 +71,32 @@ sources:
     mode: common
     validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
+## 按照安全程度分级。
+
+ads_useless:
+  rules:
+    - type: add
+      source:
+        - src_useless_tld
+        - local:data/self/ads/useless_domain.txt
+        - local:data/self/ads/useless_suffix.txt
+
+
+ads_10007:
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/lingeringsound/10007/main/reward
+    - type: discard_suffix
+      source:
+        - "@ads_useless"
+
+
+ads_white_lite:
+  rules:
+    - type: add
+      source:
+        - local:data/self/ads/whitelist.txt
 
 
 ads_white:
@@ -77,61 +104,74 @@ ads_white:
     - type: add
       source:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
-        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
         - local:data/self/ads/whitelist.txt
     - type: discard
       source:
         - local:data/self/ads/ads_specific.txt
+    - type: add
+      source:
+        - "@ads_white_lite"
+
+
+ads_white_big:
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
+        - https://github.com/Potterli20/file/releases/download/dns-hosts-all/dnshosts-all-domain-whitelist_full.txt
+    - type: add
+      source:
+        - "@ads_white"
 
 
 ads_lite:
-  title: Ads Lite
-  description: 自用的轻量手机补充规则片段。
-  formats: [adblock, hosts]
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+    - type: discard_parent
+      source:
+        - "@ads_white_lite"
+
+
+ads:
   rules:
     - type: add
       source:
         - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - local:data/self/ads/addlist.txt
         - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
-    - type: discard
+        - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+        - "@ads_10007"
+    - type: discard_parent
       source:
         - "@ads_white"
 
 
-ads_hosts:
-  title: Ads Hosts
-  description: 由系统底层网络服务读取并生效，有一定局限性。
-  formats: [hosts]
+ads_big:
+  rules:
+    - type: add
+      source:
+        - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/dns.txt
+    - type: discard_parent
+      source:
+        - "@ads_white_big"
+    - type: discard_suffix
+      source:
+        - "@ads_useless"
+
+
+ads_adguard_home:
+  title: Ads For AdGuard Home
+  description: adguard home 支持最好的无正则规则。
+  formats: [adblock]
   rules:
     - type: add
       source:
         - "@ads_lite"
-        - https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts-No.Unwelcome.txt
-        - local:data/self/ads/addlist.txt
-    - type: discard
-      source:
-        - "@ads_white"
-
-ads_proxy:
-  title: Ads Proxy
-  description: 用于代理程序的拦截列表。
-  formats: [clash]
-  rules:
-    - type: add
-      source:
-        - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/pro.mini-onlydomains.txt
-    - type: discard
-      source:
-        - "@ads_white"
-    - type: discard_suffix
-      source:
-        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaTest/ChinaTest.list
-    - type: add
-      source:
-        - "@ads_hosts"
-
+        - "@ads"
+        - "@ads_big"
 
 proxy:
   title: Proxy
@@ -184,15 +224,4 @@ adblock_extra:
     - https://filters.adtidy.org/extension/ublock/filters/17.txt            # AdGuard URL Tracking Protection
     - https://easylist.to/easylist/easyprivacy.txt                          # EasyPrivacy
     - https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt   # AdGuard Social Widgets filter (精简版)
-    - https://filters.adtidy.org/extension/ublock/filters/14_optimized.txt  # AdGuard Annoyances filter (精简版)
     - https://filters.adtidy.org/extension/ublock/filters/224.txt           # AdGuard Chinese filter
-
-adguard_home_extra:
-  enabled: true
-  title: AdGround Home Extra Rules
-  description: 白名单/特殊格式
-  exclude_pure_domain: true
-  sources:
-    - https://anti-ad.net/easylist.txt
-    - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/data/rules/whitelist.txt
-    - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
