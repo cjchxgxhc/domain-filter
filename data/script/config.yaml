@@ -71,8 +71,9 @@ sources:
     mode: common
     validate: false
 # ──────────────────────────── 规则组 ──────────────────────────────────────────
-## 按照安全程度分级。
+#### 广告规则按照安全程度分级。
 
+#杂项
 ads_useless:
   rules:
     - type: add
@@ -80,8 +81,6 @@ ads_useless:
         - src_useless_tld
         - local:data/self/ads/useless_domain.txt
         - local:data/self/ads/useless_suffix.txt
-
-
 ads_10007:
   rules:
     - type: add
@@ -90,15 +89,21 @@ ads_10007:
     - type: discard_suffix
       source:
         - "@ads_useless"
+ads_hagezi:
+  rules:
+    - type: add
+      source:
+        - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt
+    - type: discard_suffix
+      source:
+        - https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaTest/ChinaTest.list
 
-
+#白名单分级，包含上级
 ads_white_lite:
   rules:
     - type: add
       source:
         - local:data/self/ads/whitelist.txt
-
-
 ads_white:
   rules:
     - type: add
@@ -112,8 +117,6 @@ ads_white:
     - type: add
       source:
         - "@ads_white_lite"
-
-
 ads_white_big:
   rules:
     - type: add
@@ -124,7 +127,7 @@ ads_white_big:
       source:
         - "@ads_white"
 
-
+#广告分级
 ads_lite:
   rules:
     - type: add
@@ -133,8 +136,6 @@ ads_lite:
     - type: discard_parent
       source:
         - "@ads_white_lite"
-
-
 ads:
   rules:
     - type: add
@@ -147,8 +148,6 @@ ads:
     - type: discard_parent
       source:
         - "@ads_white"
-
-
 ads_big:
   rules:
     - type: add
@@ -161,7 +160,7 @@ ads_big:
       source:
         - "@ads_useless"
 
-
+#成品
 ads_adguard_home:
   title: Ads For AdGuard Home
   description: adguard home 支持最好的无正则规则。
@@ -172,6 +171,27 @@ ads_adguard_home:
         - "@ads_lite"
         - "@ads"
         - "@ads_big"
+ads_proxy:
+  title: Ads Proxy
+  description: 适用于代理程序。
+  formats: [clash]
+  rules:
+    - type: add
+      source:
+        - "@ads_lite"
+        - "@ads"
+        - "@ads_big"
+        - "@ads_hagezi"
+ads_hosts:
+  title: Ads Hosts
+  description: hosts格式。
+  formats: [hosts]
+  rules:
+    - type: add
+      source:
+        - "@ads_lite"
+        - "@ads"
+#### 广告规则结束
 
 proxy:
   title: Proxy
