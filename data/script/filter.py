@@ -430,7 +430,7 @@ def _hdr_adblock(count: int, title: str, desc: str) -> str:
     if desc:
         lines.append(f"! Description: {desc}")
     lines.append(f"! Homepage: https://github.com/cjchxgxhc/domain-filter")
-    lines.append("! Expires: 1 days (update frequency)")
+    lines.append("! Expires: 7 days (update frequency)")
     lines.append(f"! Total count: {count:,}")
     return "\n".join(lines) + "\n"
 
@@ -1014,7 +1014,7 @@ def _process_adblock(
         if desc:
             f.write(f"! Description: {desc}\n")
         f.write("! Homepage: https://github.com/cjchxgxhc/domain-filter\n")
-        f.write("! Expires: 1 days (update frequency)\n")
+        f.write("! Expires: 7 days (update frequency)\n")
         f.write(
             f"! Element hiding rules: {len(generic_css)+len(domain_css):,} "
             f"(generic: {len(generic_css):,}, domain-specific: {len(domain_css):,})\n"
