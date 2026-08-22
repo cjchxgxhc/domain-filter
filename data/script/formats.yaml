@@ -50,8 +50,8 @@ formats:
     dedup: false
     header: simple
     lines:
-      - "127.0.0.1 {domain}"
-      - "::1 {domain}"
+      - "0.0.0.0 {domain}"
+      - ":: {domain}"
 
   smartdns:
     label: "SmartDNS"
