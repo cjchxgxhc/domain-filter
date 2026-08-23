@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,665
+# 适用：Clash  规则数：23,668
 #
 payload:
   - +.000webhost.com
@@ -9965,6 +9965,7 @@ payload:
   - +.hippyhillscomix.com
   - +.hipzoom.net
   - +.hisamitsu
+  - +.historylines.net
   - +.historyofdota.com
   - +.historyofdota.net
   - +.historyofdota.org
@@ -12178,6 +12179,7 @@ payload:
   - +.kissjav.com
   - +.kiwi
   - +.kiwibrowser.com
+  - +.kiwix.org
   - +.kjj05.cn
   - +.kk.stream
   - +.kkbox.com
@@ -13288,6 +13290,7 @@ payload:
   - +.mcdonalds.hk
   - +.mcdonaldsapps.com
   - +.mcdonaldsarabia.com
+  - +.mceindex.com
   - +.mcfog.com
   - +.mcisco.com
   - +.mckinsey
