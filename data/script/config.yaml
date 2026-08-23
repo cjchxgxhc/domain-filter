@@ -121,6 +121,7 @@ ads_white_big:
       source:
         - https://raw.githubusercontent.com/qq5460168/666/refs/heads/master/allow-ublock.txt
         - https://github.com/Potterli20/file/releases/download/dns-hosts-all/dnshosts-all-domain-whitelist_full.txt
+        - https://raw.githubusercontent.com/neodevpro/neodevhost/refs/heads/master/allow
     - type: add
       source:
         - "@ads_white"
