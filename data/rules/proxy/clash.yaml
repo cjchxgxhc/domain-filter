@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,668
+# 适用：Clash  规则数：23,669
 #
 payload:
   - +.000webhost.com
@@ -1650,6 +1650,7 @@ payload:
   - +.api.myip.com
   - +.api.nebula-emby.com
   - +.api.news
+  - +.api.shuaiapi.com
   - +.api.waqi.info
   - +.apibay.org
   - +.apigee.com

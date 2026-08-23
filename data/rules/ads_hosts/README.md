@@ -2,9 +2,9 @@
 
 > hosts格式。
 
-**规则总数：17,836**    **更新时间：2026-08-23 17:50:12 (CST)**
+**规则总数：17,829**    **更新时间：2026-08-24 05:18:54 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
-| `hosts.txt` | 17,836 | — | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/ads_hosts/hosts.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/ads_hosts/hosts.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/ads_hosts/hosts.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/ads_hosts/hosts.txt) |
+| `hosts.txt` | 17,829 | — | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/ads_hosts/hosts.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/ads_hosts/hosts.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/ads_hosts/hosts.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/ads_hosts/hosts.txt) |
 
