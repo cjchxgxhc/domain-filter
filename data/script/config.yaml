@@ -108,7 +108,9 @@ ads_white:
       source:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
+        - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
         - local:data/self/ads/whitelist.txt
+        - src_dd_ad_white
     - type: discard
       source:
         - local:data/self/ads/ads_specific.txt
@@ -245,3 +247,11 @@ adblock_extra:
     - https://easylist.to/easylist/easyprivacy.txt                          # EasyPrivacy
     - https://filters.adtidy.org/extension/ublock/filters/4_optimized.txt   # AdGuard Social Widgets filter (精简版)
     - https://filters.adtidy.org/extension/ublock/filters/224.txt           # AdGuard Chinese filter
+adground_home_extra:
+  enabled: true
+  title: AdGuard Home Extra Rules
+  description: 白名单和正则规则。
+  exclude_pure_domain: true
+  sources:
+    - https://anti-ad.net/easylist.txt
+    - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
