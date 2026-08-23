@@ -109,8 +109,6 @@ ads_white:
         - https://raw.githubusercontent.com/217heidai/adblockfilters/refs/heads/main/rules/white.txt
         - https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-list.txt
         - https://raw.githubusercontent.com/Cats-Team/AdRules/refs/heads/script/mod/rules/dns-allowlist.txt
-        - local:data/self/ads/whitelist.txt
-        - src_dd_ad_white
     - type: discard
       source:
         - local:data/self/ads/ads_specific.txt
