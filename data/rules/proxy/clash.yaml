@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,669
+# 适用：Clash  规则数：23,673
 #
 payload:
   - +.000webhost.com
@@ -787,6 +787,7 @@ payload:
   - +.adguard.info
   - +.adguard.org
   - +.adguardaccount.com
+  - +.adguardaccount.net
   - +.adguardcdn.com
   - +.adguardvpn.com
   - +.adhelpnews.com
@@ -8869,6 +8870,7 @@ payload:
   - +.getjetso.com
   - +.getlantern.org
   - +.getmalus.com
+  - +.getmonero.org
   - +.getoutline.org
   - +.getpaint.net
   - +.getpersonas.com
@@ -15724,6 +15726,7 @@ payload:
   - +.oursogo.com
   - +.oursweb.net
   - +.ourtv.hk
+  - +.ouryahoo.com
   - +.out-app-purchase.com
   - +.outdoorpublicsex.com
   - +.outingsapp.com
@@ -23115,6 +23118,7 @@ payload:
   - +.yahoodns.net
   - +.yahoofinance.com
   - +.yahoohealth.com
+  - +.yahooinc.com
   - +.yahoomusic.com
   - +.yahoosandbox.com
   - +.yahoosportsbook.com
