@@ -189,7 +189,8 @@ ads_hosts:
     - type: add
       source:
         - "@ads_lite"
-        - "@ads"
+        - "@ads_10007"
+        - local:data/self/ads/addlist.txt
 #### 广告规则结束
 
 proxy:
