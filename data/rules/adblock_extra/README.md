@@ -2,9 +2,9 @@
 
 > 元素隐藏规则与非域名网络规则聚合（已剔除纯域名拦截规则）
 
-**规则总数：70,347**    **更新时间：2026-08-31 07:09:12 (CST)**
+**规则总数：70,311**    **更新时间：2026-09-02 21:16:53 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
-| `adblock.txt` | 70,347 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/adblock_extra/adblock.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/adblock_extra/adblock.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/adblock_extra/adblock.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/adblock_extra/adblock.txt) |
+| `adblock.txt` | 70,311 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/adblock_extra/adblock.txt) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/adblock_extra/adblock.txt) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/adblock_extra/adblock.txt) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/adblock_extra/adblock.txt) |
 
