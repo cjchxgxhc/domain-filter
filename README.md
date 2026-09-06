@@ -1,6 +1,6 @@
 # Domain Filter
 
-![Updated](https://img.shields.io/badge/Updated-2026--09--02_21:16:53-brightgreen?style=flat-square)
+![Updated](https://img.shields.io/badge/Updated-2026--09--07_06:40:50-brightgreen?style=flat-square)
 
 ## 规则列表
 
@@ -19,5 +19,5 @@
 - **AdGuard Home Extra Rules** — 白名单和正则规则。  
   `Adblock` - [查看详情](data/rules/adground_home_extra)
 
-*2026-09-02 21:16:53 (CST)*
+*2026-09-07 06:40:50 (CST)*
 
