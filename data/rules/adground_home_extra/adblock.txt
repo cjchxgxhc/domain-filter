@@ -4,8 +4,8 @@
 ! Homepage: https://github.com/cjchxgxhc/domain-filter
 ! Expires: 7 days (update frequency)
 ! Element hiding rules: 56 (generic: 56, domain-specific: 0)
-! URL / network rules: 503
-! Pure domain-block rules excluded: 95,608
+! URL / network rules: 505
+! Pure domain-block rules excluded: 93,718
 !
 !----------------------------------------------------------------------------!
 ! Element hiding rules (generic rules first)
@@ -72,6 +72,7 @@
 !----------------------------------------------------------------------------!
 @@||ad.azure.com^
 @@||ad.ext.azure.com^
+@@||ads.finance^
 @@||ads.taboola.com^
 @@||autocomplete.clearbit.com^
 @@||chart-embed.service.newrelic.com^
@@ -157,6 +158,7 @@
 @@||ad.vivo.com.cn^
 @@||ads.alafish.cn^
 @@||ads.atmosphere.copernicus.eu^
+@@||ads.cs.washington.edu^
 @@||ads.doordash.com^
 @@||ads.elevateplatform.co.uk^
 @@||ads.google.com^

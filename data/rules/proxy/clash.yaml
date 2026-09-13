@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,683
+# 适用：Clash  规则数：23,685
 #
 payload:
   - +.000webhost.com
@@ -15103,6 +15103,7 @@ payload:
   - +.nodejs.org
   - +.nodequality.com
   - +.nodeseek.com
+  - +.nodeseek.org
   - +.nodesnoop.com
   - +.nodesource.com
   - +.nogoodatcoding.com
@@ -17222,6 +17223,7 @@ payload:
   - +.qstatus.com
   - +.qt-project.org
   - +.qtweeter.com
+  - +.quakemachinex.com
   - +.qualcomm-email.com
   - +.qualcomm-inc.com
   - +.qualcomm.cn
