@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,685
+# 适用：Clash  规则数：23,691
 #
 payload:
   - +.000webhost.com
@@ -5007,6 +5007,7 @@ payload:
   - +.code.org
   - +.code1984.com
   - +.codeberg.org
+  - +.codebuff.com
   - +.codecademy.com
   - +.codeforces.com
   - +.codeish.co
@@ -7876,6 +7877,7 @@ payload:
   - +.firebaseapp.com
   - +.firebaseio.com
   - +.fireemblemawakening.com
+  - +.firefox-portal-detection.com
   - +.firefox.com
   - +.firefox.com.cn
   - +.firefoxtweetmachine.com
@@ -8286,6 +8288,7 @@ payload:
   - +.freebsdmall.com
   - +.freebsdnews.com
   - +.freebsdsoftware.org
+  - +.freebuff.com
   - +.freecamsfan.com
   - +.freecamstars.com
   - +.freecartoons.biz
@@ -19451,6 +19454,8 @@ payload:
   - +.stripchat.com
   - +.stripe-terminal-local-reader.net
   - +.stripe.com
+  - +.stripe.events
+  - +.stripe.global
   - +.stripe.network
   - +.stripecdn.com
   - +.stripparadise.com
@@ -19960,6 +19965,7 @@ payload:
   - +.texttobuy.org
   - +.texture.com
   - +.tf
+  - +.tfbnw.net
   - +.tferwq.com
   - +.tfiflve.com
   - +.tfsallin.net
