@@ -2,9 +2,9 @@
 
 > 修复可能被proxy组错误分流的直连域名。
 
-**规则总数：436**    **更新时间：2026-09-21 06:58:16 (CST)**
+**规则总数：889**    **更新时间：2026-09-28 07:38:13 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
-| `clash.yaml` | 436 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/direct_fix/clash.yaml) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/direct_fix/clash.yaml) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/direct_fix/clash.yaml) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/direct_fix/clash.yaml) |
+| `clash.yaml` | 889 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/direct_fix/clash.yaml) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/direct_fix/clash.yaml) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/direct_fix/clash.yaml) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/direct_fix/clash.yaml) |
 

@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,691
+# 适用：Clash  规则数：23,695
 #
 payload:
   - +.000webhost.com
@@ -4096,6 +4096,7 @@ payload:
   - +.c-msedge.net
   - +.c-span.org
   - +.c-spanvideo.org
+  - +.c.go-mpulse.net
   - +.c.mi.com
   - +.c0930.com
   - +.c100tibet.org
@@ -4663,6 +4664,7 @@ payload:
   - +.chinesedemocracy.com
   - +.chinesegay.org
   - +.chinesepen.org
+  - +.chineseposters.net
   - +.chineseradioseattle.com
   - +.chinesespanking.com
   - +.chinesetalks.net
@@ -15134,6 +15136,7 @@ payload:
   - +.norton
   - +.norton.com
   - +.notdot.net
+  - +.note.com
   - +.notepad-plus-plus.org
   - +.noticias-rt.com
   - +.notimundo.press
@@ -21298,6 +21301,7 @@ payload:
   - +.vaultify.com
   - +.vaultify.info
   - +.vaultify.net
+  - +.vava8.com
   - +.vbcdn.com
   - +.vbcdn.net
   - +.vbejeyv.shop
