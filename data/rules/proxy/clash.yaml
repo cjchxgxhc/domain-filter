@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,695
+# 适用：Clash  规则数：23,701
 #
 payload:
   - +.000webhost.com
@@ -8590,6 +8590,7 @@ payload:
   - +.fux.com
   - +.fuxporn.com
   - +.fuyin.net
+  - +.fuyin116.com
   - +.fuyindiantai.org
   - +.fuzokudx.com
   - +.fxcm-chinese.com
@@ -9274,6 +9275,7 @@ payload:
   - +.googlepagecreator.com
   - +.googlephotos.com
   - +.googleplay.com
+  - +.googleplaycensorship.com
   - +.googleplex.com
   - +.googleplus.com
   - +.googlescholar.com
@@ -10482,6 +10484,7 @@ payload:
   - +.huaren4us.com
   - +.huarenav.com
   - +.huarenporn.com
+  - +.huarun.win
   - +.huashangnews.com
   - +.huashundg.com
   - +.huasing.org
@@ -13431,6 +13434,7 @@ payload:
   - +.messytube.com
   - +.met-nude.com
   - +.meta.com
+  - +.metaaivm.com
   - +.metabrainz.org
   - +.metacafe.com
   - +.metacloud.com
@@ -22181,6 +22185,7 @@ payload:
   - +.wikidata.org
   - +.wikidot.com
   - +.wikifeet.com
+  - +.wikifunctions.org
   - +.wikihow.com
   - +.wikileaks-forum.com
   - +.wikileaks.com
@@ -22198,6 +22203,7 @@ payload:
   - +.wikiquote.org
   - +.wikisexguide.com
   - +.wikisource.org
+  - +.wikispecies.org
   - +.wikiunblocked.org
   - +.wikiversity.org
   - +.wikivoyage.org
