@@ -3,9 +3,9 @@
 ! Description: 元素隐藏规则与非域名网络规则聚合（已剔除纯域名拦截规则）
 ! Homepage: https://github.com/cjchxgxhc/domain-filter
 ! Expires: 7 days (update frequency)
-! Element hiding rules: 43,417 (generic: 5,405, domain-specific: 38,012)
-! URL / network rules: 25,635
-! Pure domain-block rules excluded: 74,914
+! Element hiding rules: 43,419 (generic: 5,405, domain-specific: 38,014)
+! URL / network rules: 25,636
+! Pure domain-block rules excluded: 75,439
 !
 !----------------------------------------------------------------------------!
 ! Element hiding rules (generic rules first)
@@ -19627,6 +19627,7 @@ yahoo.com###defaultLREC
 finance.yahoo.com###mrt-node-Lead-0-Ad
 sports.yahoo.com###mrt-node-Lead-1-Ad
 sports.yahoo.com###mrt-node-Secondary-0-Ad
+mail.yahoo.com###right-rail-container > div:has(> div > div > iframe[id^="Z3B0LWlmcmFtZS"])
 yahoo.com###sda-Horizon
 yahoo.com###sda-Horizon-viewer
 yahoo.com###sda-LDRB
@@ -19684,6 +19685,7 @@ www.yahoo.com##body.font-yahoobeta > div.items-center:has(style)
 yahoo.com##div[class*="ads-"]
 yahoo.com##div[class*="gemini-ad"]
 yahoo.com##div[data-beacon] > div[class*="streamBoxShadow"]
+yahoo.com##div[data-test-id="leaderboard-ad"]
 yahoo.com##div[id*="ComboAd"]
 yahoo.com##div[id^="COMMENTSLDRB"]
 yahoo.com##div[id^="LeadAd-"]
@@ -48164,6 +48166,7 @@ _800x80_
 ||gamecopyworld.com/*.php?
 ||gamecopyworld.com/ddd/
 ||googlesyndication.com^$domain=blogto.com|youtube.com
+||gpt.mail.yahoo.net/c/sandbox?$domain=mail.yahoo.com
 ||gpt.mail.yahoo.net/sandbox$subdocument,domain=mail.yahoo.com
 ||grow.gab.com/galahad/
 ||hltv.org/partnerimage/$image
