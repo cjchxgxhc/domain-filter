@@ -102,6 +102,8 @@ ads_white_lite:
     - type: add
       source:
         - local:data/self/ads/whitelist.txt
+        - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/doh.txt
+        - https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/discretion/anv.txt
 ads_white:
   rules:
     - type: add
