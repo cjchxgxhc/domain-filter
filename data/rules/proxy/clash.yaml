@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,701
+# 适用：Clash  规则数：23,712
 #
 payload:
   - +.000webhost.com
@@ -3460,6 +3460,7 @@ payload:
   - +.blubank.com
   - +.blubrry.com
   - +.blue-city.com
+  - +.blue-plus.net
   - +.blueangellive.com
   - +.blued.cn
   - +.blued.com
@@ -5798,6 +5799,7 @@ payload:
   - +.dfvpn.com
   - +.dgaqp.com
   - +.dgwav.com
+  - +.dh.net
   - +.dh44.lol
   - +.dharamsalanet.com
   - +.dharmakara.net
@@ -9566,7 +9568,9 @@ payload:
   - +.hanime.me
   - +.hanime.tv
   - +.hanime.xyz
+  - +.hanime1.com
   - +.hanime1.me
+  - +.hanimeone.me
   - +.hanminzu.org
   - +.hanr-bao.mom
   - +.hanunyi.com
@@ -11238,6 +11242,7 @@ payload:
   - +.ip-api.com
   - +.ip73.com
   - +.ipa-iphone.net
+  - +.ipac.global
   - +.ipad.host
   - +.ipad.wang
   - +.ipad3.com
@@ -11572,6 +11577,7 @@ payload:
   - +.javcc.cc
   - +.javcc.com
   - +.javcdn.cc
+  - +.javchu.com
   - +.javcl.com
   - +.javct.net
   - +.javcup.com
@@ -13373,6 +13379,7 @@ payload:
   - +.megapornpics.com
   - +.megaproxy.com
   - +.megarotic.com
+  - +.megas4.com
   - +.megatitsminka.com
   - +.megaup.net
   - +.megaupload.com
@@ -13884,6 +13891,7 @@ payload:
   - +.moefuns.co
   - +.moegirl.org
   - +.moeimg.net
+  - +.moeli-desu.com
   - +.moemax.net
   - +.moepedia.net
   - +.moeshare.cc
@@ -14576,6 +14584,7 @@ payload:
   - +.nationalinterest.org
   - +.nationalreview.com
   - +.nationsonline.org
+  - +.nationthailand.com
   - +.nationwide.com
   - +.natura
   - +.naturalvoices.com
@@ -17739,6 +17748,7 @@ payload:
   - +.rockstargames.com
   - +.rockstarnorth.com
   - +.rockylinux.org
+  - +.rocmgov.org
   - +.rocmp.org
   - +.roco.qq.com
   - +.rogers
@@ -22983,6 +22993,7 @@ payload:
   - +.xwbo.com
   - +.xwebporn.com
   - +.xx-map.com
+  - +.xx.net
   - +.xx159.com.cn
   - +.xxbay.com
   - +.xxbb9.com
