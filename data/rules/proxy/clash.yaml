@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,713
+# 适用：Clash  规则数：23,726
 #
 payload:
   - +.000webhost.com
@@ -483,6 +483,7 @@ payload:
   - +.7mm.tv
   - +.7mmtv.tv
   - +.7tb.cc
+  - +.7x24hrs.com
   - +.8-d.com
   - +.8008206616.com
   - +.8111y.top
@@ -2986,7 +2987,12 @@ payload:
   - +.beforeigners.com
   - +.befuck.com
   - +.befuck.net
+  - +.beget.cloud
   - +.beget.com
+  - +.beget.hosting
+  - +.beget.pro
+  - +.beget.tech
+  - +.begetcdn.cloud
   - +.begin-trade.com
   - +.behance.net
   - +.behindkink.com
@@ -5383,6 +5389,7 @@ payload:
   - +.cursor-cdn.com
   - +.cursor.com
   - +.cursorapi.com
+  - +.cursorvm.com
   - +.curvefish.com
   - +.curvybbwwives.com
   - +.curvyerotic.com
@@ -15588,6 +15595,7 @@ payload:
   - +.open
   - +.open.com.hk
   - +.openai.com
+  - +.openai.org
   - +.openallweb.com
   - +.openamt.com
   - +.openapiplatform.com
@@ -18127,6 +18135,7 @@ payload:
   - +.scatville.com
   - +.scb
   - +.scdn.co
+  - +.scea.com
   - +.scene7.com
   - +.scenesource.me
   - +.schaeffler
@@ -18141,6 +18150,7 @@ payload:
   - +.schwab.com.cn
   - +.schwab.com.hk
   - +.schwabassetmanagement.com
+  - +.schwabcdn.com
   - +.schwabplan.com
   - +.schwarz
   - +.sci-hub.mksa.top
@@ -19050,7 +19060,9 @@ payload:
   - +.sonydna.com
   - +.sonyentertainmentnetwork.com
   - +.sonyged.com.cn
+  - +.sonyinteractive.com
   - +.sonylatvija.com
+  - +.sonymusic.com.hk
   - +.sonypictures.com
   - +.sonypicturesanimation.com
   - +.sonypicturesmuseum.com
@@ -20330,6 +20342,7 @@ payload:
   - +.timestalks.com
   - +.timeweb.cloud
   - +.timeweb.com
+  - +.timeweb.tech
   - +.timi1.me
   - +.timo0.com
   - +.timsah.com

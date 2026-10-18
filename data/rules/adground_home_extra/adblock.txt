@@ -4,8 +4,8 @@
 ! Homepage: https://github.com/cjchxgxhc/domain-filter
 ! Expires: 7 days (update frequency)
 ! Element hiding rules: 56 (generic: 56, domain-specific: 0)
-! URL / network rules: 505
-! Pure domain-block rules excluded: 95,920
+! URL / network rules: 504
+! Pure domain-block rules excluded: 96,997
 !
 !----------------------------------------------------------------------------!
 ! Element hiding rules (generic rules first)
@@ -208,7 +208,6 @@
 /^(\S+\.)?e7[0-9]{2,4}\.(net|com)?$/
 /^(\S+\.)?g[1-4][0-9]{8,9}\.com?$/
 /^(\S+\.)?hg[0-9]{4,5}\.com?$/
-/^(\S+\.)?333[1-9]{2}[0-9]{2}\.com?$/
 /^(\S+\.)?5551[0-9]{3}\.com?$/
 ||*serror*.wo.com.cn^$dnstype=A|CNAME
 ||ac*.786ip.com^

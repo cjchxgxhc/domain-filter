@@ -1,5 +1,5 @@
 # 修复可能被proxy组错误分流的直连域名。
-# 适用：Clash  规则数：889
+# 适用：Clash  规则数：891
 #
 payload:
   - +.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -245,6 +245,8 @@ payload:
   - +.local.adguard.org
   - +.localhost.ptlogin2.qq.com
   - +.localhost.sec.qq.com
+  - +.localhost.weixin.qq.com
+  - +.localhost.work.weixin.qq.com
   - +.login.microsoftonline.com
   - +.logincdn.msftauth.net
   - +.lync.cn
