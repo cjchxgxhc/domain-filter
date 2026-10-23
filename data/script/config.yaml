@@ -77,7 +77,6 @@ ads_useless:
     - type: add
       source:
         - src_useless_tld
-        - local:data/self/ads/useless_domain.txt
         - local:data/self/ads/useless_suffix.txt
 ads_10007:
   rules:
@@ -148,12 +147,13 @@ ads_big:
     - type: discard_parent
       source:
         - "@ads_white"
+        - "@ads_useless"
 
 #成品
 ads_adguard_home:
   title: Ads For AdGuard Home
   description: adguard home 支持最好的无正则规则。
-  formats: [adblock]
+  formats: [adblock, smartdns]
   rules:
     - type: add
       source:
