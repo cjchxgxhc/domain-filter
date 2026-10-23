@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,726
+# 适用：Clash  规则数：23,764
 #
 payload:
   - +.000webhost.com
@@ -212,6 +212,7 @@ payload:
   - +.233abc.com
   - +.233v2.com
   - +.2371tom.com
+  - +.24.place
   - +.249dw7.cn
   - +.24h.tv
   - +.24hbook.com
@@ -1585,6 +1586,7 @@ payload:
   - +.anthemthegame.com
   - +.anthonycalzadilla.com
   - +.anthropic.com
+  - +.anthropic.team
   - +.anti1984.com
   - +.antichristendom.com
   - +.antiwave.net
@@ -2020,7 +2022,6 @@ payload:
   - +.asminternational.org
   - +.asmrbuluo.com
   - +.asn-online.org
-  - +.asobostudio.com
   - +.asp-cc.com
   - +.asp.net
   - +.aspbjournals.org
@@ -2331,6 +2332,8 @@ payload:
   - +.avinetworks.com
   - +.avinin.com
   - +.avira.com
+  - +.avito.com
+  - +.avito.tech
   - +.avizoon.site
   - +.avizoone.com
   - +.avjb.com
@@ -3390,6 +3393,8 @@ payload:
   - +.blizzardgearstore.com
   - +.blockbuster
   - +.blockchain.com
+  - +.blockchair.com
+  - +.blockchair.net
   - +.blockcn.com
   - +.blockedbyhk.com
   - +.blockless.com
@@ -4506,6 +4511,7 @@ payload:
   - +.charticulator.com
   - +.chat.com
   - +.chatango.com
+  - +.chatbotclaude.com
   - +.chatgpt.com
   - +.chatgpt.livekit.cloud
   - +.chatgpt.site
@@ -4837,8 +4843,11 @@ payload:
   - +.classicnike.com
   - +.classymomsex.com
   - +.claude.com
+  - +.claude.site
+  - +.claudeacademy.com
   - +.claudemcpclient.com
   - +.claudemcpcontent.com
+  - +.claudestudio.com
   - +.claudeusercontent.com
   - +.clb.org.hk
   - +.clco.cc
@@ -5232,6 +5241,7 @@ payload:
   - +.cr
   - +.crabporn.com
   - +.crackle.com
+  - +.craftifyx.com
   - +.craigslist.org
   - +.crankplayer.com
   - +.crashbandicoot.com
@@ -5311,6 +5321,7 @@ payload:
   - +.crypto.com
   - +.cryptocompare.com
   - +.cryptographyengineering.com
+  - +.cryptoid.info
   - +.cryptomus.com
   - +.crystalgunnsworld.com
   - +.crystalmiss.com
@@ -5684,6 +5695,7 @@ payload:
   - +.delcamtv.com
   - +.delcamuniversity.com
   - +.delcamusa.com
+  - +.delets.cash
   - +.delets.online
   - +.delicious.com
   - +.dell
@@ -7552,6 +7564,7 @@ payload:
   - +.fanbox.cc
   - +.fandango.com
   - +.fandom.com
+  - +.fanfiction.net
   - +.fanfictionero.com
   - +.fanfox.net
   - +.fangbinxing.com
@@ -7957,7 +7970,6 @@ payload:
   - +.flickrhivemind.net
   - +.flickriver.com
   - +.flightsimtalk.com
-  - +.flightsimulator.com
   - +.fling.com
   - +.flipboard.com
   - +.flipchina.cn
@@ -7987,6 +7999,14 @@ payload:
   - +.fluidpreview.com
   - +.flurry.com
   - +.flutterapp.com
+  - +.fluxer.com
+  - +.fluxer.gift
+  - +.fluxer.media
+  - +.fluxer.tools
+  - +.fluxerapp.com
+  - +.fluxerstatic.com
+  - +.fluxerstatus.com
+  - +.fluxerusercontent.com
   - +.fly-metrics.net
   - +.flydiv.com
   - +.flyflv.com
@@ -8531,6 +8551,7 @@ payload:
   - +.fundraisingwithfacebook.com
   - +.fundsupermart.com
   - +.funimation.com
+  - +.funko.com
   - +.funkyimg.com
   - +.funnyfacebook.org
   - +.funnyordie.com
@@ -8653,6 +8674,7 @@ payload:
   - +.game-repack.site
   - +.game735.com
   - +.gameapps.hk
+  - +.gamebanana.com
   - +.gamebeforethegame.com
   - +.gamejolt.com
   - +.gameloft.com
@@ -8896,6 +8918,7 @@ payload:
   - +.getporn.tv
   - +.getpricetag.com
   - +.getprintersupports.com
+  - +.getsafety.com
   - +.getscorecash.com
   - +.getsentry.com
   - +.getsession.org
@@ -9047,6 +9070,8 @@ payload:
   - +.glasamerike.net
   - +.gle
   - +.gleline.com
+  - +.glitchprod.com
+  - +.glitchproductions.store
   - +.glitchwave.com
   - +.global-sci.org
   - +.global.market.xiaomi.com
@@ -12326,6 +12351,7 @@ payload:
   - +.kundun1069.com
   - +.kuokgroup
   - +.kurashsultan.com
+  - +.kurs.expert
   - +.kurtmunger.com
   - +.kusocity.com
   - +.kusugurizanmai.com
@@ -13050,6 +13076,7 @@ payload:
   - +.magic-net.info
   - +.magicalmirai.com
   - +.magicmovies.com
+  - +.magnific.com
   - +.magnoliaav.com.cn
   - +.mahabodhi.org
   - +.mahajantech.com
@@ -13080,6 +13107,7 @@ payload:
   - +.makeitrealcontest.com
   - +.makemymood.com
   - +.makesenseofdata.com
+  - +.makeship.com
   - +.makingstartshere.com
   - +.makkahnewspaper.com
   - +.maktoob.com
@@ -15778,6 +15806,7 @@ payload:
   - +.ovpn.com
   - +.owind.com
   - +.owltail.com
+  - +.ownaj.com
   - +.owxd.xyz
   - +.oxfordaasc.com
   - +.oxfordartonline.com
@@ -16870,6 +16899,7 @@ payload:
   - +.postimg.cc
   - +.postimg.org
   - +.postini.com
+  - +.postman.com
   - +.potatso.com
   - +.potplayer.tv
   - +.potvpn.com
@@ -17322,6 +17352,7 @@ payload:
   - +.r18av.com
   - +.r18lu-avi.shop
   - +.r18lu.com
+  - +.r2modman.com
   - +.r34porn.net
   - +.rabbitcounter.com
   - +.rabbitscams.com
@@ -17997,6 +18028,7 @@ payload:
   - +.safeliner.tech
   - +.safepal.com
   - +.safervpn.com
+  - +.safetycli.com
   - +.saffrontech.com
   - +.sage-observability.tech
   - +.sagepub.com
@@ -19390,6 +19422,7 @@ payload:
   - +.steaminventoryhelper.com
   - +.steamladder.com
   - +.steamofporn.com
+  - +.steamos.cloud
   - +.steampowered.com
   - +.steampowered.com.8686c.com
   - +.steamserver.net
@@ -20000,6 +20033,7 @@ payload:
   - +.tgirlpostop.com
   - +.tgp6.com
   - +.tgstat.com
+  - +.tgtime.store
   - +.tgtube.com
   - +.tgutube.com
   - +.th
@@ -20222,6 +20256,7 @@ payload:
   - +.thunderbird.net
   - +.thunderbolttechnology.net
   - +.thundermail.com
+  - +.thunderstore.org
   - +.thywords.com
   - +.thz7.net
   - +.thzu.cc
@@ -20398,6 +20433,7 @@ payload:
   - +.tmdfish.com
   - +.tmei-taoyuan.com
   - +.tmi.me
+  - +.tmimgcdn.com
   - +.tmpp.org
   - +.tn
   - +.tnaflix.com
@@ -22373,6 +22409,7 @@ payload:
   - +.worldoftanks.com
   - +.worldofwarcraft.com
   - +.worldofwarplanes.com
+  - +.worldofwarships.asia
   - +.worldofwarships.com
   - +.worldpopulationreview.com
   - +.worldpornvideos.com
@@ -23383,6 +23420,7 @@ payload:
   - +.youskbe.com
   - +.youthforfreechina.org
   - +.youthnetradio.org
+  - +.youtooz.com
   - +.youtrack.cloud
   - +.youtrannytube.com
   - +.youtube

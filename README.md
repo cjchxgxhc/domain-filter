@@ -1,11 +1,11 @@
 # Domain Filter
 
-![Updated](https://img.shields.io/badge/Updated-2026--10--19_06:45:03-brightgreen?style=flat-square)
+![Updated](https://img.shields.io/badge/Updated-2026--10--23_23:31:25-brightgreen?style=flat-square)
 
 ## 规则列表
 
 - **Ads For AdGuard Home** — adguard home 支持最好的无正则规则。  
-  `AdBlock` - [查看详情](data/rules/ads_adguard_home)
+  `AdBlock - SmartDNS` - [查看详情](data/rules/ads_adguard_home)
 - **Ads Proxy** — 适用于代理程序。  
   `Clash` - [查看详情](data/rules/ads_proxy)
 - **Ads Hosts** — hosts格式。  
@@ -19,5 +19,5 @@
 - **AdGuard Home Extra Rules** — 白名单和正则规则。  
   `Adblock` - [查看详情](data/rules/adground_home_extra)
 
-*2026-10-19 06:45:03 (CST)*
+*2026-10-23 23:31:25 (CST)*
 

@@ -2,9 +2,9 @@
 
 > 所有需要被代理分流的域名。
 
-**规则总数：23,726**    **更新时间：2026-10-19 06:45:03 (CST)**
+**规则总数：23,764**    **更新时间：2026-10-23 23:31:25 (CST)**
 
 | 文件 | 规则数 | 去重 | 直链 | CDN | Fastly | ghproxy |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: |
-| `clash.yaml` | 23,726 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/proxy/clash.yaml) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/proxy/clash.yaml) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/proxy/clash.yaml) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/proxy/clash.yaml) |
+| `clash.yaml` | 23,764 | OK | [↓](https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/proxy/clash.yaml) | [CDN](https://cdn.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/proxy/clash.yaml) | [Fastly](https://fastly.jsdelivr.net/gh/cjchxgxhc/domain-filter@rule/data/rules/proxy/clash.yaml) | [ghproxy](https://ghproxy.net/https://raw.githubusercontent.com/cjchxgxhc/domain-filter/refs/heads/rule/data/rules/proxy/clash.yaml) |
 
