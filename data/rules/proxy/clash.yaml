@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,764
+# 适用：Clash  规则数：23,783
 #
 payload:
   - +.000webhost.com
@@ -41,6 +41,7 @@ payload:
   - +.123-hp.com
   - +.123av.com
   - +.123av.me
+  - +.123av.org
   - +.123bin.cc
   - +.123dapp.com
   - +.123dappipad.com
@@ -780,6 +781,7 @@ payload:
   - +.addthiscdn.com
   - +.addthisedge.com
   - +.addtoany.com
+  - +.addtodropbox.com
   - +.addyoutube.com
   - +.adelaidebbs.com
   - +.adgoogle.net
@@ -3164,6 +3166,7 @@ payload:
   - +.bibox.com
   - +.bic2011.org
   - +.bidbay.com
+  - +.bidobido.xyz
   - +.bidong25.com
   - +.bidong9.com
   - +.bidorbuyindia.com
@@ -3217,6 +3220,7 @@ payload:
   - +.bikaa.xyz
   - +.bikac.xyz
   - +.bikaios.xyz
+  - +.bikawebapp.com
   - +.bili2.cc
   - +.bili888.com
   - +.bili999.com
@@ -4426,6 +4430,10 @@ payload:
   - +.cdp1998.org
   - +.cdp2006.org
   - +.cdpeu.org
+  - +.cdpred.services
+  - +.cdprojekt.com
+  - +.cdprojekt.red
+  - +.cdprojektred.com
   - +.cdpusa.org
   - +.cdpweb.org
   - +.cdpwu.org
@@ -5436,6 +5444,7 @@ payload:
   - +.cyberctm.com
   - +.cyberghostvpn.com
   - +.cybermondaybeats4sale.com
+  - +.cyberpunk.net
   - +.cyberx.com
   - +.cygwin.com
   - +.cylink.pro
@@ -6144,6 +6153,7 @@ payload:
   - +.doclercdn.com
   - +.docs.cfw.lbyczf.com
   - +.docs.com
+  - +.docsend.com
   - +.doctor-videos.com
   - +.doctorvoice.org
   - +.documentforce.com
@@ -6342,12 +6352,15 @@ payload:
   - +.dropboxapi.com
   - +.dropboxbusiness.com
   - +.dropboxcaptcha.com
+  - +.dropboxexperiment.com
   - +.dropboxforum.com
   - +.dropboxforums.com
   - +.dropboxinsiders.com
+  - +.dropboxlegal.com
   - +.dropboxmail.com
   - +.dropboxpartners.com
   - +.dropboxstatic.com
+  - +.dropboxteam.com
   - +.dropboxusercontent.com
   - +.droplinegnome.org
   - +.droplr.com
@@ -9756,9 +9769,11 @@ payload:
   - +.helixstudios.net
   - +.helloandroid.com
   - +.helloavgirls.com
+  - +.hellofax.com
   - +.hellokittybeats.com
   - +.hellomoto.com
   - +.helloqueer.com
+  - +.hellosign.com
   - +.hellosmartbook.com
   - +.helloss.pw
   - +.hellotxt.com
@@ -10512,6 +10527,7 @@ payload:
   - +.huabansp.com
   - +.huabansp7.club
   - +.huaglad.com
+  - +.huakacomic.com
   - +.huanghuagang.org
   - +.huangse.love
   - +.huangyiyu.com
@@ -12177,6 +12193,7 @@ payload:
   - +.kilmeadeandfriends.com
   - +.kimchi.tv
   - +.kimogirl.cc
+  - +.kimootoko.net
   - +.kimosex.com
   - +.kindgirls.com
   - +.kindindianporn.com
@@ -13787,6 +13804,7 @@ payload:
   - +.miniwholesaleconnect.com
   - +.miniwindsor.com
   - +.miniworkshop.com
+  - +.minkch.com
   - +.minnano-av.com
   - +.minne.com
   - +.minneapolisbmw.com
@@ -15132,6 +15150,7 @@ payload:
   - +.nixpkgs.org
   - +.niziero.info
   - +.njactb.org
+  - +.njav.com
   - +.njav.tv
   - +.njavtv.com
   - +.njpw1972.com
@@ -16279,6 +16298,7 @@ payload:
   - +.piaotia.com
   - +.piaotian.net
   - +.piapro.net
+  - +.pica-id.com
   - +.picacg2022.com
   - +.picacgp.com
   - +.picacgy.com
@@ -16415,6 +16435,7 @@ payload:
   - +.playfab.com
   - +.playfabapi.com
   - +.playforceone.com
+  - +.playgwent.com
   - +.playhearthstone.com
   - +.playmation.com
   - +.playmeow.com
@@ -16470,6 +16491,7 @@ payload:
   - +.pn
   - +.pnas.org
   - +.pnc
+  - +.po-kaki-to.com
   - +.po2b.com
   - +.pobieramy.top
   - +.pobl-content.com
@@ -20211,6 +20233,7 @@ payload:
   - +.theweek.com
   - +.thewgo.org
   - +.thewirechina.com
+  - +.thewitcher.com
   - +.thewonderful101.com
   - +.theync.com
   - +.theyxxx.com
@@ -20404,6 +20427,7 @@ payload:
   - +.tinyurl.com
   - +.tiohentai.com
   - +.tipas.net
+  - +.tipatipa.xyz
   - +.tire-cadcam.com
   - +.tiresplus.com
   - +.tirol
@@ -22787,14 +22811,14 @@ payload:
   - +.xn--d1alf
   - +.xn--d4ty0ojsqzfd.com
   - +.xn--e1a4c
-  - +.xn--fiqs8s1bxp3anr7a.hk
-  - +.xn--fiqs8s1byzqyvl.hk
+  - +.xn--fiq80y.hk
+  - +.xn--fiq80y3xbiwr.hk
+  - +.xn--fiq80y3xbiwrs0kiu9d.hk
   - +.xn--flw351e
   - +.xn--flw351e.com
   - +.xn--fpcrj9c3d
   - +.xn--fzc2c9e2c
   - +.xn--fzys8d69uvgm
-  - +.xn--gdt08a.hk
   - +.xn--gecrj9c
   - +.xn--ggle-55da.com
   - +.xn--gmq348bujlxrb.com
@@ -22847,7 +22871,6 @@ payload:
   - +.xn--mix891f
   - +.xn--mts47c3w9b1qr.net
   - +.xn--mtswd61ejxq.com
-  - +.xn--mxtq18a.hk
   - +.xn--ngbe9e0a
   - +.xn--ngstr-lra8j.com
   - +.xn--nnx388a
@@ -22861,10 +22884,7 @@ payload:
   - +.xn--pearsonenespaol-brb.com
   - +.xn--pgbs0dh
   - +.xn--pssu7ci2j23mp9ny48b.hk
-  - +.xn--pssu7cv61af1tcs59bnvd.hk
   - +.xn--pssu7cv61af44b.hk
-  - +.xn--pssu7cv61ahw8aq79bztd.hk
-  - +.xn--pssu7cv61ahwcb1p2yk.hk
   - +.xn--q41am8x.com
   - +.xn--q7ce6a
   - +.xn--q9jyb4c
@@ -22886,8 +22906,6 @@ payload:
   - +.xn--vuqv2cf7wzyig79c.com
   - +.xn--w4r85el8fhu5dnra
   - +.xn--w4rs40l
-  - +.xn--wcv22d.hk
-  - +.xn--wcvs22d1m.hk
   - +.xn--wgbh1c
   - +.xn--wgbl6a
   - +.xn--x-qeu1ji09tzlg.biz
@@ -23715,6 +23733,7 @@ payload:
   - +.zorrovpn.com
   - +.zotero.org
   - +.zozotown.com
+  - +.zozovideo.com
   - +.zpagov.net
   - +.zpath.com
   - +.zqqpwz.com
