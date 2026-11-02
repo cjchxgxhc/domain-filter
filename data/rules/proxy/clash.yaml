@@ -1,5 +1,5 @@
 # 所有需要被代理分流的域名。
-# 适用：Clash  规则数：23,783
+# 适用：Clash  规则数：23,803
 #
 payload:
   - +.000webhost.com
@@ -110,6 +110,7 @@ payload:
   - +.18comic-god.xyz
   - +.18comic.cc
   - +.18comic.company
+  - +.18comic.ink
   - +.18comic.org
   - +.18comic.vip
   - +.18commic.com
@@ -3293,6 +3294,7 @@ payload:
   - +.bingoporno.com
   - +.bingparachute.com
   - +.bingsandbox.com
+  - +.bingstatic.com
   - +.bingvisualsearch.com
   - +.bingworld.com
   - +.bingx.com
@@ -3501,6 +3503,7 @@ payload:
   - +.bmia.org
   - +.bmj.com
   - +.bml.info
+  - +.bmonkeys.net
   - +.bms
   - +.bmw
   - +.bmw-abudhabi.com
@@ -3693,6 +3696,7 @@ payload:
   - +.bokep.net
   - +.bokepseks.org
   - +.bokepvidz.com
+  - +.boldgrid.com
   - +.bolehvpn.net
   - +.bollywoodlife.com
   - +.boltdns.net
@@ -3928,6 +3932,7 @@ payload:
   - +.bsdguru.org
   - +.bsdnexus.com
   - +.bsersd.xyz
+  - +.bsky.chat
   - +.bsky.network
   - +.bsky.social
   - +.bstatic.com
@@ -4882,6 +4887,7 @@ payload:
   - +.client-api.arkoselabs.com
   - +.climate-server.com
   - +.clincha.cn
+  - +.cline.bot
   - +.clinical-videos.com
   - +.clinicalkey.com
   - +.clinique
@@ -5154,6 +5160,7 @@ payload:
   - +.contechacademy.com
   - +.contentful.com
   - +.contest.com
+  - +.context7.com
   - +.controlspace.org
   - +.convio.net
   - +.convrgencegame.com
@@ -9057,6 +9064,7 @@ payload:
   - +.githubassets.com
   - +.githubcopilot.com
   - +.githubhackathon.com
+  - +.githubhelp.com
   - +.githubnext.com
   - +.githubstatus.com
   - +.githubsupport.com
@@ -11509,6 +11517,7 @@ payload:
   - +.iutunes.com
   - +.ivacy.com
   - +.iverycd.com
+  - +.ivi.tv
   - +.ivicdn.tv
   - +.ivintageporn.com
   - +.ivonblog.com
@@ -13488,6 +13497,7 @@ payload:
   - +.messytube.com
   - +.met-nude.com
   - +.meta.com
+  - +.metaaiusercontent.com
   - +.metaaivm.com
   - +.metabrainz.org
   - +.metacafe.com
@@ -14220,6 +14230,7 @@ payload:
   - +.msftconnecttest.com
   - +.msftncsi.com
   - +.msftnet.org
+  - +.msftstatic.com
   - +.msgamesresearch.com
   - +.msgamestudios.com
   - +.msguancha.com
@@ -15209,6 +15220,7 @@ payload:
   - +.notion.site
   - +.notionusercontent.com
   - +.nottinghampost.com
+  - +.nousresearch.com
   - +.novafile.com
   - +.novelai.net
   - +.novelasia.com
@@ -20243,6 +20255,7 @@ payload:
   - +.thinkgeek.com
   - +.thinkingtaiwan.com
   - +.thinkofliving.com
+  - +.thinkorswim.com
   - +.thinkquarterly.com
   - +.thinkwithgoogle.com
   - +.thirdmill.org
@@ -20384,7 +20397,10 @@ payload:
   - +.tiktokeu-cdn.com
   - +.tiktokglobalshopv.com
   - +.tiktokrow-cdn.com
+  - +.tiktokshop.com
+  - +.tiktokstaticb.com
   - +.tiktokv.com
+  - +.tiktokvapp.com
   - +.tilda.cc
   - +.tildaapi.com
   - +.tildacdn.com
@@ -20565,6 +20581,7 @@ payload:
   - +.toroporno.com
   - +.torproject.org
   - +.torrentkitty.tv
+  - +.torrentleech.org
   - +.torrentleen.com
   - +.torrentmac.net
   - +.torrentprivacy.com
@@ -22076,6 +22093,7 @@ payload:
   - +.webex.com
   - +.webex.com.cn
   - +.webex.com.hk
+  - +.webflow-ext.com
   - +.webflow.com
   - +.webfreer.com
   - +.webgata.net
@@ -22100,6 +22118,7 @@ payload:
   - +.webrush.net
   - +.webs-tv.net
   - +.websdr.org
+  - +.website-files.com
   - +.websitepulse.com
   - +.websnapr.com
   - +.webtoons.com
@@ -23459,6 +23478,7 @@ payload:
   - +.youtubekids.com
   - +.youtubemobilesupport.com
   - +.youversion.com
+  - +.youversionapi.com
   - +.youwin.com
   - +.youwuss.com
   - +.youxu.info
