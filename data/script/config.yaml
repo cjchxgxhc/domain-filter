@@ -130,9 +130,7 @@ ads:
   rules:
     - type: add
       source:
-        - https://raw.githubusercontent.com/lingeringsound/10007_auto/refs/heads/master/configure/%E8%87%AA%E5%AE%9A%E4%B9%89.prop
         - local:data/self/ads/addlist.txt
-        - https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/main/rule/DD-AD.txt
         - https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
         - "@ads_10007"
     - type: discard_parent
