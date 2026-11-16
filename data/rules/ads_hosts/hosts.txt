@@ -1,5 +1,5 @@
 # hosts格式。
-# 适用：Hosts  规则数：15,748
+# 适用：Hosts  规则数：15,746
 #
 0.0.0.0 0.r.msn.com
 0.0.0.0 0127.adsame.com
@@ -1476,7 +1476,6 @@
 0.0.0.0 ads-api.playfun.vn
 0.0.0.0 ads-api.production.nebula-drupal.stuff.co.nz
 0.0.0.0 ads-api.stuff.co.nz
-0.0.0.0 ads-api.tiktok.com
 0.0.0.0 ads-api.twitter.com
 0.0.0.0 ads-api.videojj.com
 0.0.0.0 ads-api.videy.co
@@ -1532,7 +1531,6 @@
 0.0.0.0 ads-img-qc.xhscdn.com
 0.0.0.0 ads-img.mozilla.org
 0.0.0.0 ads-interfaces.sc-cdn.net
-0.0.0.0 ads-jp.tiktok.com
 0.0.0.0 ads-kesselhaus.com
 0.0.0.0 ads-lb.serving-sys.cn
 0.0.0.0 ads-leaseweb.appsgeyser.com
@@ -1568,7 +1566,6 @@
 0.0.0.0 ads-segment-profile-noneu.truecaller.com
 0.0.0.0 ads-server.mxplay.com
 0.0.0.0 ads-service.api.linkme.global
-0.0.0.0 ads-sg.tiktok.com
 0.0.0.0 ads-shopping.shouqianba.com
 0.0.0.0 ads-static.conde.digital
 0.0.0.0 ads-static.phonepe.com
@@ -1592,6 +1589,7 @@
 0.0.0.0 ads-video-1251524319.cos.ap-shanghai.myqcloud.com
 0.0.0.0 ads-video-al.xhscdn.com
 0.0.0.0 ads-video-qc.xhscdn.com
+0.0.0.0 ads-vp5.xhscdn.com
 0.0.0.0 ads-wc.adaptv.advertising.com
 0.0.0.0 ads-yallo-production.imgix.net
 0.0.0.0 ads.1thegioi.vn
@@ -2728,7 +2726,6 @@
 0.0.0.0 ads.thvli.vn
 0.0.0.0 ads.tiki.vn
 0.0.0.0 ads.tikpage.com
-0.0.0.0 ads.tiktok.com
 0.0.0.0 ads.timesunion.com
 0.0.0.0 ads.tmcs.net
 0.0.0.0 ads.tnt.tv
@@ -3911,7 +3908,6 @@
 0.0.0.0 adspart.com
 0.0.0.0 adspcces.ero-advertising.com
 0.0.0.0 adspdbl.com
-0.0.0.0 adspecs.yahoo.com
 0.0.0.0 adspector.io
 0.0.0.0 adspeed.com
 0.0.0.0 adspeed.net
@@ -4090,7 +4086,6 @@
 0.0.0.0 adtag.msn.ca
 0.0.0.0 adtag.primetime.adobe.com
 0.0.0.0 adtago.s3.amazonaws.com
-0.0.0.0 adtech.yahooinc.com
 0.0.0.0 adtest.adwo.com
 0.0.0.0 adtest.agrantsem.com
 0.0.0.0 adtier.toboads.com
@@ -4405,8 +4400,6 @@
 0.0.0.0 advertising.paltalk.com
 0.0.0.0 advertising.thediabetesnetwork.com
 0.0.0.0 advertising.twitter.com
-0.0.0.0 advertising.yahoo.com
-0.0.0.0 advertising.yandex.ru
 0.0.0.0 advertising365.com
 0.0.0.0 advertisingagencyinfaridabad.com
 0.0.0.0 advertisingbanners.com
@@ -7313,7 +7306,6 @@
 0.0.0.0 cs.analytics.lego.com
 0.0.0.0 csedidsoodsosksdjskdadsk.site
 0.0.0.0 cseroakeopadskeowepr.site
-0.0.0.0 csjplatform.com
 0.0.0.0 csma95349.analytics.edgesuite.net
 0.0.0.0 csmads.gameclick.vn
 0.0.0.0 csoads.com
@@ -7812,6 +7804,7 @@
 0.0.0.0 dts.crispadvertising.com
 0.0.0.0 dtta.ero-advertising.com
 0.0.0.0 dtvc.adsafeprotected.com
+0.0.0.0 du-app.cn-hangzhou.log.aliyuncs.com
 0.0.0.0 dualstack-logs.amap.com
 0.0.0.0 dub.mobileads.msn.com
 0.0.0.0 dunandbradstreet.122.2o7.net
@@ -8235,6 +8228,7 @@
 0.0.0.0 fota.advmob.cn
 0.0.0.0 fotocadvow.cyou
 0.0.0.0 fp-analytics.hotstar.com
+0.0.0.0 fp-it.fengkongcloud.com
 0.0.0.0 fp3.ads.stickyadstv.com.akadns.net
 0.0.0.0 fpa.ero-advertising.com
 0.0.0.0 fpadserver.com
@@ -9445,6 +9439,7 @@
 0.0.0.0 levitateleads.com
 0.0.0.0 leyad.cn
 0.0.0.0 lf-ad-ies.bytecdn.cn
+0.0.0.0 lf-event-manager.oceanengine.com
 0.0.0.0 lf-leads-fe-scm.bytecdn.com
 0.0.0.0 lf0-common-ckv-tos.pstatp.com
 0.0.0.0 lf1-common-ckv-tos.pstatp.com
@@ -9598,6 +9593,7 @@
 0.0.0.0 log-api.huxiu.com
 0.0.0.0 log-api.pangolin-sdk-toutiao-b.com
 0.0.0.0 log-api.pangolin-sdk-toutiao.com
+0.0.0.0 log-auth.zztfly.com
 0.0.0.0 log-report.com
 0.0.0.0 log-sdk.gifshow.com
 0.0.0.0 log-sdk.ksapisrv.com
@@ -12431,6 +12427,8 @@
 0.0.0.0 sharpdownloads.com
 0.0.0.0 shence.hupu.com
 0.0.0.0 shieldpape.smartcarpetads.com
+0.0.0.0 shihuo-new.log.shihuocdn.cn
+0.0.0.0 shihuo.log.shihuocdn.cn
 0.0.0.0 shoadseelry.com
 0.0.0.0 shoppingads.cn
 0.0.0.0 shoppingads.com
@@ -13771,7 +13769,6 @@
 0.0.0.0 union-record.oss-cn-zhangjiakou.aliyuncs.com
 0.0.0.0 union.56.com
 0.0.0.0 union.6.cn
-0.0.0.0 union.baidu.cn
 0.0.0.0 union.baidu.com
 0.0.0.0 union.baidustatic.guannin.com
 0.0.0.0 union.dangdang.com
@@ -13799,6 +13796,7 @@
 0.0.0.0 up1.tj.u2.ucweb.com
 0.0.0.0 up4.ucweb.com
 0.0.0.0 upage.imtt.qq.com
+0.0.0.0 upc.zztfly.com
 0.0.0.0 update-1.com
 0.0.0.0 update-expiry-notification-report.appwrite.network
 0.0.0.0 update-information.zzux.com
